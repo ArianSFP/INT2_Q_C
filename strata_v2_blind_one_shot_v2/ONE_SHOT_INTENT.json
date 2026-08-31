@@ -1,0 +1,117 @@
+{
+  "allocation_lock_file_sha256": "65efad51f92047236217ff1e90da2fc5cbac567de99ac8ff845a1533e5b1632a",
+  "allocation_lock_internal_sha256": "6679dddd181a2199f1a1b57d360949369cf7fb174ef8007615650abfae2a4141",
+  "encoder_invocations_planned": 14,
+  "encoder_sha256": "ab4f7f6ed6f55f7eaa0bba24436b22a26cc0bf3452e1ce0d2ed56be805020309",
+  "manifest_sha256": "5cdced62fe7ccba39e2e313bf40a79820e285fbb86323424a8da697161dd6539",
+  "protocol_mode": "blind",
+  "retry_resume_or_adaptive_rate_change_allowed": false,
+  "runner_sha256": "764bacb3f6690ea5308560dc850c410a1dd59337a358152985fdf20d3b3f69fe",
+  "runtime_freeze": {
+    "artifacts": {
+      "base_encoder": {
+        "path": "/workspace/INT2__compression/agent_polaris_qwen_rht_encoder.py",
+        "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0"
+      },
+      "common": {
+        "path": "/workspace/INT2__compression/strata_v2_codec/common.py",
+        "sha256": "bb5ad9f91ed6c4ee51f337d70fbfb3b1f174001cf2585d48c84034622b6b4ab8"
+      },
+      "emitter": {
+        "path": "/workspace/INT2__compression/strata_v2_codec/emit_and_lock.py",
+        "sha256": "8fe43becd70eaf3d2bbc009db424db8c152029aa3f0e4bf4ceed7108f342ed40"
+      },
+      "format": {
+        "path": "/workspace/INT2__compression/strata_v2_codec/FORMAT.md",
+        "sha256": "004f195055e2289ff647ebadc69181978acbf61c19192d49ed3c509d6843023c"
+      },
+      "independent_auditor": {
+        "path": "/workspace/INT2__compression/strata_v2_klt_mixed_independent_auditor_v1.py",
+        "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+      },
+      "polar_encoder": {
+        "path": "/workspace/INT2__compression/strata_v2_codec/polar_encoder.py",
+        "sha256": "ab4f7f6ed6f55f7eaa0bba24436b22a26cc0bf3452e1ce0d2ed56be805020309"
+      },
+      "procedural_bec_builder": {
+        "path": "/workspace/INT2__compression/bg_codec_bec_encoder.py",
+        "sha256": "456a3ae5fe00c578456dc9430bf7ae059ed9dbb8dcf04a6bafad3a88cc5cb267"
+      },
+      "python_interpreter": {
+        "path": "/workspace/int2-cupy-venv/bin/python",
+        "sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5"
+      },
+      "runner": {
+        "path": "/workspace/INT2__compression/strata_v2_codec/run_one_shot.py",
+        "sha256": "764bacb3f6690ea5308560dc850c410a1dd59337a358152985fdf20d3b3f69fe"
+      }
+    },
+    "codec_freeze": {
+      "file_sha256": "1cd70bfc3147663b15039d0f949e5e4b999bf1c6981d33d21dbc4f1b7d7ebda7",
+      "internal_lock_sha256": "7191f2813ec70be7793613f82722dc82c253c6eed72f9098796c88aad2173779",
+      "path": "/workspace/INT2__compression/blind_protocol_v2/codec_freeze.lock.json"
+    },
+    "cuda": {
+      "compute_capability": [
+        12,
+        0
+      ],
+      "cuda_driver_version": 13000,
+      "cupy_runtime_version": 12090,
+      "device_name": "NVIDIA GeForce RTX 5090"
+    },
+    "packages": {
+      "cuda.pathfinder": {
+        "distribution": "cuda-pathfinder",
+        "distribution_tree_sha256": "a83b87960752bb61b632e32cede19562c5e4f3a50d3b923377512d5a55958ae4",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cuda/pathfinder/__init__.py",
+        "import_origin_sha256": "4ea26c3f6f3bb3c7d2dc725beabfd9cb375e11142ff9a477290eb9b226fd9543",
+        "module": "cuda.pathfinder",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cuda_pathfinder-1.8.0.dist-info/RECORD",
+        "record_sha256": "9f87dafc3fef5353561100442640a4995b0b1754db1b6fde37fa568764972543",
+        "recorded_file_count": 73,
+        "recorded_total_bytes": 374852,
+        "version": "1.8.0"
+      },
+      "cupy": {
+        "distribution": "cupy-cuda12x",
+        "distribution_tree_sha256": "f4ee95d38835cca8090a52f76428cabbb927b3f7272a1bb0a844ddeaa9c7e6f2",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/__init__.py",
+        "import_origin_sha256": "8c4724758587dea5f1c1d7c217c74a9fa0e4ed7f9d76a2b86fa001117cf3c718",
+        "module": "cupy",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy_cuda12x-14.2.0.dist-info/RECORD",
+        "record_sha256": "7af54af6baa2bfa039d183d2734d898d15198158d3948f54b658fed4f4d41166",
+        "recorded_file_count": 2779,
+        "recorded_total_bytes": 291571120,
+        "version": "14.2.0"
+      },
+      "numpy": {
+        "distribution": "numpy",
+        "distribution_tree_sha256": "0e497fc0ad439e0bfa8ca189c0f691c0ce589f8e7d6de6287d3f664716614964",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+        "import_origin_sha256": "09295a80660f17925ae23765ce8cbd7ff7ceae968d5f2f89349f1cb74c0b9e11",
+        "module": "numpy",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy-2.5.2.dist-info/RECORD",
+        "record_sha256": "662e57f69a042c5b9efa7a46e8c2901f5d733e21b255a34d7f061e466bceab0d",
+        "recorded_file_count": 1336,
+        "recorded_total_bytes": 69107438,
+        "version": "2.5.2"
+      },
+      "scipy": {
+        "distribution": "scipy",
+        "distribution_tree_sha256": "f634813c708c90ed5f30e24216772d89443f855f1515021d89714da8f688d5fa",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/scipy/__init__.py",
+        "import_origin_sha256": "39ccae300a4739cc53719bd3b39ce3f8f66e736c6eb672006e338a4c5cc3dc76",
+        "module": "scipy",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/scipy-1.18.1.dist-info/RECORD",
+        "record_sha256": "97014a6514db2fa42950d9ae19e02d125b0e325a9f20454fe9d833ad5f176835",
+        "recorded_file_count": 2422,
+        "recorded_total_bytes": 139074460,
+        "version": "1.18.1"
+      }
+    }
+  },
+  "schema": "strata_xklt_sc_v2_one_shot_intent_v1",
+  "status": "sealed_before_first_encoder_invocation",
+  "workers": 7
+}

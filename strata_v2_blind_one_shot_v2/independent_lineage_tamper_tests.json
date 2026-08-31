@@ -1,0 +1,75 @@
+{
+  "auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+  "claim_boundary": "explicit completed rehearsal only; no source discovery",
+  "container_sha256": "e89e2a97fa655cc4248de849ba1b1b84b46e8357044beb563318efb359be2be7",
+  "exact_unique_tamper_name_set": true,
+  "executing_tamper_harness_sha256": "91d47e7f5531da6bcf900c0263a29af049bd155d9e89b167b0b5494f937cfe05",
+  "expected_tamper_names": [
+    "allocation_profile_resealed",
+    "codec_threshold_resealed",
+    "coefficient_regeneration",
+    "directory_scale",
+    "intent_retry_permission",
+    "manifest_source_binding",
+    "nonzero_stream_padding",
+    "selection_role_resealed",
+    "source_nested_hash_resealed",
+    "summary_artifact_hash"
+  ],
+  "passed": true,
+  "protocol_mode": "blind",
+  "schema": "strata_v2_klt_independent_lineage_tamper_tests_v1",
+  "tamper_count": 10,
+  "tamper_rows": [
+    {
+      "error": "AssertionError: freeze selection seal mismatch",
+      "rejected": true,
+      "tamper": "selection_role_resealed"
+    },
+    {
+      "error": "AssertionError: nested source block hash mismatch matrix 0 block 0",
+      "rejected": true,
+      "tamper": "source_nested_hash_resealed"
+    },
+    {
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/strata_v2_tamper_uo4fqng8/codec_freeze.validation.json'",
+      "rejected": true,
+      "tamper": "codec_threshold_resealed"
+    },
+    {
+      "error": "AssertionError: manifest source binding rows mismatch",
+      "rejected": true,
+      "tamper": "manifest_source_binding"
+    },
+    {
+      "error": "AssertionError: allocation/manifest blocks mismatch",
+      "rejected": true,
+      "tamper": "allocation_profile_resealed"
+    },
+    {
+      "error": "AssertionError: one-shot intent binding mismatch",
+      "rejected": true,
+      "tamper": "intent_retry_permission"
+    },
+    {
+      "error": "AssertionError: summary/container physical record mismatch",
+      "rejected": true,
+      "tamper": "summary_artifact_hash"
+    },
+    {
+      "error": "AssertionError: stored FP32 coefficients do not derive from Q15 angle 0",
+      "rejected": true,
+      "tamper": "coefficient_regeneration"
+    },
+    {
+      "error": "AssertionError: nonzero canonical final-byte padding at block 0",
+      "rejected": true,
+      "tamper": "nonzero_stream_padding"
+    },
+    {
+      "error": "AssertionError: directory FP16 scale is not source-derived post-RHT RMS at block 0",
+      "rejected": true,
+      "tamper": "directory_scale"
+    }
+  ]
+}

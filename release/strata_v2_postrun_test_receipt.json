@@ -1,0 +1,45 @@
+{
+  "schema": "strata_xklt_sc_v2_postrun_test_receipt_v1",
+  "date_utc": "2026-08-31",
+  "claim_boundary": "post-run source-free conformance rerun; supporting evidence, not part of the pre-access freeze or blind score",
+  "environment": {
+    "python": "/workspace/int2-cupy-venv/bin/python",
+    "cupy": "14.2.0",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "frozen_sources": {
+    "common_sha256": "bb5ad9f91ed6c4ee51f337d70fbfb3b1f174001cf2585d48c84034622b6b4ab8",
+    "emitter_sha256": "8fe43becd70eaf3d2bbc009db424db8c152029aa3f0e4bf4ceed7108f342ed40",
+    "auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+  },
+  "unit_tests": {
+    "command": "/workspace/int2-cupy-venv/bin/python -m unittest strata_v2_codec.test_common strata_v2_codec.test_emitter_contract -v",
+    "tests_run": 16,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "source_free_cupy_emitter": {
+    "command": "/workspace/int2-cupy-venv/bin/python strata_v2_codec/test_emitter_synthetic.py --format strata_v2_codec/FORMAT.md",
+    "allocation_lock_sha256": "b04fa31beec18bcd227722202c398975a3dc00f48f41a748e044d6b03ffe2a7e",
+    "profiles": [0, 0, 0, 0, 0, 0, 0, 50, 224, 202, 255, 255, 255, 255],
+    "projected_relative_mse": 0.0235453806168193,
+    "repeated_emission_assets_match": true,
+    "passed": true
+  },
+  "independent_auditor_self_test": {
+    "command": "/workspace/int2-cupy-venv/bin/python strata_v2_klt_mixed_independent_auditor_v1.py --self-test",
+    "bit_range_cases": 325,
+    "canonical_arithmetic_symbols": 4096,
+    "header_bytes": 128,
+    "header_crc32": 917772912,
+    "internal_seal_tamper_rejected": true,
+    "label_bytes": 5184,
+    "route_bytes": 144,
+    "sample_rht_seed_u64": 8313626745664041832,
+    "sample_sc_seed_u32": 3664820050,
+    "seed_domain_hex": "504f4c415249532d5354524154412d56322d4b4c542d4d495845442d534545442d763100",
+    "passed": true
+  },
+  "passed": true
+}

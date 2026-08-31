@@ -1,0 +1,281 @@
+{
+  "candidate_v2_tensor_payload_bytes_read": 0,
+  "claim_boundary": {
+    "defensible": "POLARIS/STRATA v1 completed one frozen one-shot encode and independent decode on its precommitted 18-matrix Qwen panel at 2.1499091254 bpw, but did not beat the Gaussian 2.15-bpw reference.",
+    "future_panel_rule": "v2 is a new confirmatory experiment and must be reported separately, regardless of outcome",
+    "not_defensible": [
+      "that v1 beat the Gaussian reference",
+      "that a later disjoint panel can retroactively rescue the v1 claim",
+      "a universal Qwen checkpoint, perplexity, or end-to-end model-quality claim",
+      "treating the encoder-only pass flag as a distortion pass"
+    ]
+  },
+  "coverage": {
+    "canonical_reconstruction_hash_reverified": true,
+    "groups": 13824,
+    "matrices": 18,
+    "source_hashes_reverified": 18,
+    "weights": 28311552
+  },
+  "distortion": {
+    "energy_weighted_relative_mse_cupy": 0.05166003144302383,
+    "gaussian_limit_at_2p15": 0.050765774772264724,
+    "margin_below_gaussian_percent": -1.7615345668823945,
+    "mse_gate_passed": false,
+    "ratio_to_gaussian_limit": 1.017615345668824,
+    "relative_sse_reduction_needed_for_strict_pass": 0.01731041669506883,
+    "source_energy_sum_fp64_cupy": 16659.395474367368,
+    "sse_excess_over_threshold": 14.897775533767003,
+    "sse_sum_fp64_cupy": 860.6248940275871,
+    "threshold_sse": 845.7271184938201
+  },
+  "expert_triplet_breakdown": {
+    "L11:E104": {
+      "energy": 2607.507379869241,
+      "relative_mse": 0.05307586692704934,
+      "sse": 138.39571470523893
+    },
+    "L16:E108": {
+      "energy": 2525.024547588459,
+      "relative_mse": 0.057361079236457946,
+      "sse": 144.83813314822297
+    },
+    "L25:E75": {
+      "energy": 2632.06530305071,
+      "relative_mse": 0.055784489016542295,
+      "sse": 146.8284179888544
+    },
+    "L32:E5": {
+      "energy": 2732.3627394647974,
+      "relative_mse": 0.052562133084993516,
+      "sse": 143.61881394822615
+    },
+    "L3:E125": {
+      "energy": 2634.580148589011,
+      "relative_mse": 0.05127047738524566,
+      "sse": 135.07618192785003
+    },
+    "L44:E111": {
+      "energy": 3527.855355805149,
+      "relative_mse": 0.043048145967575946,
+      "sse": 151.86763230919462
+    }
+  },
+  "immutable_artifact_sha256s": {
+    "auditor_summary": "6aa4d8538389179cdbdb2edaf332d707eef39aa4ef7cd395f8e82d755ca1bb37",
+    "codec_freeze": "66619fddfe2b3ff3a7f5b086e92009df2c17697be68305c79a6d44ecf8abf4d9",
+    "container": "ef2cbabc7ad24ff1e5ee9cc7230494deb50d0e2e688455ecf2afcd9c891a8d47",
+    "encoder_summary": "28b12f1da4bde80596b739e3d321a307d9029605b8ceafb384ea26ddad30ec47",
+    "reconstruction": "7d1e00cb3f0328f4b814db5ac2e0814b7547b4552a5afd7ea7b682fb237f3908",
+    "route_table": "1a2380a8750363a1fb0f6e2c30904c20d68ba78e59cb6ca15678395496adcf41",
+    "selection": "78a00016a0f62eca3f3c9b451b226d6821b38b8c596eb7b0f691bbe465174095",
+    "source_lock": "b520461fa71783ad597e6f71211cd777c0af93baef14177edc9181f54cf918d5"
+  },
+  "lock_sha256": "8464ca7aaa9e0fb3647707129d5488259edddd35891713a0639eede0fffd5589",
+  "matrices": [
+    {
+      "matrix_ordinal": 0,
+      "max_absolute_error_cupy": 0.03055177066292276,
+      "relative_mse_cupy": 0.04972680909637246,
+      "source_bf16_sha256": "60eacf02a20edc342617887e70c55404838dcc2773646bd5f3ff565b9794eb62",
+      "source_energy_fp64_cupy": 894.8433706362451,
+      "sse_fp64_cupy": 44.49770546278303,
+      "tensor": "model.layers.3.mlp.experts.125.gate_proj.weight"
+    },
+    {
+      "matrix_ordinal": 1,
+      "max_absolute_error_cupy": 0.02813937206497405,
+      "relative_mse_cupy": 0.05877123323842365,
+      "source_bf16_sha256": "55aa1678cd806dd25fe7ac692b8acbf243506140016bcf80160914ca99d7b613",
+      "source_energy_fp64_cupy": 829.8053518999641,
+      "sse_fp64_cupy": 48.768683879005,
+      "tensor": "model.layers.3.mlp.experts.125.up_proj.weight"
+    },
+    {
+      "matrix_ordinal": 2,
+      "max_absolute_error_cupy": 0.0273907685778854,
+      "relative_mse_cupy": 0.04594828949630743,
+      "source_bf16_sha256": "ac01b1db03d9ce097e21d79b8741d32aa248c0def3ef30c2ad17778699ffa47d",
+      "source_energy_fp64_cupy": 909.9314260528017,
+      "sse_fp64_cupy": 41.80979258606199,
+      "tensor": "model.layers.3.mlp.experts.125.down_proj.weight"
+    },
+    {
+      "matrix_ordinal": 3,
+      "max_absolute_error_cupy": 0.02758451287178059,
+      "relative_mse_cupy": 0.046556825290027935,
+      "source_bf16_sha256": "c0364f2a5cdcdb93d6ab8f2036bafe30c7805720a14c3456d9bda66fb517117b",
+      "source_energy_fp64_cupy": 890.8667043115167,
+      "sse_fp64_cupy": 41.47592550933426,
+      "tensor": "model.layers.11.mlp.experts.104.gate_proj.weight"
+    },
+    {
+      "matrix_ordinal": 4,
+      "max_absolute_error_cupy": 0.027208559417835808,
+      "relative_mse_cupy": 0.05208006908566139,
+      "source_bf16_sha256": "5eab4cbc815aff1e91332748d382fb6ea57539dce4089514ad0bb30fc0bf8f01",
+      "source_energy_fp64_cupy": 861.72019487312,
+      "sse_fp64_cupy": 44.878447281501685,
+      "tensor": "model.layers.11.mlp.experts.104.up_proj.weight"
+    },
+    {
+      "matrix_ordinal": 5,
+      "max_absolute_error_cupy": 0.03200586249307148,
+      "relative_mse_cupy": 0.06087272803750035,
+      "source_bf16_sha256": "015f7e3e2cf19e970617d5f1e224a00905715fcce35835ee6a66cf292ffcc01e",
+      "source_energy_fp64_cupy": 854.920480684604,
+      "sse_fp64_cupy": 52.04134191440297,
+      "tensor": "model.layers.11.mlp.experts.104.down_proj.weight"
+    },
+    {
+      "matrix_ordinal": 6,
+      "max_absolute_error_cupy": 0.029170580875260484,
+      "relative_mse_cupy": 0.06092034402576221,
+      "source_bf16_sha256": "135320ae3ff96121f3d11edd6c3ac78ed783d1751737223e6ca813389aa4eff1",
+      "source_energy_fp64_cupy": 797.4176821843344,
+      "sse_fp64_cupy": 48.57895953089557,
+      "tensor": "model.layers.16.mlp.experts.108.gate_proj.weight"
+    },
+    {
+      "matrix_ordinal": 7,
+      "max_absolute_error_cupy": 0.02952018580494853,
+      "relative_mse_cupy": 0.05641755035968515,
+      "source_bf16_sha256": "44bd4c2047087cb73246bbee4107d513a7f788b151f990b6138b84f293d8ba80",
+      "source_energy_fp64_cupy": 851.7360455345386,
+      "sse_fp64_cupy": 48.05286124210391,
+      "tensor": "model.layers.16.mlp.experts.108.up_proj.weight"
+    },
+    {
+      "matrix_ordinal": 8,
+      "max_absolute_error_cupy": 0.03226493417506626,
+      "relative_mse_cupy": 0.05503815320894151,
+      "source_bf16_sha256": "3261a61ccd5f2cbda876ae3ddb86fe186b7409f4931839e3225f62a102142a0b",
+      "source_energy_fp64_cupy": 875.8708198695861,
+      "sse_fp64_cupy": 48.20631237522349,
+      "tensor": "model.layers.16.mlp.experts.108.down_proj.weight"
+    },
+    {
+      "matrix_ordinal": 9,
+      "max_absolute_error_cupy": 0.029130819425224684,
+      "relative_mse_cupy": 0.057847369362674345,
+      "source_bf16_sha256": "c048575bc6db4eca2ca381e801ab4770757a64d8a3840906e06a3067e0ad5402",
+      "source_energy_fp64_cupy": 851.502012470376,
+      "sse_fp64_cupy": 49.257151428434376,
+      "tensor": "model.layers.25.mlp.experts.75.gate_proj.weight"
+    },
+    {
+      "matrix_ordinal": 10,
+      "max_absolute_error_cupy": 0.027175221351243842,
+      "relative_mse_cupy": 0.05643853336081224,
+      "source_bf16_sha256": "80632665afd70b143b56e4e7df215853dcfecad3217c337e64b26b1c5af77b46",
+      "source_energy_fp64_cupy": 871.3993757038144,
+      "sse_fp64_cupy": 49.18050273625069,
+      "tensor": "model.layers.25.mlp.experts.75.up_proj.weight"
+    },
+    {
+      "matrix_ordinal": 11,
+      "max_absolute_error_cupy": 0.030390378893457963,
+      "relative_mse_cupy": 0.0532255658549115,
+      "source_bf16_sha256": "606bcd28a38e1664e573b5667e1f97884475d6331263b1e47f2838d09c12227b",
+      "source_energy_fp64_cupy": 909.1639148765197,
+      "sse_fp64_cupy": 48.39076382416935,
+      "tensor": "model.layers.25.mlp.experts.75.down_proj.weight"
+    },
+    {
+      "matrix_ordinal": 12,
+      "max_absolute_error_cupy": 0.02901567230875101,
+      "relative_mse_cupy": 0.05857326420759448,
+      "source_bf16_sha256": "43b5e82ee0068fc2b6119d2d91cc937ccdf810567c4e1167b06220f0898f87ca",
+      "source_energy_fp64_cupy": 843.9782998322357,
+      "sse_fp64_cupy": 49.43456394154994,
+      "tensor": "model.layers.32.mlp.experts.5.gate_proj.weight"
+    },
+    {
+      "matrix_ordinal": 13,
+      "max_absolute_error_cupy": 0.02692374876827841,
+      "relative_mse_cupy": 0.05069144890391421,
+      "source_bf16_sha256": "76bf945fdeade2cdc8b724ea903f61294a4f842c815c610ad15153e8acb6e47f",
+      "source_energy_fp64_cupy": 931.7649913007698,
+      "sse_fp64_cupy": 47.23251744697904,
+      "tensor": "model.layers.32.mlp.experts.5.up_proj.weight"
+    },
+    {
+      "matrix_ordinal": 14,
+      "max_absolute_error_cupy": 0.030559318399343685,
+      "relative_mse_cupy": 0.04908088858278422,
+      "source_bf16_sha256": "e9ec83b866e77c68a90d00dfc9a6306f4d60f3b9e0f64698ede36dda6dfa2920",
+      "source_energy_fp64_cupy": 956.6194483317917,
+      "sse_fp64_cupy": 46.95173255969717,
+      "tensor": "model.layers.32.mlp.experts.5.down_proj.weight"
+    },
+    {
+      "matrix_ordinal": 15,
+      "max_absolute_error_cupy": 0.032961259614164906,
+      "relative_mse_cupy": 0.04475924828214404,
+      "source_bf16_sha256": "7c792a5d346475e77f43af2b1d8bebb7c1286f6439edb3410b6e931b14808745",
+      "source_energy_fp64_cupy": 1136.0425472202135,
+      "sse_fp64_cupy": 50.84841043010888,
+      "tensor": "model.layers.44.mlp.experts.111.gate_proj.weight"
+    },
+    {
+      "matrix_ordinal": 16,
+      "max_absolute_error_cupy": 0.029728969976541415,
+      "relative_mse_cupy": 0.04121637669112543,
+      "source_bf16_sha256": "dd01b93e5ac5ef9ea44c9d2310deba608ce17730a742e0a734388bb19365e173",
+      "source_energy_fp64_cupy": 1227.663295702332,
+      "sse_fp64_cupy": 50.59983284553582,
+      "tensor": "model.layers.44.mlp.experts.111.up_proj.weight"
+    },
+    {
+      "matrix_ordinal": 17,
+      "max_absolute_error_cupy": 0.030214129322474692,
+      "relative_mse_cupy": 0.04331006324840886,
+      "source_bf16_sha256": "5a9ada27b91f7eee93fbd10ad62d963bea2a8d3cfb41733ba18684b0c98e413f",
+      "source_energy_fp64_cupy": 1164.1495128826039,
+      "sse_fp64_cupy": 50.41938903354993,
+      "tensor": "model.layers.44.mlp.experts.111.down_proj.weight"
+    }
+  ],
+  "meaning_of_passed": "this re-audit reproduced the v1 outcome; it does not mean the codec beat the benchmark",
+  "passed": true,
+  "physical_rate": {
+    "bundle_bits": 60867264,
+    "bundle_bpw": 2.1499091254340277,
+    "integer_gate": "60867264 * 20 <= 43 * 28311552",
+    "integer_gate_passed": true,
+    "route_bits": 1152,
+    "v4_bits": 60866112
+  },
+  "primary_claim": {
+    "claim_passed": false,
+    "gate": "artifact integrity && exact physical bundle <= 2.15 bpw && pooled original-BF16 FP64 SSE/energy < 2^-4.3",
+    "integrity_passed": true,
+    "mse_passed": false,
+    "rate_passed": true
+  },
+  "role_breakdown": {
+    "down_proj": {
+      "energy": 5670.655602697907,
+      "relative_mse": 0.0507559182673993,
+      "sse": 287.8193322931049
+    },
+    "gate_proj": {
+      "energy": 5414.650616654921,
+      "relative_mse": 0.05246741413550589,
+      "sse": 284.09271630310604
+    },
+    "up_proj": {
+      "energy": 5574.089255014539,
+      "relative_mse": 0.05179551891309339,
+      "sse": 288.7128454313762
+    }
+  },
+  "runtime": {
+    "cupy_version": "14.2.0",
+    "device_id": 0,
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "score_accumulator": "CuPy FP64 group reductions then Python math.fsum"
+  },
+  "schema": "int2-qwen-blind-v1-independent-cupy-reaudit-v1",
+  "status": "complete_primary_claim_reconfirmed_failed"
+}

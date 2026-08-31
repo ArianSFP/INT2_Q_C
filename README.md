@@ -1,4 +1,59 @@
-# INT2_Q_C: POLARIS-SC-v2 on Qwen weights
+# INT2_Q_C: auditable sub-2.15-bpw PTQ on Qwen weights
+
+## STRATA-XKLT-SC v2 second blind-panel confirmation — pass
+
+The frozen **STRATA-XKLT-SC v2** PTQ codec passed its precommitted gate on one
+deterministic 18-matrix panel from `Qwen/Qwen3-30B-A3B`. The independent
+original-source-domain score was **0.04985939119332436** at an exact complete-
+artifact rate of **2.149999830457899 bpw**. This is
+**1.7854225272960011% below** the strict Gaussian reference
+`2^-4.3 = 0.050765774772264724` (`0.07824047385148768 dB`).
+
+The 7,608,729-byte container charges its source-derived KLT metadata, literal
+route, labels, profiles, scales, lengths, padding, and zero reservoir tail.
+The independent auditor decoded and canonically re-encoded all 14 blocks,
+verified 18/18 matrices and 108/108 nested source blocks, and passed its
+execution, lineage, source-derived metadata, rate, MSE, and primary gates.
+All 10 lineage tamper cases were rejected.
+
+This is one deterministic precommitted expert panel, not a full-checkpoint,
+probability-sample, perplexity, downstream-task, inference, SOTA, or universal
+rate-distortion claim. V2 development used the already-opened v1 result; the
+confirmatory v2 panel uses disjoint layer/expert coordinates but must not be
+pooled with v1. See the result card for the startup-freeze coverage gap,
+charged-metadata details, compact-release boundary, and unresolved upstream
+polar-code reuse terms.
+
+The historical STRATA blind-v1 result remains a valid negative result:
+`0.05166003144302383` pooled relative MSE at `2.14990912543403 bpw`, which is
+`1.7615%` above the strict Gaussian reference. It is neither overwritten nor
+pooled with v2.
+
+- [STRATA-v2 architecture](docs/STRATA_XKLT_SC_V2.md)
+- [Frozen physical format](docs/STRATA_V2_FORMAT.md)
+- [Post-run conformance appendix](docs/STRATA_V2_CONFORMANCE.md)
+- [Second blind-panel protocol](docs/STRATA_V2_BLIND_PROTOCOL.md)
+- [Reproduction and audit guide](docs/STRATA_V2_REPRODUCIBILITY.md)
+- [Final independent result and canonical artifacts](docs/STRATA_V2_RESULTS.md)
+
+Verify the compact STRATA release without Qwen source payloads, CuPy, or a
+GPU:
+
+```bash
+python tools/verify_strata_v2_release.py --repo-root .
+```
+
+The 64-file release manifest is
+[`release/strata_v2_release_manifest.json`](release/strata_v2_release_manifest.json)
+(SHA-256 `dcf87419d6c35b9ba2217e3e1b512dfeb4abfba4841b10761e2d662f91f55bd4`). One
+freeze-bound historical base-encoder file is deliberately withheld because it
+identifies itself as a direct port of upstream MATLAB code with no visible
+license grant. Its exact path and SHA-256 remain bound in the freeze, intent,
+manifest, and verifier; see the third-party notice.
+Pre-existing POLARIS translation files remain historical evidence under the
+same unresolved terms; this repository makes no open-source license grant.
+
+The published POLARIS-SC-v2 result below is preserved unchanged.
 
 This repository is an auditable research implementation of a post-training
 weight codec operating below 2.15 bits per weight. The principal result is

@@ -16,6 +16,16 @@ repro/
 *.safetensors
 *.safetensors.index.json
 
+# STRATA release keeps hashes and the compact physical container, never raw
+# source/staging tensors or multi-hundred-MiB decoded reconstruction arrays.
+blind_protocol_v2/unblinded/sources/
+strata_v2_blind_one_shot_v2/staging/
+strata_v2_blind_one_shot_v2/encode_logs/
+strata_v2_blind_one_shot_v2/encoded/*.polar.bin
+strata_v2_blind_one_shot_v2/independent_audit/decoded_sorted_blocks/
+strata_v2_blind_one_shot_v2/independent_audit/*.f64.bin
+*.f64.bin
+
 # The reproduction guide clones this separately.  Keep the Qwen license that
 # is intentionally tracked elsewhere under third_party/.
 third_party/PolarLatticeQuantization/

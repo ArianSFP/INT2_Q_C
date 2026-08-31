@@ -1,0 +1,489 @@
+{
+  "artifact": {
+    "schema": "strata_xklt_sc_v2_release_manifest_v1",
+    "protocol_mode": "blind",
+    "architecture": "STRATA-XKLT-SC v2",
+    "format_magic": "PLRKLT2\\0",
+    "format_version": 1,
+    "model": "Qwen/Qwen3-30B-A3B",
+    "model_revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "panel": "six precommitted expert triplets / 18 full matrices",
+    "weights": 28311552,
+    "physical_bytes": 7608729,
+    "physical_bits": 60869832,
+    "physical_bpw": 2.149999830457899,
+    "container_sha256": "e89e2a97fa655cc4248de849ba1b1b84b46e8357044beb563318efb359be2be7",
+    "withheld_frozen_artifacts": [
+      {
+        "name": "base_cupy_encoder",
+        "path": "agent_polaris_qwen_rht_encoder.py",
+        "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+        "reason": "withheld from redistribution because the historical file identifies a direct port of upstream MATLAB code with no visible license grant"
+      }
+    ],
+    "manifest_scope": "byte-bound source-free release evidence; excludes this manifest, mutable prose, raw BF16 sources, duplicate payload sidecars, FP64 reconstructions, and the declared license-withheld historical dependency"
+  },
+  "claim": {
+    "protocol_mode": "blind",
+    "audit_passed": true,
+    "audit_execution_passed": true,
+    "primary_claim_passed": true,
+    "tamper_report_passed": true,
+    "source_energy_sum_fp64": 16192.89450885593,
+    "sse_sum_fp64": 807.3678618692818,
+    "energy_weighted_relative_mse": 0.04985939119332436,
+    "gaussian_reference_2_pow_minus_4p3": 0.050765774772264724,
+    "relative_margin_below_reference": 0.01785422527296001,
+    "claim_boundary": "one deterministic precommitted 18-matrix Qwen3-30B-A3B expert panel; not a full checkpoint, perplexity result, SOTA comparison, probability sample, or universal theorem"
+  },
+  "files": [
+    {
+      "path": "bg_codec_bec_encoder.py",
+      "bytes": 1303,
+      "sha256": "456a3ae5fe00c578456dc9430bf7ae059ed9dbb8dcf04a6bafad3a88cc5cb267",
+      "role": "support_bg_codec_bec_encoder_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "blind_protocol_v2/audit_v1_result.py",
+      "bytes": 14708,
+      "sha256": "a9e0257315c719d4bf9d98d8cb7f27ae93bdba962b05725f478962dadd045408",
+      "role": "support_blind_protocol_v2_audit_v1_result_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "blind_protocol_v2/build_codec_freeze_v2.py",
+      "bytes": 40587,
+      "sha256": "1246d2ee38e5056714f17c57c7cc96ff5093a6a01bf94dc64a204d6c75f826fb",
+      "role": "support_blind_protocol_v2_build_codec_freeze_v2_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "blind_protocol_v2/codec_freeze.lock.json",
+      "bytes": 14765,
+      "sha256": "1cd70bfc3147663b15039d0f949e5e4b999bf1c6981d33d21dbc4f1b7d7ebda7",
+      "role": "codec_freeze",
+      "classification": "protocol_lock"
+    },
+    {
+      "path": "blind_protocol_v2/codec_freeze.validation.json",
+      "bytes": 1250,
+      "sha256": "9b2472b8ffefd96f0ed36919b0d431818229985820daf82ca1e9c8e5455e8c2d",
+      "role": "codec_freeze_validation",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "blind_protocol_v2/materialize_full_tensors_v2.py",
+      "bytes": 31249,
+      "sha256": "c578589f2c43f04fb2721e844c9cdb52f5479fc6df631214b609430a4e224eaa",
+      "role": "support_blind_protocol_v2_materialize_full_tensors_v2_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "blind_protocol_v2/prepare_selection_proposal.py",
+      "bytes": 36396,
+      "sha256": "3f9e75e7ed1e19e83cf6e1308ee87e6d4f78a046c9551a179308faa3b4bb7553",
+      "role": "support_blind_protocol_v2_prepare_selection_proposal_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "blind_protocol_v2/route_table.proposal.audit.json",
+      "bytes": 7064,
+      "sha256": "a95b17ff26027b6a76ad42c04b2b1e655fb80307d168a795f7c7e6c5305de22c",
+      "role": "support_blind_protocol_v2_route_table_proposal_audit_json",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "blind_protocol_v2/route_table.proposal.bin",
+      "bytes": 144,
+      "sha256": "94feb3564fe0c3eddfc745703f1f6001b5ae316e7146209e6b45323cdf81697c",
+      "role": "support_blind_protocol_v2_route_table_proposal_bin",
+      "classification": "byte_bound_binary_evidence"
+    },
+    {
+      "path": "blind_protocol_v2/selection.proposal.lock.json",
+      "bytes": 72762,
+      "sha256": "528250d8c6bac52dfdf64958d7f4929a115ff68d907a47880cab85d532aade14",
+      "role": "selection_lock",
+      "classification": "protocol_lock"
+    },
+    {
+      "path": "blind_protocol_v2/unblinded/source_hashes.lock.json",
+      "bytes": 46013,
+      "sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+      "role": "source_lock",
+      "classification": "protocol_lock"
+    },
+    {
+      "path": "blind_protocol_v2/unopened_snapshot.audit.json",
+      "bytes": 52934,
+      "sha256": "0d0a7de5ecca5f6ca914841dcbad028275c2c36ca31dffcf8cd37c0fc975ebe3",
+      "role": "support_blind_protocol_v2_unopened_snapshot_audit_json",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "blind_protocol_v2/v1_failure_independent_audit.json",
+      "bytes": 11638,
+      "sha256": "5ebe6fd5efbc10162a49a84083e99ae0123daa1680fd54b47a12d79f99369ea3",
+      "role": "support_blind_protocol_v2_v1_failure_independent_audit_json",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "blind_protocol_v2/validate_codec_freeze_v2.py",
+      "bytes": 37985,
+      "sha256": "05a5608ff7b2068664f1d588cc7f7867c8d5782ac7baeddba75b9b9d52b105c6",
+      "role": "support_blind_protocol_v2_validate_codec_freeze_v2_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "blind_protocol_v2/validate_proposal.py",
+      "bytes": 7750,
+      "sha256": "152f1c1f13c1d6e5556549cb9c8e7ad5495dc782b1ed73ed48dff09e3b60caea",
+      "role": "support_blind_protocol_v2_validate_proposal_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "release/strata_v2_postrun_test_receipt.json",
+      "bytes": 1936,
+      "sha256": "cdb7047cbadc7099b35a8114d72618070695ae4a14ef4632d7dfbb9312ac6695",
+      "role": "support_release_strata_v2_postrun_test_receipt_json",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "strata_v2_allocation_research/fp32_klt_projection_n20_n21_reserve65536.json",
+      "bytes": 41098,
+      "sha256": "a1fad1320b1524a44c53668dcbabb3f41c4cc240a10cf6717b01a816e0127b46",
+      "role": "support_strata_v2_allocation_research_fp32_klt_projection_n20_n21_reserve65536_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_allocation_research/physical_savings_audit_v1_v5/audit.json",
+      "bytes": 4299,
+      "sha256": "9c156b0b11d1079891a40c7582bf49496b3b60778cbcb6a7d241fa49f7515cdf",
+      "role": "support_strata_v2_allocation_research_physical_savings_audit_v1_v5_audit_json",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "strata_v2_allocation_research/triplet_covariance_probe_v1.json",
+      "bytes": 4885,
+      "sha256": "618387d3f69ff16e7fac1d1cc7b0cd16569f08392192466b5fce1c2a21d0f7d9",
+      "role": "support_strata_v2_allocation_research_triplet_covariance_probe_v1_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/EMISSION_RECEIPT.json",
+      "bytes": 696,
+      "sha256": "7eddcaea1405e2f11c4c7944e8f82d8083522a2262e211d400a33a46643610c4",
+      "role": "support_strata_v2_blind_one_shot_v2_emission_receipt_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/ONE_SHOT_INTENT.json",
+      "bytes": 5916,
+      "sha256": "0878e9844d6e8249e51e2e4a6586c436a73b9671c5cf3e11ae7cff500c2bf299",
+      "role": "one_shot_intent",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/allocation.lock.json",
+      "bytes": 45813,
+      "sha256": "65efad51f92047236217ff1e90da2fc5cbac567de99ac8ff845a1533e5b1632a",
+      "role": "allocation_lock",
+      "classification": "protocol_lock"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_00.json",
+      "bytes": 4492,
+      "sha256": "065094ee69a55cb9a5abfbe0f468a3555a6a7be490a0910ec5ed3d79f52faa66",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_00_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_01.json",
+      "bytes": 4475,
+      "sha256": "89a22292cb6ab4c06838d0c86f4ce71f21680a7a722f860fffba426a962d3472",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_01_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_02.json",
+      "bytes": 4502,
+      "sha256": "0ccc962c579db232d601a87f32fbc0b76e9f81bab122ce14b1df1874b75ef055",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_02_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_03.json",
+      "bytes": 4509,
+      "sha256": "c78df45af7a1dbaf0ae3a8c98a2e83e2ae188b0c483efb685bd1bd16973c2e65",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_03_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_04.json",
+      "bytes": 4457,
+      "sha256": "4fe9bde77374210ca61d51ce499d78cba3e29ee388a69652239a52ca7f684070",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_04_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_05.json",
+      "bytes": 4463,
+      "sha256": "a77f4cb7028aa98aa693d92c18586107c0af55e37514cd5dc802ea870108299a",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_05_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_06.json",
+      "bytes": 4477,
+      "sha256": "926ca27cb2173ef0e9880f4d357962c854fc33209485b4b390a81d6497b747b6",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_06_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_07.json",
+      "bytes": 4463,
+      "sha256": "2b46989f4c9c65c4f60d3087a3255d62acd7f1f0fa27574e4475f8ff328ea91e",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_07_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_08.json",
+      "bytes": 4463,
+      "sha256": "6f3a8fdf40bbb27d8c27064a81788c49e0ac691e33b24e8bda46ffeb21cd5015",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_08_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_09.json",
+      "bytes": 4472,
+      "sha256": "bd802133ab084d89bd5858db9b7d03ed5214373a2f0ae1d4d85de8abe3d05cdd",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_09_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_10.json",
+      "bytes": 4456,
+      "sha256": "89d3eab99919732a005fc8e72e691b647e10406458d7dd5d1d2fddc0ccd4d423",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_10_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_11.json",
+      "bytes": 4468,
+      "sha256": "372eccb9557ec964af4eb242e3e89a4180804e7ab1c2d26ded6c5aa678b1586c",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_11_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_12.json",
+      "bytes": 4441,
+      "sha256": "70a789fe6b219fce0751c3985d186c5340a43ad1c56598ad456d7ab55b76fbed",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_12_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/encoded/block_13.json",
+      "bytes": 4424,
+      "sha256": "e92e65c147eb5b87cf0f0706a66017fd85d1ce6eb20859e46c905ef6372539c3",
+      "role": "support_strata_v2_blind_one_shot_v2_encoded_block_13_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/header.bin",
+      "bytes": 128,
+      "sha256": "eaeebd9ac2055d845b6825b95883a0f4fc5afe8afb5bffc7bdb074564cebb723",
+      "role": "support_strata_v2_blind_one_shot_v2_header_bin",
+      "classification": "byte_bound_binary_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/independent_audit/independent_decode_audit.json",
+      "bytes": 93354,
+      "sha256": "310d04352a6fd57ac8b4cc37f99f17a327a9663c41c0ef2821f2999cc2797d78",
+      "role": "independent_audit",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/independent_audit/inspection.json",
+      "bytes": 17142,
+      "sha256": "ba7d936db86b7679bd7c9f1b741477e1f5e8998679d5e267320540e1cbaabfcf",
+      "role": "support_strata_v2_blind_one_shot_v2_independent_audit_inspection_json",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/independent_lineage_tamper_tests.json",
+      "bytes": 2536,
+      "sha256": "4122e40542fb7c77780af544fca05d88ff4070aacaa9154b45751b447e594a0c",
+      "role": "tamper_report",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/labels_3bit.bin",
+      "bytes": 5184,
+      "sha256": "4bb444bd14248bc72dd521b7f581700cc95e5f6d5a9e6cbea21c2119efae89e9",
+      "role": "support_strata_v2_blind_one_shot_v2_labels_3bit_bin",
+      "classification": "byte_bound_binary_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/preencoding_manifest.json",
+      "bytes": 53028,
+      "sha256": "5cdced62fe7ccba39e2e313bf40a79820e285fbb86323424a8da697161dd6539",
+      "role": "preencoding_manifest",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/profiles.bin",
+      "bytes": 14,
+      "sha256": "a7ba0ea4a7f06cdb06d91a1e4762ec459b9880db79b1e050a75411b49b57271c",
+      "role": "support_strata_v2_blind_one_shot_v2_profiles_bin",
+      "classification": "byte_bound_binary_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/route.bin",
+      "bytes": 144,
+      "sha256": "94feb3564fe0c3eddfc745703f1f6001b5ae316e7146209e6b45323cdf81697c",
+      "role": "support_strata_v2_blind_one_shot_v2_route_bin",
+      "classification": "byte_bound_binary_evidence"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/strata_xklt_sc_v2.bin",
+      "bytes": 7608729,
+      "sha256": "e89e2a97fa655cc4248de849ba1b1b84b46e8357044beb563318efb359be2be7",
+      "role": "container",
+      "classification": "compressed_model_artifact"
+    },
+    {
+      "path": "strata_v2_blind_one_shot_v2/summary.json",
+      "bytes": 12665,
+      "sha256": "35770b1ea622c98abc1e76e513fe24446bd14a6bed56e0fb6243b59b9f7a8b87",
+      "role": "one_shot_summary",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "strata_v2_codec/FORMAT.md",
+      "bytes": 7378,
+      "sha256": "004f195055e2289ff647ebadc69181978acbf61c19192d49ed3c509d6843023c",
+      "role": "format_freeze",
+      "classification": "frozen_format_specification"
+    },
+    {
+      "path": "strata_v2_codec/__init__.py",
+      "bytes": 47,
+      "sha256": "ea9449f13196f9867f44bae384e9d7cd664550adf604d45852c8d0ea13c7c826",
+      "role": "support_strata_v2_codec_init_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_codec/common.py",
+      "bytes": 15465,
+      "sha256": "bb5ad9f91ed6c4ee51f337d70fbfb3b1f174001cf2585d48c84034622b6b4ab8",
+      "role": "support_strata_v2_codec_common_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_codec/emit_and_lock.py",
+      "bytes": 42544,
+      "sha256": "8fe43becd70eaf3d2bbc009db424db8c152029aa3f0e4bf4ceed7108f342ed40",
+      "role": "support_strata_v2_codec_emit_and_lock_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_codec/polar_encoder.py",
+      "bytes": 4216,
+      "sha256": "ab4f7f6ed6f55f7eaa0bba24436b22a26cc0bf3452e1ce0d2ed56be805020309",
+      "role": "support_strata_v2_codec_polar_encoder_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_codec/run_one_shot.py",
+      "bytes": 26402,
+      "sha256": "764bacb3f6690ea5308560dc850c410a1dd59337a358152985fdf20d3b3f69fe",
+      "role": "support_strata_v2_codec_run_one_shot_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_codec/test_common.py",
+      "bytes": 3824,
+      "sha256": "b63dff43c3030c74867131e441d0dab13e6e71ffa3f2f46e23721c3da0ea118a",
+      "role": "support_strata_v2_codec_test_common_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_codec/test_emitter_contract.py",
+      "bytes": 15101,
+      "sha256": "ea92380972d5eee6d1e0734b39e46830735cd5195fcbf1267793cae8eeb9a720",
+      "role": "support_strata_v2_codec_test_emitter_contract_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_codec/test_emitter_synthetic.py",
+      "bytes": 11849,
+      "sha256": "6082ac64b8b50819f962080d413b815fb6f020f2bf0ba0b1cf6f6ad396d583f9",
+      "role": "support_strata_v2_codec_test_emitter_synthetic_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_cross_projection_transfer_audit_v1.json",
+      "bytes": 8957,
+      "sha256": "92a2ff9e6cb8dbdf3db54e2dcd2da56fe3e48cbd1d04a16b8ded134121e110f2",
+      "role": "support_strata_v2_cross_projection_transfer_audit_v1_json",
+      "classification": "audit_or_execution_evidence"
+    },
+    {
+      "path": "strata_v2_dev/known_n20_independent_validation_hardened_v2.json",
+      "bytes": 2193,
+      "sha256": "53f26ebd803b1679b869bf6468681a83509417acbd8b3728edd1735cc241074b",
+      "role": "support_strata_v2_dev_known_n20_independent_validation_hardened_v2_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_klt_known_n20_fixture_v1.json",
+      "bytes": 434,
+      "sha256": "3d8da974ac62a1124f1e3756b43bbdf745b4089e04489e6fd67c65fd664e0874",
+      "role": "support_strata_v2_klt_known_n20_fixture_v1_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_klt_known_n20_independent_validation_v1.py",
+      "bytes": 8994,
+      "sha256": "f1e187311b2bc55026d76c15170f7c7b81da6dcfd70b7d62000771567980642e",
+      "role": "support_strata_v2_klt_known_n20_independent_validation_v1_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_klt_lineage_tamper_tests_v1.py",
+      "bytes": 10455,
+      "sha256": "91d47e7f5531da6bcf900c0263a29af049bd155d9e89b167b0b5494f937cfe05",
+      "role": "support_strata_v2_klt_lineage_tamper_tests_v1_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_klt_mixed_independent_auditor_v1.py",
+      "bytes": 116835,
+      "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+      "role": "support_strata_v2_klt_mixed_independent_auditor_v1_py",
+      "classification": "reference_or_verification_source"
+    },
+    {
+      "path": "strata_v2_klt_n20_rate243359_probe.json",
+      "bytes": 4651,
+      "sha256": "ad0e02362434bcd8e3058f2f710d790646d8c2c6a05e33bf3f2b603386e9443a",
+      "role": "support_strata_v2_klt_n20_rate243359_probe_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "strata_v2_klt_n21_lowrate_q12_probe.json",
+      "bytes": 4712,
+      "sha256": "672b5f8ce5042349c44430f61f8d8255732baadd6ebb19805cac451e52742fa9",
+      "role": "support_strata_v2_klt_n21_lowrate_q12_probe_json",
+      "classification": "source_free_metadata_or_development_evidence"
+    },
+    {
+      "path": "tools/verify_strata_v2_release.py",
+      "bytes": 76174,
+      "sha256": "c71cd0c0905f402539a5c19b6eba03d37f94625d643713312ba3f329b6ec3f40",
+      "role": "support_tools_verify_strata_v2_release_py",
+      "classification": "reference_or_verification_source"
+    }
+  ]
+}

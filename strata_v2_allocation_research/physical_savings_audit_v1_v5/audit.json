@@ -1,0 +1,100 @@
+{
+  "schema": "strata_v2_lossless_physical_savings_audit_v1",
+  "claim_boundary": "Uses already-opened STRATA v1 artifacts and the v1-derived N20 labels only; does not read or predict blind_protocol_v2 payload values.",
+  "passed": true,
+  "inputs": {
+    "v1_container": "/workspace/INT2__compression/frozen_strata_blind_one_shot_v1/physical/frozen_strata.plrwf4",
+    "v1_container_sha256": "ef2cbabc7ad24ff1e5ee9cc7230494deb50d0e2e688455ecf2afcd9c891a8d47",
+    "canonical_scale_sha256": "e91655e7c46c6f265006e46b55ed7a23c1e71a606555963b7889aa25f8b5e9a8",
+    "coarse_labels_sha256": "682358f2c839b6e46c0bdfaa7c2dc9fc30d1d442cc7a4d24bdd8784e1ccee50c",
+    "route_sha256": "1a2380a8750363a1fb0f6e2c30904c20d68ba78e59cb6ca15678395496adcf41"
+  },
+  "roundtrips": {
+    "log8_scales": true,
+    "coarse_labels": true,
+    "compact_route": true,
+    "zlib_directory": true,
+    "global_payload_all_logical_bits": true
+  },
+  "lossless_scale_codec": {
+    "name": "per-matrix span/presence/positive-composition/multiset enumeration",
+    "raw_bits": 110592,
+    "logical_bits": 42281,
+    "physical_bits": 42288,
+    "physical_bytes": 5286,
+    "saved_physical_bits": 68304,
+    "sha256": "1b43abef14cdf93997183c26964fc53c591268722788cd614a5dfbc58301b030",
+    "learned_tables_or_parameters": 0
+  },
+  "lossless_coarse_label_codec": {
+    "name": "17 weak-composition histograms plus 18 multiset ranks; final histogram inferred",
+    "raw_bits": 41472,
+    "logical_bits": 30736,
+    "physical_bits": 30736,
+    "physical_bytes": 3842,
+    "saved_physical_bits": 10736,
+    "sha256": "eda63d2fc7d47c719802fb5eee860a974ae0f40922bf053bd2b02eec1a4cfe9f",
+    "learned_tables_or_parameters": 0
+  },
+  "v1_concrete_repack": {
+    "header_bits": 32,
+    "route_bits": 80,
+    "route_logical_bits": 78,
+    "scale_bits": 42288,
+    "directory_raw_bits": 5184,
+    "directory_zlib_bits": 2936,
+    "fixed_slot_payload_bits": 60749568,
+    "logical_payload_bits": 60707364,
+    "global_reservoir_physical_bits": 60707368,
+    "fixed_slot_padding_eliminated_bits": 42200,
+    "bundle_bits": 60752704,
+    "bundle_bpw": 2.145862720630787,
+    "original_bundle_bits": 60867264,
+    "total_lossless_savings_bits": 114560,
+    "headroom_to_max_byte_aligned_2p15_bits": 117128,
+    "path": "/workspace/INT2__compression/strata_v2_allocation_research/physical_savings_audit_v1_v5/v1_lossless_physical_repack.s2p1",
+    "sha256": "8c66984c656efcedf85202e419085380aa85332ec596f1d6878f68ae016003b8"
+  },
+  "v2_N20_ledger": {
+    "weights": 28311552,
+    "real_2p15_cap_bits": 60869836.8,
+    "integer_floor_cap_bits": 60869836,
+    "max_byte_aligned_bundle_bits": 60869832,
+    "current_N20": {
+      "route_bits": 1152,
+      "header_bits": 1024,
+      "coarse_label_bits": 41472,
+      "directory_bits": 1512,
+      "control_bits": 45160,
+      "signal_reservoir_capacity_bits": 60824672,
+      "nominal_signal_budget_after_27x71b_arithmetic_reserve": 60822755
+    },
+    "mixed_blind_freeze_normative": {
+      "geometry": "13 blocks of 2^21 values followed by one block of 2^20 values",
+      "header_bits": 1024,
+      "route_bits": 1152,
+      "raw_coarse_label_bits": 41472,
+      "directory_bits": 784,
+      "directory_record": "<BeI: uint8 profile, little-endian IEEE FP16 scale, uint32 logical length",
+      "reservoir_capacity_bits": 60825400,
+      "no_retry_reserve_bits": 65536,
+      "nominal_signal_budget_after_no_retry_reserve": 60759864,
+      "total_physical_bits": 60869832,
+      "total_physical_bpw": 2.149999830457899,
+      "additional_reservoir_bits_vs_current_N20": 728,
+      "additional_reservoir_bpw_vs_current_N20": 2.571388527199074e-05,
+      "additional_nominal_bits_vs_current_N20_after_its_1917b_reserve": -62891
+    },
+    "future_lossless_savings_not_used_by_blind_freeze": {
+      "normative_for_blind_v2": false,
+      "reason": "root freeze keeps conservative literal route and raw labels",
+      "enumerative_coarse_label_saving_bits_on_opened_v1": 10736,
+      "compact_route_saving_bits": 1072,
+      "combined_future_reservoir_gain_bits": 11808,
+      "counterfactual_reservoir_capacity_bits": 60837208,
+      "lossless_log8_physical_bits": 42288,
+      "lossless_log8_cost_vs_raw_3bit_labels": 816
+    },
+    "current_v1_logical_payload_bits_for_reference": 60707364
+  }
+}

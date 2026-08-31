@@ -1,0 +1,50 @@
+{
+  "absolute_mse_difference": 0.0,
+  "bindings": {
+    "container": "strata_v2_klt_n20_block13/result.polar.bin",
+    "container_sha256": "eaee0efc170d01296e48bcde7d32311af72c2ae45ff0416edc6a5c3a4f5e03ab",
+    "fixture": "strata_v2_klt_known_n20_fixture_v1.json",
+    "fixture_sha256": "3d8da974ac62a1124f1e3756b43bbdf745b4089e04489e6fd67c65fd664e0874",
+    "result": "strata_v2_klt_n20_block13/result.json",
+    "result_sha256": "11c329da8c8207d13010c23ff70db63a7c0345eb2400b60b93e102713e0c340a",
+    "source_bf16": "strata_v2_klt_n20_block13/megablock_13.bf16.bin",
+    "source_bf16_sha256": "469a180019dca5c690d4e9f416c1d05af163181477123c39b418227f9fa1af75"
+  },
+  "canonical_payload_sha256": "a780688d5c672f6e91bdb9152c293927e5274a7a359d7d0de5516fd65b96491f",
+  "canonical_reencode_logical_length_match": true,
+  "canonical_reencode_payload_bytes_match": true,
+  "capacity_schedule": [
+    0.0018302678469617195,
+    0.2932867782503541,
+    0.9403975834647825,
+    0.9999950518714529,
+    1.0,
+    1.0
+  ],
+  "causal_frequency_u16_sha256": "5c7b3861e8eb1462c4fa78fc52d6ca9ddd2000503c59f5e8e77f12c0561e97f9",
+  "claim_boundary": "opened v1-derived KLT development block only; no blind-v2 artifact read",
+  "decoded_normalized_relative_mse": 0.0447221034109425,
+  "decoded_reconstruction_indices_i16_sha256": "96cc5a68513f70690da4d7b2d49ce51264a929cb16562e8778f576f95b6ae5c3",
+  "expected_selected_polar_bits": 4441256,
+  "independence": {
+    "encoder_decisions_read": false,
+    "encoder_imported": false,
+    "encoder_probabilities_read": false,
+    "external_reliability_tables_read": false
+  },
+  "inverse_device": "cupy",
+  "logical_bits": 2359947,
+  "passed": true,
+  "payload_terminal_padding_all_zero": true,
+  "payload_terminal_padding_bits": 5,
+  "profile_q": 128,
+  "rate_bpw": 2.25,
+  "recorded_encoder_relative_mse": 0.0447221034109425,
+  "runtime_seconds": 122.0838212070521,
+  "schema": "strata_v2_known_n20_independent_decoder_validation_v1",
+  "selected_count_match": true,
+  "selected_polar_bits": 4441256,
+  "serialized_scale_fp32": 0.02362634800374508,
+  "serialized_scale_matches_metadata": true,
+  "serialized_scale_source_domain_relative_mse": 0.04472210341631339
+}

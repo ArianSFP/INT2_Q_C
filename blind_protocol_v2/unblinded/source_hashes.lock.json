@@ -1,0 +1,1295 @@
+{
+  "block_count": 108,
+  "checkpoint": {
+    "repo": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39"
+  },
+  "codec_freeze": {
+    "file_sha256": "1cd70bfc3147663b15039d0f949e5e4b999bf1c6981d33d21dbc4f1b7d7ebda7",
+    "internal_lock_sha256": "7191f2813ec70be7793613f82722dc82c253c6eed72f9098796c88aad2173779"
+  },
+  "codec_freeze_validation": {
+    "file_sha256": "9b2472b8ffefd96f0ed36919b0d431818229985820daf82ca1e9c8e5455e8c2d",
+    "internal_lock_sha256": "f022028caf1303587f8c5713768135a3f33b1f28fa0388f6aa0abb7cfe8a2ef7"
+  },
+  "dtype": "BF16",
+  "lock_sha256": "5a82dac742110d4f48bbd73ae82081e1622b10b660b7850dadfe613ff475cc5b",
+  "materialization": {
+    "authorization_phrase_sha256": "bf8d6e0fd463b6318712983ccf4d492ec7159cb4ab4119bbbc47aee223b6a60c",
+    "downloaded_body_bytes": 56623104,
+    "executing_materializer_sha256": "c578589f2c43f04fb2721e844c9cdb52f5479fc6df631214b609430a4e224eaa",
+    "full_checkpoint_shards_written": false,
+    "http_206_response_count": 18,
+    "http_range_request_count": 18,
+    "selection_was_metadata_only": true
+  },
+  "matrices": [
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "6f0ce02b5fe140e3eda22f5dc1b1ebf7f9a5f73a2b303eb18c3e0860d234562e"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "1466a0be39090f6ff4ed2a6b1f38cb243a8927908bca78d47ee608424e17084d"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "e03d3eb0c301aaaa15247df58936777654ebab08f3da003588b39d4c64f15fa5"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "cb2742f465e378f1f4a9fd15e0ebd9b826846c6975a901fae1df3b8f65b21e39"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "0a8b8e698a6bd30dbd4123bcc950506685e8bd644e1d6c95833c9d552af91997"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "def821e1619746107e95b19596933dc115fe40c25e5f7c488b5a2a33a7f3307c"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 18,
+      "http_range_inclusive": [
+        3115499824,
+        3118645551
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 3115499824-3118645551/3999974192",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00002-of-00016.safetensors",
+        "requested_range": "bytes=3115499824-3118645551",
+        "status": 206
+      },
+      "layer": 5,
+      "matrix_ordinal": 0,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.5.mlp.experts.18.gate_proj.weight.bf16.bin",
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00002-of-00016.safetensors",
+      "source_bf16_sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+      "tensor": "model.layers.5.mlp.experts.18.gate_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "5b67b2c1e55352216c8be9bc2519c7a7238118ae76406da7803b646167d17392"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "86a1b58964780fa94c01a2825946993eccaf907e59ed541871a95de6c4a9c191"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "1f38e0ae9357c26695c635266575c621a3c506491a7a231663c671685a0c17a9"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "a4d1815d07833eed109ddf989732a65671d42b8ab5344aafb84c0473696c19df"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "cf27f4f671b4600d08a874e8db191cae14f50529d7bec01687cf4f0a6f4c5c44"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "01fc58dfcb22249e031032304522dbcb8b335cb8a40318e3acad0b2437d57b0d"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 18,
+      "http_range_inclusive": [
+        3118645552,
+        3121791279
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 3118645552-3121791279/3999974192",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00002-of-00016.safetensors",
+        "requested_range": "bytes=3118645552-3121791279",
+        "status": 206
+      },
+      "layer": 5,
+      "matrix_ordinal": 1,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.5.mlp.experts.18.up_proj.weight.bf16.bin",
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00002-of-00016.safetensors",
+      "source_bf16_sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+      "tensor": "model.layers.5.mlp.experts.18.up_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "7990c27463cceee49d4736cbda87725b76cff8db2bfdd7726942254e736c88d8"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "190fccd6ff6727c327111995c88290e41e468588b6a027df9834713f00d6d720"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "b4cfcc2ed1d15154485b9250cbc50ccd6b437076a086c09dc980c61445ee41aa"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "cf2fd1d75dd23bea2b45a3d85613eeb34697cb6aa85c579d8074746348b3bd83"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "4d6cb2b95b035327b8e084929900c92c9da608ac668db705167ca3fe98211241"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "94d654e5b1efd7583bf02378ab7bd39563b2f721a8645c663623bad74b443647"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 18,
+      "http_range_inclusive": [
+        3112354096,
+        3115499823
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 3112354096-3115499823/3999974192",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00002-of-00016.safetensors",
+        "requested_range": "bytes=3112354096-3115499823",
+        "status": 206
+      },
+      "layer": 5,
+      "matrix_ordinal": 2,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.5.mlp.experts.18.down_proj.weight.bf16.bin",
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "shard": "model-00002-of-00016.safetensors",
+      "source_bf16_sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+      "tensor": "model.layers.5.mlp.experts.18.down_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "b816232433748f034322e85e1429c69c95d1ac6588103144d0634ef07eaee754"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "7f5fde80749040a7fe5ea7ac327d3cf73e3edf5f77b26b87c51c414510935ef5"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "2bde1a214e8ed893e1ed64a70747c5b3bc38254de12b2e590b7007868cf9c249"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "c9fcdd3d7e135fd9da40d2057ee442dd356867f34b73dc94309ba874aaeb506c"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "13d313c1c0a4be49a4db8afc8fac565ec490168affa872d6601225a0c04a63be"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "d055a117efbae7c37bab843ae64a7acf3116867718dc7bb55250bbb8fa414f71"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 7,
+      "http_range_inclusive": [
+        2848105616,
+        2851251343
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 2848105616-2851251343/3999975056",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00004-of-00016.safetensors",
+        "requested_range": "bytes=2848105616-2851251343",
+        "status": 206
+      },
+      "layer": 12,
+      "matrix_ordinal": 3,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.12.mlp.experts.7.gate_proj.weight.bf16.bin",
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00004-of-00016.safetensors",
+      "source_bf16_sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+      "tensor": "model.layers.12.mlp.experts.7.gate_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "41ee43236b94cfb478f4e15debe0b08ec039adad9d5d3f9e6db54589c6b6c373"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "c75f8a5c45f6abfe7e3fe733a670e860de38be34e7d36fdb09a6cf0b1e332db8"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "6a4274778c9ba106bfe1b2da541b16ee0e3287d1731c100c11c143ead0952c8d"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "42103de127b2d9abd53f0f3f941b71f25849f1954dae9c66f4a2117ff4f97e48"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "9694e9981092bc6c1563fa24d0a08c6a4591446b4e80a1d52e40a13bf20fab90"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "ef9b87eeb944368802c9d89198a0fc06bc480b7eaec6b8868f70b273d9967c85"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 7,
+      "http_range_inclusive": [
+        2851251344,
+        2854397071
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 2851251344-2854397071/3999975056",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00004-of-00016.safetensors",
+        "requested_range": "bytes=2851251344-2854397071",
+        "status": 206
+      },
+      "layer": 12,
+      "matrix_ordinal": 4,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.12.mlp.experts.7.up_proj.weight.bf16.bin",
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00004-of-00016.safetensors",
+      "source_bf16_sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+      "tensor": "model.layers.12.mlp.experts.7.up_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "493a632af16ec3bd8a395e772f85a05491892c080c258039164de9842fbf1057"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "0dbc4b877a4d0bb650c20e9ebc2d302b472c185a5cdac62b8a62eb4f6c148482"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "4235409c3687a5be874655461abdcb1c09b25b3b9fb0e47a25b219b70dfab72d"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "8a2bcd3d8cc408f61ce5f66786d2b591a75ecd7da150852b48445eebf0a573ea"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "30746e677049be6e22823c3045e3216c464532e8a4aa015b06cb00467efadb4c"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "4a913a9599a2a87b97f964c33b7e3938bb1f3997aca53c18c0381b1acdea7bdc"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 7,
+      "http_range_inclusive": [
+        2844959888,
+        2848105615
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 2844959888-2848105615/3999975056",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00004-of-00016.safetensors",
+        "requested_range": "bytes=2844959888-2848105615",
+        "status": 206
+      },
+      "layer": 12,
+      "matrix_ordinal": 5,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.12.mlp.experts.7.down_proj.weight.bf16.bin",
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "shard": "model-00004-of-00016.safetensors",
+      "source_bf16_sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+      "tensor": "model.layers.12.mlp.experts.7.down_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "3db16342f4c57c13ee1604ad72f59b599823517723448da56cddd836192366fc"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "8f5ca7302b37df1ebf982a59f139edd59c28b71d559764d1223bc0129fba8963"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "1eeca0f749d574c2e5ef315bfbb4fcf1b436a63ff4f30efcac08e8e0b49b9fa3"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "6ed4300b2ae168bca1230126c53985451a9c93111042c33bf3ac174b511bf0be"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "04f1aad651fdea2e8f367dacfce59bde4141e14045cf22db5b8330e9c7aa6ff9"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "e68e70f4355fcc905bceb40f7e97ffff6e9d9f35b631c33c67495bfa3f2e89d5"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 20,
+      "http_range_inclusive": [
+        3184707048,
+        3187852775
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 3184707048-3187852775/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00006-of-00016.safetensors",
+        "requested_range": "bytes=3184707048-3187852775",
+        "status": 206
+      },
+      "layer": 18,
+      "matrix_ordinal": 6,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.18.mlp.experts.20.gate_proj.weight.bf16.bin",
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00006-of-00016.safetensors",
+      "source_bf16_sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+      "tensor": "model.layers.18.mlp.experts.20.gate_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "b117b11773aa2d775781d9571de5625eb7b6a484e659f7557ce1d90ed743377f"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "1fdaa405f192dd83b7e779177f8df626de876035d199258a387d368af64d27f8"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "716e0de0b38dbbcaaa23ae5e71e2792ac02fee69bb498e9ded72178e9dd27f1f"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "1c968c1eff101bd93260ff11a0d4628eaf00755944aa2f799d918eb37757a5e9"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "721581f1a2ad29048eabc66164a78a0b59b52113350c0a7e7e68d22704c546f7"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "16798bbe8040906cce8e309620dac0c9b238c56daf7b6c137fc9bfb531691088"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 20,
+      "http_range_inclusive": [
+        3187852776,
+        3190998503
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 3187852776-3190998503/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00006-of-00016.safetensors",
+        "requested_range": "bytes=3187852776-3190998503",
+        "status": 206
+      },
+      "layer": 18,
+      "matrix_ordinal": 7,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.18.mlp.experts.20.up_proj.weight.bf16.bin",
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00006-of-00016.safetensors",
+      "source_bf16_sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+      "tensor": "model.layers.18.mlp.experts.20.up_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "34821f99de9eb211a49c80710be44107ee9e5d5286a9ae68b0950caba04dcc6f"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "3be5d480a5044c4ee32b77e020aa0ab92f0b7b4a47f8bf63277b96b647fef478"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "2d3e57337c3968edc769400c4e9c2e69f0933649be7847363ef15edde10d39ad"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "fc5f25b521fcdb460a36b151ea93bd4c436248ad3913516292e704d7b6ca8224"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "aae9a6ae922a598080d5ef7f55a9c75fdd21d0857dcee062e3c4ad4dd6eb82e6"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "e60dc44c07db206c802dd31424d2623203c2397c8b648e04be012d9569a1fc73"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 20,
+      "http_range_inclusive": [
+        3181561320,
+        3184707047
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 3181561320-3184707047/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00006-of-00016.safetensors",
+        "requested_range": "bytes=3181561320-3184707047",
+        "status": 206
+      },
+      "layer": 18,
+      "matrix_ordinal": 8,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.18.mlp.experts.20.down_proj.weight.bf16.bin",
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "shard": "model-00006-of-00016.safetensors",
+      "source_bf16_sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+      "tensor": "model.layers.18.mlp.experts.20.down_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "6de06fc1b9a4077d913ab71c9c8598080d77bd6cb77369d72f3cfbbde5fedb06"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "d90184d29326295cb13dff5fd41a3374b7cbf23045e3ee4745b02f9c81584637"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "d042c66c1ff7355cb3e2eebdbc06d36f44b713b34fd7cfd1ecbc88a721c0dbe7"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "a60d393bcb6becc26d91d6024f931b4c53b6c3627ff9726081a34987bfa768bc"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "129a9724c884990979ef0402aed36d2797fb3cd83308db8e2d2d953cc4f07a71"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "58c35a51f96943e262175f15638136298c947875c657de8ede8d67d6c653eb92"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 83,
+      "http_range_inclusive": [
+        613577192,
+        616722919
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 613577192-616722919/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00010-of-00016.safetensors",
+        "requested_range": "bytes=613577192-616722919",
+        "status": 206
+      },
+      "layer": 28,
+      "matrix_ordinal": 9,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.28.mlp.experts.83.gate_proj.weight.bf16.bin",
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00010-of-00016.safetensors",
+      "source_bf16_sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+      "tensor": "model.layers.28.mlp.experts.83.gate_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "8d932ffa01d81d66aeb171faa3440ade83ff99239e3574460040f96d994a156e"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "b368d4b6926fb809ab9cd6b55951b94b6a8597fe22045469ec81213ed99cfe83"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "088984755d2ef552d79a66df682c7f58abfc621d776813bc483f368489713e51"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "74ac300adfe92721a9c540e5dc81db54cc8cd06a2eaf7e3f5d48a1607e9168f7"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "41e1421bcefd66e1e7df3e831ef8573711d95b78c0bce38535c96fe088891e57"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "880bf4410a003dafd797ff49fccd5ad6ad1592c38eb032649ac68df842d5a53c"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 83,
+      "http_range_inclusive": [
+        616722920,
+        619868647
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 616722920-619868647/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00010-of-00016.safetensors",
+        "requested_range": "bytes=616722920-619868647",
+        "status": 206
+      },
+      "layer": 28,
+      "matrix_ordinal": 10,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.28.mlp.experts.83.up_proj.weight.bf16.bin",
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00010-of-00016.safetensors",
+      "source_bf16_sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+      "tensor": "model.layers.28.mlp.experts.83.up_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "3f57db31919a2af2c9917c662522a8ada76ee1ec73d4cd4ade32f2260d3cf88b"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "97bf5b91728e96e34eafaa7283291e6069b963755ebd525347d10d86996bff87"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "c6e9ef05671daa4c91b18df2d4dc4e0407f8b2bb9ba7f75bb42e0ef2656ddcec"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "5788665cfe2de4b89feb9710e3716048d9161c6aea4d864d933fa7cd9c505f9a"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "1e87ca42d94ff3c5d30fdffc474f0d5f08cb10d6d2704815b4984706530e3f5c"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "467a912bd43c5cea584f1405fda4965bf3191e8986eeb0acd1e8c6711ded6ea0"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 83,
+      "http_range_inclusive": [
+        610431464,
+        613577191
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 610431464-613577191/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00010-of-00016.safetensors",
+        "requested_range": "bytes=610431464-613577191",
+        "status": 206
+      },
+      "layer": 28,
+      "matrix_ordinal": 11,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.28.mlp.experts.83.down_proj.weight.bf16.bin",
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "shard": "model-00010-of-00016.safetensors",
+      "source_bf16_sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+      "tensor": "model.layers.28.mlp.experts.83.down_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "8f0ab85a020a81249483069d7eff7bf7874a5a334a6a3bba85ffe9793d827bbb"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "8b84e3d5254cbe388af7b8ed2d46de5936c05fc5dd4ec933ff98e95bf7e4528a"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "c3930bf37394ac1d7fb63fb654c86c0ebf11bd3e96a03d9a6ce1fac86013b47a"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "d3e0a28f7692899db08442103efd0b9991ad8925fe777b47c0960835b17c65b0"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "0cd7b92f4fd278212967f735502fc4787955b44efd8b59f737f3972f663eae2c"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "6a342c077ff9eafe1174c8fb382645cf421d6c4e310ea7a52c6bd18cdfd1df5d"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 76,
+      "http_range_inclusive": [
+        2460660528,
+        2463806255
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 2460660528-2463806255/3987400496",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00012-of-00016.safetensors",
+        "requested_range": "bytes=2460660528-2463806255",
+        "status": 206
+      },
+      "layer": 36,
+      "matrix_ordinal": 12,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.36.mlp.experts.76.gate_proj.weight.bf16.bin",
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00012-of-00016.safetensors",
+      "source_bf16_sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+      "tensor": "model.layers.36.mlp.experts.76.gate_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "606e1edf05b1a6abc6f9834639c6a4f53407ea9b3a431c6c219dd10da7a97c4b"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "0aedc5693acaccc08c8415c53610d305508677934349925912b3d98818cd0532"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "b3d9d77544677f10e97cc8915a59bd1e570122df91a1f80484971d6bc8214cc4"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "2bd66e0e87940ca98059dc0c34dc6c3814a3227723ad99e849201cea1ffc58e5"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "771c67ffe7de13ba6d553b7962ddd4be57d1e2a7ec041545b140ab44d7e40a54"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "aa56c0e9cda9e4c89ed99ac5e9a33b63cdd18cbb037182bda357880eac4bdbb6"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 76,
+      "http_range_inclusive": [
+        2463806256,
+        2466951983
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 2463806256-2466951983/3987400496",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00012-of-00016.safetensors",
+        "requested_range": "bytes=2463806256-2466951983",
+        "status": 206
+      },
+      "layer": 36,
+      "matrix_ordinal": 13,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.36.mlp.experts.76.up_proj.weight.bf16.bin",
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00012-of-00016.safetensors",
+      "source_bf16_sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+      "tensor": "model.layers.36.mlp.experts.76.up_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "5f8eff4c88ebc984cb65b1a343dfc5fdd09728ba3017d6f75a40a1ce15835090"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "85dce2d6c87bc4b019a4596f0bc5b3d3a3798337cad235c9a2b958d5bb45c975"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "6e5ca36a89e2f450d8274a08a4b5631320f46463739ac91a3ddec318ac39154a"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "35c4af14b878ccb83ce910298c0e5b0f5192e3fb722823b3415a5cf877e7c7b0"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "00254028667e0d99964d94be9e601afc58302f8ea86524ef2138555ab46ccdc8"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "e8321cf998503f5f7a434362a07fd4275887221975d509b6a62e1938379e8e72"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 76,
+      "http_range_inclusive": [
+        2457514800,
+        2460660527
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 2457514800-2460660527/3987400496",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00012-of-00016.safetensors",
+        "requested_range": "bytes=2457514800-2460660527",
+        "status": 206
+      },
+      "layer": 36,
+      "matrix_ordinal": 14,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.36.mlp.experts.76.down_proj.weight.bf16.bin",
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "shard": "model-00012-of-00016.safetensors",
+      "source_bf16_sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+      "tensor": "model.layers.36.mlp.experts.76.down_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "e3f6b2b8d5416f0cd5710807d6a4969207bfc03ce28cca789f1526caf188466d"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "da4424ede529c44526dd73e426cf7aab416368c0f346510a6059a1d41aaff76d"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "ebe0b4440b9c329f4abcc58ea00d7fe116f99f7f2c40870003f3465953d224ca"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "7a28149a67a6cef0a8974fb8aa68003996c21a94463749f1188f8df89aca9081"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "2abc8d3eac0970a165c532b58958c456ade5ec4d1697e551d099ef3162db5f3c"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "0060698d688bf0be629db54feff978d072b1bedd3b17da96e86be183b179b2f6"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 41,
+      "http_range_inclusive": [
+        1333957096,
+        1337102823
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 1333957096-1337102823/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00015-of-00016.safetensors",
+        "requested_range": "bytes=1333957096-1337102823",
+        "status": 206
+      },
+      "layer": 45,
+      "matrix_ordinal": 15,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.45.mlp.experts.41.gate_proj.weight.bf16.bin",
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00015-of-00016.safetensors",
+      "source_bf16_sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+      "tensor": "model.layers.45.mlp.experts.41.gate_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "78f877fdec2fba76a0612db4f9079aca873fed510496ad08d8e4e0c33fdad59e"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "aefd4ce01cb531e9fc05c42e433c170f6c5af70505add3d6f68fb72cf1209e86"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "4abd727b525eb934df8280b61a6653b2c9de3ed0c51e1e9c38ad563c93997677"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "79df9ea99362d3df710df22633f2e725e8453aec5ca9a56a82d4f61c0b88344e"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "f9a17ba3bb1983846064d408f36917da92677efa5ec18a79a9156a88b00f77ef"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "5e0d489ae42c0f862ea8b0bf65f1dc06b7d32eca36c8f96581ae01ddf6bcc0fa"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 41,
+      "http_range_inclusive": [
+        1337102824,
+        1340248551
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 1337102824-1340248551/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00015-of-00016.safetensors",
+        "requested_range": "bytes=1337102824-1340248551",
+        "status": 206
+      },
+      "layer": 45,
+      "matrix_ordinal": 16,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.45.mlp.experts.41.up_proj.weight.bf16.bin",
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "shard": "model-00015-of-00016.safetensors",
+      "source_bf16_sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+      "tensor": "model.layers.45.mlp.experts.41.up_proj.weight"
+    },
+    {
+      "block_count": 6,
+      "blocks": [
+        {
+          "canonical_block_index": 0,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "02f9bd230bd1d03c7e12ac82c21c9f4c7aef50da6d1b243a3d8d2640c15fa303"
+        },
+        {
+          "canonical_block_index": 1,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "535a433d7b8446731a0e1502beab072afb2b0faa439c6e5466c2b30402aa7874"
+        },
+        {
+          "canonical_block_index": 2,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "f56f3d5181a33d9578cb54ed5b86d2a2c04f4c61f556b8ed12730c5b692d4805"
+        },
+        {
+          "canonical_block_index": 3,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "5ecf1c5f04b88c889ccc35b18d3043222b35119205af5f0628aa91a8645c85ef"
+        },
+        {
+          "canonical_block_index": 4,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "4f550bab7545ce96270995089e66547e807ead92d339cbba16b663710b10a635"
+        },
+        {
+          "canonical_block_index": 5,
+          "nbytes": 524288,
+          "nvalues": 262144,
+          "source_bf16_sha256": "595ac281484ba275d7b799cc9d507aed69c0059ee052fa809174a3f5454e368a"
+        }
+      ],
+      "dtype": "BF16",
+      "expert": 41,
+      "http_range_inclusive": [
+        1330811368,
+        1333957095
+      ],
+      "http_response": {
+        "body_bytes": 3145728,
+        "body_sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+        "content_encoding": "identity",
+        "content_length": 3145728,
+        "content_range": "bytes 1330811368-1333957095/3999975400",
+        "request_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/resolve/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/model-00015-of-00016.safetensors",
+        "requested_range": "bytes=1330811368-1333957095",
+        "status": 206
+      },
+      "layer": 45,
+      "matrix_ordinal": 17,
+      "nbytes": 3145728,
+      "nvalues": 1572864,
+      "output_relpath": "sources/model.layers.45.mlp.experts.41.down_proj.weight.bf16.bin",
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "shard": "model-00015-of-00016.safetensors",
+      "source_bf16_sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+      "tensor": "model.layers.45.mlp.experts.41.down_proj.weight"
+    }
+  ],
+  "matrix_count": 18,
+  "schema": "int2-qwen-blind-source-finalization-v2",
+  "selection_lock_sha256": "cd8cb70ca7509d2ddd4899df8a7047b7b8f47d381b637e2eb497db9ecd4eb9f8",
+  "source_bytes": 56623104,
+  "source_root": ".",
+  "source_values": 28311552,
+  "status": "all_locked_sources_materialized_and_hash_finalized"
+}

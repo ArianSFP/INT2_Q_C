@@ -1,0 +1,7 @@
+{
+  "claim_boundary": "already-opened v1-derived KLT development block; no blind-v2 artifact",
+  "encoder_result_sha256": "11c329da8c8207d13010c23ff70db63a7c0345eb2400b60b93e102713e0c340a",
+  "literal_container_sha256": "eaee0efc170d01296e48bcde7d32311af72c2ae45ff0416edc6a5c3a4f5e03ab",
+  "schema": "strata_v2_known_n20_opened_fixture_v1",
+  "source_bf16_sha256": "469a180019dca5c690d4e9f416c1d05af163181477123c39b418227f9fa1af75"
+}

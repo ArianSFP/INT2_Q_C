@@ -1,0 +1,124 @@
+{
+  "architecture": "procedural-Q31-BEC POLARIS; one sealed STRATA-v2 staging block",
+  "cupy_version": "14.2.0",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "parameters": {
+    "alphabet_size": 64,
+    "block_length": 2097152,
+    "capacity_schedule": [
+      0.004119494086326281,
+      0.3628229607363993,
+      0.9620136186416554,
+      0.9999990895540748,
+      1.0,
+      1.0
+    ],
+    "decision": "map",
+    "eta": 0.25,
+    "seed": 3952021582,
+    "sigma_source": 1.0,
+    "test_channel_distortion": 0.03859847074802917,
+    "tilde_sigma": 0.19263600079928647,
+    "trials": 1
+  },
+  "polar_construction": {
+    "arithmetic": "unsigned Q31",
+    "external_tables": false,
+    "name": "capacity-matched BEC surrogate"
+  },
+  "schema": "strata_xklt_sc_v2_single_block_encoder_v1",
+  "seconds": 676.5872021979885,
+  "trials": [
+    {
+      "absolute_mse": 0.038991662191350564,
+      "arithmetic_logical_bits": 4924885,
+      "arithmetic_payload_bytes": 615611,
+      "arithmetic_payload_sha256": "042806f7ee87296a91384fb556d58aae31406845a6e050d5162f9a4c387a1083",
+      "arithmetic_roundtrip_bits_match": true,
+      "causal_decoder_frequencies_match": true,
+      "framing_bits": 64,
+      "gap_db": 0.04849502751429263,
+      "gaussian_limit_mse_at_screen_rate": 0.03855868785721139,
+      "ideal_entropy_bits": 4924793.523110454,
+      "levels": [
+        {
+          "capacity_schedule": 0.004119494086326281,
+          "level": 1,
+          "selected_fraction": 0.004119873046875,
+          "selected_nll_bits": 8639.999999999998,
+          "selected_nll_bpw": 0.004119873046874999
+        },
+        {
+          "capacity_schedule": 0.3628229607363993,
+          "level": 2,
+          "selected_fraction": 0.3628230094909668,
+          "selected_nll_bits": 760895.000019448,
+          "selected_nll_bpw": 0.3628230095002403
+        },
+        {
+          "capacity_schedule": 0.9620136186416554,
+          "level": 3,
+          "selected_fraction": 0.9620137214660645,
+          "selected_nll_bits": 2017283.5518097384,
+          "selected_nll_bpw": 0.9619157561348621
+        },
+        {
+          "capacity_schedule": 0.9999990895540748,
+          "level": 4,
+          "selected_fraction": 0.9999995231628418,
+          "selected_nll_bits": 1803504.683923814,
+          "selected_nll_bpw": 0.8599780482882566
+        },
+        {
+          "capacity_schedule": 1.0,
+          "level": 5,
+          "selected_fraction": 1.0,
+          "selected_nll_bits": 334085.2268889315,
+          "selected_nll_bpw": 0.15930425018736433
+        },
+        {
+          "capacity_schedule": 1.0,
+          "level": 6,
+          "selected_fraction": 1.0,
+          "selected_nll_bits": 385.06046852320384,
+          "selected_nll_bpw": 0.00018361113954696838
+        }
+      ],
+      "literal_container_bytes": 615619,
+      "literal_container_sha256": "42410b16b903e11c5bf4390aaf4d0ef5a749f768ea7a8636ea91fa92a641a8a3",
+      "passes_gap_lt_0p10db": true,
+      "passes_rate_lt_2p5": true,
+      "reconstruction_indices_match": true,
+      "relative_mse": 0.038991662191350564,
+      "screen_bpw": 2.348400115966797,
+      "selected_polar_bits": 9078479,
+      "source": {
+        "block_bf16_sha256": "edad895aa26eeb73818d24f76644ffc9a2324d367e0ed9b957ef8e92f1827157",
+        "block_index": 0,
+        "block_rms_fp64": 0.02701752108376733,
+        "canonical_block_index": 0,
+        "canonical_source_id": "strata-xklt-sc-v2:94feb3564fe0c3eddfc745703f1f6001b5ae316e7146209e6b45323cdf81697c:block:11",
+        "decoder_scale_fp32": 0.027017520740628242,
+        "kind": "frozen_bf16_weight_block",
+        "path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/staging/block_11_n21.bf16.bin",
+        "rht": {
+          "enabled": true,
+          "forward": "H_N diag(signs) x / sqrt(N)",
+          "inverse": "diag(signs) H_N y / sqrt(N)",
+          "mode": "hadamard_rademacher_splitmix64",
+          "normalization": "orthonormal",
+          "relative_energy_drift_fp64": -2.9706348435611615e-16,
+          "rms_convention": "post_transform_fp64",
+          "rms_post_transform_fp64": 0.02701752108376733,
+          "rms_pre_transform_fp64": 0.027017521083767333,
+          "seed_u64": 6494132275257294760,
+          "sign_rule": "splitmix64(seed_u64 + flat_index) low bit: 0 -> +1, 1 -> -1"
+        },
+        "values": 2097152
+      },
+      "threshold_mse_0p10db": 0.039456835075825425,
+      "total_screen_bits": 4924952,
+      "trial": 0
+    }
+  ]
+}

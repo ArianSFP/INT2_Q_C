@@ -1,0 +1,26 @@
+{
+  "allocation_lock_file_sha256": "65efad51f92047236217ff1e90da2fc5cbac567de99ac8ff845a1533e5b1632a",
+  "allocation_lock_internal_sha256": "6679dddd181a2199f1a1b57d360949369cf7fb174ef8007615650abfae2a4141",
+  "encoder_invocations": 0,
+  "output_dir": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2",
+  "preencoding_manifest_sha256": "5cdced62fe7ccba39e2e313bf40a79820e285fbb86323424a8da697161dd6539",
+  "profile_ids": [
+    18,
+    26,
+    56,
+    72,
+    79,
+    93,
+    98,
+    109,
+    119,
+    126,
+    145,
+    153,
+    184,
+    181
+  ],
+  "projected_relative_mse": 0.049882119193274704,
+  "protocol_mode": "blind",
+  "status": "STRATA-v2 staging and allocation lock complete"
+}

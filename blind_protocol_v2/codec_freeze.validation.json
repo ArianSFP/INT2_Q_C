@@ -1,0 +1,26 @@
+{
+  "development_pooled_relative_mse": 0.04986668492116871,
+  "executing_validator_sha256": "05a5608ff7b2068664f1d588cc7f7867c8d5782ac7baeddba75b9b9d52b105c6",
+  "freeze_file_sha256": "1cd70bfc3147663b15039d0f949e5e4b999bf1c6981d33d21dbc4f1b7d7ebda7",
+  "freeze_internal_lock_sha256": "7191f2813ec70be7793613f82722dc82c253c6eed72f9098796c88aad2173779",
+  "freeze_path": "blind_protocol_v2/codec_freeze.lock.json",
+  "frozen_artifact_count": 33,
+  "gaussian_mse_reference": 0.050765774772264724,
+  "lock_sha256": "f022028caf1303587f8c5713768135a3f33b1f28fa0388f6aa0abb7cfe8a2ef7",
+  "passed": true,
+  "physical_bits": 60869832,
+  "physical_bpw": 2.149999830457899,
+  "preaccess_state": {
+    "all_expected_future_output_paths_absent": true,
+    "current_state_only_not_global_historical_proof": true,
+    "full_checkpoint_shards_absent": true,
+    "historical_unopened_snapshot_semantics_validated": true,
+    "materializer_absent": true,
+    "selected_payload_filename_scan_clear": true,
+    "selection_matrix_and_nested_hashes_all_null": true,
+    "source_finalization_outputs_absent": true,
+    "unblinded_directory_absent": true
+  },
+  "schema": "strata_xklt_sc_v2_codec_freeze_validation_v1",
+  "status": "validated_before_blind_source_access"
+}

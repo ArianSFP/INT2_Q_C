@@ -23,3 +23,18 @@ results/** -text
 frozen/** -text
 src/** -text
 tools/run_qwen_panel.py -text
+
+# STRATA-XKLT-SC v2 canonical frozen paths and one-shot evidence.
+strata_v2_codec/** -text
+blind_protocol_v2/** -text
+strata_v2_blind_one_shot_v2/** -text
+strata_v2_allocation_research/** -text
+strata_v2_dev/** -text
+strata_v2_*.json -text
+strata_v2_klt_known_n20_independent_validation_v1.py -text
+release/** -text
+agent_polaris_qwen_rht_encoder.py -text
+bg_codec_bec_encoder.py -text
+strata_v2_klt_mixed_independent_auditor_v1.py -text
+strata_v2_klt_lineage_tamper_tests_v1.py -text
+tools/verify_strata_v2_release.py -text

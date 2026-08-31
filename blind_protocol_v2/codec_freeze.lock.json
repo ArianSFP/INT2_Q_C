@@ -1,0 +1,274 @@
+{
+  "allocator_frozen": true,
+  "architecture_frozen": true,
+  "blind_materializer_authorization_phrase": "AUTHORIZE SEALED QWEN V2 ONE-SHOT MATERIALIZATION",
+  "checkpoint": {
+    "repo": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39"
+  },
+  "claim_boundary": "One precommitted 18-matrix Qwen expert panel; strict PTQ and exact physical rate. Not a full-checkpoint, perplexity, inference-speed, or universal RD claim.",
+  "development_evidence": {
+    "allocation_lock_file_sha256": "d8319e98b70c90bf2c6b69a7fa64541ed897f4a2509953855b507f09e935048f",
+    "allocation_lock_internal_sha256": "ee45fd5415124d84e89b2670bd290e0604cb2b57cf75dcf1741a2340eebfc463",
+    "container_sha256": "1371eb2960ed20d5d18cb943ae5074b0c4d2c4399eeea7a4b469e0c0b6d24a9a",
+    "gaussian_reference": 0.050765774772264724,
+    "independent_audit_path": "strata_v2_dev_final_exact_runtime_20260831a/independent_audit/independent_decode_audit.json",
+    "independent_audit_sha256": "3eef5270b999df389151c83256dda68ddd0ef9fb3f07d8f19ef0a4973aeb3368",
+    "lineage_tamper_audit_path": "strata_v2_dev_final_exact_runtime_20260831a/independent_lineage_tamper_tests.json",
+    "lineage_tamper_audit_sha256": "c0040f3aa8beea31f697db349a0d48cd39163ae23fe6d80d03538b38153fc66c",
+    "one_shot_intent_sha256": "64e0e74ded37b908deec9ffc5d22f0c1beb9852cf807d0a22c0c53b340f2fd9e",
+    "physical_bits": 60869832,
+    "physical_bpw": 2.149999830457899,
+    "pooled_relative_mse": 0.04986668492116871,
+    "preencoding_manifest_sha256": "9d82340ed765d72c6123d468c3087f65993679d7865250b73c874a8d908fac6f",
+    "relative_margin_below_gaussian": 0.01771055115635145,
+    "run_directory": "strata_v2_dev_final_exact_runtime_20260831a",
+    "source_energy_fp64": 16659.395474367368,
+    "sse_fp64": 830.7488250974214,
+    "summary_sha256": "7ad673460705d6a34974ce1de27f7da55aaa0e0ad70ac170b53030b4bd205380"
+  },
+  "development_evidence_hashes": {
+    "cross_projection_transfer": {
+      "path": "strata_v2_cross_projection_transfer_audit_v1.json",
+      "sha256": "92a2ff9e6cb8dbdf3db54e2dcd2da56fe3e48cbd1d04a16b8ded134121e110f2"
+    },
+    "high_rate_n20_probe": {
+      "path": "strata_v2_klt_n20_rate243359_probe.json",
+      "sha256": "ad0e02362434bcd8e3058f2f710d790646d8c2c6a05e33bf3f2b603386e9443a"
+    },
+    "low_rate_n21_probe": {
+      "path": "strata_v2_klt_n21_lowrate_q12_probe.json",
+      "sha256": "672b5f8ce5042349c44430f61f8d8255732baadd6ebb19805cac451e52742fa9"
+    },
+    "mixed_geometry_projection": {
+      "path": "strata_v2_allocation_research/fp32_klt_projection_n20_n21_reserve65536.json",
+      "sha256": "a1fad1320b1524a44c53668dcbabb3f41c4cc240a10cf6717b01a816e0127b46"
+    },
+    "physical_savings_audit": {
+      "path": "strata_v2_allocation_research/physical_savings_audit_v1_v5/audit.json",
+      "sha256": "9c156b0b11d1079891a40c7582bf49496b3b60778cbcb6a7d241fa49f7515cdf"
+    },
+    "triplet_covariance_early_kill": {
+      "path": "strata_v2_allocation_research/triplet_covariance_probe_v1.json",
+      "sha256": "618387d3f69ff16e7fac1d1cc7b0cd16569f08392192466b5fce1c2a21d0f7d9"
+    }
+  },
+  "expected_source_lock": {
+    "block_count": 108,
+    "dtype": "BF16",
+    "exact_codec_freeze_validation_binding_required": true,
+    "matrix_count": 18,
+    "required_block_fields": [
+      "canonical_block_index",
+      "nvalues",
+      "nbytes",
+      "source_bf16_sha256"
+    ],
+    "required_http_response_fields": [
+      "status",
+      "request_url",
+      "requested_range",
+      "content_range",
+      "content_length",
+      "content_encoding",
+      "body_bytes",
+      "body_sha256"
+    ],
+    "required_matrix_fields": [
+      "matrix_ordinal",
+      "tensor",
+      "role",
+      "layer",
+      "expert",
+      "dtype",
+      "shape",
+      "nvalues",
+      "nbytes",
+      "block_count",
+      "shard",
+      "http_range_inclusive",
+      "http_response",
+      "output_relpath",
+      "source_bf16_sha256",
+      "blocks"
+    ],
+    "schema": "int2-qwen-blind-source-finalization-v2",
+    "source_bytes": 56623104,
+    "source_values": 28311552,
+    "status": "all_locked_sources_materialized_and_hash_finalized"
+  },
+  "frozen_artifact_paths": {
+    "base_cupy_encoder": "agent_polaris_qwen_rht_encoder.py",
+    "common": "strata_v2_codec/common.py",
+    "common_tests": "strata_v2_codec/test_common.py",
+    "emitter": "strata_v2_codec/emit_and_lock.py",
+    "emitter_contract_tests": "strata_v2_codec/test_emitter_contract.py",
+    "emitter_synthetic_test": "strata_v2_codec/test_emitter_synthetic.py",
+    "format": "strata_v2_codec/FORMAT.md",
+    "freeze_builder": "blind_protocol_v2/build_codec_freeze_v2.py",
+    "freeze_validator": "blind_protocol_v2/validate_codec_freeze_v2.py",
+    "independent_auditor": "strata_v2_klt_mixed_independent_auditor_v1.py",
+    "lineage_tamper_test": "strata_v2_klt_lineage_tamper_tests_v1.py",
+    "literal_route": "blind_protocol_v2/route_table.proposal.bin",
+    "one_shot_runner": "strata_v2_codec/run_one_shot.py",
+    "polar_encoder": "strata_v2_codec/polar_encoder.py",
+    "procedural_q31_bec": "bg_codec_bec_encoder.py",
+    "proposal_validator": "blind_protocol_v2/validate_proposal.py",
+    "route_audit": "blind_protocol_v2/route_table.proposal.audit.json",
+    "selection_proposal": "blind_protocol_v2/selection.proposal.lock.json",
+    "unopened_snapshot": "blind_protocol_v2/unopened_snapshot.audit.json",
+    "v1_failure_audit": "blind_protocol_v2/v1_failure_independent_audit.json"
+  },
+  "frozen_artifact_sha256s": {
+    "base_cupy_encoder": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+    "common": "bb5ad9f91ed6c4ee51f337d70fbfb3b1f174001cf2585d48c84034622b6b4ab8",
+    "common_tests": "b63dff43c3030c74867131e441d0dab13e6e71ffa3f2f46e23721c3da0ea118a",
+    "cuda.pathfinder_distribution_tree": "a83b87960752bb61b632e32cede19562c5e4f3a50d3b923377512d5a55958ae4",
+    "cuda.pathfinder_import_origin": "4ea26c3f6f3bb3c7d2dc725beabfd9cb375e11142ff9a477290eb9b226fd9543",
+    "cuda.pathfinder_wheel_record": "9f87dafc3fef5353561100442640a4995b0b1754db1b6fde37fa568764972543",
+    "cupy_distribution_tree": "f4ee95d38835cca8090a52f76428cabbb927b3f7272a1bb0a844ddeaa9c7e6f2",
+    "cupy_import_origin": "8c4724758587dea5f1c1d7c217c74a9fa0e4ed7f9d76a2b86fa001117cf3c718",
+    "cupy_wheel_record": "7af54af6baa2bfa039d183d2734d898d15198158d3948f54b658fed4f4d41166",
+    "emitter": "8fe43becd70eaf3d2bbc009db424db8c152029aa3f0e4bf4ceed7108f342ed40",
+    "emitter_contract_tests": "ea92380972d5eee6d1e0734b39e46830735cd5195fcbf1267793cae8eeb9a720",
+    "emitter_synthetic_test": "6082ac64b8b50819f962080d413b815fb6f020f2bf0ba0b1cf6f6ad396d583f9",
+    "format": "004f195055e2289ff647ebadc69181978acbf61c19192d49ed3c509d6843023c",
+    "freeze_builder": "1246d2ee38e5056714f17c57c7cc96ff5093a6a01bf94dc64a204d6c75f826fb",
+    "freeze_validator": "05a5608ff7b2068664f1d588cc7f7867c8d5782ac7baeddba75b9b9d52b105c6",
+    "independent_auditor": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "lineage_tamper_test": "91d47e7f5531da6bcf900c0263a29af049bd155d9e89b167b0b5494f937cfe05",
+    "literal_route": "94feb3564fe0c3eddfc745703f1f6001b5ae316e7146209e6b45323cdf81697c",
+    "numpy_distribution_tree": "0e497fc0ad439e0bfa8ca189c0f691c0ce589f8e7d6de6287d3f664716614964",
+    "numpy_import_origin": "09295a80660f17925ae23765ce8cbd7ff7ceae968d5f2f89349f1cb74c0b9e11",
+    "numpy_wheel_record": "662e57f69a042c5b9efa7a46e8c2901f5d733e21b255a34d7f061e466bceab0d",
+    "one_shot_runner": "764bacb3f6690ea5308560dc850c410a1dd59337a358152985fdf20d3b3f69fe",
+    "polar_encoder": "ab4f7f6ed6f55f7eaa0bba24436b22a26cc0bf3452e1ce0d2ed56be805020309",
+    "procedural_q31_bec": "456a3ae5fe00c578456dc9430bf7ae059ed9dbb8dcf04a6bafad3a88cc5cb267",
+    "proposal_validator": "152f1c1f13c1d6e5556549cb9c8e7ad5495dc782b1ed73ed48dff09e3b60caea",
+    "python_interpreter": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5",
+    "route_audit": "a95b17ff26027b6a76ad42c04b2b1e655fb80307d168a795f7c7e6c5305de22c",
+    "scipy_distribution_tree": "f634813c708c90ed5f30e24216772d89443f855f1515021d89714da8f688d5fa",
+    "scipy_import_origin": "39ccae300a4739cc53719bd3b39ce3f8f66e736c6eb672006e338a4c5cc3dc76",
+    "scipy_wheel_record": "97014a6514db2fa42950d9ae19e02d125b0e325a9f20454fe9d833ad5f176835",
+    "selection_proposal": "528250d8c6bac52dfdf64958d7f4929a115ff68d907a47880cab85d532aade14",
+    "unopened_snapshot": "0d0a7de5ecca5f6ca914841dcbad028275c2c36ca31dffcf8cd37c0fc975ebe3",
+    "v1_failure_audit": "5ebe6fd5efbc10162a49a84083e99ae0123daa1680fd54b47a12d79f99369ea3"
+  },
+  "gaussian_mse_reference": 0.050765774772264724,
+  "lock_sha256": "7191f2813ec70be7793613f82722dc82c253c6eed72f9098796c88aad2173779",
+  "no_retry_resume_or_postaccess_tuning": true,
+  "physical_ledger": {
+    "directory_bits": 784,
+    "global_no_retry_reserve_bits": 65536,
+    "header_bits": 1024,
+    "headroom_bits": 4,
+    "integer_2p15_cap_bits": 60869836,
+    "label_bits": 41472,
+    "nominal_profile_budget_bits": 60759864,
+    "physical_bits": 60869832,
+    "physical_bpw": 2.149999830457899,
+    "physical_bytes": 7608729,
+    "reservoir_bits": 60825400,
+    "reservoir_bytes": 7603175,
+    "route_bits": 1152,
+    "weights": 28311552
+  },
+  "physical_rate_limit_bpw": 2.15,
+  "preaccess_state": {
+    "all_expected_future_output_paths_absent": true,
+    "current_state_only_not_global_historical_proof": true,
+    "full_checkpoint_shards_absent": true,
+    "historical_unopened_snapshot_semantics_validated": true,
+    "materializer_absent": true,
+    "selected_payload_filename_scan_clear": true,
+    "selection_matrix_and_nested_hashes_all_null": true,
+    "source_finalization_outputs_absent": true,
+    "unblinded_directory_absent": true
+  },
+  "primary_mse_threshold": 0.050765774772264724,
+  "route_file_sha256": "94feb3564fe0c3eddfc745703f1f6001b5ae316e7146209e6b45323cdf81697c",
+  "runtime_environment": {
+    "cuda": {
+      "compute_capability": [
+        12,
+        0
+      ],
+      "cuda_driver_version": 13000,
+      "cupy_runtime_version": 12090,
+      "device_name": "NVIDIA GeForce RTX 5090"
+    },
+    "external_frozen_artifact_paths": {
+      "cuda.pathfinder_import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cuda/pathfinder/__init__.py",
+      "cuda.pathfinder_wheel_record": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cuda_pathfinder-1.8.0.dist-info/RECORD",
+      "cupy_import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/__init__.py",
+      "cupy_wheel_record": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy_cuda12x-14.2.0.dist-info/RECORD",
+      "numpy_import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+      "numpy_wheel_record": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy-2.5.2.dist-info/RECORD",
+      "python_interpreter": "/workspace/int2-cupy-venv/bin/python",
+      "scipy_import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/scipy/__init__.py",
+      "scipy_wheel_record": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/scipy-1.18.1.dist-info/RECORD"
+    },
+    "packages": {
+      "cuda.pathfinder": {
+        "distribution": "cuda-pathfinder",
+        "distribution_tree_sha256": "a83b87960752bb61b632e32cede19562c5e4f3a50d3b923377512d5a55958ae4",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cuda/pathfinder/__init__.py",
+        "import_origin_sha256": "4ea26c3f6f3bb3c7d2dc725beabfd9cb375e11142ff9a477290eb9b226fd9543",
+        "module": "cuda.pathfinder",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cuda_pathfinder-1.8.0.dist-info/RECORD",
+        "record_sha256": "9f87dafc3fef5353561100442640a4995b0b1754db1b6fde37fa568764972543",
+        "recorded_file_count": 73,
+        "recorded_total_bytes": 374852,
+        "version": "1.8.0"
+      },
+      "cupy": {
+        "distribution": "cupy-cuda12x",
+        "distribution_tree_sha256": "f4ee95d38835cca8090a52f76428cabbb927b3f7272a1bb0a844ddeaa9c7e6f2",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/__init__.py",
+        "import_origin_sha256": "8c4724758587dea5f1c1d7c217c74a9fa0e4ed7f9d76a2b86fa001117cf3c718",
+        "module": "cupy",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy_cuda12x-14.2.0.dist-info/RECORD",
+        "record_sha256": "7af54af6baa2bfa039d183d2734d898d15198158d3948f54b658fed4f4d41166",
+        "recorded_file_count": 2779,
+        "recorded_total_bytes": 291571120,
+        "version": "14.2.0"
+      },
+      "numpy": {
+        "distribution": "numpy",
+        "distribution_tree_sha256": "0e497fc0ad439e0bfa8ca189c0f691c0ce589f8e7d6de6287d3f664716614964",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+        "import_origin_sha256": "09295a80660f17925ae23765ce8cbd7ff7ceae968d5f2f89349f1cb74c0b9e11",
+        "module": "numpy",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy-2.5.2.dist-info/RECORD",
+        "record_sha256": "662e57f69a042c5b9efa7a46e8c2901f5d733e21b255a34d7f061e466bceab0d",
+        "recorded_file_count": 1336,
+        "recorded_total_bytes": 69107438,
+        "version": "2.5.2"
+      },
+      "scipy": {
+        "distribution": "scipy",
+        "distribution_tree_sha256": "f634813c708c90ed5f30e24216772d89443f855f1515021d89714da8f688d5fa",
+        "import_origin": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/scipy/__init__.py",
+        "import_origin_sha256": "39ccae300a4739cc53719bd3b39ce3f8f66e736c6eb672006e338a4c5cc3dc76",
+        "module": "scipy",
+        "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/scipy-1.18.1.dist-info/RECORD",
+        "record_sha256": "97014a6514db2fa42950d9ae19e02d125b0e325a9f20454fe9d833ad5f176835",
+        "recorded_file_count": 2422,
+        "recorded_total_bytes": 139074460,
+        "version": "1.18.1"
+      }
+    },
+    "python_interpreter": {
+      "invocation_path": "/workspace/int2-cupy-venv/bin/python",
+      "resolved_path": "/usr/bin/python3.12",
+      "sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5",
+      "version": "3.12.3"
+    }
+  },
+  "schema": "strata_xklt_sc_v2_codec_freeze_v1",
+  "selection_lock_file_sha256": "528250d8c6bac52dfdf64958d7f4929a115ff68d907a47880cab85d532aade14",
+  "selection_lock_sha256": "cd8cb70ca7509d2ddd4899df8a7047b7b8f47d381b637e2eb497db9ecd4eb9f8",
+  "selection_path": "blind_protocol_v2/selection.proposal.lock.json",
+  "status": "frozen_before_blind_source_access",
+  "success_criterion": "pooled source-domain FP64 SSE/energy < 2^-4.3"
+}
