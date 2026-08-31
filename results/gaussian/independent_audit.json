@@ -1,0 +1,89 @@
+{
+  "audit_date": "2026-08-31",
+  "protocol": "POLARIS-SC-v2-confirmation-2026-08-31",
+  "verdict": "PASS",
+  "substantive_discrepancies": [],
+  "confirmation_seeds_rerun": false,
+  "trial_count": 32,
+  "statistical_rule": {
+    "family_wise_confidence": 0.99,
+    "bonferroni_metrics": 3,
+    "per_metric_one_sided_confidence": 0.9966666666666667,
+    "degrees_of_freedom": 31,
+    "student_t_critical": 2.9080702125010807,
+    "formula": "mean + tcrit * sample_sd(ddof=1) / sqrt(32)"
+  },
+  "statistics": {
+    "logical_arithmetic_bits": {
+      "mean": 562736.8125,
+      "sample_standard_deviation": 536.2487047882697,
+      "upper_confidence_bound": 563012.4867203544,
+      "threshold": 563464,
+      "margin": 451.5132796455873,
+      "passed": true
+    },
+    "absolute_mse": {
+      "mean": 0.052899761434925266,
+      "sample_standard_deviation": 0.00008677231142727209,
+      "upper_confidence_bound": 0.052944369261643476,
+      "threshold": 0.053304063510877964,
+      "margin": 0.0003596942492344879,
+      "ucb_excess_over_gaussian_limit_percent": 4.291463095268266,
+      "passed": true
+    },
+    "sample_relative_mse": {
+      "mean": 0.05289955985234825,
+      "sample_standard_deviation": 0.00016520577541300619,
+      "upper_confidence_bound": 0.05298448867908174,
+      "threshold": 0.053304063510877964,
+      "margin": 0.0003195748317962252,
+      "ucb_excess_over_gaussian_limit_percent": 4.370491569901502,
+      "passed": true
+    }
+  },
+  "decoder_audit": {
+    "blocks_checked": 32,
+    "independent_checks": 452,
+    "failures": 0,
+    "maximum_absolute_mse_encoder_decoder_delta": 1.3877787807814457e-17,
+    "maximum_relative_mse_encoder_decoder_delta": 2.7755575615628914e-17,
+    "all_record_and_payload_hashes_match": true,
+    "all_stdout_transcripts_match_json": true,
+    "all_stderr_logs_empty": true
+  },
+  "reservoir": {
+    "bytes": 2254144,
+    "sha256": "ad0c35e72b5900ffa6ed353df1bf1b163d912b8bfb692fc8e5b318ea6f9eb3f5",
+    "directory_bits": 1536,
+    "directory_sha256": "562231b913d923ddebe29dc649f260db7e686abc872a5cd5b7a21b211e65c1b0",
+    "logical_payload_bits": 18007578,
+    "fixed_payload_capacity_bits": 18030848,
+    "zero_suffix_bits": 23270,
+    "zero_suffix_verified": true,
+    "fixed_capacity_payload_sha256": "55fa245025b820032d32d328662a1aa46efe2b2c91702f12e62a0691a921409e",
+    "maximum_block_logical_bits": 564175,
+    "local_overflows_allowed_by_frozen_format": true
+  },
+  "provenance": {
+    "harness_sha256": "b9db626f716461d4932bffc52a85ba1c3e46ace70e8d9713eae5b6fcd37413b2",
+    "opened_lock_sha256": "401e21d2e64cd655f82f23b7a7aed21a5ec18d4928915868b841c936f7eb5693",
+    "opened_lock_mode": "0444",
+    "manifest_sha256": "06967a4e852c9d39c97fe39b45d50df558471e0f35912d330b6dc1e7493df5e0",
+    "confirmation_summary_sha256": "f4988f8e92b99fa90a4fe2b6b153beb02a1cb123c49e21f64d90ce77f008e6b5",
+    "all_frozen_artifact_hashes_match": true,
+    "timestamp_order_valid": true
+  },
+  "whole_checkpoint_ledger": {
+    "parameters": 30532122624,
+    "total_bits": 65641547920,
+    "total_bytes": 8205193490,
+    "bpw": 2.1499176041040124,
+    "cap_bits_floor": 65644063641,
+    "nominal_headroom_bits": 2515721,
+    "byte_aligned_cap_bits": 65644063640,
+    "byte_aligned_physical_headroom_bits": 2515720,
+    "fits": true,
+    "full_checkpoint_bitstream_emitted": false
+  },
+  "evidence_boundary": "The physical confirmation reservoir covers 32 Gaussian blocks. The whole-checkpoint rate is a shape-recomputed fixed-capacity ledger/envelope, not an emitted full-checkpoint bitstream."
+}

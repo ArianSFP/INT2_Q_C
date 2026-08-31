@@ -1,0 +1,34 @@
+{
+  "date": "2026-08-31",
+  "applies_to": "results/qwen/independent_audit.json",
+  "issue": {
+    "field": "manifest_alignment_ok",
+    "type": "comparison bug",
+    "buggy_check": "manifest.canonical_block_index == summary.canonical_block_index == decoded.source.block_index",
+    "why_buggy": "decoded.source.block_index is local to the extracted one-block source file"
+  },
+  "evidence": {
+    "original_false_rows_exact": 21,
+    "original_false_rows_rht": 21,
+    "manifest_rows_with_nonzero_canonical_block_index": 21,
+    "all_false_rows_explained_by_bug": true,
+    "decoded_source_block_index_zero_rows_exact": 32,
+    "decoded_source_block_index_zero_rows_rht": 32
+  },
+  "corrected_checks": {
+    "manifest_vs_summary_canonical_exact": true,
+    "manifest_vs_summary_canonical_rht": true,
+    "manifest_vs_decode_local_index_exact": true,
+    "manifest_vs_decode_local_index_rht": true,
+    "identity_path_and_source_hash_exact_32_of_32": true,
+    "identity_path_and_source_hash_rht_32_of_32": true
+  },
+  "scientific_conclusions_changed": false,
+  "unchanged_results": {
+    "exact_energy_weighted_relative_mse": 0.0631987377412609,
+    "rht_energy_weighted_relative_mse": 0.0528944847492712,
+    "relative_mse_improvement_pct": 16.3045234133882,
+    "exact_passes_joint_rate_and_mse_gate": false,
+    "rht_passes_joint_rate_and_mse_gate": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "architecture": "POLARIS-SC-v2: six-level polar-lattice PTQ with checkpoint-global arithmetic overflow pooling",
+  "status": "exact fail-closed serialized budget envelope; v2 confirmation pending",
+  "checkpoint": {
+    "parameters": 30532122624,
+    "tensor_count": 18867,
+    "rank2_tensors": 18674,
+    "rank2_parameters": 30531911680,
+    "rank1_tensors": 193,
+    "rank1_parameters": 210944
+  },
+  "block_geometry": {
+    "block_length": 262144,
+    "levels": 6,
+    "rank2_blocks": 116470,
+    "all_rank2_tensors_exact_multiples": true,
+    "padding_parameters": 0
+  },
+  "reservoir_framing": {
+    "logical_payload_pool_bits_per_block": 563464,
+    "logical_payload_pool_bpw_rank2": 2.149444580078125,
+    "u32_length_bits_per_block": 32,
+    "fp16_scale_bits_per_block": 16,
+    "total_rank2_budget_bits_per_block": 563512,
+    "local_payload_max": "u32; local excursions are allowed",
+    "global_failure_rule": "sum of logical arithmetic lengths must not exceed 563464 * 116470 bits",
+    "payload_layout": "all logical messages concatenated MSB-first with one global tail",
+    "physical_reservoir_header_bits": 768,
+    "global_header_reservation_bits": 4096,
+    "matrix_header_bits_each": 64,
+    "rank1_storage_bits_each": 16,
+    "rank1_header_bits_each": 64,
+    "decoder_set_map": "2-bit F/I/S tag reserve per position per level",
+    "frozen_coset_map": "one-bit reserve per position per level"
+  },
+  "exact_budget_bits": {
+    "rank2_logical_payload_pool": 65626652080,
+    "rank2_u32_length_directory": 3727040,
+    "rank2_fp16_scale_directory": 1863520,
+    "rank2_total": 65632242640,
+    "rank2_matrix_headers": 1195136,
+    "rank1_bf16_payload": 3375104,
+    "rank1_headers": 12352,
+    "six_level_set_tags": 3145728,
+    "six_level_frozen_coset_bits": 1572864,
+    "global_format_header": 4096,
+    "total": 65641547920
+  },
+  "whole_checkpoint_rate": {
+    "total_bits": 65641547920,
+    "total_bytes": 8205193490,
+    "bpw": 2.1499176041040124,
+    "cap_bpw": 2.15,
+    "cap_bits_floor": 65644063641,
+    "headroom_bits": 2515721,
+    "headroom_bytes_floor": 314465,
+    "fits": true
+  },
+  "confirmation_gates": {
+    "mean_logical_payload_u32_bits_max": 563464,
+    "rate_rule": "both the realized aggregate mean and its one-sided 99% Student-t UCB must not exceed 563464 bits per block",
+    "gaussian_limit_at_2p15_bpw": 0.050765774772264724,
+    "five_percent_mse_target": 0.053304063510877964,
+    "distortion_rule": "both absolute-MSE and sample-relative-MSE one-sided 99% Student-t UCBs must not exceed the five-percent target"
+  },
+  "reference": {
+    "paper": "https://arxiv.org/html/1501.05683v5",
+    "official_repository": "https://github.com/graceBaoXP/PolarLatticeQuantization",
+    "repository_commit": "458187b9b03db1768a4b72d617e591f7862f6fca"
+  }
+}

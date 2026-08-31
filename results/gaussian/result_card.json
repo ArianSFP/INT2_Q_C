@@ -1,0 +1,61 @@
+{
+  "architecture": "POLARIS-SC-v2 checkpoint-global fixed-capacity overflow reservoir",
+  "status": "passed frozen matched-Gaussian confirmation",
+  "strict_ptq": true,
+  "training_or_retraining": false,
+  "whole_checkpoint_budget_envelope": {
+    "parameters": 30532122624,
+    "total_bits": 65641547920,
+    "total_bytes": 8205193490,
+    "bpw": 2.1499176041040124,
+    "cap_bpw": 2.15,
+    "headroom_bits_mathematical": 2515721,
+    "headroom_bits_byte_aligned": 2515720
+  },
+  "confirmation": {
+    "blocks": 32,
+    "block_length": 262144,
+    "family_wise_confidence": 0.99,
+    "per_metric_one_sided_confidence": 0.9966666666666667,
+    "degrees_of_freedom": 31,
+    "student_t_critical": 2.9080702125010807,
+    "gaussian_mse_limit": 0.050765774772264724,
+    "five_percent_mse_target": 0.053304063510877964,
+    "logical_rate": {
+      "mean_bits_per_block": 562736.8125,
+      "ucb_bits_per_block": 563012.4867203544,
+      "threshold_bits_per_block": 563464,
+      "passed": true
+    },
+    "absolute_mse": {
+      "mean": 0.052899761434925266,
+      "ucb": 0.052944369261643476,
+      "ucb_excess_over_gaussian_limit_percent": 4.291463095268266,
+      "passed": true
+    },
+    "sample_relative_mse": {
+      "mean": 0.05289955985234825,
+      "ucb": 0.05298448867908174,
+      "ucb_excess_over_gaussian_limit_percent": 4.370491569901502,
+      "passed": true
+    },
+    "all_encoder_decoder_pairs_match_at_1e_12": true
+  },
+  "serialized_confirmation_reservoir": {
+    "physical_bytes": 2254144,
+    "logical_payload_bits": 18007578,
+    "fixed_payload_capacity_bits": 18030848,
+    "zero_reserve_bits": 23270,
+    "sha256": "ad0c35e72b5900ffa6ed353df1bf1b163d912b8bfb692fc8e5b318ea6f9eb3f5"
+  },
+  "integrity": {
+    "harness_sha256": "b9db626f716461d4932bffc52a85ba1c3e46ace70e8d9713eae5b6fcd37413b2",
+    "manifest_sha256": "06967a4e852c9d39c97fe39b45d50df558471e0f35912d330b6dc1e7493df5e0",
+    "protocol_sha256": "107c97381aebec49423270fae378a5dfaa6b75415671f026e8d60bd19f487004",
+    "opened_lock_sha256": "401e21d2e64cd655f82f23b7a7aed21a5ec18d4928915868b841c936f7eb5693",
+    "summary_sha256": "f4988f8e92b99fa90a4fe2b6b153beb02a1cb123c49e21f64d90ce77f008e6b5",
+    "independent_post_result_checks": 452,
+    "independent_post_result_audit_passed": true
+  },
+  "evidence_boundary": "Matched iid Gaussian source-code core is confirmed. The full 8.205 GB checkpoint artifact and model perplexity were not emitted/evaluated."
+}

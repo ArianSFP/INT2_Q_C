@@ -1,0 +1,152 @@
+{
+  "architecture": "POLARIS-SC-v2: six-level polar-lattice PTQ with checkpoint-global arithmetic overflow pooling",
+  "frozen_before_v2_confirmation": true,
+  "strict_post_training_quantization": true,
+  "source_training_or_retraining": false,
+  "matched_source": "iid standard normal",
+  "block_length": 262144,
+  "quantizer_parameters_unchanged_from_v1": true,
+  "parameters": {
+    "sigma_source": 1.0,
+    "test_channel_distortion": 0.0511,
+    "eta": 0.25,
+    "alphabet_size": 64,
+    "levels": 6,
+    "decision": "randomized SC using a deterministic per-block seed",
+    "capacity_schedule": [
+      0.0006821277279458471,
+      0.22634608338735362,
+      0.909002776861206,
+      0.999975895304145,
+      1.0,
+      1.0
+    ],
+    "selected_counts": [
+      179,
+      59336,
+      238290,
+      262138,
+      262144,
+      262144
+    ]
+  },
+  "novel_framing": {
+    "name": "checkpoint-global fixed-capacity overflow reservoir",
+    "per_block_directory": "big-endian u32 logical arithmetic length plus raw little-endian FP16 scale",
+    "directory_bits_per_block": 48,
+    "payload_capacity_bits_per_block_in_global_pool": 563464,
+    "total_rank2_bits_per_block": 563512,
+    "payload_layout": "logical block streams concatenated MSB-first without local byte padding; one zero-filled global suffix",
+    "local_overflow_policy": "allowed up to u32 when offset by savings in other blocks",
+    "global_overflow_policy": "hard failure if sum of logical lengths exceeds 563464 times block count",
+    "physical_header_bits": 768,
+    "charged_global_header_bits": 4096
+  },
+  "whole_checkpoint_rate": {
+    "parameters": 30532122624,
+    "rank2_blocks": 116470,
+    "total_bits": 65641547920,
+    "total_bytes": 8205193490,
+    "bpw": 2.1499176041040124,
+    "cap_bpw": 2.15,
+    "headroom_bits": 2515721,
+    "fits": true
+  },
+  "distortion_gate": {
+    "gaussian_limit_at_2p15": 0.050765774772264724,
+    "maximum_ucb": 0.053304063510877964,
+    "metrics": [
+      "absolute mean squared error per coordinate for known unit variance",
+      "per-block sample-relative squared error"
+    ]
+  },
+  "confirmation_rule": {
+    "blocks": 32,
+    "family_wise_confidence": 0.99,
+    "bonferroni_metrics": 3,
+    "per_metric_one_sided_confidence": 0.9966666666666667,
+    "degrees_of_freedom": 31,
+    "formula": "mean + scipy.stats.t.ppf(1 - 0.01/3, 31) * sample_standard_deviation(ddof=1) / sqrt(32)",
+    "required_upper_bounds": {
+      "mean_logical_arithmetic_bits": 563464,
+      "absolute_mse": 0.053304063510877964,
+      "sample_relative_mse": 0.053304063510877964
+    },
+    "also_required": [
+      "realized aggregate logical payload does not exceed the fixed physical reservoir",
+      "every record survives independent unpacking and fresh-process causal decoding",
+      "encoder and decoded MSE agree within 1e-12",
+      "all frozen hashes and environment versions match"
+    ]
+  },
+  "v2_development_evidence": {
+    "source": "the 16 v1 holdouts were opened only after v1 hard-failed, then became development data for the framing-only v2 change",
+    "quantizer_changed_after_v1": false,
+    "mean_logical_bits": 562851.8125,
+    "sample_standard_deviation_logical_bits": 441.79108467690924,
+    "v2_global_payload_headroom_bits": 9795,
+    "v2_fixed_capacity_reservoir_sha256": "21dbf85eb5f52f5e8cbb06bbed337cdda5d9aec6fed2574f9c8bbe1d248eb984",
+    "prior_v1_overflow_bits": 563672,
+    "prior_v1_overflow_fresh_decode_passed": true,
+    "prior_v1_overflow_absolute_mse": 0.052852514120199826,
+    "prior_v1_overflow_sample_relative_mse": 0.05266220791428526
+  },
+  "confirmation_seeds": [
+    173205080,
+    173309809,
+    173414538,
+    173519267,
+    223606797,
+    223711526,
+    223816255,
+    223920984,
+    244948974,
+    245053703,
+    245158432,
+    245263161,
+    264575131,
+    264679860,
+    264784589,
+    264889318,
+    316227766,
+    316332495,
+    316437224,
+    316541953,
+    331662479,
+    331767208,
+    331871937,
+    331976666,
+    346410161,
+    346514890,
+    346619619,
+    346724348,
+    360555127,
+    360659856,
+    360764585,
+    360869314
+  ],
+  "artifacts": {
+    "encoder_sha256": "95cfd32e5d026f07ceffe90daa7f88ca5e62f9f90546dfe74fc37cf06854d9b8",
+    "decoder_map_sha256": "a0e9895d5e30df71d51ee85ed8893c4983e4369748912fbdd61acbad0fed18ef",
+    "independent_decoder_core_sha256": "0652521fae5c77567e67cc9434adfb84b1a3cab53e5a79f250a3093a467be072",
+    "reservoir_packer_sha256": "c5fda34242153365dac07b5990bcd1fa19f0ac98d2512d47c3c8e1ec2a81dde8",
+    "independent_reservoir_unpacker_sha256": "cf7113c3fbc6340f0870dadcf7608739aa651f5706befa163b5d13516dac7e07",
+    "independent_reservoir_block_decoder_sha256": "efa7bd3fa527722538368ac0e39b7b8c585e7ea0efbff34ac5b96a0d7b4af801",
+    "whole_checkpoint_ledger_sha256": "b3969bf5b0377f045dd2c08e97457603cf62d7db28d5607ff3dc87b36f33528e",
+    "framing_selftest_sha256": "947a083d31336e912a9708413ce018b0e796b4a880e08590eaba9d98fc46084e",
+    "unpacker_selftest_sha256": "3da99dc8e706e799bd17c819214c52a27fd53c688a226e42b5fdcdb28e6fe229"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.2",
+    "cupy": "14.2.0",
+    "scipy": "1.18.1",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "provenance": {
+    "official_repository": "https://github.com/graceBaoXP/PolarLatticeQuantization",
+    "official_repository_commit": "458187b9b03db1768a4b72d617e591f7862f6fca"
+  },
+  "confirmation_opened": false,
+  "no_post_freeze_tuning": true
+}

@@ -1,0 +1,25 @@
+* text=auto
+
+# Human-authored text uses a stable line ending across platforms.
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+requirements.txt text eol=lf
+third_party/QWEN_LICENSE text eol=lf
+
+# Binary codec artifacts must never be filtered.
+*.npz binary
+*.plrsv2 binary
+
+# These trees contain byte-hashed canonical evidence and implementations.
+# Preserve their bytes exactly; do not let core.autocrlf rewrite them.
+results/** -text
+frozen/** -text
+src/** -text
+tools/run_qwen_panel.py -text

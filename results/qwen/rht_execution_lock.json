@@ -1,0 +1,13 @@
+{
+  "implementation_hashes": {
+    "decoder": "2e1e484bf8ba98d493cfda55d4b23e275267e097e08907f5a9c606ae7350c797",
+    "decoder_map": "a0e9895d5e30df71d51ee85ed8893c4983e4369748912fbdd61acbad0fed18ef",
+    "encoder": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+    "packer": "c5fda34242153365dac07b5990bcd1fa19f0ac98d2512d47c3c8e1ec2a81dde8",
+    "unpacker": "cf7113c3fbc6340f0870dadcf7608739aa651f5706befa163b5d13516dac7e07"
+  },
+  "manifest": "/workspace/INT2__compression/qwen_polaris_heldout32/heldout32_manifest.json",
+  "manifest_sha256": "3b882c74870c1e27bcddf7427e4c6ffea816d4f9847447eb218729ca69426a55",
+  "seed_derivation_revalidated": true,
+  "variant": "rht"
+}

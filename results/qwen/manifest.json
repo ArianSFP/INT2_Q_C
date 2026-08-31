@@ -1,0 +1,526 @@
+{
+  "checkpoint": "Qwen/Qwen3-30B-A3B",
+  "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+  "block_length": 262144,
+  "selection_status": "staged_complete_sources_only_not_encoded_or_numerically_inspected",
+  "seed_derivation": {
+    "key_utf8": "{revision}:{tensor}:{canonical_block_index}",
+    "digest": "SHA-256",
+    "sc_seed_u32": "big-endian digest bytes [0:4]",
+    "rht_seed_u64": "big-endian digest bytes [4:12]"
+  },
+  "blocks": [
+    {
+      "ordinal": 1,
+      "id": "expert_gate.l0.e0.b0",
+      "tensor": "model.layers.0.mlp.experts.0.gate_proj.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "expert_gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.0.mlp.experts.0.gate_proj.weight.block0.bf16.bin",
+      "source_bf16_sha256": "b9888d10b677a3f4738d55b2be385f70aa3304293713fb9f1677930c6bafff81",
+      "sc_seed_u32": 1201090973,
+      "rht_seed_u64": 15450764288037287135
+    },
+    {
+      "ordinal": 2,
+      "id": "expert_gate.l3.e121.b5",
+      "tensor": "model.layers.3.mlp.experts.121.gate_proj.weight",
+      "canonical_block_index": 5,
+      "source_local_block_index": 0,
+      "role": "expert_gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.3.mlp.experts.121.gate_proj.weight.block5.bf16.bin",
+      "source_bf16_sha256": "964ee2c4be69ea357d8481ced4d7d52094eaaf82b41e032448f40d09ff442c83",
+      "sc_seed_u32": 1645585059,
+      "rht_seed_u64": 4278630544486125731
+    },
+    {
+      "ordinal": 3,
+      "id": "expert_gate.l15.e127.b5",
+      "tensor": "model.layers.15.mlp.experts.127.gate_proj.weight",
+      "canonical_block_index": 5,
+      "source_local_block_index": 0,
+      "role": "expert_gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.15.mlp.experts.127.gate_proj.weight.block5.bf16.bin",
+      "source_bf16_sha256": "988f8498a3425a1c73a25d4d6021a7728ad04ce84bb2d26dc524f3a76ff4014b",
+      "sc_seed_u32": 3997561505,
+      "rht_seed_u64": 16254044611974448514
+    },
+    {
+      "ordinal": 4,
+      "id": "expert_gate.l22.e87.b2",
+      "tensor": "model.layers.22.mlp.experts.87.gate_proj.weight",
+      "canonical_block_index": 2,
+      "source_local_block_index": 0,
+      "role": "expert_gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.22.mlp.experts.87.gate_proj.weight.block2.bf16.bin",
+      "source_bf16_sha256": "1765e5720e49d8a1bfdf19f9519e64fb330459c901660cabbc7a1ff1b410d883",
+      "sc_seed_u32": 785090524,
+      "rht_seed_u64": 2782005976593034347
+    },
+    {
+      "ordinal": 5,
+      "id": "expert_gate.l31.e63.b3",
+      "tensor": "model.layers.31.mlp.experts.63.gate_proj.weight",
+      "canonical_block_index": 3,
+      "source_local_block_index": 0,
+      "role": "expert_gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.31.mlp.experts.63.gate_proj.weight.block3.bf16.bin",
+      "source_bf16_sha256": "7b1e26762126f9fa398645286c2945c114713572f40c010f813472cbf2722055",
+      "sc_seed_u32": 1080691990,
+      "rht_seed_u64": 11736617535542921343
+    },
+    {
+      "ordinal": 6,
+      "id": "expert_gate.l47.e0.b1",
+      "tensor": "model.layers.47.mlp.experts.0.gate_proj.weight",
+      "canonical_block_index": 1,
+      "source_local_block_index": 0,
+      "role": "expert_gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.47.mlp.experts.0.gate_proj.weight.block1.bf16.bin",
+      "source_bf16_sha256": "bf3038d7c06228f0437a6dda5f64e9a5c95f8e8aff36e2c42c35f521f6f72240",
+      "sc_seed_u32": 2007201727,
+      "rht_seed_u64": 12995359549516988557
+    },
+    {
+      "ordinal": 7,
+      "id": "expert_up.l0.e127.b5",
+      "tensor": "model.layers.0.mlp.experts.127.up_proj.weight",
+      "canonical_block_index": 5,
+      "source_local_block_index": 0,
+      "role": "expert_up",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.0.mlp.experts.127.up_proj.weight.block5.bf16.bin",
+      "source_bf16_sha256": "893fb578a7f902b9e4e9feca9efb46e8a260fd8a6a21456876a06a0dedbf05c5",
+      "sc_seed_u32": 624321,
+      "rht_seed_u64": 13129394783606830245
+    },
+    {
+      "ordinal": 8,
+      "id": "expert_up.l3.e57.b0",
+      "tensor": "model.layers.3.mlp.experts.57.up_proj.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "expert_up",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.3.mlp.experts.57.up_proj.weight.block0.bf16.bin",
+      "source_bf16_sha256": "45f321470f280cf45079f259a20c043642e61fe43e72a8cc61c72b5840ecf4f9",
+      "sc_seed_u32": 1169610863,
+      "rht_seed_u64": 18048014621784014055
+    },
+    {
+      "ordinal": 9,
+      "id": "expert_up.l15.e0.b0",
+      "tensor": "model.layers.15.mlp.experts.0.up_proj.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "expert_up",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.15.mlp.experts.0.up_proj.weight.block0.bf16.bin",
+      "source_bf16_sha256": "9fded475d972c75c04966976b4923da07bed2d12f3508cbcbafcf5c9d898f797",
+      "sc_seed_u32": 464438872,
+      "rht_seed_u64": 18031384364863965327
+    },
+    {
+      "ordinal": 10,
+      "id": "expert_up.l22.e15.b2",
+      "tensor": "model.layers.22.mlp.experts.15.up_proj.weight",
+      "canonical_block_index": 2,
+      "source_local_block_index": 0,
+      "role": "expert_up",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.22.mlp.experts.15.up_proj.weight.block2.bf16.bin",
+      "source_bf16_sha256": "dec2fbbdcb4545d928491bd10b78df47b2f225d5db3bce0451f78db3202027e6",
+      "sc_seed_u32": 2797585307,
+      "rht_seed_u64": 3823823874809638102
+    },
+    {
+      "ordinal": 11,
+      "id": "expert_up.l31.e0.b3",
+      "tensor": "model.layers.31.mlp.experts.0.up_proj.weight",
+      "canonical_block_index": 3,
+      "source_local_block_index": 0,
+      "role": "expert_up",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.31.mlp.experts.0.up_proj.weight.block3.bf16.bin",
+      "source_bf16_sha256": "23e5e235771c9a6796647fcd955c3b9afe8d764c500db805dd4d0191f0b1d47a",
+      "sc_seed_u32": 668432822,
+      "rht_seed_u64": 7632785632833594028
+    },
+    {
+      "ordinal": 12,
+      "id": "expert_up.l47.e127.b1",
+      "tensor": "model.layers.47.mlp.experts.127.up_proj.weight",
+      "canonical_block_index": 1,
+      "source_local_block_index": 0,
+      "role": "expert_up",
+      "shape": [
+        768,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.47.mlp.experts.127.up_proj.weight.block1.bf16.bin",
+      "source_bf16_sha256": "b9e5da139fe25e5d33e2d9b6a28788e859f02558a29c98be7a3778e710a01ea3",
+      "sc_seed_u32": 2108686537,
+      "rht_seed_u64": 7984457441626726422
+    },
+    {
+      "ordinal": 13,
+      "id": "expert_down.l0.e63.b3",
+      "tensor": "model.layers.0.mlp.experts.63.down_proj.weight",
+      "canonical_block_index": 3,
+      "source_local_block_index": 0,
+      "role": "expert_down",
+      "shape": [
+        2048,
+        768
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.0.mlp.experts.63.down_proj.weight.block3.bf16.bin",
+      "source_bf16_sha256": "27c9b2257c71ccc452059d3f13f868bd847fe9872c5934068ee64f041c485d3d",
+      "sc_seed_u32": 3061064172,
+      "rht_seed_u64": 5115292843003177894
+    },
+    {
+      "ordinal": 14,
+      "id": "expert_down.l3.e121.b0",
+      "tensor": "model.layers.3.mlp.experts.121.down_proj.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "expert_down",
+      "shape": [
+        2048,
+        768
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.3.mlp.experts.121.down_proj.weight.block0.bf16.bin",
+      "source_bf16_sha256": "e2db4d8f2c643e6612b194975832ac3e7f7159cf045e1163e39e0176798ebbea",
+      "sc_seed_u32": 2803737659,
+      "rht_seed_u64": 1197323353511255470
+    },
+    {
+      "ordinal": 15,
+      "id": "expert_down.l15.e127.b5",
+      "tensor": "model.layers.15.mlp.experts.127.down_proj.weight",
+      "canonical_block_index": 5,
+      "source_local_block_index": 0,
+      "role": "expert_down",
+      "shape": [
+        2048,
+        768
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.15.mlp.experts.127.down_proj.weight.block5.bf16.bin",
+      "source_bf16_sha256": "b172f3ee5ccaa50877df0679cb88bd67e5b9f4f1917c0b2a645061ca7229053c",
+      "sc_seed_u32": 2640773920,
+      "rht_seed_u64": 15996408040957414536
+    },
+    {
+      "ordinal": 16,
+      "id": "expert_down.l22.e87.b4",
+      "tensor": "model.layers.22.mlp.experts.87.down_proj.weight",
+      "canonical_block_index": 4,
+      "source_local_block_index": 0,
+      "role": "expert_down",
+      "shape": [
+        2048,
+        768
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.22.mlp.experts.87.down_proj.weight.block4.bf16.bin",
+      "source_bf16_sha256": "0f25e57ad6515ed08958806267362f25440ad32f81ff9ff0983065f20e7bd016",
+      "sc_seed_u32": 218797049,
+      "rht_seed_u64": 3885727169868367282
+    },
+    {
+      "ordinal": 17,
+      "id": "expert_down.l31.e63.b2",
+      "tensor": "model.layers.31.mlp.experts.63.down_proj.weight",
+      "canonical_block_index": 2,
+      "source_local_block_index": 0,
+      "role": "expert_down",
+      "shape": [
+        2048,
+        768
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.31.mlp.experts.63.down_proj.weight.block2.bf16.bin",
+      "source_bf16_sha256": "f7eba94539dae3f468362a440d3bfb7d077a3cf9229268ebb4a56b7e1b871302",
+      "sc_seed_u32": 3550282920,
+      "rht_seed_u64": 5382606480946763221
+    },
+    {
+      "ordinal": 18,
+      "id": "expert_down.l47.e0.b0",
+      "tensor": "model.layers.47.mlp.experts.0.down_proj.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "expert_down",
+      "shape": [
+        2048,
+        768
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.47.mlp.experts.0.down_proj.weight.block0.bf16.bin",
+      "source_bf16_sha256": "4c46d1b62ba0098af66605216eca37778298596af952918361901dcf9080f8fc",
+      "sc_seed_u32": 366350132,
+      "rht_seed_u64": 6243329126011927308
+    },
+    {
+      "ordinal": 19,
+      "id": "attention_q.l0.b0",
+      "tensor": "model.layers.0.self_attn.q_proj.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "attention_q",
+      "shape": [
+        4096,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.0.self_attn.q_proj.weight.block0.bf16.bin",
+      "source_bf16_sha256": "326de8f177af45875f513fa711c045e01ee78f6240a37559618d4b739c8247b1",
+      "sc_seed_u32": 3112357562,
+      "rht_seed_u64": 7160972521418896329
+    },
+    {
+      "ordinal": 20,
+      "id": "attention_k.l0.b0",
+      "tensor": "model.layers.0.self_attn.k_proj.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "attention_k",
+      "shape": [
+        512,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.0.self_attn.k_proj.weight.block0.bf16.bin",
+      "source_bf16_sha256": "cb266a786985425e87f40fe5576955d6c003be7565709231a8c49d1f4c98e270",
+      "sc_seed_u32": 2161188955,
+      "rht_seed_u64": 4988192818117941695
+    },
+    {
+      "ordinal": 21,
+      "id": "attention_v.l47.b3",
+      "tensor": "model.layers.47.self_attn.v_proj.weight",
+      "canonical_block_index": 3,
+      "source_local_block_index": 0,
+      "role": "attention_v",
+      "shape": [
+        512,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.47.self_attn.v_proj.weight.block3.bf16.bin",
+      "source_bf16_sha256": "2a99a6d819fb226e3fca220143f409418f69f7f7472e892c3e3afa1e481847b2",
+      "sc_seed_u32": 3112912521,
+      "rht_seed_u64": 17214305103187189537
+    },
+    {
+      "ordinal": 22,
+      "id": "attention_o.l47.b31",
+      "tensor": "model.layers.47.self_attn.o_proj.weight",
+      "canonical_block_index": 31,
+      "source_local_block_index": 0,
+      "role": "attention_o",
+      "shape": [
+        2048,
+        4096
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.47.self_attn.o_proj.weight.block31.bf16.bin",
+      "source_bf16_sha256": "60a11375b52757ee49153977ae317a49fdd25de2a288eb5fa9147245da7ec902",
+      "sc_seed_u32": 3941273953,
+      "rht_seed_u64": 18050056125542875040
+    },
+    {
+      "ordinal": 23,
+      "id": "attention_q.l22.b2",
+      "tensor": "model.layers.22.self_attn.q_proj.weight",
+      "canonical_block_index": 2,
+      "source_local_block_index": 0,
+      "role": "attention_q",
+      "shape": [
+        4096,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.22.self_attn.q_proj.weight.block2.bf16.bin",
+      "source_bf16_sha256": "25064dee3836e4d71e7e687525a93bf856c0132c959c56c54cb4eba35cf4dcab",
+      "sc_seed_u32": 2580300082,
+      "rht_seed_u64": 5013976642760260023
+    },
+    {
+      "ordinal": 24,
+      "id": "attention_k.l22.b2",
+      "tensor": "model.layers.22.self_attn.k_proj.weight",
+      "canonical_block_index": 2,
+      "source_local_block_index": 0,
+      "role": "attention_k",
+      "shape": [
+        512,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.22.self_attn.k_proj.weight.block2.bf16.bin",
+      "source_bf16_sha256": "37152d607c0289fe6f456163c7e2a5053fda16aef9e608420bb0819ed53d28e8",
+      "sc_seed_u32": 2317011419,
+      "rht_seed_u64": 2944178427925861787
+    },
+    {
+      "ordinal": 25,
+      "id": "attention_v.l22.b2",
+      "tensor": "model.layers.22.self_attn.v_proj.weight",
+      "canonical_block_index": 2,
+      "source_local_block_index": 0,
+      "role": "attention_v",
+      "shape": [
+        512,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.22.self_attn.v_proj.weight.block2.bf16.bin",
+      "source_bf16_sha256": "30d5f255d2d5d3029b7d36e485144a6fb0f125ef1afa5cf4c42a7843ff4ebd5f",
+      "sc_seed_u32": 1889296591,
+      "rht_seed_u64": 4546083832258083113
+    },
+    {
+      "ordinal": 26,
+      "id": "attention_o.l22.b2",
+      "tensor": "model.layers.22.self_attn.o_proj.weight",
+      "canonical_block_index": 2,
+      "source_local_block_index": 0,
+      "role": "attention_o",
+      "shape": [
+        2048,
+        4096
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.22.self_attn.o_proj.weight.block2.bf16.bin",
+      "source_bf16_sha256": "f65ae6628eb8d3532bd1728cc0980049ac59512bc50aeb1ee938a9d869e18e67",
+      "sc_seed_u32": 4235562574,
+      "rht_seed_u64": 7216065360303027700
+    },
+    {
+      "ordinal": 27,
+      "id": "embedding.b0",
+      "tensor": "model.embed_tokens.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "embedding",
+      "shape": [
+        151936,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.embed_tokens.weight.block0.bf16.bin",
+      "source_bf16_sha256": "002c706e3911ac6af4d34f5e1189111d883e68394bd8f0cbf85c26732105801a",
+      "sc_seed_u32": 2511602792,
+      "rht_seed_u64": 12602756369209969938
+    },
+    {
+      "ordinal": 28,
+      "id": "embedding.b1186",
+      "tensor": "model.embed_tokens.weight",
+      "canonical_block_index": 1186,
+      "source_local_block_index": 0,
+      "role": "embedding",
+      "shape": [
+        151936,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.embed_tokens.weight.block1186.bf16.bin",
+      "source_bf16_sha256": "48da5c40eed4d959579240fca8813ffcf017afba54ecd66bb570fdf010829686",
+      "sc_seed_u32": 2312053496,
+      "rht_seed_u64": 1508847978935089982
+    },
+    {
+      "ordinal": 29,
+      "id": "lm_head.b0",
+      "tensor": "lm_head.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "lm_head",
+      "shape": [
+        151936,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/lm_head.weight.block0.bf16.bin",
+      "source_bf16_sha256": "dafecd0da694358b38b0a8d7c8757f79281b1ae96bd7a3e2e9d48aa3a9f3c922",
+      "sc_seed_u32": 452511466,
+      "rht_seed_u64": 6262564015293451017
+    },
+    {
+      "ordinal": 30,
+      "id": "lm_head.b600",
+      "tensor": "lm_head.weight",
+      "canonical_block_index": 600,
+      "source_local_block_index": 0,
+      "role": "lm_head",
+      "shape": [
+        151936,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/lm_head.weight.block600.bf16.bin",
+      "source_bf16_sha256": "bd789c09fccc7a93dac45e571bfe2a690072de2b7ac24b65ff8d9591e29199f6",
+      "sc_seed_u32": 28008723,
+      "rht_seed_u64": 14191082515076777084
+    },
+    {
+      "ordinal": 31,
+      "id": "router.l0.b0",
+      "tensor": "model.layers.0.mlp.gate.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "router",
+      "shape": [
+        128,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.0.mlp.gate.weight.block0.bf16.bin",
+      "source_bf16_sha256": "5a165372095204aaa0343a67d2d2afde1086b730a825998b59264fb9c49a216d",
+      "sc_seed_u32": 2125316156,
+      "rht_seed_u64": 6885270202600718146
+    },
+    {
+      "ordinal": 32,
+      "id": "router.l47.b0",
+      "tensor": "model.layers.47.mlp.gate.weight",
+      "canonical_block_index": 0,
+      "source_local_block_index": 0,
+      "role": "router",
+      "shape": [
+        128,
+        2048
+      ],
+      "source_path": "qwen_polaris_heldout32/sources/model.layers.47.mlp.gate.weight.block0.bf16.bin",
+      "source_bf16_sha256": "2c27d3683e9a93ada552cdb5f342480310984582d1d5202204d1bd5116188274",
+      "sc_seed_u32": 3878134498,
+      "rht_seed_u64": 6043076010861320754
+    }
+  ]
+}

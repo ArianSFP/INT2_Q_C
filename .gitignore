@@ -1,0 +1,43 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.cupy_cache/
+
+# Qwen source data are fetched locally and are not committed.
+qwen_weight_cache/
+qwen_polaris_heldout32/
+repro/
+*.bf16.bin
+*.bf16
+*.safetensors
+*.safetensors.index.json
+
+# The reproduction guide clones this separately.  Keep the Qwen license that
+# is intentionally tracked elsewhere under third_party/.
+third_party/PolarLatticeQuantization/
+codec_data/*.npz
+
+# Reproduction work directories and logs.
+runs/
+work/
+*.stdout.log
+*.stderr.log
+*.log
+
+# Local configuration and credentials.
+.env
+.env.*
+*.key
+*.pem
+id_ed25519*
+*.ppk
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,33 @@
+name: release-integrity
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-artifact-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify hashes, reservoirs, seeds, and result gates
+        run: python tools/verify_release.py
+      - name: Compile every published Python entry point
+        run: python -m compileall -q src tools frozen/gaussian_confirmation
+      - name: Parse every published JSON artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          paths = sorted(Path(".").rglob("*.json"))
+          for path in paths:
+              json.loads(path.read_bytes())
+          print(f"parsed {len(paths)} JSON files")
+          PY
