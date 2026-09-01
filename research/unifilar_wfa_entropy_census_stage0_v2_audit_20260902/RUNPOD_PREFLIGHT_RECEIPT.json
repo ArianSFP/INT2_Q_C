@@ -1,0 +1,48 @@
+{
+  "schema": "uwfa-sc-v2-independent-runpod-source-only-preflight-v1",
+  "status": "PASS_SMALL_ALL_150_EQUALITY_BUT_NOT_REPRESENTATIVE_FEASIBILITY",
+  "producer_commit": "95602d85c234a95bf2f240d7c093ee9f26e25e42",
+  "producer_manifest_sha256": "223a96585444a0b3e4344c470e243dbd4b84662fddfda881185e879a4caee693",
+  "source_verifier_status": "PASS_SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "native_tests": {
+    "tests_run": 23,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 30.909
+  },
+  "gpu_preflight": {
+    "status": "PASS_ALL_150_CPU_CUPY_EXACT_REPEATED",
+    "receipt_sha256": "d0ee3e438ddc62c6d2f35fbd20c17df9f27f08feaaef744bdea659508766c1c4",
+    "cells": 150,
+    "streams": 4,
+    "stream_lengths": [4097, 2053, 1031, 521],
+    "symbols_per_complete_bank": 7702,
+    "elapsed_seconds": 13.950451377080753,
+    "kernel_count": 750,
+    "count_cell_symbol_updates": 2310600,
+    "length_cell_symbol_updates": 3465900,
+    "reported_h2d_bytes": 30872,
+    "omitted_model_h2d_bytes_exact_for_this_fixture": 7257600,
+    "cupy_version": "14.2.0",
+    "cuda_runtime_version": 12090,
+    "cuda_driver_version": 13000,
+    "device": "NVIDIA GeForce RTX 5090",
+    "compute_capability": [12, 0],
+    "first_cell_count_sha256": "0e35af807ec97a0a303e625d348b8827e260f53b84339c991bd1872ac3b07d4e",
+    "last_cell_count_sha256": "0545ff419af1be6ba4639072c65dcd570f383a628f83d57c65b238ffc5e7c4c2"
+  },
+  "mandatory_feasibility_gate": {
+    "representative_stream_count_and_lengths": false,
+    "complete_synthetic_outer_fold": false,
+    "complete_nested_150_selection_refit_benchmark": false,
+    "peak_host_ram_recorded": false,
+    "peak_vram_recorded": false,
+    "complete_h2d_telemetry": false,
+    "passes": false
+  },
+  "payload_access_attestation": {
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_artifact_or_extracted_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false
+  }
+}

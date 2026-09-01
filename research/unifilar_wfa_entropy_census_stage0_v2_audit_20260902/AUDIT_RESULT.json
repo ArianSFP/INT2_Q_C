@@ -1,0 +1,75 @@
+{
+  "schema": "unifilar-wfa-entropy-census-independent-source-audit-v2",
+  "status": "BLOCK_UNIVERSAL_LAUNCH_AND_PAYLOAD",
+  "reviewed_source_manifest_sha256": "223a96585444a0b3e4344c470e243dbd4b84662fddfda881185e879a4caee693",
+  "reviewed_producer_commit": "95602d85c234a95bf2f240d7c093ee9f26e25e42",
+  "payload_authority": false,
+  "source_integrity": {
+    "manifest_matches_external_pin": true,
+    "all_member_sizes_and_hashes_match": true,
+    "undeclared_members": 0,
+    "native_verifier_pass": true,
+    "native_tests_run": 23,
+    "native_tests_failed": 0,
+    "direct_entrypoint_exit": 2
+  },
+  "mechanism_assessment": {
+    "causal_decode_original_freq1_adapter": "PASS",
+    "serialized_model_only_probability_source": "PASS",
+    "canonical_arithmetic_reencode": "PASS",
+    "literal_container_and_actual_rate_F_formulas": "PASS_SOURCE_MECHANISM_ONLY",
+    "owner_aware_six_expert_page_ledger": "PASS_SOURCE_FIXTURE_ONLY",
+    "full_150_control_search_symmetry_in_source": "PASS",
+    "promotion_boolean_conjunction": "PASS"
+  },
+  "hard_blockers": [
+    {
+      "id": "B1_OWNER_MASK_CANNOT_REPRESENT_128_EXPERTS",
+      "severity": "FATAL_UNIVERSAL_FORMAT",
+      "evidence": "Region/frame/directory owner masks are u32 and inherited metadata owner masks are u16. owner_mask=1<<127 fails with struct.error. No indirection/group mapping exists."
+    },
+    {
+      "id": "B2_EXPERT_BOUND_NOT_ENFORCED_BEFORE_SHIFT_AND_LOOP",
+      "severity": "FATAL_EVIDENCE_INTEGRITY_RESOURCE_SAFETY",
+      "evidence": "A correctly re-sealed source-only container with experts=4097 is accepted although protocol.MAX_EXPERTS=4096; _owners executes 1<<experts and range(experts) first."
+    },
+    {
+      "id": "B3_EMPTY_EXPERT_UNIVERSE_ACCEPTED",
+      "severity": "FATAL_OWNER_LEDGER_GEOMETRY",
+      "evidence": "A 128-expert container with only owner mask 1 is accepted and emits 128 ledger rows despite 127 experts owning no region."
+    },
+    {
+      "id": "B4_FIXED_PANEL_ADAPTER_IS_NOT_UNIVERSAL_SWIGLU_MOE",
+      "severity": "FATAL_UNIVERSAL_CLAIM",
+      "evidence": "The inherited adapter fixes six experts, fifteen blocks, and 768x2048/2048x768 shapes through the injected STRATA constants and hard-coded shape law."
+    }
+  ],
+  "unmet_mandatory_preflight_gates": [
+    "No separately pinned externally audited dispatcher exists for this producer manifest.",
+    "The all-150 fixture is only four streams/7702 symbols and contains no complete synthetic outer fold.",
+    "No representative nested 150-cell selection/refit runtime was benchmarked.",
+    "Model-table cp.asarray transfers are omitted from H2D telemetry.",
+    "Peak host RAM and peak VRAM are not measured.",
+    "The frozen independent bridge is mechanism-compatible but not byte-ABI compatible with the producer container."
+  ],
+  "runpod_preflight": {
+    "small_all_150_cpu_cupy_equality": "PASS",
+    "mandatory_representative_feasibility": "FAIL_UNMET",
+    "receipt": "RUNPOD_PREFLIGHT_RECEIPT.json"
+  },
+  "bridge_comparison": {
+    "bridge_manifest_sha256": "51f158c7f82fad81bd2b15d30e6581a2847e0e436d98f085055b8d818bf43f31",
+    "bridge_audit_manifest_sha256": "cb23a8638f49fd69cdb6f518b089ec08c5dbf87a9749d695acbf37551cf124c7",
+    "causal_adapter_semantics": "AGREE",
+    "byte_container_abi": "INCOMPATIBLE",
+    "model_probability_abi": "INCOMPATIBLE",
+    "independent_decoder_for_producer": false,
+    "bridge_launch_status": "BLOCK"
+  },
+  "claim_boundary": "This audit blocks only the sealed UWFA-SC-v2 selected-decision recoder source. It does not close arbitrary WFA/MPS, MERA/TTN, raw-label copulas, nonlinear flows, RCC, Gray-Wyner, or a repaired universal container.",
+  "payload_access_attestation": {
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_artifact_or_extracted_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false
+  }
+}

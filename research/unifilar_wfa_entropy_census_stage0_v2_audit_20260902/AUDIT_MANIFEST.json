@@ -1,0 +1,41 @@
+{
+  "schema": "unifilar-wfa-entropy-census-independent-source-audit-manifest-v2",
+  "status": "BLOCK_UNIVERSAL_LAUNCH_AND_PAYLOAD",
+  "reviewed_producer_commit": "95602d85c234a95bf2f240d7c093ee9f26e25e42",
+  "reviewed_source_manifest_sha256": "223a96585444a0b3e4344c470e243dbd4b84662fddfda881185e879a4caee693",
+  "members": [
+    {
+      "name": "AUDIT_RESULT.json",
+      "bytes": 3936,
+      "sha256": "d63d43ce5ab20100beb56e264e7eb8db64e568658e0cce47f5b06d163fe156da"
+    },
+    {
+      "name": "README.md",
+      "bytes": 7086,
+      "sha256": "bbfc53d3679243c9b952d525886c85300d4cfb2e1ca437689a94f71e25acc1bd"
+    },
+    {
+      "name": "RUNPOD_PREFLIGHT_RECEIPT.json",
+      "bytes": 2002,
+      "sha256": "d77afd11bab57b0f17bc38bc4f0217094dacc508f76af6f77a08ba5e0847a2e9"
+    },
+    {
+      "name": "reproduce_blockers.py",
+      "bytes": 7770,
+      "sha256": "e6ef65aba4c8b68f1f968a6d420cfb0d560e4d4262384f86beb60785efe2f65a"
+    }
+  ],
+  "runpod": {
+    "native_source_tests": "23/23 PASS",
+    "small_all_150_cpu_cupy": "PASS",
+    "representative_feasibility_gate": "UNMET",
+    "device": "NVIDIA GeForce RTX 5090",
+    "cupy": "14.2.0"
+  },
+  "payload_authority": false,
+  "payload_access_attestation": {
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_artifact_or_extracted_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false
+  }
+}
