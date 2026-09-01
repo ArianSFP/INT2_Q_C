@@ -1,0 +1,56 @@
+{
+  "schema": "silt_int2_source_free_planning_ledger_v1",
+  "status": "planning_only_not_a_codec_result",
+  "date": "2026-09-02",
+  "geometry": {
+    "experts": 6,
+    "intermediate": 768,
+    "hidden": 2048,
+    "roles": 3,
+    "weights": 28311552
+  },
+  "target": {
+    "baseline_rate_bpw": 2.5,
+    "baseline_relative_mse": 0.030902167403153148,
+    "baseline_factor": 0.9888693569009007,
+    "target_factor": 0.8,
+    "same_reconstruction_max_rate_bpw": 2.3471100330370855,
+    "required_net_saving_bpw": 0.15288996696291447,
+    "required_net_saving_bits": 4328552.249948835
+  },
+  "physical_side_bits": {
+    "six_byte_rounded_factoradic_permutations": 37584,
+    "six_three_bit_internal_node_selector_sets": 13806,
+    "one_global_16_kib_model_page": 131072,
+    "six_64_byte_expert_headers": 3072,
+    "six_sets_of_256_32_bit_rans_states": 49152,
+    "fixed_subtotal_before_page_tail": 234686,
+    "six_frame_tail_upper_bound_exclusive": 196608,
+    "six_frame_tail_exact_4095_byte_bound": 196560,
+    "fixed_plus_exact_tail_bound": 431246
+  },
+  "physical_side_bpw": {
+    "permutations": 0.0013275146484375,
+    "lifting_selectors": 0.0004876454671223958,
+    "global_model": 0.004629629629629629,
+    "expert_headers": 0.00010850694444444444,
+    "rans_states": 0.001736111111111111,
+    "fixed_subtotal_before_page_tail": 0.008289407800745082,
+    "exact_page_tail_bound": 0.0069427490234375,
+    "fixed_plus_exact_tail_bound": 0.015232156824182582
+  },
+  "promotion_thresholds_bpw": {
+    "free_oracle_hard_kill_below": 0.15288996696291447,
+    "gross_required_before_page_tail": 0.16117937476365954,
+    "gross_required_with_exact_tail_bound": 0.16812212378709704,
+    "rounded_finite_promotion_line": 0.17
+  },
+  "cold_read_planning_at_same_reconstruction_rate": {
+    "fair_share_bytes_per_expert": 1384381.8281260661,
+    "page_rounded_expert_frame_bytes": 1384448,
+    "global_model_bytes": 16384,
+    "native_amplification": 1.0118826840541537,
+    "conservative_inherited_layout_estimate": 1.2574565518216825
+  },
+  "claim_boundary": "All values are algebraic planning figures derived without opening model, current-container, or matched-control payloads. Actual container bytes and page unions govern any result."
+}

@@ -55,6 +55,15 @@ at approximately `2.347110033 bpw`, its distortion is unchanged and it meets
 the rate-relative target.  The saving must be measured after model tables,
 headers, termination, alignment, padding and cold pages.
 
+The literal 4-KiB placement rule makes the finite threshold slightly stricter.
+The unaligned byte ceiling is `8,306,290.968...`, so the largest legal
+page-aligned object is `8,302,592` bytes.  Relative to the current
+`8,847,360`-byte artifact, a same-reconstruction recode must therefore save at
+least `544,768` literal bytes, or `0.153935185185185 bpw`.  At that page point
+`R=2.34606481481481` and `F=0.798841655309746`.  The ideal
+`0.15288996696-bpw` figure remains useful for source-model diagnostics, but it
+is not the finite pass line.
+
 The checked-in encoder transcripts also show that ordinary arithmetic-coder
 inefficiency is not the opportunity.  Across all fifteen streams:
 
@@ -152,6 +161,15 @@ represent terminal constraints such as the fixed-block even-parity unit test
 without an explicit decoder-visible terminal context.  Only if the
 nonnegative model saturates while a controlled noncausal oracle remains
 favorable should a Born-amplitude model be attempted.
+
+There is an additional SC-integration constraint.  A globally normalized
+Born/MPS law can precompute suffix environments only when the complete future
+context sequence is fixed.  In the current SC decoder, future baseline
+frequency/context values can depend on future decoded decisions.  A naïve
+MPS-over-labels ABI therefore has no known tractable suffix marginal.  The
+production model must be causally normalized (for example a row-stochastic or
+unifilar WFA/HMM), or it must prove a joint dynamic program over both the MPS
+and the complete future SC recursion.  The former is the only stage-0 path.
 
 For a four-symbol alphabet, bond/state size `chi`, fitted boundary vectors and
 uint16/FP16 parameters:
@@ -556,13 +574,40 @@ curve without a non-Gaussian prior or common-information source already found
 elsewhere.  Retain it as a possible finite search backend after a source-model
 survivor, not as an immediate experiment.
 
+## 2026 tile-ANS evidence
+
+Tan et al., [*Approaching Shannon Bound with Lossless LLM Weight
+Compression*](https://arxiv.org/abs/2606.15789), provide useful current
+systems evidence for the finite backend.  Their codec uses independent
+tile-aligned ANS streams, a layer-shared frequency table and tile offsets, and
+decodes directly into on-chip memory for GEMM.  This supports an expert-local,
+tile-addressable ANS/rANS layout as a credible route to low read amplification
+and fused decode.
+
+It does **not** establish the high-order hypothesis tested here.  Their
+reported Shannon bound is the empirical marginal entropy of the symbols in
+each tensor, and their physical encoder is correspondingly driven by the
+layer-wide symbol histogram.  In contrast, the current STRATA arithmetic
+streams are already only `0.000043340465 bpw` above the NLL of their existing
+causal law.  The missing `0.15288996696 bpw` must therefore come from a new
+predictive law over the current legal decisions (or from a newly nested lossy
+codebook), not from substituting ANS for arithmetic coding.  Their INT4
+results also cannot be transferred numerically to the RHT/SC stream: numeric
+format, scale policy, alphabet and marginal skew are different.  We retain
+tile ANS as a backend and test its source model independently.
+
 ## Novelty boundary
 
 Learned weight codecs are already public: Neural Weight Compression learns an
 analysis transform, entropy-coded latent and synthesis transform for model
 weights ([Ryu et al.](https://arxiv.org/abs/2510.11234)).  Learned context and
-hierarchical priors are also standard in image compression.  The defensible
-research novelty is narrower:
+hierarchical priors are also standard in image compression, and tensor-network
+entropy coding has itself appeared for learned image compression
+([Fan et al., PCS 2022](https://doi.org/10.1109/PCS56426.2022.10018076)).
+Tensor-network factorization of the **weight values** is also established,
+including CompactifAI ([Tomut et al.](https://arxiv.org/abs/2401.14109)); that
+is distinct from, and does not validate, a tensor-network probability law over
+legal PTQ decisions.  The defensible research novelty is narrower:
 
 - a charged tensor-network probability law over legal low-bit PTQ outputs;
 - a transform trained to reduce held-out discrete label complexity rather
