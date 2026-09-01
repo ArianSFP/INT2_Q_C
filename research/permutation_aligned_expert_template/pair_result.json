@@ -1,0 +1,105 @@
+{
+  "backend": {
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090"
+  },
+  "canonical_unsigned_sha256": "dd4c06777d79c489dd0f78e94a154ad52554b4f525aaf7cdf8bbce14e559f17a",
+  "claim_boundary": "Two fixed auxiliary Up/Down experts; exact free template, optimal neuron assignment, and free per-neuron coefficients. This is an upper opportunity screen, not a codec or a universal converse.",
+  "control_corrected_capture": 0.0003750979452022962,
+  "controls": [
+    {
+      "alpha_fp64_sha256": "3dee68035c109e1899754255ba4fa03e1939a0a66e0aefebcb06e84bd8d2ef2d",
+      "capture": 0.0025901852484504495,
+      "elapsed_seconds": 0.024000026052817702,
+      "maximum_selected_cosine_squared": 0.006105584066516279,
+      "mean_selected_cosine_squared": 0.0025907970945922456,
+      "minimum_selected_cosine_squared": 0.0010114635818822759,
+      "permutation_sha256": "a6e68f5aa70c058369fed6793054e99f688e9c87b399b4dea6b4e0ff1f13e146",
+      "residual_energy": 1595.1650898069643,
+      "residual_fraction": 0.9974098147515496,
+      "roles": {
+        "down": {
+          "capture": 0.0027219946364981373,
+          "residual_energy": 811.1887509666863,
+          "source_energy": 813.402829104822
+        },
+        "up": {
+          "capture": 0.00245376397439645,
+          "residual_energy": 783.9763388402779,
+          "source_energy": 785.9047636365959
+        }
+      },
+      "source_energy": 1599.307592741418
+    },
+    {
+      "alpha_fp64_sha256": "0453a002d8bf423a302e7c55a356f2ec2bf5b59da4f269a67d8af2e322c59c87",
+      "capture": 0.0025677819721720008,
+      "elapsed_seconds": 0.023562991991639137,
+      "maximum_selected_cosine_squared": 0.005213525860465349,
+      "mean_selected_cosine_squared": 0.0025683555949920027,
+      "minimum_selected_cosine_squared": 0.0011439436654935697,
+      "permutation_sha256": "8709287b89d5842a338459ab28173ba807526fb1c99b4673f2096a3490897631",
+      "residual_energy": 1595.2009195461062,
+      "residual_fraction": 0.997432218027828,
+      "roles": {
+        "down": {
+          "capture": 0.0026989494466147512,
+          "residual_energy": 811.2074960357097,
+          "source_energy": 813.4028291513225
+        },
+        "up": {
+          "capture": 0.002432025071658628,
+          "residual_energy": 783.9934235103966,
+          "source_energy": 785.9047635994064
+        }
+      },
+      "source_energy": 1599.3075927507293
+    }
+  ],
+  "decision": "EARLY_KILL_PERMUTATION_ALIGNED_SINGLE_TEMPLATE",
+  "favorable_grants": [
+    "exact uncharged reference expert",
+    "optimal 768-neuron permutation",
+    "one exact uncharged FP64 regression coefficient per target neuron",
+    "no permutation, coefficient, template, or framing rate"
+  ],
+  "max_control_capture": 0.0025901852484504495,
+  "required_incremental_capture_over_existing_composite": 0.14566207553404276,
+  "schema": "qwen_permutation_aligned_pair_screen_v1",
+  "source": {
+    "alpha_fp64_sha256": "ece0c8660994d676dcddee00f7db1f7b4f44ec9a16368abd6e7afd289f7ffa62",
+    "capture": 0.0029652831936527457,
+    "elapsed_seconds": 0.6254679010016844,
+    "maximum_selected_cosine_squared": 0.022150065907518158,
+    "mean_selected_cosine_squared": 0.0029688098554752577,
+    "minimum_selected_cosine_squared": 0.0008693066884747112,
+    "permutation_sha256": "7ff3f7f149015190b9fc9ec492dd37fd5b4d0dbf74417b5cc45e2327a875930c",
+    "residual_energy": 1594.5651928022062,
+    "residual_fraction": 0.9970347168063473,
+    "roles": {
+      "down": {
+        "capture": 0.003385923658751344,
+        "residual_energy": 810.6487092120651,
+        "source_energy": 813.4028290951939
+      },
+      "up": {
+        "capture": 0.0025299249159377313,
+        "residual_energy": 783.9164835901411,
+        "source_energy": 785.9047636332109
+      }
+    },
+    "source_energy": 1599.3075927284049
+  },
+  "source_identity": {
+    "hashes": {
+      "l15e0_down.bf16.bin": "e6b685798fcefec0a74645d5cdafce0582b0c9ca119eb43a84a7186253ba255a",
+      "l15e0_up.bf16.bin": "15e0782da2120ab5369ec88bd3d4ae3a677ed0e63b38b48f2f622a72d1f574b6",
+      "l15e8_down.bf16.bin": "555f77f3c1f51b5c71e34014abf30845babc5954cdd09d260cbe7c6edf1f5d74",
+      "l15e8_up.bf16.bin": "2da3931365283daa62715250389efb7acad9bb44e72f7415e8da6a730317d322"
+    },
+    "layer": 15,
+    "pinned_panel_opened": false,
+    "reference_expert": 0,
+    "target_expert": 8
+  }
+}

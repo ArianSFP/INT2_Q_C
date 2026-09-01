@@ -1,0 +1,216 @@
+{
+  "schema": "silwarp_auxiliary_protocol_v2",
+  "status": "FROZEN_BEFORE_V2_PAYLOAD_OR_CUDA",
+  "date_utc": "2026-09-01",
+  "prelaunch_correction": "Before any v2 payload/CUDA access: v1 safeguards are retained exactly, and any nearest-even FP16 zero mean is canonically serialized as +0 before centered RMS/normalization. This changes no numeric value, loss, information, seed, split, architecture, or threshold; it only removes IEEE signed-zero representation ambiguity in the bitwise Qwen/control metadata assertion.",
+  "v1_failure_and_v2_repair": {
+    "v1_protocol_sha256": "c6b5dffd6934c48707f53f991897d1d6f323c13d8cc7d1e4ab720993ae98d40c",
+    "v1_common_sha256": "c852aaf4ae341310a5c5733caafeb4857072ceaeda9a11356a142c6976caa4e6",
+    "v1_runner_sha256": "7e01bc6ae9e4b881a24c42ab8f66572d36d74a9f8079226f71e321a91a5b83a2",
+    "v1_gpu_preflight_receipt_sha256": "9633327f355991474549892480803567cfebf183ad57e190f58299804a3da381",
+    "v1_failed_run_log_sha256": "c4f11b0005e4cc4ee5725d70e1553bdef3aa45dad1f26eeec68d9be0878d3991",
+    "failure_boundary": "v1 authenticated all fit/calibration files, decoded through L31/E0 Up, then aborted while constructing null_a for fit L31/E31 Down; no training update, checkpoint, calibration score, confirmation access, or result exists",
+    "post_failure_diagnostic_access": "one CPU-only diagnostic reopened only the already-authenticated fit L31/E31 Down record to measure the exact disclosed moments and reproduce the signed-zero mismatch; it opened no new fit/calibration identity, no confirmation or pinned value, and no CUDA context",
+    "offending_real_fit_moment": {
+      "identity": [31, 31, "down"],
+      "source_exact_mean_fp64": -4.649028828573876e-09,
+      "source_v1_mean_fp16_bits_hex": "8000",
+      "null_a_exact_mean_fp64": 2.238990423908867e-19,
+      "null_a_v1_mean_fp16_bits_hex": "0000",
+      "serialized_rms_fp16": 0.0242156982421875,
+      "source_normalized_second_moment": 0.9991945364701782,
+      "null_a_normalized_second_moment": 0.9993699794801013
+    },
+    "repair": "canonical_fp16_mean maps either signed FP16 zero produced by nearest-even conversion to +0 immediately after conversion; the exact bitwise control/source assertion remains mandatory",
+    "random_domain_tag": "the literal SILWARP-v1 seed-derivation prefix and every derived control/training/evaluation counter are retained verbatim in v2",
+    "statistical_change": false
+  },
+  "claim_boundary": "A negative result rejects only this preregistered SILWARP training cell. A positive result is an information-valid ideal-channel auxiliary survivor, not a finite codec and not permission to open the pinned panel.",
+  "pinned_panel": {
+    "opened": false,
+    "permitted_by_this_protocol": false,
+    "forbidden_path_components": [
+      "blind_protocol",
+      "blind_protocol_v2",
+      "unblinded",
+      "sources"
+    ],
+    "target_layers_excluded_before_split": [5, 12, 18, 28, 36, 45],
+    "target_experts_excluded_before_split": [7, 18, 20, 41, 76, 83]
+  },
+  "source_authentication": {
+    "source_lock_path": "research/implicit_hyperdecoder_gate_v2/source_lock.json",
+    "source_lock_sha256": "b0dc982e42a22fa960a1436ed5ebdcab1233d0bc2e463972e16dab4315e14042",
+    "source_lock_internal_seal_sha256": "63a530d2e095ab96228d84400cb4a6bba59e0dc949776da443ccd0789076a188",
+    "required_revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "up_down_hash_parent_sha256": "b7fc6a5aa91581329ddcb31200f19e5146c82656f93829775247ef4c8262a98c",
+    "gate_hash_access_disclosure": "The two L3/E57 and L3/E121 Gate confirmation files were full-file hashed by root for pretraining authentication only; numeric values remain undecoded/unscored until promotion.",
+    "file_policy": "regular non-symlink files only; exact basename, size, split, and SHA-256; one os.open descriptor with O_NOFOLLOW where available is fstat-checked, read, hashed, and decoded from that same buffer",
+    "access_order": "authenticate fit/calibration before numeric decode; do not hash or decode confirmation in the runner until calibration promotion"
+  },
+  "source": {
+    "checkpoint": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "dtype": "BF16",
+    "canonical_shape": [768, 2048],
+    "down_orientation": "transpose_before_tiling",
+    "tile_shape": [16, 16],
+    "source_derived_metadata": "one nearest-even FP16 mean with a unique canonical +0 zero encoding and one post-cast-validated upward FP16 RMS per role; RMS is computed in FP64 about the serialized mean; no per-tile source feature",
+    "moment_algorithm": "mean16=nearest-even FP16(exact FP64 mean), then if mean16 is either signed zero set its bits to canonical +0; rms64=sqrt(mean_FP64((x-float(mean16))^2)); start at smallest positive finite FP16 >= rms64 (exact zero uses minimum positive subnormal); form X32=Q32((x-float(mean16))/float(rms16)), re-evaluate mean_FP64(X32^2), and advance rms16 by FP16 ULPs until this actual post-cast moment is <=1; NaN/infinity/overflow fail closed",
+    "normalization_invariant": "for the actual decoder input X32, mean_FP64(X32^2)<=1 exactly; both learned and identity scores use this exact serialized path"
+  },
+  "split": {
+    "fit_pairs": [
+      [0, 0], [0, 31], [0, 63], [0, 127],
+      [2, 45], [2, 111], [4, 71], [6, 23], [6, 103],
+      [8, 53], [8, 119], [14, 45], [14, 111],
+      [15, 0], [15, 31], [15, 63], [15, 127],
+      [16, 53], [16, 119], [20, 71], [24, 53], [24, 119],
+      [26, 45], [26, 111], [30, 23], [30, 103],
+      [31, 0], [31, 31], [31, 63], [31, 127],
+      [38, 45], [38, 111], [40, 53], [40, 119],
+      [42, 23], [42, 103], [44, 71],
+      [47, 0], [47, 31], [47, 63], [47, 127]
+    ],
+    "calibration_pairs": [
+      [10, 15], [10, 87], [22, 15], [22, 87],
+      [34, 15], [34, 87], [46, 15], [46, 87]
+    ],
+    "confirmation_pairs": [
+      [3, 57], [3, 121], [13, 57], [13, 121],
+      [27, 57], [27, 121], [39, 57], [39, 121]
+    ],
+    "fit_roles": ["up", "down"],
+    "calibration_roles": ["up", "down"],
+    "confirmation_roles": ["up", "down"],
+    "confirmation_gate_pairs": [[3, 57], [3, 121]],
+    "disjointness": "No layer and no expert identity is shared by fit, calibration, or confirmation."
+  },
+  "information_channel": {
+    "core_rate_bpw": 2.15,
+    "design_distortion": 0.050765774772264724,
+    "represented_coefficient_fp32": 0.9492341876029968,
+    "represented_noise_sigma_fp32": 0.21951906383037567,
+    "represented_noise_variance": 0.04818861938496455,
+    "represented_identity_error_variance": 0.05076578709329227,
+    "information_upper_bound_bpw": 2.149999824926515,
+    "physical_role_payload_bpw": 2.1500040690104165,
+    "map": "Conceptual Y*=a32*X32+sigma32*Z with Z iid N(0,1), followed by Y32=Q32(Y*); a32 is rounded downward and sigma32 upward from the design channel.",
+    "proof": "Post-cast RMS validation guarantees E[X32^2]<=1 and hence Var(X32)<=1. For the conceptual ideal AWGN channel, Var(Y*)<=a32^2+sigma32^2 and Gaussian maximal entropy gives I(X32;Y*)<=0.5*log2(1+a32^2/sigma32^2)=2.149999824926515<=2.15<=the emitted 2.1500040690104165 bpw role payload. Q32 and the deterministic SILWARP decoder are data processing and cannot increase information.",
+    "evaluation_law": "Evaluation is reproducible Monte Carlo for the mathematical ideal AWGN law: generate Box-Muller Z in FP64, form Y* in FP64, then cast once to FP32. The finite deterministic PRF sample is an estimator, not itself the mutual-information proof.",
+    "training_law": "Training-only noise uses explicit counter-derived FP32 Box-Muller samples; it carries no proof claim.",
+    "decoder_inputs": ["decoded Y", "public layer/expert/role/tile coordinates", "serialized FP16 whole-matrix mean and RMS"],
+    "forbidden_decoder_inputs": ["original X", "source-derived per-tile scale", "source-derived per-tile feature", "unserialized side information"]
+  },
+  "architecture": {
+    "name": "SILWARP",
+    "expansion": "source-conditioned implicit lattice warp",
+    "tile_values": 256,
+    "coordinate_features": 21,
+    "hidden": 256,
+    "bottleneck": 128,
+    "tied_steps": 6,
+    "activation": "SiLU",
+    "gate_activation": "sigmoid",
+    "output_activation": "tanh",
+    "identity": "exact residual-zero initialization and one bypass bit per role in the charged expert header",
+    "parameter_order": ["Wy", "Wc", "b0", "A", "ba", "C", "bc", "B", "bb", "Wo", "bo", "role_gain"],
+    "parameter_shapes": {
+      "Wy": [256, 256],
+      "Wc": [21, 256],
+      "b0": [256],
+      "A": [256, 128],
+      "ba": [128],
+      "C": [256, 128],
+      "bc": [128],
+      "B": [128, 256],
+      "bb": [256],
+      "Wo": [256, 256],
+      "bo": [256],
+      "role_gain": [3]
+    },
+    "parameter_count": 235779,
+    "serialization": "little-endian IEEE binary16 in parameter_order after a closed 4096-byte header; every promotion score reloads the exact serialized bytes"
+  },
+  "controls": {
+    "corpora": ["null_a", "null_b"],
+    "construction": "two independent domain-separated counter/Box-Muller Monte Carlo Gaussian matrices; each uses the interior midpoint of its Qwen partner's serialized FP16 RMS cell, then passes the identical post-cast moment algorithm, preserving the exact charged FP16 mean/RMS while guaranteeing unit-moment legality even when Qwen required an extra safety ULP",
+    "training_seeds": [26090131, 26090179],
+    "seed_zero_is_only_deployable": true,
+    "source_selected_retries": false,
+    "matched_statistic": "s_qwen - max(s_null_a,s_null_b)",
+    "cluster_se": "maximum delete-one jackknife SE over whole layers, whole experts, and complete layer-expert pairs"
+  },
+  "optimization": {
+    "backend": "CuPy",
+    "device": "one RTX 5090",
+    "optimizer": "Adam",
+    "learning_rate": 0.0005,
+    "betas": [0.9, 0.999],
+    "epsilon": 1e-8,
+    "batch_tiles": 512,
+    "loss": "raw-domain SSE-aligned weighted MSE: each uniformly sampled tile receives decoder-visible serialized_rms^2, with normalization by values_per_tile*sum(weights); Qwen and both controls share identical weights",
+    "maximum_updates": 1536,
+    "checkpoints": [256, 512, 1536],
+    "training_seed_policy": "both fixed seeds run; never select the better seed",
+    "estimated_dense_mac": 10200000000000,
+    "estimated_wall_minutes": [45, 90],
+    "launch_sentinel": {
+      "required": true,
+      "schema": "silwarp_launch_sentinel_v2",
+      "authorization_phrase": "AUTHORIZE_SILWARP_AUXILIARY_IDEAL_CHANNEL_RUN_V2",
+      "bindings": ["protocol_sha256", "source_lock_sha256", "runner_sha256", "common_sha256", "internal_seal_sha256"]
+    },
+    "checkpoint_resume": {
+      "updates": [256, 512, 1536],
+      "append_only": true,
+      "state": "all six FP32 model states, Adam first/second moments and step, history, predecessor seal, source/code/sentinel bindings, and exact runtime identity",
+      "counter_randomness": "one batch-index vector derives from training seed and absolute update and is shared exactly by Qwen/null_a/null_b; channel noise additionally includes corpus; explicit SplitMix64 counters and Box-Muller use no opaque RNG state",
+      "runtime_identity": "Python, NumPy, CuPy, CUDA runtime and driver, device id/name/UUID, and compute capability; resume rejects any mismatch",
+      "resume_policy": "load and validate the complete append-only predecessor chain; reject incomplete, overwritten, nonfinite, hash-inconsistent, code/source/sentinel-inconsistent, or runtime-inconsistent state"
+    }
+  },
+  "ledger": {
+    "weights_per_role": 1572864,
+    "weights_per_expert": 4718592,
+    "role_payload_bytes": 422708,
+    "role_payload_bpw": 2.1500040690104165,
+    "expert_payload_bytes": 1268124,
+    "expert_header_bytes": 64,
+    "expert_moment_bytes": 12,
+    "decoder_parameter_bytes": 471558,
+    "decoder_header_bytes": 4096,
+    "decoder_total_bytes": 475654,
+    "production_amortization_experts": 128,
+    "production_physical_bpw": 2.15643318494161,
+    "production_cold_expert_bytes": 1743854,
+    "production_cold_read_amplification": 1.37104489269124,
+    "represented_identity_error_variance": 0.05076578709329227,
+    "represented_information_upper_bound_bpw": 2.149999824926515,
+    "six_expert_physical_bpw": 2.28453855161314,
+    "strict_bpw_interval": [2.15, 2.5],
+    "strict_cold_read_amplification_upper": 2.0
+  },
+  "objective": {
+    "definition_F": "source_relative_MSE * 2^(2*physical_bpw)",
+    "target_F": 0.8,
+    "production_target_mse": 0.040252035066772,
+    "represented_identity_F": 1.008958419301376,
+    "required_absolute_s": 0.1673974074587855,
+    "required_matched_s_dynamic": "0.1673974074587855 - s_gaussian_operational"
+  },
+  "stopping": {
+    "U": "s_match_worst + 2*max_cluster_jackknife_SE",
+    "update_512_hard_kill": "for both fixed training seeds: U512<0.10 and U512-U256<0.012",
+    "boundary_projection": 0.148,
+    "calibration_promotion": "FP16-reloaded primary F<=0.8; primary worst-null s_match-2SE>=0.1673974074587855; every layer and layer-expert Qwen aggregate positive; sensitivity seed point F<=0.8 and worst-null s_match>0",
+    "confirmation": "opened only after calibration promotion; no retraining or model selection",
+    "maximum_positive_decision": "AUXILIARY_IDEAL_CHANNEL_SURVIVOR_REQUIRES_FINITE_CODE"
+  },
+  "source_free_preflight_required": true,
+  "gpu_source_free_preflight_required": "one warmup plus three timed production-spec batch-512 forward/backward/Adam steps with all six model/Adam cells resident; receipt binds code/source/runtime and reports timing and memory-pool peaks",
+  "v2_payload_opened_at_freeze": false,
+  "confirmation_authentication_only_access_disclosed": true,
+  "v2_cuda_context_created_at_freeze": false,
+  "prior_v1_payload_and_cuda_access_disclosed": true
+}

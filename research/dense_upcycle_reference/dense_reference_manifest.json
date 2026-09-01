@@ -1,0 +1,96 @@
+{
+  "canonical_unsigned_sha256": "2c823469190adf2f8c0a709b674c67a60b0a271c70864b4f6fa9adfbced6704f",
+  "checkpoint_total_bytes": 3441185608,
+  "layers": [
+    9,
+    15
+  ],
+  "model": "Qwen/Qwen3-1.7B-Base",
+  "revision": "ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+  "roles": [
+    "up_proj",
+    "down_proj"
+  ],
+  "safetensors_header_bytes": 35648,
+  "safetensors_header_sha256": "3abda69cd4fc96c7ea331905c96d6b833ba91113ae83fa39e472226296eb1eca",
+  "schema": "qwen_dense_upcycle_locked_ranges_v1",
+  "tensors": [
+    {
+      "absolute_http_range": [
+        3390845256,
+        3416011079
+      ],
+      "bytes": 25165824,
+      "content_range": "bytes 3390845256-3416011079/3441185608",
+      "output": "layer_09_up_proj.bf16.bin",
+      "relative_data_offsets": [
+        3390809600,
+        3415975424
+      ],
+      "sha256": "f591f059737bb1cce19f91e919acfea4bfefb6a11879ddf6d34caf0c51b67727",
+      "shape": [
+        6144,
+        2048
+      ],
+      "tensor": "model.layers.9.mlp.up_proj.weight"
+    },
+    {
+      "absolute_http_range": [
+        3340513608,
+        3365679431
+      ],
+      "bytes": 25165824,
+      "content_range": "bytes 3340513608-3365679431/3441185608",
+      "output": "layer_09_down_proj.bf16.bin",
+      "relative_data_offsets": [
+        3340477952,
+        3365643776
+      ],
+      "sha256": "6933ff1043002cfd963f0563b78af901798f73a5266026e749feec91b2cbff79",
+      "shape": [
+        2048,
+        6144
+      ],
+      "tensor": "model.layers.9.mlp.down_proj.weight"
+    },
+    {
+      "absolute_http_range": [
+        1377405256,
+        1402571079
+      ],
+      "bytes": 25165824,
+      "content_range": "bytes 1377405256-1402571079/3441185608",
+      "output": "layer_15_up_proj.bf16.bin",
+      "relative_data_offsets": [
+        1377369600,
+        1402535424
+      ],
+      "sha256": "2aca34e41391228e87b04087821e30f315809aa0f19c2e23828d161ef26ff491",
+      "shape": [
+        6144,
+        2048
+      ],
+      "tensor": "model.layers.15.mlp.up_proj.weight"
+    },
+    {
+      "absolute_http_range": [
+        1327073608,
+        1352239431
+      ],
+      "bytes": 25165824,
+      "content_range": "bytes 1327073608-1352239431/3441185608",
+      "output": "layer_15_down_proj.bf16.bin",
+      "relative_data_offsets": [
+        1327037952,
+        1352203776
+      ],
+      "sha256": "e2faf3c7d91e7ba47730d560375ddfaa778851bb566f63e638dd0b83784fb11e",
+      "shape": [
+        2048,
+        6144
+      ],
+      "tensor": "model.layers.15.mlp.down_proj.weight"
+    }
+  ],
+  "url": "https://huggingface.co/Qwen/Qwen3-1.7B-Base/resolve/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/model.safetensors"
+}

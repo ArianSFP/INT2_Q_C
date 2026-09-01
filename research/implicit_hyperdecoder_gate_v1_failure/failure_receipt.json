@@ -1,0 +1,57 @@
+{
+  "schema": "silwarp_v1_pretraining_failure_receipt_v1",
+  "status": "PRESERVED_ABORT_BEFORE_TRAINING",
+  "date_utc": "2026-09-01",
+  "v1_identity": {
+    "protocol_sha256": "c6b5dffd6934c48707f53f991897d1d6f323c13d8cc7d1e4ab720993ae98d40c",
+    "protocol_document_sha256": "d9121d143562877767866852d4f29e44869621b7870fc2f8fd8e35b744ef8a9c",
+    "source_lock_sha256": "b0dc982e42a22fa960a1436ed5ebdcab1233d0bc2e463972e16dab4315e14042",
+    "common_sha256": "c852aaf4ae341310a5c5733caafeb4857072ceaeda9a11356a142c6976caa4e6",
+    "runner_sha256": "7e01bc6ae9e4b881a24c42ab8f66572d36d74a9f8079226f71e321a91a5b83a2",
+    "tests_sha256": "dd4c0bf7df24da7e43be18de5016428bbcff69c73b6962fcdd1985b37fafc146"
+  },
+  "preserved_artifacts": {
+    "run_log": {
+      "path": "silwarp_aux_run_c6b5dffd_v1.log",
+      "nbytes": 11409,
+      "sha256": "c4f11b0005e4cc4ee5725d70e1553bdef3aa45dad1f26eeec68d9be0878d3991"
+    },
+    "gpu_source_free_preflight": {
+      "path": "gpu_preflight_rtx5090.json",
+      "nbytes": 1696,
+      "sha256": "9633327f355991474549892480803567cfebf183ad57e190f58299804a3da381"
+    }
+  },
+  "remote_paths": {
+    "candidate": "/workspace/INT2__compression/silwarp_candidate_c6b5dffd",
+    "output": "/workspace/INT2__compression/silwarp_aux_run_c6b5dffd_v1",
+    "log": "/workspace/INT2__compression/silwarp_aux_run_c6b5dffd_v1.log"
+  },
+  "access_boundary": {
+    "authentication": "All 82 fit and 16 calibration files were opened as bytes and hash-authenticated before numeric decoding; confirmation was neither authenticated nor opened by the v1 runner.",
+    "failed_runner_numeric_decode": "Fifty-four complete fit records were logged through L31/E0/up. The next Qwen source, L31/E31/down, was decoded and moment-normalized before null_a construction raised. No later fit or any calibration numeric value was decoded.",
+    "post_failure_diagnostic": "One CPU-only diagnostic reopened only the already-authenticated fit L31/E31/down record to identify its exact mean/RMS and reproduce the signed-zero mismatch. No other payload was opened by that diagnostic.",
+    "confirmation_numeric_values": "never decoded or scored",
+    "pinned_panel": "never accessed",
+    "cuda_after_failure": false
+  },
+  "failure": {
+    "record": [31, 31, "down"],
+    "control": "null_a",
+    "exception": "AssertionError: control serialized mean mismatch",
+    "source_exact_mean_fp64": -4.649028828573876e-09,
+    "source_mean_fp16_bits_hex": "8000",
+    "control_exact_mean_fp64": 2.238990423908867e-19,
+    "control_mean_fp16_bits_hex": "0000",
+    "serialized_rms_fp16": 0.0242156982421875,
+    "source_normalized_second_moment": 0.9991945364701782,
+    "control_normalized_second_moment": 0.9993699794801013
+  },
+  "outputs": {
+    "training_updates": 0,
+    "checkpoints": 0,
+    "scores": 0,
+    "models": 0,
+    "results": 0
+  }
+}

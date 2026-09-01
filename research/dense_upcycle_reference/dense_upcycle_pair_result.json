@@ -1,0 +1,229 @@
+{
+  "backend": {
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090"
+  },
+  "best_source": {
+    "capture": 0.005129678392775006,
+    "coefficients_fp64_sha256": "3cf6bd0cd4d6cfb60f3e2b7c2d527e77984d6fe3ebd3b43b6fae09ca09440cd3",
+    "elapsed_seconds": 0.7191842260072008,
+    "reference_index_u16_sha256": "503bd310d73483ddfd087253f17e2491fdfcdae95cb5b78877a978d2b7dc6600",
+    "reference_layer": 9,
+    "residual_energy": 1591.1036591188722,
+    "residual_fraction": 0.994870321607225,
+    "roles": {
+      "down": {
+        "capture": 0.005494567687108209,
+        "residual_energy": 808.9335321878825,
+        "source_energy": 813.4028290891985
+      },
+      "up": {
+        "capture": 0.004752021966640485,
+        "residual_energy": 782.1701269309897,
+        "source_energy": 785.9047636314538
+      }
+    },
+    "selected_explained_sse_max": 0.016548948942154106,
+    "selected_explained_sse_mean": 0.009648193309065673,
+    "source_energy": 1599.3075927206523,
+    "unique_reference_neurons": 768
+  },
+  "canonical_unsigned_sha256": "961bd837278e4da69a4661b3567b60cc7b9aeb097c5b14327ee54606c3314c69",
+  "claim_boundary": "One fixed non-pinned Qwen3-30B-A3B auxiliary expert against two locked Qwen3-1.7B-Base dense layers. Exact dense tensors, optimal rectangular neuron assignment, layer selection, and four FP64 affine coefficients per neuron are free. This is an upper opportunity screen, not a codec or a claim of training lineage.",
+  "control_corrected_capture": 0.00012638062686909368,
+  "decision": "EARLY_KILL_DENSE_UPCYCLE_REFERENCE",
+  "existing_composite_F": 0.936397621,
+  "favorable_grants": [
+    "exact uncompressed dense reference tensors at zero rate",
+    "best of two dense layers at zero selection cost",
+    "optimal one-to-one assignment of 768 target neurons into 6144 reference neurons",
+    "separate exact FP64 scale and offset for Up and Down per target neuron",
+    "zero index, coefficient, reference-storage, or read charge"
+  ],
+  "hypothesis": "The public dense model may retain a neuron-level ancestor relation to the MoE expert, motivated by matching hidden size 2048 and dense width 6144 = 8 active experts * 768.",
+  "max_control_capture": 0.005003297765905912,
+  "reference": {
+    "layers": [
+      9,
+      15
+    ],
+    "manifest_sha256": "f535a729750432dcc2cf5c95c78b32aaa32701f5b99d4ab4f3e63114cef294f6",
+    "model": "Qwen/Qwen3-1.7B-Base",
+    "revision": "ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+    "tensor_hashes": {
+      "layer_09_down_proj.bf16.bin": "6933ff1043002cfd963f0563b78af901798f73a5266026e749feec91b2cbff79",
+      "layer_09_up_proj.bf16.bin": "f591f059737bb1cce19f91e919acfea4bfefb6a11879ddf6d34caf0c51b67727",
+      "layer_15_down_proj.bf16.bin": "e2faf3c7d91e7ba47730d560375ddfaa778851bb566f63e638dd0b83784fb11e",
+      "layer_15_up_proj.bf16.bin": "2aca34e41391228e87b04087821e30f315809aa0f19c2e23828d161ef26ff491"
+    }
+  },
+  "required_incremental_capture": 0.14566207553404276,
+  "schema": "qwen_dense_upcycle_pair_screen_v1",
+  "scramble_controls": [
+    {
+      "capture": 0.005003297765905912,
+      "coefficients_fp64_sha256": "096fee161ba073ca6885fad67eb85a51a01b5b6a9a76a4843e46c62f3f067258",
+      "control_seed": 260901503,
+      "elapsed_seconds": 0.1510427970206365,
+      "reference_index_u16_sha256": "f480a3d1c74a8c383ea65cb0902cc81d2874f31c89abd74583472703e0c01a5d",
+      "reference_layer": 9,
+      "residual_energy": 1591.3057804658706,
+      "residual_fraction": 0.9949967022340941,
+      "roles": {
+        "down": {
+          "capture": 0.00526501112706157,
+          "residual_energy": 809.1202541184273,
+          "source_energy": 813.4028290642339
+        },
+        "up": {
+          "capture": 0.0047324273013750195,
+          "residual_energy": 782.1855263474434,
+          "source_energy": 785.9047635065425
+        }
+      },
+      "selected_explained_sse_max": 0.015414857098117152,
+      "selected_explained_sse_mean": 0.009424888169049772,
+      "source_energy": 1599.3075925707763,
+      "unique_reference_neurons": 768
+    },
+    {
+      "capture": 0.004998236308762394,
+      "coefficients_fp64_sha256": "60143da40aeddfb6966ccbd21c43dccd33083fd3ff1a3d9fb7c46cb4d8d34659",
+      "control_seed": 260901519,
+      "elapsed_seconds": 0.0562666249461472,
+      "reference_index_u16_sha256": "d56f56dcfea1e7234f62f9aefe683a3833466d6fbb52b49edd3e30c933088eeb",
+      "reference_layer": 9,
+      "residual_energy": 1591.3138755195996,
+      "residual_fraction": 0.9950017636912376,
+      "roles": {
+        "down": {
+          "capture": 0.00512726059386126,
+          "residual_energy": 809.2323008856848,
+          "source_energy": 813.4028291585648
+        },
+        "up": {
+          "capture": 0.004864697585770461,
+          "residual_energy": 782.0815746339149,
+          "source_energy": 785.9047636402411
+        }
+      },
+      "selected_explained_sse_max": 0.01615482506216775,
+      "selected_explained_sse_mean": 0.009347697594104183,
+      "source_energy": 1599.307592798806,
+      "unique_reference_neurons": 768
+    },
+    {
+      "capture": 0.004995060456105094,
+      "coefficients_fp64_sha256": "c83bbbf3cc7d85ec17e59ebaf698f24f85b056c230d82f27e16c75bbfc6651cb",
+      "control_seed": 260901503,
+      "elapsed_seconds": 0.04714389692526311,
+      "reference_index_u16_sha256": "b461b104757bf89caa8022ed1dfa22ab06eb567430f1e57610301745f1b3375b",
+      "reference_layer": 15,
+      "residual_energy": 1591.3189544579773,
+      "residual_fraction": 0.9950049395438949,
+      "roles": {
+        "down": {
+          "capture": 0.005182545332776178,
+          "residual_energy": 809.1873320288,
+          "source_energy": 813.4028290642339
+        },
+        "up": {
+          "capture": 0.004801015660638397,
+          "residual_energy": 782.1316224291772,
+          "source_energy": 785.9047635065425
+        }
+      },
+      "selected_explained_sse_max": 0.02076739651402043,
+      "selected_explained_sse_mean": 0.009407734014999556,
+      "source_energy": 1599.3075925707763,
+      "unique_reference_neurons": 768
+    },
+    {
+      "capture": 0.00499792877850691,
+      "coefficients_fp64_sha256": "f4b2054b0a631d8535d30bee0f4460df68830c7df3b0d6f2c13c05f0d9f60c6a",
+      "control_seed": 260901519,
+      "elapsed_seconds": 0.05993411806412041,
+      "reference_index_u16_sha256": "d0e061ced7a7b152aacafc6f20523c9281d3207abe216d5f36ec21c91a871294",
+      "reference_layer": 15,
+      "residual_energy": 1591.3143673550721,
+      "residual_fraction": 0.9950020712214931,
+      "roles": {
+        "down": {
+          "capture": 0.005286744866782156,
+          "residual_energy": 809.1025759268847,
+          "source_energy": 813.4028291585648
+        },
+        "up": {
+          "capture": 0.0046990072880434,
+          "residual_energy": 782.2117914281876,
+          "source_energy": 785.9047636402411
+        }
+      },
+      "selected_explained_sse_max": 0.015450886579503696,
+      "selected_explained_sse_mean": 0.009347057123868633,
+      "source_energy": 1599.307592798806,
+      "unique_reference_neurons": 768
+    }
+  ],
+  "source_candidates": [
+    {
+      "capture": 0.005129678392775006,
+      "coefficients_fp64_sha256": "3cf6bd0cd4d6cfb60f3e2b7c2d527e77984d6fe3ebd3b43b6fae09ca09440cd3",
+      "elapsed_seconds": 0.7191842260072008,
+      "reference_index_u16_sha256": "503bd310d73483ddfd087253f17e2491fdfcdae95cb5b78877a978d2b7dc6600",
+      "reference_layer": 9,
+      "residual_energy": 1591.1036591188722,
+      "residual_fraction": 0.994870321607225,
+      "roles": {
+        "down": {
+          "capture": 0.005494567687108209,
+          "residual_energy": 808.9335321878825,
+          "source_energy": 813.4028290891985
+        },
+        "up": {
+          "capture": 0.004752021966640485,
+          "residual_energy": 782.1701269309897,
+          "source_energy": 785.9047636314538
+        }
+      },
+      "selected_explained_sse_max": 0.016548948942154106,
+      "selected_explained_sse_mean": 0.009648193309065673,
+      "source_energy": 1599.3075927206523,
+      "unique_reference_neurons": 768
+    },
+    {
+      "capture": 0.005081699076310953,
+      "coefficients_fp64_sha256": "1dfa546cb5506b1f900293b6272643c4a3a51e0f57fd81c919130643f1ad6e6a",
+      "elapsed_seconds": 0.05853164894506335,
+      "reference_index_u16_sha256": "bed55e8ced8eaf0f3efc2c4b94227e7fe7865b3772f388f27b8792a1d8177756",
+      "reference_layer": 15,
+      "residual_energy": 1591.1803928039867,
+      "residual_fraction": 0.994918300923689,
+      "roles": {
+        "down": {
+          "capture": 0.00537400875382632,
+          "residual_energy": 809.031595165286,
+          "source_energy": 813.4028290891985
+        },
+        "up": {
+          "capture": 0.004779161759241202,
+          "residual_energy": 782.1487976387008,
+          "source_energy": 785.9047636314538
+        }
+      },
+      "selected_explained_sse_max": 0.015924823179442167,
+      "selected_explained_sse_mean": 0.009548279802480143,
+      "source_energy": 1599.3075927206523,
+      "unique_reference_neurons": 768
+    }
+  ],
+  "target": {
+    "expert": 8,
+    "hashes": {
+      "l15e8_down.bf16.bin": "555f77f3c1f51b5c71e34014abf30845babc5954cdd09d260cbe7c6edf1f5d74",
+      "l15e8_up.bf16.bin": "2da3931365283daa62715250389efb7acad9bb44e72f7415e8da6a730317d322"
+    },
+    "layer": 15,
+    "pinned_panel_opened": false
+  }
+}

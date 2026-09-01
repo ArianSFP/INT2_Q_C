@@ -1,0 +1,237 @@
+{
+  "schema": "silwarp_v2_result_independent_audit_v1",
+  "status": "PASS_AUTHENTICATED_HARD_KILL",
+  "audit": {
+    "audited_at_utc": "2026-09-01T05:40:26.7863304Z",
+    "auditor": "/root/qwen_expert_geometry",
+    "independent_parser": "/root/qwen_expert_geometry/silwarp_v2_independent_parse",
+    "candidate_path": "/workspace/INT2__compression/silwarp_candidate_v2_c3f896b9",
+    "run_path": "/workspace/INT2__compression/silwarp_aux_run_v2_c3f896b9_v1",
+    "log_path": "/workspace/INT2__compression/silwarp_aux_run_v2_c3f896b9_v1.log",
+    "method": "Read-only, metadata-only replay of frozen hashes, canonical JSON seals, checkpoint lineage, ZIP member headers, model headers, result arithmetic, and JSONL event inventory.",
+    "access_restrictions": {
+      "candidate_or_run_mutated": false,
+      "checkpoint_numeric_arrays_deserialized": false,
+      "cuda_imported_or_initialized": false,
+      "new_payload_access": false,
+      "qwen_tensor_payload_opened": false
+    },
+    "verifier": {
+      "path": "research/silwarp_v2_result_audit/verify_remote_metadata.py",
+      "sha256": "b37b81bbd906db17408119e327244a44a3380e388b6faed3d0958d3dbd1f8c06",
+      "remote_temporary_copy": "/tmp/silwarp-v2-result-verify.py",
+      "invocation_environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "python_flags": "-B"
+      },
+      "all_pass": true
+    }
+  },
+  "frozen_candidate": {
+    "files": {
+      "PROTOCOL.md": "8438764d4e2d3f272afe40fe38860a42b47406d4dcd4db404107d14352738daf",
+      "gpu_preflight_rtx5090_v2.json": "4c76d310d1f9580e6ce28703e593de7fca92123dd9921384196d0897117cb1c7",
+      "launch_sentinel_v2.json": "75a6a19c7e57cc754e82984700584330ae86af8ea82d99941b7348898a872e8e",
+      "protocol_lock.json": "c3f896b9beaf12c30f49d05d791288f0b32a639385e225628211df06bd8e1dd9",
+      "silwarp_common.py": "09c9091af31871d715e2270254413503157e0035efb217206cd480aacb057ade",
+      "silwarp_gate.py": "c7720dd2557b1009b9947eb80f7e57921f8a77e2399f8848f6ce4ba218696be7",
+      "source_lock.json": "b0dc982e42a22fa960a1436ed5ebdcab1233d0bc2e463972e16dab4315e14042",
+      "test_source_free.py": "33c7cfb1c41b99bd06035687f14f4abadda0d2ce99ad7ee5791e31cb1d76096a"
+    },
+    "canonical_seals": {
+      "launch_sentinel_v2": "8c8f09d6c78d566d48ad1ed0a9a450684b18e7bb19d216506200843f73b3474a",
+      "source_lock": "63a530d2e095ab96228d84400cb4a6bba59e0dc949776da443ccd0789076a188"
+    },
+    "gpu_preflight": {
+      "status": "PASS",
+      "payload_opened": false,
+      "cuda_available": true,
+      "resident_cells_tested": 6,
+      "runtime_binding_matches_result_and_checkpoints": true
+    },
+    "tree_has_no_symlinks": true
+  },
+  "run": {
+    "inventory_is_exact": true,
+    "tree_has_no_symlinks": true,
+    "files": {
+      "checkpoint_000256/checkpoint.json": {
+        "bytes": 53232,
+        "sha256": "0037de00c4c9faa4f2a8e57ebabb6dcb5c094c860ac8f44824ce64277333b8ce"
+      },
+      "checkpoint_000256/state.npz": {
+        "bytes": 17036014,
+        "sha256": "686cbfcc37976272e510aeadf2f421246a94e85bd2af847ce5f3a02eb62132b7"
+      },
+      "checkpoint_000512/checkpoint.json": {
+        "bytes": 105249,
+        "sha256": "4c849972bc63e66ad08601c1bc0b65209836705c51b086258c6687ef5f96c01e"
+      },
+      "checkpoint_000512/state.npz": {
+        "bytes": 17036014,
+        "sha256": "6e65c3ac5b34a17fadf547dbea22aa8a9f40835042a1bff6b3c98ed187a8d109"
+      },
+      "model_seed_26090131_null_a.fp16.bin": {
+        "bytes": 475654,
+        "sha256": "2e78e5847f0322033948845a2feeecbb90f117af72c59c4033f49526db631cf3"
+      },
+      "model_seed_26090131_null_b.fp16.bin": {
+        "bytes": 475654,
+        "sha256": "5f28e871436b1ca10ae302492b5db1008abcffb03c0964967d0c98fb408cb4c1"
+      },
+      "model_seed_26090131_qwen.fp16.bin": {
+        "bytes": 475654,
+        "sha256": "4381807cc593c8391ffc83d69b89de713c5660e839cbacf656895a6455e8fa7b"
+      },
+      "model_seed_26090179_null_a.fp16.bin": {
+        "bytes": 475654,
+        "sha256": "18c4097bbc5108fd41f45bd172d0d8ea724b00828e323e27c445566acff9ceeb"
+      },
+      "model_seed_26090179_null_b.fp16.bin": {
+        "bytes": 475654,
+        "sha256": "31e3bdda21a1c0de5de063d14b516d3f7b901238c5ba92c63e78e7fc63a7dbd3"
+      },
+      "model_seed_26090179_qwen.fp16.bin": {
+        "bytes": 475654,
+        "sha256": "93926d164655bcd78283d1679efb4f06017c3de01f86f155f2805d4b50cd7a58"
+      },
+      "result.json": {
+        "bytes": 120093,
+        "sha256": "c21567d337f6349f31c8c8f0eaa2a544f54a772afceb3cf607bcc10119a84592"
+      }
+    },
+    "external_log": {
+      "bytes": 20094,
+      "sha256": "0fd2599a009ac6c62e783738711e4d3ec494512f9d40fb1fb700b345fe73484c",
+      "json_lines": 101,
+      "events": {
+        "checkpoint": 2,
+        "source_loaded": 98,
+        "terminal": 1
+      },
+      "source_splits": {
+        "calibration": 16,
+        "fit": 82
+      },
+      "checkpoint_updates": [
+        256,
+        512
+      ]
+    },
+    "result": {
+      "schema": "silwarp_auxiliary_result_v2",
+      "decision": "HARD_KILL_FROZEN_SILWARP_CELL_AT_UPDATE_512",
+      "canonical_unsigned_sha256": "dd554db495f247122de1fe628ed40676fbb19b3596f5f537b540eba25f2219bf",
+      "all_1188_floating_values_finite": true,
+      "stopped_early": true,
+      "stop_update": 512,
+      "final_update": 512
+    },
+    "checkpoints": [
+      {
+        "update": 256,
+        "canonical_unsigned_sha256": "4c842e818e9d653d9855949ebb521e46bf514971f7bb1c6f5b498bf88da5b272",
+        "metadata_sha256": "0037de00c4c9faa4f2a8e57ebabb6dcb5c094c860ac8f44824ce64277333b8ce",
+        "state_sha256": "686cbfcc37976272e510aeadf2f421246a94e85bd2af847ce5f3a02eb62132b7",
+        "state_array_count": 216,
+        "history_matches_result_prefix": true
+      },
+      {
+        "update": 512,
+        "canonical_unsigned_sha256": "f40ab3bb3d38442b703ad394431e9461e6e8a673041930634757342a997c0e05",
+        "metadata_sha256": "4c849972bc63e66ad08601c1bc0b65209836705c51b086258c6687ef5f96c01e",
+        "state_sha256": "6e65c3ac5b34a17fadf547dbea22aa8a9f40835042a1bff6b3c98ed187a8d109",
+        "state_array_count": 216,
+        "predecessor_metadata_sha256": "0037de00c4c9faa4f2a8e57ebabb6dcb5c094c860ac8f44824ce64277333b8ce",
+        "predecessor_state_sha256": "686cbfcc37976272e510aeadf2f421246a94e85bd2af847ce5f3a02eb62132b7",
+        "history_matches_result": true
+      }
+    ],
+    "models": {
+      "model_seed_26090131_null_a.fp16.bin": "b7dc41765682b93e22df6ebf2d552cfe6bcb6da7fbbfddf258d1ce1ba6105238",
+      "model_seed_26090131_null_b.fp16.bin": "77eb794f143e250e3b6b67a6290a8cc0d1762c8afc0363bac636541a305418de",
+      "model_seed_26090131_qwen.fp16.bin": "2234d1e62805e7cd843b29366b4e36eb79afb76ce7ab06645058110ddee5ab85",
+      "model_seed_26090179_null_a.fp16.bin": "62e0e537737edb56a1dd69c30140b611ec1ee1bc8ff40398a4574a0c47b19b99",
+      "model_seed_26090179_null_b.fp16.bin": "d61694dae157c96c8b49d98f625a358fd9715f139ffe641e8b4a830ac147558e",
+      "model_seed_26090179_qwen.fp16.bin": "43e09786ae85962ba57276928bf811f50e6c0f08839df74bc627fa4011279eb3"
+    },
+    "model_format": {
+      "header_bytes": 4096,
+      "fp16_parameter_count": 235779,
+      "parameter_payload_bytes": 471558,
+      "total_bytes": 475654,
+      "size_identity_verified": "4096 + 235779 * 2 = 475654"
+    }
+  },
+  "hard_kill": {
+    "rule": "For both seeds, U512 < 0.10 and U512 - U256 < 0.012, where U = s_match_worst + 2 * SE.",
+    "seeds": {
+      "26090131": {
+        "U256": 0.0,
+        "U512": 0.0,
+        "delta": 0.0,
+        "U512_lt_0.10": true,
+        "delta_lt_0.012": true
+      },
+      "26090179": {
+        "U256": 0.0,
+        "U512": 0.0,
+        "delta": 0.0,
+        "U512_lt_0.10": true,
+        "delta_lt_0.012": true
+      }
+    },
+    "support": {
+      "matrix_evaluations": 192,
+      "matrix_evaluations_selecting_identity": 192,
+      "selected_sse_equals_identity_sse": 192,
+      "jackknife_folds": 56,
+      "jackknife_folds_at_zero": 56,
+      "learned_alternatives_strictly_worse": true
+    },
+    "conclusion": "The preregistered hard-kill condition is satisfied exactly for both seeds. No SILWARP cell is promoted to confirmation."
+  },
+  "rate_and_read_ledger": {
+    "physical_bpw_at_128_experts": 2.15643318494161,
+    "cold_read_amplification_at_128_experts": 1.3710448926912395,
+    "target_mse": 0.04025203506677198,
+    "required_s": 0.1673974074587855,
+    "executable_and_result_ledgers_match": true
+  },
+  "access_firewall": {
+    "fit_source_hash_count": 82,
+    "calibration_source_hash_count": 16,
+    "confirmation_source_hash_count": 0,
+    "opened_source_identities_match_source_lock": true,
+    "opened_source_hashes_match_source_lock": true,
+    "result_confirmation_opened": false,
+    "result_confirmation": null,
+    "result_pinned_panel_opened": false,
+    "result_pinned_panel_permitted": false,
+    "sentinel_pinned_panel_authorized": false,
+    "log_confirmation_load_count": 0,
+    "log_contains_confirmation_or_pinned_text": false,
+    "authentication_only_disclosure": "The pre-existing source lock authenticates two Gate confirmation files by full-file hash. The completed run has no evidence of numeric confirmation decoding or scoring."
+  },
+  "verdict": {
+    "internal_consistency": "PASS",
+    "frozen_hashes": "PASS",
+    "checkpoint_chain": "PASS",
+    "artifact_hashes": "PASS",
+    "hard_kill_replay": "PASS",
+    "confirmation_and_pinned_firewall": "PASS_AS_RECORDED",
+    "overall": "The completed SILWARP-v2 auxiliary run is an authenticated, internally consistent hard kill at update 512."
+  },
+  "claim_boundary": [
+    "The GPU preflight receipt is not referenced by the sentinel, checkpoints, or result; this independent receipt roots its hash alongside them.",
+    "The result does not contain the final-checkpoint or adjacent-log hash; this independent receipt roots both after verifying their semantic consistency.",
+    "Artifact-only inspection cannot exclude arbitrary unlogged or out-of-band access. The verified artifacts consistently record confirmation and pinned access as closed.",
+    "Checkpoint state files were streamed for SHA-256 and their ZIP/NPY headers were inspected, but numeric state arrays were not deserialized under the stated access boundary."
+  ],
+  "seal": {
+    "algorithm": "SHA-256",
+    "canonicalization": "UTF-8 JSON with sort_keys=true, separators=(',', ':'), ensure_ascii=true, allow_nan=false, after removing seal.canonical_unsigned_sha256",
+    "canonical_unsigned_sha256": "51e2e809e9221b850c9e169d88a6e4eb4fdf76d7c9f4e8eb945a5c73001d6ddd"
+  }
+}

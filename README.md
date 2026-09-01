@@ -32,6 +32,7 @@ than the final research claim: at its own physical rate it has
 - [Independent source audit](results/qwen/strata_expert_affine_checkpoint/independent_audit.json)
 - [Rate-relative breakthrough search](research/RATE_RELATIVE_BREAKTHROUGH_SEARCH.md)
 - [Post-locality research checkpoint: five independently checked architecture gates](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01.md)
+- [SILWARP, finite-bridge, and ancestry negative-result checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_SILWARP.md)
 
 Verify the source-free compact checkpoint:
 

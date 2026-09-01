@@ -1,0 +1,50 @@
+{
+  "common_sha256": "c852aaf4ae341310a5c5733caafeb4857072ceaeda9a11356a142c6976caa4e6",
+  "counter_replay_exact": true,
+  "cuda_imported": true,
+  "identity_exact": true,
+  "payload_opened": false,
+  "production_feasibility": {
+    "batch_tiles": 512,
+    "final_loss": 0.05073395864492052,
+    "median_step_seconds": 0.012818868970498443,
+    "memory_pool_total_bytes_peak_observed": 40425984,
+    "memory_pool_used_bytes_peak_observed": 17594880,
+    "projected_1536_updates_six_models_seconds": 118.13869643211365,
+    "resident_model_adam_cells": 6,
+    "spec": {
+      "bottleneck": 128,
+      "features": 21,
+      "hidden": 256,
+      "steps": 6,
+      "values": 256
+    },
+    "step_seconds": [
+      0.013053192058578134,
+      0.012764847953803837,
+      0.012818868970498443
+    ],
+    "timed_steps": 3,
+    "total_timed_seconds": 0.038636908982880414,
+    "warmup_steps": 1
+  },
+  "protocol_sha256": "c6b5dffd6934c48707f53f991897d1d6f323c13d8cc7d1e4ab720993ae98d40c",
+  "runner_sha256": "7e01bc6ae9e4b881a24c42ab8f66572d36d74a9f8079226f71e321a91a5b83a2",
+  "runtime_identity": {
+    "compute_capability": "120",
+    "cuda_driver": 13000,
+    "cuda_runtime": 12090,
+    "cupy": "14.2.0",
+    "device_id": 0,
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "device_uuid": "c06e0fe098362f988f100514d085f722",
+    "numpy": "2.1.2",
+    "property_major": 12,
+    "property_minor": 0,
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]"
+  },
+  "schema": "silwarp_gpu_source_free_preflight_v1",
+  "source_lock_sha256": "b0dc982e42a22fa960a1436ed5ebdcab1233d0bc2e463972e16dab4315e14042",
+  "status": "PASS_GPU_SOURCE_FREE_PREFLIGHT",
+  "weighted_loss": 0.05013050939958294
+}

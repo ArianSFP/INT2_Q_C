@@ -1,0 +1,1180 @@
+{
+  "claim_boundary": "Exact integer byte/read arithmetic plus explicitly labelled RD projections; contains no Qwen payload measurement and proves no finite survivor.",
+  "constants": {
+    "entropy_phase_bins": 32,
+    "entropy_table_and_header_bytes": 4352,
+    "expert_header_bytes": 128,
+    "fp16_decoder_bytes": 475654,
+    "ideal_gate_required_s_bpw": 0.1673974074587855,
+    "int8_decoder_proposal_bytes": 243462,
+    "n19_blocks_per_expert": 9,
+    "represented_ideal_mse": 0.05076578709329227,
+    "shaping_gaps_bpw": {
+      "e8_G_0p071682": 0.14597293559419539,
+      "ideal_sphere": 0.0,
+      "leech_G_0p065771": 0.08389329307482823,
+      "polar_n19_0p2dB_bound": 0.03321928094887368,
+      "scalar_z_G_1over12": 0.25461433482006285
+    },
+    "weights_per_expert": 4718592
+  },
+  "schema": "silwarp_finite_bridge_source_free_ledger_v1",
+  "systems": {
+    "fp16_direct_polar_128_experts": {
+      "2.15": {
+        "block_capacity_bytes": 140475,
+        "cap_bytes": 162319564,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1740057,
+        "cold_read_amplification": 1.3721558747090719,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.1434783935546875,
+          "identity_mse": 0.050312207119727406,
+          "rate_removed_for_global_and_headers_bpw": 0.006521606445312411,
+          "reference_mse": 0.04985939119332436,
+          "reference_rate_bpw": 2.15,
+          "required_after_over_identity": 0.8072168932646717,
+          "required_fractional_mse_reduction": 0.19278310673532828,
+          "required_s_bpw": 0.15448586385500723,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": -0.012911543603778275
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1264403,
+        "experts": 128,
+        "global_bytes": 475654,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.1434783935546875,
+        "physical_bpw": 2.1499956713782415,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061286352447505,
+        "total_bytes": 162319238,
+        "unused_cap_bytes": 326
+      },
+      "2.30": {
+        "block_capacity_bytes": 150305,
+        "cap_bytes": 173644185,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1828527,
+        "cold_read_amplification": 1.3478857169104697,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.2934722900390625,
+          "identity_mse": 0.04098622202961297,
+          "rate_removed_for_global_and_headers_bpw": 0.006527709960937322,
+          "reference_mse": 0.04061699741994036,
+          "reference_rate_bpw": 2.3,
+          "required_after_over_identity": 0.8048601019498529,
+          "required_fractional_mse_reduction": 0.1951398980501471,
+          "required_s_bpw": 0.1565950271113477,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": -0.010802380347437801
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1352873,
+        "experts": 128,
+        "global_bytes": 475654,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.2934722900390625,
+        "physical_bpw": 2.2999895678626165,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.0329881748412936,
+        "total_bytes": 173643398,
+        "unused_cap_bytes": 787
+      },
+      "2.50": {
+        "block_capacity_bytes": 163412,
+        "cap_bytes": 188743680,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1946490,
+        "cold_read_amplification": 1.320055134116949,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.49346923828125,
+          "identity_mse": 0.031183212280904437,
+          "rate_removed_for_global_and_headers_bpw": 0.00653076171875,
+          "reference_mse": 0.030902167403153148,
+          "reference_rate_bpw": 2.5,
+          "required_after_over_identity": 0.801728413845102,
+          "required_fractional_mse_reduction": 0.19827158615489804,
+          "required_s_bpw": 0.15940724478646862,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": -0.007990162672316892
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1470836,
+        "experts": 128,
+        "global_bytes": 475654,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.49346923828125,
+        "physical_bpw": 2.499986516104804,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.02500046732056462,
+        "total_bytes": 188742662,
+        "unused_cap_bytes": 1018
+      }
+    },
+    "fp16_direct_polar_6_experts": {
+      "2.15": {
+        "block_capacity_bytes": 132079,
+        "cap_bytes": 7608729,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1664493,
+        "cold_read_amplification": 1.3125729429305024,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.0153656005859375,
+          "identity_mse": 0.06009038085601898,
+          "rate_removed_for_global_and_headers_bpw": 0.1346343994140624,
+          "reference_mse": 0.04985939119332436,
+          "reference_rate_bpw": 2.15,
+          "required_after_over_identity": 0.6758699322400553,
+          "required_fractional_mse_reduction": 0.3241300677599447,
+          "required_s_bpw": 0.28259123052653423,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": 0.11519382306774872
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1188839,
+        "experts": 6,
+        "global_bytes": 475654,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.0153656005859375,
+        "physical_bpw": 2.1499882450810186,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061328163743666,
+        "total_bytes": 7608688,
+        "unused_cap_bytes": 41
+      },
+      "2.30": {
+        "block_capacity_bytes": 141910,
+        "cap_bytes": 8139571,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1752972,
+        "cold_read_amplification": 1.292186483744457,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.165374755859375,
+          "identity_mse": 0.04895085577582761,
+          "rate_removed_for_global_and_headers_bpw": 0.13462524414062482,
+          "reference_mse": 0.04061699741994036,
+          "reference_rate_bpw": 2.3,
+          "required_after_over_identity": 0.6738966281633673,
+          "required_fractional_mse_reduction": 0.32610337183663274,
+          "required_s_bpw": 0.2847003937828748,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": 0.11730298632408931
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1277318,
+        "experts": 6,
+        "global_bytes": 475654,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.165374755859375,
+        "physical_bpw": 2.299997400354456,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.03298781665304152,
+        "total_bytes": 8139562,
+        "unused_cap_bytes": 9
+      },
+      "2.50": {
+        "block_capacity_bytes": 155017,
+        "cap_bytes": 8847360,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1870935,
+        "cold_read_amplification": 1.2688118688781034,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.3653717041015625,
+          "identity_mse": 0.03724287947024483,
+          "rate_removed_for_global_and_headers_bpw": 0.1346282958984375,
+          "reference_mse": 0.030902167403153148,
+          "reference_rate_bpw": 2.5,
+          "required_after_over_identity": 0.671274515265563,
+          "required_fractional_mse_reduction": 0.32872548473443697,
+          "required_s_bpw": 0.2875126114579954,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": 0.12011520399920989
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1395281,
+        "experts": 6,
+        "global_bytes": 475654,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.3653717041015625,
+        "physical_bpw": 2.4999943485966436,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.025000195863482386,
+        "total_bytes": 8847340,
+        "unused_cap_bytes": 20
+      }
+    },
+    "fp16_rdq_p32_128_experts": {
+      "2.15": {
+        "block_capacity_bytes": 140471,
+        "cap_bytes": 162319564,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1744373,
+        "cold_read_amplification": 1.3755615101134628,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.06272181658291259,
+            "max_simulated_gaussian_I_bpw": 1.997444422804242,
+            "required_after_over_identity": 0.6475108127701343,
+            "required_fractional_mse_reduction": 0.35248918722986566,
+            "required_s_bpw": 0.3135119051756667,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.14611449771688118
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.051231156968678054,
+            "max_simulated_gaussian_I_bpw": 2.1434173583984375,
+            "required_after_over_identity": 0.7927413089431344,
+            "required_fractional_mse_reduction": 0.20725869105686556,
+            "required_s_bpw": 0.16753896958147124,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.00014156212268573443
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.057549686092390605,
+            "max_simulated_gaussian_I_bpw": 2.0595240653236093,
+            "required_after_over_identity": 0.7057041869667297,
+            "required_fractional_mse_reduction": 0.29429581303327035,
+            "required_s_bpw": 0.25143226265629953,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.08403485519751402
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.05364560701157959,
+            "max_simulated_gaussian_I_bpw": 2.1101980774495637,
+            "required_after_over_identity": 0.7570620726736218,
+            "required_fractional_mse_reduction": 0.2429379273263782,
+            "required_s_bpw": 0.2007582505303451,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.03336084307155959
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.07291674407209689,
+            "max_simulated_gaussian_I_bpw": 1.8888030235783746,
+            "required_after_over_identity": 0.5569784409718652,
+            "required_fractional_mse_reduction": 0.4430215590281348,
+            "required_s_bpw": 0.42215330440153426,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.25475589694274875
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1264367,
+        "experts": 128,
+        "global_bytes": 480006,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.1434173583984375,
+        "physical_bpw": 2.1499922805362277,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061305443402102,
+        "total_bytes": 162318982,
+        "unused_cap_bytes": 582
+      },
+      "2.30": {
+        "block_capacity_bytes": 150301,
+        "cap_bytes": 173644185,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1832843,
+        "cold_read_amplification": 1.3510692175795807,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.05094637689247777,
+            "max_simulated_gaussian_I_bpw": 2.147438319288617,
+            "required_after_over_identity": 0.6475108127701342,
+            "required_fractional_mse_reduction": 0.3524891872298658,
+            "required_s_bpw": 0.3135119051756668,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1461144977168813
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.041612982113069394,
+            "max_simulated_gaussian_I_bpw": 2.2934112548828125,
+            "required_after_over_identity": 0.7927413089431342,
+            "required_fractional_mse_reduction": 0.20725869105686578,
+            "required_s_bpw": 0.16753896958147144,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.00014156212268592872
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.04674526596070358,
+            "max_simulated_gaussian_I_bpw": 2.2095179618079843,
+            "required_after_over_identity": 0.7057041869667297,
+            "required_fractional_mse_reduction": 0.29429581303327035,
+            "required_s_bpw": 0.25143226265629953,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.08403485519751402
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.04357414154012642,
+            "max_simulated_gaussian_I_bpw": 2.2601919739339387,
+            "required_after_over_identity": 0.7570620726736216,
+            "required_fractional_mse_reduction": 0.24293792732637842,
+            "required_s_bpw": 0.2007582505303453,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.03336084307155979
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.059227301243080274,
+            "max_simulated_gaussian_I_bpw": 2.0387969200627496,
+            "required_after_over_identity": 0.5569784409718651,
+            "required_fractional_mse_reduction": 0.4430215590281349,
+            "required_s_bpw": 0.42215330440153437,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.25475589694274886
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1352837,
+        "experts": 128,
+        "global_bytes": 480006,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.2934112548828125,
+        "physical_bpw": 2.2999861770206027,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.03298832990934186,
+        "total_bytes": 173643142,
+        "unused_cap_bytes": 1043
+      },
+      "2.50": {
+        "block_capacity_bytes": 163409,
+        "cap_bytes": 188743680,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1950815,
+        "cold_read_amplification": 1.3229819478130216,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.03860948035385602,
+            "max_simulated_gaussian_I_bpw": 2.347450526319867,
+            "required_after_over_identity": 0.6475108127701342,
+            "required_fractional_mse_reduction": 0.3524891872298658,
+            "required_s_bpw": 0.3135119051756668,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1461144977168813
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.03153620950810218,
+            "max_simulated_gaussian_I_bpw": 2.4934234619140625,
+            "required_after_over_identity": 0.7927413089431344,
+            "required_fractional_mse_reduction": 0.20725869105686556,
+            "required_s_bpw": 0.16753896958147124,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.00014156212268573443
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.035425687513650064,
+            "max_simulated_gaussian_I_bpw": 2.4095301688392343,
+            "required_after_over_identity": 0.7057041869667297,
+            "required_fractional_mse_reduction": 0.29429581303327035,
+            "required_s_bpw": 0.25143226265629953,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.08403485519751402
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.03302246527324802,
+            "max_simulated_gaussian_I_bpw": 2.4602041809651887,
+            "required_after_over_identity": 0.7570620726736217,
+            "required_fractional_mse_reduction": 0.2429379273263783,
+            "required_s_bpw": 0.2007582505303452,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.033360843071559704
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.04488514126495729,
+            "max_simulated_gaussian_I_bpw": 2.2388091270939996,
+            "required_after_over_identity": 0.5569784409718652,
+            "required_fractional_mse_reduction": 0.4430215590281348,
+            "required_s_bpw": 0.42215330440153426,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.25475589694274875
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1470809,
+        "experts": 128,
+        "global_bytes": 480006,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.4934234619140625,
+        "physical_bpw": 2.4999983840518527,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.025000056004557843,
+        "total_bytes": 188743558,
+        "unused_cap_bytes": 122
+      }
+    },
+    "fp16_rdq_p32_6_experts": {
+      "2.15": {
+        "block_capacity_bytes": 131999,
+        "cap_bytes": 7608729,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1668125,
+        "cold_read_amplification": 1.3154315049048986,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.07503232514717588,
+            "max_simulated_gaussian_I_bpw": 1.868171961866742,
+            "required_after_over_identity": 0.5412703453451342,
+            "required_fractional_mse_reduction": 0.4587296546548658,
+            "required_s_bpw": 0.4427893729033279,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2753919654445424
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.061286375885788405,
+            "max_simulated_gaussian_I_bpw": 2.0141448974609375,
+            "required_after_over_identity": 0.6626721185169299,
+            "required_fractional_mse_reduction": 0.33732788148307014,
+            "required_s_bpw": 0.29681643730913254,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.12941902985034703
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.06884505255510315,
+            "max_simulated_gaussian_I_bpw": 1.9302516043861093,
+            "required_after_over_identity": 0.5899156299133345,
+            "required_fractional_mse_reduction": 0.41008437008666554,
+            "required_s_bpw": 0.3807097303839606,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2133123229251751
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.06417471379658726,
+            "max_simulated_gaussian_I_bpw": 1.980925616512064,
+            "required_after_over_identity": 0.6328469601467864,
+            "required_fractional_mse_reduction": 0.36715303985321357,
+            "required_s_bpw": 0.3300357182580061,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1626383107992206
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.08722822692258386,
+            "max_simulated_gaussian_I_bpw": 1.7595305626408746,
+            "required_after_over_identity": 0.46559209074035895,
+            "required_fractional_mse_reduction": 0.534407909259641,
+            "required_s_bpw": 0.5514307721291953,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.3840333646704098
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1188119,
+        "experts": 6,
+        "global_bytes": 480006,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.0141448974609375,
+        "physical_bpw": 2.149997287326389,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061277254446029,
+        "total_bytes": 7608720,
+        "unused_cap_bytes": 9
+      },
+      "2.30": {
+        "block_capacity_bytes": 141829,
+        "cap_bytes": 8139571,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1756595,
+        "cold_read_amplification": 1.2948606432304528,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.06094570158078559,
+            "max_simulated_gaussian_I_bpw": 2.018165858351117,
+            "required_after_over_identity": 0.5412703453451342,
+            "required_fractional_mse_reduction": 0.4587296546548658,
+            "required_s_bpw": 0.4427893729033279,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2753919654445424
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.04978042688103608,
+            "max_simulated_gaussian_I_bpw": 2.1641387939453125,
+            "required_after_over_identity": 0.66267211851693,
+            "required_fractional_mse_reduction": 0.33732788148307,
+            "required_s_bpw": 0.29681643730913243,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.12941902985034692
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.05592003206760202,
+            "max_simulated_gaussian_I_bpw": 2.0802455008704843,
+            "required_after_over_identity": 0.5899156299133345,
+            "required_fractional_mse_reduction": 0.41008437008666554,
+            "required_s_bpw": 0.3807097303839606,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2133123229251751
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.0521265061212933,
+            "max_simulated_gaussian_I_bpw": 2.1309195129964387,
+            "required_after_over_identity": 0.6328469601467862,
+            "required_fractional_mse_reduction": 0.3671530398532138,
+            "required_s_bpw": 0.3300357182580063,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1626383107992208
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.07085193584254716,
+            "max_simulated_gaussian_I_bpw": 1.9095244591252496,
+            "required_after_over_identity": 0.46559209074035895,
+            "required_fractional_mse_reduction": 0.534407909259641,
+            "required_s_bpw": 0.5514307721291953,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.3840333646704098
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1276589,
+        "experts": 6,
+        "global_bytes": 480006,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.1641387939453125,
+        "physical_bpw": 2.299991183810764,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.03298810094193331,
+        "total_bytes": 8139540,
+        "unused_cap_bytes": 31
+      },
+      "2.50": {
+        "block_capacity_bytes": 154936,
+        "cap_bytes": 8847360,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1874558,
+        "cold_read_amplification": 1.2712720397300064,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.046188400177630574,
+            "max_simulated_gaussian_I_bpw": 2.2181628065933046,
+            "required_after_over_identity": 0.5412703453451343,
+            "required_fractional_mse_reduction": 0.4587296546548657,
+            "required_s_bpw": 0.44278937290332776,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.27539196544454225
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.037726668463186064,
+            "max_simulated_gaussian_I_bpw": 2.3641357421875,
+            "required_after_over_identity": 0.66267211851693,
+            "required_fractional_mse_reduction": 0.33732788148307,
+            "required_s_bpw": 0.29681643730913243,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.12941902985034692
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.0423796387947175,
+            "max_simulated_gaussian_I_bpw": 2.280242449112672,
+            "required_after_over_identity": 0.5899156299133345,
+            "required_fractional_mse_reduction": 0.41008437008666554,
+            "required_s_bpw": 0.3807097303839606,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2133123229251751
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.039504671570653696,
+            "max_simulated_gaussian_I_bpw": 2.330916461238626,
+            "required_after_over_identity": 0.6328469601467863,
+            "required_fractional_mse_reduction": 0.3671530398532137,
+            "required_s_bpw": 0.3300357182580062,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1626383107992207
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.053695953630421595,
+            "max_simulated_gaussian_I_bpw": 2.109521407367437,
+            "required_after_over_identity": 0.465592090740359,
+            "required_fractional_mse_reduction": 0.534407909259641,
+            "required_s_bpw": 0.5514307721291953,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.3840333646704098
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1394552,
+        "experts": 6,
+        "global_bytes": 480006,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.3641357421875,
+        "physical_bpw": 2.4999881320529513,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.02500041131508536,
+        "total_bytes": 8847318,
+        "unused_cap_bytes": 42
+      }
+    },
+    "int8_direct_polar_proposal_128_experts": {
+      "2.15": {
+        "block_capacity_bytes": 140676,
+        "cap_bytes": 162319564,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1509674,
+        "cold_read_amplification": 1.1904875619982869,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.14654541015625,
+          "identity_mse": 0.050098744410936785,
+          "rate_removed_for_global_and_headers_bpw": 0.003454589843749911,
+          "reference_mse": 0.04985939119332436,
+          "reference_rate_bpw": 2.15,
+          "required_after_over_identity": 0.8106658415805836,
+          "required_fractional_mse_reduction": 0.18933415841941637,
+          "required_s_bpw": 0.1514103701484099,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": -0.015987037310375596
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1266212,
+        "experts": 128,
+        "global_bytes": 243462,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.14654541015625,
+        "physical_bpw": 2.1499871942732067,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061334080002263,
+        "total_bytes": 162318598,
+        "unused_cap_bytes": 966
+      },
+      "2.30": {
+        "block_capacity_bytes": 150507,
+        "cap_bytes": 173644185,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1598153,
+        "cold_read_amplification": 1.1780636821642636,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.2965545654296875,
+          "identity_mse": 0.040811463952706385,
+          "rate_removed_for_global_and_headers_bpw": 0.0034454345703123224,
+          "reference_mse": 0.04061699741994036,
+          "reference_rate_bpw": 2.3,
+          "required_after_over_identity": 0.8082989805416249,
+          "required_fractional_mse_reduction": 0.19170101945837514,
+          "required_s_bpw": 0.15351953340475047,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": -0.013877874054035039
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1354691,
+        "experts": 128,
+        "global_bytes": 243462,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.2965545654296875,
+        "physical_bpw": 2.2999963495466442,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.032987864707383845,
+        "total_bytes": 173643910,
+        "unused_cap_bytes": 275
+      },
+      "2.50": {
+        "block_capacity_bytes": 163614,
+        "cap_bytes": 188743680,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1716116,
+        "cold_read_amplification": 1.1638187667650435,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.496551513671875,
+          "identity_mse": 0.031050252521743333,
+          "rate_removed_for_global_and_headers_bpw": 0.003448486328125,
+          "reference_mse": 0.030902167403153148,
+          "reference_rate_bpw": 2.5,
+          "required_after_over_identity": 0.80515391185663,
+          "required_fractional_mse_reduction": 0.19484608814337,
+          "required_s_bpw": 0.1563317510798711,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": -0.011065656378914407
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1472654,
+        "experts": 128,
+        "global_bytes": 243462,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.496551513671875,
+        "physical_bpw": 2.4999932977888317,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.025000232282017833,
+        "total_bytes": 188743174,
+        "unused_cap_bytes": 506
+      }
+    },
+    "int8_direct_polar_proposal_6_experts": {
+      "2.15": {
+        "block_capacity_bytes": 136379,
+        "cap_bytes": 7608729,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1471001,
+        "cold_read_amplification": 1.1599893069719174,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.0809783935546875,
+          "identity_mse": 0.054865850911518764,
+          "rate_removed_for_global_and_headers_bpw": 0.06902160644531241,
+          "reference_mse": 0.04985939119332436,
+          "reference_rate_bpw": 2.15,
+          "required_after_over_identity": 0.7402264557801254,
+          "required_fractional_mse_reduction": 0.25977354421987464,
+          "required_s_bpw": 0.2169806981191268,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": 0.049583290660341284
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1227539,
+        "experts": 6,
+        "global_bytes": 243462,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.0809783935546875,
+        "physical_bpw": 2.149990505642361,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061315436359429,
+        "total_bytes": 7608696,
+        "unused_cap_bytes": 33
+      },
+      "2.30": {
+        "block_capacity_bytes": 146210,
+        "cap_bytes": 8139571,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1559480,
+        "cold_read_amplification": 1.149554583350226,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.230987548828125,
+          "identity_mse": 0.04469484660819549,
+          "rate_removed_for_global_and_headers_bpw": 0.06901245117187482,
+          "reference_mse": 0.04061699741994036,
+          "reference_rate_bpw": 2.3,
+          "required_after_over_identity": 0.7380652531386319,
+          "required_fractional_mse_reduction": 0.2619347468613681,
+          "required_s_bpw": 0.2190898613754673,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": 0.051692453916681785
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1316018,
+        "experts": 6,
+        "global_bytes": 243462,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.230987548828125,
+        "physical_bpw": 2.2999996609157987,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.03298771327587013,
+        "total_bytes": 8139570,
+        "unused_cap_bytes": 1
+      },
+      "2.50": {
+        "block_capacity_bytes": 159317,
+        "cap_bytes": 8847360,
+        "channel_kind": "direct_polar",
+        "cold_bytes_per_expert": 1677443,
+        "cold_read_amplification": 1.13759038301647,
+        "direct_polar_projection": {
+          "base_payload_rate_bpw": 2.4309844970703125,
+          "identity_mse": 0.03400481480432224,
+          "rate_removed_for_global_and_headers_bpw": 0.0690155029296875,
+          "reference_mse": 0.030902167403153148,
+          "reference_rate_bpw": 2.5,
+          "required_after_over_identity": 0.7351934619190341,
+          "required_fractional_mse_reduction": 0.2648065380809659,
+          "required_s_bpw": 0.22190207905058812,
+          "status": "SLOPE_ONLY_PROJECTION_NOT_MEASUREMENT",
+          "surplus_required_over_ideal_gate_s_bpw": 0.05450467159180261
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1433981,
+        "experts": 6,
+        "global_bytes": 243462,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.4309844970703125,
+        "physical_bpw": 2.499996609157986,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.02500011751790529,
+        "total_bytes": 8847348,
+        "unused_cap_bytes": 12
+      }
+    },
+    "int8_rdq_p32_proposal_128_experts": {
+      "2.15": {
+        "block_capacity_bytes": 140673,
+        "cap_bytes": 162319564,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1513999,
+        "cold_read_amplification": 1.193891548232648,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.06245438173521676,
+            "max_simulated_gaussian_I_bpw": 2.000526698194867,
+            "required_after_over_identity": 0.6502773942748973,
+            "required_fractional_mse_reduction": 0.3497226057251027,
+            "required_s_bpw": 0.3104364114690694,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1430390040102839
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.05101271628236457,
+            "max_simulated_gaussian_I_bpw": 2.1464996337890625,
+            "required_after_over_identity": 0.7961284082782033,
+            "required_fractional_mse_reduction": 0.2038715917217967,
+            "required_s_bpw": 0.164463475874874,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": -0.002933931583911503
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.057304304303827186,
+            "max_simulated_gaussian_I_bpw": 2.0626063407142343,
+            "required_after_over_identity": 0.7087194078912165,
+            "required_fractional_mse_reduction": 0.29128059210878354,
+            "required_s_bpw": 0.2483567689497022,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.0809593614909167
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.053416871532884914,
+            "max_simulated_gaussian_I_bpw": 2.1132803528401887,
+            "required_after_over_identity": 0.7602967274267306,
+            "required_fractional_mse_reduction": 0.2397032725732694,
+            "required_s_bpw": 0.19768275682374797,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.030285349364962466
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.07260583983800763,
+            "max_simulated_gaussian_I_bpw": 1.8918852989689996,
+            "required_after_over_identity": 0.5593582101169583,
+            "required_fractional_mse_reduction": 0.4406417898830417,
+            "required_s_bpw": 0.4190778106949369,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2516804032361514
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1266185,
+        "experts": 128,
+        "global_bytes": 247814,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.1464996337890625,
+        "physical_bpw": 2.1499990622202554,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061267261582649,
+        "total_bytes": 162319494,
+        "unused_cap_bytes": 70
+      },
+      "2.30": {
+        "block_capacity_bytes": 150503,
+        "cap_bytes": 173644185,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1602469,
+        "cold_read_amplification": 1.1812469230807594,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.05072915045856408,
+            "max_simulated_gaussian_I_bpw": 2.150520594679242,
+            "required_after_over_identity": 0.6502773942748973,
+            "required_fractional_mse_reduction": 0.3497226057251027,
+            "required_s_bpw": 0.3104364114690694,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1430390040102839
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.04143555164086891,
+            "max_simulated_gaussian_I_bpw": 2.2964935302734375,
+            "required_after_over_identity": 0.7961284082782033,
+            "required_fractional_mse_reduction": 0.2038715917217967,
+            "required_s_bpw": 0.164463475874874,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": -0.002933931583911503
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.04654595232848159,
+            "max_simulated_gaussian_I_bpw": 2.2126002371986093,
+            "required_after_over_identity": 0.7087194078912165,
+            "required_fractional_mse_reduction": 0.29128059210878354,
+            "required_s_bpw": 0.2483567689497022,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.0809593614909167
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.04338834902739114,
+            "max_simulated_gaussian_I_bpw": 2.2632742493245637,
+            "required_after_over_identity": 0.7602967274267308,
+            "required_fractional_mse_reduction": 0.23970327257326918,
+            "required_s_bpw": 0.19768275682374775,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.030285349364962244
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.058974766397147674,
+            "max_simulated_gaussian_I_bpw": 2.0418791954533746,
+            "required_after_over_identity": 0.5593582101169583,
+            "required_fractional_mse_reduction": 0.4406417898830417,
+            "required_s_bpw": 0.4190778106949369,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2516804032361514
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1354655,
+        "experts": 128,
+        "global_bytes": 247814,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.2964935302734375,
+        "physical_bpw": 2.2999929587046304,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.03298801977397426,
+        "total_bytes": 173643654,
+        "unused_cap_bytes": 531
+      },
+      "2.50": {
+        "block_capacity_bytes": 163610,
+        "cap_bytes": 188743680,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1720432,
+        "cold_read_amplification": 1.1667473319449262,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.03844566952675954,
+            "max_simulated_gaussian_I_bpw": 2.3505175429214296,
+            "required_after_over_identity": 0.6502773942748973,
+            "required_fractional_mse_reduction": 0.3497226057251027,
+            "required_s_bpw": 0.3104364114690694,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.1430390040102839
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.031402408884119055,
+            "max_simulated_gaussian_I_bpw": 2.496490478515625,
+            "required_after_over_identity": 0.7961284082782034,
+            "required_fractional_mse_reduction": 0.20387159172179659,
+            "required_s_bpw": 0.16446347587487392,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": -0.0029339315839115865
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.03527538476109066,
+            "max_simulated_gaussian_I_bpw": 2.412597185440797,
+            "required_after_over_identity": 0.7087194078912165,
+            "required_fractional_mse_reduction": 0.29128059210878354,
+            "required_s_bpw": 0.2483567689497022,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.0809593614909167
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.032882358820128264,
+            "max_simulated_gaussian_I_bpw": 2.463271197566751,
+            "required_after_over_identity": 0.7602967274267308,
+            "required_fractional_mse_reduction": 0.23970327257326918,
+            "required_s_bpw": 0.19768275682374775,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.030285349364962244
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.04469470430368332,
+            "max_simulated_gaussian_I_bpw": 2.241876143695562,
+            "required_after_over_identity": 0.5593582101169583,
+            "required_fractional_mse_reduction": 0.4406417898830417,
+            "required_s_bpw": 0.4190778106949369,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.2516804032361514
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1472618,
+        "experts": 128,
+        "global_bytes": 247814,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.496490478515625,
+        "physical_bpw": 2.499989906946818,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.025000349801015016,
+        "total_bytes": 188742918,
+        "unused_cap_bytes": 762
+      }
+    },
+    "int8_rdq_p32_proposal_6_experts": {
+      "2.15": {
+        "block_capacity_bytes": 136299,
+        "cap_bytes": 7608729,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1474633,
+        "cold_read_amplification": 1.1628485076612018,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.06850867487316317,
+            "max_simulated_gaussian_I_bpw": 1.933784754835492,
+            "required_after_over_identity": 0.5928102586629137,
+            "required_fractional_mse_reduction": 0.4071897413370863,
+            "required_s_bpw": 0.37717884049592054,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.20978143303713503
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.05595786071507577,
+            "max_simulated_gaussian_I_bpw": 2.0797576904296875,
+            "required_after_over_identity": 0.7257719425516163,
+            "required_fractional_mse_reduction": 0.27422805744838374,
+            "required_s_bpw": 0.2312059049017251,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.0638084974429396
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.06285935179100491,
+            "max_simulated_gaussian_I_bpw": 1.9958643973548593,
+            "required_after_over_identity": 0.6460875608014929,
+            "required_fractional_mse_reduction": 0.3539124391985071,
+            "required_s_bpw": 0.3150991979765533,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.14770179051776777
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.05859507344261177,
+            "max_simulated_gaussian_I_bpw": 2.0465384094808137,
+            "required_after_over_identity": 0.6931068242791689,
+            "required_fractional_mse_reduction": 0.3068931757208311,
+            "required_s_bpw": 0.2644251858505989,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.09702777839181337
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.0796442096960222,
+            "max_simulated_gaussian_I_bpw": 1.8251433556096246,
+            "required_after_over_identity": 0.5099258995376998,
+            "required_fractional_mse_reduction": 0.49007410046230016,
+            "required_s_bpw": 0.48582023972178795,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.31842283226300244
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1226819,
+        "experts": 6,
+        "global_bytes": 247814,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.0797576904296875,
+        "physical_bpw": 2.1499995478877314,
+        "requested_cap_bpw": 2.15,
+        "target_mse_same_rate": 0.04061264527221332,
+        "total_bytes": 7608728,
+        "unused_cap_bytes": 1
+      },
+      "2.30": {
+        "block_capacity_bytes": 146129,
+        "cap_bytes": 8139571,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1563103,
+        "cold_read_amplification": 1.15222835469488,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.055646806177537464,
+            "max_simulated_gaussian_I_bpw": 2.083778651319867,
+            "required_after_over_identity": 0.5928102586629137,
+            "required_fractional_mse_reduction": 0.4071897413370863,
+            "required_s_bpw": 0.37717884049592054,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.20978143303713503
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.045452291043236254,
+            "max_simulated_gaussian_I_bpw": 2.2297515869140625,
+            "required_after_over_identity": 0.7257719425516164,
+            "required_fractional_mse_reduction": 0.27422805744838363,
+            "required_s_bpw": 0.231205904901725,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.06380849744293948
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.05105809114007443,
+            "max_simulated_gaussian_I_bpw": 2.1458582938392343,
+            "required_after_over_identity": 0.646087560801493,
+            "required_fractional_mse_reduction": 0.353912439198507,
+            "required_s_bpw": 0.31509919797655317,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.14770179051776766
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.0475943915256909,
+            "max_simulated_gaussian_I_bpw": 2.1965323059651887,
+            "required_after_over_identity": 0.6931068242791689,
+            "required_fractional_mse_reduction": 0.3068931757208311,
+            "required_s_bpw": 0.2644251858505989,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.09702777839181337
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.06469174755347397,
+            "max_simulated_gaussian_I_bpw": 1.9751372520939996,
+            "required_after_over_identity": 0.5099258995377,
+            "required_fractional_mse_reduction": 0.49007410046230004,
+            "required_s_bpw": 0.4858202397217878,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.3184228322630023
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1315289,
+        "experts": 6,
+        "global_bytes": 247814,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.2297515869140625,
+        "physical_bpw": 2.2999934443721064,
+        "requested_cap_bpw": 2.3,
+        "target_mse_same_rate": 0.03298799756387101,
+        "total_bytes": 8139548,
+        "unused_cap_bytes": 23
+      },
+      "2.50": {
+        "block_capacity_bytes": 159236,
+        "cap_bytes": 8847360,
+        "channel_kind": "rotated_dither",
+        "cold_bytes_per_expert": 1681066,
+        "cold_read_amplification": 1.1400502253449234,
+        "dither_channel_requirements": {
+          "e8_G_0p071682": {
+            "identity_mse": 0.04217257141470772,
+            "max_simulated_gaussian_I_bpw": 2.2837755995620546,
+            "required_after_over_identity": 0.5928102586629137,
+            "required_fractional_mse_reduction": 0.4071897413370863,
+            "required_s_bpw": 0.37717884049592054,
+            "shaping_or_finite_gap_bpw": 0.14597293559419539,
+            "surplus_required_over_ideal_gate_s_bpw": 0.20978143303713503
+          },
+          "ideal_sphere": {
+            "identity_mse": 0.0344465409904642,
+            "max_simulated_gaussian_I_bpw": 2.42974853515625,
+            "required_after_over_identity": 0.7257719425516164,
+            "required_fractional_mse_reduction": 0.27422805744838363,
+            "required_s_bpw": 0.231205904901725,
+            "shaping_or_finite_gap_bpw": 0.0,
+            "surplus_required_over_ideal_gate_s_bpw": 0.06380849744293948
+          },
+          "leech_G_0p065771": {
+            "identity_mse": 0.038694961001600685,
+            "max_simulated_gaussian_I_bpw": 2.345855242081422,
+            "required_after_over_identity": 0.646087560801493,
+            "required_fractional_mse_reduction": 0.353912439198507,
+            "required_s_bpw": 0.31509919797655317,
+            "shaping_or_finite_gap_bpw": 0.08389329307482823,
+            "surplus_required_over_ideal_gate_s_bpw": 0.14770179051776766
+          },
+          "polar_n19_0p2dB_bound": {
+            "identity_mse": 0.03606995645272059,
+            "max_simulated_gaussian_I_bpw": 2.396529254207376,
+            "required_after_over_identity": 0.6931068242791688,
+            "required_fractional_mse_reduction": 0.3068931757208312,
+            "required_s_bpw": 0.264425185850599,
+            "shaping_or_finite_gap_bpw": 0.03321928094887368,
+            "surplus_required_over_ideal_gate_s_bpw": 0.09702777839181348
+          },
+          "scalar_z_G_1over12": {
+            "identity_mse": 0.04902738415816583,
+            "max_simulated_gaussian_I_bpw": 2.175134200336187,
+            "required_after_over_identity": 0.5099258995376998,
+            "required_fractional_mse_reduction": 0.49007410046230016,
+            "required_s_bpw": 0.48582023972178795,
+            "shaping_or_finite_gap_bpw": 0.25461433482006285,
+            "surplus_required_over_ideal_gate_s_bpw": 0.31842283226300244
+          }
+        },
+        "expert_header_bytes": 128,
+        "expert_local_bytes": 1433252,
+        "experts": 6,
+        "global_bytes": 247814,
+        "n19_streams_per_expert": 9,
+        "payload_bpw": 2.42974853515625,
+        "physical_bpw": 2.499990392614294,
+        "requested_cap_bpw": 2.5,
+        "target_mse_same_rate": 0.025000332968833083,
+        "total_bytes": 8847326,
+        "unused_cap_bytes": 34
+      }
+    }
+  }
+}

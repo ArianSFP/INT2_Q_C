@@ -1,0 +1,11 @@
+{
+  "authorization_phrase": "AUTHORIZE_SILWARP_AUXILIARY_IDEAL_CHANNEL_RUN_V2",
+  "common_sha256": "09c9091af31871d715e2270254413503157e0035efb217206cd480aacb057ade",
+  "confirmation_numeric_access_before_promotion": false,
+  "internal_seal_sha256": "8c8f09d6c78d566d48ad1ed0a9a450684b18e7bb19d216506200843f73b3474a",
+  "pinned_panel_authorized": false,
+  "protocol_sha256": "c3f896b9beaf12c30f49d05d791288f0b32a639385e225628211df06bd8e1dd9",
+  "runner_sha256": "c7720dd2557b1009b9947eb80f7e57921f8a77e2399f8848f6ce4ba218696be7",
+  "schema": "silwarp_launch_sentinel_v2",
+  "source_lock_sha256": "b0dc982e42a22fa960a1436ed5ebdcab1233d0bc2e463972e16dab4315e14042"
+}

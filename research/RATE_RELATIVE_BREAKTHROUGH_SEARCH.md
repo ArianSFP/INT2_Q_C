@@ -101,6 +101,9 @@ operational reconstructions.
 | Haar/Stiefel orientation entropy | charged optimistic `s=-0.00012473`; needed nested `s=0.11356063` | `1.005556x` page-exact | Hard kill before pinned panel |
 | Exact charged sparse-tail peeling | complete `20^18`-grid certificate `F>=0.9798226703`; best exhibited `F=0.9798226742` | `1.039217x` cold | Hard kill for exact lossless tails |
 | Dual model-axis polar oracle | raw `s=0.10875534`, but Gaussian/MP null `s~=0.08955`; generous source-specific upper `0.01928120` | about `1.00034x` | Hard kill; raw gain is mostly Jacobian leakage |
+| SILWARP-v2 implicit hyperdecoder | both fixed seeds select the exact identity bypass at updates 256 and 512; matched gain and cluster SE are exactly zero | `1.371045x` at its auxiliary 2.15643-bpw ledger | Hard kill for the frozen recurrent 256-D cell |
+| Scalar rotated-dither finite bridge | actual N19 payload `2.40758324 bpw`; full FP16-system rate `2.41416770 bpw`, identity MSE `0.05070059` | `1.334465x` | Kill as a bridge; shaping-rate gap needs a 44.46% correction |
+| Dense-to-MoE public ancestry | best free optimal neuron match captures `0.51297%`; matched controls capture `0.50033%`; corrected `0.01264%` | reference granted free in the screen | Scoped hard kill for Qwen3-1.7B layers 9/15 as ancestors |
 
 ### Direct empirical rate-distortion oracle
 
@@ -331,6 +334,42 @@ directly. After the frozen control subtraction, the most favourable new
 Qwen-specific opportunity is `0.01928120447 bpw`; even adding the entire
 previous composite with an invalidly generous zero-overlap assumption reaches
 only `0.06668461734 bpw`, versus `0.16096404744` required.
+
+The [Tier-B initialization search](initialization_anchor_oracle_tier_b/README.md)
+then exhausted 37,748,736 logical expert-major MCore/Philox keys. Its
+max-search-corrected validation capture is `-0.00130083755`; even the corrected
+three-SE upper bound is only `0.00161525995`, versus `0.14568884839` needed
+after the best structural composite. Tier B therefore rejects its sealed
+expert-major ABI, while leaving the projection-major grouped ABI and other
+training frameworks open.
+
+The frozen [SILWARP-v2 gate](implicit_hyperdecoder_gate_v2/PROTOCOL.md) keeps a
+full-rate Gaussian test-channel reconstruction and learns a shared recurrent
+256-D tile correction. Its favorable ideal-channel ledger is
+`2.15643318494 bpw` and `1.37104489269x` cold reads. In the authenticated CuPy
+run, both fixed seeds selected the exact identity bypass at updates 256 and
+512; matched gain and all delete-cluster jackknife errors were exactly zero.
+The independent receipt in [the result audit](silwarp_v2_result_audit/README.md)
+confirms the preregistered hard kill and that confirmation and pinned payloads
+remained closed.
+
+The [finite-channel bridge](finite_channel_bridge/README.md) also emits a real
+source-free `N=2^19` scalar rotated-dither arithmetic stream. Its complete
+FP16-system rate is `2.4141676956 bpw`, cold read is `1.3344648962x`, and
+identity MSE is `0.05070058749`; the same-rate target would require a 44.46%
+nonlinear correction. Scalar dither is therefore dead as the bridge. Direct
+finite POLARIS codewords with list analysis-by-synthesis remain the only
+credible bridge after a future ideal survivor.
+
+The [public dense-ancestry screen](dense_upcycle_reference/README.md) grants
+Qwen3-1.7B-Base layers 9 and 15, rectangular neuron assignment, and separate
+per-role affine fits for free. Its raw capture is only `0.00512967839`; four
+scramble controls leave `0.00012638063`, 1,152.57 times below the composite
+need. An [independent structural audit](structural_reference_audit/README.md)
+supports this scoped two-layer kill. The same audit downgrades a separate
+permutation-aligned pair result to a heuristic single-cell pause: its
+unweighted-cosine Hungarian objective is not a certified raw-MSE upper bound
+and it omits Gate and role-wise coefficients.
 
 ## Relationship to recent PTQ architectures
 

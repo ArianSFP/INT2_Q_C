@@ -1,0 +1,176 @@
+{
+  "schema": "structural_reference_independent_audit_receipt_v1",
+  "package": "research/permutation_aligned_expert_template",
+  "status": "ARTIFACT_PASS_CERTIFIED_EARLY_KILL_BLOCKED",
+  "audit": {
+    "audited_at_utc": "2026-09-01T05:55:22.3704343Z",
+    "auditor": "/root/qwen_expert_geometry",
+    "independent_formula_reviewer": "/root/qwen_expert_geometry/audit_permutation_template",
+    "method": "Source-free static and metadata audit of copied code, result, README, and pre-existing provenance evidence.",
+    "access": {
+      "experiment_files_mutated": false,
+      "model_payload_opened": false,
+      "cuda_imported_or_initialized": false,
+      "parsed_material": "Code, JSON result, README, and pre-existing provenance result/manifest files only"
+    },
+    "verifier": {
+      "path": "research/structural_reference_audit/verify_packages.py",
+      "sha256": "45cc61626e62c425982560b32faa5a1784056956881172bab2b4e431a0642678",
+      "execution": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES= python3 -B verify_packages.py",
+      "artifact_checks_all_pass": true
+    },
+    "receipt_verifier": {
+      "path": "research/structural_reference_audit/verify_receipts.py",
+      "sha256": "3dccde3721dd4c814db73fc5c4320b867fbe2d5b0bd65c1314b4c80c8a3499bc"
+    }
+  },
+  "artifacts": {
+    "README.md": {
+      "bytes": 1816,
+      "sha256": "5ef5a36b22fcfa106bb2e43ae2a1b61ca929863cdf04a0bfd3892b77eb2d7391"
+    },
+    "pair_result.json": {
+      "bytes": 4353,
+      "sha256": "ba22a5ac76a6cc697f63899787ab85396a5b00dc2d764299473ecb59e3a52a52",
+      "canonical_unsigned_sha256": "dd4c06777d79c489dd0f78e94a154ad52554b4f525aaf7cdf8bbce14e559f17a"
+    },
+    "permutation_pair_screen.py": {
+      "bytes": 8472,
+      "sha256": "dc9cc00dfbfb9e378291bb0abf67ff9d5c21d62a0f6c1f3c85df1b947d3dca00"
+    },
+    "unsealed_runtime_extras_excluded": [
+      "__pycache__/permutation_pair_screen.cpython-312.pyc"
+    ]
+  },
+  "binding_limitations": [
+    "The result does not contain the screen-code SHA-256 or seed/code/runtime seal; this independent receipt roots code and result together.",
+    "There is no frozen protocol, source lock, run log, or independent execution receipt in the package. Its canonical result seal proves self-integrity, not preregistration or execution authenticity.",
+    "pinned_panel_opened=false is emitted as a literal. Non-pinned identity is supported by the fixed constants, four hashes, and pre-existing auxiliary provenance, not by an access log."
+  ],
+  "provenance": {
+    "auxiliary_firewall_evidence": {
+      "path": "research/breakthrough_redteam/bisco_protocol_freeze.json",
+      "sha256": "28c2bd6656f31ce7315601d0048d0b43759a7f2859142f745465e8fa0fe83164"
+    },
+    "authenticated_auxiliary_hash_evidence": {
+      "path": "research/bisco_raw_mse_oracle/run_1/bisco_raw_mse_result.json",
+      "sha256": "5904e3887e69cf47ee4a882aeaacceb27823504c1e23eeff6adb4b3360874d92"
+    },
+    "source": {
+      "layer": 15,
+      "reference_expert": 0,
+      "target_expert": 8,
+      "both_non_pinned": true,
+      "declared_pinned_panel_opened": false,
+      "hashes": {
+        "l15e0_down.bf16.bin": "e6b685798fcefec0a74645d5cdafce0582b0c9ca119eb43a84a7186253ba255a",
+        "l15e0_up.bf16.bin": "15e0782da2120ab5369ec88bd3d4ae3a677ed0e63b38b48f2f622a72d1f574b6",
+        "l15e8_down.bf16.bin": "555f77f3c1f51b5c71e34014abf30845babc5954cdd09d260cbe7c6edf1f5d74",
+        "l15e8_up.bf16.bin": "2da3931365283daa62715250389efb7acad9bb44e72f7415e8da6a730317d322"
+      },
+      "hashes_match_preexisting_authenticated_auxiliary_result": true
+    },
+    "pinned_panel_identities": [
+      [5, 18],
+      [12, 7],
+      [18, 20],
+      [28, 83],
+      [36, 76],
+      [45, 41]
+    ]
+  },
+  "formula_audit": {
+    "implemented_assignment": "Hungarian maximization of unweighted squared cosine between concatenated Up/Down neuron vectors.",
+    "reported_metric": "Raw target-energy capture after a through-origin least-squares scalar.",
+    "objective_identity": "explained_SSE(reference_i,target_j) = ||target_j||^2 * cosine_squared(reference_i,target_j)",
+    "material_blocker": "The target-neuron energy factor is omitted from the Hungarian score. Therefore the selected permutation is not generally optimal for the reported raw-MSE capture, and the result is not a certified favorable upper bound.",
+    "source_free_counterexample": {
+      "cosine_squared_matrix_reference_by_target": [
+        [0.6, 0.9],
+        [0.5, 0.0]
+      ],
+      "target_energies": [100.0, 1.0],
+      "unweighted_cosine_prefers_swap": {
+        "identity": 0.6,
+        "swap": 1.4
+      },
+      "raw_explained_sse_prefers_identity": {
+        "identity": 60.0,
+        "swap": 50.9
+      }
+    },
+    "regression_family": {
+      "implemented": "One through-origin scalar per matched neuron, shared across concatenated Up and Down.",
+      "missing_more_favorable_legal_options": [
+        "Separate Up and Down scalars",
+        "Per-role affine intercepts",
+        "Gate role in the shared SwiGLU neuron geometry"
+      ],
+      "consequence": "The tested cell is dominated by broader aligned-template families, so failure is not a converse for them."
+    },
+    "cupy_numerics": {
+      "assignment_dot_accumulation": "FP32 GEMM",
+      "selected_alpha_and_residual_recomputation": "FP64",
+      "assignment_is_exact_for_reported_raw_metric": false
+    },
+    "controls": {
+      "count": 2,
+      "construction": "Independent zero-mean iid Gaussian arrays, scaled to each source array's global raw energy before final FP32 cast.",
+      "selection_correction": "Subtract the maximum control capture.",
+      "limitations": [
+        "Source first moments are not matched",
+        "Per-neuron row-energy distributions are not matched",
+        "Final FP32 cast removes literal exact energy equality",
+        "Two controls provide no calibrated uncertainty bound"
+      ]
+    },
+    "evaluation_scope": {
+      "fit_assignment_and_score_coordinates": "The same complete 4096 coordinates are used to select the permutation, fit alpha, and score residual SSE.",
+      "interpretation": "This outcome-leaky in-sample construction is favorable for an opportunity screen but provides no held-out generalization evidence.",
+      "pair_count": 1,
+      "pair_selection_preregistered": false
+    }
+  },
+  "arithmetic": {
+    "existing_composite_F": 0.936397621,
+    "target_F": 0.8,
+    "required_incremental_capture_formula": "1 - 0.8 / 0.936397621",
+    "required_incremental_capture": 0.14566207553404276,
+    "raw_capture": 0.0029652831936527457,
+    "max_control_capture": 0.0025901852484504495,
+    "control_corrected_capture": 0.0003750979452022962,
+    "raw_shortfall_factor": 49.1224837633841,
+    "corrected_shortfall_factor": 388.33077439409834,
+    "all_reported_role_and_total_energy_identities_replayed": true,
+    "recorded_decision_arithmetic": "PASS"
+  },
+  "corroborating_context_not_used_to_cure_blocker": {
+    "description": "A pre-existing committed oracle reports the broader Gate/Up/Down, energy-objective, role-wise-scalar family across 30 pinned-panel pairs as a hard kill. It corroborates the negative direction but does not make this new package's assignment an upper bound.",
+    "documentation": {
+      "path": "research/NEURON_PERMUTATION_ORACLE.md",
+      "sha256": "535e7efa94d37ef0b1d7aa855971b0eb274bf3f39618933ff8073d169f5204a3"
+    },
+    "code": {
+      "path": "research/neuron_permutation_oracle.py",
+      "sha256": "5d2b91c1fa42b4f8793eaeb69acd3a1b1dd2fb65f8f98197f96d01e470c705dc"
+    },
+    "result": {
+      "path": "research/neuron_permutation_oracle_result.json",
+      "sha256": "3bdff037e24fdd853e569419df8cc769c53d4be04f90c043b35403adbd66bfbd"
+    }
+  },
+  "verdict": {
+    "artifact_integrity": "PASS",
+    "source_firewall": "PASS_NON_PINNED_AS_RECORDED_AND_HASH_AUTHENTICATED",
+    "recorded_threshold_arithmetic": "PASS",
+    "empirical_cell_result": "STRONG_NEGATIVE_EVIDENCE_FOR_THIS_ONE_PAIR_JOINT_SCALAR_CELL",
+    "certified_favorable_upper_screen": "BLOCKED",
+    "broader_early_kill": "NOT_JUSTIFIED_BY_THIS_PACKAGE_ALONE",
+    "reason": "The 49.1x raw and 388.3x corrected gaps are persuasive prioritization evidence, but no full score/energy matrix or alternative bound is retained to limit the correctly weighted optimum, and the model family omits stronger legal role-wise/Gate variants."
+  },
+  "seal": {
+    "algorithm": "SHA-256",
+    "canonicalization": "UTF-8 JSON with sort_keys=true, separators=(',', ':'), ensure_ascii=true, allow_nan=false, after removing seal.canonical_unsigned_sha256",
+    "canonical_unsigned_sha256": "ef4319f2be11050eb379d4ed8d90d1f8a771326f0c257ec6873a5766242ed93a"
+  }
+}

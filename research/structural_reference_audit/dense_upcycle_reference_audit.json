@@ -1,0 +1,143 @@
+{
+  "schema": "structural_reference_independent_audit_receipt_v1",
+  "package": "research/dense_upcycle_reference",
+  "status": "PASS_SCOPED_EARLY_KILL",
+  "audit": {
+    "audited_at_utc": "2026-09-01T05:55:22.3704343Z",
+    "auditor": "/root/qwen_expert_geometry",
+    "method": "Source-free static and metadata audit of copied code, result, manifest, and pre-existing provenance evidence.",
+    "access": {
+      "experiment_files_mutated": false,
+      "model_payload_opened": false,
+      "cuda_imported_or_initialized": false,
+      "parsed_material": "Code, JSON result/manifest, README, and pre-existing provenance result/manifest files only"
+    },
+    "verifier": {
+      "path": "research/structural_reference_audit/verify_packages.py",
+      "sha256": "45cc61626e62c425982560b32faa5a1784056956881172bab2b4e431a0642678",
+      "execution": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES= python3 -B verify_packages.py",
+      "artifact_checks_all_pass": true
+    },
+    "receipt_verifier": {
+      "path": "research/structural_reference_audit/verify_receipts.py",
+      "sha256": "3dccde3721dd4c814db73fc5c4320b867fbe2d5b0bd65c1314b4c80c8a3499bc"
+    }
+  },
+  "artifacts": {
+    "README.md": {
+      "bytes": 2654,
+      "sha256": "eebc010a1661bec033416ba87e55e0d56579c6eec148015365708985b68fb694"
+    },
+    "dense_reference_manifest.json": {
+      "bytes": 2644,
+      "sha256": "f535a729750432dcc2cf5c95c78b32aaa32701f5b99d4ab4f3e63114cef294f6",
+      "canonical_unsigned_sha256": "2c823469190adf2f8c0a709b674c67a60b0a271c70864b4f6fa9adfbced6704f"
+    },
+    "dense_upcycle_pair_result.json": {
+      "bytes": 9344,
+      "sha256": "36e7eb51f3eef51f88e6b08c562905c0e2797949b18327c35e2033363cd5db71",
+      "canonical_unsigned_sha256": "961bd837278e4da69a4661b3567b60cc7b9aeb097c5b14327ee54606c3314c69"
+    },
+    "dense_upcycle_pair_screen.py": {
+      "bytes": 11309,
+      "sha256": "416457ccbd1aeafa3017a9feb4c65f8c7a187041c5d6ae230754e5c74279a7e9"
+    },
+    "fetch_locked_dense_ranges.py": {
+      "bytes": 4302,
+      "sha256": "c771242918ebfc985c52eb1d5495e3390ff4ae97a58c84d63a1458f5f1dadc5e"
+    },
+    "unsealed_runtime_extras_excluded": [
+      "__pycache__/dense_upcycle_pair_screen.cpython-312.pyc",
+      "__pycache__/fetch_locked_dense_ranges.cpython-312.pyc"
+    ]
+  },
+  "binding_limitations": [
+    "The result does not contain the screen-code SHA-256; this independent receipt roots code, result, and manifest together.",
+    "There is no frozen experiment protocol, target source lock, or run log in this package. The result seal proves self-integrity, not preregistration or execution authenticity.",
+    "The public-reference manifest binds declared ranges and hashes, but this restricted audit did not reopen the 100 MiB tensor payloads."
+  ],
+  "provenance": {
+    "auxiliary_firewall_evidence": {
+      "path": "research/breakthrough_redteam/bisco_protocol_freeze.json",
+      "sha256": "28c2bd6656f31ce7315601d0048d0b43759a7f2859142f745465e8fa0fe83164"
+    },
+    "authenticated_auxiliary_hash_evidence": {
+      "path": "research/bisco_raw_mse_oracle/run_1/bisco_raw_mse_result.json",
+      "sha256": "5904e3887e69cf47ee4a882aeaacceb27823504c1e23eeff6adb4b3360874d92"
+    },
+    "target": {
+      "layer": 15,
+      "expert": 8,
+      "non_pinned": true,
+      "declared_pinned_panel_opened": false,
+      "hashes": {
+        "l15e8_down.bf16.bin": "555f77f3c1f51b5c71e34014abf30845babc5954cdd09d260cbe7c6edf1f5d74",
+        "l15e8_up.bf16.bin": "2da3931365283daa62715250389efb7acad9bb44e72f7415e8da6a730317d322"
+      },
+      "hashes_match_preexisting_authenticated_auxiliary_result": true
+    },
+    "pinned_panel_identities": [
+      [5, 18],
+      [12, 7],
+      [18, 20],
+      [28, 83],
+      [36, 76],
+      [45, 41]
+    ],
+    "reference": {
+      "model": "Qwen/Qwen3-1.7B-Base",
+      "revision": "ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+      "layers": [9, 15],
+      "tensors": 4,
+      "bytes_per_tensor": 25165824,
+      "manifest_ranges_lengths_and_content_ranges_consistent": true,
+      "result_tensor_hashes_match_manifest": true,
+      "scope_note": "The audit authenticates the copied manifest and its internal consistency; it did not redownload or open the four tensor payloads."
+    }
+  },
+  "formula_audit": {
+    "implemented_family": "For each target neuron and each role, center target/reference rows, fit an independent affine scalar regression, sum explained SSE across Up/Down, then solve a rectangular one-to-one assignment from 768 target neurons into 6144 reference neurons.",
+    "assignment": {
+      "objective": "sum_role (reference_centered dot target_centered)^2 / reference_centered_energy",
+      "matches_implemented_explained_sse": true,
+      "covers_all_target_neurons": true,
+      "unique_reference_neurons_reported": 768
+    },
+    "regression": {
+      "separate_up_down_alpha_beta_per_target_neuron": true,
+      "favorable_coefficient_rate_charge": 0,
+      "numerical_caveat": "The CuPy dot products are accumulated by FP32 GEMM before FP64 division. Centering subtracts an FP32-rounded mean, while the hashed beta uses the FP64 mean; therefore the README's literal exact-FP64 wording is too strong."
+    },
+    "controls": {
+      "count": 4,
+      "construction": "Two deterministic signed coordinate scrambles for each of two reference layers.",
+      "selection_correction": "Subtract the maximum control capture.",
+      "caveat": "Up and Down are scrambled independently, so target cross-role coordinate structure is not preserved. The uncorrected source result is already 28.4 times short of the requirement."
+    }
+  },
+  "arithmetic": {
+    "existing_composite_F": 0.936397621,
+    "target_F": 0.8,
+    "required_incremental_capture_formula": "1 - 0.8 / 0.936397621",
+    "required_incremental_capture": 0.14566207553404276,
+    "best_raw_capture": 0.005129678392775006,
+    "max_control_capture": 0.005003297765905912,
+    "control_corrected_capture": 0.00012638062686909368,
+    "raw_shortfall_factor": 28.39594695433603,
+    "corrected_shortfall_factor": 1152.5664901545472,
+    "all_reported_role_and_total_energy_identities_replayed": true,
+    "recorded_decision_arithmetic": "PASS"
+  },
+  "verdict": {
+    "artifact_integrity": "PASS",
+    "source_firewall": "PASS_NON_PINNED_AS_RECORDED_AND_HASH_AUTHENTICATED",
+    "scoped_early_kill": "JUSTIFIED_AS_A_FAVORABLE_TWO_LAYER_AFFINE_NEURON_ANCESTOR_GATE",
+    "reason": "Even the free-reference, free-layer-selection, free-assignment, and free-coefficient raw screen supplies only 3.52% of the required capture; control-corrected signal supplies 0.087%.",
+    "claim_boundary": "This does not reject unsearched dense layers, nonlinear or multi-neuron references, private pretraining ancestors, or other training lineages. It supports deprioritizing this specific public two-layer affine neuron-ancestor path."
+  },
+  "seal": {
+    "algorithm": "SHA-256",
+    "canonicalization": "UTF-8 JSON with sort_keys=true, separators=(',', ':'), ensure_ascii=true, allow_nan=false, after removing seal.canonical_unsigned_sha256",
+    "canonical_unsigned_sha256": "c654e8aebf6d6327a9420eb6266ad874232c0c56eb58d9a5db9aaac74cb67c3e"
+  }
+}

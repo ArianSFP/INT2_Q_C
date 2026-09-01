@@ -1,0 +1,79 @@
+{
+  "claim_boundary": "Gaussian synthetic input only; actual arithmetic bytes and decode round trip, but no Qwen result and no finite SILWARP success claim.",
+  "configuration": {
+    "a32": 0.9492341876029968,
+    "alphabet": 65,
+    "delta32": 0.7604363560676575,
+    "device": {
+      "backend": "cupy",
+      "cuda_runtime": 12090,
+      "cupy": "14.2.0",
+      "device": "NVIDIA GeForce RTX 5090"
+    },
+    "log2_n": 19,
+    "n": 524288,
+    "phase_bins": 32,
+    "public_seed": 23443015297225296,
+    "sigma32": 0.21951906383037567,
+    "source_seed": 77280659985477
+  },
+  "distortion": {
+    "empirical_mse": 0.05070058749089918,
+    "empirical_over_represented": 0.9987156782918923,
+    "mathematical_design_mse": 0.050765774772264724,
+    "represented_awgn_identity_mse": 0.05076578709329227
+  },
+  "noise_distribution": {
+    "scalar": {
+      "excess_kurtosis": -0.012319773417512447,
+      "mean": 4.824993289998482e-05,
+      "skew": -0.0027211701694429395,
+      "variance": 0.9998572158354352
+    },
+    "tiles": {
+      "energy_mean": 255.9634478498538,
+      "energy_variance": 515.5244401079892,
+      "gaussian_energy_mean": 256.0,
+      "gaussian_energy_variance": 512.0,
+      "max_abs_offdiag_covariance_first16": 0.06636458004258035,
+      "sliced_ks_max_gaussian_vs_gaussian": 0.04638671875,
+      "sliced_ks_max_vs_gaussian": 0.0419921875,
+      "sliced_w2_mean_gaussian_vs_gaussian": 0.05448195526859506,
+      "sliced_w2_mean_vs_gaussian": 0.05887787260505051,
+      "tile_count": 2048,
+      "tile_values": 256
+    }
+  },
+  "representative_128_expert_system": {
+    "cold_bytes": 1900190,
+    "cold_read_amplification": 1.3344648961587813,
+    "expert_local_bytes": 1420184,
+    "global_decoder_plus_frequency_bytes": 480006,
+    "physical_bpw": 2.41416769557529,
+    "projected_n19_block_bytes_from_observed_rate": 157784,
+    "required_after_over_identity": 0.5553965956760463,
+    "required_fractional_mse_reduction": 0.44460340432395373,
+    "required_s_bpw": 0.4242048803780294,
+    "same_rate_target_mse": 0.02815893369122094,
+    "warning": "nine identical synthetic stream lengths are a planning extrapolation, not a Qwen byte measurement"
+  },
+  "schema": "rotated_dither_source_free_synthetic_gate_v1",
+  "serialization": {
+    "arithmetic_redundancy_bits": 1.038014100631699,
+    "byte_padded_bpw": 2.4075927734375,
+    "decision_count": 3145728,
+    "encode_plus_decode_seconds": 6.543382029980421,
+    "escape_symbols": 0,
+    "ideal_quantized_frequency_bits": 1262265.9619858994,
+    "logical_arithmetic_bits": 1262267,
+    "logical_bpw": 2.407583236694336,
+    "payload_bytes": 157784,
+    "payload_sha256": "0448ce9ec00322d98a58ee304dea0602b0bee6517bd5e1d43ba0566b74e5a56d",
+    "roundtrip_exact": true,
+    "stored_frequency_table_bytes": 4352
+  },
+  "transform": {
+    "parseval_relative_error": 3.4182865272017864e-08,
+    "seconds": 0.2112290250370279
+  }
+}

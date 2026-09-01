@@ -8,6 +8,7 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.toml text eol=lf
+*.sha256 text eol=lf
 *.sh text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf
@@ -39,3 +40,7 @@ bg_codec_bec_encoder.py -text
 strata_v2_klt_mixed_independent_auditor_v1.py -text
 strata_v2_klt_lineage_tamper_tests_v1.py -text
 tools/verify_strata_v2_release.py -text
+
+# Raw research run logs are content-addressed evidence, not mutable text.
+research/implicit_hyperdecoder_gate_v1_failure/*.log -text
+research/implicit_hyperdecoder_gate_v2_result/*.log -text

@@ -1,0 +1,3075 @@
+{
+  "adam_step": 512,
+  "bindings": {
+    "common_sha256": "09c9091af31871d715e2270254413503157e0035efb217206cd480aacb057ade",
+    "launch_sentinel_sha256": "75a6a19c7e57cc754e82984700584330ae86af8ea82d99941b7348898a872e8e",
+    "protocol_sha256": "c3f896b9beaf12c30f49d05d791288f0b32a639385e225628211df06bd8e1dd9",
+    "runner_sha256": "c7720dd2557b1009b9947eb80f7e57921f8a77e2399f8848f6ce4ba218696be7",
+    "runtime_identity": {
+      "compute_capability": "120",
+      "cuda_driver": 13000,
+      "cuda_runtime": 12090,
+      "cupy": "14.2.0",
+      "device_id": 0,
+      "device_name": "NVIDIA GeForce RTX 5090",
+      "device_uuid": "c06e0fe098362f988f100514d085f722",
+      "numpy": "2.1.2",
+      "property_major": 12,
+      "property_minor": 0,
+      "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]"
+    },
+    "source_lock_sha256": "b0dc982e42a22fa960a1436ed5ebdcab1233d0bc2e463972e16dab4315e14042"
+  },
+  "counter_randomness": true,
+  "history": {
+    "26090131": {
+      "256": {
+        "corpora": {
+          "null_a": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0101811587291871,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05082730928119949
+            },
+            "corpus": "null_a",
+            "identity_sse": 799.5712166237951,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.72303142934863,
+                "layer": 10,
+                "learned_sse": 46.863220599405345,
+                "role": "down",
+                "selected_sse": 46.72303142934863,
+                "source_energy": 918.263856416567
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.501867676587054,
+                "layer": 10,
+                "learned_sse": 44.63458371397525,
+                "role": "up",
+                "selected_sse": 44.501867676587054,
+                "source_energy": 875.8528753146528
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.67589583227418,
+                "layer": 10,
+                "learned_sse": 45.81413212321588,
+                "role": "down",
+                "selected_sse": 45.67589583227418,
+                "source_energy": 898.6533292159442
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.195232765160725,
+                "layer": 10,
+                "learned_sse": 43.322494393606064,
+                "role": "up",
+                "selected_sse": 43.195232765160725,
+                "source_energy": 849.9947338756173
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.726872037005855,
+                "layer": 22,
+                "learned_sse": 48.87659480448472,
+                "role": "down",
+                "selected_sse": 48.726872037005855,
+                "source_energy": 959.3052022363996
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.86126265045739,
+                "layer": 22,
+                "learned_sse": 50.01467643904301,
+                "role": "up",
+                "selected_sse": 49.86126265045739,
+                "source_energy": 978.3655703421688
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.079565714050126,
+                "layer": 22,
+                "learned_sse": 47.22080766864914,
+                "role": "down",
+                "selected_sse": 47.079565714050126,
+                "source_energy": 925.2357029523708
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.38507606637212,
+                "layer": 22,
+                "learned_sse": 47.524380445652696,
+                "role": "up",
+                "selected_sse": 47.38507606637212,
+                "source_energy": 932.2360100951045
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01735465816667,
+                "layer": 34,
+                "learned_sse": 50.16389784596139,
+                "role": "down",
+                "selected_sse": 50.01735465816667,
+                "source_energy": 984.3610406275841
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.32874968996634,
+                "layer": 34,
+                "learned_sse": 52.4828327143169,
+                "role": "up",
+                "selected_sse": 52.32874968996634,
+                "source_energy": 1030.5211013182995
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.99836286221079,
+                "layer": 34,
+                "learned_sse": 49.151506939389144,
+                "role": "down",
+                "selected_sse": 48.99836286221079,
+                "source_energy": 964.053484819829
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.361331582234236,
+                "layer": 34,
+                "learned_sse": 50.5026906287709,
+                "role": "up",
+                "selected_sse": 50.361331582234236,
+                "source_energy": 991.5787798818205
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.47112711917448,
+                "layer": 46,
+                "learned_sse": 55.62443094574853,
+                "role": "down",
+                "selected_sse": 55.47112711917448,
+                "source_energy": 1092.867963574827
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.9670485977967,
+                "layer": 46,
+                "learned_sse": 57.118572206029725,
+                "role": "up",
+                "selected_sse": 56.9670485977967,
+                "source_energy": 1119.5993592962618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.62747749668748,
+                "layer": 46,
+                "learned_sse": 54.766172341767245,
+                "role": "down",
+                "selected_sse": 54.62747749668748,
+                "source_energy": 1075.225433908404
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.65096044630233,
+                "layer": 46,
+                "learned_sse": 57.80477190675596,
+                "role": "up",
+                "selected_sse": 57.65096044630233,
+                "source_energy": 1135.0196242332458
+              }
+            ],
+            "selected_sse": 799.5712166237951,
+            "source_energy": 15731.134068109099,
+            "split": "calibration"
+          },
+          "null_b": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0091520609353681,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05077553018059456
+            },
+            "corpus": "null_b",
+            "identity_sse": 798.7566726502527,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.630073229176595,
+                "layer": 10,
+                "learned_sse": 46.771345374318024,
+                "role": "down",
+                "selected_sse": 46.630073229176595,
+                "source_energy": 918.263856416568
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.48451243564931,
+                "layer": 10,
+                "learned_sse": 44.61401316113682,
+                "role": "up",
+                "selected_sse": 44.48451243564931,
+                "source_energy": 875.8528753146527
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.708583798690555,
+                "layer": 10,
+                "learned_sse": 45.844298915482426,
+                "role": "down",
+                "selected_sse": 45.708583798690555,
+                "source_energy": 898.6533292159435
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.09447516798022,
+                "layer": 10,
+                "learned_sse": 43.21637521677792,
+                "role": "up",
+                "selected_sse": 43.09447516798022,
+                "source_energy": 849.994733875618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.76419745246461,
+                "layer": 22,
+                "learned_sse": 48.91041961463486,
+                "role": "down",
+                "selected_sse": 48.76419745246461,
+                "source_energy": 959.3052022363986
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.58922999937528,
+                "layer": 22,
+                "learned_sse": 49.73626319068924,
+                "role": "up",
+                "selected_sse": 49.58922999937528,
+                "source_energy": 978.3655703421686
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.01529794281993,
+                "layer": 22,
+                "learned_sse": 47.16003990928526,
+                "role": "down",
+                "selected_sse": 47.01529794281993,
+                "source_energy": 925.2357029523696
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.30487112227086,
+                "layer": 22,
+                "learned_sse": 47.43655459687533,
+                "role": "up",
+                "selected_sse": 47.30487112227086,
+                "source_energy": 932.2360100951043
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.123254869268244,
+                "layer": 34,
+                "learned_sse": 50.26797109679038,
+                "role": "down",
+                "selected_sse": 50.123254869268244,
+                "source_energy": 984.3610406275832
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.26098777786897,
+                "layer": 34,
+                "learned_sse": 52.412269542592924,
+                "role": "up",
+                "selected_sse": 52.26098777786897,
+                "source_energy": 1030.5211013182998
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.93298874718437,
+                "layer": 34,
+                "learned_sse": 49.07498312291017,
+                "role": "down",
+                "selected_sse": 48.93298874718437,
+                "source_energy": 964.0534848198295
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.32619662768175,
+                "layer": 34,
+                "learned_sse": 50.48038451812804,
+                "role": "up",
+                "selected_sse": 50.32619662768175,
+                "source_energy": 991.5787798818199
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.527390849931955,
+                "layer": 46,
+                "learned_sse": 55.68090898669237,
+                "role": "down",
+                "selected_sse": 55.527390849931955,
+                "source_energy": 1092.8679635748272
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.79265502307781,
+                "layer": 46,
+                "learned_sse": 56.941251157085546,
+                "role": "up",
+                "selected_sse": 56.79265502307781,
+                "source_energy": 1119.5993592962632
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.55224775845623,
+                "layer": 46,
+                "learned_sse": 54.697008701851,
+                "role": "down",
+                "selected_sse": 54.55224775845623,
+                "source_energy": 1075.2254339084036
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.649709848355876,
+                "layer": 46,
+                "learned_sse": 57.80704234839031,
+                "role": "up",
+                "selected_sse": 57.649709848355876,
+                "source_energy": 1135.0196242332456
+              }
+            ],
+            "selected_sse": 798.7566726502527,
+            "source_energy": 15731.134068109095,
+            "split": "calibration"
+          },
+          "qwen": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0099716531900125,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.050816768000812564
+            },
+            "corpus": "qwen",
+            "identity_sse": 799.3949833577926,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.68688324418128,
+                "layer": 10,
+                "learned_sse": 46.834529861311275,
+                "role": "down",
+                "selected_sse": 46.68688324418128,
+                "source_energy": 918.4541230220003
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.57440512837024,
+                "layer": 10,
+                "learned_sse": 44.70479724068873,
+                "role": "up",
+                "selected_sse": 44.57440512837024,
+                "source_energy": 875.8894784731015
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.69910895779069,
+                "layer": 10,
+                "learned_sse": 45.83728154740685,
+                "role": "down",
+                "selected_sse": 45.69910895779069,
+                "source_energy": 898.6749701896775
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.20642545987743,
+                "layer": 10,
+                "learned_sse": 43.342295970135034,
+                "role": "up",
+                "selected_sse": 43.20642545987743,
+                "source_energy": 850.2242820027224
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.71865402496676,
+                "layer": 22,
+                "learned_sse": 48.87220053872116,
+                "role": "down",
+                "selected_sse": 48.71865402496676,
+                "source_energy": 959.4025349024902
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.669725120028176,
+                "layer": 22,
+                "learned_sse": 49.827704665475025,
+                "role": "up",
+                "selected_sse": 49.669725120028176,
+                "source_energy": 978.6991036492852
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.02261204449786,
+                "layer": 22,
+                "learned_sse": 47.16363022136815,
+                "role": "down",
+                "selected_sse": 47.02261204449786,
+                "source_energy": 924.768677505306
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.43742975355101,
+                "layer": 22,
+                "learned_sse": 47.57773643804048,
+                "role": "up",
+                "selected_sse": 47.43742975355101,
+                "source_energy": 932.6799627185518
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01151828874084,
+                "layer": 34,
+                "learned_sse": 50.16085293774467,
+                "role": "down",
+                "selected_sse": 50.01151828874084,
+                "source_energy": 983.788595487752
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.31917381856217,
+                "layer": 34,
+                "learned_sse": 52.47618790811503,
+                "role": "up",
+                "selected_sse": 52.31917381856217,
+                "source_energy": 1030.4940691324916
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.95126951108037,
+                "layer": 34,
+                "learned_sse": 49.091055765157286,
+                "role": "down",
+                "selected_sse": 48.95126951108037,
+                "source_energy": 964.2463709183354
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.433885197671536,
+                "layer": 34,
+                "learned_sse": 50.57956270482443,
+                "role": "up",
+                "selected_sse": 50.433885197671536,
+                "source_energy": 991.5870386021487
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.53436675881725,
+                "layer": 46,
+                "learned_sse": 55.69142916285315,
+                "role": "down",
+                "selected_sse": 55.53436675881725,
+                "source_energy": 1092.5942923296109
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.87390746443648,
+                "layer": 46,
+                "learned_sse": 57.034914864022774,
+                "role": "up",
+                "selected_sse": 56.87390746443648,
+                "source_energy": 1118.9942573004566
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.59903629174306,
+                "layer": 46,
+                "learned_sse": 54.750088526197004,
+                "role": "down",
+                "selected_sse": 54.59903629174306,
+                "source_energy": 1075.2244172987516
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.656582293477676,
+                "layer": 46,
+                "learned_sse": 57.81810099607808,
+                "role": "up",
+                "selected_sse": 57.656582293477676,
+                "source_energy": 1135.2071005409864
+              }
+            ],
+            "selected_sse": 799.3949833577926,
+            "source_energy": 15730.929274073673,
+            "split": "calibration"
+          }
+        },
+        "matched": {
+          "cluster_se": 0.0,
+          "cluster_se_by_dimension": {
+            "expert": 0.0,
+            "layer": 0.0,
+            "pair": 0.0
+          },
+          "jackknife_folds": {
+            "expert": [
+              {
+                "left_out": 15,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 87,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "layer": [
+              {
+                "left_out": 10,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 22,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 34,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 46,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "pair": [
+              {
+                "left_out": [
+                  10,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  10,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ]
+          },
+          "qwen_group_s": {
+            "expert": {
+              "15": -0.0,
+              "87": -0.0
+            },
+            "layer": {
+              "10": -0.0,
+              "22": -0.0,
+              "34": -0.0,
+              "46": -0.0
+            },
+            "pair": {
+              "10,15": -0.0,
+              "10,87": -0.0,
+              "22,15": -0.0,
+              "22,87": -0.0,
+              "34,15": -0.0,
+              "34,87": -0.0,
+              "46,15": -0.0,
+              "46,87": -0.0
+            }
+          },
+          "s_by_corpus": {
+            "null_a": -0.0,
+            "null_b": -0.0,
+            "qwen": -0.0
+          },
+          "s_match_worst": 0.0,
+          "worst_control": "null_a"
+        },
+        "models": {
+          "null_a": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "f9af37d7d6cb29bf52a06c1e765431d92e689011bbfbd7e42b15bcadc18fc71b",
+            "sha256": "de9a7c0f326049158372b5ae12a3313704f09cdd16432df342069282055dfca3"
+          },
+          "null_b": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "35455195b86650bed8c1cef5affba2c548fce8ec8b4f11574f3b7b9814f34d37",
+            "sha256": "7d6f1cfa3fd738969c083c5c6ecf871ca111543c7e9a18aeb03997cd4ee1fa6e"
+          },
+          "qwen": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "4ffde52f60ceaecdcee40462e6714ba4bb11ab93161f1f9868f696d9aef83f82",
+            "sha256": "256224045638db50a16b823068aafe4919ed71bdd1fa9643c9f93533073ea70b"
+          }
+        },
+        "split": "calibration",
+        "training_seed": 26090131,
+        "update": 256
+      },
+      "512": {
+        "corpora": {
+          "null_a": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0101811587291871,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05082730928119949
+            },
+            "corpus": "null_a",
+            "identity_sse": 799.5712166237951,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.72303142934863,
+                "layer": 10,
+                "learned_sse": 46.79973701698308,
+                "role": "down",
+                "selected_sse": 46.72303142934863,
+                "source_energy": 918.263856416567
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.501867676587054,
+                "layer": 10,
+                "learned_sse": 44.58047086957286,
+                "role": "up",
+                "selected_sse": 44.501867676587054,
+                "source_energy": 875.8528753146528
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.67589583227418,
+                "layer": 10,
+                "learned_sse": 45.75012829606799,
+                "role": "down",
+                "selected_sse": 45.67589583227418,
+                "source_energy": 898.6533292159442
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.195232765160725,
+                "layer": 10,
+                "learned_sse": 43.260850091337865,
+                "role": "up",
+                "selected_sse": 43.195232765160725,
+                "source_energy": 849.9947338756173
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.726872037005855,
+                "layer": 22,
+                "learned_sse": 48.808755117732396,
+                "role": "down",
+                "selected_sse": 48.726872037005855,
+                "source_energy": 959.3052022363996
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.86126265045739,
+                "layer": 22,
+                "learned_sse": 49.93971583324617,
+                "role": "up",
+                "selected_sse": 49.86126265045739,
+                "source_energy": 978.3655703421688
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.079565714050126,
+                "layer": 22,
+                "learned_sse": 47.16038278775107,
+                "role": "down",
+                "selected_sse": 47.079565714050126,
+                "source_energy": 925.2357029523708
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.38507606637212,
+                "layer": 22,
+                "learned_sse": 47.46517218215079,
+                "role": "up",
+                "selected_sse": 47.38507606637212,
+                "source_energy": 932.2360100951045
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01735465816667,
+                "layer": 34,
+                "learned_sse": 50.09911185057948,
+                "role": "down",
+                "selected_sse": 50.01735465816667,
+                "source_energy": 984.3610406275841
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.32874968996634,
+                "layer": 34,
+                "learned_sse": 52.41648130805993,
+                "role": "up",
+                "selected_sse": 52.32874968996634,
+                "source_energy": 1030.5211013182995
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.99836286221079,
+                "layer": 34,
+                "learned_sse": 49.078335879498184,
+                "role": "down",
+                "selected_sse": 48.99836286221079,
+                "source_energy": 964.053484819829
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.361331582234236,
+                "layer": 34,
+                "learned_sse": 50.44335923807373,
+                "role": "up",
+                "selected_sse": 50.361331582234236,
+                "source_energy": 991.5787798818205
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.47112711917448,
+                "layer": 46,
+                "learned_sse": 55.55146031668806,
+                "role": "down",
+                "selected_sse": 55.47112711917448,
+                "source_energy": 1092.867963574827
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.9670485977967,
+                "layer": 46,
+                "learned_sse": 57.05273050433724,
+                "role": "up",
+                "selected_sse": 56.9670485977967,
+                "source_energy": 1119.5993592962618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.62747749668748,
+                "layer": 46,
+                "learned_sse": 54.70352918285726,
+                "role": "down",
+                "selected_sse": 54.62747749668748,
+                "source_energy": 1075.225433908404
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.65096044630233,
+                "layer": 46,
+                "learned_sse": 57.731552792829085,
+                "role": "up",
+                "selected_sse": 57.65096044630233,
+                "source_energy": 1135.0196242332458
+              }
+            ],
+            "selected_sse": 799.5712166237951,
+            "source_energy": 15731.134068109099,
+            "split": "calibration"
+          },
+          "null_b": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0091520609353681,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05077553018059456
+            },
+            "corpus": "null_b",
+            "identity_sse": 798.7566726502527,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.630073229176595,
+                "layer": 10,
+                "learned_sse": 46.706190068969086,
+                "role": "down",
+                "selected_sse": 46.630073229176595,
+                "source_energy": 918.263856416568
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.48451243564931,
+                "layer": 10,
+                "learned_sse": 44.55863054980506,
+                "role": "up",
+                "selected_sse": 44.48451243564931,
+                "source_energy": 875.8528753146527
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.708583798690555,
+                "layer": 10,
+                "learned_sse": 45.77939680136171,
+                "role": "down",
+                "selected_sse": 45.708583798690555,
+                "source_energy": 898.6533292159435
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.09447516798022,
+                "layer": 10,
+                "learned_sse": 43.16341653143531,
+                "role": "up",
+                "selected_sse": 43.09447516798022,
+                "source_energy": 849.994733875618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.76419745246461,
+                "layer": 22,
+                "learned_sse": 48.845403768989264,
+                "role": "down",
+                "selected_sse": 48.76419745246461,
+                "source_energy": 959.3052022363986
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.58922999937528,
+                "layer": 22,
+                "learned_sse": 49.67401330847843,
+                "role": "up",
+                "selected_sse": 49.58922999937528,
+                "source_energy": 978.3655703421686
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.01529794281993,
+                "layer": 22,
+                "learned_sse": 47.09129962236511,
+                "role": "down",
+                "selected_sse": 47.01529794281993,
+                "source_energy": 925.2357029523696
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.30487112227086,
+                "layer": 22,
+                "learned_sse": 47.388510296062165,
+                "role": "up",
+                "selected_sse": 47.30487112227086,
+                "source_energy": 932.2360100951043
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.123254869268244,
+                "layer": 34,
+                "learned_sse": 50.206490026513784,
+                "role": "down",
+                "selected_sse": 50.123254869268244,
+                "source_energy": 984.3610406275832
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.26098777786897,
+                "layer": 34,
+                "learned_sse": 52.34813292706281,
+                "role": "up",
+                "selected_sse": 52.26098777786897,
+                "source_energy": 1030.5211013182998
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.93298874718437,
+                "layer": 34,
+                "learned_sse": 49.010621932456004,
+                "role": "down",
+                "selected_sse": 48.93298874718437,
+                "source_energy": 964.0534848198295
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.32619662768175,
+                "layer": 34,
+                "learned_sse": 50.410540200186034,
+                "role": "up",
+                "selected_sse": 50.32619662768175,
+                "source_energy": 991.5787798818199
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.527390849931955,
+                "layer": 46,
+                "learned_sse": 55.605460841697244,
+                "role": "down",
+                "selected_sse": 55.527390849931955,
+                "source_energy": 1092.8679635748272
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.79265502307781,
+                "layer": 46,
+                "learned_sse": 56.87503509935391,
+                "role": "up",
+                "selected_sse": 56.79265502307781,
+                "source_energy": 1119.5993592962632
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.55224775845623,
+                "layer": 46,
+                "learned_sse": 54.63203102204642,
+                "role": "down",
+                "selected_sse": 54.55224775845623,
+                "source_energy": 1075.2254339084036
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.649709848355876,
+                "layer": 46,
+                "learned_sse": 57.72763050502414,
+                "role": "up",
+                "selected_sse": 57.649709848355876,
+                "source_energy": 1135.0196242332456
+              }
+            ],
+            "selected_sse": 798.7566726502527,
+            "source_energy": 15731.134068109095,
+            "split": "calibration"
+          },
+          "qwen": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0099716531900125,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.050816768000812564
+            },
+            "corpus": "qwen",
+            "identity_sse": 799.3949833577926,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.68688324418128,
+                "layer": 10,
+                "learned_sse": 46.76122061949654,
+                "role": "down",
+                "selected_sse": 46.68688324418128,
+                "source_energy": 918.4541230220003
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.57440512837024,
+                "layer": 10,
+                "learned_sse": 44.65066462699465,
+                "role": "up",
+                "selected_sse": 44.57440512837024,
+                "source_energy": 875.8894784731015
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.69910895779069,
+                "layer": 10,
+                "learned_sse": 45.76900661880325,
+                "role": "down",
+                "selected_sse": 45.69910895779069,
+                "source_energy": 898.6749701896775
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.20642545987743,
+                "layer": 10,
+                "learned_sse": 43.27629544408328,
+                "role": "up",
+                "selected_sse": 43.20642545987743,
+                "source_energy": 850.2242820027224
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.71865402496676,
+                "layer": 22,
+                "learned_sse": 48.80301115390392,
+                "role": "down",
+                "selected_sse": 48.71865402496676,
+                "source_energy": 959.4025349024902
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.669725120028176,
+                "layer": 22,
+                "learned_sse": 49.75127544718942,
+                "role": "up",
+                "selected_sse": 49.669725120028176,
+                "source_energy": 978.6991036492852
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.02261204449786,
+                "layer": 22,
+                "learned_sse": 47.100122060497256,
+                "role": "down",
+                "selected_sse": 47.02261204449786,
+                "source_energy": 924.768677505306
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.43742975355101,
+                "layer": 22,
+                "learned_sse": 47.51625048836586,
+                "role": "up",
+                "selected_sse": 47.43742975355101,
+                "source_energy": 932.6799627185518
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01151828874084,
+                "layer": 34,
+                "learned_sse": 50.09221677193434,
+                "role": "down",
+                "selected_sse": 50.01151828874084,
+                "source_energy": 983.788595487752
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.31917381856217,
+                "layer": 34,
+                "learned_sse": 52.40045764866341,
+                "role": "up",
+                "selected_sse": 52.31917381856217,
+                "source_energy": 1030.4940691324916
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.95126951108037,
+                "layer": 34,
+                "learned_sse": 49.02201751601668,
+                "role": "down",
+                "selected_sse": 48.95126951108037,
+                "source_energy": 964.2463709183354
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.433885197671536,
+                "layer": 34,
+                "learned_sse": 50.50941830084186,
+                "role": "up",
+                "selected_sse": 50.433885197671536,
+                "source_energy": 991.5870386021487
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.53436675881725,
+                "layer": 46,
+                "learned_sse": 55.613524852845295,
+                "role": "down",
+                "selected_sse": 55.53436675881725,
+                "source_energy": 1092.5942923296109
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.87390746443648,
+                "layer": 46,
+                "learned_sse": 56.95402180052914,
+                "role": "up",
+                "selected_sse": 56.87390746443648,
+                "source_energy": 1118.9942573004566
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.59903629174306,
+                "layer": 46,
+                "learned_sse": 54.67622547631027,
+                "role": "down",
+                "selected_sse": 54.59903629174306,
+                "source_energy": 1075.2244172987516
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.656582293477676,
+                "layer": 46,
+                "learned_sse": 57.741984877865235,
+                "role": "up",
+                "selected_sse": 57.656582293477676,
+                "source_energy": 1135.2071005409864
+              }
+            ],
+            "selected_sse": 799.3949833577926,
+            "source_energy": 15730.929274073673,
+            "split": "calibration"
+          }
+        },
+        "matched": {
+          "cluster_se": 0.0,
+          "cluster_se_by_dimension": {
+            "expert": 0.0,
+            "layer": 0.0,
+            "pair": 0.0
+          },
+          "jackknife_folds": {
+            "expert": [
+              {
+                "left_out": 15,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 87,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "layer": [
+              {
+                "left_out": 10,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 22,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 34,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 46,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "pair": [
+              {
+                "left_out": [
+                  10,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  10,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ]
+          },
+          "qwen_group_s": {
+            "expert": {
+              "15": -0.0,
+              "87": -0.0
+            },
+            "layer": {
+              "10": -0.0,
+              "22": -0.0,
+              "34": -0.0,
+              "46": -0.0
+            },
+            "pair": {
+              "10,15": -0.0,
+              "10,87": -0.0,
+              "22,15": -0.0,
+              "22,87": -0.0,
+              "34,15": -0.0,
+              "34,87": -0.0,
+              "46,15": -0.0,
+              "46,87": -0.0
+            }
+          },
+          "s_by_corpus": {
+            "null_a": -0.0,
+            "null_b": -0.0,
+            "qwen": -0.0
+          },
+          "s_match_worst": 0.0,
+          "worst_control": "null_a"
+        },
+        "models": {
+          "null_a": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "b7dc41765682b93e22df6ebf2d552cfe6bcb6da7fbbfddf258d1ce1ba6105238",
+            "sha256": "2e78e5847f0322033948845a2feeecbb90f117af72c59c4033f49526db631cf3"
+          },
+          "null_b": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "77eb794f143e250e3b6b67a6290a8cc0d1762c8afc0363bac636541a305418de",
+            "sha256": "5f28e871436b1ca10ae302492b5db1008abcffb03c0964967d0c98fb408cb4c1"
+          },
+          "qwen": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "2234d1e62805e7cd843b29366b4e36eb79afb76ce7ab06645058110ddee5ab85",
+            "sha256": "4381807cc593c8391ffc83d69b89de713c5660e839cbacf656895a6455e8fa7b"
+          }
+        },
+        "split": "calibration",
+        "training_seed": 26090131,
+        "update": 512
+      }
+    },
+    "26090179": {
+      "256": {
+        "corpora": {
+          "null_a": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0101811587291871,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05082730928119949
+            },
+            "corpus": "null_a",
+            "identity_sse": 799.5712166237951,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.72303142934863,
+                "layer": 10,
+                "learned_sse": 46.860407554858455,
+                "role": "down",
+                "selected_sse": 46.72303142934863,
+                "source_energy": 918.263856416567
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.501867676587054,
+                "layer": 10,
+                "learned_sse": 44.63353504507361,
+                "role": "up",
+                "selected_sse": 44.501867676587054,
+                "source_energy": 875.8528753146528
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.67589583227418,
+                "layer": 10,
+                "learned_sse": 45.80880361256477,
+                "role": "down",
+                "selected_sse": 45.67589583227418,
+                "source_energy": 898.6533292159442
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.195232765160725,
+                "layer": 10,
+                "learned_sse": 43.32354423016501,
+                "role": "up",
+                "selected_sse": 43.195232765160725,
+                "source_energy": 849.9947338756173
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.726872037005855,
+                "layer": 22,
+                "learned_sse": 48.88066952752627,
+                "role": "down",
+                "selected_sse": 48.726872037005855,
+                "source_energy": 959.3052022363996
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.86126265045739,
+                "layer": 22,
+                "learned_sse": 50.00465794303281,
+                "role": "up",
+                "selected_sse": 49.86126265045739,
+                "source_energy": 978.3655703421688
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.079565714050126,
+                "layer": 22,
+                "learned_sse": 47.21906717102228,
+                "role": "down",
+                "selected_sse": 47.079565714050126,
+                "source_energy": 925.2357029523708
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.38507606637212,
+                "layer": 22,
+                "learned_sse": 47.53257113182835,
+                "role": "up",
+                "selected_sse": 47.38507606637212,
+                "source_energy": 932.2360100951045
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01735465816667,
+                "layer": 34,
+                "learned_sse": 50.16159016220457,
+                "role": "down",
+                "selected_sse": 50.01735465816667,
+                "source_energy": 984.3610406275841
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.32874968996634,
+                "layer": 34,
+                "learned_sse": 52.48161773027595,
+                "role": "up",
+                "selected_sse": 52.32874968996634,
+                "source_energy": 1030.5211013182995
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.99836286221079,
+                "layer": 34,
+                "learned_sse": 49.141985042157955,
+                "role": "down",
+                "selected_sse": 48.99836286221079,
+                "source_energy": 964.053484819829
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.361331582234236,
+                "layer": 34,
+                "learned_sse": 50.506419527780366,
+                "role": "up",
+                "selected_sse": 50.361331582234236,
+                "source_energy": 991.5787798818205
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.47112711917448,
+                "layer": 46,
+                "learned_sse": 55.62551527696027,
+                "role": "down",
+                "selected_sse": 55.47112711917448,
+                "source_energy": 1092.867963574827
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.9670485977967,
+                "layer": 46,
+                "learned_sse": 57.11975365102648,
+                "role": "up",
+                "selected_sse": 56.9670485977967,
+                "source_energy": 1119.5993592962618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.62747749668748,
+                "layer": 46,
+                "learned_sse": 54.76924902957401,
+                "role": "down",
+                "selected_sse": 54.62747749668748,
+                "source_energy": 1075.225433908404
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.65096044630233,
+                "layer": 46,
+                "learned_sse": 57.808928859628224,
+                "role": "up",
+                "selected_sse": 57.65096044630233,
+                "source_energy": 1135.0196242332458
+              }
+            ],
+            "selected_sse": 799.5712166237951,
+            "source_energy": 15731.134068109099,
+            "split": "calibration"
+          },
+          "null_b": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0091520609353681,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05077553018059456
+            },
+            "corpus": "null_b",
+            "identity_sse": 798.7566726502527,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.630073229176595,
+                "layer": 10,
+                "learned_sse": 46.76805370950372,
+                "role": "down",
+                "selected_sse": 46.630073229176595,
+                "source_energy": 918.263856416568
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.48451243564931,
+                "layer": 10,
+                "learned_sse": 44.61187837663133,
+                "role": "up",
+                "selected_sse": 44.48451243564931,
+                "source_energy": 875.8528753146527
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.708583798690555,
+                "layer": 10,
+                "learned_sse": 45.84537202071726,
+                "role": "down",
+                "selected_sse": 45.708583798690555,
+                "source_energy": 898.6533292159435
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.09447516798022,
+                "layer": 10,
+                "learned_sse": 43.222767764913115,
+                "role": "up",
+                "selected_sse": 43.09447516798022,
+                "source_energy": 849.994733875618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.76419745246461,
+                "layer": 22,
+                "learned_sse": 48.91833310838176,
+                "role": "down",
+                "selected_sse": 48.76419745246461,
+                "source_energy": 959.3052022363986
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.58922999937528,
+                "layer": 22,
+                "learned_sse": 49.73276715742453,
+                "role": "up",
+                "selected_sse": 49.58922999937528,
+                "source_energy": 978.3655703421686
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.01529794281993,
+                "layer": 22,
+                "learned_sse": 47.15972493242308,
+                "role": "down",
+                "selected_sse": 47.01529794281993,
+                "source_energy": 925.2357029523696
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.30487112227086,
+                "layer": 22,
+                "learned_sse": 47.450389362709636,
+                "role": "up",
+                "selected_sse": 47.30487112227086,
+                "source_energy": 932.2360100951043
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.123254869268244,
+                "layer": 34,
+                "learned_sse": 50.27143160576572,
+                "role": "down",
+                "selected_sse": 50.123254869268244,
+                "source_energy": 984.3610406275832
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.26098777786897,
+                "layer": 34,
+                "learned_sse": 52.41438476269164,
+                "role": "up",
+                "selected_sse": 52.26098777786897,
+                "source_energy": 1030.5211013182998
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.93298874718437,
+                "layer": 34,
+                "learned_sse": 49.07526889617372,
+                "role": "down",
+                "selected_sse": 48.93298874718437,
+                "source_energy": 964.0534848198295
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.32619662768175,
+                "layer": 34,
+                "learned_sse": 50.46641414805088,
+                "role": "up",
+                "selected_sse": 50.32619662768175,
+                "source_energy": 991.5787798818199
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.527390849931955,
+                "layer": 46,
+                "learned_sse": 55.68087478565494,
+                "role": "down",
+                "selected_sse": 55.527390849931955,
+                "source_energy": 1092.8679635748272
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.79265502307781,
+                "layer": 46,
+                "learned_sse": 56.95101420282712,
+                "role": "up",
+                "selected_sse": 56.79265502307781,
+                "source_energy": 1119.5993592962632
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.55224775845623,
+                "layer": 46,
+                "learned_sse": 54.69987342479526,
+                "role": "down",
+                "selected_sse": 54.55224775845623,
+                "source_energy": 1075.2254339084036
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.649709848355876,
+                "layer": 46,
+                "learned_sse": 57.808263828402076,
+                "role": "up",
+                "selected_sse": 57.649709848355876,
+                "source_energy": 1135.0196242332456
+              }
+            ],
+            "selected_sse": 798.7566726502527,
+            "source_energy": 15731.134068109095,
+            "split": "calibration"
+          },
+          "qwen": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0099716531900125,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.050816768000812564
+            },
+            "corpus": "qwen",
+            "identity_sse": 799.3949833577926,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.68688324418128,
+                "layer": 10,
+                "learned_sse": 46.82519750555748,
+                "role": "down",
+                "selected_sse": 46.68688324418128,
+                "source_energy": 918.4541230220003
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.57440512837024,
+                "layer": 10,
+                "learned_sse": 44.7045628744954,
+                "role": "up",
+                "selected_sse": 44.57440512837024,
+                "source_energy": 875.8894784731015
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.69910895779069,
+                "layer": 10,
+                "learned_sse": 45.833548386770744,
+                "role": "down",
+                "selected_sse": 45.69910895779069,
+                "source_energy": 898.6749701896775
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.20642545987743,
+                "layer": 10,
+                "learned_sse": 43.33774179931076,
+                "role": "up",
+                "selected_sse": 43.20642545987743,
+                "source_energy": 850.2242820027224
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.71865402496676,
+                "layer": 22,
+                "learned_sse": 48.862692197889565,
+                "role": "down",
+                "selected_sse": 48.71865402496676,
+                "source_energy": 959.4025349024902
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.669725120028176,
+                "layer": 22,
+                "learned_sse": 49.82725004812797,
+                "role": "up",
+                "selected_sse": 49.669725120028176,
+                "source_energy": 978.6991036492852
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.02261204449786,
+                "layer": 22,
+                "learned_sse": 47.169167651189326,
+                "role": "down",
+                "selected_sse": 47.02261204449786,
+                "source_energy": 924.768677505306
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.43742975355101,
+                "layer": 22,
+                "learned_sse": 47.581711562542715,
+                "role": "up",
+                "selected_sse": 47.43742975355101,
+                "source_energy": 932.6799627185518
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01151828874084,
+                "layer": 34,
+                "learned_sse": 50.162257665072104,
+                "role": "down",
+                "selected_sse": 50.01151828874084,
+                "source_energy": 983.788595487752
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.31917381856217,
+                "layer": 34,
+                "learned_sse": 52.47638233835224,
+                "role": "up",
+                "selected_sse": 52.31917381856217,
+                "source_energy": 1030.4940691324916
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.95126951108037,
+                "layer": 34,
+                "learned_sse": 49.08861957304302,
+                "role": "down",
+                "selected_sse": 48.95126951108037,
+                "source_energy": 964.2463709183354
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.433885197671536,
+                "layer": 34,
+                "learned_sse": 50.58620925865861,
+                "role": "up",
+                "selected_sse": 50.433885197671536,
+                "source_energy": 991.5870386021487
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.53436675881725,
+                "layer": 46,
+                "learned_sse": 55.69526691941551,
+                "role": "down",
+                "selected_sse": 55.53436675881725,
+                "source_energy": 1092.5942923296109
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.87390746443648,
+                "layer": 46,
+                "learned_sse": 57.03000887777908,
+                "role": "up",
+                "selected_sse": 56.87390746443648,
+                "source_energy": 1118.9942573004566
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.59903629174306,
+                "layer": 46,
+                "learned_sse": 54.74408265468462,
+                "role": "down",
+                "selected_sse": 54.59903629174306,
+                "source_energy": 1075.2244172987516
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.656582293477676,
+                "layer": 46,
+                "learned_sse": 57.81991776540822,
+                "role": "up",
+                "selected_sse": 57.656582293477676,
+                "source_energy": 1135.2071005409864
+              }
+            ],
+            "selected_sse": 799.3949833577926,
+            "source_energy": 15730.929274073673,
+            "split": "calibration"
+          }
+        },
+        "matched": {
+          "cluster_se": 0.0,
+          "cluster_se_by_dimension": {
+            "expert": 0.0,
+            "layer": 0.0,
+            "pair": 0.0
+          },
+          "jackknife_folds": {
+            "expert": [
+              {
+                "left_out": 15,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 87,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "layer": [
+              {
+                "left_out": 10,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 22,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 34,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 46,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "pair": [
+              {
+                "left_out": [
+                  10,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  10,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ]
+          },
+          "qwen_group_s": {
+            "expert": {
+              "15": -0.0,
+              "87": -0.0
+            },
+            "layer": {
+              "10": -0.0,
+              "22": -0.0,
+              "34": -0.0,
+              "46": -0.0
+            },
+            "pair": {
+              "10,15": -0.0,
+              "10,87": -0.0,
+              "22,15": -0.0,
+              "22,87": -0.0,
+              "34,15": -0.0,
+              "34,87": -0.0,
+              "46,15": -0.0,
+              "46,87": -0.0
+            }
+          },
+          "s_by_corpus": {
+            "null_a": -0.0,
+            "null_b": -0.0,
+            "qwen": -0.0
+          },
+          "s_match_worst": 0.0,
+          "worst_control": "null_a"
+        },
+        "models": {
+          "null_a": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "9a14b34f70c76738899ce9f5fd4bde68cd604346645867e2880ae8b0a9bb53a1",
+            "sha256": "9ed6e40abbb48bb98d34ef6f308571d9bd019d3b9a2cccb327761e669ef6c85c"
+          },
+          "null_b": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "af73e151e020007b7ea9530b70797d4be36d87d5d04e190b7c3f185676d3566e",
+            "sha256": "25f8fdf56643d8c45a7951ff09bfbcbab1bef587efcf57b0de24535c96b629b9"
+          },
+          "qwen": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "dcad4fc1db597dc79a1b6df1c00fdb66171fe83d0f11f9f1baf77e6966133441",
+            "sha256": "d7871637cadcbcabf6e32e29d022b77daf2bdc2cd49c1fff04c46a99d61a5e96"
+          }
+        },
+        "split": "calibration",
+        "training_seed": 26090179,
+        "update": 256
+      },
+      "512": {
+        "corpora": {
+          "null_a": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0101811587291871,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05082730928119949
+            },
+            "corpus": "null_a",
+            "identity_sse": 799.5712166237951,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.72303142934863,
+                "layer": 10,
+                "learned_sse": 46.80343275099204,
+                "role": "down",
+                "selected_sse": 46.72303142934863,
+                "source_energy": 918.263856416567
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.501867676587054,
+                "layer": 10,
+                "learned_sse": 44.57510462407891,
+                "role": "up",
+                "selected_sse": 44.501867676587054,
+                "source_energy": 875.8528753146528
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.67589583227418,
+                "layer": 10,
+                "learned_sse": 45.752093979019705,
+                "role": "down",
+                "selected_sse": 45.67589583227418,
+                "source_energy": 898.6533292159442
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.195232765160725,
+                "layer": 10,
+                "learned_sse": 43.26282826606637,
+                "role": "up",
+                "selected_sse": 43.195232765160725,
+                "source_energy": 849.9947338756173
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.726872037005855,
+                "layer": 22,
+                "learned_sse": 48.81183051395395,
+                "role": "down",
+                "selected_sse": 48.726872037005855,
+                "source_energy": 959.3052022363996
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.86126265045739,
+                "layer": 22,
+                "learned_sse": 49.94810274845764,
+                "role": "up",
+                "selected_sse": 49.86126265045739,
+                "source_energy": 978.3655703421688
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.079565714050126,
+                "layer": 22,
+                "learned_sse": 47.16348092463621,
+                "role": "down",
+                "selected_sse": 47.079565714050126,
+                "source_energy": 925.2357029523708
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.38507606637212,
+                "layer": 22,
+                "learned_sse": 47.46668665715805,
+                "role": "up",
+                "selected_sse": 47.38507606637212,
+                "source_energy": 932.2360100951045
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01735465816667,
+                "layer": 34,
+                "learned_sse": 50.097579885803185,
+                "role": "down",
+                "selected_sse": 50.01735465816667,
+                "source_energy": 984.3610406275841
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.32874968996634,
+                "layer": 34,
+                "learned_sse": 52.41393962821958,
+                "role": "up",
+                "selected_sse": 52.32874968996634,
+                "source_energy": 1030.5211013182995
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.99836286221079,
+                "layer": 34,
+                "learned_sse": 49.07661279813424,
+                "role": "down",
+                "selected_sse": 48.99836286221079,
+                "source_energy": 964.053484819829
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.361331582234236,
+                "layer": 34,
+                "learned_sse": 50.439255298917196,
+                "role": "up",
+                "selected_sse": 50.361331582234236,
+                "source_energy": 991.5787798818205
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.47112711917448,
+                "layer": 46,
+                "learned_sse": 55.55115636375644,
+                "role": "down",
+                "selected_sse": 55.47112711917448,
+                "source_energy": 1092.867963574827
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.9670485977967,
+                "layer": 46,
+                "learned_sse": 57.04884694557942,
+                "role": "up",
+                "selected_sse": 56.9670485977967,
+                "source_energy": 1119.5993592962618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.62747749668748,
+                "layer": 46,
+                "learned_sse": 54.710398741871344,
+                "role": "down",
+                "selected_sse": 54.62747749668748,
+                "source_energy": 1075.225433908404
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.65096044630233,
+                "layer": 46,
+                "learned_sse": 57.72505741697805,
+                "role": "up",
+                "selected_sse": 57.65096044630233,
+                "source_energy": 1135.0196242332458
+              }
+            ],
+            "selected_sse": 799.5712166237951,
+            "source_energy": 15731.134068109099,
+            "split": "calibration"
+          },
+          "null_b": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0091520609353681,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.05077553018059456
+            },
+            "corpus": "null_b",
+            "identity_sse": 798.7566726502527,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.630073229176595,
+                "layer": 10,
+                "learned_sse": 46.70703724369201,
+                "role": "down",
+                "selected_sse": 46.630073229176595,
+                "source_energy": 918.263856416568
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.48451243564931,
+                "layer": 10,
+                "learned_sse": 44.559657249399805,
+                "role": "up",
+                "selected_sse": 44.48451243564931,
+                "source_energy": 875.8528753146527
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.708583798690555,
+                "layer": 10,
+                "learned_sse": 45.78278506109826,
+                "role": "down",
+                "selected_sse": 45.708583798690555,
+                "source_energy": 898.6533292159435
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.09447516798022,
+                "layer": 10,
+                "learned_sse": 43.16567103298901,
+                "role": "up",
+                "selected_sse": 43.09447516798022,
+                "source_energy": 849.994733875618
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.76419745246461,
+                "layer": 22,
+                "learned_sse": 48.84857841964797,
+                "role": "down",
+                "selected_sse": 48.76419745246461,
+                "source_energy": 959.3052022363986
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.58922999937528,
+                "layer": 22,
+                "learned_sse": 49.67367612690706,
+                "role": "up",
+                "selected_sse": 49.58922999937528,
+                "source_energy": 978.3655703421686
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.01529794281993,
+                "layer": 22,
+                "learned_sse": 47.094509726449644,
+                "role": "down",
+                "selected_sse": 47.01529794281993,
+                "source_energy": 925.2357029523696
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.30487112227086,
+                "layer": 22,
+                "learned_sse": 47.38402655350704,
+                "role": "up",
+                "selected_sse": 47.30487112227086,
+                "source_energy": 932.2360100951043
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.123254869268244,
+                "layer": 34,
+                "learned_sse": 50.20016960409708,
+                "role": "down",
+                "selected_sse": 50.123254869268244,
+                "source_energy": 984.3610406275832
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.26098777786897,
+                "layer": 34,
+                "learned_sse": 52.34637318336328,
+                "role": "up",
+                "selected_sse": 52.26098777786897,
+                "source_energy": 1030.5211013182998
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.93298874718437,
+                "layer": 34,
+                "learned_sse": 49.010009164044526,
+                "role": "down",
+                "selected_sse": 48.93298874718437,
+                "source_energy": 964.0534848198295
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.32619662768175,
+                "layer": 34,
+                "learned_sse": 50.40233689208179,
+                "role": "up",
+                "selected_sse": 50.32619662768175,
+                "source_energy": 991.5787798818199
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.527390849931955,
+                "layer": 46,
+                "learned_sse": 55.610455369902134,
+                "role": "down",
+                "selected_sse": 55.527390849931955,
+                "source_energy": 1092.8679635748272
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.79265502307781,
+                "layer": 46,
+                "learned_sse": 56.87610711157521,
+                "role": "up",
+                "selected_sse": 56.79265502307781,
+                "source_energy": 1119.5993592962632
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.55224775845623,
+                "layer": 46,
+                "learned_sse": 54.627306570150594,
+                "role": "down",
+                "selected_sse": 54.55224775845623,
+                "source_energy": 1075.2254339084036
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.649709848355876,
+                "layer": 46,
+                "learned_sse": 57.724010781633076,
+                "role": "up",
+                "selected_sse": 57.649709848355876,
+                "source_energy": 1135.0196242332456
+              }
+            ],
+            "selected_sse": 798.7566726502527,
+            "source_energy": 15731.134068109095,
+            "split": "calibration"
+          },
+          "qwen": {
+            "aggregate": {
+              "F_at_physical_rate": 1.0099716531900125,
+              "relative_to_identity_q": 1.0,
+              "s_absolute_from_identity": -0.0,
+              "source_relative_mse": 0.050816768000812564
+            },
+            "corpus": "qwen",
+            "identity_sse": 799.3949833577926,
+            "matrices": [
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 46.68688324418128,
+                "layer": 10,
+                "learned_sse": 46.760363590842175,
+                "role": "down",
+                "selected_sse": 46.68688324418128,
+                "source_energy": 918.4541230220003
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 44.57440512837024,
+                "layer": 10,
+                "learned_sse": 44.643072645750195,
+                "role": "up",
+                "selected_sse": 44.57440512837024,
+                "source_energy": 875.8894784731015
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 45.69910895779069,
+                "layer": 10,
+                "learned_sse": 45.77332059593966,
+                "role": "down",
+                "selected_sse": 45.69910895779069,
+                "source_energy": 898.6749701896775
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 43.20642545987743,
+                "layer": 10,
+                "learned_sse": 43.27349772980485,
+                "role": "up",
+                "selected_sse": 43.20642545987743,
+                "source_energy": 850.2242820027224
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 48.71865402496676,
+                "layer": 22,
+                "learned_sse": 48.79891946591979,
+                "role": "down",
+                "selected_sse": 48.71865402496676,
+                "source_energy": 959.4025349024902
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 49.669725120028176,
+                "layer": 22,
+                "learned_sse": 49.75372397859926,
+                "role": "up",
+                "selected_sse": 49.669725120028176,
+                "source_energy": 978.6991036492852
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.02261204449786,
+                "layer": 22,
+                "learned_sse": 47.10496247362486,
+                "role": "down",
+                "selected_sse": 47.02261204449786,
+                "source_energy": 924.768677505306
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 47.43742975355101,
+                "layer": 22,
+                "learned_sse": 47.517204676000965,
+                "role": "up",
+                "selected_sse": 47.43742975355101,
+                "source_energy": 932.6799627185518
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 50.01151828874084,
+                "layer": 34,
+                "learned_sse": 50.09113065974052,
+                "role": "down",
+                "selected_sse": 50.01151828874084,
+                "source_energy": 983.788595487752
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 52.31917381856217,
+                "layer": 34,
+                "learned_sse": 52.40223855528016,
+                "role": "up",
+                "selected_sse": 52.31917381856217,
+                "source_energy": 1030.4940691324916
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 48.95126951108037,
+                "layer": 34,
+                "learned_sse": 49.023759104394806,
+                "role": "down",
+                "selected_sse": 48.95126951108037,
+                "source_energy": 964.2463709183354
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 50.433885197671536,
+                "layer": 34,
+                "learned_sse": 50.51013166742466,
+                "role": "up",
+                "selected_sse": 50.433885197671536,
+                "source_energy": 991.5870386021487
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 55.53436675881725,
+                "layer": 46,
+                "learned_sse": 55.611209605954514,
+                "role": "down",
+                "selected_sse": 55.53436675881725,
+                "source_energy": 1092.5942923296109
+              },
+              {
+                "bypass_identity": true,
+                "expert": 15,
+                "identity_sse": 56.87390746443648,
+                "layer": 46,
+                "learned_sse": 56.958406578006475,
+                "role": "up",
+                "selected_sse": 56.87390746443648,
+                "source_energy": 1118.9942573004566
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 54.59903629174306,
+                "layer": 46,
+                "learned_sse": 54.67958940962693,
+                "role": "down",
+                "selected_sse": 54.59903629174306,
+                "source_energy": 1075.2244172987516
+              },
+              {
+                "bypass_identity": true,
+                "expert": 87,
+                "identity_sse": 57.656582293477676,
+                "layer": 46,
+                "learned_sse": 57.733762282433375,
+                "role": "up",
+                "selected_sse": 57.656582293477676,
+                "source_energy": 1135.2071005409864
+              }
+            ],
+            "selected_sse": 799.3949833577926,
+            "source_energy": 15730.929274073673,
+            "split": "calibration"
+          }
+        },
+        "matched": {
+          "cluster_se": 0.0,
+          "cluster_se_by_dimension": {
+            "expert": 0.0,
+            "layer": 0.0,
+            "pair": 0.0
+          },
+          "jackknife_folds": {
+            "expert": [
+              {
+                "left_out": 15,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 87,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "layer": [
+              {
+                "left_out": 10,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 22,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 34,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": 46,
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ],
+            "pair": [
+              {
+                "left_out": [
+                  10,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  10,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  22,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  34,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  15
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              },
+              {
+                "left_out": [
+                  46,
+                  87
+                ],
+                "s_by_corpus": {
+                  "null_a": -0.0,
+                  "null_b": -0.0,
+                  "qwen": -0.0
+                },
+                "s_match_worst": 0.0,
+                "worst_control": "null_a"
+              }
+            ]
+          },
+          "qwen_group_s": {
+            "expert": {
+              "15": -0.0,
+              "87": -0.0
+            },
+            "layer": {
+              "10": -0.0,
+              "22": -0.0,
+              "34": -0.0,
+              "46": -0.0
+            },
+            "pair": {
+              "10,15": -0.0,
+              "10,87": -0.0,
+              "22,15": -0.0,
+              "22,87": -0.0,
+              "34,15": -0.0,
+              "34,87": -0.0,
+              "46,15": -0.0,
+              "46,87": -0.0
+            }
+          },
+          "s_by_corpus": {
+            "null_a": -0.0,
+            "null_b": -0.0,
+            "qwen": -0.0
+          },
+          "s_match_worst": 0.0,
+          "worst_control": "null_a"
+        },
+        "models": {
+          "null_a": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "62e0e537737edb56a1dd69c30140b611ec1ee1bc8ff40398a4574a0c47b19b99",
+            "sha256": "18c4097bbc5108fd41f45bd172d0d8ea724b00828e323e27c445566acff9ceeb"
+          },
+          "null_b": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "d61694dae157c96c8b49d98f625a358fd9715f139ffe641e8b4a830ac147558e",
+            "sha256": "31e3bdda21a1c0de5de063d14b516d3f7b901238c5ba92c63e78e7fc63a7dbd3"
+          },
+          "qwen": {
+            "bytes": 475654,
+            "parameter_payload_sha256": "43e09786ae85962ba57276928bf811f50e6c0f08839df74bc627fa4011279eb3",
+            "sha256": "93926d164655bcd78283d1679efb4f06017c3de01f86f155f2805d4b50cd7a58"
+          }
+        },
+        "split": "calibration",
+        "training_seed": 26090179,
+        "update": 512
+      }
+    }
+  },
+  "internal_seal_sha256": "f40ab3bb3d38442b703ad394431e9461e6e8a673041930634757342a997c0e05",
+  "log_rms_center_fp16": -3.75390625,
+  "log_rms_scale_fp16": 0.1094970703125,
+  "predecessor": {
+    "metadata_sha256": "0037de00c4c9faa4f2a8e57ebabb6dcb5c094c860ac8f44824ce64277333b8ce",
+    "state_sha256": "686cbfcc37976272e510aeadf2f421246a94e85bd2af847ce5f3a02eb62132b7",
+    "update": 256
+  },
+  "schema": "silwarp_training_checkpoint_v2",
+  "state_arrays": 216,
+  "state_file": "state.npz",
+  "state_sha256": "6e65c3ac5b34a17fadf547dbea22aa8a9f40835042a1bff6b3c98ed187a8d109",
+  "update": 512
+}
