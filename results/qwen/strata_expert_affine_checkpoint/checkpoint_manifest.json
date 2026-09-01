@@ -184,11 +184,11 @@
       "sha256": "aa8330b2f8ca8a3068a77da21c17c3314e0d4df63b5827030dbda26a4146b72a"
     },
     {
-      "bytes": 3909,
+      "bytes": 4122,
       "classification": "adversarial_verification_evidence",
       "path": "tamper_report.json",
       "role": "tamper_report",
-      "sha256": "18f85854dbdd6d358b4a725b47a4d136a1b50fab1b7789f4bdef052fbabcef9d"
+      "sha256": "b440260b3183cac12361c92c9ad0ae9d8fae948dd54dca42b48bdde0d18db20e"
     }
   ],
   "schema": "strata_expert_affine_checkpoint_manifest_v1"

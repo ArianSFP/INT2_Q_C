@@ -210,6 +210,38 @@ def audit_plan_unlinked(root: Path) -> None:
     )
 
 
+def source_plan_comprehensively_rebound(root: Path) -> None:
+    """Substitute one source identity and reseal every dependent evidence row.
+
+    This mutation would satisfy the former dynamic plan/audit bindings.  It is
+    rejected only because the verifier now anchors the canonical digest of the
+    eighteen precommitted BF16 source records.
+    """
+    plan_path = role_path(root, "plan")
+    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    rebound_hash = "0" * 64
+    plan["sources"][0]["source_bf16_sha256"] = rebound_hash
+    plan = common.sealed(plan)
+    write_json(plan_path, plan)
+    reseal_file_row(root, "plan")
+
+    summary_path = role_path(root, "summary")
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    summary["plan_lock_sha256"] = plan["lock_sha256"]
+    write_json(summary_path, summary)
+    reseal_file_row(root, "summary")
+
+    audit_path = role_path(root, "independent_audit")
+    audit = json.loads(audit_path.read_text(encoding="utf-8"))
+    audit["bindings"]["plan_lock_sha256"] = plan["lock_sha256"]
+    audit["bindings"]["sources_canonical_sha256"] = hashlib.sha256(
+        verify.canonical_json_bytes(plan["sources"])
+    ).hexdigest()
+    audit["source_score"]["matrices"][0]["source_bf16_sha256"] = rebound_hash
+    write_json(audit_path, audit)
+    reseal_file_row(root, "independent_audit")
+
+
 def required_encoder_evidence_removed(root: Path) -> None:
     path = root / "checkpoint_manifest.json"
     value = manifest(root)
@@ -266,6 +298,11 @@ CASES: tuple[tuple[str, Mutation, str], ...] = (
     ("plan_internal_seal_resealed", broken_plan_seal, "internal seal"),
     ("payload_rebound_metadata_stale", payload_rebound_but_metadata_stale, "encoder payload hash"),
     ("audit_plan_unlinked_resealed", audit_plan_unlinked, "audit/plan binding"),
+    (
+        "source_plan_comprehensive_rebind",
+        source_plan_comprehensively_rebound,
+        "pinned source digest",
+    ),
     ("required_encoder_evidence_removed", required_encoder_evidence_removed, "lacks a required evidence role"),
     ("coefficient_code_mismatch_rebound", coefficient_code_mismatch_rebound, "KLT coefficient"),
 )

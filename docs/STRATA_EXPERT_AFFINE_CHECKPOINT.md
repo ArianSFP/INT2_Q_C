@@ -201,7 +201,7 @@ The independent auditor causally decoded and canonically re-encoded all
 `15/15` streams with literal payload equality, restored every one of the
 13,824 groups exactly once, and rehashed/scored `18/18` original BF16 source
 files. The compact verifier binds all fifteen encoder transcripts to their
-literal physical payload slices and legacy-container hashes. All `15/15`
+literal physical payload slices and legacy-container hashes. All `16/16`
 resealed tamper cases were rejected on their intended deep invariant.
 
 Evidence identities:
@@ -281,11 +281,15 @@ The dependency-free verifier recomputes container size/rate, header bindings,
 KLT-code regeneration, route semantics, label histogram, stream boundaries and
 padding, decoder scales, seeds, zero fill, all fifteen encoder/payload bindings,
 required expert blocks, cold bytes, 4-KiB page unions, source-plan bindings,
-source-score quotients, and the rate-relative target. The tamper harness reseals
+source-score quotients, and the rate-relative target. Immutable SHA-256 anchors
+also require the exact precommitted route bytes, label bytes, and canonical
+eighteen-source record set rather than merely a self-consistent replacement.
+The tamper harness reseals
 each modified file in the outer manifest before testing, so its cases exercise
 deeper invariants rather than only file checksums. Its adversarial cases include
-a rebound payload mutation, an audit detached from its plan, required evidence
-removal, and a rebound KLT coefficient/code mismatch.
+a rebound payload mutation, an audit detached from its plan, a comprehensively
+rebound source-plan identity, required evidence removal, and a rebound KLT
+coefficient/code mismatch.
 
 ## Inference integration boundary
 

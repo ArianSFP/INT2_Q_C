@@ -1,13 +1,25 @@
 from __future__ import annotations
 
+from collections.abc import Iterator
+from contextlib import contextmanager
 import hashlib
+import json
 import struct
 import tempfile
 import unittest
+from unittest import mock
 import zlib
 from pathlib import Path
 
 from strata_expert_local_codec import verify_checkpoint as verify
+
+
+PUBLISHED_RELEASE = (
+    Path(__file__).resolve().parents[1]
+    / "results"
+    / "qwen"
+    / "strata_expert_affine_checkpoint"
+)
 
 
 def packed_labels() -> bytes:
@@ -31,6 +43,24 @@ def valid_route() -> bytes:
                 )
             )
     return bytes(payload)
+
+
+@contextmanager
+def synthetic_identity() -> Iterator[None]:
+    """Temporarily anchor the parser to this module's synthetic assets."""
+    with (
+        mock.patch.object(
+            verify,
+            "EXPECTED_ROUTE_SHA256",
+            hashlib.sha256(valid_route()).hexdigest(),
+        ),
+        mock.patch.object(
+            verify,
+            "EXPECTED_LABELS_SHA256",
+            hashlib.sha256(packed_labels()).hexdigest(),
+        ),
+    ):
+        yield
 
 
 def synthetic_container(*, first_logical_bits: int = 0, first_payload: int = 0) -> bytes:
@@ -85,7 +115,7 @@ class CheckpointContainerTests(unittest.TestCase):
         self.assertFalse(verify.same_fp64_sum(500.3955368642653, 500.39553685426534))
 
     def test_empty_stream_ledger_and_expert_map(self) -> None:
-        with tempfile.TemporaryDirectory() as text:
+        with synthetic_identity(), tempfile.TemporaryDirectory() as text:
             parsed = verify.parse_container(
                 self.write(Path(text), synthetic_container())
             )
@@ -100,14 +130,14 @@ class CheckpointContainerTests(unittest.TestCase):
     def test_route_tamper_is_rejected(self) -> None:
         payload = bytearray(synthetic_container())
         payload[verify.HEADER_BYTES] ^= 1
-        with tempfile.TemporaryDirectory() as text:
+        with synthetic_identity(), tempfile.TemporaryDirectory() as text:
             with self.assertRaisesRegex(AssertionError, "asset binding"):
                 verify.parse_container(self.write(Path(text), bytes(payload)))
 
     def test_crc_tamper_is_rejected(self) -> None:
         payload = bytearray(synthetic_container())
         payload[124] ^= 1
-        with tempfile.TemporaryDirectory() as text:
+        with synthetic_identity(), tempfile.TemporaryDirectory() as text:
             with self.assertRaisesRegex(AssertionError, "CRC"):
                 verify.parse_container(self.write(Path(text), bytes(payload)))
 
@@ -115,7 +145,7 @@ class CheckpointContainerTests(unittest.TestCase):
         payload = bytearray(synthetic_container())
         payload[32] ^= 1
         struct.pack_into("<I", payload, 124, zlib.crc32(payload[:124]) & 0xFFFFFFFF)
-        with tempfile.TemporaryDirectory() as text:
+        with synthetic_identity(), tempfile.TemporaryDirectory() as text:
             with self.assertRaisesRegex(AssertionError, "KLT coefficient"):
                 verify.parse_container(self.write(Path(text), bytes(payload)))
 
@@ -127,22 +157,94 @@ class CheckpointContainerTests(unittest.TestCase):
         labels = bytes(payload[labels_begin:labels_begin + verify.LABEL_BYTES])
         payload[92:124] = hashlib.sha256(route + labels).digest()
         struct.pack_into("<I", payload, 124, zlib.crc32(payload[:124]) & 0xFFFFFFFF)
-        with tempfile.TemporaryDirectory() as text:
+        with synthetic_identity(), tempfile.TemporaryDirectory() as text:
             with self.assertRaisesRegex(AssertionError, "label histogram"):
                 verify.parse_container(self.write(Path(text), bytes(payload)))
 
     def test_nonzero_terminal_fill_is_rejected(self) -> None:
         payload = bytearray(synthetic_container())
         payload[-1] = 1
-        with tempfile.TemporaryDirectory() as text:
+        with synthetic_identity(), tempfile.TemporaryDirectory() as text:
             with self.assertRaisesRegex(AssertionError, "terminal reservoir"):
                 verify.parse_container(self.write(Path(text), bytes(payload)))
 
     def test_nonzero_low_payload_padding_is_rejected(self) -> None:
         payload = synthetic_container(first_logical_bits=1, first_payload=0x01)
-        with tempfile.TemporaryDirectory() as text:
+        with synthetic_identity(), tempfile.TemporaryDirectory() as text:
             with self.assertRaisesRegex(AssertionError, "payload padding"):
                 verify.parse_container(self.write(Path(text), payload))
+
+    def test_pinned_identity_anchors_match_published_release(self) -> None:
+        route = (PUBLISHED_RELEASE / "assets" / "route.bin").read_bytes()
+        labels = (PUBLISHED_RELEASE / "assets" / "labels_3bit.bin").read_bytes()
+        plan = json.loads(
+            (PUBLISHED_RELEASE / "plan.lock.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(hashlib.sha256(route).hexdigest(), verify.EXPECTED_ROUTE_SHA256)
+        self.assertEqual(hashlib.sha256(labels).hexdigest(), verify.EXPECTED_LABELS_SHA256)
+        self.assertEqual(
+            hashlib.sha256(verify.canonical_json_bytes(plan["sources"])).hexdigest(),
+            verify.EXPECTED_SOURCES_CANONICAL_SHA256,
+        )
+
+    def test_comprehensively_rebound_valid_route_is_rejected(self) -> None:
+        payload = bytearray(
+            (PUBLISHED_RELEASE / "strata_expert_affine_n20n21.bin").read_bytes()
+        )
+        for record in range(3):
+            offset = verify.HEADER_BYTES + 8 * record
+            layer = struct.unpack_from(">H", payload, offset)[0]
+            struct.pack_into(">H", payload, offset, layer + 1)
+        labels_begin = verify.HEADER_BYTES + verify.ROUTE_BYTES
+        route = bytes(payload[verify.HEADER_BYTES:labels_begin])
+        labels = bytes(payload[labels_begin:labels_begin + verify.LABEL_BYTES])
+        payload[92:124] = hashlib.sha256(route + labels).digest()
+        struct.pack_into("<I", payload, 124, zlib.crc32(payload[:124]) & 0xFFFFFFFF)
+        with tempfile.TemporaryDirectory() as text:
+            with self.assertRaisesRegex(AssertionError, "pinned route SHA-256"):
+                verify.parse_container(self.write(Path(text), bytes(payload)))
+
+    def test_rebound_equipopulous_labels_are_rejected_by_pinned_hash(self) -> None:
+        payload = bytearray(
+            (PUBLISHED_RELEASE / "strata_expert_affine_n20n21.bin").read_bytes()
+        )
+        labels_begin = verify.HEADER_BYTES + verify.ROUTE_BYTES
+
+        def label(ordinal: int) -> int:
+            value = 0
+            for component in range(3):
+                bit = 3 * ordinal + component
+                byte = labels_begin + bit // 8
+                value = (value << 1) | ((payload[byte] >> (7 - bit % 8)) & 1)
+            return value
+
+        def set_label(ordinal: int, value: int) -> None:
+            for component in range(3):
+                bit = 3 * ordinal + component
+                byte = labels_begin + bit // 8
+                mask = 1 << (7 - bit % 8)
+                if value & (1 << (2 - component)):
+                    payload[byte] |= mask
+                else:
+                    payload[byte] &= ~mask
+
+        first = 0
+        second = next(
+            ordinal for ordinal in range(1, verify.GROUPS) if label(ordinal) != label(first)
+        )
+        first_value, second_value = label(first), label(second)
+        set_label(first, second_value)
+        set_label(second, first_value)
+
+        labels_end = labels_begin + verify.LABEL_BYTES
+        route = bytes(payload[verify.HEADER_BYTES:labels_begin])
+        labels = bytes(payload[labels_begin:labels_end])
+        self.assertEqual(verify.label_histogram(labels), [1728] * 8)
+        payload[92:124] = hashlib.sha256(route + labels).digest()
+        struct.pack_into("<I", payload, 124, zlib.crc32(payload[:124]) & 0xFFFFFFFF)
+        with tempfile.TemporaryDirectory() as text:
+            with self.assertRaisesRegex(AssertionError, "pinned label SHA-256"):
+                verify.parse_container(self.write(Path(text), bytes(payload)))
 
     def test_manifest_requires_every_encoder_and_asset_role(self) -> None:
         missing = "encoder_block_14"

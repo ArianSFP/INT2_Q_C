@@ -43,6 +43,15 @@ TARGET_FRACTION = 0.20
 GROUP_VALUES = 2_048
 GROUPS = 13_824
 GROUPS_PER_MATRIX = 768
+# Immutable identity anchors for the precommitted Qwen panel.  The release
+# manifest authenticates bytes, while these constants prevent a comprehensively
+# resealed bundle from silently substituting a different route, label partition,
+# or set of original BF16 sources.
+EXPECTED_ROUTE_SHA256 = "94feb3564fe0c3eddfc745703f1f6001b5ae316e7146209e6b45323cdf81697c"
+EXPECTED_LABELS_SHA256 = "4bb444bd14248bc72dd521b7f581700cc95e5f6d5a9e6cbea21c2119efae89e9"
+EXPECTED_SOURCES_CANONICAL_SHA256 = (
+    "768573dffbb7605a0993a0fd4485e4eb5fc5201529797a89d63d3c9fb18b51d6"
+)
 BLOCK_LOG2 = (21, 21) * EXPERTS + (20,) * 3
 BLOCK_GROUPS = tuple((1 << value) // GROUP_VALUES for value in BLOCK_LOG2)
 SEED_DOMAIN = b"POLARIS-STRATA-EXPERT-AFFINE-N20N21-v1\0"
@@ -305,6 +314,14 @@ def parse_container(path: Path) -> dict[str, Any]:
     require(crc == zlib.crc32(header[:124]) & 0xFFFFFFFF, "header CRC mismatch")
     route_rows = parse_route(route)
     histogram = label_histogram(labels)
+    require(
+        sha256_bytes(route) == EXPECTED_ROUTE_SHA256,
+        "pinned route SHA-256 mismatch",
+    )
+    require(
+        sha256_bytes(labels) == EXPECTED_LABELS_SHA256,
+        "pinned label SHA-256 mismatch",
+    )
 
     cursor = reservoir_begin
     directory: list[dict[str, int]] = []
@@ -537,6 +554,10 @@ def verify_evidence(
     sources = plan.get("sources")
     require(isinstance(sources, list) and len(sources) == 18, "plan source coverage mismatch")
     sources_digest = sha256_bytes(canonical_json_bytes(sources))
+    require(
+        sources_digest == EXPECTED_SOURCES_CANONICAL_SHA256,
+        "pinned source digest mismatch",
+    )
     require(
         bindings.get("sources_canonical_sha256") == sources_digest,
         "audit/source binding mismatch",

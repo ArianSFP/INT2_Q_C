@@ -79,6 +79,12 @@
       "passed": true
     },
     {
+      "expected_rejection_substring": "pinned source digest",
+      "name": "source_plan_comprehensive_rebind",
+      "observed": "AssertionError: pinned source digest mismatch",
+      "passed": true
+    },
+    {
       "expected_rejection_substring": "lacks a required evidence role",
       "name": "required_encoder_evidence_removed",
       "observed": "AssertionError: manifest lacks a required evidence role",
@@ -91,11 +97,11 @@
       "passed": true
     }
   ],
-  "cases_passed": 15,
-  "cases_total": 15,
+  "cases_passed": 16,
+  "cases_total": 16,
   "container_sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b",
-  "executing_harness_sha256": "7eb2af7740d3e62834a2dddf8bedc901cf12eb0d034b8e55610d57e91bd31233",
-  "executing_verifier_sha256": "2600b4d2d7101558db92b88f185d6a38b7470eb976b787c68f279845614a639d",
+  "executing_harness_sha256": "98114254bae2131e8f63e27b4971ce08830f408d888cf3f5bf6dd5bc7a342a65",
+  "executing_verifier_sha256": "7aa3a103c2be5d0869c94860bc0b2e4fe6c150c832a5c693199af32364aa9c29",
   "pristine": {
     "checkpoint_passed": true,
     "container_sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b",

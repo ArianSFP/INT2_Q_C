@@ -19,7 +19,7 @@ streams and one paired `N=2^20` tail. The independent auditor causally
 decoded and canonically re-encoded all `15/15` payloads, restored every group
 once, and rehashed/scored all `18/18` original BF16 matrices. The compact
 verifier deeply binds all encoder transcripts to physical payload slices; all
-`15/15` resealed tamper cases were rejected. Container SHA-256:
+`16/16` resealed tamper cases were rejected. Container SHA-256:
 `4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b`.
 
 This is an external compressed-object read result, not a fused MoE

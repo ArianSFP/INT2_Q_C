@@ -7,13 +7,17 @@ import shutil
 import struct
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 from typing import Any
 
 from strata_expert_local_codec import checkpoint_tamper_tests as tamper
 from strata_expert_local_codec import common
 from strata_expert_local_codec import verify_checkpoint as verify
-from strata_expert_local_codec.test_verify_checkpoint import synthetic_container
+from strata_expert_local_codec.test_verify_checkpoint import (
+    synthetic_container,
+    synthetic_identity,
+)
 
 
 def write_json(path: Path, value: Any) -> None:
@@ -406,17 +410,41 @@ class FullCheckpointVerifierTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as text:
             release = Path(text) / "release"
             release.mkdir()
-            build_release(release)
-            result = run_release_verifier(release)
-            self.assertTrue(result["checkpoint_passed"])
-            self.assertFalse(result["final_rate_relative_gate_passed"])
+            with synthetic_identity():
+                build_release(release)
+                plan = json.loads(
+                    (release / "plan.lock.json").read_text(encoding="utf-8")
+                )
+                source_digest = hashlib.sha256(
+                    verify.canonical_json_bytes(plan["sources"])
+                ).hexdigest()
+                with mock.patch.object(
+                    verify, "EXPECTED_SOURCES_CANONICAL_SHA256", source_digest
+                ):
+                    result = run_release_verifier(release)
+                    self.assertTrue(result["checkpoint_passed"])
+                    self.assertFalse(result["final_rate_relative_gate_passed"])
 
-            for name, mutation, expected in tamper.CASES:
-                trial = Path(text) / f"trial_{name}"
-                shutil.copytree(release, trial)
-                mutation(trial)
-                with self.assertRaisesRegex(Exception, expected):
-                    run_release_verifier(trial)
+                    rebound = Path(text) / "trial_source_rebind_dynamic_identity"
+                    shutil.copytree(release, rebound)
+                    tamper.source_plan_comprehensively_rebound(rebound)
+                    rebound_plan = json.loads(
+                        (rebound / "plan.lock.json").read_text(encoding="utf-8")
+                    )
+                    rebound_digest = hashlib.sha256(
+                        verify.canonical_json_bytes(rebound_plan["sources"])
+                    ).hexdigest()
+                    with mock.patch.object(
+                        verify, "EXPECTED_SOURCES_CANONICAL_SHA256", rebound_digest
+                    ):
+                        self.assertTrue(run_release_verifier(rebound)["checkpoint_passed"])
+
+                    for name, mutation, expected in tamper.CASES:
+                        trial = Path(text) / f"trial_{name}"
+                        shutil.copytree(release, trial)
+                        mutation(trial)
+                        with self.assertRaisesRegex(Exception, expected):
+                            run_release_verifier(trial)
 
 
 if __name__ == "__main__":
