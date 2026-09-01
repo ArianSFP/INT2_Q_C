@@ -1,0 +1,19 @@
+{
+  "schema": "free_order_swiglu_path_v4_package_manifest_v1",
+  "status": "SEALED_INERT_SOURCE_ONLY_NO_AUTHORITY",
+  "artifact_count": 10,
+  "closure_policy": "Every directory member except this manifest is a covered regular single-link file; subdirectories, links, aliases, and extra members are forbidden.",
+  "artifacts": [
+    {"path": "PRODUCER_RECEIPT.json", "bytes": 3149, "sha256": "1366fc655527cd150ee6df22a8ad74c21a0b99bdee56c9bfc02c72cefbfb6fc4"},
+    {"path": "README.md", "bytes": 7150, "sha256": "53dc4fb16900d28c96a47b39c0922c8a1566933ab99c7e4002addf14be991242"},
+    {"path": "SOURCE_TEST_RECEIPT.json", "bytes": 2384, "sha256": "df57328f27bd2adf66b65401bf9f3a6a7f572a233cd177feb1d027946f83eb25"},
+    {"path": "bootstrap_v4.py", "bytes": 902, "sha256": "46e91513325647de168cf0e0e39c5ab60988bd45cfcd2f8a4d6bb1a5c2d33544"},
+    {"path": "launch_contract.py", "bytes": 18059, "sha256": "e331197f0e09768d2c85b2778c559bdd87a288c582981915d2dae2b2ca95aec6"},
+    {"path": "native_launcher_contract.json", "bytes": 5083, "sha256": "fcd4cb53e7f01927f7ae3e9d71c99e27e90783786a43b5e15d76e4a4e1ed0811"},
+    {"path": "scientific_oracle_v3.py", "bytes": 21887, "sha256": "9ca6f4bdd4150c8c0c68c0a298c00eb45c088a4af287895ebfdf9bf1e661a070"},
+    {"path": "scientific_protocol_v3.json", "bytes": 7469, "sha256": "f4660cb8876a749eb1635dbf010a8df6199e845b0517dd8b15039ac9cf1fd097"},
+    {"path": "test_source_only.py", "bytes": 12852, "sha256": "7ec0f7499e62bbcc3795aa424ada3de1e0bc1aae9d729dea66b15e079518330f"},
+    {"path": "verify_package.py", "bytes": 8799, "sha256": "5a2c0670b914841fa384937bfa68db7bcf1262e558d3ab06269cb70cef513c14"}
+  ],
+  "authorization": "NONE"
+}

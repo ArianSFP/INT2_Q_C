@@ -1,0 +1,14 @@
+{
+  "created_utc_date": "2026-09-01",
+  "design_lock_sha256": "89e1be67601a5d19161e29104e6205afd3850bc546e137390b95bd5392276aef",
+  "gpu_execution": "not run",
+  "manifest_member_count": 8,
+  "model_payload_access": "none",
+  "network_during_execution": "not applicable; no experiment executed",
+  "package_file_count": 9,
+  "primary_sources_sha256": "8d40c0a68387cdd8ae45f26eef7d7181b1e6c4e0995850162b55b50fd1c7cdd6",
+  "runner_sha256": "7288be471925fe9596c76b6f39a814e3a2589fc3857b10f7387ca9cd2271f474",
+  "schema": "ccq-raw-mse-stage0-source-receipt-v0",
+  "source_lock_access": "metadata bytes only; no matrix payload opened",
+  "status": "READY_SOURCE_ONLY_NOT_EXECUTED"
+}

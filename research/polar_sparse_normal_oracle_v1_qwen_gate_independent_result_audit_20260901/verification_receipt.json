@@ -1,0 +1,38 @@
+{
+  "schema": "polar_sparse_normal_qwen_gate_independent_audit_verification_receipt_v1",
+  "verdict": "PASS",
+  "check_count": 1086,
+  "audit_verdict": "KILL_QWEN_SPECIFIC_GROUPED_SPATIAL_SIGNAL_ROUTE",
+  "best_family": "upper_triangular_tiles_32_descending_energy_prefix",
+  "best_qwen_F": 0.7723583974071416,
+  "maximum_optimistic_source_specific_s_bpw": 0.00010112553919133912,
+  "artifacts": {
+    "audit_receipt_sha256": "44e9eaaa70a9b0f933b9a0140eca43828666d42f879ab87038e68886014f7ed1",
+    "control_replay_sha256": "76bcf7e52bb06f06e4b01652b886a45f071bfa86201dc7ead7e55a2221ed9f79",
+    "replay_controls_script_sha256": "fd86af76ef83a5db59293ab6d2139ea2881a25461fb05fdc0728a119424b70f9",
+    "verifier_sha256": "138859945ccd974a9cc91abc16d06dd2a6053eb86641f5576edea8482bc634d2"
+  },
+  "verification_runtime": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "third_party_imports": false,
+    "gpu_execution": false,
+    "source_payload_access": false,
+    "fresh_validation_access": false
+  },
+  "verified": [
+    "producer and control canonical JSON seals",
+    "immutable source/result/script hashes",
+    "producer 88-check receipt binding",
+    "exact prior normal-record preservation",
+    "missing producer BLAS-thread preflight limitation",
+    "mandatory 4/4/4 independent replay receipt",
+    "exact enumerative support for every Qwen/control selected option",
+    "all Qwen/control feasible primal reverse-waterfills at exactly R=2.5",
+    "all eight control means, MC standard errors, delete-one-expert jackknives, and combined three-SE bounds",
+    "all eight audit-receipt family ledgers",
+    "seven impossible-channel F<=0.8 passes and one failure",
+    "standalone and composite source-specific shortfalls",
+    "proposed 1.2666666667x three-codebook read ledger"
+  ]
+}

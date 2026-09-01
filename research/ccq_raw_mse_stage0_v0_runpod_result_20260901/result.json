@@ -1,0 +1,1777 @@
+{
+  "claim_boundary": "Frozen paper-derived CCQ Code-Cluster cell only. Not an official encoder reproduction, finite residual codec, fresh-validation result, model-wide result, or target achievement.",
+  "decision_reasons": [
+    "pooled held-out canonical CCQ first stage fails the ideal-residual oracle"
+  ],
+  "gaussian_moment_match": [
+    {
+      "matrix_ordinal": 0,
+      "max_abs_centered_rms_error": 9.796742653223056e-10,
+      "max_abs_mean_error": 8.479048574372428e-10
+    },
+    {
+      "matrix_ordinal": 1,
+      "max_abs_centered_rms_error": 9.659968866482238e-10,
+      "max_abs_mean_error": 7.609060048707761e-10
+    },
+    {
+      "matrix_ordinal": 2,
+      "max_abs_centered_rms_error": 9.795718645955187e-10,
+      "max_abs_mean_error": 8.170673027052544e-10
+    },
+    {
+      "matrix_ordinal": 3,
+      "max_abs_centered_rms_error": 9.583941071311664e-10,
+      "max_abs_mean_error": 7.896829856690601e-10
+    },
+    {
+      "matrix_ordinal": 4,
+      "max_abs_centered_rms_error": 1.0042799751530662e-09,
+      "max_abs_mean_error": 7.389999723272922e-10
+    },
+    {
+      "matrix_ordinal": 5,
+      "max_abs_centered_rms_error": 9.891080419988096e-10,
+      "max_abs_mean_error": 7.804370483199818e-10
+    },
+    {
+      "matrix_ordinal": 6,
+      "max_abs_centered_rms_error": 1.8231747084263006e-09,
+      "max_abs_mean_error": 8.15347789284715e-10
+    },
+    {
+      "matrix_ordinal": 7,
+      "max_abs_centered_rms_error": 9.858302160714594e-10,
+      "max_abs_mean_error": 6.506306604592282e-10
+    },
+    {
+      "matrix_ordinal": 8,
+      "max_abs_centered_rms_error": 1.0078498452470441e-09,
+      "max_abs_mean_error": 7.586038464069134e-10
+    },
+    {
+      "matrix_ordinal": 9,
+      "max_abs_centered_rms_error": 1.5283641505159373e-09,
+      "max_abs_mean_error": 8.050804467529815e-10
+    },
+    {
+      "matrix_ordinal": 10,
+      "max_abs_centered_rms_error": 9.85369900258215e-10,
+      "max_abs_mean_error": 7.965326176417875e-10
+    },
+    {
+      "matrix_ordinal": 11,
+      "max_abs_centered_rms_error": 1.0000525269004967e-09,
+      "max_abs_mean_error": 8.057980949160992e-10
+    },
+    {
+      "matrix_ordinal": 12,
+      "max_abs_centered_rms_error": 1.50883625038567e-09,
+      "max_abs_mean_error": 8.420784070040099e-10
+    },
+    {
+      "matrix_ordinal": 13,
+      "max_abs_centered_rms_error": 1.653748436802882e-09,
+      "max_abs_mean_error": 1.0170566611122922e-09
+    },
+    {
+      "matrix_ordinal": 14,
+      "max_abs_centered_rms_error": 1.6809116286375936e-09,
+      "max_abs_mean_error": 7.581704153380997e-10
+    },
+    {
+      "matrix_ordinal": 15,
+      "max_abs_centered_rms_error": 1.0428663384243197e-09,
+      "max_abs_mean_error": 7.764846543523163e-10
+    },
+    {
+      "matrix_ordinal": 16,
+      "max_abs_centered_rms_error": 1.7389581788429531e-09,
+      "max_abs_mean_error": 7.982166039255389e-10
+    },
+    {
+      "matrix_ordinal": 17,
+      "max_abs_centered_rms_error": 1.6316394832460723e-09,
+      "max_abs_mean_error": 8.127756245812634e-10
+    }
+  ],
+  "gaussian_prefix": {
+    "bytes": 7518592,
+    "sha256": "cffc586d515c70ee98320d394730032e97d689d490a6b45ce6dcff7ee8286ec3"
+  },
+  "gaussian_score": {
+    "fit_relative_residual_energy": 0.1370967296373507,
+    "heldout_experts": [
+      {
+        "F_oracle": 2.614461287358614,
+        "expert": 7,
+        "layer": 12,
+        "relative_residual_energy": 0.13749528977722877,
+        "s_oracle": -0.6932568540923316,
+        "slot": 1,
+        "source_energy": 2478.459865962209,
+        "sse": 340.7765574717055
+      },
+      {
+        "F_oracle": 2.6120591037123506,
+        "expert": 76,
+        "layer": 36,
+        "relative_residual_energy": 0.13736895823117065,
+        "s_oracle": -0.6925937707369655,
+        "slot": 4,
+        "source_energy": 2801.0349462729882,
+        "sse": 384.7752525386235
+      }
+    ],
+    "holdout_F_oracle": 2.6131868092920847,
+    "holdout_relative_residual_energy": 0.13742826460002708,
+    "holdout_s_oracle": -0.6929051312546927,
+    "matrices": [
+      {
+        "matrix_ordinal": 0,
+        "relative_residual_energy": 0.14202619085840934,
+        "role": "gate",
+        "slot": 0,
+        "source_energy": 841.6700316629209,
+        "split": "fit",
+        "sse": 119.53918855676145
+      },
+      {
+        "matrix_ordinal": 1,
+        "relative_residual_energy": 0.14234110788889337,
+        "role": "up",
+        "slot": 0,
+        "source_energy": 765.4035252955982,
+        "split": "fit",
+        "sse": 108.94838577264008
+      },
+      {
+        "matrix_ordinal": 2,
+        "relative_residual_energy": 0.12474468945663474,
+        "role": "down",
+        "slot": 0,
+        "source_energy": 817.4187427717566,
+        "split": "fit",
+        "sse": 101.96864722309556
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 0.4203780527424599,
+        "matrix_ordinal": 3,
+        "relative_residual_energy": 0.1428392260317554,
+        "role": "gate",
+        "slot": 1,
+        "source_energy": 817.1288013773849,
+        "split": "holdout",
+        "sse": 116.71804555700164
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 0.8471044150775697,
+        "matrix_ordinal": 4,
+        "relative_residual_energy": 0.14596433353855945,
+        "role": "up",
+        "slot": 1,
+        "source_energy": 811.7096282314218,
+        "split": "holdout",
+        "sse": 118.48065491163135
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 1.2273593596139596,
+        "matrix_ordinal": 5,
+        "relative_residual_energy": 0.12426458712743346,
+        "role": "down",
+        "slot": 1,
+        "source_energy": 849.621436353402,
+        "split": "holdout",
+        "sse": 105.5778570030725
+      },
+      {
+        "matrix_ordinal": 6,
+        "relative_residual_energy": 0.14184848404804995,
+        "role": "gate",
+        "slot": 2,
+        "source_energy": 1072.4005777059551,
+        "split": "fit",
+        "sse": 152.11839623984272
+      },
+      {
+        "matrix_ordinal": 7,
+        "relative_residual_energy": 0.14416012696219996,
+        "role": "up",
+        "slot": 2,
+        "source_energy": 810.156519784052,
+        "split": "fit",
+        "sse": 116.792266751323
+      },
+      {
+        "matrix_ordinal": 8,
+        "relative_residual_energy": 0.12400458887998585,
+        "role": "down",
+        "slot": 2,
+        "source_energy": 885.1756637514919,
+        "split": "fit",
+        "sse": 109.76584427007235
+      },
+      {
+        "matrix_ordinal": 9,
+        "relative_residual_energy": 0.14444470463620074,
+        "role": "gate",
+        "slot": 3,
+        "source_energy": 885.4636030477166,
+        "split": "fit",
+        "sse": 127.90052860833352
+      },
+      {
+        "matrix_ordinal": 10,
+        "relative_residual_energy": 0.1436506455508666,
+        "role": "up",
+        "slot": 3,
+        "source_energy": 892.664745294886,
+        "split": "fit",
+        "sse": 128.23186692211027
+      },
+      {
+        "matrix_ordinal": 11,
+        "relative_residual_energy": 0.12468784022425687,
+        "role": "down",
+        "slot": 3,
+        "source_energy": 881.3383180524083,
+        "split": "fit",
+        "sse": 109.89217138483397
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 1.6896430470929404,
+        "matrix_ordinal": 12,
+        "relative_residual_energy": 0.1443870892840868,
+        "role": "gate",
+        "slot": 4,
+        "source_energy": 888.9517308951201,
+        "split": "holdout",
+        "sse": 128.3531529379972
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 2.190425137913813,
+        "matrix_ordinal": 13,
+        "relative_residual_energy": 0.142970579078899,
+        "role": "up",
+        "slot": 4,
+        "source_energy": 972.5234574555957,
+        "split": "holdout",
+        "sse": 139.04224188023952
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 2.6131868092920842,
+        "matrix_ordinal": 14,
+        "relative_residual_energy": 0.12493069943731808,
+        "role": "down",
+        "slot": 4,
+        "source_energy": 939.5597579222726,
+        "split": "holdout",
+        "sse": 117.37985772038678
+      },
+      {
+        "matrix_ordinal": 15,
+        "relative_residual_energy": 0.14680409367049038,
+        "role": "gate",
+        "slot": 5,
+        "source_energy": 882.0293218411537,
+        "split": "fit",
+        "sse": 129.48551518368782
+      },
+      {
+        "matrix_ordinal": 16,
+        "relative_residual_energy": 0.14379810022169073,
+        "role": "up",
+        "slot": 5,
+        "source_energy": 1052.5524130210642,
+        "split": "fit",
+        "sse": 151.3550373761854
+      },
+      {
+        "matrix_ordinal": 17,
+        "relative_residual_energy": 0.12438141806087172,
+        "role": "down",
+        "slot": 5,
+        "source_energy": 1127.126236293543,
+        "split": "fit",
+        "sse": 140.19355960380403
+      }
+    ],
+    "strict_early_kill_certificate": {
+      "F_lower_bound": 0.8471044150775697,
+      "after_matrix_ordinal": 4,
+      "why": "remaining SSE is nonnegative"
+    }
+  },
+  "gaussian_trace": [
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 0,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041186299452690145,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.034529153327118,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031027365731283067,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14615170243195083,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14265714159278048,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 1,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04111865822607941,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.034497837655595436,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031019893971633277,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14651960885218532,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.142972993758589,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 2,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041394193544053236,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03468338268130312,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031175395457238648,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12736076451000494,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12519358262833924,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 3,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04119226120359937,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03455398262291496,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031057033206639686,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14682408555077384,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14347047682131697,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 4,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041108379369693,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03446285381772601,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.030973986930040453,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1503340225879225,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14661991950755446,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 5,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04161471156020972,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.034884976946304026,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03136838684887402,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12681251301693405,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12470178313994251,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 6,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04120810988952402,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.034565226086369194,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031068046188480834,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14588570101493556,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14247839255911338,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 7,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04104757884024188,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.034415769748885966,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03094655820158113,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14841748745725653,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14481613532525642,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 8,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041353130280282625,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03466295782102071,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031174499878558647,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12656477955317677,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12444824981825636,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 9,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04123543220991691,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03457104676103617,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031085245871043433,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14881821204690537,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14509467749255645,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 10,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04127062792290535,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03461342065828776,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031118164224166,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14794925373329973,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1442966543771231,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 11,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04189138638128622,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.035108465359586914,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031544479735727694,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12727617793757143,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12513863538635103,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 12,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041020683975575435,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03442367787102104,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.030960415915606034,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14875726332337846,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14503121821924841,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 13,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04113527269242838,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03447739202190047,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.030984588316170587,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14712601648067355,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14358515216630516,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 14,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04292195956888936,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03588219851478124,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.032143234753603714,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1275408311978517,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1253752450068351,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 15,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04108293612261164,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.034460790492498505,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031002663501203096,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.15124692227299272,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14745676673971475,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 16,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041113080092962856,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.034455910871169636,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03096886585100842,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1479590515902456,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14444469664984505,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 17,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041670039812934545,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03494622530732461,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031374365297983944,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12704212931395611,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12483064422862891,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    }
+  ],
+  "hypothetical_128_expert_ledger": {
+    "claim_boundary": "Arithmetic projection only; no 128-expert generalization evidence.",
+    "fixed_prefix_bpw": 2.1234266493055554,
+    "rates": [
+      {
+        "actual_bpw": 2.1500000026490955,
+        "cold_expert_bytes_4k": 1273856,
+        "cold_read_amplification": 1.0045219625865804,
+        "fixed_prefix_bytes": 160313344,
+        "ideal_residual_bytes": 2006221,
+        "large_frame_count": 77,
+        "local_frame_max_bytes": 1268090,
+        "local_frame_min_bytes": 1268089,
+        "physical_bytes": 162319565,
+        "requested_bpw": 2.15
+      },
+      {
+        "actual_bpw": 2.3000000052981906,
+        "cold_expert_bytes_4k": 1363968,
+        "cold_read_amplification": 1.0054347802926151,
+        "fixed_prefix_bytes": 160313344,
+        "ideal_residual_bytes": 13330842,
+        "large_frame_count": 26,
+        "local_frame_max_bytes": 1356564,
+        "local_frame_min_bytes": 1356563,
+        "physical_bytes": 173644186,
+        "requested_bpw": 2.3
+      },
+      {
+        "actual_bpw": 2.5,
+        "cold_expert_bytes_4k": 1478656,
+        "cold_read_amplification": 1.0027777777777778,
+        "fixed_prefix_bytes": 160313344,
+        "ideal_residual_bytes": 28430336,
+        "large_frame_count": 0,
+        "local_frame_max_bytes": 1474528,
+        "local_frame_min_bytes": 1474528,
+        "physical_bytes": 188743680,
+        "requested_bpw": 2.5
+      }
+    ],
+    "required_first_stage_q": 0.04213662594768995
+  },
+  "matched_source_minus_gaussian_s": -0.004530931736609789,
+  "result_lock_sha256": "d458ba0f642f02b515aee2e5726dfd00b541ef782710089014a515b87387f63a",
+  "runtime": {
+    "cuda_runtime": 12090,
+    "cupy": "14.2.0",
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "device_total_memory": 33668857856,
+    "elapsed_seconds": 6.64923669397831,
+    "environment": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUPY_ACCELERATORS": "",
+      "NVIDIA_TF32_OVERRIDE": "0"
+    },
+    "numpy": "2.5.2",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]"
+  },
+  "schema": "ccq-raw-mse-stage0-result-v0",
+  "six_expert_fixed_prefix_bpw": 2.124529803240741,
+  "six_expert_rate_ledger": [
+    {
+      "actual_bpw": 2.1500001130280673,
+      "cold_expert_bytes_4k": 1273856,
+      "cold_read_amplification": 1.0045219110153731,
+      "fixed_prefix_bytes": 7518592,
+      "ideal_residual_bytes": 90138,
+      "large_frame_count": 0,
+      "local_frame_max_bytes": 1267439,
+      "local_frame_min_bytes": 1267439,
+      "physical_bytes": 7608730,
+      "requested_bpw": 2.15
+    },
+    {
+      "actual_bpw": 2.300000226056134,
+      "cold_expert_bytes_4k": 1363968,
+      "cold_read_amplification": 1.0054346837892705,
+      "fixed_prefix_bytes": 7518592,
+      "ideal_residual_bytes": 620980,
+      "large_frame_count": 4,
+      "local_frame_max_bytes": 1355913,
+      "local_frame_min_bytes": 1355912,
+      "physical_bytes": 8139572,
+      "requested_bpw": 2.3
+    },
+    {
+      "actual_bpw": 2.5,
+      "cold_expert_bytes_4k": 1478656,
+      "cold_read_amplification": 1.0027777777777778,
+      "fixed_prefix_bytes": 7518592,
+      "ideal_residual_bytes": 1328768,
+      "large_frame_count": 2,
+      "local_frame_max_bytes": 1473878,
+      "local_frame_min_bytes": 1473877,
+      "physical_bytes": 8847360,
+      "requested_bpw": 2.5
+    }
+  ],
+  "six_expert_required_first_stage_q": 0.04207223581914729,
+  "source_lock": {
+    "bytes": 46013,
+    "file_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+    "internal_sha256": "5a82dac742110d4f48bbd73ae82081e1622b10b660b7850dadfe613ff475cc5b",
+    "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/source_hashes.lock.json"
+  },
+  "source_prefix": {
+    "bytes": 7518592,
+    "sha256": "125c5bb318b93ab49dd5ba0d42ee0f2068648547dc151d29b72010f81de3ab1b"
+  },
+  "source_receipts": [
+    {
+      "bytes": 3145728,
+      "declared_sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+      "expert": 18,
+      "layer": 5,
+      "matrix_ordinal": 0,
+      "observed_sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+      "role": "gate"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+      "expert": 18,
+      "layer": 5,
+      "matrix_ordinal": 1,
+      "observed_sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+      "role": "up"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+      "expert": 18,
+      "layer": 5,
+      "matrix_ordinal": 2,
+      "observed_sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+      "role": "down"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+      "expert": 7,
+      "layer": 12,
+      "matrix_ordinal": 3,
+      "observed_sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+      "role": "gate"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+      "expert": 7,
+      "layer": 12,
+      "matrix_ordinal": 4,
+      "observed_sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+      "role": "up"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+      "expert": 7,
+      "layer": 12,
+      "matrix_ordinal": 5,
+      "observed_sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+      "role": "down"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+      "expert": 20,
+      "layer": 18,
+      "matrix_ordinal": 6,
+      "observed_sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+      "role": "gate"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+      "expert": 20,
+      "layer": 18,
+      "matrix_ordinal": 7,
+      "observed_sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+      "role": "up"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+      "expert": 20,
+      "layer": 18,
+      "matrix_ordinal": 8,
+      "observed_sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+      "role": "down"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+      "expert": 83,
+      "layer": 28,
+      "matrix_ordinal": 9,
+      "observed_sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+      "role": "gate"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+      "expert": 83,
+      "layer": 28,
+      "matrix_ordinal": 10,
+      "observed_sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+      "role": "up"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+      "expert": 83,
+      "layer": 28,
+      "matrix_ordinal": 11,
+      "observed_sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+      "role": "down"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+      "expert": 76,
+      "layer": 36,
+      "matrix_ordinal": 12,
+      "observed_sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+      "role": "gate"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+      "expert": 76,
+      "layer": 36,
+      "matrix_ordinal": 13,
+      "observed_sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+      "role": "up"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+      "expert": 76,
+      "layer": 36,
+      "matrix_ordinal": 14,
+      "observed_sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+      "role": "down"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+      "expert": 41,
+      "layer": 45,
+      "matrix_ordinal": 15,
+      "observed_sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+      "role": "gate"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+      "expert": 41,
+      "layer": 45,
+      "matrix_ordinal": 16,
+      "observed_sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+      "role": "up"
+    },
+    {
+      "bytes": 3145728,
+      "declared_sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+      "expert": 41,
+      "layer": 45,
+      "matrix_ordinal": 17,
+      "observed_sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+      "role": "down"
+    }
+  ],
+  "source_score": {
+    "fit_relative_residual_energy": 0.13872340614366618,
+    "heldout_experts": [
+      {
+        "F_oracle": 2.612496519830161,
+        "expert": 7,
+        "layer": 12,
+        "relative_residual_energy": 0.13739196207374516,
+        "s_oracle": -0.6927145576729109,
+        "slot": 1,
+        "source_energy": 2478.459864974563,
+        "sse": 340.5204637698847
+      },
+      {
+        "F_oracle": 2.64483261621346,
+        "expert": 76,
+        "layer": 36,
+        "relative_residual_energy": 0.1390925269143812,
+        "s_oracle": -0.7015882106214447,
+        "slot": 4,
+        "source_energy": 2801.034946487004,
+        "sse": 389.6030286823659
+      }
+    ],
+    "holdout_F_oracle": 2.629652429483857,
+    "holdout_relative_residual_energy": 0.13829419641954802,
+    "holdout_s_oracle": -0.6974360629913025,
+    "matrices": [
+      {
+        "matrix_ordinal": 0,
+        "relative_residual_energy": 0.14587032672565353,
+        "role": "gate",
+        "slot": 0,
+        "source_energy": 841.670030962294,
+        "split": "fit",
+        "sse": 122.77468241166076
+      },
+      {
+        "matrix_ordinal": 1,
+        "relative_residual_energy": 0.14410712088075953,
+        "role": "up",
+        "slot": 0,
+        "source_energy": 765.403527355119,
+        "split": "fit",
+        "sse": 110.30009863912386
+      },
+      {
+        "matrix_ordinal": 2,
+        "relative_residual_energy": 0.12531767085949197,
+        "role": "down",
+        "slot": 0,
+        "source_energy": 817.4187426624795,
+        "split": "fit",
+        "sse": 102.43701294735637
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 0.42126388293664074,
+        "matrix_ordinal": 3,
+        "relative_residual_energy": 0.14314022012875247,
+        "role": "gate",
+        "slot": 1,
+        "source_energy": 817.1288010804291,
+        "split": "holdout",
+        "sse": 116.9639964601962
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 0.8422425704563797,
+        "matrix_ordinal": 4,
+        "relative_residual_energy": 0.14399830638066602,
+        "role": "up",
+        "slot": 1,
+        "source_energy": 811.7096293478241,
+        "split": "holdout",
+        "sse": 116.88481189896484
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 1.2264369988067583,
+        "matrix_ordinal": 5,
+        "relative_residual_energy": 0.12555198241636334,
+        "role": "down",
+        "slot": 1,
+        "source_energy": 849.62143454631,
+        "split": "holdout",
+        "sse": 106.6716554107237
+      },
+      {
+        "matrix_ordinal": 6,
+        "relative_residual_energy": 0.14298990480342066,
+        "role": "gate",
+        "slot": 2,
+        "source_energy": 1072.4005741883234,
+        "split": "fit",
+        "sse": 153.342456014322
+      },
+      {
+        "matrix_ordinal": 7,
+        "relative_residual_energy": 0.1443153970972012,
+        "role": "up",
+        "slot": 2,
+        "source_energy": 810.1565218245569,
+        "split": "fit",
+        "sse": 116.91806015799827
+      },
+      {
+        "matrix_ordinal": 8,
+        "relative_residual_energy": 0.12506525288932685,
+        "role": "down",
+        "slot": 2,
+        "source_energy": 885.1756646151206,
+        "split": "fit",
+        "sse": 110.70471834656803
+      },
+      {
+        "matrix_ordinal": 9,
+        "relative_residual_energy": 0.14966953112095085,
+        "role": "gate",
+        "slot": 3,
+        "source_energy": 885.463602058901,
+        "split": "fit",
+        "sse": 132.5269221448239
+      },
+      {
+        "matrix_ordinal": 10,
+        "relative_residual_energy": 0.1449433272568565,
+        "role": "up",
+        "slot": 3,
+        "source_energy": 892.6647426939126,
+        "split": "fit",
+        "sse": 129.38579793094135
+      },
+      {
+        "matrix_ordinal": 11,
+        "relative_residual_energy": 0.12525345518922856,
+        "role": "down",
+        "slot": 3,
+        "source_energy": 881.3383183621031,
+        "split": "fit",
+        "sse": 110.39066956551774
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 1.692493466322185,
+        "matrix_ordinal": 12,
+        "relative_residual_energy": 0.14556545799924475,
+        "role": "gate",
+        "slot": 4,
+        "source_energy": 888.9517319949757,
+        "split": "holdout",
+        "sse": 129.40066600707053
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 2.203917538101793,
+        "matrix_ordinal": 13,
+        "relative_residual_energy": 0.14600880731926313,
+        "role": "up",
+        "slot": 4,
+        "source_energy": 972.523455844916,
+        "split": "holdout",
+        "sse": 141.99698987792425
+      },
+      {
+        "accumulated_no_recovery_F_lower_bound": 2.6296524294838575,
+        "matrix_ordinal": 14,
+        "relative_residual_energy": 0.12580931836371648,
+        "role": "down",
+        "slot": 4,
+        "source_energy": 939.5597586471122,
+        "split": "holdout",
+        "sse": 118.20537279737115
+      },
+      {
+        "matrix_ordinal": 15,
+        "relative_residual_energy": 0.14664521093294386,
+        "role": "gate",
+        "slot": 5,
+        "source_energy": 882.0293225790344,
+        "split": "fit",
+        "sse": 129.3453760586441
+      },
+      {
+        "matrix_ordinal": 16,
+        "relative_residual_energy": 0.14620188733227785,
+        "role": "up",
+        "slot": 5,
+        "source_energy": 1052.5524149096336,
+        "split": "fit",
+        "sse": 153.88514957593523
+      },
+      {
+        "matrix_ordinal": 17,
+        "relative_residual_energy": 0.1259247016053001,
+        "role": "down",
+        "slot": 5,
+        "source_energy": 1127.1262351828875,
+        "split": "fit",
+        "sse": 141.9330348369104
+      }
+    ],
+    "strict_early_kill_certificate": {
+      "F_lower_bound": 0.8422425704563797,
+      "after_matrix_ordinal": 4,
+      "why": "remaining SSE is nonnegative"
+    }
+  },
+  "source_trace": [
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 0,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04227708551320857,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03539880066910553,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031775253293819784,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1502072126468648,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.146497034456897,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 1,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04222705181024468,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03532267887391504,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031710014929454036,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14821693926797663,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1447485452572727,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 2,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04259519830268024,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.035634925052883494,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.0319622233402318,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1279144629309514,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12576806251889228,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 3,
+      "trace": [
+        {
+          "relative_residual_energy": 0.043867552603060495,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.036630258215722265,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03280444447137824,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1470825492492768,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1437811197243773,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 4,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04311649632352641,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03601290058107064,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03225723758137069,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14831686774009745,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14461789611608988,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 5,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04338691916789976,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03627279429133504,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.0324991525989499,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12815810974289746,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12600968212600633,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 6,
+      "trace": [
+        {
+          "relative_residual_energy": 0.041512530760246455,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03480625688776067,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03126151212988835,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1472027596920719,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1436473216622234,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 7,
+      "trace": [
+        {
+          "relative_residual_energy": 0.0423372873445542,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.035355938395379295,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031705796323534895,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14849634490070512,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14494962223294539,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 8,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04164660987535058,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03487734548953506,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031307123033280544,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12772676031483055,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12551824430613404,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 9,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04402267749668426,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03668677450426042,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.0328221631216397,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.15444105059149157,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.15033346038126197,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 10,
+      "trace": [
+        {
+          "relative_residual_energy": 0.044049448813214126,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03665820900144523,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.032764128563348614,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14906538287902948,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14559981828696342,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 11,
+      "trace": [
+        {
+          "relative_residual_energy": 0.042594603694986057,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03566517070545976,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.031993806336669234,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12785851835655623,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1256941335685493,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 12,
+      "trace": [
+        {
+          "relative_residual_energy": 0.043802852734668316,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03652084083802563,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03266525652784487,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.14988036746008412,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1462213685607488,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 13,
+      "trace": [
+        {
+          "relative_residual_energy": 0.0433400774129996,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03618224934657772,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03237166954630607,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1506622022008424,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14668069436202705,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 14,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04409162754969492,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03679226624602531,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.032934356004549845,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.1284232719741842,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.1262660962506574,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 15,
+      "trace": [
+        {
+          "relative_residual_energy": 0.044415475924253794,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.037184732129508576,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.033289219585638824,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.15101610623511227,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14730555020129338,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 2048,
+      "N": 768,
+      "matrix_ordinal": 16,
+      "trace": [
+        {
+          "relative_residual_energy": 0.04368397116111957,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.036569623203579475,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.03276523029157722,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.15063394351143394,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.14687850832693186,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    },
+    {
+      "K": 768,
+      "N": 2048,
+      "matrix_ordinal": 17,
+      "trace": [
+        {
+          "relative_residual_energy": 0.042655334743488586,
+          "stage": "continuous_1"
+        },
+        {
+          "relative_residual_energy": 0.03568630258319208,
+          "stage": "continuous_2"
+        },
+        {
+          "relative_residual_energy": 0.032011854695341777,
+          "stage": "continuous_3"
+        },
+        {
+          "relative_residual_energy": 0.12851872033102824,
+          "stage": "cluster_refine_1"
+        },
+        {
+          "relative_residual_energy": 0.12636808307220793,
+          "stage": "cluster_refine_2"
+        }
+      ]
+    }
+  ],
+  "split": {
+    "fit_slots": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "holdout_slots": [
+      1,
+      4
+    ]
+  },
+  "status": "KILL",
+  "target": {
+    "F": 0.8,
+    "promotion_s": 0.18096404744368114,
+    "s": 0.16096404744368115
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "schema": "free-order-swiglu-path-v2-independent-source-audit-receipt-v1",
+  "status": "BLOCK_CONTROL_CORRECTED_NONCONTAINMENT_AND_RUNTIME_CLOSURE",
+  "artifact_set_status": "IMMUTABLE_BLOCK_AUDIT_ARTIFACT_SET",
+  "verdict": "BLOCK",
+  "audit_date_utc": "2026-09-01",
+  "scope": "hostile source-only scientific, statistical, package, evidence, authorization, and I/O firewall audit",
+  "producer_directory": "../free_order_swiglu_path_oracle_v2",
+  "producer_modified": false,
+  "audited_package": {
+    "regular_files": 10,
+    "subdirectories": 0,
+    "total_bytes": 152244,
+    "artifact_manifest_sha256": "a7dc083b8fec762759100c23bb5e8f140642e1032fcbd4b4845be785e7e841f9",
+    "source_only_receipt_sha256": "0fe2e050f0e2ab345e16414d0f3cb64f460586ba4612a009417802ba5711abfe",
+    "source_only_receipt_internal_sha256": "9e656b50e052fe037d376f87faca00bede9b61be08c200494aaefc6192cc4baa",
+    "files": {
+      "ARTIFACT_SHA256SUMS.txt": {"bytes": 776, "sha256": "a7dc083b8fec762759100c23bb5e8f140642e1032fcbd4b4845be785e7e841f9"},
+      "README.md": {"bytes": 14049, "sha256": "af56fa26e813d9c4f227c7b96ccdf45fc28367cbe1840ff1311b3973f29142e0"},
+      "calibrate_runtime.py": {"bytes": 6709, "sha256": "526c5d40304cba9eb6ca8449c0aea734aaeb1be299eab2c89bfea05abae6a883"},
+      "create_authorization.py": {"bytes": 17377, "sha256": "247a6de24279f4f1cacf6f2ba34abfdf6e9f4aef2fb35701c3ce4a931308c18e"},
+      "free_order_oracle_v2.py": {"bytes": 54317, "sha256": "98625fde2c0f1bd2510c5f07fbd9384953fcb8e9b7f7f98d284482c034a94eb2"},
+      "protocol_lock.json": {"bytes": 11962, "sha256": "57a7e4f36a13d12ff61c7966306af8135d8ba182de400106548d314d462380e6"},
+      "source_bindings.json": {"bytes": 2878, "sha256": "3454b718a65efc02c32463f955c10ff393f4218fac04f358107960ff3735990d"},
+      "source_only_receipt.json": {"bytes": 4383, "sha256": "0fe2e050f0e2ab345e16414d0f3cb64f460586ba4612a009417802ba5711abfe"},
+      "test_source_only.py": {"bytes": 24617, "sha256": "559c7660d81a2a13a88ef5c86c726764d3fb6337fff530c6c995270806294964"},
+      "verify_package.py": {"bytes": 15176, "sha256": "d18e12f65c5abc7a8dc7157e385c2aa856ac39f429463f7e9cb0c4911911f20a"}
+    }
+  },
+  "mechanical_replay": {
+    "local_source_tests": {"status": "PASS", "tests_run": 17, "passes": 14, "failures": 0, "errors": 0, "skips": 3},
+    "linux_source_tests": {"status": "PASS", "tests_run": 17, "passes": 17, "failures": 0, "errors": 0, "skips": 0},
+    "local_producer_verifier": {"status": "PASS", "checks": 219},
+    "linux_producer_verifier": {"status": "PASS", "checks": 219},
+    "interpretation": "Mechanical PASS authenticates and reproduces the source package; it does not cure the scientific and entrypoint-closure blockers."
+  },
+  "v1_counterexample_replay": {
+    "status": "PASS_COUNTEREXAMPLE_REACHES_DIRECT_STAGE",
+    "v1_audit_manifest_sha256": "712c1b055a02b5c2957e1fbf5c1bfec9d134a4d7c8ca5f4edfe01614261585b8",
+    "v1_audit_receipt_sha256": "dbe7e018cfb899b56fd46084b017fa345514578f6ff58eee157b57cb4b389de4",
+    "construction": "768 orthonormal vectors in the 2047-dimensional zero-coordinate-mean subspace; neuron i roles are e_i, e_(i+1), e_(i+2) modulo 768",
+    "legal_path": "0,1,...,767",
+    "capture": 1534,
+    "total_energy": 2304,
+    "residual_ratio": 0.3342013888888889,
+    "direct_stage_s_bpw": 0.7906051829300244,
+    "required_gross_s_bpw": 0.1858070514584381,
+    "v2_routing": "PASS_NO_MARGINAL_PREFILTER"
+  },
+  "independent_recomputations": {
+    "weights_per_expert": 4718592,
+    "factoradic_information_bits": 6260,
+    "factoradic_physical_bytes": 783,
+    "factoradic_physical_bits": 6264,
+    "fp16_coefficient_count": 6903,
+    "fp16_coefficient_bits": 110448,
+    "header_bits": 512,
+    "total_side_bits": 117224,
+    "side_bpw": 0.024843004014756944,
+    "required_net_s_bpw": 0.16096404744368115,
+    "required_gross_s_bpw": 0.1858070514584381,
+    "logical_read_amplification": 1.0,
+    "maximum_cold_page_amplification": 1.0054349308378698,
+    "strictly_below_2x": true,
+    "rate_rows": [
+      {"requested_bpw": 2.15, "frame_bytes": 1268121, "actual_bpw": 2.149998982747396, "residual_payload_bpw": 2.125155978732639, "cold_page_bytes": 1273856, "cold_page_amplification": 1.0045224391047858},
+      {"requested_bpw": 2.3, "frame_bytes": 1356595, "actual_bpw": 2.2999996609157987, "residual_payload_bpw": 2.2751566569010415, "cold_page_bytes": 1363968, "cold_page_amplification": 1.0054349308378698},
+      {"requested_bpw": 2.5, "frame_bytes": 1474560, "actual_bpw": 2.5, "residual_payload_bpw": 2.475156995985243, "cold_page_bytes": 1478656, "cold_page_amplification": 1.0027777777777778}
+    ],
+    "all_pairs_3x3": "PASS_EXACT_FRACTION_REGRESSION_IDENTITY_AND_INDEX_DIRECTION",
+    "gross_relaxed_containment": "PASS_FORMAL_NONNEGATIVE_ROW_MAX_PROOF_AND_EXHAUSTIVE_PATHS_N_LE_7",
+    "cycle_cover_path_direction": "PASS_TARGET_ROW_PREDECESSOR_COLUMN_CUT_SEGMENT_BRIDGE",
+    "fp16_residual_replay": "PASS_DIRECT_ANCHOR_PLUS_EDGE_RESIDUAL_AND_F16LE",
+    "matched_control_moments": "PASS_MEAN_AND_CENTERED_3X3_GRAM_ALGEBRA",
+    "statistics": "PASS_IMPLEMENTED_MC_SE_DELETE_EXPERT_JACKKNIFE_AND_QUADRATURE_ARITHMETIC",
+    "statistical_claim_limit": "+3SE over eight controls is a heuristic convention, not a distribution-free confidence guarantee"
+  },
+  "blocking_findings": {
+    "FOSP2-SCI-001": {
+      "severity": "BLOCKING_SCIENTIFIC_FALSE_HARD_KILL",
+      "title": "Control-corrected relaxed score is not an upper bound on control-corrected legal score",
+      "construction": "n=8, three orthogonal roles, zero means, identity per-neuron role Gram; Q per-role AR(1) r=7/8; controls per-role star with hub-leaf r and leaf-leaf rho=r^2",
+      "binary16_coefficients": [0.875, 0.765625],
+      "binary16_roundtrip_exact": true,
+      "qwen_and_control_relaxed_s_equal": true,
+      "relaxed_control_corrected_plus_3se_s_bpw": 0.0,
+      "control_mc_se_bpw": 0.0,
+      "delete_one_expert_jackknife_se_bpw": 0.0,
+      "producer_decision": "HARD_KILL_CONTROL_CORRECTED_RELAXED_UPPER_BOUND",
+      "qwen_legal_fp16_s_bpw": 0.7995602818589078,
+      "control_legal_fp16_s_bpw": 0.5885652320580218,
+      "legal_control_corrected_s_bpw": 0.21099504980088601,
+      "required_gross_s_bpw": 0.1858070514584381,
+      "contradiction": "the frozen hard kill can fire although its already-defined legal FP16 survival statistic exceeds target",
+      "actionable_repair": "Keep only the gross Qwen relaxed hard kill; remove the corrected-relaxed hard kill or subtract a proved lower bound on legal control score, and never discard an evaluated legal-FP16 survivor."
+    },
+    "FOSP2-FW-001": {
+      "severity": "BLOCKING_PREAUTH_CODE_EXECUTION",
+      "title": "Unsealed import package executes before artifact and authorization preflight",
+      "exploit_status": "REPRODUCED_CODE_EXECUTION_BEFORE_PREFLIGHT",
+      "injected_object": "top-level json/__init__.py directory member",
+      "producer_artifact_checker_status": "ACCEPTED_UNSEALED_DIRECTORY",
+      "producer_regular_file_hashes_unchanged": true,
+      "affected_entrypoints": ["free_order_oracle_v2.py", "calibrate_runtime.py", "create_authorization.py"],
+      "actionable_repair": "Use an external closed launcher to reject every non-manifest directory object before execution, execute opened/hash-bound runner bytes from an immutable descriptor, use isolated safe-path mode and a sealed dependency/runtime import closure."
+    },
+    "FOSP2-FW-002": {
+      "severity": "BLOCKING_EVIDENCE_CLOSURE",
+      "title": "Audit manifest verifier row is trusted without opening or hashing verifier bytes",
+      "synthetic_manifest_status": "ACCEPTED_WITHOUT_OPENING_OR_HASHING_VERIFIER",
+      "canonical_json_is_signature": false,
+      "actionable_repair": "Bind a trusted exact audit-manifest digest or open/hash every member from a held exact-closure directory and execute the verifier with a sealed interpreter; reject duplicate JSON keys."
+    }
+  },
+  "firewall_audit": {
+    "fixed_source_bindings_and_hashes": "PASS_SOURCE_ONLY",
+    "closed_payload_cli": "PASS_SOURCE_ONLY",
+    "descriptor_relative_source_no_follow": "PASS_STATIC_AND_LINUX_TEST",
+    "exact_authorization_hash_seal_run_id_paths_runtime": "PASS_STATIC_AND_TESTS_CONDITIONAL_ON_TRUSTED_ENTRYPOINT",
+    "held_output_parent_and_create_new_exclusive": "PASS_STATIC_AND_LINUX_TEST_CONDITIONAL_ON_TRUSTED_ENTRYPOINT",
+    "package_object_closure_before_import": "BLOCK_FOSP2-FW-001",
+    "independent_audit_verifier_closure": "BLOCK_FOSP2-FW-002",
+    "duplicate_json_key_rejection": "MISSING_HARDENING",
+    "source_run_authorized": false,
+    "runtime_calibration_authorized": false,
+    "production_authorization_issued": false
+  },
+  "blocking_decision": {
+    "runtime_calibration": "BLOCKED",
+    "auxiliary_payload_execution": "BLOCKED",
+    "production_authorization": "BLOCKED",
+    "reason_codes": ["CONTROL_CORRECTED_RELAXATION_NONCONTAINMENT", "UNSEALED_PREAUTH_IMPORT_EXECUTION", "AUDIT_VERIFIER_NOT_BYTE_BOUND"],
+    "successor_requirement": "Refreeze a v3 that removes the invalid corrected-relaxed hard kill and establishes pre-execution package/dependency closure with a real audit-verifier trust binding; then repeat independent source audit before calibration or payload access."
+  },
+  "zero_access_ledger": {
+    "qwen_or_model_payload_files_opened": 0,
+    "qwen_or_model_payload_bytes_read": 0,
+    "binding_relative_paths_followed": 0,
+    "pinned_panel_files_opened": 0,
+    "validation_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_api_calls": 0,
+    "gpu_device_calls": 0,
+    "external_data_fetches": 0,
+    "runtime_authorizations_issued": 0,
+    "production_outputs_opened": 0,
+    "producer_files_modified": 0,
+    "runpod_source_only_replay_connections": 1,
+    "note": "SSH/SCP accessed only the exact source-package scratch; no binding or payload path was resolved or opened."
+  },
+  "canonical_unsigned_sha256": "9280d36bf689e4540fe39c6676c2243d261ba056854ff2198b779c9ead960f53"
+}

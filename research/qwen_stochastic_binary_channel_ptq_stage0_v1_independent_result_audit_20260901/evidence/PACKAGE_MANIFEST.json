@@ -1,0 +1,42 @@
+{
+  "schema": "qwen_stochastic_binary_channel_ptq_stage0_manifest_v1",
+  "closed_world": true,
+  "self_entry_policy": "this manifest governs the other seven exact closure files; its own digest is the external package pin emitted by verify_design.py",
+  "entries": [
+    {
+      "path": "README.md",
+      "bytes": 7052,
+      "sha256": "52d5282965b96432dde493ddbb08c01ed68169b575947f3116972c8cec3b8ddb"
+    },
+    {
+      "path": "design_lock.json",
+      "bytes": 14801,
+      "sha256": "bbf618ae4a6a3b1195e8c844cefb1e47c492b2330094ffa83fc45cc63af847f7"
+    },
+    {
+      "path": "panel_bindings.json",
+      "bytes": 5959,
+      "sha256": "5c5f1b6afcb85b91591f44ba8165ae4067a93b53e056eec1e20d8624a081df0d"
+    },
+    {
+      "path": "source_only_receipt.json",
+      "bytes": 2537,
+      "sha256": "d2e9df7a9feb64590727e6c498f8c8588c1ed06af41f5759b95a8d8ff6008f11"
+    },
+    {
+      "path": "stage0_screen.py",
+      "bytes": 24260,
+      "sha256": "8e697f3f1dde5e79cec7619a00366d009a3c926f3de03650358be625bf4cacfe"
+    },
+    {
+      "path": "test_source_only.py",
+      "bytes": 5279,
+      "sha256": "8582c94509613dd4a2c8a9c717a69f885de99c51c451ddfe63e0dbf73a639143"
+    },
+    {
+      "path": "verify_design.py",
+      "bytes": 24581,
+      "sha256": "0d96fa1695bb522148369de2b186534d56d99c8ded2deaa0dab4495c8df3fa4c"
+    }
+  ]
+}

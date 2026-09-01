@@ -1,0 +1,53 @@
+{
+  "schema": "free-order-swiglu-path-v2-independent-source-replay-receipt-v1",
+  "status": "SOURCE_ONLY_REPLAY_COMPLETE_BLOCK_CONFIRMED",
+  "date_utc": "2026-09-01",
+  "producer_manifest_sha256": "a7dc083b8fec762759100c23bb5e8f140642e1032fcbd4b4845be785e7e841f9",
+  "local_windows": {
+    "python_executable": "C:\\Users\\arian\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "test_command": "python -B -I research/free_order_swiglu_path_oracle_v2/test_source_only.py",
+    "tests_run": 17,
+    "passes": 14,
+    "failures": 0,
+    "errors": 0,
+    "skips": 3,
+    "skipped_tests": [
+      "test_held_output_parent_detects_replacement",
+      "test_symlinked_evidence_component_fails_closed",
+      "test_valid_external_evidence_is_opened_and_bound"
+    ],
+    "producer_verifier_command": "python -B -I research/free_order_swiglu_path_oracle_v2/verify_package.py",
+    "producer_verifier_status": "PASS",
+    "producer_verifier_checks": 219
+  },
+  "linux_runpod": {
+    "host_contact": "root@74.2.96.53:12079",
+    "scratch_directory": "/var/tmp/int2_fosp_v2_source_audit_a7dc083b/producer",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "python_version": "3.12.3",
+    "test_command": "/workspace/int2-cupy-venv/bin/python -B -I test_source_only.py",
+    "tests_run": 17,
+    "passes": 17,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "all_three_windows_skipped_security_tests_passed": true,
+    "producer_verifier_command": "/workspace/int2-cupy-venv/bin/python -B -I verify_package.py",
+    "producer_verifier_status": "PASS",
+    "producer_verifier_checks": 219,
+    "model_or_payload_paths_accessed": 0,
+    "cupy_imports": 0,
+    "cuda_or_gpu_calls": 0
+  },
+  "remote_hashes_match_local": true,
+  "producer_tree_unchanged_after_replay": true,
+  "independent_verifier": {
+    "command": "python -B -I verify_audit.py",
+    "expected_status": "BLOCK_CONFIRMED",
+    "expected_checks": 7935,
+    "heavy_imports": 0,
+    "payload_access": 0
+  },
+  "interpretation": "Both platforms reproduce the producer's mechanical PASS. Independent hostile checks still require BLOCK for the false corrected hard bound and preflight/evidence closure failures.",
+  "canonical_unsigned_sha256": "adabe2f0464d73c92fbf63190a7c903123a8a5674221eb4481c3cfffc680505d"
+}

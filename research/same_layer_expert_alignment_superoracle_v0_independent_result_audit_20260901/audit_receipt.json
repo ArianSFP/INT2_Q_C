@@ -1,0 +1,37 @@
+{
+  "schema": "same_layer_alignment_independent_result_audit_receipt_v0",
+  "verdict": "PASS_NARROW_UP_DOWN_ANCESTRY_KILL_WITH_SELECTION_RECEIPT_LIMITATION",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 8,
+  "result_sha256": "a1ef6fb136027525b6312635cdcca320f05f51c1340c3875b32192454aac1bb3",
+  "source_manifest_sha256": "acececae8d58b19126ce69486ae076ee4a1ded956f42935ea6ce921c0c5cd1c0",
+  "result_origin_path": "research/same_layer_expert_alignment_superoracle_v0_runpod_result_20260901/result.json",
+  "recomputed": {
+    "source_receipts": 32,
+    "target_role_rows": 32,
+    "pooled_capture": 0.015534903625203362,
+    "favourable_capture": 0.016534903625203354,
+    "required_capture": 0.14566207552117194,
+    "shortfall": 0.1291271718959686,
+    "decision": "HARD_KILL_SAME_LAYER_UP_DOWN_ANCESTRY"
+  },
+  "selection_receipt_assessment": {
+    "sealed_mapping_construction_structurally_valid": true,
+    "source_receipt_cartesian_mapping_valid": true,
+    "selection_hashes_present_and_unique": 32,
+    "mapping_replayable_from_result_only": false,
+    "limitation": "result emits SHA-256 of selected (expert,row) pairs but not the pairs themselves"
+  },
+  "access": {
+    "copied_result_files_opened": 1,
+    "copied_source_evidence_files_opened": 3,
+    "qwen_auxiliary_payload_files_opened": 0,
+    "pinned_payload_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0
+  },
+  "claim_boundary": "Kill applies only to same-layer Up/Down ancestry as the sole missing module; Gate, nonlinear/shared generative, and activation-aware codecs remain outside scope.",
+  "verifier_check_count": 121,
+  "receipt_sha256": "fe66aabbb29fc59a9e6069d48903b6931f11ea22ed9b225139532447fbb3b3c3"
+}

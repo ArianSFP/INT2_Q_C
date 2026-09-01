@@ -1,0 +1,72 @@
+{
+  "schema": "polar_sparse_normal_qwen_gate_protocol_v1",
+  "date_utc": "2026-09-01",
+  "lineage": {
+    "source_only_package": "../polar_sparse_normal_oracle_v1",
+    "source_only_manifest_sha256": "23a7566cf9ead5191c778a9dda30e880646a32d81357ff940182dc74e11bfe99",
+    "parent_predictor_result": "../polar_normal_predictor/result.json",
+    "parent_predictor_result_sha256": "e4fecac5f676d84739972bbf0e04467027aeae1356e62e1dc3cd2b84bff67026",
+    "parent_predictor_script_sha256": "04d033319b4bbab037b48355e5f296274ae77b1c787ddcd2508e9b58948d265e",
+    "composite_result_sha256": "565e1eb2122f2e476c5bd81e4205eeb3e4cede6e6a51149e95944355199eb41c",
+    "source_lock_file_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23"
+  },
+  "authorized_data_scope": {
+    "checkpoint": "Qwen/Qwen3-30B-A3B@ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "matrices": 18,
+    "experts": 6,
+    "roles": ["gate", "up", "down"],
+    "canonical_matrix_shape": [768, 2048],
+    "normal_shape": [768, 768],
+    "fresh_validation_access": false,
+    "router_access": false
+  },
+  "objective": {
+    "physical_rate_bpw": 2.5,
+    "target_F_maximum": 0.8,
+    "base_side_bpw": 0.0011701230649594908,
+    "hard_value_ledger_bits_per_selected_coordinate": 1,
+    "selected_values_reconstructed_continuously_without_error": true,
+    "support_bits": "exact ceil(log2 binomial(n,k))",
+    "headers_and_mode_labels_bits": 0
+  },
+  "families": {
+    "arbitrary_coordinate": {
+      "options": "every k from 0 through all 295296 orthonormal symmetric coordinates",
+      "capture": "exact best-k descending squared coefficient energy",
+      "decision_eligible": true
+    },
+    "fixed_triangular_tiles": {
+      "block_sizes": [8, 16, 32, 64],
+      "actual_curve": "descending exact group-energy prefix",
+      "gross_relaxation": "at each group count, arbitrary-coordinate capture at the largest possible selected coordinate count, largest DOF removal, and smallest possible value count",
+      "broad_family_kill_only_from_gross_relaxation": true
+    },
+    "fixed_offset_segments": {
+      "segment_lengths": [8, 16, 32, 64],
+      "actual_curve": "descending exact group-energy prefix",
+      "gross_relaxation": "same three-way optimistic relaxation as tiles",
+      "broad_family_kill_only_from_gross_relaxation": true
+    }
+  },
+  "dual": {
+    "form": "L(lambda)=-lambda*(R-base_side)+sum_j min_r[D_j(r)+lambda*r]+sum_i min_option[normal_phi_i+lambda*exact_side_i]",
+    "normal_phi": "min over nonnegative payload rate, evaluated analytically",
+    "discrete_options": "exhaustive for each emitted curve",
+    "multipliers": "fixed log grid plus deterministic concave golden refinement",
+    "claim": "every evaluated value is a lower bound; missing the maximum can only weaken a kill",
+    "rounding_allowance_distortion": 1e-9,
+    "hard_kill_rule": "(dual_distortion-allowance)*2^5 > 0.8"
+  },
+  "controls": {
+    "type": "Gaussian-rank spatial permutations preserving each matrix's exact absolute coefficient multiset and normal energy",
+    "replicates": 8,
+    "seeds": [27090101, 27090119, 27090143, 27090171, 27090207, 27090231, 27090263, 27090299],
+    "decision_eligible": false
+  },
+  "read_contract": {
+    "expert_local_sparse_frame": true,
+    "logical_read_amplification": 1.0,
+    "shared_cold_bytes": 0,
+    "dense_normal_materialization": false
+  }
+}

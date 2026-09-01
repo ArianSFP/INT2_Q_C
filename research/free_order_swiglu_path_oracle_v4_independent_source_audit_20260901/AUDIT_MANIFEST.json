@@ -1,0 +1,12 @@
+{
+  "schema": "free_order_swiglu_path_v4_independent_audit_manifest_v1",
+  "status": "SEALED_BLOCK_AUDIT",
+  "artifact_count": 4,
+  "artifacts": [
+    {"path": "README.md", "bytes": 5987, "sha256": "9f1318f50d47b8a23123ceb3a0ffd9f169cb29a7462546ab030df18b8baf635e"},
+    {"path": "replay_receipt.json", "bytes": 3098, "sha256": "9a1d897be9a035dc4d8317ed241cdba830507daadb71c6c972baba66ff1d80c7"},
+    {"path": "verdict.json", "bytes": 6629, "sha256": "157b1bc5db9795141eb51ecb3f868f5ef8f3fcb7a7a8b13b888125aed1a60ae9"},
+    {"path": "verify_audit.py", "bytes": 34527, "sha256": "6e080b2074d774659ab9c46a51d4275452d6467a2f6259344c781c682b0533fa"}
+  ],
+  "authorization": "NONE"
+}

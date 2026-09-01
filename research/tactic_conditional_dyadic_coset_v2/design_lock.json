@@ -1,0 +1,169 @@
+{
+  "schema": "tactic_dh384_source_only_design_v2",
+  "status": "FROZEN_SOURCE_ONLY_NO_PAYLOAD_NO_GPU_AUTHORITY",
+  "name": "TACTIC-DH384-v2",
+  "objective": {
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "cell_rate_bpw": 2.5,
+    "target_F_max": 0.8,
+    "target_relative_mse_at_cell_rate": 0.025,
+    "cold_read_limit_exclusive": 2.0
+  },
+  "geometry": {
+    "experts": 6,
+    "roles": ["gate", "up", "down_transposed"],
+    "rows": 768,
+    "columns": 2048,
+    "weights_per_matrix": 1572864,
+    "weights_per_expert": 4718592,
+    "weights_total": 28311552,
+    "streams_per_expert": 18,
+    "stream_values": 262144,
+    "blocks_per_stream": 64,
+    "block_values": 4096,
+    "blocks_per_expert": 1152,
+    "tangent_rank": 384
+  },
+  "conditional_dyadic_frame": {
+    "stages": 12,
+    "feature_states": 256,
+    "selector_searches": 0,
+    "universal_selector_ordinal": 17,
+    "selector_entry_bytes": 1,
+    "selector_active_bytes": 3072,
+    "selector_packet_bytes": 16384,
+    "selector_packet_sha256": "0946880088b766265a29d7d84ef4165a92a636eba0877dee9ce8b5b43dac56ad",
+    "packet_prg": "SplitMix64 with the single domain in tactic_v2_common.py",
+    "selector_selection": "ordinal 17 frozen before every source; no fit, search, retry, or model-dependent choice",
+    "pair_map": "optional swap and independent signs followed by (u+v,u-v)",
+    "normalization": "one exact factor 1/64 after twelve stages",
+    "support": "latent coordinates [0,384)",
+    "decision_dependencies": [
+      "canonical integer coarse symbols from the same block",
+      "role ordinal",
+      "stage ordinal",
+      "fixed block shape",
+      "serialized selector table"
+    ],
+    "forbidden_dependencies": [
+      "source or residual at decode",
+      "tangent message while choosing the frame",
+      "model, layer, expert, checkpoint or provenance identity",
+      "another expert payload",
+      "router or activation values",
+      "unserialized tables or parameters"
+    ],
+    "finite_linearity": "exact signed integer sums/differences with no intermediate rounding or saturation; one public rational output scale",
+    "q12_abs_max": 2047,
+    "worst_unscaled_accumulator_abs_inclusive": 8384512,
+    "required_accumulator": "signed int64"
+  },
+  "universality_contract": {
+    "scope": "Every canonical SwiGLU-MoE expert triplet; evaluation geometry may be fixed, but the decoder rule is model- and provenance-agnostic",
+    "canonicalization": "Gate rows, Up rows and transposed Down columns are role-labelled, flattened in row-major order, partitioned into literal 4096-value blocks, and zero-padded only when fixed shape metadata requires it",
+    "allowed_decoder_inputs": [
+      "canonical integer coarse symbols from the same 4096-value block",
+      "fixed role ordinal",
+      "fixed shape, block position and stage metadata",
+      "the physically transmitted universal packet"
+    ],
+    "actually_used_by_frame": [
+      "canonical integer coarse symbols from the same 4096-value block",
+      "fixed role ordinal",
+      "stage ordinal",
+      "the physically transmitted universal selector table"
+    ],
+    "model_identity_inputs": [],
+    "provenance_inputs": [],
+    "external_reference_reads": [],
+    "source_fitted_parameters": [],
+    "forbidden": "No selector fitting, candidate choice, seed retry, lookup by model/layer/expert identity, Qwen table, calibration reference, external expert, or external corpus",
+    "packet_construction": "The selector is source-free SplitMix64 domain 0x5441435449434448 ordinal 17; all schema/QC/fixture bytes are universal and physically charged",
+    "padding_policy": "Padding is determined only by fixed shape metadata, is decoded as zero, and every stored padding byte is charged"
+  },
+  "physical_ledger": {
+    "global_schema_bytes": 4096,
+    "global_selector_packet_bytes": 16384,
+    "global_qc_tables_bytes": 2048,
+    "global_seed_fixture_bytes": 2048,
+    "global_packet_bytes": 24576,
+    "expert_header_bytes": 512,
+    "coset_bits_per_block": 384,
+    "coset_bytes_per_block": 48,
+    "coset_bytes_per_expert": 55296,
+    "coarse_bytes_per_stream": 78592,
+    "coarse_bytes_per_expert": 1414656,
+    "expert_frame_bytes": 1470464,
+    "container_bytes": 8847360,
+    "container_bits": 70778880,
+    "coarse_bpw": 2.3984375,
+    "coset_bpw": 0.09375,
+    "metadata_bpw": 0.0078125,
+    "physical_bpw": 2.5,
+    "all_padding_charged": true,
+    "fixed_reservoir_overflow_is_failure": true
+  },
+  "cold_read_ledger": {
+    "page_bytes": 4096,
+    "global_pages": 6,
+    "expert_frame_pages": 359,
+    "cold_pages": 365,
+    "equal_share_pages": 360,
+    "amplification": 1.0138888888888888,
+    "warm_cache_assumed": false,
+    "compressed_frame_reads": 1
+  },
+  "coarse_lock_contract": {
+    "schema": "tactic_dh384_actual_coarse_lock_v2",
+    "panel_kinds_in_order": ["source", "decoded_gaussian", "structure_destroyed"],
+    "must_bind_actual_rate_bpw": 2.3984375,
+    "must_bind_streams_per_panel": 108,
+    "must_bind_bytes_per_stream": 78592,
+    "must_bind_source_reconstruction_and_symbol_records_per_panel": 18,
+    "must_bind_decode_reencode_receipts_per_panel": 1,
+    "canonical_source_dtype": "little-endian BF16",
+    "canonical_reconstruction_dtype": "little-endian float32",
+    "canonical_symbol_dtype": "little-endian int16",
+    "decode_reencode_required_for_every_panel": true,
+    "all_stream_reservoirs_required_for_every_panel": true,
+    "held_fd_policy": "component-walk O_NOFOLLOW; fstat regular; hash/read same descriptor; hold all component and file descriptors through seal",
+    "path_policy": "absolute coarse lock and absent absolute output; record paths are strict relative names below one held root"
+  },
+  "evaluation": {
+    "decision_expert_ordinals": [0, 1, 2, 3, 4, 5],
+    "selector_fit_expert_ordinals": [],
+    "cluster_unit": "whole expert",
+    "architecture_parameters_selected_from_evaluation": false
+  },
+  "planning_gate": {
+    "published_finite_base_F_at_2p5": 0.9888693569009007,
+    "planning_factor_transfer_only": true,
+    "planning_D0_at_coarse_rate": 0.035574242296714034,
+    "planning_c_required": 0.2972443434920543,
+    "isotropic_rank_capture": 0.09375,
+    "required_over_isotropic": 3.1706063305819128,
+    "runtime_c_required": "1 - 0.025 / measured_actual_lower_rate_D0",
+    "oracle": "arbitrary real coefficients in the exact decoded rank-384 frame",
+    "hard_reject": "capture + 3*whole_expert_SE < runtime_c_required",
+    "promote": "capture - 3*whole_expert_SE >= runtime_c_required and every expert/role fold positive",
+    "otherwise": "HOLD_INCONCLUSIVE",
+    "deterministic_complete_object_stop": "accumulated oracle SSE > 0.025 * total source energy",
+    "finite_followup": "literal 384-bit records, independently decoded Q12 coefficients, F<=0.8, exact rate/read and no overflow"
+  },
+  "controls": {
+    "open_only_after_absolute_source_oracle_survives": true,
+    "decoded_gaussian": "independently row-moment-matched and independently encoded through the exact same finite coarse channel",
+    "structure_destroyed": "independently energy-preserving sign/permutation source and exact same finite coarse channel",
+    "identical_effort": "same one universal selector packet, projection, finite search budget, bytes and reads; no panel may fit or choose architecture parameters",
+    "interpretation": "diagnostic at the continuous stage; a finite source result must beat both controls for final promotion",
+    "not_a_converse": true
+  },
+  "authorization": {
+    "synthetic_preflight": "SYNTHETIC_ONLY_TACTIC_DH384_V2",
+    "future_payload_gate": "OPEN_AUTHENTICATED_ACTUAL_LOWER_RATE_TACTIC_DH384_V2",
+    "source_package_authorizes_payload": false,
+    "source_package_authorizes_gpu": false,
+    "independent_source_review_required_before_synthetic_gpu": true
+  },
+  "claim_boundary": "One universal exact rank-384 decoded-symbol-conditioned dyadic cell. No payload result, codec achievement, universal decoder converse, composite addition, model-wide result, or launch authority."
+}

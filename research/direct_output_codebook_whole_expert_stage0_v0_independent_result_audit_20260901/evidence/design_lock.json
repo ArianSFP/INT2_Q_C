@@ -1,0 +1,81 @@
+{
+  "architecture": {
+    "code_count": 32768,
+    "codeword_storage": "one canonical little-endian FP16 32768x8 output-space table",
+    "condition": "none; one literal table is shared by all roles, layers, and experts",
+    "index_bits_per_vector": 15,
+    "name": "DOCB-WE-S0-v0",
+    "training": "deterministic stratified initialization, 1024 minibatch Lloyd updates, checkpoint empty/stale-cluster repair, then one complete Lloyd refinement pass",
+    "vector_dimension": 8
+  },
+  "claim_boundary": "A kill rejects only this frozen direct-output K=32768,d=8 K-means cell on the authenticated six-expert split. A promotion is an ideal-Gaussian-residual feasibility result on two held-out experts, not a finite residual codec, model-wide generalization, fresh-validation result, or target achievement.",
+  "execution": {
+    "authorization_literal": "OPEN_AUTHENTICATED_18_MATRIX_PANEL_FOR_DIRECT_OUTPUT_CODEBOOK_STAGE0_V0",
+    "checkpoint_steps": [128, 256, 512, 1024],
+    "code_tile": 2048,
+    "evaluation_vector_batch": 4096,
+    "full_lloyd_passes": 1,
+    "minibatch_vectors": 4096,
+    "probe_vectors_per_fit_matrix": 4096,
+    "reseed_candidates_per_update": 128,
+    "seeds": [2026090111, 2026090112],
+    "steps": 1024,
+    "target_device": "NVIDIA RTX 5090",
+    "whole_holdout_evaluation": "exact nearest canonical-FP16 codeword for every vector in all six holdout matrices"
+  },
+  "fixed_collapse_checkpoints": [
+    {"maximum_fit_probe_q": 0.30, "minimum_probe_codes_used": 2048, "step": 128},
+    {"maximum_fit_probe_q": 0.25, "minimum_probe_codes_used": 4096, "step": 256},
+    {"maximum_fit_probe_q": 0.20, "minimum_probe_codes_used": 8192, "step": 512},
+    {"maximum_fit_probe_q": 0.16, "minimum_probe_codes_used": 12288, "step": 1024},
+    {"maximum_fit_probe_q": 0.14, "minimum_probe_codes_used": 16000, "step": "full_lloyd_1"}
+  ],
+  "gaussian_control": {
+    "generation_seed_base": 70707101,
+    "matching": "each synthetic natural row is independently standardized and affinely mapped to the corresponding source row mean and RMS",
+    "training_and_evaluation": "same split, initialization, updates, checkpoints, empty-cluster policy, exact search, FP16 serialization, and rate ledger as source"
+  },
+  "oracle": {
+    "definition": "canonical FP16 direct table with exact output-space assignment followed by an ideal continuous Gaussian residual code using every residual bit",
+    "hard_kill": "KILL if both predeclared source seeds have pooled F>0.8; an early collapse is recorded separately but does not replace exact held-out oracle scoring",
+    "promote": "PROMOTE only if both source seeds have pooled s>=0.18096404744368115, every held-out expert has F<=0.8 in both seeds, both matched advantages are positive, and neither source seed tripped a collapse checkpoint",
+    "promotion_margin_s": 0.02,
+    "scope": "only the exact direct-output K-means training cell; not a converse for arbitrary vector quantizers or nonlinear codecs",
+    "target_F": 0.8,
+    "target_s": 0.16096404744368115
+  },
+  "panel": {
+    "dtype": "BF16",
+    "expert_count": 6,
+    "fit_slots": [0, 2, 3, 5],
+    "holdout_slots": [1, 4],
+    "matrix_count": 18,
+    "matrix_order_per_expert": ["gate", "up", "down"],
+    "slot_identities": [
+      {"expert": 18, "layer": 5, "slot": 0, "split": "fit"},
+      {"expert": 7, "layer": 12, "slot": 1, "split": "holdout"},
+      {"expert": 20, "layer": 18, "slot": 2, "split": "fit"},
+      {"expert": 83, "layer": 28, "slot": 3, "split": "fit"},
+      {"expert": 76, "layer": 36, "slot": 4, "split": "holdout"},
+      {"expert": 41, "layer": 45, "slot": 5, "split": "fit"}
+    ],
+    "source_lock_bytes": 46013,
+    "source_lock_file_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+    "source_lock_internal_sha256": "5a82dac742110d4f48bbd73ae82081e1622b10b660b7850dadfe613ff475cc5b",
+    "source_lock_relpath": "blind_protocol_v2/unblinded/source_hashes.lock.json",
+    "source_payload_resolution": "each output_relpath is resolved beneath the authenticated lock parent blind_protocol_v2/unblinded",
+    "source_values": 28311552
+  },
+  "rate": {
+    "codebook_fp16_bytes": 524288,
+    "expert_header_bytes": 64,
+    "expert_values": 4718592,
+    "global_header_bytes": 4096,
+    "global_side_bytes": 528384,
+    "index_bytes_per_expert": 1105920,
+    "physical_rates_bpw": [2.15, 2.3, 2.5],
+    "row_moments_fp16_bytes_per_expert": 9216,
+    "whole_layer_128_ledger_is_arithmetic_only": true
+  },
+  "schema": "direct-output-codebook-whole-expert-stage0-design-lock-v0"
+}

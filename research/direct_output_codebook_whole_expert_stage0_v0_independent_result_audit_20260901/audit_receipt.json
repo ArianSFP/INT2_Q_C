@@ -1,0 +1,33 @@
+{
+  "schema": "direct_output_d8_independent_result_audit_receipt_v0",
+  "verdict": "PASS_NARROW_DIRECT_D8_KILL_WITHOUT_COLLAPSE",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 16,
+  "result_sha256": "701e3ebe3da89c4fa5e72bca335a1b33e7bb57937851956ee139630d26b9b991",
+  "result_origin_path": "research/direct_output_codebook_whole_expert_stage0_v0_runpod_result_20260901",
+  "source_manifest_sha256": "1486475e08c4dd92beda97d60ea6290b468ea9b88beb9bc9b21a460d5ff0406a",
+  "recomputed": {
+    "binary_artifacts": 8,
+    "finite_fp16_artifacts": 8,
+    "seed_source_runs": 2,
+    "seed_gaussian_runs": 2,
+    "checkpoint_rows": 20,
+    "checkpoint_failures": 0,
+    "collapse_runs": 0,
+    "source_F_above_target": 2,
+    "matched_advantages_positive": 0,
+    "decision": "KILL"
+  },
+  "access": {
+    "copied_result_json_opened": 1,
+    "copied_binary_artifacts_opened": 8,
+    "copied_source_evidence_files_opened": 3,
+    "qwen_numeric_payload_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0
+  },
+  "claim_boundary": "Kill applies only to the exact frozen direct-output K=32768,d=8 cell and its ideal residual oracle; it is not a converse for arbitrary VQ or a finite codec result.",
+  "verifier_check_count": 280,
+  "receipt_sha256": "ac4b1c66302a9e2cb6a5ded2ab5d66be956ae3bb67a6eb3cadac9356a6bab946"
+}

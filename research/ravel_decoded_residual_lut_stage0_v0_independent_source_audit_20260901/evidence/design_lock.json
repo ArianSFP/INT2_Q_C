@@ -1,0 +1,53 @@
+{
+  "schema": "ravel-decoded-residual-lut-stage0-design-lock-v0",
+  "status": "SOURCE_CANDIDATE_NOT_EXECUTED",
+  "architecture": {
+    "name": "RAVEL-6144-v0",
+    "feature_dependency": "decoded reconstruction only",
+    "roles": 3,
+    "row_rms_classes": 4,
+    "amplitude_bins": 32,
+    "left_edge_states": 4,
+    "right_edge_states": 4,
+    "table_entries": 6144,
+    "table_dtype": "little-endian FP16",
+    "packet_bytes": 16384
+  },
+  "split": {
+    "fit_expert_ordinals": [0, 2, 3, 5],
+    "holdout_expert_ordinals": [1, 4],
+    "matrix_roles": ["gate", "up", "down"]
+  },
+  "panel": {
+    "experts": 6,
+    "matrices": 18,
+    "weights_per_expert": 4718592,
+    "weights": 28311552,
+    "baseline_sse": 500.39553685426534,
+    "baseline_energy": 16192.89450885593,
+    "baseline_F": 0.9888693569009007,
+    "plan_file_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "plan_internal_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "header_sha256": "3c16bcf308c0cfce2071be24bf612d202360510084540aa0b358938d8399a538",
+    "decoded_reconstruction_sha256": "af801b41a37774d3f0ea65a00d929ff0004122caf4a5632457dbbe232e3f84d0"
+  },
+  "rate_and_read": {
+    "side_bpw": 0.004629629629629629,
+    "physical_total_rate_cap_bpw": 2.5,
+    "base_payload_cap_bpw": 2.4953703703703702,
+    "published_worst_cold_page_read_amplification": 1.1694444444444445,
+    "conservative_extra_table_pages": 4,
+    "conservative_cold_page_read_amplification": 1.1805555555555556,
+    "strict_read_limit": 2.0
+  },
+  "oracle": {
+    "definition": "exact FP64 holdout-self-fit least-squares mean residual in every frozen lookup cell",
+    "source_leaking": true,
+    "emitted": false,
+    "favorable_transfer": "multiply corrected SSE ratio by 2^(2*side_bpw)",
+    "kill": "source-leaking heldout favorable F > 0.8",
+    "survive": "source-leaking heldout favorable F <= 0.8; requires controls and reduced-rate finite re-encode"
+  },
+  "authorization": "OPEN_AUTHENTICATED_DECODED_PANEL_FOR_RAVEL_STAGE0_V0",
+  "claim_boundary": "Frozen decoded nonlinear LUT cell only; not a universal residual-code converse or achieved compression result."
+}

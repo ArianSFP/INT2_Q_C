@@ -1,0 +1,128 @@
+{
+  "schema": "free_order_swiglu_path_v4_independent_source_audit_verdict_v1",
+  "status": "BLOCK_RUNTIME_TRUST_AND_NATIVE_ENFORCEMENT_INCOMPLETE",
+  "verdict": "BLOCK",
+  "audit_date_utc": "2026-09-01",
+  "scope": "independent hostile source-only science, rate/read, package-closure, and pre-Python trust-boundary audit",
+  "producer_directory": "../free_order_swiglu_path_oracle_v4",
+  "producer_modified": false,
+  "v3_audit_evidence_used": false,
+  "audited_package": {
+    "regular_files": 11,
+    "subdirectories": 0,
+    "total_bytes": 89408,
+    "package_manifest_sha256": "9762c7edffc86d21f4400d4fac37ecab33c75ede6f7f9ab7c3ef5b95fe51e066",
+    "scientific_oracle_v3_sha256": "9ca6f4bdd4150c8c0c68c0a298c00eb45c088a4af287895ebfdf9bf1e661a070",
+    "scientific_protocol_v3_sha256": "f4660cb8876a749eb1635dbf010a8df6199e845b0517dd8b15039ac9cf1fd097",
+    "exact_object_closure": "PASS"
+  },
+  "science": {
+    "verdict": "PASS_FROZEN_V3_SCIENCE",
+    "v3_oracle_byte_identity": true,
+    "v3_protocol_byte_identity": true,
+    "gross_qwen_relaxed_is_only_family_hard_kill": true,
+    "corrected_relaxed_decision_eligible": false,
+    "legal_fp16_computed_before_control_corrected_decision": true,
+    "legal_fp16_failure_claim": "OPTIMIZATION_GAP_AMBIGUITY_NOT_FAMILY_KILL",
+    "n8_regression": {
+      "corrected_relaxed_s_bpw": 0.0,
+      "qwen_legal_fp16_s_bpw": 0.7995602818589078,
+      "control_legal_fp16_s_bpw": 0.5885652320580218,
+      "corrected_legal_fp16_s_bpw": 0.21099504980088601,
+      "required_gross_s_bpw": 0.1858070514584381,
+      "survives": true
+    }
+  },
+  "rate_read": {
+    "verdict": "PASS_EXACT_ARITHMETIC",
+    "weights_per_expert": 4718592,
+    "header_bits": 512,
+    "factoradic_information_bits": 6260,
+    "factoradic_physical_bits": 6264,
+    "coefficient_count": 6903,
+    "coefficient_bits": 110448,
+    "total_side_bits": 117224,
+    "side_bpw": 0.024843004014756944,
+    "required_net_s_bpw": 0.16096404744368115,
+    "required_gross_s_bpw": 0.1858070514584381,
+    "logical_read_amplification": 1.0,
+    "maximum_cold_page_amplification": 1.0054349308378698,
+    "strictly_below_2x": true,
+    "rows": [
+      {"requested_bpw": 2.15, "frame_bytes": 1268121, "actual_bpw": 2.149998982747396, "residual_payload_bpw": 2.125155978732639, "cold_page_bytes": 1273856, "cold_page_amplification": 1.0045224391047858},
+      {"requested_bpw": 2.3, "frame_bytes": 1356595, "actual_bpw": 2.2999996609157987, "residual_payload_bpw": 2.2751566569010415, "cold_page_bytes": 1363968, "cold_page_amplification": 1.0054349308378698},
+      {"requested_bpw": 2.5, "frame_bytes": 1474560, "actual_bpw": 2.5, "residual_payload_bpw": 2.475156995985243, "cold_page_bytes": 1478656, "cold_page_amplification": 1.0027777777777778}
+    ]
+  },
+  "pre_python_contract": {
+    "declared_order": "PASS_EXACT_STATIC_ORDER_ONLY",
+    "bootstrap_expected_sha256_bound_in_pinned_contract": true,
+    "bootstrap_actual_execution_from_held_identity_evidenced": false,
+    "complete_runtime_externally_authenticated": false,
+    "regular_nonsymlink_native_executable_included": false,
+    "native_launcher_implementation_audited": false,
+    "documentation_inertness_and_no_authority": "PASS",
+    "deployment_verdict": "BLOCK"
+  },
+  "blocking_findings": {
+    "FOSP4-FW-001": {
+      "severity": "BLOCKING_RUNTIME_AUTHENTICITY",
+      "title": "Runtime image is self-described and has no externally trusted digest",
+      "external_runtime_manifest_digest_required_by_validator": false,
+      "external_runtime_image_id_required_by_validator": false,
+      "hostile_fixture": "replace bin/python3.12 bytes, update its row hash and length, recompute request image_id",
+      "observed_status": "PASS_CONTRACT_VALIDATION_ONLY",
+      "impact": "A malicious startup runtime is internally consistent but indistinguishable from an independently approved runtime",
+      "repair": "Bind an external runtime-manifest digest or immutable-image ID into the pinned contract and verify the complete held object graph against it before startup"
+    },
+    "FOSP4-FW-002": {
+      "severity": "BLOCKING_PRESTART_ENFORCEMENT_ABSENCE",
+      "title": "No native launcher/runtime implementation exists to enforce or evidence the declared ordering",
+      "native_launcher_present": false,
+      "runtime_image_present": false,
+      "runtime_manifest_present": false,
+      "request_security_properties_are_declarative": true,
+      "bootstrap_execution_source_bound_to_held_descriptor_or_snapshot": false,
+      "impact": "Python-level contract validation cannot prove no-follow identity, platform immutability, temporal ordering, or held-byte execution before Python startup",
+      "repair": "Build and independently audit an externally pinned native launcher and immutable runtime; bind actual descriptor identities and execute the authenticated held bootstrap bytes"
+    },
+    "FOSP4-FW-003": {
+      "severity": "BLOCKING_CONTRACT_VALIDATOR_MISMATCH",
+      "title": "Forbidden shell and non-normal launcher paths are accepted",
+      "shell_fixture": "/bin/bash",
+      "shell_fixture_status": "PASS_CONTRACT_VALIDATION_ONLY",
+      "non_normal_fixture": "/srv/fosp-v4/../bin/fosp4-native-launcher",
+      "non_normal_fixture_status": "PASS_CONTRACT_VALIDATION_ONLY",
+      "impact": "The validator does not enforce the native-only/canonical-path properties it claims",
+      "repair": "Use an externally audited executable identity rather than filename heuristics and perform platform-native canonical no-follow identity validation"
+    }
+  },
+  "producer_mechanical_replay": {
+    "status": "PASS_DOES_NOT_CURE_BLOCKERS",
+    "runpod_manifest_sha256_matches": true,
+    "producer_verifier_checks": 105,
+    "producer_tests_run": 18,
+    "producer_tests_passed": 18
+  },
+  "blocking_decision": {
+    "source_or_model_access": "BLOCKED",
+    "runtime_calibration": "BLOCKED",
+    "gpu_experiment": "BLOCKED",
+    "deployment": "BLOCKED",
+    "production_authorization": "BLOCKED",
+    "successor_requirement": "A distinct successor must externally pin the runtime identity, supply and independently audit the native launcher/runtime, bind held bootstrap execution, and reject shell/non-normal launcher identities before any payload access"
+  },
+  "zero_access_ledger": {
+    "qwen_or_model_paths_traversed": 0,
+    "qwen_or_model_payload_files_opened": 0,
+    "pinned_or_validation_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_calls": 0,
+    "gpu_operations": 0,
+    "network_operations": 0,
+    "calibration_runs": 0,
+    "deployment_runs": 0,
+    "authorizations_issued": 0,
+    "producer_files_modified": 0
+  }
+}

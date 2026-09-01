@@ -1,0 +1,121 @@
+{
+  "schema": "free_order_swiglu_path_native_launcher_contract_v4",
+  "status": "SOURCE_ONLY_CONTRACT_NATIVE_LAUNCHER_NOT_INCLUDED",
+  "lineage": {
+    "v3_package": "../free_order_swiglu_path_oracle_v3",
+    "v3_package_manifest_sha256": "8584bde5c09fb7df531884c2100d3892dd1e12fbe689cf5d23ce091918d96470",
+    "v3_independent_audit_trust_input": "NONE_PROVIDED_OR_CLAIMED",
+    "v3_files_modified": false,
+    "anticipated_blockers": [
+      "FOSP3-FW-001: Python bootstrap and verifier bytes can be substituted before self-authentication",
+      "FOSP3-FW-002: filesystem startup modules can execute before the Python-level runtime closure",
+      "FOSP3-DOC-001: generic python command text is not a pinned regular executable identity"
+    ]
+  },
+  "frozen_science": {
+    "scientific_oracle_v3_sha256": "9ca6f4bdd4150c8c0c68c0a298c00eb45c088a4af287895ebfdf9bf1e661a070",
+    "scientific_protocol_v3_sha256": "f4660cb8876a749eb1635dbf010a8df6199e845b0517dd8b15039ac9cf1fd097",
+    "stage_order": [
+      "direct_qwen_full3x3_pair_panel_including_legal_fp16",
+      "gross_qwen_relaxed_reuse_necessary_bound",
+      "eight_identically_processed_matched_controls_including_legal_fp16",
+      "corrected_legal_fp16_statistic",
+      "diagnostic_only_corrected_relaxed_statistic",
+      "legal_fp16_survivor_or_optimization_gap"
+    ],
+    "roles": ["gate", "up", "down_transposed"],
+    "coefficients_per_edge": 9,
+    "path_edges": 767,
+    "total_side_bits": 117224,
+    "total_side_bpw": 0.024843004014756944,
+    "required_net_s_bpw": 0.16096404744368115,
+    "required_gross_s_bpw": 0.1858070514584381,
+    "logical_read_amplification": 1.0,
+    "maximum_cold_page_amplification": 1.0054349308378698,
+    "n8_regression": {
+      "n": 8,
+      "r": 0.875,
+      "rho": 0.765625,
+      "corrected_relaxed_s_bpw": 0.0,
+      "qwen_legal_fp16_s_bpw": 0.7995602818589078,
+      "control_legal_fp16_s_bpw": 0.5885652320580218,
+      "corrected_legal_fp16_s_bpw": 0.21099504980088601,
+      "required_gross_s_bpw": 0.1858070514584381
+    },
+    "scientific_semantics_changed_from_v3": false
+  },
+  "external_native_launcher": {
+    "included_in_source_package": false,
+    "implementation_language_class": "native_no_python_runtime_dependency",
+    "external_sha256_pin_required": true,
+    "canonical_absolute_path_required": true,
+    "regular_file_required": true,
+    "single_link_required": true,
+    "symlink_or_reparse_forbidden": true,
+    "administrator_owned_immutable_required": true,
+    "self_identity_verified_before_opening_contract": true,
+    "ordinary_python_or_shell_launcher_forbidden": true
+  },
+  "bootstrap_subject": {
+    "relative_path": "bootstrap_v4.py",
+    "bytes": 902,
+    "sha256": "46e91513325647de168cf0e0e39c5ab60988bd45cfcd2f8a4d6bb1a5c2d33544",
+    "opened_no_follow_as_regular_single_link_file": true,
+    "exact_bytes_authenticated_and_held_before_execution": true,
+    "python_self_authentication_is_not_accepted": true
+  },
+  "interpreter_runtime": {
+    "complete_image_manifest_required": true,
+    "complete_exact_byte_and_object_closure_required": true,
+    "image_authenticated_before_python_process_creation": true,
+    "interpreter_opened_no_follow_and_executed_from_held_identity": true,
+    "all_startup_modules_and_encoding_resources_in_image": true,
+    "startup_files_authenticated_before_any_python_startup_code": true,
+    "single_link_regular_members_required": true,
+    "administrator_owned_platform_immutability_required": true,
+    "runtime_user_has_no_write_unlink_relabel_or_alias_capability": true,
+    "ordinary_mutable_venv_satisfies_contract": false,
+    "administrator_compromise_out_of_scope": true,
+    "required_startup_members": [
+      "bin/python3.12",
+      "lib/python3.12/codecs.py",
+      "lib/python3.12/encodings/__init__.py",
+      "lib/python3.12/io.py"
+    ]
+  },
+  "mandatory_pre_start_order": [
+    "external_launcher_regular_identity_and_sha256_verified",
+    "launcher_authenticates_exact_contract_bytes",
+    "launcher_authenticates_and_holds_bootstrap_bytes",
+    "launcher_authenticates_complete_immutable_interpreter_runtime_image",
+    "launcher_applies_environment_descriptor_and_namespace_closure",
+    "launcher_creates_python_process_from_held_interpreter_identity"
+  ],
+  "source_default": {
+    "launcher_present": false,
+    "interpreter_image_present": false,
+    "runtime_manifest_present": false,
+    "signature_or_authorization_builder_present": false,
+    "bootstrap_direct_execution_status": "FOSP_V4_SOURCE_ONLY_NATIVE_LAUNCHER_ABSENT"
+  },
+  "zero_access": {
+    "model_or_qwen_paths_traversed": 0,
+    "model_or_qwen_payload_files_opened": 0,
+    "pinned_or_validation_files_opened": 0,
+    "third_party_imports": 0,
+    "cupy_imports": 0,
+    "cuda_calls": 0,
+    "gpu_operations": 0,
+    "network_operations": 0,
+    "authorizations_issued": 0
+  },
+  "authorization": {
+    "source_access": false,
+    "calibration": false,
+    "deployment": false,
+    "model_or_qwen_access": false,
+    "gpu_execution": false,
+    "production": false,
+    "self_authorization": false
+  }
+}

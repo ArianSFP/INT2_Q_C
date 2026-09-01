@@ -1,0 +1,74 @@
+{
+  "schema": "free_order_swiglu_path_auxiliary_bindings_v1",
+  "purpose": "Discovery-only non-pinned Qwen triplets for a future separately authorized run; this source-only package does not open them.",
+  "workspace_root_argument": true,
+  "expected_geometry": {
+    "hidden_neurons": 768,
+    "model_width": 2048,
+    "weights_per_expert": 4718592,
+    "bf16_bytes_per_matrix": 3145728
+  },
+  "experts": [
+    {
+      "ordinal": 0,
+      "layer": 3,
+      "expert": 57,
+      "roles": [
+        {
+          "role": "gate",
+          "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.57.gate_proj.weight.bf16.bin",
+          "shape": [768, 2048],
+          "sha256": "ecce497194636a2ca32d36856e5d983e0b26f470dafa78dfe1ca7b8e2f5d8f90"
+        },
+        {
+          "role": "up",
+          "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.57.up_proj.weight.bf16.bin",
+          "shape": [768, 2048],
+          "sha256": "715b51022adcb70b5c9bd42e98e5441c8d2801a4c024ce005c40441dee7a6d4c"
+        },
+        {
+          "role": "down",
+          "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.57.down_proj.weight.bf16.bin",
+          "shape": [2048, 768],
+          "sha256": "7b207c386d9bb6af5a4bd5dbbb8117319ff7fe81fddd095204a229725f7d59af"
+        }
+      ]
+    },
+    {
+      "ordinal": 1,
+      "layer": 3,
+      "expert": 121,
+      "roles": [
+        {
+          "role": "gate",
+          "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.121.gate_proj.weight.bf16.bin",
+          "shape": [768, 2048],
+          "sha256": "41dc29c2790985da6b93afc9efb1ffb0739e74bd3b16baad406eef91f280e289"
+        },
+        {
+          "role": "up",
+          "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.121.up_proj.weight.bf16.bin",
+          "shape": [768, 2048],
+          "sha256": "f6c27a15097e435893fb657c5c2b13f7261524af6552c88dde30dfd73e57cfde"
+        },
+        {
+          "role": "down",
+          "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.121.down_proj.weight.bf16.bin",
+          "shape": [2048, 768],
+          "sha256": "c972821016c73ae44e34fd54ef05dea978c093606a05ccaecf2709736412df95"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "preexisting_authentication_lock": "research/implicit_hyperdecoder_gate_v2/source_lock.json",
+    "preexisting_authentication_lock_sha256": "b0dc982e42a22fa960a1436ed5ebdcab1233d0bc2e463972e16dab4315e14042",
+    "note": "The six hashes are copied from the pre-existing lock. The current author listed remote filenames and sizes only and did not hash or numerically decode payload bytes."
+  },
+  "forbidden_runtime_inputs": {
+    "alternate_source_manifest": false,
+    "individual_matrix_path_arguments": false,
+    "pinned_panel_path_argument": false,
+    "validation_path_argument": false
+  }
+}

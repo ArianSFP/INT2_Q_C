@@ -1,0 +1,66 @@
+{
+  "schema": "free_order_swiglu_path_v3_source_only_receipt_v1",
+  "status": "PASS_SOURCE_ONLY_PACKAGE_DEPLOYMENT_BLOCKED",
+  "artifact_set_status": "SEALED_SOURCE_ONLY_ARTIFACT_SET",
+  "date_utc": "2026-09-01",
+  "architecture": "FOSP-ARX-v3-DIRECT-SEALED",
+  "lineage": {
+    "v2_package": "../free_order_swiglu_path_oracle_v2",
+    "v2_independent_audit": "../free_order_swiglu_path_oracle_v2_independent_source_audit_20260901",
+    "v2_files_modified": false,
+    "v3_directory": "distinct new source-only tree"
+  },
+  "repairs": {
+    "FOSP2-SCI-001": "Control-corrected relaxed reuse is diagnostic-only. Corrected legal FP16 is mandatory before any control-corrected decision.",
+    "FOSP2-FW-001": "The isolated no-site bootstrap clears sys.path, rejects every nonregular flat-package member, snapshots and authenticates every byte, then installs only an externally pinned exact runtime closure.",
+    "FOSP2-FW-002": "Future audit evidence requires an externally trusted exact audit-manifest digest, exact object closure, and opened/hash-verified verifier bytes; no builder is present to self-mint trust."
+  },
+  "scientific_regressions": {
+    "all_pairs_cross_role_coefficients_per_edge": 9,
+    "gross_qwen_relaxed_is_necessary_bound": true,
+    "control_corrected_relaxed_is_containing": false,
+    "control_corrected_relaxed_decision_eligible": false,
+    "n8_corrected_relaxed_s_bpw": 0.0,
+    "n8_corrected_legal_fp16_s_bpw": 0.21099504980088601,
+    "required_gross_s_bpw": 0.1858070514584381
+  },
+  "package_files": {
+    "README.md": {"bytes": 6386, "sha256": "d737a3d76b59e0cf7f984afb78d97da458a843f17268bcec96dc841b75326566"},
+    "bootstrap_v3.py": {"bytes": 17922, "sha256": "3f00b13bb3d9b913338bcf9c57cc0f6aa31f9d32d148d5ae1ebf046fbe91cadc"},
+    "free_order_oracle_v3.py": {"bytes": 21887, "sha256": "9ca6f4bdd4150c8c0c68c0a298c00eb45c088a4af287895ebfdf9bf1e661a070"},
+    "protocol_lock.json": {"bytes": 7469, "sha256": "f4660cb8876a749eb1635dbf010a8df6199e845b0517dd8b15039ac9cf1fd097"},
+    "sealed_runtime_probe.py": {"bytes": 325, "sha256": "5bad31a964f7049cf0f2d3a557153b38e4613f9c9ccee608c30d21d1bc5ad76d"},
+    "source_bindings.json": {"bytes": 2683, "sha256": "cd12742910503f23d0d9224e277a030b923f8fc917c75a13a1aff8e9bcde090a"},
+    "test_source_only.py": {"bytes": 17086, "sha256": "63b6bf1139ba50ad9b6bb87337b2dba8109a4558ec7dacf1f636d1d38b1e5110"},
+    "verify_package.py": {"bytes": 17939, "sha256": "197e1bd652a865813e1b9e0699d4f159ac58306cf0dc9b2f6b20a187661a44f5"}
+  },
+  "verification": {
+    "local_standard_library_tests": "PASS_18_RUN_17_PASS_0_FAILURE_0_ERROR_1_SKIP_WINDOWS_SYMLINK_PRIVILEGE",
+    "local_package_verifier": "PASS_6928_CHECKS",
+    "bootstrap_exact_snapshot": "PASS_9_SEALED_FILES",
+    "disjoint_linux_source_only": "NOT_AVAILABLE_LOCAL_WSL_NOT_INSTALLED_NO_NETWORK_OR_REMOTE_ACCESS"
+  },
+  "zero_access_ledger": {
+    "qwen_or_model_payload_files_opened": 0,
+    "qwen_or_model_payload_bytes_read": 0,
+    "binding_paths_followed": 0,
+    "pinned_panel_files_opened": 0,
+    "validation_files_opened": 0,
+    "runtime_or_authorization_manifests_opened": 0,
+    "cupy_imports": 0,
+    "cuda_api_calls": 0,
+    "gpu_device_calls": 0,
+    "external_data_fetches": 0,
+    "network_connections": 0,
+    "authorizations_issued": 0,
+    "v2_or_audit_files_modified": 0
+  },
+  "deployment": {
+    "authorized": false,
+    "calibration_authorized": false,
+    "package_is_authority": false,
+    "authorization_builder_present": false,
+    "required_next": "new independent hostile v3 source audit before constructing any sealed runtime or calibration request"
+  },
+  "canonical_unsigned_sha256": "7f7a6c3ae91e0db85e116eac87770087c4329e889ae5ffa8915e86e725be01a8"
+}

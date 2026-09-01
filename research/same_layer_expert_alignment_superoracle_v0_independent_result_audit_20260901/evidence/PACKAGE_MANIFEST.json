@@ -1,0 +1,9 @@
+{
+  "schema": "same-layer-expert-alignment-source-manifest-v0",
+  "files": {
+    "README.md": "3393d643c5e81831cc77d470a0961fb4231f47698791169d001b31f8c17bdc35",
+    "design_lock.json": "1c12104da21b87e5979bab1c758f7143b5fdd1d2b47767fa97fe63b7be030653",
+    "same_layer_alignment_oracle.py": "8ad7fba62178c5f8f5a761469c27edf16d56fedf4be97304ef4acd14af703d04",
+    "verify_source.py": "0e6057e9cf80cc82026ffdf29e42a3209aa2be7d2d8fac179d15ba8392289c8e"
+  }
+}

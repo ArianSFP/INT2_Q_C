@@ -1,0 +1,42 @@
+{
+  "schema": "kbvq_idre_raw_mse_gate_manifest_v0",
+  "closed_world": true,
+  "self_entry_policy": "This manifest governs the other seven exact closure files; its own SHA-256 is the external package pin emitted by verify_design.py.",
+  "entries": [
+    {
+      "path": "README.md",
+      "bytes": 9268,
+      "sha256": "bce9b0864a5116262a01f908da69392572a6bc90a197b519c78bd6f2d8f52222"
+    },
+    {
+      "path": "design_lock.json",
+      "bytes": 10851,
+      "sha256": "44ad713e605c7103ffceb089714f6b4ef0c847619efa2511f93647a7e492bbdd"
+    },
+    {
+      "path": "prior_evidence.json",
+      "bytes": 4772,
+      "sha256": "dacf5e0e9ca1f06e7e93a2047b36d9e4a61b855b6ddd9e43e5c7608d00e4d2b6"
+    },
+    {
+      "path": "source_only_receipt.json",
+      "bytes": 2528,
+      "sha256": "8a391805091e54c135bb951d8a96b1eef4b5fcadf2ba44d6456ae72688668c41"
+    },
+    {
+      "path": "stage0_gate.py",
+      "bytes": 24851,
+      "sha256": "f4133e4ea3aacdd1f91a4ccda0054655c7989c5d66d8bfe22cc707072fcd25ec"
+    },
+    {
+      "path": "test_source_only.py",
+      "bytes": 1941,
+      "sha256": "cfd8386393764823e8a1bcb4975ba79ddc208c855099c2bc6f29e925010d0e20"
+    },
+    {
+      "path": "verify_design.py",
+      "bytes": 17480,
+      "sha256": "b52c62f868aa065643efb732e9e98142a104d9750ec41622bcc1108679f4f9a3"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "free-order-swiglu-path-v1-independent-source-audit-receipt-v1",
+  "status": "BLOCK_STAGE0_DOES_NOT_CONTAIN_CROSS_ROLE_3X3_PATH_FAMILY",
+  "artifact_set_status": "IMMUTABLE_BLOCK_AUDIT_ARTIFACT_SET",
+  "verdict": "BLOCK",
+  "audit_date_utc": "2026-09-01",
+  "scope": "source-only scientific reproducibility and containment audit",
+  "producer_directory": "../free_order_swiglu_path_oracle_v1",
+  "producer_modified": false,
+  "producer_closure": {
+    "regular_files": 7,
+    "subdirectories": 0,
+    "total_bytes": 67027,
+    "manifest_sha256": "e19acb3c8e888dddb8ae296f05b7541ba9db47e017619aea0c9dd341f0c5b3f4",
+    "files": {
+      "ARTIFACT_SHA256SUMS.txt": {"bytes": 505, "sha256": "e19acb3c8e888dddb8ae296f05b7541ba9db47e017619aea0c9dd341f0c5b3f4"},
+      "README.md": {"bytes": 9820, "sha256": "95824df46b8650f74d003fef76877005b6f4e32ab99fafbfe4aa9749f5d3741e"},
+      "free_order_oracle.py": {"bytes": 28692, "sha256": "7329ee7cd6838e21db7ae81b9ee16843548c1f99297e6d007487c450ceaff820"},
+      "protocol_lock.json": {"bytes": 8690, "sha256": "71e45e62fa86238e89424f24ecf346cb2cd49715e569534c2ff817011015c66a"},
+      "source_bindings.json": {"bytes": 2878, "sha256": "3454b718a65efc02c32463f955c10ff393f4218fac04f358107960ff3735990d"},
+      "test_source_only.py": {"bytes": 7549, "sha256": "83424cff84195118975e31aabf725478cfab3c57b40f4f20fd702dd809c02288"},
+      "verify_package.py": {"bytes": 8893, "sha256": "5e1940b3c626706815c10febe6dc6e35a47d4e28548df9379915e5025c5c5499"}
+    }
+  },
+  "mechanical_replay": {
+    "source_tests": {"status": "PASS", "tests_run": 11, "failures": 0, "errors": 0, "skips": 0},
+    "producer_verifier": {"status": "PASS", "checks": 128},
+    "interpretation": "Mechanical PASS authenticates and reproduces the source package but does not cure the containment blocker."
+  },
+  "independent_recomputations": {
+    "weights_per_expert": 4718592,
+    "target_F_maximum": 0.8,
+    "required_s_bpw": 0.16096404744368115,
+    "permutation": {
+      "cardinality": "768!",
+      "ceil_log2_cardinality_bits": 6260,
+      "physical_bytes": 783,
+      "physical_bits": 6264,
+      "physical_bpw": 0.0013275146484375,
+      "original_coordinate_requirement": "A quotient/canonical payload cannot identify the original arbitrary labels. The factoradic rank must be charged inline and the decoded triplet scattered through the inverse permutation before MSE scoring."
+    },
+    "rate_rows": [
+      {"requested_rate_bpw": 2.15, "frame_bytes": 1268121, "actual_rate_bpw": 2.149998982747396, "cold_page_bytes": 1273856, "cold_page_amplification": 1.0045224391047858},
+      {"requested_rate_bpw": 2.3, "frame_bytes": 1356595, "actual_rate_bpw": 2.2999996609157987, "cold_page_bytes": 1363968, "cold_page_amplification": 1.0054349308378698},
+      {"requested_rate_bpw": 2.5, "frame_bytes": 1474560, "actual_rate_bpw": 2.5, "cold_page_bytes": 1478656, "cold_page_amplification": 1.0027777777777778}
+    ],
+    "coefficient_and_side_ledgers": [
+      {"mode": "diag3_fp16", "coefficient_bits": 36816, "coefficient_bpw": 0.007802327473958333, "total_side_bits_including_header_and_permutation": 43592, "side_bpw": 0.009238349066840278, "required_gross_s_bpw": 0.17020239651052144},
+      {"mode": "full3x3_fp16", "coefficient_bits": 110448, "coefficient_bpw": 0.023406982421875, "total_side_bits_including_header_and_permutation": 117224, "side_bpw": 0.024843004014756944, "required_gross_s_bpw": 0.1858070514584381},
+      {"mode": "diag3_fixed_nibble", "coefficient_bits": 9208, "coefficient_bpw": 0.0019514295789930555, "total_side_bits_including_header_and_permutation": 15984, "side_bpw": 0.003387451171875, "required_gross_s_bpw": 0.16435149861555615},
+      {"mode": "full3x3_fixed_nibble", "coefficient_bits": 27616, "coefficient_bpw": 0.005852593315972222, "total_side_bits_including_header_and_permutation": 34392, "side_bpw": 0.007288614908854167, "required_gross_s_bpw": 0.1682526623525353}
+    ],
+    "read_ledger": {
+      "logical_expert_frame_reads": 1,
+      "pessimistic_shared_manifest_pages": 1,
+      "maximum_recomputed_cold_page_amplification": 1.0054349308378698,
+      "strictly_below_2x": true
+    },
+    "controls_and_statistics": {
+      "fixed_auxiliary_experts": [[3, 57], [3, 121]],
+      "pinned_or_validation_split_present": false,
+      "control_replicates": 8,
+      "distinct_fixed_control_seeds": 8,
+      "preserved_per_expert_per_neuron_moments": "three role means and centered 3x3 role Gram",
+      "control_mc_se_formula": "sqrt(sum((s_i-mean)^2)/(n*(n-1)))",
+      "delete_one_expert_jackknife_se_formula": "sqrt((m-1)/m*sum((theta_i-mean(theta))^2))",
+      "combined_se_formula": "hypot(control_mc_se,jackknife_se)",
+      "stage0_optimistic_gate": "max_R(s_qwen-mean(s_control)+3*combined_se) >= required_s",
+      "stage1_optimistic_gate": "s_qwen_relaxed-mean(s_control_relaxed)+3*control_mc_se >= required_s, with gross relaxed s_qwen also >= required_s",
+      "finding": "The formulas and fixed controls are implemented as documented; they cannot compensate for a stage-0 statistic that omits cross-neuron cross-role covariance."
+    }
+  },
+  "containment_counterexample": {
+    "ambient_model_width": 2048,
+    "available_zero_mean_dimension": 2047,
+    "neurons": 768,
+    "construction": "Choose orthonormal zero-mean e_0..e_767. Neuron i has roles (e_i,e_(i+1),e_(i+2)) modulo 768.",
+    "three_separate_role_spectra": "Each is flat with 768 equal eigenvalues; the continuous separate-role KLT has F=1 and s=0 at every frozen rate.",
+    "legal_path": "0,1,...,767",
+    "full3x3_capture_per_edge": 2,
+    "legal_edges": 767,
+    "total_capture": 1534,
+    "total_energy": 2304,
+    "residual_ratio": 0.3342013888888889,
+    "stage1_s_bpw": 0.7906051829300244,
+    "required_s_bpw": 0.16096404744368115,
+    "full3x3_fp16_side_adjusted_required_s_bpw": 0.1858070514584381,
+    "conclusion": "A legal member of the later cross-role path family can have large gain while every input spectrum used by stage 0 is flat. The proposed stage-0 family therefore does not contain or upper-bound stage 1."
+  },
+  "blocking_decision": {
+    "payload_execution": "BLOCKED",
+    "reason_code": "STAGE0_SEPARATE_ROLE_KLT_NONCONTAINMENT",
+    "minimal_distinct_successor_repair": "Refreeze v2 with one free joint 2304-axis role-neuron KLT as stage 0, retaining matched controls and gates; alternatively remove the stage-0 early kill and always evaluate full cross-role stage 1. Re-audit and source-free calibrate the successor before payload access."
+  },
+  "zero_access_ledger": {
+    "qwen_or_model_payload_files_opened": 0,
+    "qwen_or_model_payload_bytes_read": 0,
+    "binding_relative_paths_followed": 0,
+    "pinned_panel_files_opened": 0,
+    "validation_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_api_calls": 0,
+    "gpu_device_calls": 0,
+    "external_data_fetches": 0,
+    "producer_files_modified": 0,
+    "note": "SSH/SCP transported only the seven enumerated source-package files to the authorized RunPod scratch root for Linux replay; no payload path was resolved or opened."
+  }
+}

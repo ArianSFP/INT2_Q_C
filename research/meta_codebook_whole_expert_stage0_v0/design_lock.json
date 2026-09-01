@@ -1,0 +1,129 @@
+{
+  "architecture": {
+    "code_count": 32768,
+    "condition": "three-role one-hot plus deterministic layer coordinate 2*layer/47-1; expert identity forbidden",
+    "decoder": "latent4+condition4 -> tanh64 -> tanh64 -> vector8",
+    "decoder_parameter_count": 5256,
+    "discarded_encoder": "vector8+condition4 -> tanh64 -> tanh64 -> latent4",
+    "index_bits_per_vector": 15,
+    "latent_dimension": 4,
+    "name": "MCB-WE-S0-v0",
+    "output_space_dominance_gate": "materialize all 32768 decoded eight-vectors after canonical FP16 serialization, discard the encoder, and use exact nearest output-space assignment on every held-out vector; no representational advantage over that decoded table may be claimed",
+    "vector_dimension": 8
+  },
+  "claim_boundary": "A kill rejects only this frozen six-expert stage-0 cell. A promotion is an ideal-Gaussian-residual feasibility result on two held-out experts from the already authenticated six-expert panel. It is not a finite residual codec, not a model-wide generalization result, not a fresh-validation result, and not target achievement.",
+  "execution": {
+    "authorization_literal": "OPEN_AUTHENTICATED_18_MATRIX_PANEL_FOR_META_CODEBOOK_STAGE0_V0",
+    "batch_vectors": 2048,
+    "code_tile": 2048,
+    "commitment_beta": 0.25,
+    "evaluation_vector_batch": 4096,
+    "learning_rate": 0.001,
+    "optimizer": "manual CuPy Adam, beta1=0.9, beta2=0.999, epsilon=1e-8",
+    "seeds": [
+      2026090101,
+      2026090102
+    ],
+    "steps": 512,
+    "target_device": "NVIDIA RTX 5090",
+    "training_matrix_schedule": "round-robin over the 12 fit matrices; seeded vector sampling",
+    "whole_holdout_evaluation": "materialize every decoded output-space codeword and perform exact nearest-codeword search for every vector in all six holdout matrices"
+  },
+  "gaussian_control": {
+    "generation_seed_base": 70707001,
+    "matching": "each synthetic natural row is independently standardized and affinely mapped to the corresponding source row mean and RMS",
+    "training_and_evaluation": "same split, architecture, initialization seed, steps, batches, exact search, quantized side and rate ledger as source"
+  },
+  "oracle": {
+    "definition": "decoded-FP16 materialized output-space exact-nearest codebook followed by an ideal continuous Gaussian residual code using every residual bit",
+    "hard_kill": "KILL if the best of the two predeclared source seeds has pooled s < 0.16096404744368115 (equivalently its favorable F is > 0.8)",
+    "promote": "PROMOTE only if both source seeds have pooled s >= 0.18096404744368115, every held-out expert has F <= 0.8 in both seeds, and both matched advantages s_source-s_gaussian are > 0",
+    "target_F": 0.8,
+    "target_s": 0.16096404744368115,
+    "promotion_margin_s": 0.02,
+    "scope": "containing only for the declared finite first stage plus Gaussian-residual member; not a converse for arbitrary nonlinear residual codecs"
+  },
+  "panel": {
+    "dtype": "BF16",
+    "expert_count": 6,
+    "fit_slots": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "holdout_slots": [
+      1,
+      4
+    ],
+    "matrix_count": 18,
+    "matrix_order_per_expert": [
+      "gate",
+      "up",
+      "down"
+    ],
+    "slot_identities": [
+      {
+        "expert": 18,
+        "layer": 5,
+        "slot": 0,
+        "split": "fit"
+      },
+      {
+        "expert": 7,
+        "layer": 12,
+        "slot": 1,
+        "split": "holdout"
+      },
+      {
+        "expert": 20,
+        "layer": 18,
+        "slot": 2,
+        "split": "fit"
+      },
+      {
+        "expert": 83,
+        "layer": 28,
+        "slot": 3,
+        "split": "fit"
+      },
+      {
+        "expert": 76,
+        "layer": 36,
+        "slot": 4,
+        "split": "holdout"
+      },
+      {
+        "expert": 41,
+        "layer": 45,
+        "slot": 5,
+        "split": "fit"
+      }
+    ],
+    "source_lock_bytes": 46013,
+    "source_lock_file_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+    "source_lock_internal_sha256": "5a82dac742110d4f48bbd73ae82081e1622b10b660b7850dadfe613ff475cc5b",
+    "source_lock_relpath": "blind_protocol_v2/unblinded/source_hashes.lock.json",
+    "source_payload_resolution": "each output_relpath is resolved beneath the authenticated lock parent blind_protocol_v2/unblinded, never beneath the experiment package",
+    "source_values": 28311552
+  },
+  "rate": {
+    "expert_header_bytes": 64,
+    "expert_values": 4718592,
+    "global_header_bytes": 4096,
+    "global_side_bytes_including_zero_padding": 278528,
+    "global_side_zero_padding_bytes": 1776,
+    "index_bytes_per_expert": 1105920,
+    "latent_codebook_fp16_bytes": 262144,
+    "panel_row_moments_fp16_bytes": 55296,
+    "physical_rates_bpw": [
+      2.15,
+      2.3,
+      2.5
+    ],
+    "row_moments_fp16_bytes_per_expert": 9216,
+    "serialized_decoder_fp16_bytes": 10512,
+    "whole_layer_128_ledger_is_arithmetic_only": true
+  },
+  "schema": "meta-codebook-whole-expert-stage0-design-lock-v0"
+}

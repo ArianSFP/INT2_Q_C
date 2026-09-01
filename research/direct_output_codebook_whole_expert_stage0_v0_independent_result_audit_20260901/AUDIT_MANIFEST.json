@@ -1,0 +1,17 @@
+{"schema":"direct_output_d8_independent_result_audit_manifest_v0","closed_world":true,"entries":[
+  {"path":"README.md","bytes":2341,"sha256":"bb0e006e0604bb13282be9a57c200e65357d271463e1e2267c4fde6fb554356a"},
+  {"path":"audit_receipt.json","bytes":1383,"sha256":"98e2fad2a5b9239d2d9ba35c89192e79e64fdb1eb6dd7bfc0b0760e00d67108f"},
+  {"path":"evidence/SOURCE_MANIFEST.json","bytes":850,"sha256":"1486475e08c4dd92beda97d60ea6290b468ea9b88beb9bc9b21a460d5ff0406a"},
+  {"path":"evidence/design_lock.json","bytes":4563,"sha256":"397cf9e68cdf661b0ac6dddddfc1199275e792848bbd69e10af935ae9758e135"},
+  {"path":"evidence/direct_output_codebook_stage0.py","bytes":36018,"sha256":"c985ebf19343dc275e0d49ceedabba387fc67e991dac38f0da7bbbc8d7bfc7c4"},
+  {"path":"evidence/runpod_result/result.json","bytes":52739,"sha256":"701e3ebe3da89c4fa5e72bca335a1b33e7bb57937851956ee139630d26b9b991"},
+  {"path":"evidence/runpod_result/seed_2026090111/gaussian_global_side.bin","bytes":528384,"sha256":"10b542de1a8f04623dac6ca051585fc46f297028756b8b37e4b54c79a617bd25"},
+  {"path":"evidence/runpod_result/seed_2026090111/gaussian_row_moments.bin","bytes":55296,"sha256":"f734342eafe04669d634f8dd0c520c029875b942d66d7c714e4055b6f2acfe69"},
+  {"path":"evidence/runpod_result/seed_2026090111/source_global_side.bin","bytes":528384,"sha256":"c4a34b26cfd36a424f8323e401a32414b652ebc97cb35eb011fe592e7d25858d"},
+  {"path":"evidence/runpod_result/seed_2026090111/source_row_moments.bin","bytes":55296,"sha256":"f734342eafe04669d634f8dd0c520c029875b942d66d7c714e4055b6f2acfe69"},
+  {"path":"evidence/runpod_result/seed_2026090112/gaussian_global_side.bin","bytes":528384,"sha256":"28297cc14096814a29d24ae7207cea94a4cd07bdda856b4178b7400a53ecfb8a"},
+  {"path":"evidence/runpod_result/seed_2026090112/gaussian_row_moments.bin","bytes":55296,"sha256":"f734342eafe04669d634f8dd0c520c029875b942d66d7c714e4055b6f2acfe69"},
+  {"path":"evidence/runpod_result/seed_2026090112/source_global_side.bin","bytes":528384,"sha256":"9b6454eb525f5f6bc7b0399087caf6851c19bc01f775a7a49db653dfc4bae154"},
+  {"path":"evidence/runpod_result/seed_2026090112/source_row_moments.bin","bytes":55296,"sha256":"f734342eafe04669d634f8dd0c520c029875b942d66d7c714e4055b6f2acfe69"},
+  {"path":"verify_audit.py","bytes":16619,"sha256":"68e421ba246981c8fe352ef6159896e2b5a5f29c05592afcae2bdceb20de9c0c"}
+]}

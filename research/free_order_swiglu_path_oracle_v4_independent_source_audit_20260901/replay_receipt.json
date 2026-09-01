@@ -1,0 +1,58 @@
+{
+  "schema": "free_order_swiglu_path_v4_independent_source_replay_receipt_v1",
+  "status": "SOURCE_ONLY_REPLAY_COMPLETE_BLOCK_CONFIRMED",
+  "date_utc": "2026-09-01",
+  "producer_manifest_sha256": "9762c7edffc86d21f4400d4fac37ecab33c75ede6f7f9ab7c3ef5b95fe51e066",
+  "local_static_replay": {
+    "producer_exact_closure": "PASS_11_REGULAR_SINGLE_LINK_FILES",
+    "producer_total_bytes": 89408,
+    "v3_science_direct_byte_comparison": "PASS_WITHOUT_V3_AUDIT_EVIDENCE",
+    "science_decision_containment": "PASS_GROSS_RELAXED_ONLY",
+    "legal_fp16_order": "PASS_BEFORE_CONTROL_DECISION",
+    "n8_regression": "PASS_INDEPENDENT_FRACTION_REPLAY",
+    "side_and_read_arithmetic": "PASS_INDEPENDENT_RECOMPUTATION",
+    "native_boundary": "BLOCK_NO_IMPLEMENTATION_OR_EXTERNAL_RUNTIME_PIN"
+  },
+  "linux_runpod": {
+    "host_contact": "root@74.2.96.53:12079",
+    "already_present_source_only_scratch": "/var/tmp/int2_frontier_replay_RT350sTY/free_order_swiglu_path_oracle_v4",
+    "python_executable": "/usr/bin/python3.12",
+    "generic_or_symlink_executable_is_deployment_identity": false,
+    "manifest_sha256": "9762c7edffc86d21f4400d4fac37ecab33c75ede6f7f9ab7c3ef5b95fe51e066",
+    "manifest_matches_local": true,
+    "producer_verifier_command": "/usr/bin/python3.12 -B -I verify_package.py",
+    "producer_verifier_status": "PASS_SOURCE_ONLY_NATIVE_PRESTART_CONTRACT_AUTHORIZES_NOTHING",
+    "producer_verifier_checks": 105,
+    "producer_test_command": "/usr/bin/python3.12 -B -I test_source_only.py",
+    "producer_tests_run": 18,
+    "producer_tests_passed": 18,
+    "producer_tests_failed": 0,
+    "producer_tests_skipped": 0,
+    "self_rebound_hostile_runtime_status": "PASS_CONTRACT_VALIDATION_ONLY",
+    "bash_launcher_status": "PASS_CONTRACT_VALIDATION_ONLY",
+    "model_or_payload_paths_accessed": 0,
+    "cupy_imports": 0,
+    "cuda_or_gpu_calls": 0
+  },
+  "hostile_fixture_matrix": {
+    "bootstrap_bytes_changed_without_manifest_update": "PASS_REJECTED",
+    "runtime_bytes_changed_without_manifest_update": "PASS_REJECTED",
+    "runtime_bytes_changed_with_self_consistent_untrusted_manifest": "BLOCK_ACCEPTED",
+    "external_launcher_digest_mismatch": "PASS_REJECTED",
+    "symlink_launcher_declaration": "PASS_REJECTED",
+    "generic_python_launcher": "PASS_REJECTED",
+    "bash_launcher": "BLOCK_ACCEPTED",
+    "non_normal_dotdot_launcher_path": "BLOCK_ACCEPTED",
+    "pre_start_order_permutation": "PASS_REJECTED",
+    "actual_native_prestart_event_order": "NOT_TESTABLE_IMPLEMENTATION_ABSENT",
+    "actual_bootstrap_execution_from_held_bytes": "NOT_TESTABLE_IMPLEMENTATION_ABSENT"
+  },
+  "interpretation": "Producer mechanical PASS authenticates an inert source package. It does not provide an external runtime trust anchor or a native implementation, and its filename heuristic accepts a shell launcher. No calibration, model access, GPU run, or authorization may follow.",
+  "independent_verifier": {
+    "command": "python -B -I verify_audit.py",
+    "expected_status": "BLOCK_CONFIRMED",
+    "third_party_imports": 0,
+    "payload_access": 0
+  },
+  "authorization": "NONE"
+}

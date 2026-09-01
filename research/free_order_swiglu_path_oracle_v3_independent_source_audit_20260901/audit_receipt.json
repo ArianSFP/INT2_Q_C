@@ -1,0 +1,101 @@
+{
+  "schema": "free-order-swiglu-path-v3-independent-source-audit-receipt-v1",
+  "status": "BLOCK_BOOTSTRAP_SELF_BINDING_AND_PREBOOT_RUNTIME",
+  "verdict": "BLOCK",
+  "audit_date_utc": "2026-09-01",
+  "producer_directory": "../free_order_swiglu_path_oracle_v3",
+  "producer_modified": false,
+  "audited_package": {
+    "exact_objects": 10,
+    "artifact_manifest_sha256": "8584bde5c09fb7df531884c2100d3892dd1e12fbe689cf5d23ce091918d96470"
+  },
+  "external_evidence": {
+    "v2_package_exact_objects_opened_and_hashed": 10,
+    "v2_package_manifest_sha256": "a7dc083b8fec762759100c23bb5e8f140642e1032fcbd4b4845be785e7e841f9",
+    "v2_audit_exact_objects_opened_and_hashed": 5,
+    "v2_audit_manifest_sha256": "12fac1817e48fa396a65c0796601b2a36beee8141051e1ac5faa2466f33344cb",
+    "v2_audit_verdict": "BLOCK",
+    "unsealed_parent_linux_message_used_as_evidence": false
+  },
+  "scientific_replay": {
+    "all_pairs_3x3": "PASS_EXACT_FRACTION_AND_HELD_SOURCE_DIRECTION",
+    "gross_relaxed_containment": "PASS_FORMAL_AND_EXHAUSTIVE_N2_TO_N7",
+    "cycle_cover_path": "PASS_DIRECTION_CUT_SEGMENT_AND_BRIDGE",
+    "fp16": "PASS_DIRECT_RESIDUAL_AND_LITTLE_ENDIAN_BINARY16",
+    "statistics": "PASS_MC_DELETE_EXPERT_JACKKNIFE_AND_QUADRATURE",
+    "control_corrected_relaxed_decision_eligible": false,
+    "legal_fp16_before_control_corrected_decision": true,
+    "n8_corrected_relaxed_s_bpw": 0.0,
+    "n8_q_legal_fp16_s_bpw": 0.7995602818589078,
+    "n8_control_legal_fp16_s_bpw": 0.5885652320580218,
+    "n8_corrected_legal_fp16_s_bpw": 0.21099504980088601,
+    "required_gross_s_bpw": 0.1858070514584381,
+    "side_bits": 117224,
+    "side_bpw": 0.024843004014756944,
+    "logical_read_amplification": 1.0,
+    "maximum_cold_page_amplification": 1.0054349308378698
+  },
+  "blocking_findings": {
+    "FOSP3-FW-001": {
+      "severity": "BLOCKING_PREAUTH_CODE_EXECUTION",
+      "title": "In-package bootstrap and direct verifier execute before self-binding",
+      "bootstrap_self_substitution": "REPRODUCED_COUNTERFEIT_PASS_WITH_ORIGINAL_PIN",
+      "verifier_self_substitution": "REPRODUCED_COUNTERFEIT_PASS_WITH_ORIGINAL_PIN",
+      "repair": "Use an externally pinned native launcher or equivalent external trust anchor to open/hash bootstrap bytes before execution and launch held/sealed bytes."
+    },
+    "FOSP3-FW-002": {
+      "severity": "BLOCKING_PREAUTH_RUNTIME_EXECUTION",
+      "title": "Filesystem encodings code is inherited before runtime closure",
+      "inherited_module_import_without_runtime_manifest_row": "REPRODUCED",
+      "repair": "Authenticate and make immutable the startup encodings/runtime tree and native loader dependencies before Python starts."
+    },
+    "FOSP3-DOC-001": {
+      "severity": "RELEASE_DOCUMENTATION_BLOCKER",
+      "title": "Generic python launcher does not identify the required canonical regular executable",
+      "repair": "Name and externally pin the canonical regular interpreter; document that symlink launchers are rejected."
+    }
+  },
+  "hostile_replay": {
+    "bootstrap_exact_snapshot": "PASS",
+    "manifest_substitution": "PASS_REJECTED",
+    "package_directory_injection": "PASS_REJECTED_BEFORE_EXECUTION",
+    "package_extra_regular_file": "PASS_REJECTED",
+    "runtime_directory_injection": "PASS_REJECTED",
+    "bootstrap_self_binding_exploit": "PASS_REPRODUCED",
+    "verifier_self_binding_exploit": "PASS_REPRODUCED",
+    "direct_runner_import_exploit": "PASS_REPRODUCED",
+    "inherited_encodings_origin": "C:\\Users\\arian\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\encodings\\__init__.py",
+    "windows_package_symlink_reparse": "SKIP_CREATION_UNAVAILABLE",
+    "windows_runtime_symlink_reparse": "SKIP_CREATION_UNAVAILABLE",
+    "windows_fifo_socket": "SKIP_NOT_SUPPORTED",
+    "linux_replay": "SEALED_COMMANDS_PROVIDED_NOT_USED_AS_FORMAL_EVIDENCE"
+  },
+  "independent_verifier": {
+    "expected_status": "BLOCK_CONFIRMED",
+    "expected_checks": 0,
+    "pure_standard_library": true
+  },
+  "blocking_decision": {
+    "source_access": "BLOCKED",
+    "runtime_calibration": "BLOCKED",
+    "production_authorization": "BLOCKED",
+    "required_v4_repairs": [
+      "external pre-execution bootstrap byte binding",
+      "pre-Python authentication of startup runtime and native dependencies",
+      "canonical non-link interpreter instructions"
+    ]
+  },
+  "zero_access_ledger": {
+    "model_or_payload_files_opened": 0,
+    "model_or_payload_bytes_read": 0,
+    "binding_paths_followed": 0,
+    "runtime_or_authorization_manifests_opened": 0,
+    "cupy_imports": 0,
+    "cuda_api_calls": 0,
+    "gpu_device_calls": 0,
+    "network_connections": 0,
+    "authorizations_issued": 0,
+    "producer_files_modified": 0
+  },
+  "canonical_unsigned_sha256": "f4850af4aaeb31455cf73b523da6b79a88543b1b9af8101f7863aa38845bd39d"
+}

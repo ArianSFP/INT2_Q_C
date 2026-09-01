@@ -1,0 +1,27 @@
+{
+  "artifact": "meta_codebook_whole_expert_stage0_v0 downloaded RunPod result",
+  "best_source": {
+    "F_oracle": 8.02167776127901,
+    "matched_advantage_s": 0.0007153645276247727,
+    "q": 0.5230531982815714,
+    "s_oracle": -1.5019520064156389,
+    "seed": 2026090102
+  },
+  "binary_artifact_count": 8,
+  "claim_boundary": "KILL applies only to the frozen latent4 conditional nonlinear decoder/VQ training cell. Direct K=32768,d=8 output-space K-means, arbitrary VQ, SoftBinary Coding, model-wide generalization, and finite target achievement remain unestablished.",
+  "local_source_only_qa": {
+    "aggregate_checks": 49,
+    "bf16_payloads_opened": 0,
+    "status": "PASS"
+  },
+  "producer_source_manifest_sha256": "d62ee98c3c76fd25b81b50d83abe945f620972a630354aa9ec2606ee2783d9fa",
+  "result_origin_path": "research/meta_codebook_whole_expert_stage0_v0_runpod_result_20260901",
+  "result": {
+    "bytes": 47607,
+    "declared_result_lock_sha256": "38970e2aafaddd224cd5a103a332b738a99cad555615fe3208eb18ec6a4a6509",
+    "sha256": "9d3f43c8c417e0c9f84849e7a27e6feebbd952a97a74ef29a2307cb933f2a5a0",
+    "status": "KILL"
+  },
+  "schema": "meta-codebook-stage0-independent-result-audit-receipt-v1",
+  "verdict": "PASS_KILL_CONFIRMED_LATENT4_ONLY"
+}

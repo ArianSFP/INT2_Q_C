@@ -1,0 +1,1082 @@
+{
+  "access": {
+    "authenticated_panel_sources_opened": 18,
+    "compressed_outputs_created": 0,
+    "fresh_validation_files_opened": 0,
+    "network_operations": 0
+  },
+  "bindings": {
+    "design_lock_sha256": "bbf618ae4a6a3b1195e8c844cefb1e47c492b2330094ffa83fc45cc63af847f7",
+    "panel_bindings_sha256": "5c5f1b6afcb85b91591f44ba8165ae4067a93b53e056eec1e20d8624a081df0d",
+    "plan_internal_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "sources": [
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 0,
+        "relative_path": "sources/model.layers.5.mlp.experts.18.gate_proj.weight.bf16.bin",
+        "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 1,
+        "relative_path": "sources/model.layers.5.mlp.experts.18.up_proj.weight.bf16.bin",
+        "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 2,
+        "relative_path": "sources/model.layers.5.mlp.experts.18.down_proj.weight.bf16.bin",
+        "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 3,
+        "relative_path": "sources/model.layers.12.mlp.experts.7.gate_proj.weight.bf16.bin",
+        "sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 4,
+        "relative_path": "sources/model.layers.12.mlp.experts.7.up_proj.weight.bf16.bin",
+        "sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 5,
+        "relative_path": "sources/model.layers.12.mlp.experts.7.down_proj.weight.bf16.bin",
+        "sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 6,
+        "relative_path": "sources/model.layers.18.mlp.experts.20.gate_proj.weight.bf16.bin",
+        "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 7,
+        "relative_path": "sources/model.layers.18.mlp.experts.20.up_proj.weight.bf16.bin",
+        "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 8,
+        "relative_path": "sources/model.layers.18.mlp.experts.20.down_proj.weight.bf16.bin",
+        "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 9,
+        "relative_path": "sources/model.layers.28.mlp.experts.83.gate_proj.weight.bf16.bin",
+        "sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 10,
+        "relative_path": "sources/model.layers.28.mlp.experts.83.up_proj.weight.bf16.bin",
+        "sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 11,
+        "relative_path": "sources/model.layers.28.mlp.experts.83.down_proj.weight.bf16.bin",
+        "sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 12,
+        "relative_path": "sources/model.layers.36.mlp.experts.76.gate_proj.weight.bf16.bin",
+        "sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 13,
+        "relative_path": "sources/model.layers.36.mlp.experts.76.up_proj.weight.bf16.bin",
+        "sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 14,
+        "relative_path": "sources/model.layers.36.mlp.experts.76.down_proj.weight.bf16.bin",
+        "sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 15,
+        "relative_path": "sources/model.layers.45.mlp.experts.41.gate_proj.weight.bf16.bin",
+        "sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 16,
+        "relative_path": "sources/model.layers.45.mlp.experts.41.up_proj.weight.bf16.bin",
+        "sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 17,
+        "relative_path": "sources/model.layers.45.mlp.experts.41.down_proj.weight.bf16.bin",
+        "sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349"
+      }
+    ],
+    "stage0_script_sha256": "8e697f3f1dde5e79cec7619a00366d009a3c926f3de03650358be625bf4cacfe"
+  },
+  "cells": [
+    {
+      "alpha": 10.537734570050247,
+      "cell": {
+        "cell": "QSB215",
+        "cold_read_amplification": 1.0161290322580645,
+        "container_bytes": 7618560,
+        "metadata_bpw": 0.013888888888888888,
+        "pages": 309,
+        "payload_bpw": 2.138888888888889,
+        "payload_bytes_per_expert": 1261568,
+        "physical_bpw": 2.1527777777777777
+      },
+      "control_gate": {
+        "status": "NOT_RUN_ORACLE_DID_NOT_SURVIVE"
+      },
+      "fit_mean_ideal_kl_bits_per_block": 132.09777777777765,
+      "matched_gaussian_controls": [],
+      "prior_sha256_f64le": "f871f6b5cf24eb299217e11b78e0e3ee517e1c0252e7bf542bdc14dcc6174f90",
+      "qwen_oracle": {
+        "capture": 0.7336953439282222,
+        "execution_limit_bits_by_expert": 9789767.68,
+        "execution_limit_fraction": 0.97,
+        "execution_limit_margin_bits_by_expert": [
+          50880.69676565379,
+          51242.27280187607,
+          48483.25973151252,
+          52777.92229544185,
+          52024.20350285992,
+          49438.72672357969
+        ],
+        "experts": [
+          {
+            "capture": 0.7353361557216105,
+            "expert_ordinal": 0,
+            "source_energy": 2424.492300979893,
+            "sse": 641.6754528006969
+          },
+          {
+            "capture": 0.7345499894642247,
+            "expert_ordinal": 1,
+            "source_energy": 2478.459864974563,
+            "sse": 657.9071972699941
+          },
+          {
+            "capture": 0.734363897534718,
+            "expert_ordinal": 2,
+            "source_energy": 2767.732760628001,
+            "sse": 735.2097431986974
+          },
+          {
+            "capture": 0.732628346184153,
+            "expert_ordinal": 3,
+            "source_energy": 2659.4666631149166,
+            "sse": 711.0659999851475
+          },
+          {
+            "capture": 0.732225432438953,
+            "expert_ordinal": 4,
+            "source_energy": 2801.034946487004,
+            "sse": 750.0459215189381
+          },
+          {
+            "capture": 0.7333714072339594,
+            "expert_ordinal": 5,
+            "source_energy": 3061.707972671555,
+            "sse": 816.3388882139838
+          }
+        ],
+        "fit_target_bits_by_expert": 9739304.959999999,
+        "fit_target_fraction": 0.965,
+        "ideal_kl_bits_by_expert": [
+          9738886.983234346,
+          9738525.407198124,
+          9741284.420268487,
+          9736989.757704558,
+          9737743.47649714,
+          9740328.95327642
+        ],
+        "matrix_rows": [
+          {
+            "capture": 0.7346541000382473,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 0,
+            "role": "gate",
+            "source_energy": 841.670030962294,
+            "sse": 223.3336918365262
+          },
+          {
+            "capture": 0.7354696706177675,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 1,
+            "role": "up",
+            "source_energy": 765.4035273551191,
+            "sse": 202.47244720157232
+          },
+          {
+            "capture": 0.7359134278479189,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 2,
+            "role": "down",
+            "source_energy": 817.4187426624796,
+            "sse": 215.86931376259838
+          },
+          {
+            "capture": 0.7337462786497276,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 3,
+            "role": "gate",
+            "source_energy": 817.1288010804292,
+            "sse": 217.5635841101507
+          },
+          {
+            "capture": 0.735320589867629,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 4,
+            "role": "up",
+            "source_energy": 811.7096293478241,
+            "sse": 214.84282589454756
+          },
+          {
+            "capture": 0.7345867487609806,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 5,
+            "role": "down",
+            "source_energy": 849.6214345463098,
+            "sse": 225.5007872652958
+          },
+          {
+            "capture": 0.7324087459397336,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 6,
+            "role": "gate",
+            "source_energy": 1072.4005741883234,
+            "sse": 286.9650145020032
+          },
+          {
+            "capture": 0.7355710668775614,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 7,
+            "role": "up",
+            "source_energy": 810.1565218245568,
+            "sse": 214.22882472825324
+          },
+          {
+            "capture": 0.7356277252942867,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 8,
+            "role": "down",
+            "source_energy": 885.1756646151206,
+            "sse": 234.01590396844097
+          },
+          {
+            "capture": 0.7298548618008032,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 9,
+            "role": "gate",
+            "source_energy": 885.4636020589007,
+            "sse": 239.20368714856033
+          },
+          {
+            "capture": 0.7343966947974281,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 10,
+            "role": "up",
+            "source_energy": 892.6647426939128,
+            "sse": 237.09470609730658
+          },
+          {
+            "capture": 0.7336237380719162,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 11,
+            "role": "down",
+            "source_energy": 881.3383183621032,
+            "sse": 234.7676067392806
+          },
+          {
+            "capture": 0.7313638555794593,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 12,
+            "role": "gate",
+            "source_energy": 888.951731994976,
+            "sse": 238.80456585909224
+          },
+          {
+            "capture": 0.7325677655650817,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 13,
+            "role": "up",
+            "source_energy": 972.5234558449162,
+            "sse": 260.08412083697453
+          },
+          {
+            "capture": 0.732686258099733,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 14,
+            "role": "down",
+            "source_energy": 939.5597586471124,
+            "sse": 251.15723482287137
+          },
+          {
+            "capture": 0.7312994473636346,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 15,
+            "role": "gate",
+            "source_energy": 882.0293225790343,
+            "sse": 237.00176641846554
+          },
+          {
+            "capture": 0.73405499897424,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 16,
+            "role": "up",
+            "source_energy": 1052.5524149096336,
+            "sse": 279.9210530628087
+          },
+          {
+            "capture": 0.7343544499395613,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 17,
+            "role": "down",
+            "source_energy": 1127.1262351828873,
+            "sse": 299.4160687327095
+          }
+        ],
+        "physical_reservoir_bits_by_expert": 10092544,
+        "physical_reservoir_margin_bits_by_expert": [
+          353657.0167656541,
+          354018.59280187637,
+          351259.5797315128,
+          355554.24229544215,
+          354800.5235028602,
+          352215.04672358
+        ],
+        "required_capture": 0.9595434712442019,
+        "roles": [
+          {
+            "capture": 0.7321886351364129,
+            "role": "gate",
+            "source_energy": 5387.644062863958,
+            "sse": 1442.8723098747982
+          },
+          {
+            "capture": 0.7344691338389875,
+            "role": "up",
+            "source_energy": 5305.010291975963,
+            "sse": 1408.643977821463
+          },
+          {
+            "capture": 0.7344248842980713,
+            "role": "down",
+            "source_energy": 5500.240154016013,
+            "sse": 1460.7269152911967
+          }
+        ],
+        "source_energy": 16192.894508855934,
+        "sse": 4312.243202987458,
+        "status": "HARD_KILL_FAVOURABLE_ORACLE_UCB_BELOW_EXACT_REQUIREMENT",
+        "uncertainty": {
+          "delete_one_expert": [
+            0.733406411668664,
+            0.7335408931823647,
+            0.7335575148462614,
+            0.733905020660704,
+            0.73400278991289,
+            0.7337708740074524
+          ],
+          "estimate": 0.7336953439282222,
+          "jackknife_center": 0.733697250713056,
+          "jackknife_se": 0.0004747842342178313,
+          "lower_three_se": 0.7322709912255687,
+          "upper_three_se": 0.7351196966308757
+        }
+      }
+    },
+    {
+      "alpha": 16.096216683334774,
+      "cell": {
+        "cell": "QSB230",
+        "cold_read_amplification": 1.0150602409638554,
+        "container_bytes": 8159232,
+        "metadata_bpw": 0.013888888888888888,
+        "pages": 331,
+        "payload_bpw": 2.2916666666666665,
+        "payload_bytes_per_expert": 1351680,
+        "physical_bpw": 2.3055555555555554
+      },
+      "control_gate": {
+        "status": "NOT_RUN_ORACLE_DID_NOT_SURVIVE"
+      },
+      "fit_mean_ideal_kl_bits_per_block": 141.5333333333332,
+      "matched_gaussian_controls": [],
+      "prior_sha256_f64le": "946d181437fdacbc8d4b84101ade11ccab47d62e46e385edb313ca24a691b62d",
+      "qwen_oracle": {
+        "capture": 0.7407321907099205,
+        "execution_limit_bits_by_expert": 10489036.799999999,
+        "execution_limit_fraction": 0.97,
+        "execution_limit_margin_bits_by_expert": [
+          54577.1624391526,
+          54629.56112785265,
+          52400.10091031529,
+          55921.181084796786,
+          55224.336650563404,
+          53142.86061440781
+        ],
+        "experts": [
+          {
+            "capture": 0.7423646978859303,
+            "expert_ordinal": 0,
+            "source_energy": 2424.492300979893,
+            "sse": 624.6348064361908
+          },
+          {
+            "capture": 0.7415849100178967,
+            "expert_ordinal": 1,
+            "source_energy": 2478.459864974563,
+            "sse": 640.4714290244332
+          },
+          {
+            "capture": 0.7414716652543997,
+            "expert_ordinal": 2,
+            "source_energy": 2767.732760628001,
+            "sse": 715.5373416260003
+          },
+          {
+            "capture": 0.7395986425307719,
+            "expert_ordinal": 3,
+            "source_energy": 2659.4666631149166,
+            "sse": 692.5287292192828
+          },
+          {
+            "capture": 0.7393021917262179,
+            "expert_ordinal": 4,
+            "source_energy": 2801.034946487004,
+            "sse": 730.2236714474323
+          },
+          {
+            "capture": 0.740373570987735,
+            "expert_ordinal": 5,
+            "source_energy": 3061.707972671555,
+            "sse": 794.9003076230972
+          }
+        ],
+        "fit_target_bits_by_expert": 10434969.6,
+        "fit_target_fraction": 0.965,
+        "ideal_kl_bits_by_expert": [
+          10434459.637560846,
+          10434407.238872146,
+          10436636.699089684,
+          10433115.618915202,
+          10433812.463349435,
+          10435893.939385591
+        ],
+        "matrix_rows": [
+          {
+            "capture": 0.7416741378147603,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 0,
+            "role": "gate",
+            "source_energy": 841.670030962294,
+            "sse": 217.42513642381198
+          },
+          {
+            "capture": 0.7424492850670805,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 1,
+            "role": "up",
+            "source_energy": 765.4035273551191,
+            "sse": 197.13022568248937
+          },
+          {
+            "capture": 0.7429965409826266,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 2,
+            "role": "down",
+            "source_energy": 817.4187426624796,
+            "sse": 210.0794443298895
+          },
+          {
+            "capture": 0.7407029270908343,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 3,
+            "role": "gate",
+            "source_energy": 817.1288010804292,
+            "sse": 211.87910630993122
+          },
+          {
+            "capture": 0.74244256300831,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 4,
+            "role": "up",
+            "source_energy": 811.7096293478241,
+            "sse": 209.06185171630023
+          },
+          {
+            "capture": 0.741613779888417,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 5,
+            "role": "down",
+            "source_energy": 849.6214345463098,
+            "sse": 219.53047099820174
+          },
+          {
+            "capture": 0.7394957647665934,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 6,
+            "role": "gate",
+            "source_energy": 1072.4005741883234,
+            "sse": 279.3648914427953
+          },
+          {
+            "capture": 0.7427577450090952,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 7,
+            "role": "up",
+            "source_energy": 810.1565218245568,
+            "sse": 208.40649056973712
+          },
+          {
+            "capture": 0.7426884078286293,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 8,
+            "role": "down",
+            "source_energy": 885.1756646151206,
+            "sse": 227.76595961346788
+          },
+          {
+            "capture": 0.7369497711249653,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 9,
+            "role": "gate",
+            "source_energy": 885.4636020589007,
+            "sse": 232.92140318210647
+          },
+          {
+            "capture": 0.7413310620436486,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 10,
+            "role": "up",
+            "source_energy": 892.6647426939128,
+            "sse": 230.90464094371407
+          },
+          {
+            "capture": 0.7405052290038996,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 11,
+            "role": "down",
+            "source_energy": 881.3383183621032,
+            "sse": 228.70268509346226
+          },
+          {
+            "capture": 0.7384290437282403,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 12,
+            "role": "gate",
+            "source_energy": 888.951731994976,
+            "sse": 232.52395461736296
+          },
+          {
+            "capture": 0.7395667063644149,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 13,
+            "role": "up",
+            "source_energy": 972.5234558449162,
+            "sse": 253.27748674355303
+          },
+          {
+            "capture": 0.7398545139497419,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 14,
+            "role": "down",
+            "source_energy": 939.5597586471124,
+            "sse": 244.42223008651627
+          },
+          {
+            "capture": 0.7383938125579455,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 15,
+            "role": "gate",
+            "source_energy": 882.0293225790343,
+            "sse": 230.74432829199918
+          },
+          {
+            "capture": 0.7408852193825117,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 16,
+            "role": "up",
+            "source_energy": 1052.5524149096336,
+            "sse": 272.73188807771714
+          },
+          {
+            "capture": 0.7414450288204901,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 17,
+            "role": "down",
+            "source_energy": 1127.1262351828873,
+            "sse": 291.4240912533809
+          }
+        ],
+        "physical_reservoir_bits_by_expert": 10813440,
+        "physical_reservoir_margin_bits_by_expert": [
+          378980.3624391537,
+          379032.76112785377,
+          376803.3009103164,
+          380324.3810847979,
+          379627.5366505645,
+          377546.0606144089
+        ],
+        "required_capture": 0.9672653856206257,
+        "roles": [
+          {
+            "capture": 0.7392443146065567,
+            "role": "gate",
+            "source_energy": 5387.644062863958,
+            "sse": 1404.858820268007
+          },
+          {
+            "capture": 0.7414684405404495,
+            "role": "up",
+            "source_energy": 5305.010291975963,
+            "sse": 1371.5125837335108
+          },
+          {
+            "capture": 0.7414794915206208,
+            "role": "down",
+            "source_energy": 5500.240154016013,
+            "sse": 1421.9248813749186
+          }
+        ],
+        "source_energy": 16192.894508855934,
+        "sse": 4198.296285376437,
+        "status": "HARD_KILL_FAVOURABLE_ORACLE_UCB_BELOW_EXACT_REQUIREMENT",
+        "uncertainty": {
+          "delete_one_expert": [
+            0.7404447208190956,
+            0.7405780880701991,
+            0.7405797405599119,
+            0.7409549453311326,
+            0.7410312886139969,
+            0.7408158075909652
+          ],
+          "estimate": 0.7407321907099205,
+          "jackknife_center": 0.7407340984975502,
+          "jackknife_se": 0.00047930221181913816,
+          "lower_three_se": 0.7392942840744631,
+          "upper_three_se": 0.7421700973453779
+        }
+      }
+    },
+    {
+      "alpha": 46.38563573771819,
+      "cell": {
+        "cell": "QSB250",
+        "cold_read_amplification": 1.0138888888888888,
+        "container_bytes": 8847360,
+        "metadata_bpw": 0.013888888888888888,
+        "pages": 359,
+        "payload_bpw": 2.486111111111111,
+        "payload_bytes_per_expert": 1466368,
+        "physical_bpw": 2.5
+      },
+      "control_gate": {
+        "status": "NOT_RUN_ORACLE_DID_NOT_SURVIVE"
+      },
+      "fit_mean_ideal_kl_bits_per_block": 153.54222222222222,
+      "matched_gaussian_controls": [],
+      "prior_sha256_f64le": "c45bd25c36f00a803f1c3e437c0c6b7fee8bf0c3714c72162bf5105d444428f8",
+      "qwen_oracle": {
+        "capture": 0.7455107522526119,
+        "execution_limit_bits_by_expert": 11379015.68,
+        "execution_limit_fraction": 0.97,
+        "execution_limit_margin_bits_by_expert": [
+          59276.77749606222,
+          58417.9829042647,
+          57833.746913729236,
+          59455.7953679543,
+          58853.63559020497,
+          57727.99558009207
+        ],
+        "experts": [
+          {
+            "capture": 0.7471467145751463,
+            "expert_ordinal": 0,
+            "source_energy": 2424.492300979893,
+            "sse": 613.0408437900293
+          },
+          {
+            "capture": 0.746394296699916,
+            "expert_ordinal": 1,
+            "source_energy": 2478.459864974563,
+            "sse": 628.5515571579052
+          },
+          {
+            "capture": 0.7462548265866551,
+            "expert_ordinal": 2,
+            "source_energy": 2767.732760628001,
+            "sse": 702.2988293073481
+          },
+          {
+            "capture": 0.7444338325541591,
+            "expert_ordinal": 3,
+            "source_energy": 2659.4666631149166,
+            "sse": 679.6697025422585
+          },
+          {
+            "capture": 0.7440281967591968,
+            "expert_ordinal": 4,
+            "source_energy": 2801.034946487004,
+            "sse": 716.985966192785
+          },
+          {
+            "capture": 0.7451191784498301,
+            "expert_ordinal": 5,
+            "source_energy": 3061.707972671555,
+            "sse": 780.3706434212312
+          }
+        ],
+        "fit_target_bits_by_expert": 11320360.959999999,
+        "fit_target_fraction": 0.965,
+        "ideal_kl_bits_by_expert": [
+          11319738.902503937,
+          11320597.697095735,
+          11321181.93308627,
+          11319559.884632045,
+          11320162.044409795,
+          11321287.684419908
+        ],
+        "matrix_rows": [
+          {
+            "capture": 0.7466251330604721,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 0,
+            "role": "gate",
+            "source_energy": 841.670030962294,
+            "sse": 213.2580321020596
+          },
+          {
+            "capture": 0.7471028046510706,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 1,
+            "role": "up",
+            "source_energy": 765.4035273551191,
+            "sse": 193.56840537828714
+          },
+          {
+            "capture": 0.7477248862217116,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 0,
+            "feature_rank": 257,
+            "matrix_ordinal": 2,
+            "role": "down",
+            "source_energy": 817.4187426624796,
+            "sse": 206.21440630968254
+          },
+          {
+            "capture": 0.7454866254224253,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 3,
+            "role": "gate",
+            "source_energy": 817.1288010804292,
+            "sse": 207.97020862750776
+          },
+          {
+            "capture": 0.7472057540860658,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 4,
+            "role": "up",
+            "source_energy": 811.7096293478241,
+            "sse": 205.1955236520622
+          },
+          {
+            "capture": 0.7464920067684624,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 1,
+            "feature_rank": 257,
+            "matrix_ordinal": 5,
+            "role": "down",
+            "source_energy": 849.6214345463098,
+            "sse": 215.38582487833526
+          },
+          {
+            "capture": 0.7441937285171063,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 6,
+            "role": "gate",
+            "source_energy": 1072.4005741883234,
+            "sse": 274.32679241922926
+          },
+          {
+            "capture": 0.7475376532192046,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 7,
+            "role": "up",
+            "source_energy": 810.1565218245568,
+            "sse": 204.53401675959424
+          },
+          {
+            "capture": 0.7475777644365351,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 2,
+            "feature_rank": 257,
+            "matrix_ordinal": 8,
+            "role": "down",
+            "source_energy": 885.1756646151206,
+            "sse": 223.4380201285246
+          },
+          {
+            "capture": 0.741814784059915,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 9,
+            "role": "gate",
+            "source_energy": 885.4636020589007,
+            "sse": 228.61361130466287
+          },
+          {
+            "capture": 0.7461397641706278,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 10,
+            "role": "up",
+            "source_energy": 892.6647426939128,
+            "sse": 226.61208209684264
+          },
+          {
+            "capture": 0.745337284826258,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 3,
+            "feature_rank": 257,
+            "matrix_ordinal": 11,
+            "role": "down",
+            "source_energy": 881.3383183621032,
+            "sse": 224.444009140753
+          },
+          {
+            "capture": 0.7432565434578279,
+            "common_seed_u64": 6983438078262162903,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 12,
+            "role": "gate",
+            "source_energy": 888.951731994976,
+            "sse": 228.23254037154072
+          },
+          {
+            "capture": 0.7443595170856274,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 13,
+            "role": "up",
+            "source_energy": 972.5234558449162,
+            "sse": 248.6163658977489
+          },
+          {
+            "capture": 0.7444153416390751,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 4,
+            "feature_rank": 257,
+            "matrix_ordinal": 14,
+            "role": "down",
+            "source_energy": 939.5597586471124,
+            "sse": 240.13705992349537
+          },
+          {
+            "capture": 0.743206522957548,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 15,
+            "role": "gate",
+            "source_energy": 882.0293225790343,
+            "sse": 226.49937659846876
+          },
+          {
+            "capture": 0.7456973401328411,
+            "common_seed_u64": 11299122902407625677,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 16,
+            "role": "up",
+            "source_energy": 1052.5524149096336,
+            "sse": 267.6668787611213
+          },
+          {
+            "capture": 0.7460760124927784,
+            "common_seed_u64": 16443857425729824865,
+            "expert_ordinal": 5,
+            "feature_rank": 257,
+            "matrix_ordinal": 17,
+            "role": "down",
+            "source_energy": 1127.1262351828873,
+            "sse": 286.2043880616411
+          }
+        ],
+        "physical_reservoir_bits_by_expert": 11730944,
+        "physical_reservoir_margin_bits_by_expert": [
+          411205.0974960625,
+          410346.302904265,
+          409762.06691372953,
+          411384.1153679546,
+          410781.95559020527,
+          409656.31558009237
+        ],
+        "required_capture": 0.975,
+        "roles": [
+          {
+            "capture": 0.7440624240699237,
+            "role": "gate",
+            "source_energy": 5387.644062863958,
+            "sse": 1378.9005614234688
+          },
+          {
+            "capture": 0.7462411572354861,
+            "role": "up",
+            "source_energy": 5305.010291975963,
+            "sse": 1346.1932725456566
+          },
+          {
+            "capture": 0.7462249521189965,
+            "role": "down",
+            "source_energy": 5500.240154016013,
+            "sse": 1395.8237084424318
+          }
+        ],
+        "source_energy": 16192.894508855934,
+        "sse": 4120.917542411557,
+        "status": "HARD_KILL_FAVOURABLE_ORACLE_UCB_BELOW_EXACT_REQUIREMENT",
+        "uncertainty": {
+          "delete_one_expert": [
+            0.7452226739414329,
+            0.7453510789223998,
+            0.7453573538095023,
+            0.7457223787577023,
+            0.7458208428511447,
+            0.7456020528087774
+          ],
+          "estimate": 0.7455107522526119,
+          "jackknife_center": 0.7455127301818266,
+          "jackknife_se": 0.0004841401685709297,
+          "lower_three_se": 0.7440583317468991,
+          "upper_three_se": 0.7469631727583247
+        }
+      }
+    }
+  ],
+  "claim_boundary": "Adapted optimistic source-leaking stage-0 topology bound only: v1 budget fractions were chosen after v0 results on this same panel. This is not independent held-out evidence, a serialized channel simulator, an operational Gaussian/TCQ result, a Shannon-limit result, a compressed artifact, or a validation result.",
+  "execution": {
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "elapsed_seconds": 12.713938236236572,
+    "numpy": "2.5.2",
+    "python": "3.12.3"
+  },
+  "fixed_splits": {
+    "calibration_experts": [
+      1
+    ],
+    "closed_score_experts": [
+      3,
+      5
+    ],
+    "fit_experts": [
+      0,
+      2,
+      4
+    ]
+  },
+  "schema": "qwen_stochastic_binary_channel_ptq_stage0_result_v1",
+  "status": "POLICY_REJECT_ALL_RATE_CELLS"
+}

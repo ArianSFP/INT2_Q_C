@@ -1,0 +1,62 @@
+{
+  "schema": "free_order_swiglu_path_v4_source_only_producer_receipt_v1",
+  "status": "SEALED_SOURCE_ONLY_NATIVE_PRESTART_REPAIR_AUDIT_REQUIRED",
+  "package": "free_order_swiglu_path_oracle_v4",
+  "lineage": {
+    "v3_package": "../free_order_swiglu_path_oracle_v3",
+    "v3_package_manifest_sha256": "8584bde5c09fb7df531884c2100d3892dd1e12fbe689cf5d23ce091918d96470",
+    "v3_scientific_oracle_sha256": "9ca6f4bdd4150c8c0c68c0a298c00eb45c088a4af287895ebfdf9bf1e661a070",
+    "v3_scientific_protocol_sha256": "f4660cb8876a749eb1635dbf010a8df6199e845b0517dd8b15039ac9cf1fd097",
+    "v3_files_modified": false,
+    "v3_independent_audit_trust_input": "NONE_PROVIDED_OR_CLAIMED",
+    "anticipated_findings_only": ["FOSP3-FW-001", "FOSP3-FW-002", "FOSP3-DOC-001"]
+  },
+  "scientific_identity": {
+    "stage_order_preserved": true,
+    "cross_role_coefficients_per_edge": 9,
+    "path_edges": 767,
+    "side_bits": 117224,
+    "side_bpw": 0.024843004014756944,
+    "required_net_s_bpw": 0.16096404744368115,
+    "required_gross_s_bpw": 0.1858070514584381,
+    "logical_read_amplification": 1.0,
+    "maximum_cold_page_amplification": 1.0054349308378698,
+    "n8_corrected_relaxed_s_bpw": 0.0,
+    "n8_q_legal_fp16_s_bpw": 0.7995602818589078,
+    "n8_control_legal_fp16_s_bpw": 0.5885652320580218,
+    "n8_corrected_legal_fp16_s_bpw": 0.21099504980088601,
+    "scientific_semantics_changed_from_v3": false
+  },
+  "repairs": {
+    "FOSP3-FW-001": "An externally digest-pinned regular immutable native launcher must authenticate and hold exact bootstrap bytes before execution; Python self-authentication is forbidden.",
+    "FOSP3-FW-002": "The complete administrator-owned immutable interpreter/runtime image, including startup encoding resources and native dependencies, must be authenticated before any Python process is created.",
+    "FOSP3-DOC-001": "The README names a regular externally pinned native executable and forbids generic interpreter, shell, PATH, symlink, or ordinary mutable-venv substitution."
+  },
+  "deliberate_absences": {
+    "native_launcher_binary": true,
+    "interpreter_or_runtime_image": true,
+    "runtime_manifest": true,
+    "signature_key_or_authorization_builder": true,
+    "model_or_qwen_payload": true,
+    "gpu_or_cuda_execution_path": true,
+    "network_path": true,
+    "calibration_or_deployment_entrypoint": true
+  },
+  "source_tests": {
+    "receipt": "SOURCE_TEST_RECEIPT.json",
+    "standard_library_tests": "PASS_18_OF_18",
+    "powershell_source_checks": 44,
+    "sealed_package_verifier": "PASS_105_CHECKS",
+    "hostile_bootstrap_and_pre_startup_runtime_cases": "PASS_REJECTED"
+  },
+  "producer_assertion_boundary": "Source-only contract construction and hostile inert-fixture QA. This producer is not an independent auditor, native launcher, runtime authority, model/Qwen access authority, calibration authority, deployment authority, GPU authority, or production authority.",
+  "authorization": {
+    "source_access": false,
+    "calibration": false,
+    "deployment": false,
+    "model_or_qwen_access": false,
+    "gpu_execution": false,
+    "production": false,
+    "self_authorization": false
+  }
+}

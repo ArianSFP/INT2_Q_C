@@ -1,0 +1,80 @@
+{
+  "schema": "qwen_rate_relative_universal_radical_gates_checkpoint_v9",
+  "date": "2026-09-01",
+  "status": "AUDITED_SEARCH_CHECKPOINT_TARGET_NOT_ACHIEVED",
+  "objective": {
+    "physical_bpw_min": 2.15,
+    "physical_bpw_max": 2.5,
+    "target_F_max": 0.8,
+    "target_s_min_bpw": 0.16096404744368115,
+    "cold_read_amplification_max_exclusive": 2.0,
+    "codec_scope": "universal SwiGLU-MoE PTQ"
+  },
+  "universal_decoder_boundary": {
+    "allowed": [
+      "fixed SwiGLU role and shape semantics",
+      "bytes in the selected expert packet",
+      "explicitly transmitted and physically charged state",
+      "causal state derived from already decoded bytes"
+    ],
+    "forbidden": [
+      "model identity or checkpoint provenance",
+      "external reference checkpoints or initialization",
+      "router or calibration activations",
+      "pretrained model-specific side networks",
+      "unserialized fitted state"
+    ],
+    "normative_document": "docs/UNIVERSAL_SWIGLU_MOE_CODEC_CONTRACT.md"
+  },
+  "finite_baseline": {
+    "physical_bpw": 2.5,
+    "relative_mse": 0.030902167403153148,
+    "F": 0.9888693569009007,
+    "s_bpw": 0.008074080480766676,
+    "worst_cold_read_amplification": 1.1694444444444445
+  },
+  "strongest_honest_ideal_composite": {
+    "F": 0.936397620983144,
+    "s_bpw": 0.0474034129,
+    "finite_codec": false,
+    "remaining_s_bpw": 0.11356063457
+  },
+  "new_closed_branch": {
+    "name": "RAVEL-6144-v1",
+    "decision": "HARD_KILL_RAVEL6144_V1",
+    "source_leaking_oracle_capture": 0.0005730920838821207,
+    "source_leaking_oracle_F": 1.0176519417779304,
+    "finite_fp16_table_F": 1.0187421104347276,
+    "side_bpw": 0.004629629629629629,
+    "cold_read_amplification": 1.1805555555555556,
+    "source_manifest_sha256": "ffafd386ab4f3777fb6c9a70fa413f3bdf169658c64607f898a7969d0375c359",
+    "result_sha256": "ef67ee26246149472b5f3e4dc6f7e869d95c325a354abd7339bc8e4137dc0c47",
+    "independent_audit_manifest_sha256": "e2855085f5e1fe7e20575df660c80eb15a4b3d1b654eccb01ae04bed5510df6a",
+    "independent_audit": "PASS_WITH_LIMITATION_212_CHECKS_9_TESTS",
+    "limitation": "the emitted statistics do not permit an independent payload-free remeasurement of the source-leaking weighted oracle"
+  },
+  "new_source_only_candidate": {
+    "name": "TACTIC-DH384-v2",
+    "status": "SOURCE_ONLY_BLOCKED_ON_ACTUAL_LOWER_RATE_COARSE_ARTIFACT",
+    "physical_bpw": 2.5,
+    "cold_read_amplification": 1.0138888888888888,
+    "source_manifest_sha256": "f8de593784638cf7719d08ddda7061f4912166021214fb7a2894862a53050662",
+    "selector_packet_sha256": "0946880088b766265a29d7d84ef4165a92a636eba0877dee9ce8b5b43dac56ad",
+    "synthetic_receipt_file_sha256": "c91c702a603848abf0b7bfdac0c8e01740bf8cd4d80baa93b0243647fc2c043f",
+    "source_tests": "PASS_11_OF_11",
+    "synthetic_cupy_preflight": "PASS_CPU_GPU_PARITY_NO_PAYLOAD",
+    "required_dependency": "independently decoded and re-encoded universal finite 307/128-bpw coarse stream with canonical integer symbols"
+  },
+  "other_evidence_pins": {
+    "ccq_independent_audit_manifest_sha256": "0229f82e0bc9ffcae99e2d67a877ed71e3fd7128917559fef74307552a1c6160",
+    "kbvq_source_manifest_sha256": "c8d644f7366459a0785246545d564c688989dd72c64702dd16cd08f31630ac47",
+    "ravel_v0_blocker_audit_manifest_sha256": "2c32fbbca7b4b90bb3d8f769f6f8d85df90eaf8dc16acd08dcc17e51d048cdc4",
+    "qsb_v0_audit_manifest_sha256": "1a434772a6bf5345465cadd1c9ffb387187ba60249100b4ad4f2dd9c100c7456",
+    "qsb_v1_audit_manifest_sha256": "32e12324a1d23e8691bfc5be00df5b384909bee4d7f904f561377977d17fcbc6",
+    "direct_output_audit_manifest_sha256": "8f8efb1eff6705083c148c02a3176addced24eadb4d43689f6937388a280854e",
+    "decoded_affine_audit_manifest_sha256": "1b010d7dd569289aff20956ac308d66687f25c30b97dc576a9445f313a0b0acb",
+    "same_layer_audit_manifest_sha256": "b8ccb9fb7e21e16dab92a36b4c039d33e8b8d5913771c6f6f787e29bf018b1a2",
+    "meta_codebook_audit_source_manifest_sha256": "5121655f4475df6095536f4295c1ace649d8430dd106a61ee2c2275d974bb9bf"
+  },
+  "claim_boundary": "No finite codec in this checkpoint reaches F <= 0.8. TACTIC is source-only and RAVEL is a scoped negative result. Separate oracle gains are not additive."
+}

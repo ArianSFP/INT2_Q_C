@@ -1,0 +1,41 @@
+{
+  "schema": "same_layer_alignment_independent_result_audit_manifest_v0",
+  "closed_world": true,
+  "entries": [
+    {
+      "path": "README.md",
+      "bytes": 2181,
+      "sha256": "6b5b1626285db241525864c1dfd862abf8d85c283f54d76041dfd50bcbe44003"
+    },
+    {
+      "path": "audit_receipt.json",
+      "bytes": 1764,
+      "sha256": "55bf52ea46986f9d29a59ec2fc300b67f6985934608910078dc4e92788310304"
+    },
+    {
+      "path": "evidence/PACKAGE_MANIFEST.json",
+      "bytes": 457,
+      "sha256": "acececae8d58b19126ce69486ae076ee4a1ded956f42935ea6ce921c0c5cd1c0"
+    },
+    {
+      "path": "evidence/design_lock.json",
+      "bytes": 1628,
+      "sha256": "1c12104da21b87e5979bab1c758f7143b5fdd1d2b47767fa97fe63b7be030653"
+    },
+    {
+      "path": "evidence/runpod_result.json",
+      "bytes": 18764,
+      "sha256": "a1ef6fb136027525b6312635cdcca320f05f51c1340c3875b32192454aac1bb3"
+    },
+    {
+      "path": "evidence/same_layer_alignment_oracle.py",
+      "bytes": 9008,
+      "sha256": "8ad7fba62178c5f8f5a761469c27edf16d56fedf4be97304ef4acd14af703d04"
+    },
+    {
+      "path": "verify_audit.py",
+      "bytes": 10186,
+      "sha256": "9262d9c85c95b0b6d331614ffaf003703a81e4fa7b1b8d62788dfca8246d0aa5"
+    }
+  ]
+}

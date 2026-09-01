@@ -1,0 +1,42 @@
+{
+  "schema": "tactic_dh384_source_manifest_v2",
+  "status": "SEALED_SOURCE_ONLY_NO_EXECUTION_AUTHORITY",
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 12502,
+      "sha256": "638d3688e638fb1dd82d68b387acc7c97eb25235073c1abc5f85f5af929a8c08"
+    },
+    {
+      "name": "cupy_preflight.py",
+      "bytes": 4764,
+      "sha256": "db358f080a8d77d27204f7d098fe1caac65e172edaf17ab6ca205900b5883553"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 8045,
+      "sha256": "6549003de0a33797baab9131eb02c720389541272aa44902d65b950ae29f1c9a"
+    },
+    {
+      "name": "stage0_gate.py",
+      "bytes": 21006,
+      "sha256": "3bae2633ac38cef3db12c3327f967ae1d3bc2b7caab0639df92bec5a009288a3"
+    },
+    {
+      "name": "tactic_v2_common.py",
+      "bytes": 14619,
+      "sha256": "1d007e47f075d7b4c746d53e5bffb999ebde4cc1a2b85835cf44e951c18c87ba"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 5647,
+      "sha256": "367e47b62b6c5c3474626b026f6c995de50183a9fc37711fc3de853c48675177"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 17144,
+      "sha256": "34c43105fec9acfa4bf834b4c8c7f7ccb668111d50c5f8f76070caaccbfe9087"
+    }
+  ],
+  "claim_boundary": "Exact source closure only; no payload, CUDA, compression or target-result authority."
+}

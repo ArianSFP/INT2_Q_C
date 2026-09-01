@@ -1,0 +1,50 @@
+{
+  "audit": "free_order_swiglu_path_aux_gross_v0_independent_result_audit_20260901",
+  "canonical_unsigned_sha256": "887ea72ef10dfb48a83145444c842caa5af28624ebb8ec3d437c83cdb1bd0494",
+  "claim_scope": "Exact frozen auxiliary gross necessary-bound result only; no validation, pinned-panel, legal-path/FP16, finite-codec, or target evidence.",
+  "date": "2026-09-01",
+  "disjoint_runpod_replay": {
+    "result_sha256": "7e44d40926d578c88083d9a40a77334c55ca70710a4e203cef566e839156e611",
+    "semantic_comparison": "Exact after deleting only runtime.elapsed_seconds",
+    "status": "PASS"
+  },
+  "external_bindings": {
+    "oracle_sha256": "9ca6f4bdd4150c8c0c68c0a298c00eb45c088a4af287895ebfdf9bf1e661a070",
+    "source_bindings_sha256": "cd12742910503f23d0d9224e277a030b923f8fc917c75a13a1aff8e9bcde090a",
+    "source_files_held_opened_hashed": 6
+  },
+  "findings": {
+    "controls_or_legal_fp16_after_kill": false,
+    "gross_relaxed_contains_every_legal_path": true,
+    "hard_kill_uses_raw_gross_statistic": true,
+    "nonself_pairs_per_expert": 589056,
+    "self_pairs_excluded_per_expert": 768
+  },
+  "independent_verifier": {
+    "audit_manifest_binding": "External SHA-256 pin required by verifier and release handoff",
+    "execution_status": "PASS_LOCAL_INDEPENDENT_CPU_REPLAY",
+    "expected_checks": 6154,
+    "observed_checks": 6154,
+    "status": "PASS"
+  },
+  "producer": {
+    "closure_files": 3,
+    "result_sha256": "52d9795004299e0e6bc055de7d900edaf8a89fc485a316e82c848682e73ecd7c",
+    "script_sha256": "c8a08fa8dec5279380bc0d09fd2a6089b56a7a97faa16fac88010c3226b429ab"
+  },
+  "recomputed": {
+    "aggregate_gross_s_bpw": 0.014463860060408446,
+    "cpu_predecessor_hashes": [
+      "fbd013a340582a1a060ab54b4022759e00ff0349b68a93e4aa0e8fc6f793a81d",
+      "dcf7c88325cef5fdb6dbb1635798bbada01e2338325a898a8d4d494e18086ab6"
+    ],
+    "decision": "HARD_KILL_GROSS_QWEN_RELAXED_NECESSARY_BOUND",
+    "early_stop": true,
+    "fraction_of_required_gross_s": 0.0778434399926085,
+    "gross_relaxed_capture": 106.02983322590737,
+    "net_s_after_side_bpw": -0.010379143954348498,
+    "projected_optimistic_F_after_side": 1.0144925621732728,
+    "source_energy": 5341.155115313352
+  },
+  "verdict": "PASS"
+}

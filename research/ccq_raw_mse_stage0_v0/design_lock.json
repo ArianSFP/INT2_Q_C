@@ -1,0 +1,82 @@
+{
+  "architecture": {
+    "cell": "CCQ Code Cluster (L=6,N=4,S=3)",
+    "code_decoder": "round_fmaf(uint8_code, per_output_float32_code_scale, per_output_float32_code_zero_point), then 6-bit windows at shifts 9,6,3,0, centered by 32",
+    "encoder_status": "paper-derived deterministic min/max Code-Cluster encoder; official FastDeploy commit publishes loading and dequantization but no offline CCQ encoder",
+    "local_scale": "one uint4 multiplier per 64 weights, two multipliers packed per uint8, times one per-output canonical FP16 super-scale",
+    "name": "CCQ-RMSE-S0-v0",
+    "vector_group": "four consecutive K-axis weights in released KxN orientation"
+  },
+  "claim_boundary": "A kill applies only to this frozen paper-derived CCQ Code-Cluster cell. A promotion is a held-out first-stage plus ideal Gaussian-residual feasibility signal, not an official CCQ reproduction, a finite residual codec, fresh-validation evidence, model-wide generalization, or target achievement.",
+  "containment": {
+    "additive_vq": "distinct: one structured overlapping-window code, not a sum of independently indexed codewords",
+    "bitplane_context": "distinct: fixed-width independent bytes with arithmetic bit extraction, not entropy-coded causal label contexts",
+    "direct_output_vq": "the materialized per-channel 256x4 table is constrained VQ, but it is channel-conditioned and generated from two floats; the tested local direct-output VQ used one shared 32768x8 stored table and does not contain it at matched side cost",
+    "polaris_strata": "distinct: independent four-weight VQ-like groups without RHT, long sequential polar/trellis decisions, or arithmetic streams",
+    "qsb": "distinct: deterministic nearest structured symbols, not stochastic channel simulation, shared randomness, or a multiplicative binary-feature decoder"
+  },
+  "execution": {
+    "authorization_literal": "OPEN_AUTHENTICATED_18_MATRIX_PANEL_FOR_CCQ_RAW_MSE_STAGE0_V0",
+    "cluster_refinement_passes": 2,
+    "continuous_scale_passes": 3,
+    "device": "NVIDIA RTX 5090",
+    "fixed_split": {
+      "fit_slots": [0, 2, 3, 5],
+      "holdout_slots": [1, 4]
+    },
+    "gaussian_seed_base": 250707145,
+    "strict_early_kill": "during held-out scoring, accumulated SSE divided by complete held-out source energy is a monotone lower bound; crossing F=0.8 is an exact no-recovery certificate",
+    "table_column_tile": 64,
+    "viterbi_vector_batch": 65536
+  },
+  "gaussian_control": {
+    "matching": "each natural 2048-value source row is matched in mean and centered RMS before the identical role orientation and CCQ encoder",
+    "policy": "fit and holdout identities, canonical fields, optimization passes, scoring, rate, and read arithmetic are identical"
+  },
+  "hybrid_rate_kill": {
+    "cell": "paper 2.5-bpw alternating (L=3,N=3,S=2)/(L=3,N=4,S=2)",
+    "data_bytes_per_expert": 1474560,
+    "per_output_fp16_super_scale_bytes_per_expert": 7168,
+    "six_expert_exact_prefix_bpw": 2.5134186921296297,
+    "status": "KILL_RATE_ABOVE_2P5",
+    "why": "released weight_only_int2.5 decoder additionally reads one FP16 super-scale per output channel; charging it and framing exceeds the target interval"
+  },
+  "oracle": {
+    "definition": "canonical finite CCQ first stage followed by an ideal continuous Gaussian residual using every remaining bit at each R",
+    "hard_kill": "KILL if held-out pooled q*2^(2*fixed_prefix_bpw)>0.8; the same identity applies at every listed final R",
+    "promote": "PROMOTE only if pooled and both expert F values are <=0.8, matched source-minus-Gaussian s is positive, and pooled s is at least 0.18096404744368115",
+    "promotion_s": 0.18096404744368115,
+    "target_F": 0.8,
+    "target_s": 0.16096404744368115
+  },
+  "panel": {
+    "expert_count": 6,
+    "expert_values": 4718592,
+    "matrix_count": 18,
+    "matrix_values": 1572864,
+    "released_orientation": {
+      "down": [768, 2048],
+      "gate": [2048, 768],
+      "up": [2048, 768]
+    },
+    "source_lock_bytes": 46013,
+    "source_lock_file_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+    "source_lock_internal_sha256": "5a82dac742110d4f48bbd73ae82081e1622b10b660b7850dadfe613ff475cc5b",
+    "source_lock_relpath": "blind_protocol_v2/unblinded/source_hashes.lock.json",
+    "source_values": 28311552
+  },
+  "rate": {
+    "code_float32_bytes_per_expert": 28672,
+    "expert_header_bytes": 64,
+    "global_header_bytes": 4096,
+    "index_bytes_per_expert": 1179648,
+    "local_uint4_scale_bytes_per_expert": 36864,
+    "per_output_parameter_bytes_per_expert": 35840,
+    "physical_rates_bpw": [2.15, 2.3, 2.5],
+    "six_expert_fixed_bytes": 7518592,
+    "six_expert_fixed_prefix_bpw": 2.1245298032407407,
+    "six_expert_required_q": 0.0420722358191473,
+    "super_scale_fp16_bytes_per_expert": 7168
+  },
+  "schema": "ccq-raw-mse-stage0-design-lock-v0"
+}

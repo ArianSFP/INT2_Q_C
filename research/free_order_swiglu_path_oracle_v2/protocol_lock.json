@@ -1,0 +1,227 @@
+{
+  "schema": "free_order_swiglu_path_protocol_v2",
+  "architecture": "FOSP-ARX-v2-DIRECT (factoradic-order SwiGLU path with direct cross-role gate)",
+  "status": "SOURCE_ONLY_DEPLOYMENT_BLOCKED_PENDING_INDEPENDENT_AUDITS_AND_ONE_SHOT_AUTHORIZATION",
+  "supersedes_for_future_execution_only": {
+    "package": "../free_order_swiglu_path_oracle_v1",
+    "v1_remains_immutable": true,
+    "v1_audit": "../free_order_swiglu_path_oracle_v1_independent_source_audit_20260901",
+    "v1_audit_status": "BLOCK_STAGE0_DOES_NOT_CONTAIN_CROSS_ROLE_3X3_PATH_FAMILY",
+    "repair": "Remove the three separate-role marginal-KLT early kill. The first scientific gate is now the exact full cross-role 3x3 pair family itself.",
+    "counterexample_closed": "The cyclic role-shift construction from the v1 audit reaches the direct stage because no statistic omitting cross-neuron cross-role covariance may stop it."
+  },
+  "objective": {
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "frozen_rates_bpw": [2.15, 2.3, 2.5],
+    "target_F_maximum": 0.8,
+    "required_net_s_bpw": 0.16096404744368115,
+    "required_gross_s_after_side_bpw": 0.1858070514584381,
+    "metric": "independently decoded pooled squared error against original BF16 Gate rows, Up rows, and Down columns in original coordinates",
+    "maximum_cold_read_amplification": 2.0,
+    "preferred_cold_read_amplification": 1.0
+  },
+  "geometry": {
+    "neurons": 768,
+    "model_width": 2048,
+    "roles": ["gate", "up", "down_transposed"],
+    "weights_per_expert": 4718592,
+    "path_edges": 767
+  },
+  "exact_symmetry": {
+    "action": "G'=P*G, U'=P*U, down'=down*P^T",
+    "function_identity": "down'*(silu(G'*x) elementwise_mul U'*x) = down*(silu(G*x) elementwise_mul U*x)",
+    "same_permutation_required_for_all_roles": true
+  },
+  "metric_compatibility": {
+    "zero_bit_deployed_gauge": "INELIGIBLE_IMMEDIATE_KILL",
+    "reason": "A canonical orbit representative does not reveal the original arbitrary neuron labels required by the frozen MSE metric.",
+    "information_lower_bound_bits": 6260,
+    "physical_factoradic_bytes": 783,
+    "physical_factoradic_bits": 6264,
+    "physical_factoradic_bpw": 0.0013275146484375,
+    "eligible_repair": "serialize a fixed-width 783-byte big-endian factoradic rank in the one expert frame and scatter all decoded roles through its inverse before scoring",
+    "unused_high_bits": 4,
+    "payload_steganography_rule": "Any decoder-visible choice carrying order information consumes physical rate even if it is not named as a side stream."
+  },
+  "eligible_physical_bridge": {
+    "frame_header_bytes": 64,
+    "factoradic_permutation_bytes": 783,
+    "coefficient_format": "IEEE-754 binary16 little-endian in path-edge order, then target-role-major/predecessor-role-minor order",
+    "coefficients_per_edge": 9,
+    "coefficient_count": 6903,
+    "coefficient_bytes": 13806,
+    "coefficient_bits": 110448,
+    "coefficient_bpw": 0.023406982421875,
+    "total_side_bytes": 14653,
+    "total_side_bits": 117224,
+    "total_side_bpw": 0.024843004014756944,
+    "anchor_count": 1,
+    "anchor_and_residual_quantization": "paid from the residual payload reservoir; not implemented by this opportunity gate",
+    "decoder_order": [
+      "read one local expert frame and one pessimistic shared-manifest page",
+      "unrank the fixed-width inline factoradic field",
+      "decode the anchor joint neuron",
+      "for each of 767 edges read nine inline FP16 coefficients and decode one joint residual",
+      "retain only the previous joint BF16 neuron while traversing the path",
+      "scatter Gate and Up rows and Down columns to original labels before MSE scoring"
+    ],
+    "decoder_previous_joint_neuron_scratch_bytes_bf16": 12288,
+    "additional_expert_payload_read": false,
+    "learned_decoder_table": false
+  },
+  "scientific_gate": {
+    "stage_order": [
+      "direct_qwen_full3x3_pair_panel",
+      "gross_relaxed_upper_bound_early_stop",
+      "eight_identically_processed_matched_controls_if_gross_survives",
+      "control_corrected_relaxed_upper_bound",
+      "achievable_cycle_cover_path_with_fp16_replay"
+    ],
+    "marginal_klt_stage": "REMOVED_NONCONTAINING",
+    "joint_dense_klt_stage": "NOT_USED_AND_RECEIVES_NO_CREDIT",
+    "jacobian_or_source_learned_transform_credit": "FORBIDDEN",
+    "pair_model": {
+      "target": "one 3x2048 Gate/Up/Down-transposed joint neuron Y",
+      "predecessor": "one distinct 3x2048 joint neuron X",
+      "exact_selection_coefficient": "A=(Y*X^T)*(X*X^T)^-1",
+      "capture": "trace((Y*X^T)*(X*X^T)^-1*(X*Y^T))",
+      "degrees_of_freedom": "exactly nine coefficients per selected edge; no intercept and no coordinate-wise parameters",
+      "pair_count_per_expert": 589056,
+      "accumulation": "CuPy float64",
+      "diagonal_self_pairs": "forbidden"
+    },
+    "relaxed_containing_upper_bound": {
+      "construction": "Each of all 768 targets independently chooses its best non-self predecessor with exact coefficients; predecessor reuse, cycles, and absence of an anchor are allowed.",
+      "why_containing": "Every legal 767-edge path selects a subset of these target-wise choices and must pay one uncaptured anchor, so its exact regression capture cannot exceed the relaxed sum.",
+      "hard_gross_kill_if_s_below": 0.1858070514584381,
+      "control_corrected_statistic": "s_qwen - mean(s_control) + 3*hypot(SE_control_MC, SE_delete_one_expert)",
+      "hard_control_corrected_kill_if_below": 0.1858070514584381,
+      "claim_boundary": "This contains the frozen linear path family only. It is not a converse for nonlinear or higher-order codecs."
+    },
+    "achievable_path": {
+      "construction": "maximum-weight non-self cycle cover, deterministic weakest-edge cut per cycle, deterministic segment ordering, and explicit bridge edges",
+      "optimality": "not claimed; failure with a surviving relaxed bound is an ambiguity, not a hard kill",
+      "selection_arithmetic": "exact float64 3x3 regression is an optimistic oracle used to select the path",
+      "finite_replay": "all selected coefficients are rounded to FP16 and residual energy is recomputed directly; coefficient bytes are hashed",
+      "survival_condition": "both the gross FP16 legal path and its optimistic control-corrected statistic reach 0.1858070514584381 bpw",
+      "survival_means": "only that a finite residual-codec experiment is justified; no compressed-stream result exists"
+    },
+    "controls": {
+      "replicates": 8,
+      "seeds": [26090101, 26090119, 26090143, 26090171, 26090207, 26090231, 26090263, 26090299],
+      "construction": "For every expert and neuron separately, preserve all three role means and the exact centered 3x3 Gate/Up/Down Gram while randomizing only centered orientation in the 2048-coordinate subspace.",
+      "identical_pair_search": true,
+      "identical_cycle_cover_path": true,
+      "identical_fp16_rounding_and_replay": true,
+      "uncertainty": "control Monte Carlo standard error combined in quadrature with a delete-one-expert jackknife standard error",
+      "source_specific_credit": "Only excess over identically optimized controls is credited."
+    },
+    "early_stop_rules": [
+      "If gross relaxed exact qwen s is below 0.1858070514584381, stop before controls: no legal charged path can survive.",
+      "If the control-corrected relaxed upper confidence statistic is below 0.1858070514584381, hard-kill the frozen linear path family.",
+      "If the relaxation survives but legal FP16 misses, report ambiguity and do not overclaim a family kill.",
+      "If legal FP16 survives, stop at a source-oracle survivor and require a separately frozen residual codec."
+    ]
+  },
+  "rate_and_read": {
+    "frame_bytes_formula": "floor(4718592*R/8)",
+    "side_fields_reduce_payload_reservoir": true,
+    "logical_byte_read_amplification": 1.0,
+    "cold_page_formula": "(ceil(frame_bytes/4096)+1)*4096/frame_bytes; +1 is a pessimistic uncached shared-manifest page",
+    "rows": [
+      {
+        "requested_rate_bpw": 2.15,
+        "frame_bytes": 1268121,
+        "actual_rate_bpw": 2.149998982747396,
+        "residual_payload_bpw": 2.125155978732639,
+        "cold_page_bytes": 1273856,
+        "cold_page_amplification": 1.0045224391047858
+      },
+      {
+        "requested_rate_bpw": 2.3,
+        "frame_bytes": 1356595,
+        "actual_rate_bpw": 2.2999996609157987,
+        "residual_payload_bpw": 2.2751566569010415,
+        "cold_page_bytes": 1363968,
+        "cold_page_amplification": 1.0054349308378698
+      },
+      {
+        "requested_rate_bpw": 2.5,
+        "frame_bytes": 1474560,
+        "actual_rate_bpw": 2.5,
+        "residual_payload_bpw": 2.475156995985243,
+        "cold_page_bytes": 1478656,
+        "cold_page_amplification": 1.0027777777777778
+      }
+    ]
+  },
+  "numeric_backend": {
+    "production_required": "CuPy on exactly CUDA_VISIBLE_DEVICES=0",
+    "pair_cross_grams": "float64",
+    "three_by_three_inverses": "float64",
+    "assignment": "scipy.optimize.linear_sum_assignment after copying only the 768x768 score matrix to host",
+    "coefficient_replay": "round exact selected coefficients through cupy.float16 and back to float64 before direct residual evaluation",
+    "forbidden": ["Torch", "model libraries", "TF32", "float32 acceptance arithmetic"]
+  },
+  "execution_firewalls": {
+    "source": {
+      "source_bindings_file": "source_bindings.json",
+      "source_bindings_sha256": "3454b718a65efc02c32463f955c10ff393f4218fac04f358107960ff3735990d",
+      "only_runtime_source_argument": "--workspace-root",
+      "alternate_source_manifest_argument_supported": false,
+      "individual_source_argument_supported": false,
+      "pinned_or_validation_argument_supported": false,
+      "source_files": "opened without following the final symlink; every parent component is rejected if symlinked; bytes decoded are the same descriptor bytes that were hashed"
+    },
+    "runtime": {
+      "authorization_arguments": ["--authorization", "--authorization-sha256"],
+      "authorization_must_bind": [
+        "exact artifact manifest",
+        "exact source-only receipt",
+        "exact runner and calibration script",
+        "PASS independent source audit",
+        "PASS independent source-free runtime receipt audit",
+        "Python executable and Python/NumPy/CuPy/SciPy versions",
+        "GPU device name and CUDA runtime",
+        "exact workspace root and exact output"
+      ],
+      "heavy_imports_after_preflight": true,
+      "source_free_calibration_required": true,
+      "package_authorizes_execution": false
+    },
+    "output": {
+      "must_not_exist": true,
+      "create_new_exclusive": true,
+      "package_source_output_and_authorization_parents_pairwise_disjoint": true,
+      "package_mutation_forbidden": true
+    }
+  },
+  "promotion": {
+    "zero_bit_variant_can_never_be_promoted": true,
+    "source_oracle_survival_is_not_a_compression_result": true,
+    "pinned_panel_run_authorized": false,
+    "required_before_auxiliary_payload": [
+      "independent v2 source audit with explicit v1-counterexample replay",
+      "source-free full-geometry CuPy calibration",
+      "independent runtime-receipt audit proving zero payload access",
+      "external create-new one-shot authorization"
+    ],
+    "required_after_auxiliary_survival": [
+      "freeze a finite residual quantizer whose header/map/FP16 coefficients and residual bytes fit the same frame",
+      "independent decoder reconstruction in original coordinates",
+      "byte-derived physical rate and cold-read audit",
+      "fresh authorization before any finite or pinned-panel run"
+    ]
+  },
+  "source_only_zero_access": {
+    "qwen_or_model_payload_files_opened": 0,
+    "qwen_or_model_payload_bytes_read": 0,
+    "binding_paths_followed": 0,
+    "pinned_panel_files_opened": 0,
+    "validation_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_api_calls": 0,
+    "gpu_device_calls": 0,
+    "external_data_fetches": 0
+  }
+}

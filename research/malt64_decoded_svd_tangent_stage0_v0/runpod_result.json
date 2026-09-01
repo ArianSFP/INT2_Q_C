@@ -1,0 +1,457 @@
+{
+  "aggregate": {
+    "capture_fraction": 0.09172601886567566,
+    "coarse_error_sse_fp64": 500.39553685426534,
+    "coarse_relative_mse": 0.03090216740315314,
+    "fraction_of_required_at_upper_three_se": 0.30903406958082696,
+    "required_capture": 0.2972443434920543,
+    "source_energy_fp64": 16192.894508855934,
+    "tangent_projection_energy_fp64": 45.899290453794244,
+    "uncertainty": {
+      "delete_one_expert": [
+        0.09172915243230416,
+        0.09170629927772604,
+        0.09170308055056937,
+        0.09176351517971601,
+        0.09172460768404385,
+        0.09172947115086505
+      ],
+      "estimate": 0.09172601886567566,
+      "jackknife_center": 0.09172602104587076,
+      "jackknife_se": 4.420342118502734e-05,
+      "upper_three_se": 0.09185862912923075
+    }
+  },
+  "architecture": {
+    "block_shape": [
+      64,
+      64
+    ],
+    "coarse_block_values": 4096,
+    "continuous_tangent_dimension": 375,
+    "coset_bits_per_block": 384,
+    "decoded_svd_rank": 3,
+    "name": "MALT64-r3",
+    "null_isotropic_capture": 0.091552734375,
+    "source_dependency": "none in tangent construction; source used only for projection score",
+    "stage0_grant": "arbitrary exact real coefficients in each decoder-derived tangent",
+    "tangent_rank_fraction": 0.091552734375
+  },
+  "bindings": {
+    "header_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/header.bin",
+    "header_sha256": "3c16bcf308c0cfce2071be24bf612d202360510084540aa0b358938d8399a538",
+    "plan_internal_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "plan_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/plan.lock.json",
+    "plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "post_klt_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/independent_audit/post_klt_canonical_groups.f64.bin",
+    "post_klt_sha256": "af801b41a37774d3f0ea65a00d929ff0004122caf4a5632457dbbe232e3f84d0",
+    "sources": [
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 0,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.5.mlp.experts.18.gate_proj.weight.bf16.bin",
+        "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 1,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.5.mlp.experts.18.up_proj.weight.bf16.bin",
+        "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 2,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.5.mlp.experts.18.down_proj.weight.bf16.bin",
+        "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 3,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.12.mlp.experts.7.gate_proj.weight.bf16.bin",
+        "sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 4,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.12.mlp.experts.7.up_proj.weight.bf16.bin",
+        "sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 5,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.12.mlp.experts.7.down_proj.weight.bf16.bin",
+        "sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 6,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.18.mlp.experts.20.gate_proj.weight.bf16.bin",
+        "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 7,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.18.mlp.experts.20.up_proj.weight.bf16.bin",
+        "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 8,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.18.mlp.experts.20.down_proj.weight.bf16.bin",
+        "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 9,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.28.mlp.experts.83.gate_proj.weight.bf16.bin",
+        "sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 10,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.28.mlp.experts.83.up_proj.weight.bf16.bin",
+        "sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 11,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.28.mlp.experts.83.down_proj.weight.bf16.bin",
+        "sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 12,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.36.mlp.experts.76.gate_proj.weight.bf16.bin",
+        "sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 13,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.36.mlp.experts.76.up_proj.weight.bf16.bin",
+        "sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 14,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.36.mlp.experts.76.down_proj.weight.bf16.bin",
+        "sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 15,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.45.mlp.experts.41.gate_proj.weight.bf16.bin",
+        "sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 16,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.45.mlp.experts.41.up_proj.weight.bf16.bin",
+        "sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 17,
+        "path": "/workspace/INT2__compression/blind_protocol_v2/unblinded/sources/model.layers.45.mlp.experts.41.down_proj.weight.bf16.bin",
+        "sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349"
+      }
+    ]
+  },
+  "claim_boundary": "Architecture-scoped continuous-span upper bound on MALT64-r3. It is not a finite codec, not a result at the lower coarse rate, and not a converse for arbitrary nonlinear decoder-conditioned frames.",
+  "decision": "POLICY_REJECT_MALT64_R3_FAR_SHORT_STOP_BEFORE_CONTROLS",
+  "execution": {
+    "backend": "cupy-fp64",
+    "batch_blocks": 32,
+    "cuda_visible_devices": "0",
+    "cupy_version": "14.2.0",
+    "device_id": 0,
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "elapsed_seconds": 37.35763192176819
+  },
+  "experts": [
+    {
+      "capture_fraction": 0.09171021731843268,
+      "coarse_error_sse_fp64": 82.81031558516321,
+      "expert_ordinal": 0,
+      "tangent_projection_energy_fp64": 7.594552038523311
+    },
+    {
+      "capture_fraction": 0.0918251623329166,
+      "coarse_error_sse_fp64": 83.01649139657374,
+      "expert_ordinal": 1,
+      "tangent_projection_energy_fp64": 7.623002798799558
+    },
+    {
+      "capture_fraction": 0.09184068628010213,
+      "coarse_error_sse_fp64": 83.41389956013529,
+      "expert_ordinal": 2,
+      "tangent_projection_energy_fp64": 7.660789780902334
+    },
+    {
+      "capture_fraction": 0.09153847603498529,
+      "coarse_error_sse_fp64": 83.37655307358769,
+      "expert_ordinal": 3,
+      "tangent_projection_energy_fp64": 7.632162605406285
+    },
+    {
+      "capture_fraction": 0.09173302408301857,
+      "coarse_error_sse_fp64": 83.90155841858511,
+      "expert_ordinal": 4,
+      "tangent_projection_energy_fp64": 7.696543679014858
+    },
+    {
+      "capture_fraction": 0.09170887535116028,
+      "coarse_error_sse_fp64": 83.87671882022026,
+      "expert_ordinal": 5,
+      "tangent_projection_energy_fp64": 7.6922395511479
+    }
+  ],
+  "matrices": [
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09141770358622736,
+      "coarse_error_sse_fp64": 27.640135278086298,
+      "expert_ordinal": 0,
+      "matrix_ordinal": 0,
+      "role": "gate",
+      "source_bf16_sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+      "source_energy_fp64": 841.670030962294,
+      "source_relpath": "sources/model.layers.5.mlp.experts.18.gate_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.526797693935319
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09171001695470278,
+      "coarse_error_sse_fp64": 27.60951447640472,
+      "expert_ordinal": 0,
+      "matrix_ordinal": 1,
+      "role": "up",
+      "source_bf16_sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+      "source_energy_fp64": 765.403527355119,
+      "source_relpath": "sources/model.layers.5.mlp.experts.18.up_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5320690407421886
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09200377521445237,
+      "coarse_error_sse_fp64": 27.560665830672193,
+      "expert_ordinal": 0,
+      "matrix_ordinal": 2,
+      "role": "down",
+      "source_bf16_sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+      "source_energy_fp64": 817.4187426624796,
+      "source_relpath": "sources/model.layers.5.mlp.experts.18.down_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5356853038458027
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09204427649510263,
+      "coarse_error_sse_fp64": 27.716468925749744,
+      "expert_ordinal": 1,
+      "matrix_ordinal": 3,
+      "role": "gate",
+      "source_bf16_sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+      "source_energy_fp64": 817.1288010804291,
+      "source_relpath": "sources/model.layers.12.mlp.experts.7.gate_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.55114232926963
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09156150939336317,
+      "coarse_error_sse_fp64": 27.640548757744597,
+      "expert_ordinal": 1,
+      "matrix_ordinal": 4,
+      "role": "up",
+      "source_bf16_sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+      "source_energy_fp64": 811.7096293478241,
+      "source_relpath": "sources/model.layers.12.mlp.experts.7.up_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5308103647199447
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09186906920822543,
+      "coarse_error_sse_fp64": 27.659473713079393,
+      "expert_ordinal": 1,
+      "matrix_ordinal": 5,
+      "role": "down",
+      "source_bf16_sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+      "source_energy_fp64": 849.62143454631,
+      "source_relpath": "sources/model.layers.12.mlp.experts.7.down_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5410501048099827
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09245573703771373,
+      "coarse_error_sse_fp64": 27.775438510229943,
+      "expert_ordinal": 2,
+      "matrix_ordinal": 6,
+      "role": "gate",
+      "source_bf16_sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+      "source_energy_fp64": 1072.4005741883234,
+      "source_relpath": "sources/model.layers.18.mlp.experts.20.gate_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.567998639009007
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09147312582506348,
+      "coarse_error_sse_fp64": 27.774572074112033,
+      "expert_ordinal": 2,
+      "matrix_ordinal": 7,
+      "role": "up",
+      "source_bf16_sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+      "source_energy_fp64": 810.1565218245569,
+      "source_relpath": "sources/model.layers.18.mlp.experts.20.up_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5406269260725445
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.0915939701754471,
+      "coarse_error_sse_fp64": 27.86388897579332,
+      "expert_ordinal": 2,
+      "matrix_ordinal": 8,
+      "role": "down",
+      "source_bf16_sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+      "source_energy_fp64": 885.1756646151205,
+      "source_relpath": "sources/model.layers.18.mlp.experts.20.down_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5521642158207825
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09254470099680347,
+      "coarse_error_sse_fp64": 27.648579110435726,
+      "expert_ordinal": 3,
+      "matrix_ordinal": 9,
+      "role": "gate",
+      "source_bf16_sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+      "source_energy_fp64": 885.463602058901,
+      "source_relpath": "sources/model.layers.28.mlp.experts.83.gate_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5587294867617407
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.0907225485224182,
+      "coarse_error_sse_fp64": 27.896928112989045,
+      "expert_ordinal": 3,
+      "matrix_ordinal": 10,
+      "role": "up",
+      "source_bf16_sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+      "source_energy_fp64": 892.6647426939127,
+      "source_relpath": "sources/model.layers.28.mlp.experts.83.up_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5308804143570613
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09135670710961083,
+      "coarse_error_sse_fp64": 27.831045850162912,
+      "expert_ordinal": 3,
+      "matrix_ordinal": 11,
+      "role": "down",
+      "source_bf16_sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+      "source_energy_fp64": 881.3383183621031,
+      "source_relpath": "sources/model.layers.28.mlp.experts.83.down_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.542552704287483
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09104768165720602,
+      "coarse_error_sse_fp64": 27.723046282974718,
+      "expert_ordinal": 4,
+      "matrix_ordinal": 12,
+      "role": "gate",
+      "source_bf16_sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+      "source_energy_fp64": 888.9517319949757,
+      "source_relpath": "sources/model.layers.36.mlp.experts.76.gate_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.524119092540271
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09208251759030064,
+      "coarse_error_sse_fp64": 28.16176852883722,
+      "expert_ordinal": 4,
+      "matrix_ordinal": 13,
+      "role": "up",
+      "source_bf16_sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+      "source_energy_fp64": 972.523455844916,
+      "source_relpath": "sources/model.layers.36.mlp.experts.76.up_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5932065459306286
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09205987950435542,
+      "coarse_error_sse_fp64": 28.016743606773176,
+      "expert_ordinal": 4,
+      "matrix_ordinal": 14,
+      "role": "down",
+      "source_bf16_sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+      "source_energy_fp64": 939.5597586471122,
+      "source_relpath": "sources/model.layers.36.mlp.experts.76.down_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5792180405439584
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09200560722557204,
+      "coarse_error_sse_fp64": 27.64146205169349,
+      "expert_ordinal": 5,
+      "matrix_ordinal": 15,
+      "role": "gate",
+      "source_bf16_sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+      "source_energy_fp64": 882.0293225790344,
+      "source_relpath": "sources/model.layers.45.mlp.experts.41.gate_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.543169500668666
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.09174712589924619,
+      "coarse_error_sse_fp64": 28.02356593664952,
+      "expert_ordinal": 5,
+      "matrix_ordinal": 16,
+      "role": "up",
+      "source_bf16_sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+      "source_energy_fp64": 1052.5524149096334,
+      "source_relpath": "sources/model.layers.45.mlp.experts.41.up_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5710816321356105
+    },
+    {
+      "blocks": 384,
+      "capture_fraction": 0.0913801456887751,
+      "coarse_error_sse_fp64": 28.211690831877245,
+      "expert_ordinal": 5,
+      "matrix_ordinal": 17,
+      "role": "down",
+      "source_bf16_sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+      "source_energy_fp64": 1127.1262351828875,
+      "source_relpath": "sources/model.layers.45.mlp.experts.41.down_proj.weight.bf16.bin",
+      "tangent_projection_energy_fp64": 2.5779884183436237
+    }
+  ],
+  "physical_planning_ledger": {
+    "coarse_bpw": 2.3984375,
+    "cold_page_read_amplification": 1.0138888888888888,
+    "coset_bpw": 0.09375,
+    "favourable_base_F_transfer": 0.9888693569009007,
+    "metadata_bpw": 0.0078125,
+    "required_coarse_error_capture": 0.2972443434920543,
+    "total_bpw": 2.5
+  },
+  "roles": [
+    {
+      "capture_fraction": 0.09191937631607881,
+      "coarse_error_sse_fp64": 166.1451301591699,
+      "role": "gate",
+      "tangent_projection_energy_fp64": 15.271956742184633
+    },
+    {
+      "capture_fraction": 0.09155022992723627,
+      "coarse_error_sse_fp64": 167.10689788673716,
+      "role": "up",
+      "tangent_projection_energy_fp64": 15.298674923957979
+    },
+    {
+      "capture_fraction": 0.09170956680840664,
+      "coarse_error_sse_fp64": 167.14350880835823,
+      "role": "down",
+      "tangent_projection_energy_fp64": 15.328658787651634
+    }
+  ],
+  "schema": "malt64_decoded_svd_tangent_stage0_result_v0",
+  "status": "complete"
+}

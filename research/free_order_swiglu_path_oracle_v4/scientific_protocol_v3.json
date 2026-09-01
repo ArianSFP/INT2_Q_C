@@ -1,0 +1,168 @@
+{
+  "schema": "free_order_swiglu_path_protocol_v3",
+  "architecture": "FOSP-ARX-v3-DIRECT-SEALED",
+  "status": "SOURCE_ONLY_DEPLOYMENT_BLOCKED_PENDING_NEW_INDEPENDENT_AUDITS",
+  "lineage": {
+    "v2_package": "../free_order_swiglu_path_oracle_v2",
+    "v2_independent_audit": "../free_order_swiglu_path_oracle_v2_independent_source_audit_20260901",
+    "v2_verdict": "BLOCK_CONTROL_CORRECTED_NONCONTAINMENT_AND_RUNTIME_CLOSURE",
+    "v2_files_modified": false,
+    "repairs": [
+      "FOSP2-SCI-001: corrected relaxed reuse is diagnostic-only and can never kill or promote",
+      "FOSP2-FW-001: an isolated no-site pre-import bootstrap authenticates a flat exact package snapshot and rejects every nonregular package member",
+      "FOSP2-FW-002: audit evidence must be exact-closure byte-bound to an externally trusted manifest digest; a row name is never evidence"
+    ]
+  },
+  "objective": {
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "frozen_rates_bpw": [2.15, 2.3, 2.5],
+    "target_F_maximum": 0.8,
+    "required_net_s_bpw": 0.16096404744368115,
+    "required_gross_s_after_side_bpw": 0.1858070514584381,
+    "metric": "independently decoded pooled squared error against original BF16 Gate rows, Up rows, and Down columns in original coordinates",
+    "maximum_cold_read_amplification": 2.0
+  },
+  "geometry": {
+    "neurons": 768,
+    "model_width": 2048,
+    "roles": ["gate", "up", "down_transposed"],
+    "weights_per_expert": 4718592,
+    "path_edges": 767
+  },
+  "exact_symmetry": {
+    "action": "G'=P*G, U'=P*U, down'=down*P^T",
+    "same_permutation_required_for_all_roles": true,
+    "original_coordinate_scatter_required": true
+  },
+  "eligible_physical_bridge": {
+    "frame_header_bytes": 64,
+    "factoradic_information_bits": 6260,
+    "factoradic_permutation_bytes": 783,
+    "factoradic_physical_bits": 6264,
+    "coefficient_format": "IEEE-754 binary16 little-endian in path-edge order then target-role-major/predecessor-role-minor",
+    "coefficients_per_edge": 9,
+    "coefficient_count": 6903,
+    "coefficient_bits": 110448,
+    "total_side_bits": 117224,
+    "total_side_bpw": 0.024843004014756944,
+    "logical_byte_read_amplification": 1.0,
+    "maximum_cold_page_amplification": 1.0054349308378698
+  },
+  "scientific_gate": {
+    "stage_order": [
+      "direct_qwen_full3x3_pair_panel_including_legal_fp16",
+      "gross_qwen_relaxed_reuse_necessary_bound",
+      "eight_identically_processed_matched_controls_including_legal_fp16",
+      "corrected_legal_fp16_statistic",
+      "diagnostic_only_corrected_relaxed_statistic",
+      "legal_fp16_survivor_or_optimization_gap"
+    ],
+    "pair_model": {
+      "target": "one 3x2048 Gate/Up/Down-transposed joint neuron Y",
+      "predecessor": "one distinct 3x2048 joint neuron X",
+      "exact_selection_coefficient": "A=(Y*X^T)*(X*X^T)^-1",
+      "capture": "trace((Y*X^T)*(X*X^T)^-1*(X*Y^T))",
+      "coefficients_per_edge": 9,
+      "pair_count_per_expert": 589056,
+      "accumulation": "float64",
+      "diagonal_self_pairs": "forbidden"
+    },
+    "gross_qwen_relaxed_reuse": {
+      "construction": "every target independently chooses its best nonself predecessor",
+      "containing_necessary_bound": true,
+      "only_permitted_family_hard_kill": true,
+      "hard_kill_if_s_below": 0.1858070514584381
+    },
+    "corrected_relaxed_reuse": {
+      "statistic": "s_qwen_relaxed - mean(s_control_relaxed) + 3*hypot(SE_control_MC, SE_delete_one_expert)",
+      "containing": false,
+      "decision_eligible": false,
+      "permitted_use": "diagnostic reporting only"
+    },
+    "achievable_path": {
+      "construction": "maximum-weight nonself cycle cover, weakest-incoming-edge cut per cycle, deterministic segment order, explicit bridges",
+      "optimality": "not claimed",
+      "finite_replay": "all nine selected coefficients per edge rounded to binary16 and residual recomputed directly",
+      "control_corrected_decision_metric": "legal_path_fp16 only",
+      "failure_claim": "optimization-gap ambiguity, never a family kill"
+    },
+    "controls": {
+      "replicates": 8,
+      "seeds": [26090101, 26090119, 26090143, 26090171, 26090207, 26090231, 26090263, 26090299],
+      "preserves": "per-neuron three role means and exact centered 3x3 role Gram",
+      "identical_pair_search": true,
+      "identical_cycle_cover_path": true,
+      "identical_fp16_rounding_and_replay": true,
+      "corrected_legal_fp16_computed_before_any_control_corrected_decision": true
+    },
+    "n8_adversarial_regression": {
+      "n": 8,
+      "r": 0.875,
+      "rho": 0.765625,
+      "corrected_relaxed_s_bpw": 0.0,
+      "qwen_legal_fp16_s_bpw": 0.7995602818589078,
+      "control_legal_fp16_s_bpw": 0.5885652320580218,
+      "corrected_legal_fp16_s_bpw": 0.21099504980088601,
+      "required_gross_s_bpw": 0.1858070514584381
+    }
+  },
+  "entrypoint_firewall": {
+    "required_invocation": "independently pinned Python executable with -I -S bootstrap_v3.py and externally pinned package-manifest SHA-256",
+    "ambient_import_path_cleared_before_package_scan": true,
+    "package_shape": "flat exact regular-file tree",
+    "reject_package_directories": true,
+    "reject_package_symlinks_and_reparse_points": true,
+    "reject_package_sockets_fifos_and_devices": true,
+    "snapshot_all_member_bytes_before_entrypoint_exec": true,
+    "entrypoint_exec_source": "authenticated held snapshot bytes",
+    "package_directory_added_to_import_path": false,
+    "runtime": {
+      "python_executable_digest_externally_pinned": true,
+      "runtime_manifest_digest_externally_pinned": true,
+      "every_runtime_directory_explicitly_declared": true,
+      "every_runtime_file_size_and_sha256_bound": true,
+      "exact_recursive_object_closure": true,
+      "runtime_symlinks_and_special_objects_forbidden": true,
+      "only_authenticated_import_roots_installed": true,
+      "normal_filesystem_import_finder_removed": true,
+      "authenticated_python_sources_retained_in_memory": true,
+      "native_extension_execution_supported": false
+    }
+  },
+  "audit_evidence_contract": {
+    "authorization_builder_present": false,
+    "manifest_digest_must_be_supplied_by_external_trust_root": true,
+    "exact_directory_object_closure_required": true,
+    "every_manifest_member_opened_and_hashed": true,
+    "verifier_source_bytes_required": true,
+    "literal_verifier_row_without_file_forbidden": true,
+    "duplicate_json_keys_forbidden": true,
+    "future_verifier_execution": "only with the same independently sealed interpreter/runtime closure"
+  },
+  "execution": {
+    "source_access_authorized": false,
+    "calibration_authorized": false,
+    "production_authorization_issued": false,
+    "pinned_panel_authorized": false,
+    "required_before_any_source_access": [
+      "new independent v3 source audit",
+      "independently sealed exact interpreter/runtime closure",
+      "source-free calibration under that closure",
+      "independent calibration audit",
+      "external one-shot authorization implementation not contained in this package"
+    ]
+  },
+  "source_only_zero_access": {
+    "qwen_or_model_payload_files_opened": 0,
+    "qwen_or_model_payload_bytes_read": 0,
+    "binding_paths_followed": 0,
+    "pinned_panel_files_opened": 0,
+    "validation_files_opened": 0,
+    "runtime_or_authorization_manifests_opened": 0,
+    "cupy_imports": 0,
+    "cuda_api_calls": 0,
+    "gpu_device_calls": 0,
+    "external_data_fetches": 0,
+    "authorizations_issued": 0
+  }
+}

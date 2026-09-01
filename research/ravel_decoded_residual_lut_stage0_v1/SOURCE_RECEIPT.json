@@ -1,0 +1,27 @@
+{
+  "schema": "ravel-decoded-residual-lut-stage0-source-receipt-v1",
+  "status": "READY_SOURCE_ONLY_NOT_EXECUTED",
+  "created_utc_date": "2026-09-01",
+  "package_file_count": 9,
+  "manifest_member_count": 8,
+  "repairs": {
+    "weighted_raw_sse_least_squares": true,
+    "held_authenticated_input_snapshots": true,
+    "link_and_reparse_rejection": true,
+    "noncyclic_frozen_feature_semantics": true,
+    "aligned_versioned_packet": true,
+    "packet_roundtrip_padding_and_finiteness": true,
+    "staged_output_completion_marker": true,
+    "per_matrix_and_holdout_baseline_ledger": true,
+    "independent_result_verifier": true,
+    "one_shared_table_rate_contract": true
+  },
+  "access": {
+    "model_payload_files_opened": 0,
+    "decoded_panel_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0
+  },
+  "claim_boundary": "Source closure and preregistered arithmetic only; no RAVEL-v1 numeric result."
+}

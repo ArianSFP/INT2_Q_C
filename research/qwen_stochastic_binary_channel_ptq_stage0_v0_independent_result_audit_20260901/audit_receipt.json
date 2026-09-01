@@ -1,0 +1,33 @@
+{
+  "schema": "qsb_ptq_v0_independent_result_audit_receipt_v0",
+  "verdict": "BLOCK_PHYSICAL_OVERFLOW_CLAIM_PASS_V0_POLICY_REJECTION",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 9,
+  "result_sha256": "954cf10187baca348ab1d134be8362efe7d79ca59d8592bb8e75be742ff1e6df",
+  "result_origin_path": "research/qwen_stochastic_binary_channel_ptq_stage0_v0_runpod_result_20260901/result.json",
+  "evidence_sha256": {
+    "v0_design_lock": "67d6a78d1b45d011ad9707f1484970346fb0070cbd7be8cbe0c7e6653c027aae",
+    "v0_panel_bindings": "d3022a67a483ab84660cc67e9e141703e5d350e9c850a9e949f85e61224e6886",
+    "v0_stage0_runner": "ee671293ec6e608d7841e09406bdb30e02f23ae3917798f2fe65d435e5447b06",
+    "v0_source_manifest": "e4dc43066165bc9e5f9344d477e63f35ff46ceb58bbb209559d717fe0740b04c"
+  },
+  "finding": {
+    "cells_above_frozen_0p97_policy_limit": 3,
+    "expert_cell_rows_above_frozen_0p97_policy_limit": 7,
+    "expert_cell_rows_above_true_physical_reservoir": 0,
+    "status_token_overstates_physical_overflow": true,
+    "distortion_oracle_cells_completed": 0,
+    "matched_control_replicates_run": 0
+  },
+  "audit_access": {
+    "result_files_opened": 1,
+    "copied_source_evidence_files_opened": 3,
+    "qwen_numeric_payload_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0
+  },
+  "claim_boundary": "The v0 result proves only a preregistered 0.97 ideal-KL policy rejection. It does not prove physical overflow, distortion/capture, operational compression, Gaussian/TCQ performance, a Shannon-limit result, or held-out validation.",
+  "verifier_check_count": 167,
+  "receipt_sha256": "7d01f0f3ce6011fee3d10ae5f67fd47c294f1c46ab3f2450b0191717bdb18b4c"
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "decoded_affine_residual_independent_result_audit_receipt_v0",
+  "verdict": "PASS_NUMERICAL_KILL_WITH_UNSEALED_PREEXECUTION_PROVENANCE_LIMITATION",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 7,
+  "result_sha256": "e8cff5c3ee45dc209c4b4d5368e060953e4ccc8e08047a28bddca8e36e19de35",
+  "result_origin_path": "research/decoded_affine_residual_oracle_v0_runpod_result_20260901/result.json",
+  "current_script_sha256": "7d06910a9cdb66349bf3900ee0eb7cc27b08883b9f943ac33ab4f2c4e4a11f53",
+  "preexecution_source_manifest_present": false,
+  "scope": {
+    "numerical_result_self_consistency_verified": true,
+    "current_script_matches_result_binding": true,
+    "preexecution_preregistration_authenticated": false,
+    "external_plan_header_checkpoint_hashes_replayed": false,
+    "favorable_family_kill_confirmed_conditionally": true
+  },
+  "recomputed": {
+    "matrix_rows": 18,
+    "correction_cells": 13,
+    "cells_passing_F_0p8": 0,
+    "best_family": "scale",
+    "best_width": 2048,
+    "best_favourable_transfer_F": 0.998785937659889
+  },
+  "access": {
+    "copied_result_files_opened": 1,
+    "copied_current_source_files_opened": 2,
+    "qwen_numeric_payload_files_opened": 0,
+    "decoded_checkpoint_payload_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0
+  },
+  "claim_boundary": "Numerical kill is conditional on the current script/result representing the intended experiment; absent a pre-execution source seal, preregistration and temporal provenance are unauthenticated.",
+  "verifier_check_count": 359,
+  "receipt_sha256": "151b8974d8d09882ec873a924c868d475dfa52c2c73f1626968842552acd79e8"
+}

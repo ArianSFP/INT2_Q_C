@@ -1,0 +1,41 @@
+{
+  "schema": "polar_sparse_normal_qwen_gate_independent_audit_manifest_v1",
+  "status": "SEALED_COMPLETE",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 5150,
+      "sha256": "dcfb2e4b3f457f6d718c8d4d35369e6ebc57074ba51e42e28fab739b24ae2cea"
+    },
+    {
+      "path": "audit_receipt.json",
+      "bytes": 8779,
+      "sha256": "44e9eaaa70a9b0f933b9a0140eca43828666d42f879ab87038e68886014f7ed1"
+    },
+    {
+      "path": "control_replay.json",
+      "bytes": 1029131,
+      "sha256": "76bcf7e52bb06f06e4b01652b886a45f071bfa86201dc7ead7e55a2221ed9f79"
+    },
+    {
+      "path": "replay_controls.py",
+      "bytes": 19051,
+      "sha256": "fd86af76ef83a5db59293ab6d2139ea2881a25461fb05fdc0728a119424b70f9"
+    },
+    {
+      "path": "verification_receipt.json",
+      "bytes": 1821,
+      "sha256": "c98d6441c525c3d2be750d80557af587a3ededca3e29e9f2c98e19722f83b33f"
+    },
+    {
+      "path": "verify_audit.py",
+      "bytes": 18263,
+      "sha256": "138859945ccd974a9cc91abc16d06dd2a6053eb86641f5576edea8482bc634d2"
+    }
+  ],
+  "producer_package_mutated": false,
+  "fresh_validation_access": false,
+  "finite_codec_executed": false,
+  "verdict": "KILL_QWEN_SPECIFIC_GROUPED_SPATIAL_SIGNAL_ROUTE"
+}

@@ -1,0 +1,32 @@
+{
+  "closure": [
+    "README.md",
+    "SOURCE_MANIFEST.json",
+    "design_lock.json",
+    "meta_codebook_stage0.py",
+    "verify_source.py"
+  ],
+  "files": [
+    {
+      "bytes": 9005,
+      "path": "README.md",
+      "sha256": "31b21a62b18707ea8fc37926373bde67d0757a687cd0dd2b313859cdafb69cda"
+    },
+    {
+      "bytes": 4989,
+      "path": "design_lock.json",
+      "sha256": "abe7aaa3500c0f9d549ee1b1f810166e111524c3921281ac6ec1172493f78de9"
+    },
+    {
+      "bytes": 35678,
+      "path": "meta_codebook_stage0.py",
+      "sha256": "2a70d43f5ab4925e1cc406eea05d43416f72531d459f126534fd4154f98201d2"
+    },
+    {
+      "bytes": 6786,
+      "path": "verify_source.py",
+      "sha256": "63e1a37540705528b5fac1a921666d64b614871805fa9288ab3476944e5ab732"
+    }
+  ],
+  "schema": "meta-codebook-stage0-source-manifest-v0"
+}

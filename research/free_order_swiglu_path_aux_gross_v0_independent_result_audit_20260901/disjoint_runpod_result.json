@@ -1,0 +1,197 @@
+{
+  "access": {
+    "auxiliary_qwen_files_opened": 6,
+    "fresh_validation_files_opened": 0,
+    "network_operations": 0,
+    "pinned_panel_files_opened": 0
+  },
+  "aggregate": {
+    "energy_reduction": 0.01985147986470467,
+    "experts": 2,
+    "fraction_of_required_gross_s": 0.0778434399926085,
+    "gross_relaxed_capture": 106.02983322590737,
+    "gross_s_bpw": 0.014463860060408446,
+    "net_s_after_side_bpw": -0.010379143954348498,
+    "projected_optimistic_F_after_side": 1.0144925621732728,
+    "residual_ratio": 0.9801485201352954,
+    "source_energy": 5341.155115313352
+  },
+  "bindings": {
+    "script_sha256": "c8a08fa8dec5279380bc0d09fd2a6089b56a7a97faa16fac88010c3226b429ab",
+    "source_receipts": [
+      {
+        "bytes": 3145728,
+        "expert": 57,
+        "layer": 3,
+        "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.57.gate_proj.weight.bf16.bin",
+        "role": "gate",
+        "sha256": "ecce497194636a2ca32d36856e5d983e0b26f470dafa78dfe1ca7b8e2f5d8f90",
+        "shape": [
+          768,
+          2048
+        ]
+      },
+      {
+        "bytes": 3145728,
+        "expert": 57,
+        "layer": 3,
+        "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.57.up_proj.weight.bf16.bin",
+        "role": "up",
+        "sha256": "715b51022adcb70b5c9bd42e98e5441c8d2801a4c024ce005c40441dee7a6d4c",
+        "shape": [
+          768,
+          2048
+        ]
+      },
+      {
+        "bytes": 3145728,
+        "expert": 57,
+        "layer": 3,
+        "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.57.down_proj.weight.bf16.bin",
+        "role": "down",
+        "sha256": "7b207c386d9bb6af5a4bd5dbbb8117319ff7fe81fddd095204a229725f7d59af",
+        "shape": [
+          2048,
+          768
+        ]
+      },
+      {
+        "bytes": 3145728,
+        "expert": 121,
+        "layer": 3,
+        "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.121.gate_proj.weight.bf16.bin",
+        "role": "gate",
+        "sha256": "41dc29c2790985da6b93afc9efb1ffb0739e74bd3b16baad406eef91f280e289",
+        "shape": [
+          768,
+          2048
+        ]
+      },
+      {
+        "bytes": 3145728,
+        "expert": 121,
+        "layer": 3,
+        "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.121.up_proj.weight.bf16.bin",
+        "role": "up",
+        "sha256": "f6c27a15097e435893fb657c5c2b13f7261524af6552c88dde30dfd73e57cfde",
+        "shape": [
+          768,
+          2048
+        ]
+      },
+      {
+        "bytes": 3145728,
+        "expert": 121,
+        "layer": 3,
+        "relative_path": "qwen_aux_context_tensors/model.layers.3.mlp.experts.121.down_proj.weight.bf16.bin",
+        "role": "down",
+        "sha256": "c972821016c73ae44e34fd54ef05dea978c093606a05ccaecf2709736412df95",
+        "shape": [
+          2048,
+          768
+        ]
+      }
+    ]
+  },
+  "claim_boundary": "Exact frozen-family gross necessary-bound result on two already-open auxiliary experts only; not fresh validation, pinned-panel evidence, a legal path, finite residual codec, or target achievement.",
+  "early_stop": true,
+  "experts": [
+    {
+      "best_predecessor_sha256_u16le": "fbd013a340582a1a060ab54b4022759e00ff0349b68a93e4aa0e8fc6f793a81d",
+      "energy_reduction": 0.013469611000384692,
+      "expert": 57,
+      "gross_relaxed_capture": 36.62626854066316,
+      "gross_s_bpw": 0.009782301298315319,
+      "layer": 3,
+      "ordered_nonself_pairs": 589056,
+      "ordinal": 0,
+      "source_energy": 2719.177899021517
+    },
+    {
+      "best_predecessor_sha256_u16le": "dcf7c88325cef5fdb6dbb1635798bbada01e2338325a898a8d4d494e18086ab6",
+      "energy_reduction": 0.026469934312930102,
+      "expert": 121,
+      "gross_relaxed_capture": 69.4035646852442,
+      "gross_s_bpw": 0.0193512801343057,
+      "layer": 3,
+      "ordered_nonself_pairs": 589056,
+      "ordinal": 1,
+      "source_energy": 2621.9772162918352
+    }
+  ],
+  "physical_ledgers": {
+    "2.15": {
+      "actual_rate_bpw": 2.149998982747396,
+      "cold_page_amplification": 1.0045224391047858,
+      "cold_page_bytes_including_one_shared_page": 1273856,
+      "factoradic_bits": 6264,
+      "fp16_coefficient_bits": 110448,
+      "frame_bytes": 1268121,
+      "header_bits": 512,
+      "logical_byte_read_amplification": 1.0,
+      "requested_rate_bpw": 2.15,
+      "required_gross_s_bpw": 0.1858070514584381,
+      "residual_payload_bits": 10027744,
+      "residual_payload_bpw": 2.125155978732639,
+      "side_bpw": 0.024843004014756944,
+      "strictly_below_2x": true,
+      "total_side_bits": 117224
+    },
+    "2.30": {
+      "actual_rate_bpw": 2.2999996609157987,
+      "cold_page_amplification": 1.0054349308378698,
+      "cold_page_bytes_including_one_shared_page": 1363968,
+      "factoradic_bits": 6264,
+      "fp16_coefficient_bits": 110448,
+      "frame_bytes": 1356595,
+      "header_bits": 512,
+      "logical_byte_read_amplification": 1.0,
+      "requested_rate_bpw": 2.3,
+      "required_gross_s_bpw": 0.1858070514584381,
+      "residual_payload_bits": 10735536,
+      "residual_payload_bpw": 2.2751566569010415,
+      "side_bpw": 0.024843004014756944,
+      "strictly_below_2x": true,
+      "total_side_bits": 117224
+    },
+    "2.50": {
+      "actual_rate_bpw": 2.5,
+      "cold_page_amplification": 1.0027777777777778,
+      "cold_page_bytes_including_one_shared_page": 1478656,
+      "factoradic_bits": 6264,
+      "fp16_coefficient_bits": 110448,
+      "frame_bytes": 1474560,
+      "header_bits": 512,
+      "logical_byte_read_amplification": 1.0,
+      "requested_rate_bpw": 2.5,
+      "required_gross_s_bpw": 0.1858070514584381,
+      "residual_payload_bits": 11679256,
+      "residual_payload_bpw": 2.475156995985243,
+      "side_bpw": 0.024843004014756944,
+      "strictly_below_2x": true,
+      "total_side_bits": 117224
+    }
+  },
+  "runtime": {
+    "compute_capability": "120",
+    "cuda_runtime": 12090,
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "elapsed_seconds": 2.275339615996927,
+    "numpy": "2.5.2",
+    "python": "3.12.3"
+  },
+  "schema": "free_order_swiglu_path_aux_gross_v0_result",
+  "science": {
+    "controls_required_after_gross_survival_only": true,
+    "gross_relaxed_contains_every_legal_path": true,
+    "oracle_sha256": "9ca6f4bdd4150c8c0c68c0a298c00eb45c088a4af287895ebfdf9bf1e661a070",
+    "pair_model": "all ordered nonself full 3x3 predecessor-to-target regressions",
+    "required_gross_s_bpw": 0.1858070514584381,
+    "required_net_s_bpw": 0.16096404744368115,
+    "side_bpw": 0.024843004014756944,
+    "source_bindings_sha256": "cd12742910503f23d0d9224e277a030b923f8fc917c75a13a1aff8e9bcde090a"
+  },
+  "status": "HARD_KILL_GROSS_QWEN_RELAXED_NECESSARY_BOUND"
+}

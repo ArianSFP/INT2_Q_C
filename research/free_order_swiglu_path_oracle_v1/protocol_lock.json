@@ -1,0 +1,164 @@
+{
+  "schema": "free_order_swiglu_path_protocol_v1",
+  "architecture": "FOSP-ARX-v1 (factoradic-order SwiGLU path autoregressive residual)",
+  "status": "SOURCE_ONLY_NOT_AUTHORIZED_FOR_QWEN_EXECUTION",
+  "objective": {
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "target_F_maximum": 0.8,
+    "required_s_bpw": 0.16096404744368115,
+    "metric": "independently decoded pooled squared error against the original BF16 arrays in their original Gate-row, Up-row, and Down-column coordinates",
+    "maximum_cold_read_amplification": 2.0,
+    "preferred_cold_read_amplification": 1.0
+  },
+  "geometry": {
+    "neurons": 768,
+    "model_width": 2048,
+    "roles": ["gate", "up", "down_transposed"],
+    "weights_per_expert": 4718592
+  },
+  "exact_symmetry": {
+    "action": "G'=P*G, U'=P*U, D'=D*P^T",
+    "function_identity": "D'*(silu(G'*x) elementwise_mul U'*x) = D*(silu(G*x) elementwise_mul U*x)",
+    "same_permutation_required_for_all_roles": true
+  },
+  "metric_compatibility": {
+    "zero_bit_deployed_gauge": "INELIGIBLE_IMMEDIATE_KILL",
+    "reason": "The frozen score requires the decoder to restore original coordinate labels. A canonical/reordered payload alone identifies an orbit element but not its original labeling.",
+    "canonical_sort_is_not_a_recovery_rule": "Sorting decoder-visible reconstructed neurons can reproduce a canonical order, but no decoder-visible datum maps that canonical rank back to the original arbitrary row/column index.",
+    "payload_steganography_rule": "If permutation information is embedded in codeword choices rather than a named side stream, those choices still consume rate and must be charged.",
+    "eligible_repair": "serialize the factoradic rank of P inside the same expert frame, decode residuals in path order, then scatter all three roles back to original coordinates before MSE scoring",
+    "information_lower_bound_bits": 6260,
+    "physical_factoradic_bytes": 783,
+    "physical_factoradic_bits": 6264,
+    "physical_factoradic_bpw": 0.0013275146484375,
+    "permutation_read": "inline in the one expert frame; it adds bytes but no second object read"
+  },
+  "eligible_codec": {
+    "frame_header_bytes": 64,
+    "factoradic_permutation_bytes": 783,
+    "path_anchor_count": 1,
+    "predictor": "the immediately preceding neuron in encoded path order",
+    "decode_order": [
+      "read the one local frame and the one shared manifest page",
+      "unrank the 783-byte factoradic permutation",
+      "decode the first Gate/Up/Down neuron as an anchor",
+      "decode each following joint residual and retain only the previous joint neuron",
+      "scatter Gate and Up rows and Down columns through P inverse into the original coordinate arrays"
+    ],
+    "permutation_side_stream": false,
+    "permutation_is_inline_side_information": true,
+    "additional_expert_payload_read": false,
+    "decoder_working_set_bytes_at_bf16": 12288,
+    "coefficient_modes": [
+      {
+        "name": "diag3_fp16_oracle_bridge",
+        "coefficients_per_edge": 3,
+        "coefficient_bits": 36816,
+        "coefficient_bpw": 0.007802327473958333,
+        "claim": "exact FP16 bridge ledger only; the source oracle uses exact FP64 fits and does not claim this finite mode preserves its gain"
+      },
+      {
+        "name": "full3x3_fp16_oracle_bridge",
+        "coefficients_per_edge": 9,
+        "coefficient_bits": 110448,
+        "coefficient_bpw": 0.023406982421875,
+        "claim": "strong favorable bridge ledger; coefficient quantization must be scored before promotion"
+      },
+      {
+        "name": "diag3_fixed_nibble",
+        "coefficients_per_edge": 3,
+        "coefficient_bits": 9208,
+        "coefficient_bpw": 0.0019514295789930555,
+        "alphabet": "one frozen decoder-resident 16-value procedural alphabet; no learned uncharged table"
+      },
+      {
+        "name": "full3x3_fixed_nibble",
+        "coefficients_per_edge": 9,
+        "coefficient_bits": 27616,
+        "coefficient_bpw": 0.005852593315972222,
+        "alphabet": "one frozen decoder-resident 16-value procedural alphabet; no learned uncharged table"
+      }
+    ]
+  },
+  "oracle": {
+    "stage0_dense_envelope": {
+      "description": "For every expert and role, grant an exact free dense 768-dimensional neuron-axis KLT and continuous ideal reverse waterfilling. Three independently chosen dense bases are strictly more flexible than one shared permutation and a banded same-role predictor.",
+      "all_three_roles_scored_together": true,
+      "source_specific_statistic": "s_qwen - mean(s_control)",
+      "uncertainty": "delete-one-expert jackknife combined in quadrature with control Monte Carlo SE",
+      "optimistic_statistic": "s_qwen - mean(s_control) + 3*SE",
+      "early_kill_if_below_s_bpw": 0.16096404744368115,
+      "claim_boundary": "This is a decisive second-order opportunity screen for ordering/prediction, not a converse for higher-order nonlinear codes."
+    },
+    "stage1_pair_envelope_only_if_stage0_survives": {
+      "description": "Compute all 768*767 ordered within-expert pairs. Fit one exact 3x3 cross-role regression from the predecessor's Gate/Up/Down rows to the target's three rows.",
+      "pair_objective": "tr(C * inverse(S_predecessor) * C^T), where C=X_target*X_predecessor^T and X has three 2048-coordinate role rows",
+      "degrees_of_freedom": "nine coefficients only; selected coefficients are explicitly included in every physical ledger and never treated as free in a codec claim",
+      "relaxed_upper_bound": "each target independently chooses its best non-self predecessor; predecessor reuse, cycles, and the missing anchor are deliberately allowed",
+      "legal_construction": "maximum-weight non-self cycle cover followed by deterministic weakest-edge cuts and path concatenation",
+      "hard_kill_if_even_relaxed_gross_s_below": 0.16096404744368115,
+      "matched_control_required": true
+    },
+    "controls": {
+      "replicates": 8,
+      "seeds": [26090101, 26090119, 26090143, 26090171, 26090207, 26090231, 26090263, 26090299],
+      "construction": "For every expert and neuron separately, match all three role means and the exact centered 3x3 Gate/Up/Down Gram. Randomize only the centered orientation in the 2048-coordinate subspace.",
+      "identical_optimization": true,
+      "why_stronger_than_global_moment_matching": "It preserves every neuron energy, role covariance, mean, and heteroskedasticity that an encoder-selected ordering could otherwise exploit generically."
+    },
+    "numeric_backend": {
+      "required": "CuPy",
+      "pair_gram_accumulation": "float64",
+      "eigensolver": "cupy.linalg.eigvalsh float64",
+      "small_assignment": "scipy.optimize.linear_sum_assignment after copying only the 768x768 score matrix to host",
+      "forbidden": ["Torch", "model libraries", "TF32", "float32 acceptance arithmetic"]
+    }
+  },
+  "execution_firewall": {
+    "source_bindings_file": "source_bindings.json",
+    "source_bindings_sha256": "3454b718a65efc02c32463f955c10ff393f4218fac04f358107960ff3735990d",
+    "only_runtime_source_argument": "--workspace-root",
+    "output_must_not_exist": true,
+    "pinned_panel_argument_supported": false,
+    "alternate_manifest_argument_supported": false,
+    "package_requires_independent_source_audit_before_any_Qwen_run": true,
+    "package_authorizes_Qwen_run": false
+  },
+  "rate_and_read": {
+    "frame_bytes_formula": "floor(4718592*R/8)",
+    "logical_byte_read_amplification": 1.0,
+    "cold_page_formula": "(ceil(frame_bytes/4096)+1)*4096/frame_bytes; +1 is a pessimistic uncached shared-manifest page",
+    "rows": [
+      {
+        "requested_rate_bpw": 2.15,
+        "frame_bytes": 1268121,
+        "actual_rate_bpw": 2.149998982747396,
+        "cold_page_amplification": 1.0045224391047858
+      },
+      {
+        "requested_rate_bpw": 2.3,
+        "frame_bytes": 1356595,
+        "actual_rate_bpw": 2.2999996609157987,
+        "cold_page_amplification": 1.0054349308378698
+      },
+      {
+        "requested_rate_bpw": 2.5,
+        "frame_bytes": 1474560,
+        "actual_rate_bpw": 2.5,
+        "cold_page_amplification": 1.0027777777777778
+      }
+    ]
+  },
+  "promotion": {
+    "zero_bit_variant_can_never_be_promoted": true,
+    "source_oracle_survival_is_not_a_compression_result": true,
+    "required_before_payload": [
+      "independent source audit",
+      "source-free CuPy calibration and independent receipt audit",
+      "stage0 survival",
+      "stage1 relaxed and legal-path survival after all inline side bits",
+      "separately authorized finite coefficient/index and residual stream",
+      "independent decode into original coordinates and byte-derived rate/read audit"
+    ]
+  }
+}

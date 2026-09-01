@@ -1,0 +1,35 @@
+{
+  "access": {
+    "network_calls": 0,
+    "payload_arguments": 0,
+    "payload_files_opened": 0
+  },
+  "claim_boundary": "Synthetic dyadic parity and accounting only; no model/coarse payload was accepted or opened.",
+  "fixture": {
+    "cpu_energy": 1378.1384775399747,
+    "cpu_projected_energy": 127.20384966527631,
+    "gpu_energy": 1378.1384775399747,
+    "gpu_projected_energy": 127.20384966527632,
+    "role": 2,
+    "selector_packet_sha256": "0946880088b766265a29d7d84ef4165a92a636eba0877dee9ce8b5b43dac56ad",
+    "selector_searches": 0,
+    "universal_selector_ordinal": 17,
+    "values": 4096
+  },
+  "ledger": {
+    "cold_read_amplification": 1.0138888888888888,
+    "container_bytes": 8847360,
+    "physical_bpw": 2.5
+  },
+  "receipt_sha256": "fd3b18bd3ca7f725457509c1d6880ea6a95b057334eed8945e6f0157ee25d54a",
+  "runtime": {
+    "cupy": "14.2.0",
+    "device": "b'NVIDIA GeForce RTX 5090'",
+    "elapsed_seconds": 2.387966988957487,
+    "numpy": "2.5.2",
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]"
+  },
+  "schema": "tactic_dh384_synthetic_cupy_preflight_v2",
+  "source_manifest_sha256": "f8de593784638cf7719d08ddda7061f4912166021214fb7a2894862a53050662",
+  "status": "PASS_SYNTHETIC_ONLY_NO_PAYLOAD"
+}

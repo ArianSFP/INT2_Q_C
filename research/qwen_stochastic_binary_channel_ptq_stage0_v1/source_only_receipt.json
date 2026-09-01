@@ -1,0 +1,53 @@
+{
+  "schema": "qwen_stochastic_binary_channel_ptq_stage0_source_receipt_v1",
+  "verdict": "READY_FOR_COORDINATED_STAGE0_NO_GPU_EXECUTED",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 8,
+  "scope": "source-only design, frozen panel metadata bindings, standard-library verification and regression tests",
+  "design_lock_sha256": "bbf618ae4a6a3b1195e8c844cefb1e47c492b2330094ffa83fc45cc63af847f7",
+  "panel_bindings_sha256": "5c5f1b6afcb85b91591f44ba8165ae4067a93b53e056eec1e20d8624a081df0d",
+  "stage0_script_sha256": "8e697f3f1dde5e79cec7619a00366d009a3c926f3de03650358be625bf4cacfe",
+  "lineage": {
+    "source_package": "QSB-PTQ-v0",
+    "source_manifest_sha256": "e4dc43066165bc9e5f9344d477e63f35ff46ceb58bbb209559d717fe0740b04c",
+    "v0_result_was_seen": true,
+    "v1_qwen_or_gpu_execution_before_seal": 0,
+    "preserved": "panel bindings, topology, seeds, physical rate/read cells, decoder oracle and matched-control protocol",
+    "changed": "fit target 0.965; execution limit 0.97; explicit physical limit 1.0; truthful rate-status and margin fields"
+  },
+  "panel_plan_binding": {
+    "bytes": 24790,
+    "sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "internal_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d"
+  },
+  "payload_access": {
+    "numeric_panel_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "model_or_checkpoint_payloads_opened": 0
+  },
+  "metadata_access": {
+    "authenticated_plan_metadata_files_opened": 1,
+    "bound_source_identities": 18
+  },
+  "execution": {
+    "gpu_jobs_submitted": 0,
+    "stage0_runs": 0,
+    "compressed_weight_artifacts_created": 0,
+    "standard_library_verifier_runs_at_seal": 1,
+    "standard_library_test_runs_at_seal": 1
+  },
+  "literature": {
+    "role": "inspiration only, not experimental evidence",
+    "primary_version": "arXiv:2606.29578v1",
+    "primary_pages_consulted": 2,
+    "panel_data_network_operations": 0
+  },
+  "frozen_cells": [
+    "QSB215",
+    "QSB230",
+    "QSB250"
+  ],
+  "claim_boundary": "The package is ready only for a separately coordinated adapted optimistic source-panel stage-0. The same-panel v0 result informed the budget split, so a v1 run is source-leaking engineering diagnosis, not independent held-out evidence, operational compression, a TCQ result, a Gaussian Shannon-limit result, or authorization for fresh validation.",
+  "verifier_check_count": 196,
+  "receipt_sha256": "d1db3e5d25e64a42ee5e3d4ee019c4fbbaf5e610df06444bf3509151618978d5"
+}

@@ -35,6 +35,8 @@ than the final research claim: at its own physical rate it has
 - [SILWARP, finite-bridge, and ancestry negative-result checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_SILWARP.md)
 - [PMG1 explicit-FMA stage-0 survivor and fresh-validation checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_PMG1_FMA.md)
 - [Lossy-tail v8 authenticated early-kill checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_LOSSY_V8.md)
+- [Universal SwiGLU-MoE codec contract](docs/UNIVERSAL_SWIGLU_MOE_CODEC_CONTRACT.md)
+- [Universal radical-gate v9 checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_V9.md)
 
 Verify the source-free compact checkpoint:
 

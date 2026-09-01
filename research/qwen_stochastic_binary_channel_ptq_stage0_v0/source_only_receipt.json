@@ -1,0 +1,45 @@
+{
+  "schema": "qwen_stochastic_binary_channel_ptq_stage0_source_receipt_v0",
+  "verdict": "READY_FOR_COORDINATED_STAGE0_NO_GPU_EXECUTED",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 8,
+  "scope": "source-only design, frozen panel metadata bindings, standard-library verification and regression tests",
+  "design_lock_sha256": "67d6a78d1b45d011ad9707f1484970346fb0070cbd7be8cbe0c7e6653c027aae",
+  "panel_bindings_sha256": "d3022a67a483ab84660cc67e9e141703e5d350e9c850a9e949f85e61224e6886",
+  "stage0_script_sha256": "ee671293ec6e608d7841e09406bdb30e02f23ae3917798f2fe65d435e5447b06",
+  "panel_plan_binding": {
+    "bytes": 24790,
+    "sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "internal_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d"
+  },
+  "payload_access": {
+    "numeric_panel_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "model_or_checkpoint_payloads_opened": 0
+  },
+  "metadata_access": {
+    "authenticated_plan_metadata_files_opened": 1,
+    "bound_source_identities": 18
+  },
+  "execution": {
+    "gpu_jobs_submitted": 0,
+    "stage0_runs": 0,
+    "compressed_weight_artifacts_created": 0,
+    "standard_library_verifier_runs_at_seal": 1,
+    "standard_library_test_runs_at_seal": 1
+  },
+  "literature": {
+    "role": "inspiration only, not experimental evidence",
+    "primary_version": "arXiv:2606.29578v1",
+    "primary_pages_consulted": 2,
+    "panel_data_network_operations": 0
+  },
+  "frozen_cells": [
+    "QSB215",
+    "QSB230",
+    "QSB250"
+  ],
+  "claim_boundary": "The package is ready only for a separately coordinated optimistic source-panel stage-0. It is not operational compression, held-out evidence, a TCQ result, a Gaussian Shannon-limit result, or authorization for fresh validation.",
+  "verifier_check_count": 182,
+  "receipt_sha256": "b5b0f9b4fabb3893443d789a9f902c486d513dec881d408b0f7a3caad223e7b2"
+}

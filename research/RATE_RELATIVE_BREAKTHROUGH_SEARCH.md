@@ -13,6 +13,14 @@ The compressed bytes needed for one routed expert must be less than twice one
 expert's equal physical share.  Results close to `1x` are preferred, and a
 higher read cost below `2x` is acceptable only for a material MSE benefit.
 
+The final codec architecture must be model-agnostic across SwiGLU-MoE models.
+The decoder may depend on fixed role/shape semantics, the selected compressed
+expert packet, and explicitly charged transmitted state.  It may not depend on
+model identity, checkpoint ancestry, an external reference model, router or
+activation payloads, or a pretrained model-specific side network.  A table
+fitted to the current weights remains eligible only when the universal encoder
+rule transmits every table byte.
+
 It is useful to write
 
 ```text
@@ -394,6 +402,145 @@ permutation-aligned pair result to a heuristic single-cell pause: its
 unweighted-cosine Hungarian objective is not a certified raw-MSE upper bound
 and it omits Gate and role-wise coefficients.
 
+## Radical post-locality gates
+
+Three independent decoder/provenance screens first closed attractive but
+underspecified branches.  The [PMG1 tetrad auxiliary
+screen](fuseed_pmg1_tetrad_aux_stage1_v0/README.md) gives a four-anchor FP16
+regression exact direct-counter coordinates; its independently replayed raw
+and centered captures are `-0.04577527` and `-0.03655885`, with only
+`0.00155383` at the delete-expert three-SE ceiling.  The deliberately relaxed
+[free-order SwiGLU predecessor screen](free_order_swiglu_path_aux_gross_v0/README.md)
+lets every neuron choose its best distinct predecessor and still supplies only
+`s=0.01446386` before its side charge, versus `0.18580705` required.  The
+[MALT64 decoded tangent](malt64_decoded_svd_tangent_stage0_v0/README.md) grants
+arbitrary real coefficients in every rank-three `64 x 64` reconstruction
+tangent.  Its `0.09185863` three-SE capture ceiling is almost exactly the
+`375/4096` null share and reaches only 30.9% of its `0.29724434` requirement.
+All three result packages have separate replay/audit directories and stop
+before downstream finite engineering.
+
+The [SPECTRAFLAG](spectral_flag_manifold_oracle_v0/README.md) search replaces
+the polar rank/window model with up to 256 contiguous spectral-projector
+bands.  All eighteen selected rows genuinely use the new family, but the full
+result is `F=0.95251520`, only `0.00011039 bpw` better than the contained
+rank/window control.  The branch is therefore stopped before the especially
+important polar-Jacobian and matched-Gaussian work.
+
+The [sparse polar-normal gate](polar_sparse_normal_oracle_v1_qwen_gate_20260901/README.md)
+then produced the most important false lead in this phase.  Its impossible
+exact-continuous grouped-value channel constructs a tile-32 row with
+`F=0.77235840`, but eight spatial permutations preserving every absolute
+normal coefficient reproduce it at mean `F=0.77239957`.  The independently
+sealed audit bounds the optimistic Qwen-specific advantage by only
+`0.00010113 bpw` at three SE.  Arbitrary-coordinate one-bit values already
+fail at `F=0.88733027`; the apparently passing grouped rows are entirely the
+uncharged continuous-value channel plus an order-statistic null.  No finite
+grouped-value implementation is warranted.
+
+Two whole-expert codebook parameterizations were tested separately.  The
+[latent-four meta decoder](meta_codebook_whole_expert_stage0_v0/README.md)
+uses only 1,252--1,344 of 32,768 codes and gives source residual energies
+`q=0.52679044/0.52305320` (`F=8.07899/8.02168`); its independent audit kills
+only that nonlinear parameterization.  The subsequent
+[literal direct-output table](direct_output_codebook_whole_expert_stage0_v0/README.md)
+stores all `32768 x 8` FP16 codewords and uses about 24,000 codes without a
+collapse.  Exact held-out search nevertheless gives `q=0.10600960/0.10595875`
+and `F=1.792962/1.792102`; identically trained matched Gaussians are slightly
+better (`F=1.781126/1.781200`).  Its 2.5-bpw cold read is only `1.30x`, so the
+failure is low-dimensional shaping and absent Qwen advantage, not bandwidth.
+
+The stochastic-binary route was also tested without conflating policy slack
+with capacity.  [QSB v0](qwen_stochastic_binary_channel_ptq_stage0_v0/README.md)
+crossed its frozen 97% cushion by just 892--1,962 bits while retaining
+300,814--351,036 bits of true physical headroom; its independent audit blocks
+the original physical-overflow wording.  The adapted, separately sealed
+[QSB v1](qwen_stochastic_binary_channel_ptq_stage0_v1/README.md) fits at 96.5%
+and enforces distinct 97% and 100% limits.  It reaches all source-leaking FP64
+decoder oracles, yet captures only `0.733695--0.745511` versus
+`0.959543--0.975000` required.  The resulting `F` values are
+`5.26599--8.14366`, so controls and a finite channel simulator are unnecessary.
+
+A favorable [decoded affine-correction
+envelope](decoded_affine_residual_oracle_v0/README.md) gives exact FP64 scale,
+bias, or affine corrections while charging only nominal FP16 coefficients and
+granting transfer to a lower-rate coarse stream.  Its best row-scale cell
+still worsens the net factor to `F=0.99878594`; inexpensive BCOS-like raw-MSE
+correction is not the missing module.
+
+Finally, the [same-layer expert-alignment
+super-oracle](same_layer_expert_alignment_superoracle_v0/README.md) strengthens
+the earlier bounded template test.  Every Up/Down row in sixteen authenticated
+layer-15 experts may independently reuse its best row from all 15 other
+experts, with separate role mappings and exact affine fits for free.  Pooled
+capture is only `0.01553490`; even adding a deliberately excessive `0.001`
+absolute cushion reaches `0.01653490`, versus `0.14566208` needed to close the
+current composite gap.  This kills copied-neuron ancestry as the sole missing
+Up/Down mechanism, while leaving Gate and nonlinear functional sharing outside
+scope.
+
+The [Code-Cluster Quantization gate](ccq_raw_mse_stage0_v0/README.md) then
+tested a paper-derived, finite cluster/context stream with exact canonical
+packets.  At `2.1245298032 bpw` before any residual stream, its held-out Qwen
+source ratio is `q=0.1382941964`, giving `F=2.6296524295`; the matched Gaussian
+control is slightly better (`q=0.1374282646`, `F=2.6131868093`).  More
+decisively, its monotone no-recovery lower bound already reaches
+`F=0.8422425705` after ordinal four.  The independent audit replays 1,099
+checks and 15 hostile tests, byte-for-byte decodes both 7,518,592-byte packets,
+and confirms cold read amplification of only about `1.003--1.005x`.  CCQ's
+failure here is therefore distortion, not bandwidth or an accounting defect.
+
+The [KBVQ-inspired IDRE analytic gate](kbvq_idre_raw_mse_gate_v0/README.md)
+charged every rank-basis byte before allowing residual bits.  Its best legal
+positive-rank cell (role-specific rank 8) consumes `0.065185546875 bpw` of side
+state and leaves `2.434814453125 bpw` for the residual, producing
+`F=1.0689416995`, `s=-0.0480915850`, and `1.075x` cold reads.  Even the
+deliberately illegal free rank-256 envelope reaches only `s=0.1468826823`,
+short of `0.1609640474`.  This kills standalone two-role diagonal-Gaussian
+IDRE; it is not evidence that its gain can be added to an independently
+measured codec.  A valid composite must encode the residual of the same
+decoded panel and serialize the basis and residual jointly.
+
+[RAVEL-6144 v0](ravel_decoded_residual_lut_stage0_v0/README.md) attempted a
+small correction table keyed only by decoded role, row RMS, amplitude and
+neighbor state.  Its independent source audit blocked launch because the
+claimed raw-MSE oracle averaged normalized errors instead of solving weighted
+least squares, authenticated paths were reopened, and the packet was not
+round-trip specified.  The separately sealed
+[v1](ravel_decoded_residual_lut_stage0_v1/README.md) repaired all three classes
+of defect and passed 89 source checks plus ten hostile tests.  The corrected
+CuPy run then captured only `0.0005730921` of held-out baseline SSE:
+source-leaking oracle `F=1.0176519418`, finite FP16 fit-table
+`F=1.0187421104`, at `0.0046296296 bpw` side rate and `1.18055556x` conservative
+cold reads.  This is a clean hard kill of the frozen universal LUT cell, not a
+reason to enlarge a table whose favorable oracle already loses.  A separate
+independent result audit replays the emitted packet and arithmetic with 212
+checks and nine hostile tests.  It reports `PASS_WITH_LIMITATION` because the
+producer did not emit the per-cell weighted sufficient statistics needed to
+remeasure the source-leaking oracle without reopening the model payload; the
+narrow hard-kill claim, packet, ledgers and dominance inequalities do replay.
+
+[TACTIC-DH384 v2](tactic_conditional_dyadic_coset_v2/README.md) freezes a more
+radical decoder-conditioned cell: same-block coarse integer symbols choose a
+source-free signed/swapped dyadic frame, and exactly 384 target bits address a
+rank-384 correction for each 4,096-value block.  The physical construction is
+exactly `2.5 bpw` with `73/72 = 1.01388889x` cold reads.  Its source closure
+passes eleven hostile tests, and a synthetic-only RTX 5090 preflight matches
+CPU/CuPy energy and projection arithmetic.  It is deliberately **not** a
+result.  The
+required independently encoded `307/128 = 2.3984375 bpw` finite coarse stream,
+canonical I16 symbols, and 78,592-byte reservoirs do not yet exist in the
+evidence.  The old 2.5-bpw distortion supplies planning arithmetic only.  No
+payload or CuPy launch is permitted until that lower-rate stream is produced,
+decoded, re-encoded and sealed for source and controls.
+
+A read-only universal lossless-wrapper diagnostic then compressed the exact
+8,847,360-byte finite expert-affine container with xz-9e, gzip-9, bzip2-9 and
+zstd-19.  Zstd was best at 8,840,025 bytes: only `0.0020726522 bpw` reclaimed,
+which changes the byte-derived factor to `F=0.9860321107`.  The unchanged-MSE
+route would need `0.1528899670 bpw`; generic packet grammar or padding recovery
+is therefore two orders of magnitude too small.
+
 ## Relationship to recent PTQ architectures
 
 Recent methods identify the same broad mechanisms being tested here:
@@ -405,6 +552,16 @@ Recent methods identify the same broad mechanisms being tested here:
 - [Lattice Transform Coding](https://arxiv.org/abs/2403.07320) shows why a
   lattice latent can approach vector rate-distortion behavior that a scalar
   latent cannot.
+- [Code-Cluster Quantization](https://arxiv.org/abs/2507.07145) motivates
+  finite shared code clusters plus contextual structure; the gate above tests
+  that mechanism against this stricter raw-source-MSE objective rather than
+  claiming an official implementation.
+- [KBVQ](https://arxiv.org/abs/2602.11184) motivates separating a structured
+  basis from a quantized residual, but the physical basis rate must be debited
+  from the residual stream in this audit.
+- [SoftBinary](https://arxiv.org/abs/2606.29578) motivates learned binary
+  channels; the QSB gates above deliberately grant stronger source-leaking
+  decoder oracles before paying to reproduce its training procedure.
 
 Those papers principally optimize activation-weighted error or model quality,
 not this audit's pooled source-relative MSE.  They therefore motivate the

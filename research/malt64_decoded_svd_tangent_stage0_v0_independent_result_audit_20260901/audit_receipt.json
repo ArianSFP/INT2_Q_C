@@ -1,0 +1,60 @@
+{
+  "audit": "malt64_decoded_svd_tangent_stage0_v0_independent_result_audit_20260901",
+  "canonical_unsigned_sha256": "da1cb9558880b4fcc6c951029653620cc54264a9eb570f7ab29bb80bca161b48",
+  "claim_scope": "Exact frozen MALT64-r3 continuous-tangent stage-0 screen only; no finite-codec, lower-rate, fresh-validation, or universal-converse claim.",
+  "date": "2026-09-01",
+  "disjoint_runpod_replay": {
+    "batch_blocks": 32,
+    "blocks": 6912,
+    "fresh_validation_files_opened": 0,
+    "result_sha256": "9de04f91831c7da04f1b908d8cd6381aeaf263dfd0a7e1e7556934e214ade1a5",
+    "semantic_comparison": "Exact after deleting only execution.elapsed_seconds",
+    "source_files_hash_checked": 18,
+    "status": "PASS"
+  },
+  "external_bindings": {
+    "header_sha256": "3c16bcf308c0cfce2071be24bf612d202360510084540aa0b358938d8399a538",
+    "plan_internal_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "post_klt_sha256": "af801b41a37774d3f0ea65a00d929ff0004122caf4a5632457dbbe232e3f84d0",
+    "source_receipts": 18
+  },
+  "findings": {
+    "decision_semantics_correct": true,
+    "ledger_and_threshold_correct": true,
+    "plan_identity_and_internal_seal_correct": true,
+    "producer_replay_reproducible": true,
+    "tangent_projection_formula_correct": true
+  },
+  "independent_full_gpu_replay": {
+    "execution_status": "NOT_EXECUTED_EXTERNAL_UPLOAD_DENIED",
+    "method": "Alternative UTE/EV/UTEV norm identity",
+    "script_sha256": "baa8e11ec19463ec20a45b48f1971ce6cb23c58de51cd04824d57d37f1599032"
+  },
+  "independent_verifier": {
+    "audit_manifest_binding": "External SHA-256 pin required by verifier and release handoff",
+    "expected_checks": 524,
+    "observed_checks": 524,
+    "status": "PASS"
+  },
+  "limitations": [
+    "The 226,492,416-byte decoded artifact and 18 source files are absent locally.",
+    "The exact producer replay re-opened/hash-checked those files, but the independent alternate-formula GPU implementation was not executed because sandbox policy denied uploading the local script."
+  ],
+  "producer": {
+    "closure_files": 3,
+    "result_sha256": "be374c052a556fdd67020593778fc4d99ce98ee61562e1a8efd16af51f989398",
+    "script_sha256": "8cca40f82be8397a992e1b488379ece1537bbf330ebc98d646bbe95c17c7d609"
+  },
+  "recomputed": {
+    "capture_fraction": 0.09172601886567566,
+    "coarse_error_sse_fp64": 500.39553685426534,
+    "decision": "POLICY_REJECT_MALT64_R3_FAR_SHORT_STOP_BEFORE_CONTROLS",
+    "fraction_of_required_at_upper_three_se": 0.30903406958082696,
+    "required_capture": 0.2972443434920543,
+    "source_energy_fp64": 16192.894508855934,
+    "tangent_projection_energy_fp64": 45.899290453794244,
+    "upper_three_se": 0.09185862912923075
+  },
+  "verdict": "PASS"
+}

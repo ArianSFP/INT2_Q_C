@@ -1,0 +1,15 @@
+{
+  "schema": "qsb_ptq_v0_independent_result_audit_manifest_v0",
+  "closed_world": true,
+  "self_entry_policy": "this manifest governs the other eight exact audit files; verify_result.py emits the external digest of this manifest",
+  "entries": [
+    {"path": "README.md", "bytes": 2799, "sha256": "e8aedbaf086eb7ce7677c8d56b583a1297b455ab6459c47c826cf0eb06ea714b"},
+    {"path": "audit_receipt.json", "bytes": 1732, "sha256": "d15e59af83ce7e499051bc39447dad20eb945da0c0f81560dab491954d9e2e64"},
+    {"path": "design_lock_v0.json", "bytes": 13287, "sha256": "67d6a78d1b45d011ad9707f1484970346fb0070cbd7be8cbe0c7e6653c027aae"},
+    {"path": "panel_bindings_v0.json", "bytes": 5959, "sha256": "d3022a67a483ab84660cc67e9e141703e5d350e9c850a9e949f85e61224e6886"},
+    {"path": "recomputed_margins.json", "bytes": 6235, "sha256": "f4bf26a0f28433e95ae3e20a3c6afb62553f96182cc537ad9289df71e8f0094f"},
+    {"path": "runpod_result.json", "bytes": 8987, "sha256": "954cf10187baca348ab1d134be8362efe7d79ca59d8592bb8e75be742ff1e6df"},
+    {"path": "stage0_screen_v0.py", "bytes": 23380, "sha256": "ee671293ec6e608d7841e09406bdb30e02f23ae3917798f2fe65d435e5447b06"},
+    {"path": "verify_result.py", "bytes": 14021, "sha256": "699629092e0eb48b1239c090d17d8cb58ab44777a718edb0c78c75467990bb01"}
+  ]
+}

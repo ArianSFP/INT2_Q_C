@@ -1,0 +1,31 @@
+{
+  "schema": "qsb_ptq_v1_independent_result_audit_receipt_v0",
+  "verdict": "PASS_HARD_KILL_NO_CONTROLS",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 9,
+  "result_sha256": "c9b8d26e8d09bbb225288e7787d9ef0154a6a958cc4cf1798cd2d3358b3eeae2",
+  "result_origin_path": "research/qwen_stochastic_binary_channel_ptq_stage0_v1_runpod_result_20260901/result.json",
+  "source_manifest_sha256": "aaae42924d01f3508bd66ad8efa586549a687e69fe6a8f31bdcc9d1c8806707f",
+  "recomputed": {
+    "rate_cells": 3,
+    "matrix_captures": 54,
+    "expert_folds": 18,
+    "role_folds": 9,
+    "jackknife_cells": 3,
+    "hard_kills": 3,
+    "matched_controls_run": 0,
+    "execution_limit_violations": 0,
+    "physical_reservoir_violations": 0
+  },
+  "access": {
+    "copied_result_files_opened": 1,
+    "copied_source_evidence_files_opened": 4,
+    "qwen_numeric_payload_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0
+  },
+  "claim_boundary": "Adapted optimistic source-leaking topology bound only; not independent held-out evidence, serialized compression, operational Gaussian/TCQ evidence, a Shannon result, or fresh validation.",
+  "verifier_check_count": 284,
+  "receipt_sha256": "9bf93af8ecfebc2ea80699b5e68a56a7ac8a105ca4146f42f2e8106b0d7b7b21"
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "free_order_swiglu_path_v2_source_only_receipt_v1",
+  "status": "PASS_SOURCE_ONLY_PACKAGE_DEPLOYMENT_BLOCKED",
+  "artifact_set_status": "IMMUTABLE_SOURCE_ONLY_ARTIFACT_SET",
+  "date_utc": "2026-09-01",
+  "architecture": "FOSP-ARX-v2-DIRECT",
+  "lineage": {
+    "v1_package": "../free_order_swiglu_path_oracle_v1",
+    "v1_independent_audit": "../free_order_swiglu_path_oracle_v1_independent_source_audit_20260901",
+    "v1_verdict": "BLOCK_STAGE0_DOES_NOT_CONTAIN_CROSS_ROLE_3X3_PATH_FAMILY",
+    "v2_repair": "remove the marginal-KLT early gate and route every candidate directly to the full cross-role 3x3 family"
+  },
+  "scientific_decision": {
+    "cheap_auxiliary_run_justified_after_audits": true,
+    "reason": "The full cross-role family remains numerically untested because v1 was blocked for invalid routing rather than a measured miss. Two fixed auxiliary experts, eight identical controls, and a deterministic gross relaxed early stop make the discovery run bounded.",
+    "source_run_currently_authorized": false,
+    "pinned_panel_run_authorized": false,
+    "survival_claim": "At most a residual-codec experiment is justified; no finite-rate compression result can be emitted by this oracle."
+  },
+  "frozen_contract": {
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "target_F_maximum": 0.8,
+    "required_net_s_bpw": 0.16096404744368115,
+    "physical_factoradic_bits": 6264,
+    "fp16_coefficient_bits": 110448,
+    "total_side_bits": 117224,
+    "total_side_bpw": 0.024843004014756944,
+    "required_gross_s_bpw": 0.1858070514584381,
+    "maximum_cold_read_amplification": 1.0054349308378698,
+    "strict_read_limit": 2.0,
+    "first_scientific_gate": "direct_qwen_full3x3_pair_panel",
+    "marginal_klt_credit": false,
+    "joint_dense_map_credit": false,
+    "matched_control_replicates": 8
+  },
+  "standard_library_validation": {
+    "platform": "Windows local source host",
+    "command": "python -B test_source_only.py",
+    "tests_run": 17,
+    "passes": 14,
+    "failures": 0,
+    "errors": 0,
+    "skips": 3,
+    "skip_reasons": [
+      "Linux openat held-directory positive-path test is not available on Windows",
+      "Linux held-output-parent replacement test is not available on Windows",
+      "directory symlink creation privilege is unavailable on this Windows host"
+    ],
+    "ast_parse": "PASS_5_PYTHON_FILES"
+  },
+  "package_files": {
+    "README.md": {
+      "bytes": 14049,
+      "sha256": "af56fa26e813d9c4f227c7b96ccdf45fc28367cbe1840ff1311b3973f29142e0"
+    },
+    "calibrate_runtime.py": {
+      "bytes": 6709,
+      "sha256": "526c5d40304cba9eb6ca8449c0aea734aaeb1be299eab2c89bfea05abae6a883"
+    },
+    "create_authorization.py": {
+      "bytes": 17377,
+      "sha256": "247a6de24279f4f1cacf6f2ba34abfdf6e9f4aef2fb35701c3ce4a931308c18e"
+    },
+    "free_order_oracle_v2.py": {
+      "bytes": 54317,
+      "sha256": "98625fde2c0f1bd2510c5f07fbd9384953fcb8e9b7f7f98d284482c034a94eb2"
+    },
+    "protocol_lock.json": {
+      "bytes": 11962,
+      "sha256": "57a7e4f36a13d12ff61c7966306af8135d8ba182de400106548d314d462380e6"
+    },
+    "source_bindings.json": {
+      "bytes": 2878,
+      "sha256": "3454b718a65efc02c32463f955c10ff393f4218fac04f358107960ff3735990d"
+    },
+    "test_source_only.py": {
+      "bytes": 24617,
+      "sha256": "559c7660d81a2a13a88ef5c86c726764d3fb6337fff530c6c995270806294964"
+    },
+    "verify_package.py": {
+      "bytes": 15176,
+      "sha256": "d18e12f65c5abc7a8dc7157e385c2aa856ac39f429463f7e9cb0c4911911f20a"
+    }
+  },
+  "zero_access_ledger": {
+    "qwen_or_model_payload_files_opened": 0,
+    "qwen_or_model_payload_bytes_read": 0,
+    "binding_paths_followed": 0,
+    "pinned_panel_files_opened": 0,
+    "validation_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_api_calls": 0,
+    "gpu_device_calls": 0,
+    "external_data_fetches": 0,
+    "runpod_or_remote_hosts_contacted": 0,
+    "v1_files_modified": 0
+  },
+  "deployment": {
+    "authorized": false,
+    "required_before_source_access": [
+      "independent v2 source audit and counterexample replay",
+      "source-free full-geometry CuPy calibration",
+      "independent audit of the exact runtime receipt",
+      "external exact one-shot auxiliary authorization"
+    ],
+    "package_itself_is_not_authority": true
+  },
+  "canonical_unsigned_sha256": "9e656b50e052fe037d376f87faca00bede9b61be08c200494aaefc6192cc4baa"
+}

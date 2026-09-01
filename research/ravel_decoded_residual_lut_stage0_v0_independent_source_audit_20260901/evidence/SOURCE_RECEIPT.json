@@ -1,0 +1,11 @@
+{
+  "schema": "ravel-decoded-residual-lut-stage0-source-receipt-v0",
+  "status": "READY_SOURCE_ONLY_NOT_EXECUTED",
+  "created_utc_date": "2026-09-01",
+  "model_payload_access": "none while authoring and sealing",
+  "gpu_execution": "not run",
+  "package_file_count": 7,
+  "manifest_member_count": 6,
+  "claim_boundary": "Source closure and arithmetic only; no RAVEL numeric result."
+}
+

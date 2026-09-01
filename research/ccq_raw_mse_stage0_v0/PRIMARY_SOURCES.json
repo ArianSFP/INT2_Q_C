@@ -1,0 +1,17 @@
+{
+  "official_code": {
+    "commit": "f5562df9fbd543a63dc28bb8e5709cb6d90e1707",
+    "dequant_kernel": "https://github.com/PaddlePaddle/FastDeploy/blob/f5562df9fbd543a63dc28bb8e5709cb6d90e1707/custom_ops/gpu_ops/cutlass_extensions/gemm/threadblock/wint2x_unzip.h",
+    "documentation": "https://github.com/PaddlePaddle/FastDeploy/blob/f5562df9fbd543a63dc28bb8e5709cb6d90e1707/docs/quantization/wint2.md",
+    "loader": "https://github.com/PaddlePaddle/FastDeploy/blob/f5562df9fbd543a63dc28bb8e5709cb6d90e1707/fastdeploy/model_executor/layers/moe/fused_moe_wint2_backend.py",
+    "repository": "https://github.com/PaddlePaddle/FastDeploy"
+  },
+  "paper": {
+    "arxiv_id": "2507.07145v1",
+    "submitted": "2025-07-09",
+    "title": "CCQ: Convolutional Code for Extreme Low-bit Quantization in LLMs",
+    "url": "https://arxiv.org/abs/2507.07145v1"
+  },
+  "review_date": "2026-09-01",
+  "schema": "ccq-primary-source-binding-v0"
+}

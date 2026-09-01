@@ -1,0 +1,68 @@
+{
+  "schema": "ravel-v1-independent-result-audit-receipt-v0",
+  "verdict": "PASS_NARROW_HARD_KILL_WITH_ORACLE_REPLAY_LIMITATION",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 17,
+  "source_manifest_sha256": "ffafd386ab4f3777fb6c9a70fa413f3bdf169658c64607f898a7969d0375c359",
+  "result_sha256": "ef67ee26246149472b5f3e4dc6f7e869d95c325a354abd7339bc8e4137dc0c47",
+  "packet_sha256": "5a8eea824c79e3421b0c1bcf00e04f609f19d59c892501761bf83a90d3b06c80",
+  "completion_sha256": "c61329ca4d1ec2d9be6a03733be772e253843769b79b57a88d620c34402cd185",
+  "result_origin_path": "research/ravel_decoded_residual_lut_stage0_v1_runpod_result_20260901",
+  "recomputed": {
+    "matrix_rows": 18,
+    "holdout_rows": 6,
+    "panel_sse": 500.39553685426534,
+    "panel_energy": 16192.89450885593,
+    "holdout_sse": 166.91804981515884,
+    "holdout_energy": 5279.494811461567,
+    "holdout_F_at_2p5": 1.011721345475929,
+    "finite_sse": 167.0011003655521,
+    "finite_favorable_F": 1.0187421104347276,
+    "oracle_sse": 166.82239040215273,
+    "oracle_capture": 0.0005730920838821207,
+    "oracle_favorable_F": 1.0176519417779304,
+    "oracle_kill_margin": 0.21765194177793035,
+    "oracle_dominates_zero_correction": true,
+    "oracle_dominates_finite_fit_table": true,
+    "decision": "HARD_KILL_RAVEL6144_V1"
+  },
+  "packet": {
+    "bytes": 16384,
+    "header_bytes": 4096,
+    "table_entries": 6144,
+    "finite_entries": 6144,
+    "nonzero_entries": 4427,
+    "minimum": -0.5126953125,
+    "maximum": 0.46923828125,
+    "zero_padding_valid": true,
+    "table_sha256": "e4418f386d06562bf5500c7407a37ab8aea4bc022a8802e4e5c842f3e4f06734"
+  },
+  "rate_read": {
+    "shared_table_count": 1,
+    "side_bpw": 0.004629629629629629,
+    "base_payload_cap_bpw": 2.4953703703703702,
+    "conservative_cold_read_amplification": 1.1805555555555556,
+    "strict_read_limit": 2.0
+  },
+  "limitations": {
+    "weighted_source_algorithm_structure_verified": true,
+    "emitted_dominance_inequalities_recomputed": true,
+    "weighted_oracle_sse_replayable_without_payload": false,
+    "reason": "result omits per-cell weighted numerator/denominator sufficient statistics and the source-leaking oracle table",
+    "gpu_computation_independently_replayed": false,
+    "source_payload_receipts_opened": false
+  },
+  "access": {
+    "copied_source_files_opened": 9,
+    "copied_result_files_opened": 3,
+    "model_payload_files_opened": 0,
+    "decoded_panel_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0,
+    "producer_or_result_files_modified": 0
+  },
+  "claim_boundary": "Pass confirms the exact emitted packet/result integrity and the narrow favorable source-leaking RAVEL-6144-v1 hard kill; it is not a payload replay, finite reduced-rate codec result, activation-aware result, or universal residual-code converse.",
+  "verifier_check_count": 212,
+  "receipt_sha256": "0e73f1b1139c8d1a7fd19d99e9c642b688cc780eac0c7f7cb6b1bfa35a22b292"
+}

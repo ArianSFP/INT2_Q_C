@@ -1,0 +1,10 @@
+{"schema":"qsb_ptq_v1_independent_result_audit_manifest_v0","closed_world":true,"entries":[
+  {"path":"README.md","bytes":2222,"sha256":"4bcee91278d10bd3a1569ed019863b133f8910b97779a712dceadf2fd39f8081"},
+  {"path":"audit_receipt.json","bytes":1312,"sha256":"9c9799efff3f3e6284e19edf71adbff463c15841449cc8dc03216ca12f2f9e90"},
+  {"path":"evidence/PACKAGE_MANIFEST.json","bytes":1338,"sha256":"aaae42924d01f3508bd66ad8efa586549a687e69fe6a8f31bdcc9d1c8806707f"},
+  {"path":"evidence/design_lock.json","bytes":14801,"sha256":"bbf618ae4a6a3b1195e8c844cefb1e47c492b2330094ffa83fc45cc63af847f7"},
+  {"path":"evidence/panel_bindings.json","bytes":5959,"sha256":"5c5f1b6afcb85b91591f44ba8165ae4067a93b53e056eec1e20d8624a081df0d"},
+  {"path":"evidence/runpod_result.json","bytes":36413,"sha256":"c9b8d26e8d09bbb225288e7787d9ef0154a6a958cc4cf1798cd2d3358b3eeae2"},
+  {"path":"evidence/stage0_screen.py","bytes":24260,"sha256":"8e697f3f1dde5e79cec7619a00366d009a3c926f3de03650358be625bf4cacfe"},
+  {"path":"verify_audit.py","bytes":14191,"sha256":"4c2663a58509d5dfad1e7babf3719fff4eee1d43ea3811cd8d808c613dee22b6"}
+]}

@@ -1,0 +1,131 @@
+{
+  "schema": "kbvq_idre_raw_mse_prior_sufficient_statistic_v0",
+  "status": "DERIVED_TWO_ROLE_WATERFILL_FROM_AUTHENTICATED_AGGREGATE_NO_NEW_PAYLOAD_ACCESS",
+  "source": {
+    "path": "../shared_subspace_gate/result.json",
+    "bytes": 510476,
+    "sha256": "6a756c26e05926a2468bcc2a20086d7efbb2273e0f078a9294c5c002f2f7734f",
+    "internal_result_seal": "80198ed55c193c71b3a3e0054aa4eb54dc7f70371ea36c03d951a09600a6af14",
+    "source_manifest_sha256": "4194ff0aa13e71e2c9631f6f2cfd145c5146edf9c6d287084197499872dff782"
+  },
+  "independent_verification": {
+    "path": "../shared_subspace_gate/verification_receipt.json",
+    "bytes": 456,
+    "sha256": "e8791db74991bbc8e0cbede2c43252933aa57ee1f042e9590deb2b95f545c0e5",
+    "status": "PASS",
+    "sources_verified": 32,
+    "candidate_rows_verified": 480
+  },
+  "split": {
+    "fit_experts": [
+      0,
+      8,
+      16,
+      32,
+      40,
+      48,
+      64,
+      72,
+      80,
+      96,
+      104,
+      112
+    ],
+    "validation_experts": [
+      24,
+      56,
+      88,
+      120
+    ],
+    "roles": [
+      "up",
+      "down"
+    ]
+  },
+  "rank256_exact_free_envelopes": [
+    {
+      "mode": "joint_role",
+      "rank": 256,
+      "up_source_energy": 3339.0263485272485,
+      "up_projected_energy": 517.8563543715043,
+      "down_source_energy": 3446.187446016585,
+      "down_projected_energy": 651.4736326786415,
+      "pooled_capture": 0.17233502472544554,
+      "residual_energy_ratio_q": 0.8276649752745544,
+      "free_s_bpw": 0.13644059372654344,
+      "passes_required_s": false
+    },
+    {
+      "mode": "role_specific",
+      "rank": 256,
+      "up_source_energy": 3339.0263485272485,
+      "up_projected_energy": 555.5756795277505,
+      "down_source_energy": 3446.187446016585,
+      "down_projected_energy": 694.4631939161168,
+      "pooled_capture": 0.18422984319949592,
+      "residual_energy_ratio_q": 0.815770156800504,
+      "free_s_bpw": 0.14688268234588053,
+      "passes_required_s": false
+    }
+  ],
+  "objective": {
+    "required_capture_if_free": 0.19999999999999996,
+    "required_s_bpw": 0.16096404744368115,
+    "maximum_legal_rank_any_mode_or_rate": 239,
+    "comparison_rank": 256
+  },
+  "free_capture_interpretation": {
+    "warning": "q=1-capture and s=-0.5log2(q) are gross exact/free capture diagnostics, not physical scores.",
+    "why": "A physically charged IDRE split spends bits on FP16 factors and then applies the remaining bits to fewer residual dimensions; this redistribution must be solved explicitly."
+  },
+  "physical_two_role_waterfill_best": {
+    "mode": "role_specific",
+    "rank": 8,
+    "requested_cap_bpw": 2.5,
+    "actual_bpw": 2.5,
+    "component_header_side_bpw": 0.065185546875,
+    "residual_payload_bpw": 2.434814453125,
+    "cold_page_amplification": 1.075,
+    "relative_mse": 0.033404428110059906,
+    "F": 1.068941699521917,
+    "s_bpw": -0.048091585039837736,
+    "up_source_energy": 3339.0263485272485,
+    "up_captured_energy": 23.37911473790321,
+    "down_source_energy": 3446.187446016585,
+    "down_captured_energy": 46.704462108156186,
+    "residual_dimensions_per_role": 6266880,
+    "residual_energies_by_role": [
+      3315.647233789345,
+      3399.4829839084287
+    ],
+    "residual_variances_by_role": [
+      0.0005290746326384653,
+      0.0005424522224629207
+    ],
+    "payload_bits_validation": 30637056.0,
+    "water_level": 0.000018083654578612186,
+    "residual_role_rates_bpw": [
+      2.4353565381031994,
+      2.4533689520928785
+    ],
+    "allocated_bits_validation": 30637055.999999996,
+    "distortion_energy": 226.656186411226,
+    "allocation": "captured rank reconstructed exactly after its literal FP16/header side charge; all residual bits optimally reverse-waterfilled between Up and Down residual bands",
+    "favorable_grant": "FP16 factor rounding error is zero"
+  },
+  "decision": "HARD_KILL_BOUNDED_TWO_ROLE_GAUSSIAN_IDRE_CELL_WITHOUT_NEW_GPU_OR_PAYLOAD_REPLAY",
+  "decision_boundary": "The aggregate sufficient statistic supports exact two-role residual waterfill, not per-mode residual waterfill. A coordinated CuPy replay is required before making a stronger within-band claim.",
+  "composite_nesting": {
+    "existing_composite_s_bpw": 0.0474034129,
+    "incremental_s_needed_bpw": 0.11356063454368115,
+    "hypothetical_illegal_free_sum_F": 0.76388523407141,
+    "verdict": "NO_ADDITIVE_OR_CONTAINMENT_CLAIM",
+    "required_valid_test": "apply IDRE to the literal composite residual on the same source panel, serialize one combined object, and recompute one total-rate waterfill/read ledger"
+  },
+  "access_attestation": {
+    "new_numeric_qwen_payload_files_opened": 0,
+    "new_gpu_jobs_submitted": 0,
+    "aggregate_result_documents_read": 2,
+    "network_sources_used_for_numeric_evidence": 0
+  }
+}

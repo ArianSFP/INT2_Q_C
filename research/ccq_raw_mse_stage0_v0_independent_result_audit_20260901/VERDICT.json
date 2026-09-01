@@ -1,0 +1,15 @@
+{
+  "claim_scope": "frozen_paper_derived_code_cluster_cell_on_authenticated_six_expert_panel",
+  "confirmed_result": "KILL",
+  "evidence_status": "internally_consistent_and_byte_bound",
+  "limitations": [
+    "no model or BF16 payload was opened by this source/result audit",
+    "GPU SSE values were not independently remeasured from tensors",
+    "the hypothetical 128-expert ledger is arithmetic only",
+    "the ideal residual is a containing oracle, not a finite codec result",
+    "this is not an official CCQ encoder reproduction or target achievement"
+  ],
+  "schema": "ccq-stage0-independent-result-audit-verdict-v0",
+  "status": "PASS_KILL_CONFIRMED",
+  "verdict": "PASS"
+}

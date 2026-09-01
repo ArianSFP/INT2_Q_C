@@ -1,0 +1,8 @@
+{"schema":"decoded_affine_residual_independent_result_audit_manifest_v0","closed_world":true,"entries":[
+  {"path":"README.md","bytes":2164,"sha256":"7f49fac82a5588843585f78af361c1e12b4a7db296b0f90c251c7ce3822a73f1"},
+  {"path":"audit_receipt.json","bytes":1699,"sha256":"506ef4c6f143d96d30031a8908024c2d5899afe40d8121e8d3957872e6f8d8a4"},
+  {"path":"evidence/README.md","bytes":1278,"sha256":"68a2363393aa7be61b7fcaf91cdab81b407c52998cf0187775ae7b57d9cd0bd4"},
+  {"path":"evidence/decoded_affine_oracle.py","bytes":10007,"sha256":"7d06910a9cdb66349bf3900ee0eb7cc27b08883b9f943ac33ab4f2c4e4a11f53"},
+  {"path":"evidence/runpod_result.json","bytes":18182,"sha256":"e8cff5c3ee45dc209c4b4d5368e060953e4ccc8e08047a28bddca8e36e19de35"},
+  {"path":"verify_audit.py","bytes":10325,"sha256":"4a466fe0dbc79369b3f8c3e9b62adedf8a9e02b36a1e56dd35023e74a0fe034f"}
+]}

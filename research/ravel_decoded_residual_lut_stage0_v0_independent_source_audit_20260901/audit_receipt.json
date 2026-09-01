@@ -1,0 +1,60 @@
+{
+  "schema": "ravel-v0-independent-source-audit-receipt-v0",
+  "verdict": "BLOCK_DO_NOT_LAUNCH",
+  "sealed_utc_date": "2026-09-01",
+  "package_file_count": 12,
+  "producer_manifest_sha256": "4859bad1347850a52bb3668a1015161ef9996ed9a649b6bff4f0bfb47c18ba5e",
+  "producer_runner_sha256": "a52eb36a5a9ed740fb0567c64cd87124d4739f7a8c991e53739dad4e93cb8fcd",
+  "findings": {
+    "feature_decoder_visibility": "PASS_WITH_UNDISCLOSED_CYCLIC_EDGE_SEMANTICS",
+    "raw_sse_projection_dominance": "FAIL",
+    "whole_expert_split": "PASS",
+    "finite_fit_holdout_leakage": "PASS_NONE_FOUND",
+    "holdout_oracle_leakage_disclosure": "PASS_EXPLICIT",
+    "favorable_transfer_arithmetic_and_wording": "PASS_CONDITIONAL_ONLY",
+    "side_rate_arithmetic": "PASS",
+    "cold_read_arithmetic": "PASS",
+    "authorization_before_payload": "PASS",
+    "exclusive_output_creation": "PASS_WITH_PARTIAL_DIRECTORY_LIMITATION",
+    "external_evidence_use_binding": "FAIL_HASH_THEN_REOPEN",
+    "baseline_constant_binding": "PASS_VALUES_FAIL_IMMUTABLE_USE",
+    "cupy_fp64_accumulation_structure": "PASS_SOURCE_ONLY",
+    "packet_self_delimiting": "PASS_IN_PRINCIPLE",
+    "packet_alignment": "LIMITATION_FP16_STARTS_AT_ODD_OFFSET_79",
+    "packet_parser_roundtrip": "FAIL_ABSENT",
+    "packet_fp16_finiteness_gate": "FAIL_ABSENT",
+    "producer_manifest_closure": "PASS"
+  },
+  "counterexample": {
+    "scales": [1.0, 2.0],
+    "residuals": [1.0, 1.0],
+    "v0_unweighted_entry": 0.75,
+    "v0_raw_sse": 0.3125,
+    "exact_raw_sse_entry": 0.6,
+    "exact_raw_sse": 0.2
+  },
+  "recomputed": {
+    "table_entries": 6144,
+    "packet_bytes": 16384,
+    "side_bpw": 0.004629629629629629,
+    "base_payload_cap_bpw": 2.4953703703703702,
+    "extra_table_read_amplification": 0.011111111111111112,
+    "conservative_cold_read_amplification": 1.1805555555555556,
+    "packet_header_bytes": 79,
+    "packet_table_bytes": 12288,
+    "packet_padding_bytes": 4017
+  },
+  "access": {
+    "producer_source_files_copied_and_opened": 7,
+    "model_payload_files_opened": 0,
+    "decoded_panel_files_opened": 0,
+    "fresh_validation_files_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "network_operations": 0,
+    "producer_files_modified": 0
+  },
+  "minimum_repair": "Use scale-weighted raw-SSE cell least squares; consume held authenticated input bytes; specify edge/bin semantics; define aligned parseable packet and reject nonfinite FP16 before output.",
+  "claim_boundary": "Source-only launch audit. No numeric RAVEL result or model-wide converse is established.",
+  "verifier_check_count": 131,
+  "receipt_sha256": "ad297d2a73b0395b31d938b1d7531b21033350b11848d69d7226cddebf3e98a6"
+}

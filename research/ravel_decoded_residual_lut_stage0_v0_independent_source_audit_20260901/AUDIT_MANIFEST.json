@@ -1,0 +1,61 @@
+{
+  "schema": "ravel-v0-independent-source-audit-manifest-v0",
+  "closed_world": true,
+  "entries": [
+    {
+      "path": "README.md",
+      "bytes": 6293,
+      "sha256": "b361e81504f34667cdeb4dcd392573e39b3565cab32a30911160ffe98be59fa6"
+    },
+    {
+      "path": "audit_receipt.json",
+      "bytes": 2653,
+      "sha256": "e5f4e87c9ff159fe8d9c88768beac6db8ffe8b11655d9e25d955fd3c151a1143"
+    },
+    {
+      "path": "evidence/MANIFEST.sha256",
+      "bytes": 496,
+      "sha256": "4859bad1347850a52bb3668a1015161ef9996ed9a649b6bff4f0bfb47c18ba5e"
+    },
+    {
+      "path": "evidence/README.md",
+      "bytes": 3093,
+      "sha256": "9274c8311ec720d475ca8ad42d102ac8f87ec107d116dd48c788cf0829256985"
+    },
+    {
+      "path": "evidence/SOURCE_RECEIPT.json",
+      "bytes": 386,
+      "sha256": "17e0799b3f5f8ff66132c4558d0afcbef3e5979c7e9a88685d197aca474503e4"
+    },
+    {
+      "path": "evidence/design_lock.json",
+      "bytes": 2188,
+      "sha256": "f3aab79024aff2bbf09c1d955e3e07da08bceb435050c0f93612c5e7b18a243e"
+    },
+    {
+      "path": "evidence/ravel_stage0.py",
+      "bytes": 13741,
+      "sha256": "a52eb36a5a9ed740fb0567c64cd87124d4739f7a8c991e53739dad4e93cb8fcd"
+    },
+    {
+      "path": "evidence/test_source_only.py",
+      "bytes": 1921,
+      "sha256": "ca15604d9cbb331c4d08df67858fb6e4fe215586f52d82770ad554646aefbea7"
+    },
+    {
+      "path": "evidence/verify_source.py",
+      "bytes": 7269,
+      "sha256": "f8e42e90f810b94bb8995d8c26c5c3e1692586ef4adcb7171694fe59b0245d14"
+    },
+    {
+      "path": "test_audit.py",
+      "bytes": 3284,
+      "sha256": "46d1aff1c21de6f7955f0112c4ac379088dcbc7ddef8b86c25561969f4c36857"
+    },
+    {
+      "path": "verify_audit.py",
+      "bytes": 18513,
+      "sha256": "355aaaa6014522943fecabab44d584d50b5105bc6f7294323fc2fc54c4cb6a97"
+    }
+  ]
+}

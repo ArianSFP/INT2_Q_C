@@ -1,0 +1,29 @@
+{
+  "schema": "same-layer-expert-alignment-superoracle-design-v0",
+  "source": {
+    "repository": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "layer": 15,
+    "experts": [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120],
+    "roles": ["up", "down"],
+    "manifest_relpath": "agent_rd_structure_diag_cross_expert_sources.json",
+    "manifest_sha256": "4194ff0aa13e71e2c9631f6f2cfd145c5146edf9c6d287084197499872dff782"
+  },
+  "oracle": {
+    "target_rows": 768,
+    "row_values": 2048,
+    "reference_rows_per_target_role": 11520,
+    "mapping": "each target Up/Down row independently chooses any row from all fifteen other experts",
+    "coefficient": "one exact FP64 slope and intercept per target role-row",
+    "legality": "deliberately illegal many-to-one, role-inconsistent, uncharged reference/mapping/coefficients",
+    "float32_search_with_exact_fp64_selected_replay": true,
+    "absolute_capture_cushion": 0.001
+  },
+  "decision": {
+    "existing_composite_missing_s_bpw": 0.11356063457,
+    "required_up_down_capture_if_sole_missing_module": 0.14566207552117194,
+    "kill": "pooled exact selected capture plus 0.001 absolute numerical/ranking cushion is below requirement",
+    "promote": "otherwise require matched controls, legal joint-role assignment, physical rate and read ledger"
+  },
+  "claim_boundary": "A kill rejects same-layer cross-expert Up/Down neuron ancestry as the sole module closing the existing composite gap. Gate-role ancestry, arbitrary nonlinear shared decoders, and functional activation-weighted compression remain outside scope."
+}

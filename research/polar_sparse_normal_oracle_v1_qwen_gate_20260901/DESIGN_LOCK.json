@@ -1,0 +1,52 @@
+{
+  "schema": "polar_sparse_normal_qwen_gate_design_lock_v1",
+  "status": "LOCKED_READY_NOT_EXECUTED",
+  "date_utc": "2026-09-01",
+  "source_artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 2668,
+      "sha256": "a8225acd019700d8c2f3f3a2e9bca03e35ed505329642660dbcf08c8aec40be5"
+    },
+    {
+      "path": "gate_protocol.json",
+      "bytes": 3377,
+      "sha256": "b40c97acf3db68a5f54dbd5cc0d27523c4f20992e526af1d439f689afd8c95e8"
+    },
+    {
+      "path": "run_gate.py",
+      "bytes": 31442,
+      "sha256": "e5540d0e9beabb984af15ab569aceac8a29cc0be91286e595d51bfafa3704f08"
+    },
+    {
+      "path": "verify_result.py",
+      "bytes": 12544,
+      "sha256": "fe7e13bc7403f915b2a618006fe3fb909a3bd8c97df59332b5635360b9e447da"
+    }
+  ],
+  "immutable_lineage": {
+    "source_only_manifest_sha256": "23a7566cf9ead5191c778a9dda30e880646a32d81357ff940182dc74e11bfe99",
+    "parent_normal_result_sha256": "e4fecac5f676d84739972bbf0e04467027aeae1356e62e1dc3cd2b84bff67026",
+    "parent_producer_sha256": "04d033319b4bbab037b48355e5f296274ae77b1c787ddcd2508e9b58948d265e",
+    "composite_result_sha256": "565e1eb2122f2e476c5bd81e4205eeb3e4cede6e6a51149e95944355199eb41c",
+    "source_lock_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23"
+  },
+  "frozen_decision": {
+    "target_F_maximum": 0.8,
+    "hard_value_bits_per_selected_coordinate": 1,
+    "continuous_selected_value_error": 0,
+    "support_bits": "exact ceil(log2 binomial(n,k))",
+    "numeric_allowance_distortion": 1e-9,
+    "coordinate_kill_from": "exact arbitrary-coordinate curve dual only",
+    "broad_group_kill_from": "gross containing relaxation dual only",
+    "fixed_prefix_duals": "family-specific decisions only",
+    "controls_decision_eligible": false,
+    "finite_codec_execution": false
+  },
+  "scope": {
+    "authenticated_matrices": 18,
+    "fresh_validation_access": false,
+    "router_access": false,
+    "gpu_job_active_at_lock": false
+  }
+}

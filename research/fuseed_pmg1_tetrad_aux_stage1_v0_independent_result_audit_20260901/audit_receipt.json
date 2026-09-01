@@ -1,0 +1,54 @@
+{
+  "audit": "fuseed_pmg1_tetrad_aux_stage1_v0_independent_result_audit_20260901",
+  "canonical_unsigned_sha256": "391220489705698ad7fb06e599861acc54f1f40eab376e566e4d629d43f988f1",
+  "claim_scope": "Frozen auxiliary stage-1 development-panel result only; no stage-2, Gate, validation, pinned-panel, codec, compression, or target evidence.",
+  "date": "2026-09-01",
+  "disjoint_runpod_replay": {
+    "result_sha256": "233f4063885cec71805bc30ad58d034b3b9c5fdae1c93bdd49bae23d0a0a779d",
+    "semantic_comparison": "Exact after deleting only runtime.elapsed_seconds",
+    "source_access": {
+      "fresh_validation_files_opened": 0,
+      "gate_files_opened": 0,
+      "old_validation_files_opened": 0,
+      "pinned_panel_files_opened": 0,
+      "selection_up_down_files_opened": 23
+    },
+    "status": "PASS"
+  },
+  "external_bindings": {
+    "plan_module_sha256": "adcf1d8153c2a8a5048153edfa90f8f12d959d1d09e1cf7524359a532da950d1",
+    "source_manifest_sha256": "4194ff0aa13e71e2c9631f6f2cfd145c5146edf9c6d287084197499872dff782",
+    "source_files_held_opened_hashed": 23
+  },
+  "findings": {
+    "conditional_non_evidence_claims_correct": true,
+    "decoded_fp16_fits_reproduced": 23,
+    "direct_counter_mappings_checked": 4096,
+    "fit_keys": 2048,
+    "fit_score_intersection": 0,
+    "no_stage2_or_pinned_access": true,
+    "score_keys": 2048
+  },
+  "independent_verifier": {
+    "audit_manifest_binding": "External SHA-256 pin required by verifier and release handoff",
+    "execution_status": "End-to-end verifier not rerun locally because the 23 source artifacts are absent; non-source logic and check-count calibration passed, and the disjoint RunPod replay opened/hash-checked all 23 sources",
+    "expected_checks": 21039,
+    "observed_calibration_checks": 21039,
+    "status": "PASS"
+  },
+  "producer": {
+    "closure_files": 3,
+    "result_sha256": "054997a32b4ed4727ea9dcf3b9d77258bad6550ff7739978bb75d7c5e26e0661",
+    "script_sha256": "93cf776286d7e0cd333e46f80bb721f817dc7760d6bfb60151d97a62bb666cee"
+  },
+  "recomputed": {
+    "centered_capture": -0.03655885228971001,
+    "control_mean_raw_source_capture": -0.06206742398012735,
+    "decision": "POLICY_REJECT_INCONCLUSIVE_FAR_SHORT_STOP_BEFORE_STAGE2",
+    "jackknife_standard_error": 0.015776367361849366,
+    "raw_minus_control_capture": 0.01629215562732969,
+    "raw_source_capture": -0.04577526835279766,
+    "three_se_upper": 0.0015538337327504342
+  },
+  "verdict": "PASS"
+}

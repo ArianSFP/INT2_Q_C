@@ -1,0 +1,38 @@
+{
+  "schema": "free-order-swiglu-path-v1-independent-source-audit-replay-v1",
+  "status": "REPLAYED_SOURCE_ONLY_BLOCK_CONFIRMED",
+  "scratch_root": "/workspace/INT2__compression/source_only_audits/free_order_v1_20260901_audit_a91c7f2e",
+  "scratch_realpath_verified_within": "/workspace/INT2__compression/source_only_audits",
+  "platform": {
+    "kernel": "Linux 6.8.0-107-generic x86_64 GNU/Linux",
+    "python": "Python 3.12.3"
+  },
+  "commands": [
+    "/usr/bin/python3 -B /workspace/INT2__compression/source_only_audits/free_order_v1_20260901_audit_a91c7f2e/free_order_swiglu_path_oracle_v1/test_source_only.py",
+    "/usr/bin/python3 -B /workspace/INT2__compression/source_only_audits/free_order_v1_20260901_audit_a91c7f2e/free_order_swiglu_path_oracle_v1/verify_package.py",
+    "/usr/bin/python3 -B /workspace/INT2__compression/source_only_audits/free_order_v1_20260901_audit_a91c7f2e/free_order_swiglu_path_oracle_v1_independent_source_audit_20260901/verify_audit.py"
+  ],
+  "producer_source_tests": {
+    "exit_code": 0,
+    "tests_run": 11,
+    "passed": 11,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "elapsed_seconds_reported": 0.028
+  },
+  "producer_source_verifier": {
+    "exit_code": 0,
+    "status": "PASS",
+    "checks": 128,
+    "manifest_sha256": "e19acb3c8e888dddb8ae296f05b7541ba9db47e017619aea0c9dd341f0c5b3f4"
+  },
+  "independent_audit_verifier": {
+    "exit_code": 0,
+    "status": "BLOCK_CONFIRMED",
+    "checks": 254
+  },
+  "remote_producer_hashes_match_local": true,
+  "producer_tree_unchanged_after_replay": true,
+  "access_scope": "Only the copied seven-file source package and the independent audit artifact were read. No binding path, tensor, model, validation data, CuPy, CUDA, or GPU was accessed."
+}

@@ -1,0 +1,26 @@
+{
+  "closure": [
+    "README.md",
+    "SOURCE_MANIFEST.json",
+    "audit_receipt.json",
+    "verify_audit.py"
+  ],
+  "files": [
+    {
+      "bytes": 4229,
+      "path": "README.md",
+      "sha256": "5f80faf8a4d43b5b1b3511e0cd718f1bf95a820c8bb4624af2d8361e27c19e17"
+    },
+    {
+      "bytes": 1253,
+      "path": "audit_receipt.json",
+      "sha256": "2c8330dacabc1141df0f9c14e939c96965c9860e4aaab86b293003f12cf7c9e1"
+    },
+    {
+      "bytes": 14852,
+      "path": "verify_audit.py",
+      "sha256": "96eb6b0a674fd8ec71cd674598e0fb2850b8b74f6cf937eb4520ebe6aed56702"
+    }
+  ],
+  "schema": "meta-codebook-stage0-independent-result-audit-source-manifest-v1"
+}

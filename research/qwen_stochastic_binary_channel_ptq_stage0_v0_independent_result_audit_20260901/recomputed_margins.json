@@ -1,0 +1,75 @@
+{
+  "schema": "qsb_ptq_v0_independent_rate_margin_recomputation_v0",
+  "result_sha256": "954cf10187baca348ab1d134be8362efe7d79ca59d8592bb8e75be742ff1e6df",
+  "gate_definition": {
+    "fit_target_fraction": 0.97,
+    "execution_limit_fraction": 0.97,
+    "physical_reservoir_fraction": 1.0,
+    "positive_limit_margin_means_at_or_below_0p97": true,
+    "positive_physical_margin_means_no_physical_overflow": true
+  },
+  "cells": [
+    {
+      "cell": "QSB215",
+      "physical_reservoir_bits_per_expert": 10092544,
+      "execution_limit_bits_per_expert": 9789767.68,
+      "reported_fit_mean_total_bits": 9789767.680000009,
+      "experts_above_execution_limit": [2, 5],
+      "experts_above_physical_reservoir": [],
+      "worst_execution_limit_excess_bits": 1962.4996413793415,
+      "minimum_physical_reservoir_margin_bits": 300813.82035862096,
+      "minimum_physical_reservoir_margin_percent": 2.9805549558032243,
+      "experts": [
+        {"expert": 0, "ideal_kl_bits": 9789339.882724592, "execution_limit_margin_bits": 427.7972754072398, "physical_reservoir_margin_bits": 303204.11727540754, "physical_reservoir_margin_percent": 3.0042387457058153},
+        {"expert": 1, "ideal_kl_bits": 9788995.517621579, "execution_limit_margin_bits": 772.1623784210533, "physical_reservoir_margin_bits": 303548.48237842135, "physical_reservoir_margin_percent": 3.007650820035279},
+        {"expert": 2, "ideal_kl_bits": 9791730.179641379, "execution_limit_margin_bits": -1962.4996413793415, "physical_reservoir_margin_bits": 300813.82035862096, "physical_reservoir_margin_percent": 2.9805549558032243},
+        {"expert": 3, "ideal_kl_bits": 9787479.70286256, "execution_limit_margin_bits": 2287.977137438953, "physical_reservoir_margin_bits": 305064.29713743925, "physical_reservoir_margin_percent": 3.022669974363642},
+        {"expert": 4, "ideal_kl_bits": 9788232.977634056, "execution_limit_margin_bits": 1534.702365944162, "physical_reservoir_margin_bits": 304311.02236594446, "physical_reservoir_margin_percent": 3.015206298490692},
+        {"expert": 5, "ideal_kl_bits": 9790778.18518267, "execution_limit_margin_bits": -1010.5051826704293, "physical_reservoir_margin_bits": 301765.81481732987, "physical_reservoir_margin_percent": 2.989987606864333}
+      ]
+    },
+    {
+      "cell": "QSB230",
+      "physical_reservoir_bits_per_expert": 10813440,
+      "execution_limit_bits_per_expert": 10489036.8,
+      "reported_fit_mean_total_bits": 10489036.8,
+      "experts_above_execution_limit": [2, 5],
+      "experts_above_physical_reservoir": [],
+      "worst_execution_limit_excess_bits": 1634.668078014627,
+      "minimum_physical_reservoir_margin_bits": 322768.5319219865,
+      "minimum_physical_reservoir_margin_percent": 2.9848829967335693,
+      "experts": [
+        {"expert": 0, "ideal_kl_bits": 10488523.139613817, "execution_limit_margin_bits": 513.6603861823678, "physical_reservoir_margin_bits": 324916.8603861835, "physical_reservoir_margin_percent": 3.0047502033227493},
+        {"expert": 1, "ideal_kl_bits": 10488503.44781512, "execution_limit_margin_bits": 533.3521848786622, "physical_reservoir_margin_bits": 324936.5521848798, "physical_reservoir_margin_percent": 3.0049323081727906},
+        {"expert": 2, "ideal_kl_bits": 10490671.468078014, "execution_limit_margin_bits": -1634.668078014627, "physical_reservoir_margin_bits": 322768.5319219865, "physical_reservoir_margin_percent": 2.9848829967335693},
+        {"expert": 3, "ideal_kl_bits": 10487229.769466527, "execution_limit_margin_bits": 1807.030533472076, "physical_reservoir_margin_bits": 326210.2305334732, "physical_reservoir_margin_percent": 3.01671096832713},
+        {"expert": 4, "ideal_kl_bits": 10487915.79230817, "execution_limit_margin_bits": 1121.007691828534, "physical_reservoir_margin_bits": 325524.20769182965, "physical_reservoir_margin_percent": 3.010366799943678},
+        {"expert": 5, "ideal_kl_bits": 10489962.406786945, "execution_limit_margin_bits": -925.6067869458348, "physical_reservoir_margin_bits": 323477.5932130553, "physical_reservoir_margin_percent": 2.9914402189595104}
+      ]
+    },
+    {
+      "cell": "QSB250",
+      "physical_reservoir_bits_per_expert": 11730944,
+      "execution_limit_bits_per_expert": 11379015.68,
+      "reported_fit_mean_total_bits": 11379015.68,
+      "experts_above_execution_limit": [1, 2, 5],
+      "experts_above_physical_reservoir": [],
+      "worst_execution_limit_excess_bits": 892.4479656107724,
+      "minimum_physical_reservoir_margin_bits": 351035.8720343895,
+      "minimum_physical_reservoir_margin_percent": 2.992392360191895,
+      "experts": [
+        {"expert": 0, "ideal_kl_bits": 11378385.904213648, "execution_limit_margin_bits": 629.7757863514125, "physical_reservoir_margin_bits": 352558.0957863517, "physical_reservoir_margin_percent": 3.0053685004919615},
+        {"expert": 1, "ideal_kl_bits": 11379323.760701092, "execution_limit_margin_bits": -308.0807010922581, "physical_reservoir_margin_bits": 351620.23929890804, "physical_reservoir_margin_percent": 2.997373777412185},
+        {"expert": 2, "ideal_kl_bits": 11379736.073453821, "execution_limit_margin_bits": -720.3934538215399, "physical_reservoir_margin_bits": 351207.92654617876, "physical_reservoir_margin_percent": 2.9938590325397407},
+        {"expert": 3, "ideal_kl_bits": 11378297.212048214, "execution_limit_margin_bits": 718.467951785773, "physical_reservoir_margin_bits": 352646.7879517861, "physical_reservoir_margin_percent": 3.0061245535890895},
+        {"expert": 4, "ideal_kl_bits": 11378925.06233253, "execution_limit_margin_bits": 90.61766747012734, "physical_reservoir_margin_bits": 352018.9376674704, "physical_reservoir_margin_percent": 3.000772466968306},
+        {"expert": 5, "ideal_kl_bits": 11379908.12796561, "execution_limit_margin_bits": -892.4479656107724, "physical_reservoir_margin_bits": 351035.8720343895, "physical_reservoir_margin_percent": 2.992392360191895}
+      ]
+    }
+  ],
+  "verdict": {
+    "v0_preregistered_policy_rejection": "PASS",
+    "physical_reservoir_overflow_claim": "BLOCK",
+    "reason": "some experts exceed the frozen 0.97 policy ceiling, but all 18 retain positive margins of approximately 2.98% to 3.02% of the true physical payload reservoir"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "kbvq_idre_raw_mse_gate_source_receipt_v0",
+  "verdict": "SEALED_SOURCE_ONLY_NO_GPU_OR_QWEN_PAYLOAD_REPLAY",
+  "sealed_date": "2026-09-01",
+  "package_file_count": 8,
+  "scope": "primary-source architecture audit, authenticated aggregate sufficient statistic, exact FP16/header/page ledger, bounded two-role Gaussian waterfill, interlocked CuPy per-mode replay source",
+  "package_sources": {
+    "README.md": "bce9b0864a5116262a01f908da69392572a6bc90a197b519c78bd6f2d8f52222",
+    "design_lock.json": "44ad713e605c7103ffceb089714f6b4ef0c847619efa2511f93647a7e492bbdd",
+    "prior_evidence.json": "dacf5e0e9ca1f06e7e93a2047b36d9e4a61b855b6ddd9e43e5c7608d00e4d2b6",
+    "stage0_gate.py": "f4133e4ea3aacdd1f91a4ccda0054655c7989c5d66d8bfe22cc707072fcd25ec",
+    "test_source_only.py": "cfd8386393764823e8a1bcb4975ba79ddc208c855099c2bc6f29e925010d0e20",
+    "verify_design.py": "b52c62f868aa065643efb732e9e98142a104d9750ec41622bcc1108679f4f9a3"
+  },
+  "external_aggregate_dependencies": {
+    "shared_subspace_result_sha256": "6a756c26e05926a2468bcc2a20086d7efbb2273e0f078a9294c5c002f2f7734f",
+    "shared_subspace_verification_sha256": "e8791db74991bbc8e0cbede2c43252933aa57ee1f042e9590deb2b95f545c0e5",
+    "shared_subspace_verification_status": "PASS"
+  },
+  "access": {
+    "numeric_qwen_payload_files_opened": 0,
+    "new_qwen_tensor_manifests_opened": 0,
+    "gpu_jobs_submitted": 0,
+    "cupy_imports_executed": 0,
+    "compressed_weight_artifacts_created": 0,
+    "aggregate_result_documents_read": 2,
+    "primary_method_sources_consulted": 2
+  },
+  "execution": {
+    "default_aggregate_replay_runs": 1,
+    "independent_payload_replay_runs": 0,
+    "standard_library_verifier_runs": 1,
+    "standard_library_test_runs": 1,
+    "reason": "The source verifier, tests and aggregate-only replay use no GPU or numeric Qwen payload. The coordinated CuPy/payload replay remains unexecuted."
+  },
+  "bounded_result": {
+    "decision": "HARD_KILL_BOUNDED_TWO_ROLE_GAUSSIAN_IDRE_CELL",
+    "best_mode": "role_specific",
+    "best_rank": 8,
+    "best_actual_bpw": 2.5,
+    "best_F": 1.068941699521917,
+    "best_s_bpw": -0.048091585039837736,
+    "best_cold_page_amplification": 1.075,
+    "favorable_grant": "zero FP16 factor rounding error after literal side charge"
+  },
+  "claim_boundary": "The bounded two-role waterfill kill is sealed; exact per-mode residual waterfill is implemented but unexecuted. Free capture is not called physical F. No gain is added to or claimed disjoint from the existing composite."
+}

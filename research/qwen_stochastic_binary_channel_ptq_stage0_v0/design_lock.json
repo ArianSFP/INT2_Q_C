@@ -1,0 +1,255 @@
+{
+  "schema": "qwen_stochastic_binary_channel_ptq_stage0_design_v0",
+  "status": "FROZEN_SOURCE_ONLY_NO_PAYLOAD_OR_EXECUTION_AUTHORITY",
+  "name": "QSB-PTQ-v0",
+  "paper_inspiration": {
+    "citation": "E. Ozyilkan, S. M. Sriramu, E. Erkip, A. B. Wagner, and J. Balle, SoftBinary Coding, arXiv:2606.29578v1, ICML 2026",
+    "primary_url": "https://arxiv.org/abs/2606.29578v1",
+    "borrowed_ideas_only": [
+      "stochastic Bernoulli latent channels",
+      "communication by binary channel simulation rather than deterministic scalar quantization",
+      "shared randomness and a polarized binary transform",
+      "separation of training mutual information from operational serialized length"
+    ],
+    "not_claimed": [
+      "This package is not the paper's implementation or topology.",
+      "No theorem from the paper establishes finite-block rate optimality for this package.",
+      "The stage-0 mutual-information oracle is not a serialized channel-simulation result.",
+      "No paper Gaussian or TCQ curve is imported as evidence."
+    ]
+  },
+  "objective": {
+    "score": "F = relative_mse * 2^(2*physical_serialized_bpw)",
+    "required_F_max": 0.8,
+    "required_s_min_bpw": 0.16096404744368115,
+    "physical_rate_interval_bpw": [
+      2.15,
+      2.5
+    ],
+    "cold_page_read_max_exclusive": 2.0,
+    "panel_values": 28311552,
+    "source_energy_denominator": "all authenticated values in the scored expert fold",
+    "padding_and_zero_bytes_charged": true
+  },
+  "panel": {
+    "binding_file": "panel_bindings.json",
+    "plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "plan_internal_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "experts": 6,
+    "roles_per_expert": [
+      "gate",
+      "up",
+      "down_transposed"
+    ],
+    "matrices": 18,
+    "values_per_expert": 4718592,
+    "whole_expert_split": {
+      "fit_expert_ordinals": [
+        0,
+        2,
+        4
+      ],
+      "calibration_expert_ordinals": [
+        1
+      ],
+      "closed_score_expert_ordinals": [
+        3,
+        5
+      ]
+    },
+    "stage0_dominance_oracle_scope": "all six experts; score-fit per-matrix decoder is deliberately source-leaking and may not be reported as held-out performance",
+    "future_training_rule": "fit only on fit experts, choose frozen restart on calibration expert, evaluate closed score experts once"
+  },
+  "architecture": {
+    "family": "post-training stochastic-binary channel simulation with a nonlinear interaction decoder",
+    "source_block_values": 64,
+    "blocks_per_matrix": 24576,
+    "blocks_per_expert": 73728,
+    "bernoulli_latents_per_block": 160,
+    "channel_inputs_per_expert": 11796480,
+    "polar_segment_log2": 18,
+    "polar_segment_channels": 262144,
+    "polar_segments_per_expert": 45,
+    "encoder": {
+      "block_normalization": "subtract block mean and divide by sqrt(centered_mean_square + 2^-24)",
+      "logits": "alpha_cell times a frozen 160x64 signed projection divided by sqrt(64)",
+      "projection_seed_u64": 14592251004518932763,
+      "probability": "q_j(1|x)=sigmoid(logit_j)",
+      "prior": "factorized Bernoulli marginal estimated on fit experts only",
+      "alpha_selection": "48-step deterministic bisection on fit experts only to target 97% of the cell's payload reservoir in ideal KL bits"
+    },
+    "shared_randomness": {
+      "candidate_seeds_u64": [
+        16443857425729824865,
+        6983438078262162903,
+        11299122902407625677
+      ],
+      "operational_selection": "one seed chosen on calibration and serialized; stage-0 oracle grants the best seed separately for every matrix",
+      "prg": "PCG64 with canonical matrix/block/latent order",
+      "all_seed_material_serialized": true
+    },
+    "decoder": {
+      "feature_count": 256,
+      "raw_bipolar_features": 160,
+      "pairwise_product_features": 96,
+      "pair_schedule_seed_u64": 10058181636442808937,
+      "feature_definition": "phi(z)=[2z-1; (2z_a-1)(2z_b-1) for 96 frozen distinct pairs]",
+      "serialized_weight_shape": [
+        64,
+        256
+      ],
+      "serialized_weight_format": "signed Q7 int8",
+      "accumulator": "signed int32",
+      "bias_scale_and_output": "Q15 bias and a serialized power-of-two per-matrix scale; widen the integer result to binary64 and apply the scale exactly for scoring, with no output cast in the experiment",
+      "stage0_oracle": "unquantized FP64 intercept and 64x256 decoder fitted separately on each scored matrix, with the best of all three frozen shared-randomness seeds",
+      "dominance": "the exact binary64 reconstruction of the operational shared Q7 affine decoder and its one selected seed is a member of the per-matrix FP64/best-seed oracle family; any deployment cast is outside this experiment and cannot be used to reverse a kill"
+    },
+    "distinct_from_additive_vq": [
+      "There is no stored vector dictionary and no nearest-codeword index search.",
+      "The bit string is an output of source-conditioned Bernoulli channels reproduced by shared-randomness channel simulation.",
+      "Ninety-six multiplicative bit interactions make the decoder non-additive in latent bits.",
+      "No reconstruction is a sum of independently selected codebook vectors or residual stages.",
+      "The exponentially large reconstruction set is implicit in one shared finite decoder."
+    ]
+  },
+  "channel_simulation": {
+    "stage0_grant": "ideal communication at exact empirical sum KL with zero finite-block, probability-table, framing, or entropy-coder overhead",
+    "future_operational_transform": "18-level seeded permuted binary polar transform on each 2^18-channel segment",
+    "future_message": "XOR correction between source-conditioned and source-free polarized draws, compressed with one frozen integer range coder",
+    "future_decoder": "recover correction, reconstruct polarized bits with shared randomness, invert transform, apply finite decoder",
+    "reservoir_rule": "the actual prefix-framed message must fit the fixed expert payload reservoir; overflow rejects the cell and all unused bytes are zero padded and charged",
+    "no_rate_claim": "KL is an optimistic stage-0 rate oracle, not physical bpw; only a byte-emitted and independently decoded stage may report operational rate"
+  },
+  "global_packet_layout_bytes": {
+    "schema_hashes_crcs": 4096,
+    "decoder_q7_weights": 16384,
+    "bias_scale_prior_tables": 2048,
+    "polar_permutation_and_prg_seeds": 1024,
+    "integer_probability_tables_and_padding": 1024,
+    "total": 24576
+  },
+  "expert_header_bytes": 4096,
+  "rate_cells": [
+    {
+      "cell": "QSB215",
+      "expert_frame_pages": 309,
+      "expert_frame_bytes": 1265664,
+      "expert_payload_bytes": 1261568,
+      "expert_payload_bits": 10092544,
+      "container_bytes": 7618560,
+      "container_bits": 60948480,
+      "exact_physical_bpw_fraction": "155/72",
+      "exact_physical_bpw": 2.1527777777777777,
+      "exact_channel_payload_bpw_fraction": "77/36",
+      "exact_channel_payload_bpw": 2.138888888888889,
+      "exact_metadata_bpw_fraction": "1/72",
+      "cold_pages": 315,
+      "equal_share_pages": 310,
+      "cold_read_amplification_fraction": "63/62",
+      "cold_read_amplification": 1.0161290322580645,
+      "target_relative_mse": 0.04045652875579808,
+      "required_capture": 0.9595434712442019
+    },
+    {
+      "cell": "QSB230",
+      "expert_frame_pages": 331,
+      "expert_frame_bytes": 1355776,
+      "expert_payload_bytes": 1351680,
+      "expert_payload_bits": 10813440,
+      "container_bytes": 8159232,
+      "container_bits": 65273856,
+      "exact_physical_bpw_fraction": "83/36",
+      "exact_physical_bpw": 2.3055555555555554,
+      "exact_channel_payload_bpw_fraction": "55/24",
+      "exact_channel_payload_bpw": 2.2916666666666665,
+      "exact_metadata_bpw_fraction": "1/72",
+      "cold_pages": 337,
+      "equal_share_pages": 332,
+      "cold_read_amplification_fraction": "337/332",
+      "cold_read_amplification": 1.0150602409638554,
+      "target_relative_mse": 0.03273461437937435,
+      "required_capture": 0.9672653856206257
+    },
+    {
+      "cell": "QSB250",
+      "expert_frame_pages": 359,
+      "expert_frame_bytes": 1470464,
+      "expert_payload_bytes": 1466368,
+      "expert_payload_bits": 11730944,
+      "container_bytes": 8847360,
+      "container_bits": 70778880,
+      "exact_physical_bpw_fraction": "5/2",
+      "exact_physical_bpw": 2.5,
+      "exact_channel_payload_bpw_fraction": "179/72",
+      "exact_channel_payload_bpw": 2.486111111111111,
+      "exact_metadata_bpw_fraction": "1/72",
+      "cold_pages": 365,
+      "equal_share_pages": 360,
+      "cold_read_amplification_fraction": "73/72",
+      "cold_read_amplification": 1.0138888888888888,
+      "target_relative_mse": 0.025,
+      "required_capture": 0.975
+    }
+  ],
+  "stage0_protocol": {
+    "prepass": [
+      "hold, hash, BF16-decode and finite-check all 18 plan sources exactly once",
+      "compute source energies before scoring and authenticate canonical Gate/Up/Down-transposed geometry",
+      "estimate each cell alpha and Bernoulli prior from fit experts only"
+    ],
+    "rate_gate": "kill a cell if ideal expected KL for any expert exceeds 97% of that expert's fixed payload reservoir; no asymptotic theorem may waive overflow",
+    "dominance_oracle": "for every matrix and each frozen common-randomness seed, form 256 decoder features, fit the minimum-SSE FP64 decoder on that same matrix, and retain the best seed",
+    "early_control_gate": "rate overflow kills before any decoder oracle; the frozen favorable-oracle upper-three-SE gate kills before controls; no raw-SSE shortcut may bypass the frozen uncertainty rule",
+    "aggregate_gate": "hard-kill before controls when aggregate capture plus three delete-expert jackknife SE is below the cell's exact required capture",
+    "hard_kill_scope": "only the exact QSB-PTQ-v0 topology, three seeds, feature map, panel, and physical cell",
+    "survival": "an oracle survivor is not compression evidence and only authorizes matched controls and a separately audited operational implementation"
+  },
+  "matched_gaussian_controls": {
+    "replicates": 8,
+    "seeds_u64": [
+      5850734194750267521,
+      5850734194750267522,
+      5850734194750267523,
+      5850734194750267524,
+      5850734194750267525,
+      5850734194750267526,
+      5850734194750267527,
+      5850734194750267528
+    ],
+    "construction": "independent FP64 Gaussian values per matrix, then affine recenter/rescale to match that matrix's empirical mean and centered energy; the runner rejects mean error above max(2^-45, RMS*2^-40) or centered-energy relative error above 2^-40",
+    "identical_effort": "repeat fit-only alpha/prior selection, all three common-randomness seeds, and the same per-matrix source-fit oracle",
+    "execution_order": "controls run only for cells that survive the dominance aggregate gate",
+    "promotion_gate": "Qwen delete-expert lower-three-SE source-specific gain must exceed the strongest control upper-three-SE; every expert and role fold must be positive",
+    "interpretation": "diagnostic source-structure comparison only; the source-fit oracle can overfit and is not an operational Gaussian codec"
+  },
+  "comparison_semantics": {
+    "matched_gaussian_stage0": "empirical algorithm control using the same optimistic oracle; not operational and not a lower bound",
+    "future_operational_gaussian": "must emit and decode the exact QSB container on Gaussian controls before any operational claim",
+    "future_operational_tcq": "must use an independently implemented finite-state TCQ, emit its actual bytes, charge its own model/framing/padding, and report its measured rate; paper plots or textbook points are context only",
+    "shannon_gaussian_mse_limit": "D_G(R)=sigma^2*2^(-2R) is an asymptotic information-theoretic lower bound for a memoryless Gaussian source under MSE; it emits no bytes and is neither TCQ nor an empirical control",
+    "forbidden_claims": [
+      "Do not call a stage-0 oracle operational.",
+      "Do not call TCQ the Shannon limit.",
+      "Do not infer a Qwen win from a Gaussian or TCQ calibration.",
+      "Do not claim to beat Shannon from finite-sample oracle SSE.",
+      "Do not transfer the paper's Gaussian result to Qwen weights."
+    ]
+  },
+  "future_operational_requirements": [
+    "freeze and audit the exact integer polar transform, range coder, Q7 decoder and common-randomness generator",
+    "create the output container at an absent path and independently decode bytes only",
+    "reject any expert reservoir overflow and charge all padding",
+    "require absolute F upper confidence bound <= 0.8 on closed score experts",
+    "require source advantage over every matched control and positive expert/role folds",
+    "verify exact physical bpw and cold read from emitted byte offsets",
+    "obtain separate authorization before any fresh-validation or one-shot pinned execution"
+  ],
+  "authority": {
+    "may_open_numeric_payloads": false,
+    "may_submit_gpu_job": false,
+    "may_open_fresh_validation": false,
+    "may_emit_compressed_weights": false,
+    "network_calls": 0,
+    "next_action": "independent source audit, then coordinated RunPod stage-0 only"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "polar_sparse_normal_source_package_manifest_v1",
+  "status": "SEALED_SOURCE_ONLY_NO_AUTHORITY",
+  "artifact_count": 6,
+  "artifacts": [
+    {"path": "README.md", "bytes": 7774, "sha256": "490589fc37b56c9e8509cac62199d640712d7b97f899c3e998f9cc1240085bc6"},
+    {"path": "cupy_gate_proposal.py", "bytes": 8719, "sha256": "80b9608aaadaddc34c98fa70485b3e1de25074bdd423fdb211fa4d9d8d22bbee"},
+    {"path": "dual_bound.py", "bytes": 6327, "sha256": "3e0caf49e5c36d6657dff8a68d3163c8841c7bec2495016957ddb0acd03ccd3b"},
+    {"path": "protocol.json", "bytes": 4761, "sha256": "d519f217263823085e39b3b291863f123603fcb540ba912ffe25c0d13bfacf43"},
+    {"path": "threshold_math.py", "bytes": 10494, "sha256": "4d217799e3cd6a0749b1754806b50d5060320bb1b99016d180508d960c02df9c"},
+    {"path": "verify_source.py", "bytes": 9362, "sha256": "f67ab122d5941d4feb19751453e1a54effaf9b9282c38e27a5b4f66b487b6a0a"}
+  ],
+  "authorization": "NONE"
+}

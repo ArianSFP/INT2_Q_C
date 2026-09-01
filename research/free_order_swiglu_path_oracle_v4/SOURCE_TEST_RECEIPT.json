@@ -1,0 +1,52 @@
+{
+  "schema": "free_order_swiglu_path_v4_source_test_receipt_v1",
+  "status": "PASS_SOURCE_ONLY_HOSTILE_CONTRACT_TESTS_AUTHORIZES_NOTHING",
+  "executed_utc": "2026-09-01T17:16:53Z",
+  "platform": "Windows Python 3.12.13 source-only QA",
+  "test_interpreter_is_deployment_identity": false,
+  "source_under_test": {
+    "bootstrap_v4_py_sha256": "46e91513325647de168cf0e0e39c5ab60988bd45cfcd2f8a4d6bb1a5c2d33544",
+    "launch_contract_py_sha256": "e331197f0e09768d2c85b2778c559bdd87a288c582981915d2dae2b2ca95aec6",
+    "native_launcher_contract_json_sha256": "fcd4cb53e7f01927f7ae3e9d71c99e27e90783786a43b5e15d76e4a4e1ed0811",
+    "test_source_only_py_sha256": "7ec0f7499e62bbcc3795aa424ada3de1e0bc1aae9d729dea66b15e079518330f",
+    "verify_package_py_sha256": "5a2c0670b914841fa384937bfa68db7bcf1262e558d3ab06269cb70cef513c14"
+  },
+  "checks": {
+    "standard_library_tests_run": 18,
+    "standard_library_tests_passed": 18,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "powershell_source_checks": 44,
+    "sealed_package_verifier_checks": 105
+  },
+  "hostile_cases": {
+    "bootstrap_substitution_before_execution": "PASS_REJECTED",
+    "native_launcher_substitution": "PASS_REJECTED",
+    "external_launcher_pin_mismatch": "PASS_REJECTED",
+    "symlink_or_reparse_launcher": "PASS_REJECTED_DECLARATION",
+    "generic_python_launcher": "PASS_REJECTED_DECLARATION",
+    "ordinary_mutable_venv": "PASS_REJECTED_DECLARATION",
+    "runtime_not_authenticated_before_python_startup": "PASS_REJECTED",
+    "mutable_runtime_image": "PASS_REJECTED_DECLARATION",
+    "pre_startup_encodings_substitution": "PASS_REJECTED",
+    "missing_pre_startup_encodings": "PASS_REJECTED",
+    "runtime_member_link": "PASS_REJECTED_DECLARATION",
+    "python_moved_before_runtime_authentication": "PASS_REJECTED"
+  },
+  "zero_access_ledger": {
+    "model_or_qwen_paths_traversed": 0,
+    "model_or_qwen_payload_files_opened": 0,
+    "pinned_or_validation_files_opened": 0,
+    "third_party_imports": 0,
+    "cupy_imports": 0,
+    "cuda_calls": 0,
+    "gpu_operations": 0,
+    "network_operations": 0,
+    "calibration_runs": 0,
+    "deployment_runs": 0,
+    "authorizations_issued": 0,
+    "v3_or_audit_files_modified": 0
+  },
+  "authorization": "NONE; QA PASS does not supply a native launcher, immutable interpreter runtime, model access, calibration, deployment, GPU, or production authority"
+}

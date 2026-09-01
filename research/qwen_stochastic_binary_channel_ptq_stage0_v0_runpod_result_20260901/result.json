@@ -1,0 +1,245 @@
+{
+  "access": {
+    "authenticated_panel_sources_opened": 18,
+    "compressed_outputs_created": 0,
+    "fresh_validation_files_opened": 0,
+    "network_operations": 0
+  },
+  "bindings": {
+    "design_lock_sha256": "67d6a78d1b45d011ad9707f1484970346fb0070cbd7be8cbe0c7e6653c027aae",
+    "panel_bindings_sha256": "d3022a67a483ab84660cc67e9e141703e5d350e9c850a9e949f85e61224e6886",
+    "plan_internal_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "sources": [
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 0,
+        "relative_path": "sources/model.layers.5.mlp.experts.18.gate_proj.weight.bf16.bin",
+        "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 1,
+        "relative_path": "sources/model.layers.5.mlp.experts.18.up_proj.weight.bf16.bin",
+        "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 2,
+        "relative_path": "sources/model.layers.5.mlp.experts.18.down_proj.weight.bf16.bin",
+        "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 3,
+        "relative_path": "sources/model.layers.12.mlp.experts.7.gate_proj.weight.bf16.bin",
+        "sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 4,
+        "relative_path": "sources/model.layers.12.mlp.experts.7.up_proj.weight.bf16.bin",
+        "sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 5,
+        "relative_path": "sources/model.layers.12.mlp.experts.7.down_proj.weight.bf16.bin",
+        "sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 6,
+        "relative_path": "sources/model.layers.18.mlp.experts.20.gate_proj.weight.bf16.bin",
+        "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 7,
+        "relative_path": "sources/model.layers.18.mlp.experts.20.up_proj.weight.bf16.bin",
+        "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 8,
+        "relative_path": "sources/model.layers.18.mlp.experts.20.down_proj.weight.bf16.bin",
+        "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 9,
+        "relative_path": "sources/model.layers.28.mlp.experts.83.gate_proj.weight.bf16.bin",
+        "sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 10,
+        "relative_path": "sources/model.layers.28.mlp.experts.83.up_proj.weight.bf16.bin",
+        "sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 11,
+        "relative_path": "sources/model.layers.28.mlp.experts.83.down_proj.weight.bf16.bin",
+        "sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 12,
+        "relative_path": "sources/model.layers.36.mlp.experts.76.gate_proj.weight.bf16.bin",
+        "sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 13,
+        "relative_path": "sources/model.layers.36.mlp.experts.76.up_proj.weight.bf16.bin",
+        "sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 14,
+        "relative_path": "sources/model.layers.36.mlp.experts.76.down_proj.weight.bf16.bin",
+        "sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 15,
+        "relative_path": "sources/model.layers.45.mlp.experts.41.gate_proj.weight.bf16.bin",
+        "sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 16,
+        "relative_path": "sources/model.layers.45.mlp.experts.41.up_proj.weight.bf16.bin",
+        "sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939"
+      },
+      {
+        "bytes": 3145728,
+        "matrix_ordinal": 17,
+        "relative_path": "sources/model.layers.45.mlp.experts.41.down_proj.weight.bf16.bin",
+        "sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349"
+      }
+    ],
+    "stage0_script_sha256": "ee671293ec6e608d7841e09406bdb30e02f23ae3917798f2fe65d435e5447b06"
+  },
+  "cells": [
+    {
+      "alpha": 10.812913820763356,
+      "cell": {
+        "cell": "QSB215",
+        "cold_read_amplification": 1.0161290322580645,
+        "container_bytes": 7618560,
+        "metadata_bpw": 0.013888888888888888,
+        "pages": 309,
+        "payload_bpw": 2.138888888888889,
+        "payload_bytes_per_expert": 1261568,
+        "physical_bpw": 2.1527777777777777
+      },
+      "control_gate": {
+        "status": "NOT_RUN_ORACLE_DID_NOT_SURVIVE"
+      },
+      "fit_mean_ideal_kl_bits_per_block": 132.78222222222234,
+      "matched_gaussian_controls": [],
+      "prior_sha256_f64le": "ceb7ea6ca75f911321f1630502f24e241f3e7493eb7095f9b7dc7b034a7d7ccf",
+      "qwen_oracle": {
+        "ideal_kl_bits_by_expert": [
+          9789339.882724592,
+          9788995.517621579,
+          9791730.179641379,
+          9787479.70286256,
+          9788232.977634056,
+          9790778.18518267
+        ],
+        "reservoir_bits_by_expert": 10092544,
+        "status": "HARD_KILL_IDEAL_KL_EXCEEDS_FROZEN_RESERVOIR"
+      }
+    },
+    {
+      "alpha": 16.772898539515268,
+      "cell": {
+        "cell": "QSB230",
+        "cold_read_amplification": 1.0150602409638554,
+        "container_bytes": 8159232,
+        "metadata_bpw": 0.013888888888888888,
+        "pages": 331,
+        "payload_bpw": 2.2916666666666665,
+        "payload_bytes_per_expert": 1351680,
+        "physical_bpw": 2.3055555555555554
+      },
+      "control_gate": {
+        "status": "NOT_RUN_ORACLE_DID_NOT_SURVIVE"
+      },
+      "fit_mean_ideal_kl_bits_per_block": 142.26666666666665,
+      "matched_gaussian_controls": [],
+      "prior_sha256_f64le": "3c47199709b31b29dd21e45a9efacdd25b701f92069ecb49d2e95a5c6162a212",
+      "qwen_oracle": {
+        "ideal_kl_bits_by_expert": [
+          10488523.139613817,
+          10488503.44781512,
+          10490671.468078014,
+          10487229.769466527,
+          10487915.79230817,
+          10489962.406786945
+        ],
+        "reservoir_bits_by_expert": 10813440,
+        "status": "HARD_KILL_IDEAL_KL_EXCEEDS_FROZEN_RESERVOIR"
+      }
+    },
+    {
+      "alpha": 52.91942196214097,
+      "cell": {
+        "cell": "QSB250",
+        "cold_read_amplification": 1.0138888888888888,
+        "container_bytes": 8847360,
+        "metadata_bpw": 0.013888888888888888,
+        "pages": 359,
+        "payload_bpw": 2.486111111111111,
+        "payload_bytes_per_expert": 1466368,
+        "physical_bpw": 2.5
+      },
+      "control_gate": {
+        "status": "NOT_RUN_ORACLE_DID_NOT_SURVIVE"
+      },
+      "fit_mean_ideal_kl_bits_per_block": 154.33777777777777,
+      "matched_gaussian_controls": [],
+      "prior_sha256_f64le": "2ebc1a2b2785946fc101e54452e6294a560a498991000d8dbe36ce873a5cfa07",
+      "qwen_oracle": {
+        "ideal_kl_bits_by_expert": [
+          11378385.904213648,
+          11379323.760701092,
+          11379736.073453821,
+          11378297.212048214,
+          11378925.06233253,
+          11379908.12796561
+        ],
+        "reservoir_bits_by_expert": 11730944,
+        "status": "HARD_KILL_IDEAL_KL_EXCEEDS_FROZEN_RESERVOIR"
+      }
+    }
+  ],
+  "claim_boundary": "Optimistic source-leaking stage-0 topology bound only; not a serialized channel simulator, operational Gaussian/TCQ result, Shannon-limit result, compressed artifact, or validation result.",
+  "execution": {
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "elapsed_seconds": 3.6878926753997803,
+    "numpy": "2.5.2",
+    "python": "3.12.3"
+  },
+  "fixed_splits": {
+    "calibration_experts": [
+      1
+    ],
+    "closed_score_experts": [
+      3,
+      5
+    ],
+    "fit_experts": [
+      0,
+      2,
+      4
+    ]
+  },
+  "schema": "qwen_stochastic_binary_channel_ptq_stage0_result_v0",
+  "status": "POLICY_REJECT_ALL_RATE_CELLS"
+}

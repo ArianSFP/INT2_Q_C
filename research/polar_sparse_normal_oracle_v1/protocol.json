@@ -1,0 +1,115 @@
+{
+  "schema": "polar_sparse_normal_oracle_protocol_v1",
+  "status": "SOURCE_ONLY_NO_TENSOR_OR_GPU_AUTHORITY",
+  "lineage": {
+    "parent_result": "../polar_normal_predictor/result.json",
+    "parent_result_sha256": "e4fecac5f676d84739972bbf0e04467027aeae1356e62e1dc3cd2b84bff67026",
+    "parent_decision": "KILL_POLAR_NORMAL_PREDICTOR_BRANCH",
+    "overrides_parent_kill": false
+  },
+  "objective": {
+    "physical_rate_bpw": 2.5,
+    "target_F_maximum": 0.8,
+    "target_relative_mse_maximum": 0.025,
+    "maximum_cold_read_amplification": 2.0,
+    "preferred_logical_read_amplification": 1.0
+  },
+  "geometry": {
+    "matrices": 18,
+    "experts": 6,
+    "roles_per_expert": 3,
+    "matrix_shape": [768, 2048],
+    "normal_shape": [768, 768],
+    "panel_values": 28311552,
+    "values_per_matrix": 1572864,
+    "unique_symmetric_coordinates_per_normal": 295296,
+    "coefficient_basis": "a_ii=N_ii; a_ij=sqrt(2)*N_ij for i<j",
+    "frobenius_isometry": true
+  },
+  "base_ledger": {
+    "base_polar_explicit_side_bpw": 0.0011701230649594908,
+    "strict_private_field_gate_bpw": 0.11786907284019277,
+    "corrected_exact_component_allowance_bpw": 0.12024848608281823
+  },
+  "families": {
+    "coordinate_topk": {
+      "selection": "exact descending a_ij^2 prefix independently per matrix",
+      "support_bits": "ceil(log2(binomial(295296,k)))",
+      "value_bits_per_selected_coordinate": [0, 1, 16],
+      "hard_gate_value_bits": 1,
+      "continuous_values_reconstructed_exactly": true,
+      "count_and_mode_header_bits_in_gross_gate": 0,
+      "finite_followup_header_bytes_per_expert": 32
+    },
+    "triangular_tiles": {
+      "block_sizes": [8, 16, 32, 64],
+      "support_bits": "ceil(log2(binomial(group_count,selected_group_count)))",
+      "value_bits": "declared_bits_per_coordinate * exact_unique_coordinate_count_in_selected_groups"
+    },
+    "offset_segments": {
+      "segment_lengths": [8, 16, 32, 64],
+      "support_bits": "ceil(log2(binomial(group_count,selected_group_count)))",
+      "diagonal_stratified_count_vector_free_in_gross_gate": true
+    },
+    "diagonal_strata": {
+      "support_bits": "sum_d ceil(log2(binomial(768-d,k_d)))",
+      "count_vector_free_in_gross_gate": true,
+      "purpose": "optimistic learned offset prior and overlap test against identity bands"
+    }
+  },
+  "score": {
+    "normal_residual_energy": "exact unselected orthonormal symmetric-coordinate energy",
+    "removed_normal_dof": "min(selected_independent_values,normal_dof-1)",
+    "joint_allocation": "Lagrangian dual over every discrete support option plus analytic Gaussian component phi",
+    "hard_kill_direction": "dual_distortion*2^5 > 0.8 plus numerical allowance",
+    "corrected_controls_decision_eligible": false
+  },
+  "controls": {
+    "gaussian_rank_heavy_tail_replicates": 8,
+    "seeds": [27090101, 27090119, 27090143, 27090171, 27090207, 27090231, 27090263, 27090299],
+    "preserves": "per-matrix orthonormal symmetric coefficient absolute-value multiset and exact normal energy",
+    "coordinate_topk_capture_identity_required": true,
+    "group_structural_statistic": "Qwen capture - control mean + 3*hypot(control_MC_SE,delete_one_expert_SE)",
+    "use": "diagnostic and promotion ordering only; never subtract from containing absolute hard bound"
+  },
+  "decision_order": [
+    "gross_coordinate_topk_dual",
+    "gross_fixed_group_duals",
+    "heavy_tail_matched_control_diagnostics",
+    "finite_value_and_exact_header_replay_only_for_survivors"
+  ],
+  "exact_equal_k_reference": {
+    "free_value_last_viable_k": 48018,
+    "support_bits_per_matrix": 189133,
+    "support_bpw": 0.12024752298990885,
+    "total_side_bpw": 0.12141764605486835,
+    "full_capture_F": 0.7999988173257864,
+    "next_k": 48019,
+    "next_support_bits_per_matrix": 189136,
+    "next_total_side_bpw": 0.12141955340350116,
+    "next_full_capture_F": 0.8000011595439223,
+    "scope": "equal k per matrix, exact values free, support and parent side charged, count headers free"
+  },
+  "read_contract": {
+    "expert_local_single_frame": true,
+    "logical_read_amplification": 1.0,
+    "analytic_partition_shared_cold_bytes": 0,
+    "dense_normal_materialization_required": false,
+    "proposed_fusion": "consume sparse correction as (x*N_sparse)*Q"
+  },
+  "overlap_rules": [
+    "never add sparse-normal gain to raw lossy-tail gain",
+    "apply band/group unions sequentially to an explicitly rebuilt residual",
+    "charge union support and all value symbols",
+    "free-normal F is only an information ceiling"
+  ],
+  "authorization": {
+    "tensor_access": false,
+    "source_or_pinned_access": false,
+    "cupy_execution": false,
+    "cuda_or_gpu": false,
+    "finite_codec": false,
+    "production": false,
+    "self_authorization": false
+  }
+}

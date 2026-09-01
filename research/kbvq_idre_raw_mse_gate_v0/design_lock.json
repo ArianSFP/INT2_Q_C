@@ -1,0 +1,220 @@
+{
+  "schema": "kbvq_idre_raw_mse_gate_design_v0",
+  "status": "FROZEN_SOURCE_ONLY_BOUNDED_TWO_ROLE_WATERFILL_KILL_NO_GPU_OR_PAYLOAD_REPLAY",
+  "sealed_date": "2026-09-01",
+  "objective": {
+    "metric": "raw source-coordinate relative MSE",
+    "F_definition": "F = relative_MSE * 2^(2*R_actual)",
+    "s_definition": "s = -0.5*log2(F)",
+    "F_max": 0.8,
+    "required_s_min_bpw": 0.16096404744368115,
+    "physical_rate_interval_bpw": [
+      2.15,
+      2.5
+    ],
+    "cold_page_read_amplification_max_exclusive": 2.0,
+    "all_shared_private_header_padding_bytes_charged": true
+  },
+  "primary_sources": [
+    {
+      "kind": "camera-ready paper",
+      "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
+      "venue": "ICLR 2026",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/5f868c3e0050f13ec82d3694df531de1-Paper-Conference.pdf",
+      "relevant_sections": [
+        "4.1 IDRE",
+        "Appendix A.2-A.3",
+        "Appendix A.5"
+      ]
+    },
+    {
+      "kind": "author repository",
+      "url": "https://github.com/xuzukang/kbvq_moe",
+      "observation_at_seal": "The author repository contains a README and paper PDF but no executable implementation; the gate follows the camera-ready equations rather than third-party code."
+    }
+  ],
+  "raw_mse_specialization": {
+    "paper_objective": "sum_i Tr(E_i C_X E_i^T) = sum_i ||E_i U_X||_F^2",
+    "specialization": "For unweighted raw weight MSE, C_X is the identity and U_X is the identity. IDRE therefore reduces exactly to a right singular subspace of the stacked raw canonical weights.",
+    "activation_covariance_available_in_authorized_cache": false,
+    "activation_weighted_or_model_quality_claimed": false,
+    "BCOS_in_scope": false,
+    "BCOS_reason": "BCOS corrects activation-output moments and is not evidence for unweighted raw source-coordinate MSE."
+  },
+  "auxiliary_panel": {
+    "authorized_manifest_sha256": "4194ff0aa13e71e2c9631f6f2cfd145c5146edf9c6d287084197499872dff782",
+    "expected_manifest_path": "/workspace/INT2__compression/agent_rd_structure_diag_cross_expert_sources.json",
+    "expected_payload_root": "/workspace/INT2__compression",
+    "layer": 15,
+    "sampled_experts": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120
+    ],
+    "fit_experts": [
+      0,
+      8,
+      16,
+      32,
+      40,
+      48,
+      64,
+      72,
+      80,
+      96,
+      104,
+      112
+    ],
+    "untouched_validation_experts": [
+      24,
+      56,
+      88,
+      120
+    ],
+    "roles": [
+      "up",
+      "down"
+    ],
+    "canonical_shapes": {
+      "up": [
+        768,
+        2048
+      ],
+      "down": [
+        768,
+        2048
+      ]
+    },
+    "down_canonicalization": "transpose the stored [2048,768] Down matrix",
+    "pinned_target_panel_authorized": false
+  },
+  "architecture": {
+    "name": "IDRE-RMSE-FP16",
+    "paper_faithful_role_specific": {
+      "fit": "For each role r, form G_r = sum_fit W_(e,r)^T W_(e,r) and take the leading k eigenvectors B_r.",
+      "private_factor": "A_(e,r) = W_(e,r) B_r",
+      "decoded_low_rank": "L_(e,r) = fp16(A_(e,r)) fp16(B_r)^T",
+      "residual_target": "W_(e,r) - L_(e,r)",
+      "serialization": "one FP16 B_r per role shared over 128 experts; one FP16 A_(e,r) per expert and role"
+    },
+    "favorable_joint_role_extension": {
+      "fit": "Pool canonical Up and Down rows into one Gram matrix and take one leading right basis B.",
+      "private_factor": "one A_(e,r) per expert and role",
+      "purpose": "A more read-efficient strict superset-like control for the shared-axis hypothesis; it is more favorable than the paper's separate-role basis in shared bytes."
+    },
+    "residual_quantizer_at_gate": "ideal continuous Gaussian residual channel using every byte left by the fixed container",
+    "exact_free_envelope": "Before any FP16/header/rate penalty, grant the selected low-rank component exact and free. The resulting q=1-capture and s=-0.5log2(q) are gross capture diagnostics only, not physical F scores, because a physical design must charge the factors and redistribute the remaining bits over fewer residual dimensions.",
+    "physical_two_role_gate": "Charge the exact shared/private/header byte layout, grant FP16 factor rounding error zero, assign zero residual bits to captured dimensions, and solve the exact Gaussian reverse-waterfill between the Up and Down residual bands using every remaining payload bit.",
+    "coordinated_refinement": "If requested, independently replay the payload and solve a finer exact diagonal-Gaussian reverse-waterfill over every fitted residual right mode.",
+    "nested_rank_monotonicity": "Leading eigenspaces are nested only within a fitted IDRE mode. This property bounds gross capture at smaller ranks; it neither supplies a physical rate allocation nor establishes containment/disjointness with any composite codec."
+  },
+  "distinct_from_existing": [
+    {
+      "artifact": "../neural_flow_oracle/shared_expert_basis_oracle.py",
+      "difference": "That oracle projects a flattened held-out whole matrix onto whole-matrix templates using one scalar per template. IDRE uses a shared 2048-coordinate right basis and 768 private coefficients per rank, per role and expert."
+    },
+    {
+      "artifact": "../shared_subspace_gate/shared_subspace_gate.py",
+      "difference": "That gate transforms and quantizes both the selected subspace and its complement; it charges a basis but not IDRE's FP16 expert-private low-rank factors. IDRE instead retains a decoded low-rank component and quantizes only its residual. The prior gate nevertheless contains the exact held-out projection energies needed for a free-component upper bound."
+    },
+    {
+      "artifact": "../full_axis_butterfly_codec_v1/dense_klt_oracle.py",
+      "difference": "FABRIC applies a full-rank axis transform and reverse-waterfills all modes. It does not serialize an FP16 subtractive low-rank component before residual quantization."
+    }
+  ],
+  "container": {
+    "full_layer_experts": 128,
+    "roles": 2,
+    "rows": 768,
+    "columns": 2048,
+    "weights_per_expert": 3145728,
+    "weights_per_layer": 402653184,
+    "page_bytes": 4096,
+    "shared_header_bytes": 4096,
+    "expert_header_bytes": 512,
+    "factor_scalar_bytes": 2,
+    "shared_basis_bytes": {
+      "joint_role": "4096 + 2*2048*k",
+      "role_specific": "4096 + 2*2*2048*k"
+    },
+    "private_factor_bytes_per_expert": "2*2*768*k",
+    "frame_rule": "floor((floor(cap_bpw*weights_per_layer/8)-shared_packet_bytes)/128)",
+    "emitted_rule": "shared_packet_bytes + 128*expert_frame_bytes; unused cap remainder is not emitted",
+    "cold_byte_rule": "union of the complete shared packet and one contiguous expert frame",
+    "cold_page_rule": "exact union of 4-KiB pages touched by those two byte ranges for every possible expert-frame offset; use the worst expert",
+    "precomputed_max_legal_rank": {
+      "joint_role": {
+        "2.15": 205,
+        "2.30": 219,
+        "2.50": 239
+      },
+      "role_specific": {
+        "2.15": 102,
+        "2.30": 109,
+        "2.50": 119
+      }
+    },
+    "global_max_legal_rank": 239,
+    "rank256_is_deliberately_illegal_but_favorable": true
+  },
+  "prior_sufficient_statistic": {
+    "artifact": "../shared_subspace_gate/result.json",
+    "artifact_bytes": 510476,
+    "artifact_sha256": "6a756c26e05926a2468bcc2a20086d7efbb2273e0f078a9294c5c002f2f7734f",
+    "internal_result_seal": "80198ed55c193c71b3a3e0054aa4eb54dc7f70371ea36c03d951a09600a6af14",
+    "independent_verification": "../shared_subspace_gate/verification_receipt.json",
+    "independent_verification_sha256": "e8791db74991bbc8e0cbede2c43252933aa57ee1f042e9590deb2b95f545c0e5",
+    "verification_status": "PASS",
+    "reason_reusable": "The prior artifact used the identical fit/validation split, canonical shapes, joint/role-specific leading right bases, and reports exact held-out source and projected energies through rank 256."
+  },
+  "frozen_decision": {
+    "decision": "HARD_KILL_BOUNDED_TWO_ROLE_GAUSSIAN_IDRE_CELL_BEFORE_NEW_GPU_OR_PAYLOAD_REPLAY",
+    "joint_role_rank256_free_s_bpw": 0.13644059372654344,
+    "role_specific_rank256_free_s_bpw": 0.14688268234588053,
+    "required_s_bpw": 0.16096404744368115,
+    "free_capture_warning": "The free rank-256 values are not the decision statistic and must not be compared to physical F without a rate allocation.",
+    "best_positive_rank_two_role_cell": {
+      "mode": "role_specific",
+      "rank": 8,
+      "requested_cap_bpw": 2.5,
+      "actual_bpw": 2.5,
+      "component_header_side_bpw": 0.065185546875,
+      "residual_payload_bpw": 2.434814453125,
+      "cold_page_amplification": 1.075,
+      "relative_mse": 0.033404428110059906,
+      "F": 1.068941699521917,
+      "s_bpw": -0.048091585039837736
+    },
+    "decision_scope": "Exact two-role Gaussian residual waterfill from authenticated aggregate energies, with literal factor/header bytes and zero FP16 factor error. This is not a per-mode residual converse."
+  },
+  "composite_nesting": {
+    "existing_composite_s_bpw": 0.0474034129,
+    "incremental_s_needed_bpw": 0.11356063454368115,
+    "hypothetical_illegal_free_role_specific_sum_s_bpw": 0.19428609524588053,
+    "hypothetical_illegal_free_role_specific_F": 0.76388523407141,
+    "verdict": "NO_ADDITIVE_OR_CONTAINMENT_CLAIM",
+    "reason": "The gross free sum would cross the target but ignores factor bytes, violates the rank/read envelope, uses a different auxiliary sample, and may remove the same source energy as the existing role/polar composite. A valid nesting experiment must apply IDRE to the literal decoded-composite residual and redo one joint physical bit allocation. Rank monotonicity does not establish containment or disjointness."
+  },
+  "execution_interlock": {
+    "default_mode": "rederive the prior sufficient-statistic proof without importing CuPy or opening numeric Qwen payloads",
+    "independent_replay_requires_flag": "--authorize-independent-payload-replay",
+    "independent_replay_requires_token": "ROOT_COORDINATED_REPLAY_V0",
+    "gpu_jobs_submitted_at_seal": 0,
+    "numeric_qwen_payload_files_opened_at_seal": 0,
+    "compressed_artifacts_emitted_at_seal": 0
+  },
+  "claim_boundary": "This kills the tested KBVQ-IDRE cell under the declared two-role diagonal-Gaussian residual model for held-out auxiliary Qwen raw weight MSE and the stated FP16/read architecture. It is not yet an exact per-mode residual converse and has no additive-gain or containment relationship with the existing composite. It does not refute activation-weighted output error, BCOS, nonlinear shared decoders, model-quality gains, or a basis learned from a materially different signal."
+}

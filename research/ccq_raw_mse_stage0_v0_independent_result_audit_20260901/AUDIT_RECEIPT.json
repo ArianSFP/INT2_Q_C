@@ -1,0 +1,37 @@
+{
+  "audit_date_utc": "2026-09-01",
+  "canonical_packet_roundtrip": {
+    "gaussian": true,
+    "source": true
+  },
+  "claim_boundary_preserved": true,
+  "confirmed_result": "KILL",
+  "gaussian_holdout": {
+    "F_oracle": 2.6131868092920847,
+    "q": 0.13742826460002708,
+    "s_oracle": -0.6929051312546927
+  },
+  "independent_metric_replay": "recomputed_from_locked_matrix_SSE_and_energy_rows_without_tensor_access",
+  "local_qa": "read_only_PowerShell_evidence_checks_passed; isolated_Linux_Python_verifier_1099_checks_and_15_tests_passed",
+  "matched_source_minus_gaussian_s": -0.00453093173660979,
+  "result_file_sha256": {
+    "gaussian_prefix.bin": "cffc586d515c70ee98320d394730032e97d689d490a6b45ce6dcff7ee8286ec3",
+    "result.json": "f48a7462aa18fcf973c8b1bdb76544d851439a2036cd79fc58d29016dbcc93c4",
+    "source_prefix.bin": "125c5bb318b93ab49dd5ba0d42ee0f2068648547dc151d29b72010f81de3ab1b"
+  },
+  "result_lock_sha256": "d458ba0f642f02b515aee2e5726dfd00b541ef782710089014a515b87387f63a",
+  "schema": "ccq-stage0-independent-result-audit-receipt-v0",
+  "source_holdout": {
+    "F_oracle": 2.629652429483857,
+    "early_F_lower_bound": 0.8422425704563797,
+    "early_after_matrix_ordinal": 4,
+    "q": 0.13829419641954802,
+    "s_oracle": -0.6974360629913025
+  },
+  "source_manifest_sha256": "e8beee384b1d4de37010b5b97ed4f412f147d826547d8dc6b2934a2bd795c78a",
+  "status": "PASS_KILL_CONFIRMED",
+  "test_count": 15,
+  "test_elapsed_seconds": 0.199,
+  "verdict": "PASS",
+  "verifier_check_count": 1099
+}

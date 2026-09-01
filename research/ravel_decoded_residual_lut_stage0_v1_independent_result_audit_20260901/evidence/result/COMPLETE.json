@@ -1,0 +1,17 @@
+{
+  "completion_lock_sha256": "b5a42435494a144b8bc502beccc28967a4ab4536e58809dc2ae6defb168ce627",
+  "members": {
+    "fit_table_packet.bin": {
+      "bytes": 16384,
+      "sha256": "5a8eea824c79e3421b0c1bcf00e04f609f19d59c892501761bf83a90d3b06c80"
+    },
+    "result.json": {
+      "bytes": 13747,
+      "sha256": "ef67ee26246149472b5f3e4dc6f7e869d95c325a354abd7339bc8e4137dc0c47"
+    }
+  },
+  "result_lock_sha256": "21dd3d5a70a70fa1bc96aae0742d826b1c83090dcb16f9605511d5c71f97531f",
+  "schema": "ravel-decoded-residual-lut-stage0-completion-v1",
+  "source_package_manifest_sha256": "ffafd386ab4f3777fb6c9a70fa413f3bdf169658c64607f898a7969d0375c359",
+  "status": "COMPLETE"
+}
