@@ -1,0 +1,26 @@
+{
+  "all_F_identities_recomputed": true,
+  "all_crossfit_selections_recomputed": true,
+  "all_rate_ledgers_recomputed": true,
+  "candidate_count": 324,
+  "early_kill": true,
+  "loo_free_s_bpw": 0.0014553048712929201,
+  "panel_leaky_free_s_bpw": 0.010662307218547315,
+  "receipt_lock_sha256": "ea62a950d490e949eae85c47b8a90c626734bceeab02f0f7a812ebdb9e6eee6a",
+  "required_s_bpw": 0.16096404744368115,
+  "result_file_sha256": "c027c9b15e6107bc3d0ab997775d90c42ccb2759561a5060cab88619aa2a1148",
+  "result_lock_sha256": "bc3391b286afb336175f39f585b2f28b87ca5911ae374e11985c3dd96b3af981",
+  "result_path": "/workspace/INT2__compression/INT2_Q_C/research/procedural_subspace_oracle/prg/confirmation_v1.json",
+  "schema": "qwen-procedural-subspace-verification-receipt-v1",
+  "source_provenance": {
+    "all_18_sources_rehashed": true,
+    "all_source_hashes_unique": true,
+    "plan_file_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "plan_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "plan_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/plan.lock.json",
+    "plan_reopened": true,
+    "source_bytes": 56623104,
+    "source_count": 18
+  },
+  "verified": true
+}

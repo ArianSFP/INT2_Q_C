@@ -1,0 +1,51 @@
+{
+  "schema": "breakthrough-redteam-protocol-freeze-v1",
+  "frozen_before_result_access": true,
+  "cut_factor": {
+    "identities": [
+      "layer18_expert20",
+      "layer5_expert18"
+    ],
+    "identity_selection": "two smallest SHA256(BREAKTHROUGH-REDTEAM-v1|identity) among the six blind-protocol-v2 whole-expert identities",
+    "roles": [
+      "down_proj",
+      "gate_proj",
+      "up_proj"
+    ],
+    "max_rank": 1380,
+    "starts": 2,
+    "alternating_steps": 3,
+    "checkpoints": [
+      64,
+      128,
+      256,
+      512,
+      768,
+      1024,
+      1185,
+      1380
+    ],
+    "moment_matched_gaussian": "same shape, source mean and centered RMS; same factor-search seeds",
+    "early_kill": "kill if pooled source-vs-Gaussian advantage at r=1185 or r=1380 is below 0.08 bpw, or if absolute F remains above 0.9; survival requires a credible extrapolation to s>=0.160964047443681"
+  },
+  "semantic_dictionary": {
+    "identity": "layer18_expert20",
+    "rows_per_role": 256,
+    "row_selection": "fixed PCG64 seeds determined only by role",
+    "dictionaries": [
+      "model.embed_tokens.weight",
+      "model.layers.15.self_attn.q_proj.weight"
+    ],
+    "block_rows": 4096,
+    "matched_random_control": true,
+    "early_kill": "kill unless pooled one-atom explained energy reaches the charged requirement and the distinct-atom cold-read ledger is below 2x"
+  },
+  "target": {
+    "R_min": 2.15,
+    "R_max": 2.5,
+    "F_max": 0.8,
+    "required_total_s_bpw": 0.160964047443681,
+    "required_increment_over_checkpoint_s_bpw": 0.15287192093,
+    "cold_read_amplification_strict_max": 2.0
+  }
+}

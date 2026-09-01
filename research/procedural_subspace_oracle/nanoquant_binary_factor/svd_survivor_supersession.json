@@ -1,0 +1,131 @@
+{
+  "apparent_survivor": {
+    "candidate_id": "xklt:plain:rank764",
+    "if_tail_were_incorrectly_treated_as_full_D_at_R2p5": {
+      "gaussian_D_times_2pow2R": 0.026445205573022938,
+      "note": "These impossible-looking values expose the uncharged retained reconstruction.",
+      "source_D_times_2pow2R": 0.02004469211569751
+    },
+    "matched_gaussian_discarded_tail_relative_energy": 0.0008264126741569668,
+    "not_codec_F": true,
+    "percent_tail_ratio_below_gaussian": 24.202925704819123,
+    "source_discarded_tail_relative_energy": 0.0006263966286155472,
+    "tail_energy_ratio": 0.7579707429518088,
+    "tail_only_rate_equivalent_s_bpw": 0.1998929661300243
+  },
+  "audit_lock_sha256": "76bd5848d41caf28a6ced2507da8c35f9f2be3700cf66d44830c2e4b16a2babd",
+  "degrees_of_freedom_audit": {
+    "U_stiefel_dof": 294522,
+    "V_stiefel_dof": 1272442,
+    "ambient_values": 1572864,
+    "discarded_normal_dof": 5136,
+    "discarded_normal_fraction": 0.003265380859375,
+    "free_objects_in_spectral_screen": [
+      "source-specific U basis",
+      "source-specific V basis",
+      "all retained singular values",
+      "exact reconstruction of the retained rank-764 component"
+    ],
+    "matrix_shape": [
+      768,
+      2048
+    ],
+    "naive_fp16_U_V_sigma": {
+      "bits_per_matrix": 34435008,
+      "bpw": 21.8931884765625,
+      "multiple_of_2p5_bpw_budget": 8.757275390625,
+      "scalars_per_matrix": 2152188
+    },
+    "rank": 764,
+    "rank_manifold_dof": 1567728,
+    "rank_manifold_fraction": 0.996734619140625,
+    "rate_ledgers": [
+      {
+        "bits_per_matrix": 3381657.5999999996,
+        "bits_per_orientation_dof_if_all_bits_assigned_there": 2.1580952721313316,
+        "bits_per_rank_manifold_dof_if_all_bits_assigned_there": 2.1570435687823397,
+        "physical_rate_bpw": 2.15
+      },
+      {
+        "bits_per_matrix": 3932160.0,
+        "bits_per_orientation_dof_if_all_bits_assigned_there": 2.5094131071294554,
+        "bits_per_rank_manifold_dof_if_all_bits_assigned_there": 2.5081901962585347,
+        "physical_rate_bpw": 2.5
+      }
+    ],
+    "retained_source_energy_fraction": 0.9993736033713845,
+    "singular_value_dof": 764,
+    "source_specific_orientation_dof": 1566964
+  },
+  "followup_decision": {
+    "claim_boundary": "This invalidates promotion of this SVD-tail screen and rejects the tested NanoQuant-style factorization; it is not an impossibility proof for every learned or procedural basis codec.",
+    "reason": "The only apparent >=target signal was the uncharged tail ratio. The more favorable rate-accounted continuous Stiefel/Gram oracle already falls to F=0.95049, and the charged discrete binary-factor test (when supplied) is much worse.",
+    "test_implicit_Householder_Givens_or_sparse_tangent_codec": false
+  },
+  "inputs": {
+    "binary_factor": {
+      "claim_boundary": "Sampled tiles and NumPy LB-ADMM/SVID port; not full-panel encoded MSE and not a bitstream. FP16 scales and binary factor bits are physically ledgered.",
+      "cold_read_amplification": 1.0,
+      "file_sha256": "1a01dae0ba38b76e13c2441eb8ee9bce93b07bd8909ac265bfe9d93066a69460",
+      "matched_gaussian_relative_mse": 0.1016333708985778,
+      "passes_target_F_le_0p8": false,
+      "path_name": "nanoquant_discrete_confirmation_raw_momentfixed.json",
+      "physical_rate_bpw": 2.5,
+      "rank": 71,
+      "result_lock_sha256": "0d6784ea229b2def6b9ed254a585ba9cd3f25c3f09a52bd3ba3cfd27740d864c",
+      "source_codec_F": 3.1913625667615615,
+      "source_over_matched_gaussian": 0.9812729749052765,
+      "source_relative_mse": 0.0997300802112988,
+      "structural_advantage_bpw": 0.013636783625191424,
+      "tile_shape": [
+        48,
+        128
+      ]
+    },
+    "spectral": {
+      "file_sha256": "ae7bf9f838f4b6708e8cc0542f5c03cf6df10fc09dae9b096a283c9b7bc5a9af",
+      "path_name": "nanoquant_spectral_confirmation.json",
+      "result_lock_sha256": "97d2bc2c657009daf8d3fbff1fbcb07d7d22eec4b480b8dafd5ab8c756877bfa"
+    },
+    "stiefel_gram": {
+      "file_sha256": "fbdaea31f84d2826f4d46d474ed82f36d7bd6f591091d338db4d481270c30ccb",
+      "path_name": "result.json",
+      "script_sha256": "743870d15858aaa8afa9ff887b98d53352d6ae1c18c0f1042f1b432a9377733b",
+      "source_lock_internal_sha256": "5a82dac742110d4f48bbd73ae82081e1622b10b660b7850dadfe613ff475cc5b"
+    }
+  },
+  "metric_and_jacobian_audit": {
+    "differential": "dW = U dSigma V^T + dU Sigma V^T + U Sigma dV^T, after quotienting the joint signed/rotational gauge",
+    "embedded_volume_element": "for distinct nonzero singular values, the SVD Jacobian contains products of powers of sigma_i and |sigma_i^2-sigma_j^2|; the tail-only score charges neither this volume nor chart precision",
+    "frobenius_metric": "basis perturbations are multiplied by Sigma; within-subspace rotations couple singular directions, so equal parameter error does not imply equal W-space MSE",
+    "omitted_coordinate_distortion": true
+  },
+  "rate_accounted_comparator": {
+    "Q_stiefel_dof": 1277568,
+    "adaptive_aggregate_residual_energy_ratio": 0.03180113293582486,
+    "adaptive_average_model_dof": 1420493.8333333333,
+    "adaptive_average_normal_dof": 152370.16666666674,
+    "adaptive_gram_rank_min_mean_max": [
+      179,
+      216.66666666666666,
+      241
+    ],
+    "best_optimistic_F_at_2p5": 0.9504908806946374,
+    "best_optimistic_s_bpw": 0.036627654806207784,
+    "decision": "hard_kill",
+    "model": "H = c I + A_k, with source-specific symmetric rank-k A_k, followed by exact polar Q",
+    "optimism": [
+      "continuous manifold coordinates",
+      "ideal asymptotic Gaussian RD for both components",
+      "no finite-block, curvature, chart, index, scale, alignment, or decoder penalty",
+      "the primary cross-method decision gives shared tables for free"
+    ],
+    "required_F": 0.8,
+    "required_s_bpw": 0.16096404744368115,
+    "scoring": "Exact orthogonal model/normal energies are assigned to exact dimensions, then both receive an ideal Gaussian reverse-waterfill. F=D/2^(-2R), s=-0.5log2(F).",
+    "shortfall_s_bpw": 0.12433639263747337
+  },
+  "schema": "svd-tail-survivor-supersession-v1",
+  "status": "INVALID_AS_RATE_FEASIBLE_CODEC_SURVIVOR",
+  "why_leave_one_out_does_not_repair_it": "LOO cross-fitting protects selection of representation/scaling/rank, but each held-out matrix is still decomposed into its own exact U, V, and singular values at zero transmitted rate."
+}

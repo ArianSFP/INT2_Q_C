@@ -1,0 +1,16 @@
+{
+  "all_18_source_hashes_rechecked": true,
+  "all_36_source_and_control_normals_rebuilt": true,
+  "all_6_router_hashes_rechecked": true,
+  "all_candidate_ledgers_and_waterfills_recomputed": true,
+  "decision": "KILL_POLAR_NORMAL_PREDICTOR_BRANCH",
+  "decisive_identity_router_and_implicit_projections_recomputed": true,
+  "elapsed_seconds": 19.692391395568848,
+  "numpy": "2.5.2",
+  "passed": true,
+  "portable_exact_normal_hash_matches": 18,
+  "python": "3.12.3",
+  "result_internal_lock_sha256": "3cabbfa99f265715ab2c549dab371886a6d8fae33d2341e165c1c62aac8e51e6",
+  "result_sha256": "e4fecac5f676d84739972bbf0e04467027aeae1356e62e1dc3cd2b84bff67026",
+  "schema": "qwen_polar_normal_predictor_verification_v1"
+}

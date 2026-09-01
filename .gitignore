@@ -26,6 +26,15 @@ strata_v2_blind_one_shot_v2/independent_audit/decoded_sorted_blocks/
 strata_v2_blind_one_shot_v2/independent_audit/*.f64.bin
 *.f64.bin
 
+# Expert-affine checkpoint work directories follow the same evidence policy.
+# Publish the compact bundle under results/, never staging, duplicate block
+# payloads, logs, or decoded scratch from an in-repo reproduction run.
+strata_expert_affine_*/staging/
+strata_expert_affine_*/encode_logs/
+strata_expert_affine_*/encoded/*.polar.bin
+strata_expert_affine_*/independent_audit/decoded/
+strata_expert_affine_*/independent_audit/*.f64.bin
+
 # The reproduction guide clones this separately.  Keep the Qwen license that
 # is intentionally tracked elsewhere under third_party/.
 third_party/PolarLatticeQuantization/
@@ -34,6 +43,7 @@ codec_data/*.npz
 # Reproduction work directories and logs.
 runs/
 work/
+tmp/
 *.stdout.log
 *.stderr.log
 *.log

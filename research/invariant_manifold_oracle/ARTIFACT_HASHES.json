@@ -1,0 +1,30 @@
+{
+  "artifacts": [
+    {
+      "bytes": 26692,
+      "path": "gauge_coupled_polar_oracle.py",
+      "sha256": "9329eb9fa1c41a45ff75b55575c12549f5420990d774250e947bac8910b47f8a"
+    },
+    {
+      "bytes": 7922,
+      "path": "README.md",
+      "sha256": "42ce155b9d2eefc204a2b09c13855d7d8f64424f3942bd786318a1606f986bea"
+    },
+    {
+      "bytes": 1712439,
+      "path": "result.json",
+      "sha256": "2ca913ae4ce13ac23d7d3b1b9f2867ed6512dc337cca1a4bc385151829131614"
+    },
+    {
+      "bytes": 751,
+      "path": "verification.json",
+      "sha256": "d5b00aaa1dfabc6cd7182316064a8b50e34efa61ad3207485bc2f462d773bb22"
+    },
+    {
+      "bytes": 12669,
+      "path": "verify_result.py",
+      "sha256": "326ab2b7979d96425547bed3b820cc7328f7dc06b2e470a99e052090b34b505f"
+    }
+  ],
+  "schema": "qwen_swiglu_gauge_coupled_polar_artifact_hashes_v1"
+}

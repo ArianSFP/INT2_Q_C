@@ -1,0 +1,64 @@
+{
+  "schema": "breakthrough-redteam-independent-verification-v1",
+  "python": "3.12.3",
+  "artifacts": {
+    "protocol_freeze.json": "b2fc9c964f85ec07876f8fa31a70dabd4ea8cbee6e6b0c37ef80a03bfdc55078",
+    "cut_factor_result.json": "d8555d707e4ff07638afdbfff060c3033ebeefa7267a3647fb5ff6a672e3fcf5",
+    "semantic_dictionary_result.json": "b9d9ff4643d252778f6d638188f8be7d042fdd873924d021932de1b24aebbc44"
+  },
+  "cut_factor": {
+    "sources_rehashed": [
+      {
+        "tensor": "model.layers.18.mlp.experts.20.down_proj.weight.bf16.bin",
+        "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064"
+      },
+      {
+        "tensor": "model.layers.18.mlp.experts.20.gate_proj.weight.bf16.bin",
+        "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6"
+      },
+      {
+        "tensor": "model.layers.18.mlp.experts.20.up_proj.weight.bf16.bin",
+        "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07"
+      },
+      {
+        "tensor": "model.layers.5.mlp.experts.18.down_proj.weight.bf16.bin",
+        "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0"
+      },
+      {
+        "tensor": "model.layers.5.mlp.experts.18.gate_proj.weight.bf16.bin",
+        "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c"
+      },
+      {
+        "tensor": "model.layers.5.mlp.experts.18.up_proj.weight.bf16.bin",
+        "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b"
+      }
+    ],
+    "final_rank": 1380,
+    "final_physical_bpw": 2.4993489583333335,
+    "final_source_advantage_s_bpw": 0.04444789955232238,
+    "final_absolute_F": 3.7673695560414173,
+    "decision": "kill"
+  },
+  "semantic_dictionary": {
+    "dictionaries": [
+      {
+        "name": "embedding",
+        "sha256_rehashed": "d3ccfd318f51241c1070388e15d85d9c20429f84bfba18cac7d83eb104fc5e2d",
+        "actual_explained_energy": 0.010462914731303048,
+        "required_explained_energy": 0.2093818209866447,
+        "net_s_after_index_and_fp16_coefficient": -0.009014403422705045,
+        "decision": "kill"
+      },
+      {
+        "name": "attention_q",
+        "sha256_rehashed": "3fbb233aa6e64955163ae63f6d5bfb170124f0b813942d19b319a2f1b1f1d89d",
+        "actual_explained_energy": 0.008412339230727022,
+        "required_explained_energy": 0.20616426751448236,
+        "net_s_after_index_and_fp16_coefficient": -0.007577986938594297,
+        "decision": "kill"
+      }
+    ],
+    "decision": "kill"
+  },
+  "overall_decision": "no evidence-backed survivor"
+}

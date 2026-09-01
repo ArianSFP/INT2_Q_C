@@ -1,0 +1,14 @@
+{
+  "best_architecture": "role-conditioned-additive-rvq-d8-k3-m11",
+  "best_optimistic_F_identity": 0.9923590623215919,
+  "best_optimistic_s_bpw": 0.005532936884040332,
+  "decision": "kill",
+  "plan_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+  "plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+  "required_s_bpw": 0.16096404744368115,
+  "result_sha256": "50c1e92349137b66f0f1c8eabf18331154a1ab8c66f20136109049276e97b70c",
+  "schema": "qwen-additive-vq-verification-v1",
+  "verified": true,
+  "verified_grid_cells": 9,
+  "verified_live_source_files": 18
+}

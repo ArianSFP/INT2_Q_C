@@ -1,4 +1,43 @@
-# INT2_Q_C: auditable sub-2.15-bpw PTQ on Qwen weights
+# INT2_Q_C: auditable low-bit PTQ on Qwen weights
+
+## STRATA expert-affine MoE locality checkpoint — pass
+
+The new **STRATA expert-affine N20/N21** format passed its independent
+locality checkpoint on the pinned 18-matrix `Qwen/Qwen3-30B-A3B` panel:
+
+| Metric | Audited result |
+|---|---:|
+| Physical rate | **2.5 bpw exactly** |
+| Original-BF16 relative MSE | **0.030902167403153148** |
+| Same-rate Gaussian reference | `0.03125` |
+| MSE below Gaussian | **1.113064309909928%** |
+| Worst cold 4-KiB expert read amplification | **1.1694444444444445x** |
+| Final 20%-below-Gaussian target | **Not passed** (`0.025` required) |
+
+The 8,847,360-byte container gives each expert two private `N=2^21`
+streams and one paired `N=2^20` tail. The independent auditor causally
+decoded and canonically re-encoded all `15/15` payloads, restored every group
+once, and rehashed/scored all `18/18` original BF16 matrices. The compact
+verifier deeply binds all encoder transcripts to physical payload slices; all
+`15/15` resealed tamper cases were rejected. Container SHA-256:
+`4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b`.
+
+This is an external compressed-object read result, not a fused MoE
+decoder/GEMM or total-HBM-traffic benchmark. It is also a checkpoint rather
+than the final research claim: at its own physical rate it has
+`F=MSE*2^(2R)=0.9888693569009007`, while the final goal requires `F<=0.8`.
+
+- [Architecture, exact audit, read ledger, and reproduction](docs/STRATA_EXPERT_AFFINE_CHECKPOINT.md)
+- [Compact checkpoint manifest](results/qwen/strata_expert_affine_checkpoint/checkpoint_manifest.json)
+- [Independent source audit](results/qwen/strata_expert_affine_checkpoint/independent_audit.json)
+- [Rate-relative breakthrough search](research/RATE_RELATIVE_BREAKTHROUGH_SEARCH.md)
+
+Verify the source-free compact checkpoint:
+
+```bash
+python strata_expert_local_codec/verify_checkpoint.py \
+  --release-dir results/qwen/strata_expert_affine_checkpoint
+```
 
 ## STRATA-XKLT-SC v2 second blind-panel confirmation — pass
 

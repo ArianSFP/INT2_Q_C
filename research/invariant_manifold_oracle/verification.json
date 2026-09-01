@@ -1,0 +1,16 @@
+{
+  "checked": [
+    "all serialized source rank curves have exact manifold dimensions",
+    "common and adaptive source scores independently reverse-waterfill",
+    "selected 2.5-bpw inverse-gauge residuals directly reconstructed in source space",
+    "Gaussian-control F/s arithmetic",
+    "all byte-derived rates and cold-read amplification ledgers",
+    "early-kill decision"
+  ],
+  "result_path": "/workspace/INT2__compression/INT2_Q_C/research/invariant_manifold_oracle/result.json",
+  "result_sha256": "2ca913ae4ce13ac23d7d3b1b9f2867ed6512dc337cca1a4bc385151829131614",
+  "schema": "qwen_swiglu_gauge_coupled_polar_verification_v1",
+  "selected_source_residuals_directly_recomputed": true,
+  "source_files_rehashed": true,
+  "status": "PASS"
+}

@@ -1,0 +1,2926 @@
+{
+  "claim_boundary": "Adjacent-coordinate role-conditioned additive residual VQ only; dimensions and alphabets listed in parameters. Cross-expert held out, Gaussian calibrated, and table/index/scalar costs charged. Not a universal converse.",
+  "cpu_only": true,
+  "created_unix": 1788224798.079647,
+  "decision": "kill",
+  "numpy_version": "2.1.2",
+  "parameters": {
+    "alphabets": [
+      2,
+      3,
+      4
+    ],
+    "batch": 4096,
+    "coordinate_descent_sweeps": 1,
+    "dimensions": [
+      8,
+      16,
+      32
+    ],
+    "lloyd_iterations": 3,
+    "nominal_payload_rate_bpw": 2.25,
+    "optimism_allowance_bpw": 0.005,
+    "refit_rounds": 1,
+    "representation": "xklt",
+    "sample_vectors_per_matrix": 2048
+  },
+  "provenance_by_dimension": [
+    {
+      "dimension": 8,
+      "header_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/header.bin",
+      "header_sha256": "3c16bcf308c0cfce2071be24bf612d202360510084540aa0b358938d8399a538",
+      "plan_file_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+      "plan_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+      "plan_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/plan.lock.json",
+      "representation": "xklt",
+      "source_bindings": [
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 0,
+          "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+          "tensor": "model.layers.5.mlp.experts.18.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 1,
+          "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+          "tensor": "model.layers.5.mlp.experts.18.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 2,
+          "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+          "tensor": "model.layers.5.mlp.experts.18.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 3,
+          "sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+          "tensor": "model.layers.12.mlp.experts.7.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 4,
+          "sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+          "tensor": "model.layers.12.mlp.experts.7.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 5,
+          "sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+          "tensor": "model.layers.12.mlp.experts.7.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 6,
+          "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+          "tensor": "model.layers.18.mlp.experts.20.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 7,
+          "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+          "tensor": "model.layers.18.mlp.experts.20.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 8,
+          "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+          "tensor": "model.layers.18.mlp.experts.20.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 9,
+          "sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+          "tensor": "model.layers.28.mlp.experts.83.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 10,
+          "sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+          "tensor": "model.layers.28.mlp.experts.83.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 11,
+          "sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+          "tensor": "model.layers.28.mlp.experts.83.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 12,
+          "sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+          "tensor": "model.layers.36.mlp.experts.76.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 13,
+          "sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+          "tensor": "model.layers.36.mlp.experts.76.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 14,
+          "sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+          "tensor": "model.layers.36.mlp.experts.76.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 15,
+          "sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+          "tensor": "model.layers.45.mlp.experts.41.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 16,
+          "sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+          "tensor": "model.layers.45.mlp.experts.41.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 17,
+          "sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+          "tensor": "model.layers.45.mlp.experts.41.down_proj.weight"
+        }
+      ],
+      "xklt_coefficients_fp32": [
+        [
+          0.6464686393737793,
+          0.762940526008606
+        ],
+        [
+          0.6169684529304504,
+          0.786987841129303
+        ],
+        [
+          0.6659277677536011,
+          0.7460162043571472
+        ],
+        [
+          0.7202686071395874,
+          0.6936953067779541
+        ],
+        [
+          0.7561432719230652,
+          0.6544061303138733
+        ],
+        [
+          0.6482954621315002,
+          -0.761388897895813
+        ]
+      ]
+    },
+    {
+      "dimension": 16,
+      "header_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/header.bin",
+      "header_sha256": "3c16bcf308c0cfce2071be24bf612d202360510084540aa0b358938d8399a538",
+      "plan_file_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+      "plan_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+      "plan_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/plan.lock.json",
+      "representation": "xklt",
+      "source_bindings": [
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 0,
+          "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+          "tensor": "model.layers.5.mlp.experts.18.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 1,
+          "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+          "tensor": "model.layers.5.mlp.experts.18.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 2,
+          "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+          "tensor": "model.layers.5.mlp.experts.18.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 3,
+          "sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+          "tensor": "model.layers.12.mlp.experts.7.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 4,
+          "sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+          "tensor": "model.layers.12.mlp.experts.7.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 5,
+          "sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+          "tensor": "model.layers.12.mlp.experts.7.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 6,
+          "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+          "tensor": "model.layers.18.mlp.experts.20.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 7,
+          "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+          "tensor": "model.layers.18.mlp.experts.20.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 8,
+          "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+          "tensor": "model.layers.18.mlp.experts.20.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 9,
+          "sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+          "tensor": "model.layers.28.mlp.experts.83.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 10,
+          "sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+          "tensor": "model.layers.28.mlp.experts.83.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 11,
+          "sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+          "tensor": "model.layers.28.mlp.experts.83.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 12,
+          "sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+          "tensor": "model.layers.36.mlp.experts.76.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 13,
+          "sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+          "tensor": "model.layers.36.mlp.experts.76.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 14,
+          "sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+          "tensor": "model.layers.36.mlp.experts.76.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 15,
+          "sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+          "tensor": "model.layers.45.mlp.experts.41.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 16,
+          "sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+          "tensor": "model.layers.45.mlp.experts.41.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 17,
+          "sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+          "tensor": "model.layers.45.mlp.experts.41.down_proj.weight"
+        }
+      ],
+      "xklt_coefficients_fp32": [
+        [
+          0.6464686393737793,
+          0.762940526008606
+        ],
+        [
+          0.6169684529304504,
+          0.786987841129303
+        ],
+        [
+          0.6659277677536011,
+          0.7460162043571472
+        ],
+        [
+          0.7202686071395874,
+          0.6936953067779541
+        ],
+        [
+          0.7561432719230652,
+          0.6544061303138733
+        ],
+        [
+          0.6482954621315002,
+          -0.761388897895813
+        ]
+      ]
+    },
+    {
+      "dimension": 32,
+      "header_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/header.bin",
+      "header_sha256": "3c16bcf308c0cfce2071be24bf612d202360510084540aa0b358938d8399a538",
+      "plan_file_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+      "plan_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+      "plan_path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/plan.lock.json",
+      "representation": "xklt",
+      "source_bindings": [
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 0,
+          "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+          "tensor": "model.layers.5.mlp.experts.18.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 1,
+          "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+          "tensor": "model.layers.5.mlp.experts.18.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 2,
+          "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+          "tensor": "model.layers.5.mlp.experts.18.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 3,
+          "sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+          "tensor": "model.layers.12.mlp.experts.7.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 4,
+          "sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+          "tensor": "model.layers.12.mlp.experts.7.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 5,
+          "sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+          "tensor": "model.layers.12.mlp.experts.7.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 6,
+          "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+          "tensor": "model.layers.18.mlp.experts.20.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 7,
+          "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+          "tensor": "model.layers.18.mlp.experts.20.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 8,
+          "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+          "tensor": "model.layers.18.mlp.experts.20.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 9,
+          "sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+          "tensor": "model.layers.28.mlp.experts.83.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 10,
+          "sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+          "tensor": "model.layers.28.mlp.experts.83.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 11,
+          "sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+          "tensor": "model.layers.28.mlp.experts.83.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 12,
+          "sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+          "tensor": "model.layers.36.mlp.experts.76.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 13,
+          "sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+          "tensor": "model.layers.36.mlp.experts.76.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 14,
+          "sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+          "tensor": "model.layers.36.mlp.experts.76.down_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 15,
+          "sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+          "tensor": "model.layers.45.mlp.experts.41.gate_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 16,
+          "sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+          "tensor": "model.layers.45.mlp.experts.41.up_proj.weight"
+        },
+        {
+          "bytes": 3145728,
+          "matrix_ordinal": 17,
+          "sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+          "tensor": "model.layers.45.mlp.experts.41.down_proj.weight"
+        }
+      ],
+      "xklt_coefficients_fp32": [
+        [
+          0.6464686393737793,
+          0.762940526008606
+        ],
+        [
+          0.6169684529304504,
+          0.786987841129303
+        ],
+        [
+          0.6659277677536011,
+          0.7460162043571472
+        ],
+        [
+          0.7202686071395874,
+          0.6936953067779541
+        ],
+        [
+          0.7561432719230652,
+          0.6544061303138733
+        ],
+        [
+          0.6482954621315002,
+          -0.761388897895813
+        ]
+      ]
+    }
+  ],
+  "result_json_name": "additive_vq_screen_result.json",
+  "results": [
+    {
+      "alphabet": 2,
+      "architecture": "role-conditioned-additive-rvq-d8-k2-m18",
+      "charged_matched_F_identity": 1.0446457034868768,
+      "charged_matched_s_bpw": -0.0315068642196969,
+      "cold_expert_read_amplification": 1.0013533227237654,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 8,
+      "elapsed_seconds": 3.2229745388031006,
+      "exact_F_source_over_shannon_at_physical_rate": 2.6018259055210144,
+      "exact_s_bpw_source_vs_shannon": -0.6897622155312498,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.007988105362492611,
+      "folds": [
+        {
+          "gaussian_distortion": 0.10889925927301562,
+          "heldout_expert": 0,
+          "matched_F": 1.0102882555505974,
+          "matched_s_bpw": -0.007383490805570018,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.10635419642688562,
+              "gaussian_oracle_gain": 1.009706877647433,
+              "matched_F": 1.0114564797339747,
+              "matched_s_bpw": -0.008217122962076944,
+              "role": 0,
+              "source_distortion": 0.1075726411228734,
+              "source_oracle_gain": 1.01033662242415
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.11010751124061499,
+              "gaussian_oracle_gain": 1.0103480209677058,
+              "matched_F": 0.9911610151555806,
+              "matched_s_bpw": 0.0064043255505664256,
+              "role": 1,
+              "source_distortion": 0.10913427261750246,
+              "source_oracle_gain": 1.009927237261756
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.11047025261500353,
+              "gaussian_oracle_gain": 1.011199362897235,
+              "matched_F": 1.037402635295014,
+              "matched_s_bpw": -0.026487969835285733,
+              "role": 2,
+              "source_distortion": 0.11460213118451057,
+              "source_oracle_gain": 1.0142573139095985
+            }
+          ],
+          "source_distortion": 0.11001964268168717
+        },
+        {
+          "gaussian_distortion": 0.11255200463620768,
+          "heldout_expert": 1,
+          "matched_F": 1.0232892332227446,
+          "matched_s_bpw": -0.016606990605654976,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.11122048865213012,
+              "gaussian_oracle_gain": 1.017191721559737,
+              "matched_F": 1.0660677418978264,
+              "matched_s_bpw": -0.046149557601497894,
+              "role": 0,
+              "source_distortion": 0.11856857519014917,
+              "source_oracle_gain": 1.0012684279355781
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.1127494332852646,
+              "gaussian_oracle_gain": 1.0089654939606265,
+              "matched_F": 0.9679835203810717,
+              "matched_s_bpw": 0.02347280430680617,
+              "role": 1,
+              "source_distortion": 0.10913959335244121,
+              "source_oracle_gain": 1.0202286473308466
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.11376112844582273,
+              "gaussian_oracle_gain": 1.01876182136705,
+              "matched_F": 1.0442030263780178,
+              "matched_s_bpw": -0.031201122559185102,
+              "role": 2,
+              "source_distortion": 0.1187897146073065,
+              "source_oracle_gain": 1.010444560281633
+            }
+          ],
+          "source_distortion": 0.11517325452186776
+        },
+        {
+          "gaussian_distortion": 0.10973607630983498,
+          "heldout_expert": 2,
+          "matched_F": 1.0427967764132975,
+          "matched_s_bpw": -0.030229014102500246,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.11271039965721494,
+              "gaussian_oracle_gain": 1.0047754889520926,
+              "matched_F": 1.0182758618039045,
+              "matched_s_bpw": -0.013064227928059252,
+              "role": 0,
+              "source_distortion": 0.11477027934521306,
+              "source_oracle_gain": 1.0146157027261313
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.10708652511070148,
+              "gaussian_oracle_gain": 1.018654030011077,
+              "matched_F": 1.071345074346561,
+              "matched_s_bpw": -0.049711619532705614,
+              "role": 1,
+              "source_distortion": 0.11472662120623933,
+              "source_oracle_gain": 1.0090324701796496
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.10961136420662444,
+              "gaussian_oracle_gain": 1.008668812679325,
+              "matched_F": 1.0314372474384133,
+              "matched_s_bpw": -0.022328025220365103,
+              "role": 2,
+              "source_distortion": 0.11305724378525013,
+              "source_oracle_gain": 1.0017326476481483
+            }
+          ],
+          "source_distortion": 0.11443242663213954
+        },
+        {
+          "gaussian_distortion": 0.11019839481197848,
+          "heldout_expert": 3,
+          "matched_F": 1.0885159102770234,
+          "matched_s_bpw": -0.06118124740569141,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.11111571407788431,
+              "gaussian_oracle_gain": 1.0083004079923146,
+              "matched_F": 1.0632835539320855,
+              "matched_s_bpw": -0.04426319133211312,
+              "role": 0,
+              "source_distortion": 0.11814751136243429,
+              "source_oracle_gain": 1.017827449441892
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.1120229600266216,
+              "gaussian_oracle_gain": 1.0091350839303161,
+              "matched_F": 1.109047864941478,
+              "matched_s_bpw": -0.0746608157631268,
+              "role": 1,
+              "source_distortion": 0.1242388246419492,
+              "source_oracle_gain": 1.0112473656673477
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.10652232215208655,
+              "gaussian_oracle_gain": 1.004717050280638,
+              "matched_F": 1.0897319208547191,
+              "matched_s_bpw": -0.06198663446371117,
+              "role": 2,
+              "source_distortion": 0.11608077473269848,
+              "source_oracle_gain": 1.0065923813044426
+            }
+          ],
+          "source_distortion": 0.11995270603982756
+        },
+        {
+          "gaussian_distortion": 0.10850066548555531,
+          "heldout_expert": 4,
+          "matched_F": 1.0630300703895315,
+          "matched_s_bpw": -0.044091203791169445,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.10900626391935399,
+              "gaussian_oracle_gain": 1.0092689743429737,
+              "matched_F": 1.0575191624481364,
+              "matched_s_bpw": -0.04034190274515372,
+              "role": 0,
+              "source_distortion": 0.11527621292159573,
+              "source_oracle_gain": 1.0110735426658146
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.10904789756751967,
+              "gaussian_oracle_gain": 1.0177627423034907,
+              "matched_F": 1.067567645717667,
+              "matched_s_bpw": -0.04716374407951965,
+              "role": 1,
+              "source_distortion": 0.1164160072766183,
+              "source_oracle_gain": 1.0190136010077884
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.107269777886325,
+              "gaussian_oracle_gain": 1.0109679289848497,
+              "matched_F": 1.0630759056845889,
+              "matched_s_bpw": -0.04412230588750491,
+              "role": 2,
+              "source_distortion": 0.11403591627908963,
+              "source_oracle_gain": 1.0079377973376338
+            }
+          ],
+          "source_distortion": 0.11533947006842087
+        },
+        {
+          "gaussian_distortion": 0.11062099222710745,
+          "heldout_expert": 5,
+          "matched_F": 1.0319653678068685,
+          "matched_s_bpw": -0.022697277758658346,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.10964619478915512,
+              "gaussian_oracle_gain": 1.0127886773530128,
+              "matched_F": 1.1059240891273832,
+              "matched_s_bpw": -0.07262618103314668,
+              "role": 0,
+              "source_distortion": 0.12126036809848,
+              "source_oracle_gain": 1.011692974068836
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.10945152543566193,
+              "gaussian_oracle_gain": 1.0085519532112475,
+              "matched_F": 1.0241406825340167,
+              "matched_s_bpw": -0.017206953398178387,
+              "role": 1,
+              "source_distortion": 0.11209375996406809,
+              "source_oracle_gain": 1.0085626588404675
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.11343394586108725,
+              "gaussian_oracle_gain": 1.0052521313464775,
+              "matched_F": 0.9699758898067821,
+              "matched_s_bpw": 0.02198960373631735,
+              "role": 2,
+              "source_distortion": 0.11002819257090245,
+              "source_oracle_gain": 1.0173004282820675
+            }
+          ],
+          "source_distortion": 0.11415703293080767
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.06542239501275086,
+      "gaussian_shannon_distortion_at_physical_rate": 0.04415997858431819,
+      "matched_F_source_over_control": 1.0438374089247524,
+      "matched_gaussian_distortion": 0.11007133418056574,
+      "matched_s_bpw_before_side_charge": -0.03094850556807653,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 0,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0147056653454007,
+      "optimistic_2se_s_bpw": -0.010530653494711679,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.25,
+      "physical_rate_bpw": 2.2505583586516202,
+      "read_amplification_below_2x": true,
+      "side_bits": 15808,
+      "side_bpw": 0.0005583586516203704,
+      "source_distortion": 0.11489657626793227,
+      "stages": 18,
+      "table_bits_fp16": 13824,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 3,
+      "architecture": "role-conditioned-additive-rvq-d8-k3-m11",
+      "charged_matched_F_identity": 1.0218455427309299,
+      "charged_matched_s_bpw": -0.0155885709476581,
+      "cold_expert_read_amplification": 1.0012851857847271,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 8,
+      "elapsed_seconds": 2.213240146636963,
+      "exact_F_source_over_shannon_at_physical_rate": 2.6071541237854525,
+      "exact_s_bpw_source_vs_shannon": -0.6912379356731231,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.008060753915849216,
+      "folds": [
+        {
+          "gaussian_distortion": 0.1247969788656743,
+          "heldout_expert": 0,
+          "matched_F": 0.9924960585397655,
+          "matched_s_bpw": 0.005433360968994318,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.12494737338984976,
+              "gaussian_oracle_gain": 1.008831497856872,
+              "matched_F": 0.9840767581064975,
+              "matched_s_bpw": 0.011578622272871776,
+              "role": 0,
+              "source_distortion": 0.1229578061394054,
+              "source_oracle_gain": 1.0143618744893443
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.1256840094919854,
+              "gaussian_oracle_gain": 1.0022723263245663,
+              "matched_F": 0.987035894565735,
+              "matched_s_bpw": 0.009412772088475971,
+              "role": 1,
+              "source_distortion": 0.12405462874153016,
+              "source_oracle_gain": 1.0058690650508462
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.1232658340844741,
+              "gaussian_oracle_gain": 1.0049015037668299,
+              "matched_F": 1.012198850268646,
+              "matched_s_bpw": -0.008746370369497606,
+              "role": 2,
+              "source_distortion": 0.12476953553771038,
+              "source_oracle_gain": 1.005521397267513
+            }
+          ],
+          "source_distortion": 0.12386050964185216
+        },
+        {
+          "gaussian_distortion": 0.12497069822296106,
+          "heldout_expert": 1,
+          "matched_F": 1.0104209592212536,
+          "matched_s_bpw": -0.007478235228191123,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.12492834940699638,
+              "gaussian_oracle_gain": 1.010993508252025,
+              "matched_F": 1.0074265469286667,
+              "matched_s_bpw": -0.005337326699255981,
+              "role": 0,
+              "source_distortion": 0.12585613565658832,
+              "source_oracle_gain": 1.0037987854333927
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.12487793751403405,
+              "gaussian_oracle_gain": 1.0025559898119834,
+              "matched_F": 1.016933977480289,
+              "matched_s_bpw": -0.012113008991176464,
+              "role": 1,
+              "source_distortion": 0.12699261769568163,
+              "source_oracle_gain": 1.0107426220409337
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.1251291379549167,
+              "gaussian_oracle_gain": 1.0125892684859428,
+              "matched_F": 1.0057983157335142,
+              "matched_s_bpw": -0.004170521328228263,
+              "role": 2,
+              "source_distortion": 0.12585467620424176,
+              "source_oracle_gain": 1.0079022368917585
+            }
+          ],
+          "source_distortion": 0.12627301277299413
+        },
+        {
+          "gaussian_distortion": 0.12173640242244121,
+          "heldout_expert": 2,
+          "matched_F": 1.0346746573029058,
+          "matched_s_bpw": -0.024588599281498057,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.12071563438050686,
+              "gaussian_oracle_gain": 1.0105552738257935,
+              "matched_F": 1.0544370628156972,
+              "matched_s_bpw": -0.03823649309760155,
+              "role": 0,
+              "source_distortion": 0.12728703895211524,
+              "source_oracle_gain": 1.017110836326311
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.1229787485531391,
+              "gaussian_oracle_gain": 1.0155629997649827,
+              "matched_F": 1.0204961454383819,
+              "matched_s_bpw": -0.014635366556490212,
+              "role": 1,
+              "source_distortion": 0.12549933886931444,
+              "source_oracle_gain": 1.0053649161235019
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.12101760484305102,
+              "gaussian_oracle_gain": 1.0067467697957782,
+              "matched_F": 1.026639344524388,
+              "matched_s_bpw": -0.01896472800031538,
+              "role": 2,
+              "source_distortion": 0.1242414345119813,
+              "source_oracle_gain": 1.0100438655953592
+            }
+          ],
+          "source_distortion": 0.12595757045772799
+        },
+        {
+          "gaussian_distortion": 0.12224751961580518,
+          "heldout_expert": 3,
+          "matched_F": 1.0670595516076957,
+          "matched_s_bpw": -0.04682034694323171,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.12202115054819983,
+              "gaussian_oracle_gain": 1.0060202678339079,
+              "matched_F": 1.0618080424884861,
+              "matched_s_bpw": -0.04326148703469846,
+              "role": 0,
+              "source_distortion": 0.12956303900577693,
+              "source_oracle_gain": 1.005547808353667
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.12254179845828526,
+              "gaussian_oracle_gain": 1.0027135165680465,
+              "matched_F": 1.08926570542768,
+              "matched_s_bpw": -0.061677957351480225,
+              "role": 1,
+              "source_distortion": 0.13348057854204068,
+              "source_oracle_gain": 1.0164964984018843
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.12210488791050315,
+              "gaussian_oracle_gain": 1.0026569833022072,
+              "matched_F": 1.0419496803227923,
+              "matched_s_bpw": -0.02964280305883228,
+              "role": 2,
+              "source_distortion": 0.12722714892419915,
+              "source_oracle_gain": 1.0071823859155695
+            }
+          ],
+          "source_distortion": 0.13044538346639406
+        },
+        {
+          "gaussian_distortion": 0.12404539395208669,
+          "heldout_expert": 4,
+          "matched_F": 1.0286732111232184,
+          "matched_s_bpw": -0.020392369847623867,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.12393320776581634,
+              "gaussian_oracle_gain": 1.0047989669511133,
+              "matched_F": 1.0207434093304062,
+              "matched_s_bpw": -0.014810126246858662,
+              "role": 0,
+              "source_distortion": 0.12650400502413295,
+              "source_oracle_gain": 1.0110240966618411
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.1256034058588725,
+              "gaussian_oracle_gain": 1.0088374914412797,
+              "matched_F": 1.0301568815244548,
+              "matched_s_bpw": -0.02143203033653579,
+              "role": 1,
+              "source_distortion": 0.12939121288842653,
+              "source_oracle_gain": 1.012154735770695
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.12218064199292712,
+              "gaussian_oracle_gain": 1.0029836667382153,
+              "matched_F": 1.0352314412455845,
+              "matched_s_bpw": -0.02497666976106534,
+              "role": 2,
+              "source_distortion": 0.12648524210264872,
+              "source_oracle_gain": 1.0145880299717895
+            }
+          ],
+          "source_distortion": 0.12760217372173768
+        },
+        {
+          "gaussian_distortion": 0.12804020759270074,
+          "heldout_expert": 5,
+          "matched_F": 0.9951824030709645,
+          "matched_s_bpw": 0.0034835595459894414,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.12356273386448069,
+              "gaussian_oracle_gain": 1.0084006020341816,
+              "matched_F": 1.0171354315068664,
+              "matched_s_bpw": -0.012255893361186845,
+              "role": 0,
+              "source_distortion": 0.12568003462741664,
+              "source_oracle_gain": 1.0153743773830122
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.13177878832808754,
+              "gaussian_oracle_gain": 1.0024710150384442,
+              "matched_F": 0.9839862934404594,
+              "matched_s_bpw": 0.01164493769150545,
+              "role": 1,
+              "source_distortion": 0.12966852148102972,
+              "source_oracle_gain": 1.0060590073743048
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.12687253638399065,
+              "gaussian_oracle_gain": 1.0039630673833266,
+              "matched_F": 0.9911347939821747,
+              "matched_s_bpw": 0.00642340905801612,
+              "role": 2,
+              "source_distortion": 0.12574778521094254,
+              "source_oracle_gain": 1.0181762537329364
+            }
+          ],
+          "source_distortion": 0.12742336148180908
+        }
+      ],
+      "fraction_of_required_s_optimistic": 0.034373743527890736,
+      "gaussian_shannon_distortion_at_physical_rate": 0.04870849987902062,
+      "matched_F_source_over_control": 1.021112187555721,
+      "matched_gaussian_distortion": 0.12436495016965222,
+      "matched_s_bpw_before_side_charge": -0.01507069047257853,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 6,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 0.9923590623215919,
+      "optimistic_2se_s_bpw": 0.005532936884040332,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.17932343849159,
+      "physical_rate_bpw": 2.179841318966669,
+      "read_amplification_below_2x": true,
+      "side_bits": 14662,
+      "side_bpw": 0.0005178804750795718,
+      "source_distortion": 0.12699056632299183,
+      "stages": 11,
+      "table_bits_fp16": 12672,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 4,
+      "architecture": "role-conditioned-additive-rvq-d8-k4-m9",
+      "charged_matched_F_identity": 1.0295834401904658,
+      "charged_matched_s_bpw": -0.0210303772827798,
+      "cold_expert_read_amplification": 1.0013533227237654,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 8,
+      "elapsed_seconds": 1.9324705600738525,
+      "exact_F_source_over_shannon_at_physical_rate": 2.7126955206024346,
+      "exact_s_bpw_source_vs_shannon": -0.7198635625919749,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.004714961119644537,
+      "folds": [
+        {
+          "gaussian_distortion": 0.11589178292973581,
+          "heldout_expert": 0,
+          "matched_F": 1.011515729300287,
+          "matched_s_bpw": -0.008259377153773846,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.11608634599390909,
+              "gaussian_oracle_gain": 0.9996139758664264,
+              "matched_F": 0.9937637394754729,
+              "matched_s_bpw": 0.0045125966009485425,
+              "role": 0,
+              "source_distortion": 0.11536240129695068,
+              "source_oracle_gain": 1.0006915915683143
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.1149727815581722,
+              "gaussian_oracle_gain": 1.0082033415392966,
+              "matched_F": 1.037713809243488,
+              "matched_s_bpw": -0.026704309075844396,
+              "role": 1,
+              "source_distortion": 0.11930884311005034,
+              "source_oracle_gain": 1.0021475811957141
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.11701221034505128,
+              "gaussian_oracle_gain": 1.0103460089628293,
+              "matched_F": 0.99630396030871,
+              "matched_s_bpw": 0.0026710683003610294,
+              "role": 2,
+              "source_distortion": 0.1165797285712504,
+              "source_oracle_gain": 1.011092553088747
+            }
+          ],
+          "source_distortion": 0.11722636133008227
+        },
+        {
+          "gaussian_distortion": 0.114541114803545,
+          "heldout_expert": 1,
+          "matched_F": 1.0444786093198082,
+          "matched_s_bpw": -0.03139147332350774,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.11458887754229907,
+              "gaussian_oracle_gain": 1.008389197648544,
+              "matched_F": 1.026260761919839,
+              "matched_s_bpw": -0.018698675477532234,
+              "role": 0,
+              "source_distortion": 0.11759806877409898,
+              "source_oracle_gain": 0.9989764099159687
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.11445765717981018,
+              "gaussian_oracle_gain": 0.99960414597134,
+              "matched_F": 1.05117793070775,
+              "matched_s_bpw": -0.036003445983513724,
+              "role": 1,
+              "source_distortion": 0.1203153632279299,
+              "source_oracle_gain": 1.0116104339030625
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.11459026899329412,
+              "gaussian_oracle_gain": 1.0130898213740727,
+              "matched_F": 1.0561874734044043,
+              "matched_s_bpw": -0.039432967985235316,
+              "role": 2,
+              "source_distortion": 0.12102880668475836,
+              "source_oracle_gain": 1.0089325531909783
+            }
+          ],
+          "source_distortion": 0.11963574429994718
+        },
+        {
+          "gaussian_distortion": 0.11736334803678114,
+          "heldout_expert": 2,
+          "matched_F": 1.0140859854142596,
+          "matched_s_bpw": -0.010089992576640904,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.11677732090313189,
+              "gaussian_oracle_gain": 1.0043550616788375,
+              "matched_F": 1.0344492581463203,
+              "matched_s_bpw": -0.024431439894240136,
+              "role": 0,
+              "source_distortion": 0.12080021297655956,
+              "source_oracle_gain": 1.013301226142002
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.11768727533863099,
+              "gaussian_oracle_gain": 1.0176181341589141,
+              "matched_F": 1.0034796205468504,
+              "matched_s_bpw": -0.0025056588063957093,
+              "role": 1,
+              "source_distortion": 0.11809678240000213,
+              "source_oracle_gain": 1.0026284826086171
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.11784096305689243,
+              "gaussian_oracle_gain": 1.0066603142202695,
+              "matched_F": 0.9963551104087361,
+              "matched_s_bpw": 0.0026340353744836163,
+              "role": 2,
+              "source_distortion": 0.11741144575722186,
+              "source_oracle_gain": 1.0027493127205105
+            }
+          ],
+          "source_distortion": 0.11901652644539591
+        },
+        {
+          "gaussian_distortion": 0.11810736436037175,
+          "heldout_expert": 3,
+          "matched_F": 1.0346980319823602,
+          "matched_s_bpw": -0.024604895299275502,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.11583749016813209,
+              "gaussian_oracle_gain": 1.0055765751383512,
+              "matched_F": 1.0309369957282117,
+              "matched_s_bpw": -0.021978083555776632,
+              "role": 0,
+              "source_distortion": 0.11942115410663036,
+              "source_oracle_gain": 1.0104731210463038
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.11944763782023776,
+              "gaussian_oracle_gain": 1.0035143821627268,
+              "matched_F": 1.0436072492928425,
+              "matched_s_bpw": -0.030789435405613734,
+              "role": 1,
+              "source_distortion": 0.12465642074010605,
+              "source_oracle_gain": 1.0141833651339949
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.11894802297324894,
+              "gaussian_oracle_gain": 0.9995065351294622,
+              "matched_F": 1.0264891706864578,
+              "matched_s_bpw": -0.018859203650507594,
+              "role": 2,
+              "source_distortion": 0.12209885745660404,
+              "source_oracle_gain": 1.008104465675235
+            }
+          ],
+          "source_distortion": 0.1222054574663002
+        },
+        {
+          "gaussian_distortion": 0.11530229520141716,
+          "heldout_expert": 4,
+          "matched_F": 1.0502981099672295,
+          "matched_s_bpw": -0.03539943572176672,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.11355492125007259,
+              "gaussian_oracle_gain": 1.0020372000750668,
+              "matched_F": 1.0473822489458806,
+              "matched_s_bpw": -0.03339402964215948,
+              "role": 0,
+              "source_distortion": 0.11893540879777341,
+              "source_oracle_gain": 1.0077742360140345
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.11760007138490895,
+              "gaussian_oracle_gain": 1.0109997816767298,
+              "matched_F": 1.0657244272616575,
+              "matched_s_bpw": -0.04591721866409451,
+              "role": 1,
+              "source_distortion": 0.12532926872261213,
+              "source_oracle_gain": 1.0146285276141878
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.11422378736747812,
+              "gaussian_oracle_gain": 1.0076698264103428,
+              "matched_F": 1.0331436463851456,
+              "matched_s_bpw": -0.023520428901986693,
+              "role": 2,
+              "source_distortion": 0.11800958018475786,
+              "source_oracle_gain": 1.0104457077198372
+            }
+          ],
+          "source_distortion": 0.12110178272493201
+        },
+        {
+          "gaussian_distortion": 0.11717241425191353,
+          "heldout_expert": 5,
+          "matched_F": 1.0186659412655092,
+          "matched_s_bpw": -0.013340507648393559,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.11649960559642082,
+              "gaussian_oracle_gain": 1.0126455950823963,
+              "matched_F": 1.0213881960909363,
+              "matched_s_bpw": -0.015265645710095352,
+              "role": 0,
+              "source_distortion": 0.11899132200543382,
+              "source_oracle_gain": 1.0091733165104666
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.11836174419090631,
+              "gaussian_oracle_gain": 1.0107722154422036,
+              "matched_F": 1.0155123005011184,
+              "matched_s_bpw": -0.01110385726877551,
+              "role": 1,
+              "source_distortion": 0.12019780713463214,
+              "source_oracle_gain": 0.9996085701568102
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.11602649560981526,
+              "gaussian_oracle_gain": 1.0046008331228724,
+              "matched_F": 1.0208244066268408,
+              "matched_s_bpw": -0.01486736382527247,
+              "role": 2,
+              "source_distortion": 0.11844267853388141,
+              "source_oracle_gain": 1.0104243960665569
+            }
+          ],
+          "source_distortion": 0.11935954765427767
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.041005772085844966,
+      "gaussian_shannon_distortion_at_physical_rate": 0.04415997858431819,
+      "matched_F_source_over_control": 1.0287868000538325,
+      "matched_gaussian_distortion": 0.11644062315856997,
+      "matched_s_bpw_before_side_charge": -0.02047201863115943,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 0,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0091921644228397,
+      "optimistic_2se_s_bpw": -0.006600455043490726,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.25,
+      "physical_rate_bpw": 2.2505583586516202,
+      "read_amplification_below_2x": true,
+      "side_bits": 15808,
+      "side_bpw": 0.0005583586516203704,
+      "source_distortion": 0.11979257609557938,
+      "stages": 9,
+      "table_bits_fp16": 13824,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 2,
+      "architecture": "role-conditioned-additive-rvq-d16-k2-m36",
+      "charged_matched_F_identity": 1.0336796018940886,
+      "charged_matched_s_bpw": -0.023894539447174516,
+      "cold_expert_read_amplification": 1.0052595727237654,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 16,
+      "elapsed_seconds": 7.694691181182861,
+      "exact_F_source_over_shannon_at_physical_rate": 2.519453519666397,
+      "exact_s_bpw_source_vs_shannon": -0.6665554204409262,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.004052367394578496,
+      "folds": [
+        {
+          "gaussian_distortion": 0.10732590977934882,
+          "heldout_expert": 0,
+          "matched_F": 1.0228906918407819,
+          "matched_s_bpw": -0.016325992011359973,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.10544235818062442,
+              "gaussian_oracle_gain": 1.0107710562865895,
+              "matched_F": 1.0316276339938237,
+              "matched_s_bpw": -0.022461161963951985,
+              "role": 0,
+              "source_distortion": 0.10877725049260688,
+              "source_oracle_gain": 0.9999667133896866
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.1072396893163201,
+              "gaussian_oracle_gain": 1.0046926526633795,
+              "matched_F": 1.0267637878730254,
+              "matched_s_bpw": -0.01905216032148893,
+              "role": 1,
+              "source_distortion": 0.11010982961275122,
+              "source_oracle_gain": 0.9966776651922674
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.1099598896169339,
+              "gaussian_oracle_gain": 1.0000916994531637,
+              "matched_F": 1.0060817801292181,
+              "matched_s_bpw": -0.004373790241469028,
+              "role": 2,
+              "source_distortion": 0.11062864148861717,
+              "source_oracle_gain": 1.0016004333571302
+            }
+          ],
+          "source_distortion": 0.10978267410663946
+        },
+        {
+          "gaussian_distortion": 0.1073843263147979,
+          "heldout_expert": 1,
+          "matched_F": 1.041998346509547,
+          "matched_s_bpw": -0.02967649414200649,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.10625069221235811,
+              "gaussian_oracle_gain": 1.0048849371890776,
+              "matched_F": 1.0514972790440535,
+              "matched_s_bpw": -0.036222558408726596,
+              "role": 0,
+              "source_distortion": 0.11172231375784177,
+              "source_oracle_gain": 1.0055718579910229
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.10912035617677478,
+              "gaussian_oracle_gain": 1.0052271463661309,
+              "matched_F": 1.0489754656980526,
+              "matched_s_bpw": -0.03449046768510326,
+              "role": 1,
+              "source_distortion": 0.11446457643766968,
+              "source_oracle_gain": 0.9992681583532422
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.10651424759637436,
+              "gaussian_oracle_gain": 1.002973479382404,
+              "matched_F": 1.0230324760094585,
+              "matched_s_bpw": -0.016425971971784734,
+              "role": 2,
+              "source_distortion": 0.10896753444880336,
+              "source_oracle_gain": 0.9999339334150369
+            }
+          ],
+          "source_distortion": 0.11189429046106104
+        },
+        {
+          "gaussian_distortion": 0.10804909499815132,
+          "heldout_expert": 2,
+          "matched_F": 1.0212559936806698,
+          "matched_s_bpw": -0.015172272736521926,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.10825366378486724,
+              "gaussian_oracle_gain": 1.0009464931084011,
+              "matched_F": 1.0210500534312192,
+              "matched_s_bpw": -0.01502679553048374,
+              "role": 0,
+              "source_distortion": 0.11053240919166393,
+              "source_oracle_gain": 1.0057981131759064
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.1084260552394798,
+              "gaussian_oracle_gain": 1.0077763863029274,
+              "matched_F": 1.0248255487758287,
+              "matched_s_bpw": -0.017689173725889098,
+              "role": 1,
+              "source_distortion": 0.1111177915623982,
+              "source_oracle_gain": 1.0008576333958756
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.10676174561257838,
+              "gaussian_oracle_gain": 1.0054289845475641,
+              "matched_F": 1.0133999483447071,
+              "matched_s_bpw": -0.009601830217828723,
+              "role": 2,
+              "source_distortion": 0.10819234748897769,
+              "source_oracle_gain": 1.0086376349947772
+            }
+          ],
+          "source_distortion": 0.11034578587863413
+        },
+        {
+          "gaussian_distortion": 0.10688210671149118,
+          "heldout_expert": 3,
+          "matched_F": 1.0475106653040032,
+          "matched_s_bpw": -0.033482466450553965,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.1065119108552084,
+              "gaussian_oracle_gain": 1.002099058222502,
+              "matched_F": 1.0431759415751014,
+              "matched_s_bpw": -0.03049125133116563,
+              "role": 0,
+              "source_distortion": 0.1111106628953453,
+              "source_oracle_gain": 1.0086870989502121
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.10662023586838944,
+              "gaussian_oracle_gain": 1.0043798536649022,
+              "matched_F": 1.082471559941139,
+              "matched_s_bpw": -0.05716456057259271,
+              "role": 1,
+              "source_distortion": 0.11541337304174769,
+              "source_oracle_gain": 1.0186839558221819
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.10769665265992656,
+              "gaussian_oracle_gain": 1.0014468953642988,
+              "matched_F": 1.0038655754240509,
+              "matched_s_bpw": -0.002783047665732506,
+              "role": 2,
+              "source_distortion": 0.10811296219370133,
+              "source_oracle_gain": 1.0093962265287246
+            }
+          ],
+          "source_distortion": 0.11196014671044759
+        },
+        {
+          "gaussian_distortion": 0.10770255457255264,
+          "heldout_expert": 4,
+          "matched_F": 1.0415194079717645,
+          "matched_s_bpw": -0.029344861611381973,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.10646496861738618,
+              "gaussian_oracle_gain": 1.0000948297967394,
+              "matched_F": 1.0464965751660198,
+              "matched_s_bpw": -0.03278379507101831,
+              "role": 0,
+              "source_distortion": 0.11141522503325242,
+              "source_oracle_gain": 1.0118751497565137
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.10807410249922562,
+              "gaussian_oracle_gain": 1.0025231865627162,
+              "matched_F": 1.0696018141921801,
+              "matched_s_bpw": -0.048536908777861314,
+              "role": 1,
+              "source_distortion": 0.11559625610036335,
+              "source_oracle_gain": 1.0136269658016726
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.10853737168235439,
+              "gaussian_oracle_gain": 1.0040605371287872,
+              "matched_F": 1.0007648764983066,
+              "matched_s_bpw": -0.0005515308658795228,
+              "role": 2,
+              "source_distortion": 0.10862038936714219,
+              "source_oracle_gain": 1.0076572971127487
+            }
+          ],
+          "source_distortion": 0.11217430087545167
+        },
+        {
+          "gaussian_distortion": 0.1087357483358678,
+          "heldout_expert": 5,
+          "matched_F": 1.0125397281111033,
+          "matched_s_bpw": -0.008989257418107004,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.10750597030649557,
+              "gaussian_oracle_gain": 1.006745241484068,
+              "matched_F": 1.0337508351865414,
+              "matched_s_bpw": -0.023944247488598965,
+              "role": 0,
+              "source_distortion": 0.11113438659187933,
+              "source_oracle_gain": 1.0027351402014748
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.11125784628161464,
+              "gaussian_oracle_gain": 1.0022875850135613,
+              "matched_F": 0.9817052439091665,
+              "matched_s_bpw": 0.013319086590988355,
+              "role": 1,
+              "source_distortion": 0.10922241112070105,
+              "source_oracle_gain": 1.0045867677316533
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.10610273053480299,
+              "gaussian_oracle_gain": 1.006544816091074,
+              "matched_F": 1.0403938117700247,
+              "matched_s_bpw": -0.02856486165695535,
+              "role": 2,
+              "source_distortion": 0.11038862426031147,
+              "source_oracle_gain": 1.0071124967581666
+            }
+          ],
+          "source_distortion": 0.11009926505595694
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.06703238909168652,
+      "gaussian_shannon_distortion_at_physical_rate": 0.044070393702325066,
+      "matched_F_source_over_control": 1.0307844468094156,
+      "matched_gaussian_distortion": 0.10771729130186995,
+      "matched_s_bpw_before_side_charge": -0.021871337045554145,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 0,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0150702737867625,
+      "optimistic_2se_s_bpw": -0.010789804658017522,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.25,
+      "physical_rate_bpw": 2.2520232024016202,
+      "read_amplification_below_2x": true,
+      "side_bits": 57280,
+      "side_bpw": 0.00202320240162037,
+      "source_distortion": 0.1110333085264067,
+      "stages": 36,
+      "table_bits_fp16": 55296,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 3,
+      "architecture": "role-conditioned-additive-rvq-d16-k3-m23",
+      "charged_matched_F_identity": 1.039472074270267,
+      "charged_matched_s_bpw": -0.027925500140482458,
+      "cold_expert_read_amplification": 1.0049797397613085,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 16,
+      "elapsed_seconds": 5.450549840927124,
+      "exact_F_source_over_shannon_at_physical_rate": 2.684202847497038,
+      "exact_s_bpw_source_vs_shannon": -0.7122468506758962,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.005445946654259236,
+      "folds": [
+        {
+          "gaussian_distortion": 0.11078436954307873,
+          "heldout_expert": 0,
+          "matched_F": 1.017420856769748,
+          "matched_s_bpw": -0.01245828717863882,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.11164637444085672,
+              "gaussian_oracle_gain": 1.0067449218079514,
+              "matched_F": 0.9976706050915043,
+              "matched_s_bpw": 0.0016822633307600624,
+              "role": 0,
+              "source_distortion": 0.11138630594468218,
+              "source_oracle_gain": 1.0035483419628273
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.1099002270565931,
+              "gaussian_oracle_gain": 1.0048468664447443,
+              "matched_F": 1.0337887227826748,
+              "matched_s_bpw": -0.023970684828986566,
+              "role": 1,
+              "source_distortion": 0.11361361536236132,
+              "source_oracle_gain": 0.9951159849334518
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.11096497613209569,
+              "gaussian_oracle_gain": 1.0022783154378894,
+              "matched_F": 1.01951686722008,
+              "matched_s_bpw": -0.013942821984986491,
+              "role": 2,
+              "source_distortion": 0.11313066483734516,
+              "source_oracle_gain": 1.0038609832419336
+            }
+          ],
+          "source_distortion": 0.11271432817721554
+        },
+        {
+          "gaussian_distortion": 0.10932081237485616,
+          "heldout_expert": 1,
+          "matched_F": 1.046743659431632,
+          "matched_s_bpw": -0.032954089545796754,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.10915680820612479,
+              "gaussian_oracle_gain": 1.005717045275229,
+              "matched_F": 1.037405386474048,
+              "matched_s_bpw": -0.026489882837504346,
+              "role": 0,
+              "source_distortion": 0.11323986080334843,
+              "source_oracle_gain": 1.0034463120592005
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.10864466274935435,
+              "gaussian_oracle_gain": 1.005068646258164,
+              "matched_F": 1.0687635767963999,
+              "matched_s_bpw": -0.047971373532566516,
+              "role": 1,
+              "source_distortion": 0.11611545835983854,
+              "source_oracle_gain": 1.0033539705529375
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.11031833416686733,
+              "gaussian_oracle_gain": 1.0015437392367268,
+              "matched_F": 1.0305223514305466,
+              "matched_s_bpw": -0.02168789821650899,
+              "role": 2,
+              "source_distortion": 0.11368550913154093,
+              "source_oracle_gain": 0.9991378941096235
+            }
+          ],
+          "source_distortion": 0.11443086719729577
+        },
+        {
+          "gaussian_distortion": 0.1110640615919094,
+          "heldout_expert": 2,
+          "matched_F": 1.0093902012737235,
+          "matched_s_bpw": -0.006741993376756365,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.10958653969086278,
+              "gaussian_oracle_gain": 1.0023320091902663,
+              "matched_F": 1.0180118197717922,
+              "matched_s_bpw": -0.012877156063952684,
+              "role": 0,
+              "source_distortion": 0.11156039269318896,
+              "source_oracle_gain": 1.00238367911825
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.11200008321703905,
+              "gaussian_oracle_gain": 1.0063782448327772,
+              "matched_F": 1.0072685265804269,
+              "matched_s_bpw": -0.005224170531739468,
+              "role": 1,
+              "source_distortion": 0.11281415879891211,
+              "source_oracle_gain": 1.0017080899564266
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.1119953871396295,
+              "gaussian_oracle_gain": 1.0063581190820174,
+              "matched_F": 0.9967030647121842,
+              "matched_s_bpw": 0.002382165178517007,
+              "role": 2,
+              "source_distortion": 0.11162614559569627,
+              "source_oracle_gain": 1.0086206620407323
+            }
+          ],
+          "source_distortion": 0.11210697548453466
+        },
+        {
+          "gaussian_distortion": 0.10873963263161708,
+          "heldout_expert": 3,
+          "matched_F": 1.0580363896732794,
+          "matched_s_bpw": -0.04069462388587073,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.10949482338651419,
+              "gaussian_oracle_gain": 1.000360007660572,
+              "matched_F": 1.0307743667293932,
+              "matched_s_bpw": -0.02186428292642605,
+              "role": 0,
+              "source_distortion": 0.1128644572363809,
+              "source_oracle_gain": 1.00379162396542
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.10815096780246561,
+              "gaussian_oracle_gain": 1.007209086094292,
+              "matched_F": 1.0917846660694606,
+              "matched_s_bpw": -0.06334416996599782,
+              "role": 1,
+              "source_distortion": 0.1180775682673039,
+              "source_oracle_gain": 1.0181467209353041
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.10866122614825123,
+              "gaussian_oracle_gain": 0.9995557710860316,
+              "matched_F": 1.043720081218635,
+              "matched_s_bpw": -0.030867421286205475,
+              "role": 2,
+              "source_distortion": 0.11341190378076924,
+              "source_oracle_gain": 1.0047604637313332
+            }
+          ],
+          "source_distortion": 0.11505048832395487
+        },
+        {
+          "gaussian_distortion": 0.11012549223111474,
+          "heldout_expert": 4,
+          "matched_F": 1.0387780731992626,
+          "matched_s_bpw": -0.027443733332023233,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.11088470072954763,
+              "gaussian_oracle_gain": 0.9971678686450272,
+              "matched_F": 1.023232803271744,
+              "matched_s_bpw": -0.016567210330126498,
+              "role": 0,
+              "source_distortion": 0.11346086316744342,
+              "source_oracle_gain": 1.0097900137657831
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.10797519171562994,
+              "gaussian_oracle_gain": 0.9995342053970923,
+              "matched_F": 1.0927408407166979,
+              "matched_s_bpw": -0.06397564279870341,
+              "role": 1,
+              "source_distortion": 0.11798890177188409,
+              "source_oracle_gain": 1.0143630033051636
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.1120604858053594,
+              "gaussian_oracle_gain": 1.0020974330150294,
+              "matched_F": 0.9888440875856844,
+              "matched_s_bpw": 0.00809251384675952,
+              "role": 2,
+              "source_distortion": 0.11081034884060917,
+              "source_oracle_gain": 1.0060043456388612
+            }
+          ],
+          "source_distortion": 0.11439594662995775
+        },
+        {
+          "gaussian_distortion": 0.10845668912150468,
+          "heldout_expert": 5,
+          "matched_F": 1.048746624105055,
+          "matched_s_bpw": -0.03433308333267578,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.11001020674298181,
+              "gaussian_oracle_gain": 1.0072336972961766,
+              "matched_F": 1.0618761605228602,
+              "matched_s_bpw": -0.043307762064799846,
+              "role": 0,
+              "source_distortion": 0.11681721595456358,
+              "source_oracle_gain": 1.0009246487254597
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.10690367147888752,
+              "gaussian_oracle_gain": 1.0050049752909722,
+              "matched_F": 1.0479579818392641,
+              "matched_s_bpw": -0.033790436392175806,
+              "role": 1,
+              "source_distortion": 0.11203055581422267,
+              "source_oracle_gain": 1.003863804562864
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.10925750822569692,
+              "gaussian_oracle_gain": 1.0063244094643637,
+              "matched_F": 1.0363175771806417,
+              "matched_s_bpw": -0.025733090708331057,
+              "role": 2,
+              "source_distortion": 0.11322547621324826,
+              "source_oracle_gain": 1.008382370614963
+            }
+          ],
+          "source_distortion": 0.11374358657778946
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.07475959397811711,
+      "gaussian_shannon_distortion_at_physical_rate": 0.04237475220908907,
+      "matched_F_source_over_control": 1.036677339103598,
+      "matched_gaussian_distortion": 0.10971825683000841,
+      "matched_s_bpw_before_side_charge": -0.02598346601956955,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 6,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0168220448717014,
+      "optimistic_2se_s_bpw": -0.012033606831963983,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.278383594786662,
+      "physical_rate_bpw": 2.280325628907575,
+      "read_amplification_below_2x": true,
+      "side_bits": 54982,
+      "side_bpw": 0.0019420341209129052,
+      "source_distortion": 0.11374243054161827,
+      "stages": 23,
+      "table_bits_fp16": 52992,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 4,
+      "architecture": "role-conditioned-additive-rvq-d16-k4-m18",
+      "charged_matched_F_identity": 1.032796455087085,
+      "charged_matched_s_bpw": -0.0232779769701469,
+      "cold_expert_read_amplification": 1.0052595727237654,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 16,
+      "elapsed_seconds": 4.4667041301727295,
+      "exact_F_source_over_shannon_at_physical_rate": 2.6695547035355447,
+      "exact_s_bpw_source_vs_shannon": -0.7082995562413956,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.0032832289841245757,
+      "folds": [
+        {
+          "gaussian_distortion": 0.11497168953490094,
+          "heldout_expert": 0,
+          "matched_F": 1.0124154476291458,
+          "matched_s_bpw": -0.008900712823454983,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.1140825351703238,
+              "gaussian_oracle_gain": 1.0062617033287722,
+              "matched_F": 1.0182785643113956,
+              "matched_s_bpw": -0.013066142384213933,
+              "role": 0,
+              "source_distortion": 0.1161678001262416,
+              "source_oracle_gain": 1.0045024096522954
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.11565192334727735,
+              "gaussian_oracle_gain": 1.005198588550141,
+              "matched_F": 1.015061626914134,
+              "matched_s_bpw": -0.010783659835478606,
+              "role": 1,
+              "source_distortion": 0.11739382946863607,
+              "source_oracle_gain": 0.9984854638740098
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.11513318883256725,
+              "gaussian_oracle_gain": 1.0038244558359937,
+              "matched_F": 1.0007013105444122,
+              "matched_s_bpw": -0.0005057113126553555,
+              "role": 2,
+              "source_distortion": 0.11521393295190732,
+              "source_oracle_gain": 1.0006196893129657
+            }
+          ],
+          "source_distortion": 0.11639911452515592
+        },
+        {
+          "gaussian_distortion": 0.11392185106746752,
+          "heldout_expert": 1,
+          "matched_F": 1.038660921777453,
+          "matched_s_bpw": -0.027362376538458775,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.11246196071500998,
+              "gaussian_oracle_gain": 1.0050140004530566,
+              "matched_F": 1.0448728816858182,
+              "matched_s_bpw": -0.031663717987176154,
+              "role": 0,
+              "source_distortion": 0.11750845297232974,
+              "source_oracle_gain": 1.0084185689620064
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.11420674471550464,
+              "gaussian_oracle_gain": 1.002786837204715,
+              "matched_F": 1.0588716009610302,
+              "matched_s_bpw": -0.04126382918472468,
+              "role": 1,
+              "source_distortion": 0.12093027861745408,
+              "source_oracle_gain": 1.0024107396853916
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.1151646478906198,
+              "gaussian_oracle_gain": 1.0045475135547757,
+              "matched_F": 1.0077817691532431,
+              "matched_s_bpw": -0.005591631598172883,
+              "role": 2,
+              "source_distortion": 0.11606083259511912,
+              "source_oracle_gain": 0.9985481725857096
+            }
+          ],
+          "source_distortion": 0.11832617484032952
+        },
+        {
+          "gaussian_distortion": 0.11402261378965914,
+          "heldout_expert": 2,
+          "matched_F": 1.0304983238963166,
+          "matched_s_bpw": -0.021671079169085054,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.1126566636803518,
+              "gaussian_oracle_gain": 1.003283240111447,
+              "matched_F": 1.0481185013498269,
+              "matched_s_bpw": -0.033900919336937035,
+              "role": 0,
+              "source_distortion": 0.11807753350372181,
+              "source_oracle_gain": 1.0012418216730126
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.11560067424380804,
+              "gaussian_oracle_gain": 1.0069402833543446,
+              "matched_F": 1.0211751842506127,
+              "matched_s_bpw": -0.015115192054773177,
+              "role": 1,
+              "source_distortion": 0.11804853982041574,
+              "source_oracle_gain": 1.0007977780941502
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.11325374775896704,
+              "gaussian_oracle_gain": 1.006559453674132,
+              "matched_F": 1.0158204228917784,
+              "matched_s_bpw": -0.011322692245085473,
+              "role": 2,
+              "source_distortion": 0.1150454699425927,
+              "source_oracle_gain": 1.0063159344380155
+            }
+          ],
+          "source_distortion": 0.11750011239652078
+        },
+        {
+          "gaussian_distortion": 0.11509936691458372,
+          "heldout_expert": 3,
+          "matched_F": 1.0366690699353378,
+          "matched_s_bpw": -0.02597771209056414,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.11588417280845117,
+              "gaussian_oracle_gain": 1.000095472497401,
+              "matched_F": 1.0245339149717136,
+              "matched_s_bpw": -0.0174838712139408,
+              "role": 0,
+              "source_distortion": 0.11872726525070108,
+              "source_oracle_gain": 1.007502083931707
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.11483095555476341,
+              "gaussian_oracle_gain": 1.0030134953158496,
+              "matched_F": 1.0592367245943526,
+              "matched_s_bpw": -0.04151252376467973,
+              "role": 1,
+              "source_distortion": 0.12163316524386728,
+              "source_oracle_gain": 1.0152713284372035
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.11453378063804733,
+              "gaussian_oracle_gain": 0.9985038958031249,
+              "matched_F": 1.0195357503544664,
+              "matched_s_bpw": -0.013956182407420721,
+              "role": 2,
+              "source_distortion": 0.11677128398374544,
+              "source_oracle_gain": 1.0058677248243066
+            }
+          ],
+          "source_distortion": 0.1193199536494877
+        },
+        {
+          "gaussian_distortion": 0.11359996523808633,
+          "heldout_expert": 4,
+          "matched_F": 1.0412293070152578,
+          "matched_s_bpw": -0.029143912158860783,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.11397815273914494,
+              "gaussian_oracle_gain": 0.996934032513098,
+              "matched_F": 1.0303747755267865,
+              "matched_s_bpw": -0.021584590282265958,
+              "role": 0,
+              "source_distortion": 0.11744021354355424,
+              "source_oracle_gain": 1.0107722528217058
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.11372300136881186,
+              "gaussian_oracle_gain": 1.0008193145461866,
+              "matched_F": 1.0598835020392918,
+              "matched_s_bpw": -0.041952849249576284,
+              "role": 1,
+              "source_distortion": 0.1205331329531955,
+              "source_oracle_gain": 1.0147309459066944
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.11304370432056365,
+              "gaussian_oracle_gain": 1.00288938409892,
+              "matched_F": 1.0289054454309303,
+              "matched_s_bpw": -0.02055520361556549,
+              "role": 2,
+              "source_distortion": 0.11631128294711193,
+              "source_oracle_gain": 1.0100446095548132
+            }
+          ],
+          "source_distortion": 0.11828361308181001
+        },
+        {
+          "gaussian_distortion": 0.11391326156754139,
+          "heldout_expert": 5,
+          "matched_F": 1.0199830539829708,
+          "matched_s_bpw": -0.014272591717101685,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.11645699689994454,
+              "gaussian_oracle_gain": 1.0100051265576249,
+              "matched_F": 1.0213878015635374,
+              "matched_s_bpw": -0.015265367078114827,
+              "role": 0,
+              "source_distortion": 0.11894775604032604,
+              "source_oracle_gain": 1.0019746722803888
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.1124285343063074,
+              "gaussian_oracle_gain": 1.000843167841128,
+              "matched_F": 1.0089766603059696,
+              "matched_s_bpw": -0.006446401171450058,
+              "role": 1,
+              "source_distortion": 0.11343776706747317,
+              "source_oracle_gain": 1.0047353179500704
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.11358811954310503,
+              "gaussian_oracle_gain": 1.0059427138947856,
+              "matched_F": 1.0353457519196025,
+              "matched_s_bpw": -0.02505631684847574,
+              "role": 2,
+              "source_distortion": 0.11760297703748979,
+              "source_oracle_gain": 1.0060484938478895
+            }
+          ],
+          "source_distortion": 0.11618959642282185
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.07275860161254598,
+      "gaussian_shannon_distortion_at_physical_rate": 0.044070393702325066,
+      "matched_F_source_over_control": 1.0299037735415668,
+      "matched_gaussian_distortion": 0.11423234851363213,
+      "matched_s_bpw_before_side_charge": -0.02125477456852653,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 0,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0163681264891151,
+      "optimistic_2se_s_bpw": -0.011711519001897746,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.25,
+      "physical_rate_bpw": 2.2520232024016202,
+      "read_amplification_below_2x": true,
+      "side_bits": 57280,
+      "side_bpw": 0.00202320240162037,
+      "source_distortion": 0.11764832679470513,
+      "stages": 18,
+      "table_bits_fp16": 55296,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 2,
+      "architecture": "role-conditioned-additive-rvq-d32-k2-m72",
+      "charged_matched_F_identity": 1.0450977912304757,
+      "charged_matched_s_bpw": -0.03181897178579801,
+      "cold_expert_read_amplification": 1.0208845727237654,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 32,
+      "elapsed_seconds": 20.614005088806152,
+      "exact_F_source_over_shannon_at_physical_rate": 2.498123321553334,
+      "exact_s_bpw_source_vs_shannon": -0.6604223491618664,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.003917833088053565,
+      "folds": [
+        {
+          "gaussian_distortion": 0.10590882840327388,
+          "heldout_expert": 0,
+          "matched_F": 1.021517652159224,
+          "matched_s_bpw": -0.01535706726441784,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.10663259216290033,
+              "gaussian_oracle_gain": 1.0027933638795818,
+              "matched_F": 1.0164142453256342,
+              "matched_s_bpw": -0.011744250207004365,
+              "role": 0,
+              "source_distortion": 0.10838288569037047,
+              "source_oracle_gain": 1.0039881182256098
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.10556566319023256,
+              "gaussian_oracle_gain": 1.0007768560282988,
+              "matched_F": 1.0304713792556282,
+              "matched_s_bpw": -0.021652217708170572,
+              "role": 1,
+              "source_distortion": 0.10878239454967403,
+              "source_oracle_gain": 0.9945861727831972
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.10546141440257491,
+              "gaussian_oracle_gain": 1.0023598477103606,
+              "matched_F": 1.0149289975748292,
+              "matched_s_bpw": -0.010689401424599645,
+              "role": 2,
+              "source_distortion": 0.10703584760242901,
+              "source_oracle_gain": 1.0004094026699695
+            }
+          ],
+          "source_distortion": 0.10818773773344646
+        },
+        {
+          "gaussian_distortion": 0.10648230425755381,
+          "heldout_expert": 1,
+          "matched_F": 1.0218012241372654,
+          "matched_s_bpw": -0.01555728461366652,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.1085918087807898,
+              "gaussian_oracle_gain": 1.0032494850246798,
+              "matched_F": 0.992890464778365,
+              "matched_s_bpw": 0.005146762905934463,
+              "role": 0,
+              "source_distortion": 0.10781977149148173,
+              "source_oracle_gain": 1.0019543828914
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.10586977838720418,
+              "gaussian_oracle_gain": 1.0013734536384162,
+              "matched_F": 1.0394865044264667,
+              "matched_s_bpw": -0.02793551395942157,
+              "role": 1,
+              "source_distortion": 0.11005020586011957,
+              "source_oracle_gain": 1.0039844790420074
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.10492983179060543,
+              "gaussian_oracle_gain": 1.0039435417564182,
+              "matched_F": 1.0327281250133777,
+              "matched_s_bpw": -0.023230250857629666,
+              "role": 2,
+              "source_distortion": 0.10836398844308105,
+              "source_oracle_gain": 1.001829805751156
+            }
+          ],
+          "source_distortion": 0.10880374883932523
+        },
+        {
+          "gaussian_distortion": 0.10560189590153317,
+          "heldout_expert": 2,
+          "matched_F": 1.0233396987611023,
+          "matched_s_bpw": -0.01664256441231894,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.10577781746076642,
+              "gaussian_oracle_gain": 1.0027457123850254,
+              "matched_F": 1.0221350042639654,
+              "matched_s_bpw": -0.015792880485556642,
+              "role": 0,
+              "source_distortion": 0.10811920990129345,
+              "source_oracle_gain": 1.003634965081796
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.10451809860182311,
+              "gaussian_oracle_gain": 1.0049057575854479,
+              "matched_F": 1.037821958113208,
+              "matched_s_bpw": -0.026779482840911587,
+              "role": 1,
+              "source_distortion": 0.10847117774921342,
+              "source_oracle_gain": 1.0015048566493692
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.10771459765480525,
+              "gaussian_oracle_gain": 1.0003102749454489,
+              "matched_F": 0.9936637446269285,
+              "matched_s_bpw": 0.004585183939799965,
+              "role": 2,
+              "source_distortion": 0.10703209045665675,
+              "source_oracle_gain": 1.0030656213513993
+            }
+          ],
+          "source_distortion": 0.10806661234047624
+        },
+        {
+          "gaussian_distortion": 0.10554558073237398,
+          "heldout_expert": 3,
+          "matched_F": 1.0484988209299493,
+          "matched_s_bpw": -0.03416261953963167,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.10564407348170247,
+              "gaussian_oracle_gain": 0.9999738206809481,
+              "matched_F": 1.0396745919169108,
+              "matched_s_bpw": -0.028066024717310588,
+              "role": 0,
+              "source_distortion": 0.10983545898552916,
+              "source_oracle_gain": 1.0031653729672756
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.10487619656856664,
+              "gaussian_oracle_gain": 1.0043673520320067,
+              "matched_F": 1.0663585180333124,
+              "matched_s_bpw": -0.04634628247736212,
+              "role": 1,
+              "source_distortion": 0.1118356255498271,
+              "source_oracle_gain": 1.0073623252724622
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.1063709316511782,
+              "gaussian_oracle_gain": 1.0017309558199567,
+              "matched_F": 1.034212758066934,
+              "matched_s_bpw": -0.024266503577668002,
+              "role": 2,
+              "source_distortion": 0.11001017460111433,
+              "source_oracle_gain": 1.0039292242521136
+            }
+          ],
+          "source_distortion": 0.11066441695226088
+        },
+        {
+          "gaussian_distortion": 0.10493849640618316,
+          "heldout_expert": 4,
+          "matched_F": 1.0519848586496074,
+          "matched_s_bpw": -0.03655696994422971,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.10355622150991073,
+              "gaussian_oracle_gain": 1.0047039128529622,
+              "matched_F": 1.0454143633478614,
+              "matched_s_bpw": -0.032037443142841814,
+              "role": 0,
+              "source_distortion": 0.10825916138049343,
+              "source_oracle_gain": 1.002084483172957
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.1052383955547445,
+              "gaussian_oracle_gain": 0.9995215589382553,
+              "matched_F": 1.078375971039272,
+              "matched_s_bpw": -0.054430127536945594,
+              "role": 1,
+              "source_distortion": 0.11348655699696261,
+              "source_oracle_gain": 1.0094346158977183
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.10601741645269672,
+              "gaussian_oracle_gain": 1.0050594774957349,
+              "matched_F": 1.0254186450307636,
+              "matched_s_bpw": -0.018106517695069636,
+              "role": 2,
+              "source_distortion": 0.10871223552858644,
+              "source_oracle_gain": 0.9997022839469696
+            }
+          ],
+          "source_distortion": 0.11039370930876094
+        },
+        {
+          "gaussian_distortion": 0.10549524178376336,
+          "heldout_expert": 5,
+          "matched_F": 1.033190882180523,
+          "matched_s_bpw": -0.023553408483372545,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.105808585111274,
+              "gaussian_oracle_gain": 0.9976986927348985,
+              "matched_F": 1.0486830453363856,
+              "matched_s_bpw": -0.03428935134221641,
+              "role": 0,
+              "source_distortion": 0.11095966925722496,
+              "source_oracle_gain": 1.0045844350240711
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.10564322026706911,
+              "gaussian_oracle_gain": 1.004017461950735,
+              "matched_F": 1.01751047783052,
+              "matched_s_bpw": -0.01252182537170707,
+              "role": 1,
+              "source_distortion": 0.10749308353350036,
+              "source_oracle_gain": 0.9998842173838459
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.10494352469746246,
+              "gaussian_oracle_gain": 0.9995408994977542,
+              "matched_F": 1.0415057940987968,
+              "matched_s_bpw": -0.029335432696648525,
+              "role": 2,
+              "source_distortion": 0.10929928902555733,
+              "source_oracle_gain": 1.0078585747448174
+            }
+          ],
+          "source_distortion": 0.10899672192441404
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.11793506631555625,
+      "gaussian_shannon_distortion_at_physical_rate": 0.04371386784978029,
+      "matched_F_source_over_control": 1.0337395810977223,
+      "matched_gaussian_distortion": 0.10563843616675193,
+      "matched_s_bpw_before_side_charge": -0.023936394384177637,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 0,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0266657849705954,
+      "optimistic_2se_s_bpw": -0.01898330560969088,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.25,
+      "physical_rate_bpw": 2.2578825774016202,
+      "read_amplification_below_2x": true,
+      "side_bits": 223168,
+      "side_bpw": 0.00788257740162037,
+      "source_distortion": 0.10920263275083662,
+      "stages": 72,
+      "table_bits_fp16": 221184,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 3,
+      "architecture": "role-conditioned-additive-rvq-d32-k3-m45",
+      "charged_matched_F_identity": 1.0441220606210697,
+      "charged_matched_s_bpw": -0.031145188309859396,
+      "cold_expert_read_amplification": 1.0197682803286736,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 32,
+      "elapsed_seconds": 14.0020911693573,
+      "exact_F_source_over_shannon_at_physical_rate": 2.591459455128948,
+      "exact_s_bpw_source_vs_shannon": -0.686882411053476,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.004005726653340009,
+      "folds": [
+        {
+          "gaussian_distortion": 0.11295347469598574,
+          "heldout_expert": 0,
+          "matched_F": 1.035817501561872,
+          "matched_s_bpw": -0.025384920052529708,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.1128159757463563,
+              "gaussian_oracle_gain": 1.0019036601382607,
+              "matched_F": 1.0192467998646015,
+              "matched_s_bpw": -0.013751713597572978,
+              "role": 0,
+              "source_distortion": 0.11498732225307616,
+              "source_oracle_gain": 1.000177595767179
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.11385111565022904,
+              "gaussian_oracle_gain": 1.0016664743279433,
+              "matched_F": 1.0479933565448494,
+              "matched_s_bpw": -0.03381478567519156,
+              "role": 1,
+              "source_distortion": 0.11931521283665937,
+              "source_oracle_gain": 0.9966881692046871
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.1117892236785929,
+              "gaussian_oracle_gain": 1.0039722697907199,
+              "matched_F": 1.0394449413587277,
+              "matched_s_bpw": -0.027906670857432408,
+              "role": 2,
+              "source_distortion": 0.11619874305113269,
+              "source_oracle_gain": 1.0003496677168504
+            }
+          ],
+          "source_distortion": 0.11699918595232808
+        },
+        {
+          "gaussian_distortion": 0.1135974265457376,
+          "heldout_expert": 1,
+          "matched_F": 1.0282408225429374,
+          "matched_s_bpw": -0.02008909763522852,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.11171368090344733,
+              "gaussian_oracle_gain": 1.004078639683664,
+              "matched_F": 1.0274205617581522,
+              "matched_s_bpw": -0.019513425864435264,
+              "role": 0,
+              "source_distortion": 0.11477693278989082,
+              "source_oracle_gain": 1.0027716976954124
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.11530810824994576,
+              "gaussian_oracle_gain": 0.9994314329465116,
+              "matched_F": 1.035272108773681,
+              "matched_s_bpw": -0.025005006269407416,
+              "role": 1,
+              "source_distortion": 0.11937526838662524,
+              "source_oracle_gain": 1.0037465153640535
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.11357395946024908,
+              "gaussian_oracle_gain": 1.0014832810868644,
+              "matched_F": 1.0204701795675173,
+              "matched_s_bpw": -0.014617012097295212,
+              "role": 2,
+              "source_distortion": 0.11589883880459431,
+              "source_oracle_gain": 1.0018969934497128
+            }
+          ],
+          "source_distortion": 0.11680551131015014
+        },
+        {
+          "gaussian_distortion": 0.11288276282046737,
+          "heldout_expert": 2,
+          "matched_F": 1.0250666159904527,
+          "matched_s_bpw": -0.017858834590318968,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.11219641302236433,
+              "gaussian_oracle_gain": 1.0045492483240157,
+              "matched_F": 1.0321734028359204,
+              "matched_s_bpw": -0.022842680340126778,
+              "role": 0,
+              "source_distortion": 0.11580615341527817,
+              "source_oracle_gain": 1.0012174099740838
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.11348342861682871,
+              "gaussian_oracle_gain": 1.004615494268555,
+              "matched_F": 1.0178284001790112,
+              "matched_s_bpw": -0.012747176051263175,
+              "role": 1,
+              "source_distortion": 0.11550665659589579,
+              "source_oracle_gain": 1.0029038383163122
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.11293610194348835,
+              "gaussian_oracle_gain": 1.001122986656952,
+              "matched_F": 1.0270207607347182,
+              "matched_s_bpw": -0.019232672671430032,
+              "role": 2,
+              "source_distortion": 0.11598772133241508,
+              "source_oracle_gain": 1.0033659070445338
+            }
+          ],
+          "source_distortion": 0.11571235168802939
+        },
+        {
+          "gaussian_distortion": 0.11194913036831479,
+          "heldout_expert": 3,
+          "matched_F": 1.0606776931672572,
+          "matched_s_bpw": -0.04249316643447731,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.11260784712412274,
+              "gaussian_oracle_gain": 1.0027377120277776,
+              "matched_F": 1.0418162253461265,
+              "matched_s_bpw": -0.02955040552379382,
+              "role": 0,
+              "source_distortion": 0.11731668223520722,
+              "source_oracle_gain": 1.0045021648855446
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.11137116302292535,
+              "gaussian_oracle_gain": 1.0004705112315253,
+              "matched_F": 1.0927753880508924,
+              "matched_s_bpw": -0.06399844805956877,
+              "role": 1,
+              "source_distortion": 0.12170366589005643,
+              "source_oracle_gain": 1.0061056966413278
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.11197168929038755,
+              "gaussian_oracle_gain": 1.0010896353450474,
+              "matched_F": 1.0384802477676562,
+              "matched_s_bpw": -0.027236887957119024,
+              "role": 2,
+              "source_distortion": 0.11628038763724467,
+              "source_oracle_gain": 1.0053350163028645
+            }
+          ],
+          "source_distortion": 0.11874194535114468
+        },
+        {
+          "gaussian_distortion": 0.11294411600208829,
+          "heldout_expert": 4,
+          "matched_F": 1.0327170364302336,
+          "matched_s_bpw": -0.02322250558110947,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.11304399301592974,
+              "gaussian_oracle_gain": 1.0018748121732042,
+              "matched_F": 1.0279464365681696,
+              "matched_s_bpw": -0.019882545830705554,
+              "role": 0,
+              "source_distortion": 0.11620316979616203,
+              "source_oracle_gain": 1.000266025904936
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.11245173351161938,
+              "gaussian_oracle_gain": 1.0019582365712576,
+              "matched_F": 1.0587104040703548,
+              "matched_s_bpw": -0.04115400677658145,
+              "role": 1,
+              "source_distortion": 0.11905382022449842,
+              "source_oracle_gain": 1.010725997942485
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.11346536153095525,
+              "gaussian_oracle_gain": 1.0067597378179385,
+              "matched_F": 1.0049463488876238,
+              "matched_s_bpw": -0.0035592411200802577,
+              "role": 2,
+              "source_distortion": 0.11402660079574772,
+              "source_oracle_gain": 1.0026060765823641
+            }
+          ],
+          "source_distortion": 0.11663931275990914
+        },
+        {
+          "gaussian_distortion": 0.11336334710979325,
+          "heldout_expert": 5,
+          "matched_F": 1.0207900896932662,
+          "matched_s_bpw": -0.014843113963224337,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.11369101228383174,
+              "gaussian_oracle_gain": 0.9968324734471962,
+              "matched_F": 1.036635544782498,
+              "matched_s_bpw": -0.02595438383893727,
+              "role": 0,
+              "source_distortion": 0.11785614445572358,
+              "source_oracle_gain": 1.006104261370128
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.11303023932045016,
+              "gaussian_oracle_gain": 1.0032545460423712,
+              "matched_F": 1.0086599007033625,
+              "matched_s_bpw": -0.006219904724854623,
+              "role": 1,
+              "source_distortion": 0.11400906996944256,
+              "source_oracle_gain": 1.0015888414650114
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.11354083410188473,
+              "gaussian_oracle_gain": 0.9992072639465107,
+              "matched_F": 1.0231147940547598,
+              "matched_s_bpw": -0.01648401267957419,
+              "role": 2,
+              "source_distortion": 0.11616530709895545,
+              "source_oracle_gain": 1.0033731885631427
+            }
+          ],
+          "source_distortion": 0.11572018126413472
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.11265705162840224,
+      "gaussian_shannon_distortion_at_physical_rate": 0.045044786583879386,
+      "matched_F_source_over_control": 1.0334734744640612,
+      "matched_gaussian_distortion": 0.1129508797094135,
+      "matched_s_bpw_before_side_charge": -0.023750680230613157,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 6,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0254573360374442,
+      "optimistic_2se_s_bpw": -0.018133735003179375,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.2288535166391257,
+      "physical_rate_bpw": 2.236248024718372,
+      "read_amplification_below_2x": true,
+      "side_bits": 209350,
+      "side_bpw": 0.007394508079246238,
+      "source_distortion": 0.1167317380970598,
+      "stages": 45,
+      "table_bits_fp16": 207360,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    },
+    {
+      "alphabet": 4,
+      "architecture": "role-conditioned-additive-rvq-d32-k4-m36",
+      "charged_matched_F_identity": 1.0423991476056986,
+      "charged_matched_s_bpw": -0.029953904646749407,
+      "cold_expert_read_amplification": 1.0208845727237654,
+      "crossfit": "six leave-one-expert-out folds; all three roles held together",
+      "dimension": 32,
+      "elapsed_seconds": 12.141392469406128,
+      "exact_F_source_over_shannon_at_physical_rate": 2.65731971113618,
+      "exact_s_bpw_source_vs_shannon": -0.7049859068992599,
+      "exact_target_met": false,
+      "fixed_header_bits": 256,
+      "fold_s_standard_error_bpw": 0.0036387182335668013,
+      "folds": [
+        {
+          "gaussian_distortion": 0.11288383495696963,
+          "heldout_expert": 0,
+          "matched_F": 1.022348155907943,
+          "matched_s_bpw": -0.015943291516974555,
+          "roles": [
+            {
+              "centered_energy_fp64": 841.6473734477455,
+              "gaussian_distortion": 0.1129031368445771,
+              "gaussian_oracle_gain": 1.0040197877526231,
+              "matched_F": 1.0160077101127971,
+              "matched_s_bpw": -0.011455675119651357,
+              "role": 0,
+              "source_distortion": 0.11471045753001055,
+              "source_oracle_gain": 1.0005129581155245
+            },
+            {
+              "centered_energy_fp64": 949.8690338090839,
+              "gaussian_distortion": 0.11284266669030914,
+              "gaussian_oracle_gain": 1.0043488885484524,
+              "matched_F": 1.032722570389553,
+              "matched_s_bpw": -0.023226371012778507,
+              "role": 1,
+              "source_distortion": 0.11653516879402766,
+              "source_oracle_gain": 0.9989675219407805
+            },
+            {
+              "centered_energy_fp64": 632.9526065240884,
+              "gaussian_distortion": 0.1129199499495194,
+              "gaussian_oracle_gain": 1.0040730671581861,
+              "matched_F": 1.015219714309396,
+              "matched_s_bpw": -0.010895994957218458,
+              "role": 2,
+              "source_distortion": 0.11463855932758236,
+              "source_oracle_gain": 1.0024082287871692
+            }
+          ],
+          "source_distortion": 0.11540658050007449
+        },
+        {
+          "gaussian_distortion": 0.11243890598473137,
+          "heldout_expert": 1,
+          "matched_F": 1.0420758589364185,
+          "matched_s_bpw": -0.029730151921376395,
+          "roles": [
+            {
+              "centered_energy_fp64": 817.1248957844429,
+              "gaussian_distortion": 0.11317202250168028,
+              "gaussian_oracle_gain": 1.0028038213405432,
+              "matched_F": 1.0327609908943503,
+              "matched_s_bpw": -0.023253206894111443,
+              "role": 0,
+              "source_distortion": 0.11687965010035303,
+              "source_oracle_gain": 1.0014609985795275
+            },
+            {
+              "centered_energy_fp64": 910.0961024910118,
+              "gaussian_distortion": 0.11181997206433775,
+              "gaussian_oracle_gain": 0.9994865206877137,
+              "matched_F": 1.0556455789330683,
+              "matched_s_bpw": -0.039062773720695915,
+              "role": 1,
+              "source_distortion": 0.11804225914613735,
+              "source_oracle_gain": 1.0026005938561713
+            },
+            {
+              "centered_energy_fp64": 751.2347440971951,
+              "gaussian_distortion": 0.11239130647054367,
+              "gaussian_oracle_gain": 1.0042998863061705,
+              "matched_F": 1.0359224061554027,
+              "matched_s_bpw": -0.025457972338880277,
+              "role": 2,
+              "source_distortion": 0.11642867262991488,
+              "source_oracle_gain": 1.000777860109207
+            }
+          ],
+          "source_distortion": 0.11716986953191015
+        },
+        {
+          "gaussian_distortion": 0.11279818503169994,
+          "heldout_expert": 2,
+          "matched_F": 1.0186102299005158,
+          "matched_s_bpw": -0.013301055702135677,
+          "roles": [
+            {
+              "centered_energy_fp64": 1072.3650159091746,
+              "gaussian_distortion": 0.11282844990444889,
+              "gaussian_oracle_gain": 1.0031493343040172,
+              "matched_F": 1.023545523957335,
+              "matched_s_bpw": -0.01678763507265688,
+              "role": 0,
+              "source_distortion": 0.11548505487474306,
+              "source_oracle_gain": 1.0023173090599398
+            },
+            {
+              "centered_energy_fp64": 1179.5334636649075,
+              "gaussian_distortion": 0.11253042789011952,
+              "gaussian_oracle_gain": 1.0055133587195846,
+              "matched_F": 1.0207709686879487,
+              "matched_s_bpw": -0.014829601862062346,
+              "role": 1,
+              "source_distortion": 0.11486779388426667,
+              "source_oracle_gain": 1.006434053749782
+            },
+            {
+              "centered_energy_fp64": 515.7959733237237,
+              "gaussian_distortion": 0.11334757574535057,
+              "gaussian_oracle_gain": 1.0040913352145078,
+              "matched_F": 1.003490903967486,
+              "matched_s_bpw": -0.002513769804936343,
+              "role": 2,
+              "source_distortion": 0.11374326124722493,
+              "source_oracle_gain": 1.0042624092983365
+            }
+          ],
+          "source_distortion": 0.1148973851875008
+        },
+        {
+          "gaussian_distortion": 0.112017987975046,
+          "heldout_expert": 3,
+          "matched_F": 1.0515911988962015,
+          "matched_s_bpw": -0.03628698637095745,
+          "roles": [
+            {
+              "centered_energy_fp64": 885.4583814705878,
+              "gaussian_distortion": 0.11223843451442111,
+              "gaussian_oracle_gain": 1.0010424308535593,
+              "matched_F": 1.03920651419018,
+              "matched_s_bpw": -0.027741189677666974,
+              "role": 0,
+              "source_distortion": 0.11663891228989436,
+              "source_oracle_gain": 1.0042182576428764
+            },
+            {
+              "centered_energy_fp64": 1037.8993494513634,
+              "gaussian_distortion": 0.11205844423167667,
+              "gaussian_oracle_gain": 1.0009889064541513,
+              "matched_F": 1.0676042934719618,
+              "matched_s_bpw": -0.047188506269587614,
+              "role": 1,
+              "source_distortion": 0.11963407618152641,
+              "source_oracle_gain": 1.0067987309430522
+            },
+            {
+              "centered_energy_fp64": 736.1016313181267,
+              "gaussian_distortion": 0.11169576921026848,
+              "gaussian_oracle_gain": 1.0023316413086139,
+              "matched_F": 1.0439094547326262,
+              "matched_s_bpw": -0.030998291359441835,
+              "role": 2,
+              "source_distortion": 0.11660026953223264,
+              "source_oracle_gain": 1.0044046671677211
+            }
+          ],
+          "source_distortion": 0.11779713027261891
+        },
+        {
+          "gaussian_distortion": 0.11340799693043381,
+          "heldout_expert": 4,
+          "matched_F": 1.0249990034105012,
+          "matched_s_bpw": -0.017811253511494003,
+          "roles": [
+            {
+              "centered_energy_fp64": 888.9443120949601,
+              "gaussian_distortion": 0.11370881547250045,
+              "gaussian_oracle_gain": 1.0037798369941342,
+              "matched_F": 1.0068553576887773,
+              "matched_s_bpw": -0.0049282221424427584,
+              "role": 0,
+              "source_distortion": 0.11448833007493162,
+              "source_oracle_gain": 0.9999567598321979
+            },
+            {
+              "centered_energy_fp64": 1070.8562164499524,
+              "gaussian_distortion": 0.11324620471817358,
+              "gaussian_oracle_gain": 1.00052924771062,
+              "matched_F": 1.0538937084684146,
+              "matched_s_bpw": -0.03786468491157027,
+              "role": 1,
+              "source_distortion": 0.11934946266040923,
+              "source_oracle_gain": 1.007294793065395
+            },
+            {
+              "centered_energy_fp64": 841.2268751340938,
+              "gaussian_distortion": 0.11329607143393118,
+              "gaussian_oracle_gain": 1.0041601823108415,
+              "matched_F": 1.0074757792218016,
+              "matched_s_bpw": -0.0053725776313977725,
+              "role": 2,
+              "source_distortion": 0.11414304785066873,
+              "source_oracle_gain": 1.0042523924071274
+            }
+          ],
+          "source_distortion": 0.11624308383247584
+        },
+        {
+          "gaussian_distortion": 0.11241707273863438,
+          "heldout_expert": 5,
+          "matched_F": 1.0282383288223078,
+          "matched_s_bpw": -0.02008734819936226,
+          "roles": [
+            {
+              "centered_energy_fp64": 882.0293084097749,
+              "gaussian_distortion": 0.11204495651586485,
+              "gaussian_oracle_gain": 0.9982068128327535,
+              "matched_F": 1.024466223193577,
+              "matched_s_bpw": -0.017436209629715826,
+              "role": 0,
+              "source_distortion": 0.11478627342969663,
+              "source_oracle_gain": 1.0058891289292267
+            },
+            {
+              "centered_energy_fp64": 1323.7009906285014,
+              "gaussian_distortion": 0.11209463479102581,
+              "gaussian_oracle_gain": 1.001512000321423,
+              "matched_F": 1.0358351447872074,
+              "matched_s_bpw": -0.025397206761762603,
+              "role": 1,
+              "source_distortion": 0.11611156225863137,
+              "source_oracle_gain": 1.0009119383318272
+            },
+            {
+              "centered_energy_fp64": 855.9772302302815,
+              "gaussian_distortion": 0.11329913924533336,
+              "gaussian_oracle_gain": 0.9984984803242845,
+              "matched_F": 1.0204592331771247,
+              "matched_s_bpw": -0.01460927429752785,
+              "role": 2,
+              "source_distortion": 0.11561715275392115,
+              "source_oracle_gain": 1.0051683439744792
+            }
+          ],
+          "source_distortion": 0.11559154300386923
+        }
+      ],
+      "fraction_of_required_s_optimistic": -0.10981625064939132,
+      "gaussian_shannon_distortion_at_physical_rate": 0.04371386784978029,
+      "matched_F_source_over_control": 1.031070266557382,
+      "matched_gaussian_distortion": 0.1126613058827437,
+      "matched_s_bpw_before_side_charge": -0.022071327245129037,
+      "matrix_scalar_bits_fp32": 1728,
+      "mixed_radix_pack_overhead_bits": 0,
+      "optimism_allowance_bpw": 0.005,
+      "optimistic_2se_F_identity": 1.0248074980396848,
+      "optimistic_2se_s_bpw": -0.017676468179615806,
+      "optimistic_calibrated_target_met": false,
+      "payload_rate_bpw": 2.25,
+      "physical_rate_bpw": 2.2578825774016202,
+      "read_amplification_below_2x": true,
+      "side_bits": 223168,
+      "side_bpw": 0.00788257740162037,
+      "source_distortion": 0.1161617226872233,
+      "stages": 36,
+      "table_bits_fp16": 221184,
+      "target_F": 0.8,
+      "target_s_bpw": 0.16096404744368115
+    }
+  ],
+  "schema": "qwen-additive-vq-early-kill-v1",
+  "target": {
+    "allowed_physical_rate_bpw": [
+      2.15,
+      2.5
+    ],
+    "identity": "F = 2^(-2s)",
+    "maximum_read_amplification": 2.0,
+    "required_F": 0.8,
+    "required_s_bpw": 0.16096404744368115
+  }
+}

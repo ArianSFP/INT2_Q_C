@@ -1,0 +1,1104 @@
+{
+  "schema": "qwen_moe_bitplane_context_probe_v1",
+  "decision": "STOP_OPTIMISTIC_CATEGORICAL_ORACLE_BELOW_GATE",
+  "scope": {
+    "strict_ptq": true,
+    "cpu_only": true,
+    "numpy_version": "2.5.2",
+    "cuda_imported": false,
+    "source_weights_modified": false,
+    "task_data_used": false,
+    "base_model_trained": false,
+    "whole_layer_and_expert_heldout": true,
+    "fold_rule": "sorted unique layer rank modulo 2; all experts/roles in a layer share a fold",
+    "semantic_orientation": "Up native; Down transposed; fixed globally",
+    "pilot": true
+  },
+  "inventory": {
+    "tensor_dir": "/workspace/INT2__compression/qwen_aux_context_tensors",
+    "tensors": 44,
+    "layers": [
+      0,
+      6,
+      13,
+      18,
+      26,
+      31,
+      39,
+      47
+    ],
+    "layer_count": 8,
+    "layer_experts": 22,
+    "weights": 69206016,
+    "source_manifest": [
+      {
+        "name": "model.layers.0.mlp.experts.0.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "929c18ac0204ef7f0aaa199b4cc4c5c9d4e60862d7b1a10274e83de955c06101",
+        "layer": 0,
+        "expert": 0,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.0.mlp.experts.0.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "06a6f1fb3d54b4f7f9367914b5ed268510ddb06f153212cb6cf1ca56faa93545",
+        "layer": 0,
+        "expert": 0,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.0.mlp.experts.31.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "0c08d01991c2f870e46d0c477173aebe62ce28ce67ddfc424f7825da55c75651",
+        "layer": 0,
+        "expert": 31,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.0.mlp.experts.31.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "9a26478d8d1059ff1663125d351bfbf4fb6ed7de8446fea89c5fcf9145680ed2",
+        "layer": 0,
+        "expert": 31,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.0.mlp.experts.63.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "caa8f1d0dd7b3dcde2ad977d2ca675d4e4e4c1b48206f133d8be870e89d686dc",
+        "layer": 0,
+        "expert": 63,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.0.mlp.experts.63.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "f9ed7a0199f1df7222935f1cffdf6247b0864618c9a9ca1d94e950dd366f5682",
+        "layer": 0,
+        "expert": 63,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.0.mlp.experts.127.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "2ddd6458b7f46dd932f7328edde6d955e90c890a900b3d8f07a8a492a12f392f",
+        "layer": 0,
+        "expert": 127,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.0.mlp.experts.127.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "9d4d73968ea1909224cf2e86ddb565e18e69919ed6f65340cc74cad368bd4ae0",
+        "layer": 0,
+        "expert": 127,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.6.mlp.experts.23.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "d5b458671f44dd7c2ef3de88385bb400a026744c7b8a585a9e9f0d16b67e49d0",
+        "layer": 6,
+        "expert": 23,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.6.mlp.experts.23.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "495203500a726a7e7718164aa4e94685f2b21c675b6c902c93ed9445ebbf3433",
+        "layer": 6,
+        "expert": 23,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.6.mlp.experts.103.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "b7b05c09f71f5b733e46f27233bb30c9668458e7e6423ff36227fac7287c8b8a",
+        "layer": 6,
+        "expert": 103,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.6.mlp.experts.103.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "fd98458cec8e42ae1e3b32894cf5ff4128c63f1d9e0ff50c428e35e5adbae08c",
+        "layer": 6,
+        "expert": 103,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.13.mlp.experts.57.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "4eedf26382a0409462018d8e416719e2b10ccf3c59a72d79feac09aefec3ab23",
+        "layer": 13,
+        "expert": 57,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.13.mlp.experts.57.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "eb92f091ce02e0fdeeb601bdfa54cd0f868c5f73a7a37994f29f71846c9a1253",
+        "layer": 13,
+        "expert": 57,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.13.mlp.experts.121.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "472444715d6e9cb82ba1e62966783a8f41ac100b21c3927ce04cd1ccb3fd023d",
+        "layer": 13,
+        "expert": 121,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.13.mlp.experts.121.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "33006a4c2b5cf9dcb49cfd4cd62a7ef41697977b5d97f80eca16500d9cac444e",
+        "layer": 13,
+        "expert": 121,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.18.mlp.experts.23.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "1e70a3785b600388162021a867164891419adc0eef62fafb840267bd1bae7b01",
+        "layer": 18,
+        "expert": 23,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.18.mlp.experts.23.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "ac837e3221af8ec3a8e9f0c6b25a5596c7169c0ebd074512eaeecb0bfd7adaac",
+        "layer": 18,
+        "expert": 23,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.18.mlp.experts.103.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "484d1d86f7180a02e307d5d365a25d8b84f4824b7cbd89fdac96fee27a3c885c",
+        "layer": 18,
+        "expert": 103,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.18.mlp.experts.103.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "0933fa6feb48da86d41da3354008a2572a8440e6318d26645fbfae4d27d2d26b",
+        "layer": 18,
+        "expert": 103,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.26.mlp.experts.45.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "c7b3a0f4cbdaf3b363b7e1f00fcd93f577c834265d2f7fae8bac5d7ed8b27c23",
+        "layer": 26,
+        "expert": 45,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.26.mlp.experts.45.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "72786a610997287a3368358044feaf7b1adb8ca944af302b5c8df20c74f8ae5a",
+        "layer": 26,
+        "expert": 45,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.26.mlp.experts.111.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "9394d0f89f58cad135cc8ad8d96b07c9dfac93bcbb91fe1242bfa0fefaf9ecf1",
+        "layer": 26,
+        "expert": 111,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.26.mlp.experts.111.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "ac14e9d879f19c815ba2d6b46881f9e0b97ede83b511e3973a6a2f3836d3bdde",
+        "layer": 26,
+        "expert": 111,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.31.mlp.experts.0.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "293ac334ce9b6cde3071342866c10ae8e50b6e83e2ec32f4a3de5f1c5aa2137d",
+        "layer": 31,
+        "expert": 0,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.31.mlp.experts.0.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "c897848692ad9b5641e61a114ff06b399553c0108a468cee5c35c61f19484831",
+        "layer": 31,
+        "expert": 0,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.31.mlp.experts.31.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "4f8e18ca5de09854e3d22b52fefd5b34a02456e539e1b7192f2cf881a28474d6",
+        "layer": 31,
+        "expert": 31,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.31.mlp.experts.31.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "b658bfcf1ddf034872862e9f14c16c3ed2c2fd6d50bc9eca82e6a966e76f53ab",
+        "layer": 31,
+        "expert": 31,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.31.mlp.experts.63.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "a3a8c06d6e7ba017c3912c8ac50ec98e6044956ffa298d8b20514240daa508b7",
+        "layer": 31,
+        "expert": 63,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.31.mlp.experts.63.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "a5871d1f7f2224eaea93eeca2a42e933843664fe2ab5ec8ba026aa48c6b9dddd",
+        "layer": 31,
+        "expert": 63,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.31.mlp.experts.127.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "ba09bcb617b1a84129aff96ad3efa13195979705a56f095c6303e5dc06f47557",
+        "layer": 31,
+        "expert": 127,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.31.mlp.experts.127.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "ec0f68cf6f97a0b24925661163f34e039c45b340ffb10be04956fc3f216c6338",
+        "layer": 31,
+        "expert": 127,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.39.mlp.experts.57.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "1b02072f9d483d447993d407c1013147a8f36899f4f8e4b73c06091811ebfe0a",
+        "layer": 39,
+        "expert": 57,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.39.mlp.experts.57.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "fd3cf0cce634e291694860e047f22425431c029b81baaa50d13121d641c1d355",
+        "layer": 39,
+        "expert": 57,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.39.mlp.experts.121.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "0039629005e392b62888638ce8aad96d33799a68e7dd25d5738252172f75aaf8",
+        "layer": 39,
+        "expert": 121,
+        "role": "down",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.39.mlp.experts.121.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "f11c985102153fcfbc3ac66c49f8d3afbb0e30e0fce9c4a5b233a97a6bcdea8e",
+        "layer": 39,
+        "expert": 121,
+        "role": "up",
+        "fold": 0
+      },
+      {
+        "name": "model.layers.47.mlp.experts.0.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "e29ecc59249327f7ee765a489f11278e40a61924b25d8dd1e78e42620cac718e",
+        "layer": 47,
+        "expert": 0,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.47.mlp.experts.0.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "cf856ab1626fa28822237bd53494f599bf3709f2f1388cbfaf7fcaff47bc31ec",
+        "layer": 47,
+        "expert": 0,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.47.mlp.experts.31.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "9d358337c6e579d651077ad51b091d368bd38cde69d628e95579906dc0c77e2f",
+        "layer": 47,
+        "expert": 31,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.47.mlp.experts.31.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "c72dce8c0731fd9c64a9298b8412a64c46129e547bb7e881517878a0e7fb206f",
+        "layer": 47,
+        "expert": 31,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.47.mlp.experts.63.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "b45625156ee5110c297ab6f765e4164e015c9a4b6b7b2a4fd240b73c10165bff",
+        "layer": 47,
+        "expert": 63,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.47.mlp.experts.63.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "43624d83f2266e6ae82ee0eea5836a14e3ffb7a14bede0a92e14d9976a4b34de",
+        "layer": 47,
+        "expert": 63,
+        "role": "up",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.47.mlp.experts.127.down_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "d052ed35b9df2c02ede03e43e454b6b75c24229064b20eb76cd71158d2ccdd81",
+        "layer": 47,
+        "expert": 127,
+        "role": "down",
+        "fold": 1
+      },
+      {
+        "name": "model.layers.47.mlp.experts.127.up_proj.weight.bf16.bin",
+        "bytes": 3145728,
+        "sha256": "69929ef6134ba489d322850def561a1a32d151d5e9d3b816bfb5f36d3cfc3f3d",
+        "layer": 47,
+        "expert": 127,
+        "role": "up",
+        "fold": 1
+      }
+    ]
+  },
+  "quantizer": {
+    "type": "per-matrix-RMS normalized symmetric Lloyd-Max",
+    "codebooks_fitted_on_training_layers_only": true,
+    "matrix_scale_storage_bits": 16,
+    "matrix_framing_bits": 128,
+    "stream_termination_bits": 64,
+    "reconstruction_table_storage": "FP16; charged in rate interpretation"
+  },
+  "probability_model": {
+    "type": "dense finite conditional tables with fixed Dirichlet backoff",
+    "dirichlet_strength": 32.0,
+    "probability_bits": 12,
+    "float_cross_entropy_is_optimistic": true,
+    "exact_entropy_coder_run": false,
+    "heldout_plugin_oracle_is_leaky_and_optimistic": true
+  },
+  "gate": {
+    "target_F": 0.8,
+    "required_net_entropy_saving_bpw": 0.16096404744368117,
+    "identity": "2^(-2*saving) <= 0.8",
+    "allowed_physical_rate_bpw": [
+      2.15,
+      2.5
+    ],
+    "max_expert_read_amplification": 2.0
+  },
+  "results": [
+    {
+      "alphabet": 4,
+      "directional_codebooks": [
+        {
+          "train_fold": 0,
+          "heldout_fold": 1,
+          "codebooks": {
+            "up": {
+              "role": "up",
+              "alphabet": 4,
+              "magnitudes": [
+                0.43572814305018354,
+                1.5441406606551498
+              ],
+              "magnitude_boundaries": [
+                0.9899344018526667
+              ],
+              "fit_tensors": 10,
+              "fit_samples": 163840
+            },
+            "down": {
+              "role": "down",
+              "alphabet": 4,
+              "magnitudes": [
+                0.43578502777678035,
+                1.539413636012532
+              ],
+              "magnitude_boundaries": [
+                0.9875993318946561
+              ],
+              "fit_tensors": 10,
+              "fit_samples": 163840
+            }
+          },
+          "heldout_weights": 37748736,
+          "heldout_relative_mse": 0.12793062336600286
+        },
+        {
+          "train_fold": 1,
+          "heldout_fold": 0,
+          "codebooks": {
+            "up": {
+              "role": "up",
+              "alphabet": 4,
+              "magnitudes": [
+                0.4536133563774539,
+                1.5333159871951294
+              ],
+              "magnitude_boundaries": [
+                0.9934646717862916
+              ],
+              "fit_tensors": 12,
+              "fit_samples": 196608
+            },
+            "down": {
+              "role": "down",
+              "alphabet": 4,
+              "magnitudes": [
+                0.45306494762178834,
+                1.538732284048295
+              ],
+              "magnitude_boundaries": [
+                0.9958986158350417
+              ],
+              "fit_tensors": 12,
+              "fit_samples": 196608
+            }
+          },
+          "heldout_weights": 31457280,
+          "heldout_relative_mse": 0.12926960372648552
+        }
+      ],
+      "heldout_weights_crossfit_total": 69206016,
+      "heldout_source_relative_mse": 0.1284899704532543,
+      "matrix_scale_min": 0.013653235791901605,
+      "matrix_scale_max": 0.029727819598600814,
+      "matrix_scale_mean": 0.023245074095253827,
+      "schemes": [
+        {
+          "name": "left",
+          "description": "previous symbol in row",
+          "alphabet": 4,
+          "context_states_per_role": 4,
+          "heldout_weights": 69172224,
+          "baseline_cross_entropy_bpw": 1.8926533171337092,
+          "candidate_cross_entropy_bpw": 1.892592257895482,
+          "raw_crossfit_gain_bpw": 6.105923822745824e-05,
+          "optimistic_heldout_plugin_gain_bpw": 0.0001246052370490512,
+          "twofold_model_bits": 1088,
+          "model_overhead_bpw": 1.5728856715666683e-05,
+          "net_crossfit_gain_bpw": 4.533038151179156e-05,
+          "absolute_optimistic_rate_with_local_metadata_bpw": 1.8927402295907394,
+          "measured_scalar_F_D_times_2_to_2R": 1.7717906089713857,
+          "ideal_entropy_rate_F_from_net_gain": 0.999937160722193,
+          "required_saving_bpw": 0.16096404744368117,
+          "shortfall_to_required_saving_bpw": 0.16091871706216937,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "expert_read_amplification": {
+            "warm_shared_table": 1.0,
+            "cold_shared_table_two_matrix_panel": 1.0000913735866703,
+            "cold_shared_table_three_matrix_expert_upper_bound": 1.0000609157244469,
+            "expert_payload_is_strictly_local": true
+          },
+          "directions": [
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 37730304,
+              "baseline_cross_entropy_bpw": 1.895439784331226,
+              "candidate_cross_entropy_bpw": 1.8954518268895582,
+              "crossfit_gain_bpw": -1.2042558332079278e-05,
+              "optimistic_heldout_plugin_gain_bpw": 5.210364061646768e-05,
+              "occupied_train_contexts": 8,
+              "occupied_heldout_contexts": 8
+            },
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 31441920,
+              "baseline_cross_entropy_bpw": 1.8893095564966893,
+              "candidate_cross_entropy_bpw": 1.8891607751025905,
+              "crossfit_gain_bpw": 0.00014878139409866628,
+              "optimistic_heldout_plugin_gain_bpw": 0.00021160715276815142,
+              "occupied_train_contexts": 8,
+              "occupied_heldout_contexts": 8
+            }
+          ]
+        },
+        {
+          "name": "up",
+          "description": "symbol immediately above",
+          "alphabet": 4,
+          "context_states_per_role": 4,
+          "heldout_weights": 69115904,
+          "baseline_cross_entropy_bpw": 1.8926655115238893,
+          "candidate_cross_entropy_bpw": 1.8925944100216412,
+          "raw_crossfit_gain_bpw": 7.11015022480771e-05,
+          "optimistic_heldout_plugin_gain_bpw": 9.441271904422639e-05,
+          "twofold_model_bits": 1088,
+          "model_overhead_bpw": 1.574167358065663e-05,
+          "net_crossfit_gain_bpw": 5.535982866742046e-05,
+          "absolute_optimistic_rate_with_local_metadata_bpw": 1.8927423945337636,
+          "measured_scalar_F_D_times_2_to_2R": 1.7717959265629302,
+          "ideal_entropy_rate_F_from_net_gain": 0.9999232579265094,
+          "required_saving_bpw": 0.16096404744368117,
+          "shortfall_to_required_saving_bpw": 0.16090868761501376,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "expert_read_amplification": {
+            "warm_shared_table": 1.0,
+            "cold_shared_table_two_matrix_panel": 1.0000913734827666,
+            "cold_shared_table_three_matrix_expert_upper_bound": 1.0000609156551779,
+            "expert_payload_is_strictly_local": true
+          },
+          "directions": [
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 37699584,
+              "baseline_cross_entropy_bpw": 1.8954609918581984,
+              "candidate_cross_entropy_bpw": 1.8953999543765332,
+              "crossfit_gain_bpw": 6.103748166510505e-05,
+              "optimistic_heldout_plugin_gain_bpw": 8.424166839060699e-05,
+              "occupied_train_contexts": 8,
+              "occupied_heldout_contexts": 8
+            },
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 31416320,
+              "baseline_cross_entropy_bpw": 1.8893109351227182,
+              "candidate_cross_entropy_bpw": 1.8892277567957705,
+              "crossfit_gain_bpw": 8.317832694764354e-05,
+              "optimistic_heldout_plugin_gain_bpw": 0.00010661797982856965,
+              "occupied_train_contexts": 8,
+              "occupied_heldout_contexts": 8
+            }
+          ]
+        },
+        {
+          "name": "left_up",
+          "description": "exact L,U pair",
+          "alphabet": 4,
+          "context_states_per_role": 16,
+          "heldout_weights": 69082156,
+          "baseline_cross_entropy_bpw": 1.8926721704105756,
+          "candidate_cross_entropy_bpw": 1.892541811350206,
+          "raw_crossfit_gain_bpw": 0.00013035906036955154,
+          "optimistic_heldout_plugin_gain_bpw": 0.00021960674102412738,
+          "twofold_model_bits": 2816,
+          "model_overhead_bpw": 4.0763058987330966e-05,
+          "net_crossfit_gain_bpw": 8.959600138222056e-05,
+          "absolute_optimistic_rate_with_local_metadata_bpw": 1.892714817247735,
+          "measured_scalar_F_D_times_2_to_2R": 1.771728191681076,
+          "ideal_entropy_rate_F_from_net_gain": 0.9998758012818044,
+          "required_saving_bpw": 0.16096404744368117,
+          "shortfall_to_required_saving_bpw": 0.16087445144229895,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "expert_read_amplification": {
+            "warm_shared_table": 1.0,
+            "cold_shared_table_two_matrix_panel": 1.0002365026458855,
+            "cold_shared_table_three_matrix_expert_upper_bound": 1.0001576684305904,
+            "expert_payload_is_strictly_local": true
+          },
+          "directions": [
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 37681176,
+              "baseline_cross_entropy_bpw": 1.8954623315994044,
+              "candidate_cross_entropy_bpw": 1.895415028483178,
+              "crossfit_gain_bpw": 4.730311622622837e-05,
+              "optimistic_heldout_plugin_gain_bpw": 0.0001370274399603521,
+              "occupied_train_contexts": 32,
+              "occupied_heldout_contexts": 32
+            },
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 31400980,
+              "baseline_cross_entropy_bpw": 1.889323976983981,
+              "candidate_cross_entropy_bpw": 1.8890939507906397,
+              "crossfit_gain_bpw": 0.00023002619334130204,
+              "optimistic_heldout_plugin_gain_bpw": 0.0003187019023006577,
+              "occupied_train_contexts": 32,
+              "occupied_heldout_contexts": 32
+            }
+          ]
+        },
+        {
+          "name": "left_up_diagonal",
+          "description": "exact L,U,UL triple",
+          "alphabet": 4,
+          "context_states_per_role": 64,
+          "heldout_weights": 69082156,
+          "baseline_cross_entropy_bpw": 1.8926721704105756,
+          "candidate_cross_entropy_bpw": 1.892546056462553,
+          "raw_crossfit_gain_bpw": 0.00012611394802270764,
+          "optimistic_heldout_plugin_gain_bpw": 0.0002262753372380402,
+          "twofold_model_bits": 9728,
+          "model_overhead_bpw": 0.00014081784013805245,
+          "net_crossfit_gain_bpw": -1.4703892115344811e-05,
+          "absolute_optimistic_rate_with_local_metadata_bpw": 1.8928191171412327,
+          "measured_scalar_F_D_times_2_to_2R": 1.7719843850089907,
+          "ideal_entropy_rate_F_from_net_gain": 1.0000203841304796,
+          "required_saving_bpw": 0.16096404744368117,
+          "shortfall_to_required_saving_bpw": 0.16097875133579653,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "expert_read_amplification": {
+            "warm_shared_table": 1.0,
+            "cold_shared_table_two_matrix_panel": 1.0008170073077236,
+            "cold_shared_table_three_matrix_expert_upper_bound": 1.0005446715384825,
+            "expert_payload_is_strictly_local": true
+          },
+          "directions": [
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 37681176,
+              "baseline_cross_entropy_bpw": 1.8954623315994044,
+              "candidate_cross_entropy_bpw": 1.8954201620838413,
+              "crossfit_gain_bpw": 4.216951556306712e-05,
+              "optimistic_heldout_plugin_gain_bpw": 0.00014268535944354349,
+              "occupied_train_contexts": 128,
+              "occupied_heldout_contexts": 128
+            },
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 31400980,
+              "baseline_cross_entropy_bpw": 1.889323976983981,
+              "candidate_cross_entropy_bpw": 1.889097129717007,
+              "crossfit_gain_bpw": 0.00022684726697403895,
+              "optimistic_heldout_plugin_gain_bpw": 0.0003265833105914363,
+              "occupied_train_contexts": 128,
+              "occupied_heldout_contexts": 128
+            }
+          ]
+        },
+        {
+          "name": "causal_five",
+          "description": "exact L,L2,U,UL,UR categorical pattern",
+          "alphabet": 4,
+          "context_states_per_role": 1024,
+          "heldout_weights": 69014660,
+          "baseline_cross_entropy_bpw": 1.8926876214220871,
+          "candidate_cross_entropy_bpw": 1.8926136836823717,
+          "raw_crossfit_gain_bpw": 7.39377397153341e-05,
+          "optimistic_heldout_plugin_gain_bpw": 0.0004995973194639779,
+          "twofold_model_bits": 147968,
+          "model_overhead_bpw": 0.0021440082440455405,
+          "net_crossfit_gain_bpw": -0.0020700705043302063,
+          "absolute_optimistic_rate_with_local_metadata_bpw": 1.894889934764959,
+          "measured_scalar_F_D_times_2_to_2R": 1.777078640555274,
+          "ideal_entropy_rate_F_from_net_gain": 1.0028738486756812,
+          "required_saving_bpw": 0.16096404744368117,
+          "shortfall_to_required_saving_bpw": 0.16303411794801137,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "expert_read_amplification": {
+            "warm_shared_table": 1.0,
+            "cold_shared_table_two_matrix_panel": 1.012426667106503,
+            "cold_shared_table_three_matrix_expert_upper_bound": 1.0082844447376687,
+            "expert_payload_is_strictly_local": true
+          },
+          "directions": [
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 37644360,
+              "baseline_cross_entropy_bpw": 1.8954789005351063,
+              "candidate_cross_entropy_bpw": 1.895591275607924,
+              "crossfit_gain_bpw": -0.00011237507281788634,
+              "optimistic_heldout_plugin_gain_bpw": 0.00031315366837701084,
+              "occupied_train_contexts": 2048,
+              "occupied_heldout_contexts": 2048
+            },
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 31370300,
+              "baseline_cross_entropy_bpw": 1.8893380864864642,
+              "candidate_cross_entropy_bpw": 1.889040573371709,
+              "crossfit_gain_bpw": 0.0002975131147551986,
+              "optimistic_heldout_plugin_gain_bpw": 0.0007233297007683384,
+              "occupied_train_contexts": 2048,
+              "occupied_heldout_contexts": 2048
+            }
+          ]
+        },
+        {
+          "name": "coarse_position_4x4",
+          "description": "fixed semantic row/column quartile bins",
+          "alphabet": 4,
+          "context_states_per_role": 16,
+          "heldout_weights": 69206016,
+          "baseline_cross_entropy_bpw": 1.8926466326742728,
+          "candidate_cross_entropy_bpw": 1.8926595777977069,
+          "raw_crossfit_gain_bpw": -1.2945123434176917e-05,
+          "optimistic_heldout_plugin_gain_bpw": 1.2122216845406882e-05,
+          "twofold_model_bits": 2816,
+          "model_overhead_bpw": 4.0690104166666664e-05,
+          "net_crossfit_gain_bpw": -5.363522760084358e-05,
+          "absolute_optimistic_rate_with_local_metadata_bpw": 1.8928325107404154,
+          "measured_scalar_F_D_times_2_to_2R": 1.7720172865831594,
+          "ideal_entropy_rate_F_from_net_gain": 1.0000743569779236,
+          "required_saving_bpw": 0.16096404744368117,
+          "shortfall_to_required_saving_bpw": 0.16101768267128203,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "expert_read_amplification": {
+            "warm_shared_table": 1.0,
+            "cold_shared_table_two_matrix_panel": 1.0002364879300452,
+            "cold_shared_table_three_matrix_expert_upper_bound": 1.00015765862003,
+            "expert_payload_is_strictly_local": true
+          },
+          "directions": [
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 37748736,
+              "baseline_cross_entropy_bpw": 1.8954384126676338,
+              "candidate_cross_entropy_bpw": 1.8954554675282347,
+              "crossfit_gain_bpw": -1.7054860600909353e-05,
+              "optimistic_heldout_plugin_gain_bpw": 8.185193540634196e-06,
+              "occupied_train_contexts": 32,
+              "occupied_heldout_contexts": 32
+            },
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 31457280,
+              "baseline_cross_entropy_bpw": 1.8892964966822394,
+              "candidate_cross_entropy_bpw": 1.8893045101210737,
+              "crossfit_gain_bpw": -8.013438834097996e-06,
+              "optimistic_heldout_plugin_gain_bpw": 1.6846644811134108e-05,
+              "occupied_train_contexts": 32,
+              "occupied_heldout_contexts": 32
+            }
+          ]
+        },
+        {
+          "name": "left_up_plus_position_4x4",
+          "description": "exact L,U plus fixed semantic position bin",
+          "alphabet": 4,
+          "context_states_per_role": 256,
+          "heldout_weights": 69082156,
+          "baseline_cross_entropy_bpw": 1.8926721704105756,
+          "candidate_cross_entropy_bpw": 1.892586570956573,
+          "raw_crossfit_gain_bpw": 8.559945400257577e-05,
+          "optimistic_heldout_plugin_gain_bpw": 0.0002632852518036743,
+          "twofold_model_bits": 37376,
+          "model_overhead_bpw": 0.0005410369647409383,
+          "net_crossfit_gain_bpw": -0.00045543751073836257,
+          "absolute_optimistic_rate_with_local_metadata_bpw": 1.8932598507598557,
+          "measured_scalar_F_D_times_2_to_2R": 1.7730673744123284,
+          "ideal_entropy_rate_F_from_net_gain": 1.0006315698092572,
+          "required_saving_bpw": 0.16096404744368117,
+          "shortfall_to_required_saving_bpw": 0.16141948495441955,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "expert_read_amplification": {
+            "warm_shared_table": 1.0,
+            "cold_shared_table_two_matrix_panel": 1.003138960880046,
+            "cold_shared_table_three_matrix_expert_upper_bound": 1.0020926405866974,
+            "expert_payload_is_strictly_local": true
+          },
+          "directions": [
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 37681176,
+              "baseline_cross_entropy_bpw": 1.8954623315994044,
+              "candidate_cross_entropy_bpw": 1.895468247973347,
+              "crossfit_gain_bpw": -5.916373942476869e-06,
+              "optimistic_heldout_plugin_gain_bpw": 0.0001724106538886755,
+              "occupied_train_contexts": 512,
+              "occupied_heldout_contexts": 512
+            },
+            {
+              "train_fold": 0,
+              "heldout_fold": 1,
+              "heldout_weights": 31400980,
+              "baseline_cross_entropy_bpw": 1.889323976983981,
+              "candidate_cross_entropy_bpw": 1.8891285585364443,
+              "crossfit_gain_bpw": 0.00019541844753663895,
+              "optimistic_heldout_plugin_gain_bpw": 0.0003723347693016728,
+              "occupied_train_contexts": 512,
+              "occupied_heldout_contexts": 512
+            }
+          ]
+        }
+      ],
+      "bitplane_factorization_generous_diagnostics": [
+        {
+          "name": "factorized_sign_magnitude_causal_five",
+          "description": "magnitude from five causal magnitudes; sign from current magnitude and five causal signs",
+          "alphabet": 4,
+          "heldout_weights": 69014660,
+          "components": {
+            "magnitude": {
+              "states_per_role": 32,
+              "output_alphabet": 2,
+              "raw_crossfit_gain_bpw": 0.0001971338019319454,
+              "optimistic_plugin_gain_bpw": 0.0003768790128785689
+            },
+            "sign": {
+              "states_per_role": 64,
+              "output_alphabet": 2,
+              "raw_crossfit_gain_bpw": -2.234941980208381e-06,
+              "optimistic_plugin_gain_bpw": 3.0742853065962547e-06
+            }
+          },
+          "raw_crossfit_gain_bpw": 0.00019489885995173703,
+          "optimistic_heldout_plugin_gain_bpw": 0.0003799532981852731,
+          "twofold_model_bits": 5632,
+          "twofold_model_overhead_bpw": 8.160585011938044e-05,
+          "net_crossfit_gain_bpw": 0.0001132930098323566,
+          "ideal_entropy_rate_F_from_net_gain": 0.9998429548721924,
+          "shortfall_to_required_saving_bpw": 0.16085075443384883,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "train_fold": 0
+        },
+        {
+          "name": "factorized_sign_magnitude_causal_five",
+          "description": "magnitude from five causal magnitudes; sign from current magnitude and five causal signs",
+          "alphabet": 4,
+          "heldout_weights": 69014660,
+          "components": {
+            "magnitude": {
+              "states_per_role": 32,
+              "output_alphabet": 2,
+              "raw_crossfit_gain_bpw": 0.0001974162742880609,
+              "optimistic_plugin_gain_bpw": 0.00037345715302771284
+            },
+            "sign": {
+              "states_per_role": 64,
+              "output_alphabet": 2,
+              "raw_crossfit_gain_bpw": -2.3051560138349555e-06,
+              "optimistic_plugin_gain_bpw": 3.1275533707938973e-06
+            }
+          },
+          "raw_crossfit_gain_bpw": 0.00019511111827444184,
+          "optimistic_heldout_plugin_gain_bpw": 0.00037658470639839877,
+          "twofold_model_bits": 5632,
+          "twofold_model_overhead_bpw": 8.160585011938044e-05,
+          "net_crossfit_gain_bpw": 0.00011350526815506141,
+          "ideal_entropy_rate_F_from_net_gain": 0.9998426606659307,
+          "shortfall_to_required_saving_bpw": 0.1608505421755261,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "train_fold": 1
+        }
+      ],
+      "bitplane_best_optimistic_gain_bpw": 0.0003799532981852731,
+      "cross_role_generous_diagnostics": [
+        {
+          "name": "cross_role_up_to_down_plus_down_L_U_UL",
+          "description": "Down^T conditioned on aligned Up and three causal Down symbols",
+          "alphabet": 4,
+          "heldout_down_weights": 34541078,
+          "heldout_two_role_weights": 69082156,
+          "context_states": 256,
+          "raw_crossfit_gain_bpw_over_two_roles": 0.002114147595677542,
+          "optimistic_heldout_plugin_gain_bpw_over_two_roles": 0.003701027566211451,
+          "twofold_model_bits": 18944,
+          "twofold_model_overhead_bpw": 0.00027422421500568106,
+          "net_crossfit_gain_bpw": 0.0018399233806718608,
+          "ideal_entropy_rate_F_from_net_gain": 0.9974525748010029,
+          "shortfall_to_required_saving_bpw": 0.15912412406300933,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "train_fold": 0
+        },
+        {
+          "name": "cross_role_up_to_down_plus_down_L_U_UL",
+          "description": "Down^T conditioned on aligned Up and three causal Down symbols",
+          "alphabet": 4,
+          "heldout_down_weights": 34541078,
+          "heldout_two_role_weights": 69082156,
+          "context_states": 256,
+          "raw_crossfit_gain_bpw_over_two_roles": 0.002118321496263846,
+          "optimistic_heldout_plugin_gain_bpw_over_two_roles": 0.0037082565720426264,
+          "twofold_model_bits": 18944,
+          "twofold_model_overhead_bpw": 0.00027422421500568106,
+          "net_crossfit_gain_bpw": 0.0018440972812581648,
+          "ideal_entropy_rate_F_from_net_gain": 0.9974468033029054,
+          "shortfall_to_required_saving_bpw": 0.159119950162423,
+          "passes_required_saving": false,
+          "optimistic_oracle_passes_required_saving": false,
+          "train_fold": 1
+        }
+      ],
+      "cross_role_best_optimistic_gain_bpw_over_two_roles": 0.0037082565720426264
+    }
+  ],
+  "best_legal_crossfit": {
+    "name": "left_up",
+    "description": "exact L,U pair",
+    "alphabet": 4,
+    "context_states_per_role": 16,
+    "heldout_weights": 69082156,
+    "baseline_cross_entropy_bpw": 1.8926721704105756,
+    "candidate_cross_entropy_bpw": 1.892541811350206,
+    "raw_crossfit_gain_bpw": 0.00013035906036955154,
+    "optimistic_heldout_plugin_gain_bpw": 0.00021960674102412738,
+    "twofold_model_bits": 2816,
+    "model_overhead_bpw": 4.0763058987330966e-05,
+    "net_crossfit_gain_bpw": 8.959600138222056e-05,
+    "absolute_optimistic_rate_with_local_metadata_bpw": 1.892714817247735,
+    "measured_scalar_F_D_times_2_to_2R": 1.771728191681076,
+    "ideal_entropy_rate_F_from_net_gain": 0.9998758012818044,
+    "required_saving_bpw": 0.16096404744368117,
+    "shortfall_to_required_saving_bpw": 0.16087445144229895,
+    "passes_required_saving": false,
+    "optimistic_oracle_passes_required_saving": false,
+    "expert_read_amplification": {
+      "warm_shared_table": 1.0,
+      "cold_shared_table_two_matrix_panel": 1.0002365026458855,
+      "cold_shared_table_three_matrix_expert_upper_bound": 1.0001576684305904,
+      "expert_payload_is_strictly_local": true
+    },
+    "directions": [
+      {
+        "train_fold": 0,
+        "heldout_fold": 1,
+        "heldout_weights": 37681176,
+        "baseline_cross_entropy_bpw": 1.8954623315994044,
+        "candidate_cross_entropy_bpw": 1.895415028483178,
+        "crossfit_gain_bpw": 4.730311622622837e-05,
+        "optimistic_heldout_plugin_gain_bpw": 0.0001370274399603521,
+        "occupied_train_contexts": 32,
+        "occupied_heldout_contexts": 32
+      },
+      {
+        "train_fold": 0,
+        "heldout_fold": 1,
+        "heldout_weights": 31400980,
+        "baseline_cross_entropy_bpw": 1.889323976983981,
+        "candidate_cross_entropy_bpw": 1.8890939507906397,
+        "crossfit_gain_bpw": 0.00023002619334130204,
+        "optimistic_heldout_plugin_gain_bpw": 0.0003187019023006577,
+        "occupied_train_contexts": 32,
+        "occupied_heldout_contexts": 32
+      }
+    ]
+  },
+  "best_ordinary_optimistic_oracle": {
+    "name": "causal_five",
+    "description": "exact L,L2,U,UL,UR categorical pattern",
+    "alphabet": 4,
+    "context_states_per_role": 1024,
+    "heldout_weights": 69014660,
+    "baseline_cross_entropy_bpw": 1.8926876214220871,
+    "candidate_cross_entropy_bpw": 1.8926136836823717,
+    "raw_crossfit_gain_bpw": 7.39377397153341e-05,
+    "optimistic_heldout_plugin_gain_bpw": 0.0004995973194639779,
+    "twofold_model_bits": 147968,
+    "model_overhead_bpw": 0.0021440082440455405,
+    "net_crossfit_gain_bpw": -0.0020700705043302063,
+    "absolute_optimistic_rate_with_local_metadata_bpw": 1.894889934764959,
+    "measured_scalar_F_D_times_2_to_2R": 1.777078640555274,
+    "ideal_entropy_rate_F_from_net_gain": 1.0028738486756812,
+    "required_saving_bpw": 0.16096404744368117,
+    "shortfall_to_required_saving_bpw": 0.16303411794801137,
+    "passes_required_saving": false,
+    "optimistic_oracle_passes_required_saving": false,
+    "expert_read_amplification": {
+      "warm_shared_table": 1.0,
+      "cold_shared_table_two_matrix_panel": 1.012426667106503,
+      "cold_shared_table_three_matrix_expert_upper_bound": 1.0082844447376687,
+      "expert_payload_is_strictly_local": true
+    },
+    "directions": [
+      {
+        "train_fold": 0,
+        "heldout_fold": 1,
+        "heldout_weights": 37644360,
+        "baseline_cross_entropy_bpw": 1.8954789005351063,
+        "candidate_cross_entropy_bpw": 1.895591275607924,
+        "crossfit_gain_bpw": -0.00011237507281788634,
+        "optimistic_heldout_plugin_gain_bpw": 0.00031315366837701084,
+        "occupied_train_contexts": 2048,
+        "occupied_heldout_contexts": 2048
+      },
+      {
+        "train_fold": 0,
+        "heldout_fold": 1,
+        "heldout_weights": 31370300,
+        "baseline_cross_entropy_bpw": 1.8893380864864642,
+        "candidate_cross_entropy_bpw": 1.889040573371709,
+        "crossfit_gain_bpw": 0.0002975131147551986,
+        "optimistic_heldout_plugin_gain_bpw": 0.0007233297007683384,
+        "occupied_train_contexts": 2048,
+        "occupied_heldout_contexts": 2048
+      }
+    ]
+  },
+  "maximum_generous_oracle_gain_across_all_tests_bpw": 0.0037082565720426264,
+  "generous_oracle_shortfall_bpw": 0.15725579087163855,
+  "elapsed_seconds": 25.57305216207169
+}

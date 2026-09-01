@@ -1,0 +1,17 @@
+{
+  "schema": "qwen-stiefel-gram-oracle-artifact-hashes-v1",
+  "artifacts": {
+    "README.md": "fa8e082e022ee394d4f34c015222ac0b3959ee2f74ca7092ae2f841673fe7a75",
+    "independent_audit.json": "210d82e980c5029dba9945a9af81fe6237c50a45246e71fb804936cf41e13223",
+    "result.json": "fbdaea31f84d2826f4d46d474ed82f36d7bd6f591091d338db4d481270c30ccb",
+    "stiefel_gram_oracle.py": "743870d15858aaa8afa9ff887b98d53352d6ae1c18c0f1042f1b432a9377733b",
+    "verify_stiefel_gram_result.py": "ef93053b5683a316532364a6488bca0346aafc7cc37d361b7e02dfa4deb233a3"
+  },
+  "pinned_source_lock_file_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+  "prior_evidence_reviewed": {
+    "../../../agent_structural_redundancy_probe.json": "342a2fd5841497e1bfa99db2ee4e535fef1b9f771f3377147cb164fb8394d76d",
+    "../../../agent_structural_redundancy_report.md": "eab33bbd8bd2f490e74d43bd07d4122cbcbf906ef31103e11cc74eabacc04d55",
+    "../../../tensor_structure_oracle_probe.py": "ff4c2daff9c75cf97448b550bfbbdec904a91e2feed29b4621d5a39751b4557b",
+    "../../../tensor_train_oracle_probe.py": "fdb2b67807389c63052d9adc24cdd3153b9eeced974bcdaf063acb8c620903de"
+  }
+}

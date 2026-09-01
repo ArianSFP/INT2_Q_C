@@ -1,0 +1,82 @@
+{
+  "algebra": {
+    "binary_additive": "w_hat = sum_j C[j,b_j], b_j in {0,1}",
+    "exact_integer_assignments_verified": 32,
+    "liftquant": "w_hat = M q, q_j in {-1,+1}",
+    "map_liftquant_to_binary_additive": "C[j,0]=-M[:,j]; C[j,1]=M[:,j]; a=0",
+    "map_to_affine_liftquant": "a=0.5 sum_j(C[j,0]+C[j,1]); M[:,j]=0.5(C[j,1]-C[j,0]); q_j=2b_j-1",
+    "relation": "plain LiftQuant is a strict subset; affine LiftQuant equals the binary additive code family"
+  },
+  "decision": {
+    "claim_boundary": "The prior encoder used residual initialization plus coordinate sweeps, not globally exact nearest-hypercube search. This receipt establishes family subsumption and a strong negative screen, not an optimizer-independent converse for every M and every beam.",
+    "reason": "The requested code family is already contained in the verified cross-expert binary additive-VQ screen. Its binary rows have negative matched structural advantage even before the requested s=0.160964 threshold; another run would change search quality, not test a genuinely distinct architecture.",
+    "run_new_LiftQuant_beam_or_exact_screen": false
+  },
+  "existing_experiment": {
+    "binary_rows": [
+      {
+        "architecture": "role-conditioned-additive-rvq-d8-k2-m18",
+        "charged_matched_s_bpw": -0.0315068642196969,
+        "cold_expert_read_amplification": 1.0013533227237654,
+        "dimension": 8,
+        "lifted_dimension_or_binary_stages": 18,
+        "matched_gaussian_relative_mse": 0.11007133418056574,
+        "optimistic_2se_F": 1.0147056653454007,
+        "optimistic_2se_s_bpw": -0.010530653494711679,
+        "payload_rate_bpw": 2.25,
+        "physical_rate_bpw": 2.2505583586516202,
+        "source_codec_F": 2.6018259055210144,
+        "source_relative_mse": 0.11489657626793227
+      },
+      {
+        "architecture": "role-conditioned-additive-rvq-d16-k2-m36",
+        "charged_matched_s_bpw": -0.023894539447174516,
+        "cold_expert_read_amplification": 1.0052595727237654,
+        "dimension": 16,
+        "lifted_dimension_or_binary_stages": 36,
+        "matched_gaussian_relative_mse": 0.10771729130186995,
+        "optimistic_2se_F": 1.0150702737867625,
+        "optimistic_2se_s_bpw": -0.010789804658017522,
+        "payload_rate_bpw": 2.25,
+        "physical_rate_bpw": 2.2520232024016202,
+        "source_codec_F": 2.519453519666397,
+        "source_relative_mse": 0.1110333085264067
+      },
+      {
+        "architecture": "role-conditioned-additive-rvq-d32-k2-m72",
+        "charged_matched_s_bpw": -0.03181897178579801,
+        "cold_expert_read_amplification": 1.0208845727237654,
+        "dimension": 32,
+        "lifted_dimension_or_binary_stages": 72,
+        "matched_gaussian_relative_mse": 0.10563843616675193,
+        "optimistic_2se_F": 1.0266657849705954,
+        "optimistic_2se_s_bpw": -0.01898330560969088,
+        "payload_rate_bpw": 2.25,
+        "physical_rate_bpw": 2.2578825774016202,
+        "source_codec_F": 2.498123321553334,
+        "source_relative_mse": 0.10920263275083662
+      }
+    ],
+    "live_sources_verified": 18,
+    "plan_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "representation": "xklt",
+    "result_file_sha256": "50c1e92349137b66f0f1c8eabf18331154a1ab8c66f20136109049276e97b70c",
+    "verification_receipt_sha256": "de35fdc3533531e33ac6d1bb5d1dbda683a127b4acfffc5c412f45945bd521d3"
+  },
+  "receipt_lock_sha256": "291f1a91522f831302d94cbf93b64356e18f7fd9ad16b81353d7e2ea6cf5b70a",
+  "reference": {
+    "official_source": {
+      "commit": "72b3875c770e4579639931fed89dc95e4067edac",
+      "file_sha256": {
+        "ICML2026_LiftQuant.pdf": "7065ebbde21fc8e7454aa249ec778ce06b2444f9d9f3f16bb42ad6c526107e01",
+        "README.md": "0e113b089e293b4e82e07962daf5e5f026d76b65f400d6b9cd2aab05c87dce6b",
+        "lattice_generator2.py": "0914967462ec5e76ea27a4b38c7412082b9bbb61f0bef9ef1780178cfbcaaafd",
+        "quantize/tmplinear.py": "ca4949d453b147501ed363efda1c56dc2cf3428628414ab719c5ecc5d8b27da9"
+      },
+      "repository": "https://github.com/Heliulu/LiftQuant"
+    },
+    "paper": "https://arxiv.org/abs/2606.04050"
+  },
+  "schema": "liftquant-additive-vq-subsumption-v1",
+  "status": "NO_DISTINCT_EXPERIMENT_REQUIRED"
+}

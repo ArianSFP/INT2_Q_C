@@ -1,0 +1,16 @@
+{
+  "all_18_source_hashes_rechecked": true,
+  "all_324_singular_spectra_recomputed": true,
+  "all_four_geometries_rebuilt": true,
+  "all_joint_waterfills_recomputed": true,
+  "all_polar_curves_recomputed": true,
+  "charged_target_reached": false,
+  "elapsed_seconds": 17.844295263290405,
+  "numpy": "2.5.2",
+  "passed": true,
+  "python": "3.12.3",
+  "result_internal_lock_sha256": "5125240423d4f6a04a11c50a1272ab0ca825031388db4c0d477e70378b934a46",
+  "result_sha256": "565e1eb2122f2e476c5bd81e4205eeb3e4cede6e6a51149e95944355199eb41c",
+  "schema": "qwen_nested_composite_superoracle_verification_v1",
+  "source_leaky_target_reached": true
+}

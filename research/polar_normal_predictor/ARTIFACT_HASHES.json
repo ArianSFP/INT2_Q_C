@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "README.md": {
+      "bytes": 8745,
+      "sha256": "39bdca7377de2599720f83dde8867f5bae8f2d299af5ffae6757f62739de208a"
+    },
+    "polar_normal_predictor.py": {
+      "bytes": 38490,
+      "sha256": "04d033319b4bbab037b48355e5f296274ae77b1c787ddcd2508e9b58948d265e"
+    },
+    "result.json": {
+      "bytes": 262410,
+      "sha256": "e4fecac5f676d84739972bbf0e04467027aeae1356e62e1dc3cd2b84bff67026"
+    },
+    "verification_receipt.json": {
+      "bytes": 714,
+      "sha256": "3f7730ad3a82871750983091451f3ab9aa9f77dc119b5202ee8bcac0be041158"
+    },
+    "verify_result.py": {
+      "bytes": 17719,
+      "sha256": "cffacb885cacfa48d99c71a5d47013e1ce5d9a4c5b7b0d2c0a34eb30aaca1c37"
+    }
+  },
+  "schema": "qwen_polar_normal_predictor_artifact_hashes_v1"
+}

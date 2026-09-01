@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "README.md": {
+      "bytes": 9497,
+      "sha256": "45fdde9b67f60d559ef8b5c8c19cced946b4475774787bf1c7fae0441758fcd0"
+    },
+    "composite_superoracle.py": {
+      "bytes": 37090,
+      "sha256": "33b3787104fcb83b9e013c145dcd3f9a93bc29a8fe66da91ee0a5d8582358bfc"
+    },
+    "result.json": {
+      "bytes": 22505446,
+      "sha256": "565e1eb2122f2e476c5bd81e4205eeb3e4cede6e6a51149e95944355199eb41c"
+    },
+    "verification_receipt.json": {
+      "bytes": 641,
+      "sha256": "dd576611e26ef01871683ca20d944a2e643cd62e0b45ac97b2b7af6079001e24"
+    },
+    "verify_result.py": {
+      "bytes": 19399,
+      "sha256": "e085f7fe712bd84b4c9d218ca6a2f744555875266ac0b473527dab7df5e7ec4d"
+    }
+  },
+  "schema": "qwen_nested_composite_superoracle_artifact_hashes_v1"
+}

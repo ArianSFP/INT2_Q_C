@@ -1,0 +1,195 @@
+{
+  "artifact": {
+    "architecture": "STRATA expert-affine N20/N21 checkpoint",
+    "container_sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b",
+    "format_magic": "PLRLOC3\\0",
+    "model": "Qwen/Qwen3-30B-A3B",
+    "panel": "six precommitted expert triplets / 18 full matrices",
+    "physical_bits": 70778880,
+    "physical_bpw": 2.5,
+    "physical_bytes": 8847360,
+    "scope": "source-free checkpoint evidence; excludes raw BF16 sources, duplicate per-block payloads, and decoded FP64 scratch",
+    "weights": 28311552
+  },
+  "claim": {
+    "checkpoint_passed": true,
+    "claim_boundary": "one deterministic precommitted 18-matrix Qwen panel; external compressed-byte reads, not a fused inference-kernel benchmark",
+    "energy_weighted_relative_mse": 0.030902167403153148,
+    "final_rate_relative_gate_passed": false,
+    "gaussian_assumed_mse": 0.03125,
+    "max_4k_read_amplification": 1.1694444444444445,
+    "physical_bpw": 2.5,
+    "target_mse_at_same_rate": 0.025
+  },
+  "files": [
+    {
+      "bytes": 24790,
+      "classification": "sealed_preencoding_plan",
+      "path": "plan.lock.json",
+      "role": "plan",
+      "sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868"
+    },
+    {
+      "bytes": 19574,
+      "classification": "one_shot_execution_evidence",
+      "path": "summary.json",
+      "role": "summary",
+      "sha256": "cf349da8d087119202d592109d52d7ab8c7617a8fa0098a9530500574eae291b"
+    },
+    {
+      "bytes": 8847360,
+      "classification": "byte_bound_binary_evidence",
+      "path": "strata_expert_affine_n20n21.bin",
+      "role": "container",
+      "sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b"
+    },
+    {
+      "bytes": 27243,
+      "classification": "independent_decode_and_source_score",
+      "path": "independent_audit.json",
+      "role": "independent_audit",
+      "sha256": "df2ac4e204f78b30486b25146dfe12f83a8310679e104742f2d6811675f5379a"
+    },
+    {
+      "bytes": 128,
+      "classification": "sealed_format_asset",
+      "path": "assets/header.bin",
+      "role": "asset_header_bin",
+      "sha256": "3c16bcf308c0cfce2071be24bf612d202360510084540aa0b358938d8399a538"
+    },
+    {
+      "bytes": 144,
+      "classification": "sealed_format_asset",
+      "path": "assets/route.bin",
+      "role": "asset_route_bin",
+      "sha256": "94feb3564fe0c3eddfc745703f1f6001b5ae316e7146209e6b45323cdf81697c"
+    },
+    {
+      "bytes": 5184,
+      "classification": "sealed_format_asset",
+      "path": "assets/labels_3bit.bin",
+      "role": "asset_labels_3bit_bin",
+      "sha256": "4bb444bd14248bc72dd521b7f581700cc95e5f6d5a9e6cbea21c2119efae89e9"
+    },
+    {
+      "bytes": 15,
+      "classification": "sealed_format_asset",
+      "path": "assets/profiles.bin",
+      "role": "asset_profiles_bin",
+      "sha256": "15db20e635d1dbcd375a89c6967b22c92291db7c3d270b8297f693295bc59718"
+    },
+    {
+      "bytes": 4401,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_00.json",
+      "role": "encoder_block_00",
+      "sha256": "f7079b042937dd50826f80b6a7e031a48cd8aaeafe45a8da6479fc0b9472fb2c"
+    },
+    {
+      "bytes": 4371,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_01.json",
+      "role": "encoder_block_01",
+      "sha256": "d3d2dcf51816f49aedfac4ab4f60f40ccb49e64d859cd2bf51b6aaf09afe4232"
+    },
+    {
+      "bytes": 4400,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_02.json",
+      "role": "encoder_block_02",
+      "sha256": "0e40c5d3d5d7605846c8e1c07df3a2dd5e8ae2942d4a936573291839ccf94e25"
+    },
+    {
+      "bytes": 4356,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_03.json",
+      "role": "encoder_block_03",
+      "sha256": "d34a28f55313c79c91dceb75f3db728466b90a933b78d2f22bb4add4542d98d3"
+    },
+    {
+      "bytes": 4415,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_04.json",
+      "role": "encoder_block_04",
+      "sha256": "5002268df3156ce17280390dd7f451b77921236601802e39357bda1e47a876c3"
+    },
+    {
+      "bytes": 4386,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_05.json",
+      "role": "encoder_block_05",
+      "sha256": "7b0786c893892f6640391b2426d7d649d8eecea565a50838d5f385310d7abf71"
+    },
+    {
+      "bytes": 4419,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_06.json",
+      "role": "encoder_block_06",
+      "sha256": "15ab7d68cac66d860aadd1985cfaac4360163c14656f0c12053b1b8ac20c4526"
+    },
+    {
+      "bytes": 4391,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_07.json",
+      "role": "encoder_block_07",
+      "sha256": "de04c84bac2195464ab5690bc2be447caf14f4195d5e0e243e8305c40d17e0e8"
+    },
+    {
+      "bytes": 4389,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_08.json",
+      "role": "encoder_block_08",
+      "sha256": "f11afcb41cdc181e68e81672b26333251d338532cdc47df59104558c81993013"
+    },
+    {
+      "bytes": 4374,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_09.json",
+      "role": "encoder_block_09",
+      "sha256": "efca2bfa93499df9addd7e914e0b881b2cc59b182283060f836e0a47b88e0d78"
+    },
+    {
+      "bytes": 4388,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_10.json",
+      "role": "encoder_block_10",
+      "sha256": "e3b7eae59ca5984f642dc936b6e6ef2b608fed8d833f36a4338fe701c7b6f0ad"
+    },
+    {
+      "bytes": 4389,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_11.json",
+      "role": "encoder_block_11",
+      "sha256": "62a82dc4404396a71bedf97ef275840132d41f7e9b29edee7035dd053287262b"
+    },
+    {
+      "bytes": 4385,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_12.json",
+      "role": "encoder_block_12",
+      "sha256": "5d3f2aa6889b50d508eb29c34145d63b103303d8ee5a9c54b1712ab87146eb75"
+    },
+    {
+      "bytes": 4397,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_13.json",
+      "role": "encoder_block_13",
+      "sha256": "99e16aeee30841fd0ce7d0d990d1ce4ad2c16286e1e5fc27b88675c274c62960"
+    },
+    {
+      "bytes": 4392,
+      "classification": "one_shot_execution_evidence",
+      "path": "encoder_metadata/block_14.json",
+      "role": "encoder_block_14",
+      "sha256": "aa8330b2f8ca8a3068a77da21c17c3314e0d4df63b5827030dbda26a4146b72a"
+    },
+    {
+      "bytes": 3909,
+      "classification": "adversarial_verification_evidence",
+      "path": "tamper_report.json",
+      "role": "tamper_report",
+      "sha256": "18f85854dbdd6d358b4a725b47a4d136a1b50fab1b7789f4bdef052fbabcef9d"
+    }
+  ],
+  "schema": "strata_expert_affine_checkpoint_manifest_v1"
+}

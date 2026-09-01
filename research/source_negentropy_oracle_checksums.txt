@@ -1,0 +1,2 @@
+078480f731aa6aa7fa4261d417f208756a9b82c42d19733bf9923efcd03130d5  source_negentropy_oracle.py
+404ac043a8c7f52a6d33ff25f2084d1a573e5ce3fcb839aac03111ee3129d652  source_negentropy_oracle_result.json

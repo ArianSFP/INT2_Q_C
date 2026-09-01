@@ -1,0 +1,128 @@
+{
+  "protocol": "bisco_raw_mse_aux_d16_launch_v1",
+  "status": "frozen_before_auxiliary_result",
+  "parent_protocol": {
+    "relative_path": "research/breakthrough_redteam/bisco_protocol_freeze.json",
+    "sha256": "28c2bd6656f31ce7315601d0048d0b43759a7f2859142f745465e8fa0fe83164"
+  },
+  "scope": {
+    "cell": "d16_h64_shallow_two_stage",
+    "purpose": "auxiliary held-out matched-Gaussian early gate only",
+    "pinned_panel_access": "forbidden",
+    "roles": [
+      "up",
+      "down"
+    ],
+    "deployment_ledger_roles": [
+      "gate",
+      "up",
+      "down"
+    ],
+    "claim_boundary": "A kill rejects this fixed shallow d16 two-stage BSQ training recipe; it is not a converse for arbitrary nonlinear codebooks. A survival does not authorize opening the pinned panel because no frozen auxiliary gate-role source exists."
+  },
+  "data": {
+    "layer": 15,
+    "experts": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120
+    ],
+    "validation_experts": [
+      24,
+      56,
+      88,
+      120
+    ],
+    "rows": 768,
+    "columns": 2048,
+    "chunk_dimension": 16,
+    "normalization": "per-matrix FP16 mean and centered RMS; score in original coordinates",
+    "gaussian_control": "iid Gaussian from pooled training-role mean and centered RMS, then the identical per-matrix FP16 normalization path",
+    "file_rule": "directory must contain exactly l15e{expert}_{up|down}.bf16.bin for the frozen expert set and no other BF16 source files"
+  },
+  "codec": {
+    "stages": 2,
+    "bits_per_stage": 18,
+    "hidden_width": 64,
+    "encoder": "Linear(16,64)-SiLU-Linear(64,18), training and code inference only",
+    "decoder": "Linear(18,64)-SiLU-Linear(64,16)",
+    "binary_value": "sign(logit)/sqrt(18)",
+    "decoder_evaluation_dtype": "FP16 round-trip parameters with FP32 accumulation",
+    "code_packing": "36 bits per 16 weights, dense with no per-chunk padding"
+  },
+  "optimization": {
+    "seed": 260901,
+    "gaussian_seed_offset": 104729,
+    "max_updates": 2048,
+    "batch_chunks_per_role": 4096,
+    "learning_rate": 0.0015,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-8,
+    "global_gradient_norm_clip": 1.0,
+    "temperature_start": 1.0,
+    "temperature_end": 0.25,
+    "bit_balance_weight": 0.01,
+    "paired_rule": "Qwen and Gaussian use identical parameter initialization, batch indices, update count, temperature, optimizer, evaluation steps, and bit-flip search"
+  },
+  "evaluation": {
+    "steps": [
+      256,
+      512,
+      2048
+    ],
+    "batch_chunks": 16384,
+    "greedy_bitflip_sweeps": 1,
+    "bit_order": "stage1 bits 0..17 then stage2 bits 0..17",
+    "fold_unit": "whole validation expert pooled over up and down",
+    "metric": "pooled original-coordinate source-relative MSE"
+  },
+  "early_kill": {
+    "half_checkpoint_update": 256,
+    "quarter_checkpoint_update": 512,
+    "upper_bound": "pooled s_match plus two whole-expert standard errors",
+    "kill_if_quarter_upper_below": 0.08,
+    "and_quarter_minus_half_upper_below": 0.01,
+    "remaining_recent_slope_intervals": 6,
+    "boundary_linear_projection_max": 0.14,
+    "note": "At the strict boundaries, 0.08 + 6*0.01 = 0.14, below both the production 0.1613464 and six-expert 0.1687065 matched-s requirements. This is a preregistered trend kill, not a mathematical upper bound."
+  },
+  "physical_ledger": {
+    "weights_per_expert": 4718592,
+    "experts_production_amortization": 128,
+    "experts_panel_amortization": 6,
+    "header_bytes": 256,
+    "local_mean_rms_bytes_per_expert": 12,
+    "stored_decoder_dtype_bytes": 2,
+    "strict_physical_bpw_min": 2.15,
+    "strict_physical_bpw_max": 2.5,
+    "strict_cold_read_amplification_max_exclusive": 2.0
+  },
+  "promotion": {
+    "target_F_max": 0.8,
+    "target_s_absolute_min": 0.16096404744368115,
+    "all_whole_expert_s_match_positive": true,
+    "required_outputs": [
+      "D_Qwen",
+      "D_Gaussian",
+      "s_match",
+      "Gaussian_operational_gap",
+      "physical_R",
+      "s_absolute",
+      "cold_read_amplification"
+    ]
+  }
+}

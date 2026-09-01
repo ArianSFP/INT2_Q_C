@@ -1,0 +1,12 @@
+{
+  "best_F": 0.9984917873401222,
+  "plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+  "result_sha256": "846dc75f43eb796d8427e8426309baf50558a194ccce469a919cae499c67f90a",
+  "schema": "qwen_router_sideinfo_verification_v1",
+  "status": "PASS",
+  "target_F_max": 0.8,
+  "verified_curves": 32,
+  "verified_rate_cells": 96,
+  "verified_routers": 6,
+  "verified_sources": 18
+}

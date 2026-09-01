@@ -1,0 +1,660 @@
+{
+  "protocol": {
+    "cpu_only": true,
+    "cupy_imported": false,
+    "source_files_opened_read_only": true,
+    "panel": [
+      {
+        "layer": 5,
+        "expert": 18
+      },
+      {
+        "layer": 12,
+        "expert": 7
+      },
+      {
+        "layer": 18,
+        "expert": 20
+      },
+      {
+        "layer": 28,
+        "expert": 83
+      },
+      {
+        "layer": 36,
+        "expert": 76
+      },
+      {
+        "layer": 45,
+        "expert": 41
+      }
+    ]
+  },
+  "predictor": {
+    "gate": "cross-fitted same-coordinate nonlinear semantic-role predictor",
+    "optimism": "Each direction receives the other two BF16 roles losslessly, all three directions are counted simultaneously, and prediction tables are first tested without rate charge. A realizable codec cannot obtain this oracle.",
+    "roles": [
+      "gate",
+      "up",
+      "down_transposed"
+    ],
+    "experts": [
+      {
+        "layer": 5,
+        "expert": 18,
+        "coefficients_per_role": 1572864,
+        "role_energy": [
+          841.6700309622756,
+          765.403527355104,
+          817.4187426624628
+        ],
+        "resolutions": [
+          {
+            "bins_per_predictor_axis": 16,
+            "impossible_free_sideinfo_relative_mse": 0.9751935547557652,
+            "directional_residual_variance_ratios": [
+              1.0002624427798188,
+              0.9617239925835612,
+              0.9619933664095616
+            ],
+            "occupied_cells_across_six_fits": [
+              256,
+              256,
+              256,
+              256,
+              256,
+              256
+            ],
+            "charged_predictor_bits": 14752,
+            "predictor_bpw_if_private_to_this_expert": 0.0031263563368055555
+          },
+          {
+            "bins_per_predictor_axis": 32,
+            "impossible_free_sideinfo_relative_mse": 0.9756715537203533,
+            "directional_residual_variance_ratios": [
+              1.001258790246183,
+              0.9619093836699381,
+              0.9622116266547598
+            ],
+            "occupied_cells_across_six_fits": [
+              1024,
+              1024,
+              1024,
+              1024,
+              1024,
+              1024
+            ],
+            "charged_predictor_bits": 53152,
+            "predictor_bpw_if_private_to_this_expert": 0.011264377170138888
+          },
+          {
+            "bins_per_predictor_axis": 64,
+            "impossible_free_sideinfo_relative_mse": 0.9791555945860118,
+            "directional_residual_variance_ratios": [
+              1.0049528554100418,
+              0.965282700328424,
+              0.9655830906316921
+            ],
+            "occupied_cells_across_six_fits": [
+              4096,
+              4096,
+              4096,
+              4096,
+              4096,
+              4096
+            ],
+            "charged_predictor_bits": 203680,
+            "predictor_bpw_if_private_to_this_expert": 0.04316541883680555
+          },
+          {
+            "bins_per_predictor_axis": 128,
+            "impossible_free_sideinfo_relative_mse": 0.9932848435488562,
+            "directional_residual_variance_ratios": [
+              1.019213232435575,
+              0.979377803959043,
+              0.979609293752229
+            ],
+            "occupied_cells_across_six_fits": [
+              16384,
+              16384,
+              16384,
+              16384,
+              16384,
+              16384
+            ],
+            "charged_predictor_bits": 799648,
+            "predictor_bpw_if_private_to_this_expert": 0.1694675021701389
+          }
+        ]
+      },
+      {
+        "layer": 12,
+        "expert": 7,
+        "coefficients_per_role": 1572864,
+        "role_energy": [
+          817.1288010804136,
+          811.7096293478078,
+          849.621434546294
+        ],
+        "resolutions": [
+          {
+            "bins_per_predictor_axis": 16,
+            "impossible_free_sideinfo_relative_mse": 0.9946431009711467,
+            "directional_residual_variance_ratios": [
+              1.0003027651688732,
+              0.991836167047362,
+              0.9918815659743516
+            ],
+            "occupied_cells_across_six_fits": [
+              256,
+              256,
+              256,
+              256,
+              256,
+              256
+            ],
+            "charged_predictor_bits": 14752,
+            "predictor_bpw_if_private_to_this_expert": 0.0031263563368055555
+          },
+          {
+            "bins_per_predictor_axis": 32,
+            "impossible_free_sideinfo_relative_mse": 0.9954207757746779,
+            "directional_residual_variance_ratios": [
+              1.001291821500532,
+              0.992538872303504,
+              0.9925275675095574
+            ],
+            "occupied_cells_across_six_fits": [
+              1024,
+              1024,
+              1024,
+              1024,
+              1024,
+              1024
+            ],
+            "charged_predictor_bits": 53152,
+            "predictor_bpw_if_private_to_this_expert": 0.011264377170138888
+          },
+          {
+            "bins_per_predictor_axis": 64,
+            "impossible_free_sideinfo_relative_mse": 0.9992140016460163,
+            "directional_residual_variance_ratios": [
+              1.005115908755006,
+              0.9963722598398685,
+              0.9962527426786858
+            ],
+            "occupied_cells_across_six_fits": [
+              4096,
+              4096,
+              4096,
+              4096,
+              4096,
+              4096
+            ],
+            "charged_predictor_bits": 203680,
+            "predictor_bpw_if_private_to_this_expert": 0.04316541883680555
+          },
+          {
+            "bins_per_predictor_axis": 128,
+            "impossible_free_sideinfo_relative_mse": 1.013418934384419,
+            "directional_residual_variance_ratios": [
+              1.0197423306774684,
+              1.0105605665747766,
+              1.0100681896401889
+            ],
+            "occupied_cells_across_six_fits": [
+              16384,
+              16384,
+              16384,
+              16384,
+              16384,
+              16384
+            ],
+            "charged_predictor_bits": 799648,
+            "predictor_bpw_if_private_to_this_expert": 0.1694675021701389
+          }
+        ]
+      },
+      {
+        "layer": 18,
+        "expert": 20,
+        "coefficients_per_role": 1572864,
+        "role_energy": [
+          1072.4005741883047,
+          810.1565218245394,
+          885.1756646151048
+        ],
+        "resolutions": [
+          {
+            "bins_per_predictor_axis": 16,
+            "impossible_free_sideinfo_relative_mse": 0.9094436532055509,
+            "directional_residual_variance_ratios": [
+              0.9999339593947436,
+              0.8516481278551111,
+              0.8527109203387159
+            ],
+            "occupied_cells_across_six_fits": [
+              256,
+              256,
+              256,
+              256,
+              256,
+              256
+            ],
+            "charged_predictor_bits": 14752,
+            "predictor_bpw_if_private_to_this_expert": 0.0031263563368055555
+          },
+          {
+            "bins_per_predictor_axis": 32,
+            "impossible_free_sideinfo_relative_mse": 0.9087571108527696,
+            "directional_residual_variance_ratios": [
+              1.0008836818647697,
+              0.8497491617228589,
+              0.8511516943659155
+            ],
+            "occupied_cells_across_six_fits": [
+              1024,
+              1024,
+              1024,
+              1024,
+              1024,
+              1024
+            ],
+            "charged_predictor_bits": 53152,
+            "predictor_bpw_if_private_to_this_expert": 0.011264377170138888
+          },
+          {
+            "bins_per_predictor_axis": 64,
+            "impossible_free_sideinfo_relative_mse": 0.9114779083062866,
+            "directional_residual_variance_ratios": [
+              1.0046749002925222,
+              0.851842363705287,
+              0.85315007080292
+            ],
+            "occupied_cells_across_six_fits": [
+              4096,
+              4096,
+              4096,
+              4096,
+              4096,
+              4096
+            ],
+            "charged_predictor_bits": 203680,
+            "predictor_bpw_if_private_to_this_expert": 0.04316541883680555
+          },
+          {
+            "bins_per_predictor_axis": 128,
+            "impossible_free_sideinfo_relative_mse": 0.9239345826305451,
+            "directional_residual_variance_ratios": [
+              1.018271227315224,
+              0.863440063818852,
+              0.8650122183339659
+            ],
+            "occupied_cells_across_six_fits": [
+              16381,
+              16375,
+              16384,
+              16384,
+              16384,
+              16384
+            ],
+            "charged_predictor_bits": 799648,
+            "predictor_bpw_if_private_to_this_expert": 0.1694675021701389
+          }
+        ]
+      },
+      {
+        "layer": 28,
+        "expert": 83,
+        "coefficients_per_role": 1572864,
+        "role_energy": [
+          885.4636020588823,
+          892.6647426938948,
+          881.3383183620824
+        ],
+        "resolutions": [
+          {
+            "bins_per_predictor_axis": 16,
+            "impossible_free_sideinfo_relative_mse": 0.9813539363120183,
+            "directional_residual_variance_ratios": [
+              1.0003181389267282,
+              0.9721581770476954,
+              0.9716149054529203
+            ],
+            "occupied_cells_across_six_fits": [
+              256,
+              256,
+              256,
+              256,
+              256,
+              256
+            ],
+            "charged_predictor_bits": 14752,
+            "predictor_bpw_if_private_to_this_expert": 0.0031263563368055555
+          },
+          {
+            "bins_per_predictor_axis": 32,
+            "impossible_free_sideinfo_relative_mse": 0.9816955530731087,
+            "directional_residual_variance_ratios": [
+              1.0012832665970264,
+              0.972127069109509,
+              0.971707607565409
+            ],
+            "occupied_cells_across_six_fits": [
+              1024,
+              1024,
+              1024,
+              1024,
+              1024,
+              1024
+            ],
+            "charged_predictor_bits": 53152,
+            "predictor_bpw_if_private_to_this_expert": 0.011264377170138888
+          },
+          {
+            "bins_per_predictor_axis": 64,
+            "impossible_free_sideinfo_relative_mse": 0.9851516449775162,
+            "directional_residual_variance_ratios": [
+              1.0050995574925938,
+              0.9754638620046246,
+              0.9749226466614778
+            ],
+            "occupied_cells_across_six_fits": [
+              4096,
+              4096,
+              4096,
+              4096,
+              4096,
+              4096
+            ],
+            "charged_predictor_bits": 203680,
+            "predictor_bpw_if_private_to_this_expert": 0.04316541883680555
+          },
+          {
+            "bins_per_predictor_axis": 128,
+            "impossible_free_sideinfo_relative_mse": 0.9992542539373771,
+            "directional_residual_variance_ratios": [
+              1.0193871784906994,
+              0.9893713585849196,
+              0.9890369974417925
+            ],
+            "occupied_cells_across_six_fits": [
+              16384,
+              16384,
+              16384,
+              16384,
+              16384,
+              16384
+            ],
+            "charged_predictor_bits": 799648,
+            "predictor_bpw_if_private_to_this_expert": 0.1694675021701389
+          }
+        ]
+      },
+      {
+        "layer": 36,
+        "expert": 76,
+        "coefficients_per_role": 1572864,
+        "role_energy": [
+          888.9517319949579,
+          972.5234558448973,
+          939.5597586470956
+        ],
+        "resolutions": [
+          {
+            "bins_per_predictor_axis": 16,
+            "impossible_free_sideinfo_relative_mse": 0.9907795619149546,
+            "directional_residual_variance_ratios": [
+              1.0000980548828227,
+              0.9866081799165741,
+              0.9862807276601311
+            ],
+            "occupied_cells_across_six_fits": [
+              256,
+              256,
+              256,
+              256,
+              256,
+              256
+            ],
+            "charged_predictor_bits": 14752,
+            "predictor_bpw_if_private_to_this_expert": 0.0031263563368055555
+          },
+          {
+            "bins_per_predictor_axis": 32,
+            "impossible_free_sideinfo_relative_mse": 0.9913213514073632,
+            "directional_residual_variance_ratios": [
+              1.0010706297811425,
+              0.9869029542263906,
+              0.9866706168903492
+            ],
+            "occupied_cells_across_six_fits": [
+              1024,
+              1024,
+              1024,
+              1024,
+              1024,
+              1024
+            ],
+            "charged_predictor_bits": 53152,
+            "predictor_bpw_if_private_to_this_expert": 0.011264377170138888
+          },
+          {
+            "bins_per_predictor_axis": 64,
+            "impossible_free_sideinfo_relative_mse": 0.9949039028773969,
+            "directional_residual_variance_ratios": [
+              1.0048880457703397,
+              0.9903032500276845,
+              0.9902196044406916
+            ],
+            "occupied_cells_across_six_fits": [
+              4096,
+              4096,
+              4096,
+              4096,
+              4096,
+              4096
+            ],
+            "charged_predictor_bits": 203680,
+            "predictor_bpw_if_private_to_this_expert": 0.04316541883680555
+          },
+          {
+            "bins_per_predictor_axis": 128,
+            "impossible_free_sideinfo_relative_mse": 1.0091189192546832,
+            "directional_residual_variance_ratios": [
+              1.0195391863733683,
+              1.0042064216561188,
+              1.0043447733631234
+            ],
+            "occupied_cells_across_six_fits": [
+              16384,
+              16384,
+              16384,
+              16384,
+              16384,
+              16384
+            ],
+            "charged_predictor_bits": 799648,
+            "predictor_bpw_if_private_to_this_expert": 0.1694675021701389
+          }
+        ]
+      },
+      {
+        "layer": 45,
+        "expert": 41,
+        "coefficients_per_role": 1572864,
+        "role_energy": [
+          882.0293225790165,
+          1052.5524149096143,
+          1127.1262351828693
+        ],
+        "resolutions": [
+          {
+            "bins_per_predictor_axis": 16,
+            "impossible_free_sideinfo_relative_mse": 0.9688995943605655,
+            "directional_residual_variance_ratios": [
+              1.0003095848425043,
+              0.9562887540335591,
+              0.9560962705301816
+            ],
+            "occupied_cells_across_six_fits": [
+              256,
+              256,
+              256,
+              256,
+              256,
+              256
+            ],
+            "charged_predictor_bits": 14752,
+            "predictor_bpw_if_private_to_this_expert": 0.0031263563368055555
+          },
+          {
+            "bins_per_predictor_axis": 32,
+            "impossible_free_sideinfo_relative_mse": 0.9694701935935423,
+            "directional_residual_variance_ratios": [
+              1.0013603609837796,
+              0.9566143129171317,
+              0.956519936530252
+            ],
+            "occupied_cells_across_six_fits": [
+              1024,
+              1024,
+              1024,
+              1024,
+              1024,
+              1024
+            ],
+            "charged_predictor_bits": 53152,
+            "predictor_bpw_if_private_to_this_expert": 0.011264377170138888
+          },
+          {
+            "bins_per_predictor_axis": 64,
+            "impossible_free_sideinfo_relative_mse": 0.9731080392550457,
+            "directional_residual_variance_ratios": [
+              1.0053085629640353,
+              0.9599887671577245,
+              0.9601608784754281
+            ],
+            "occupied_cells_across_six_fits": [
+              4096,
+              4096,
+              4096,
+              4096,
+              4096,
+              4096
+            ],
+            "charged_predictor_bits": 203680,
+            "predictor_bpw_if_private_to_this_expert": 0.04316541883680555
+          },
+          {
+            "bins_per_predictor_axis": 128,
+            "impossible_free_sideinfo_relative_mse": 0.9873242976754388,
+            "directional_residual_variance_ratios": [
+              1.0195728490715144,
+              0.9745165310129028,
+              0.9740486576054015
+            ],
+            "occupied_cells_across_six_fits": [
+              16384,
+              16384,
+              16384,
+              16384,
+              16384,
+              16384
+            ],
+            "charged_predictor_bits": 799648,
+            "predictor_bpw_if_private_to_this_expert": 0.1694675021701389
+          }
+        ]
+      }
+    ],
+    "aggregate": [
+      {
+        "bins_per_predictor_axis": 16,
+        "impossible_free_sideinfo_relative_mse": 0.969450095771172,
+        "energy_improvement_percent": 3.0549904228827973,
+        "directional_residual_variance_ratios": [
+          1.0001929221332717,
+          0.9547602875745882,
+          0.9535050061387935
+        ],
+        "impossible_conditional_advantage_bpw": 0.022533135954696068,
+        "passes_0p16_bpw_gate": false,
+        "passes_19p4_energy_gate": false,
+        "charged_predictor_bits_per_expert": 14752,
+        "private_predictor_bpw": 0.0031263563368055555,
+        "net_advantage_after_private_table_charge_bpw": 0.019406779617890512
+      },
+      {
+        "bins_per_predictor_axis": 32,
+        "impossible_free_sideinfo_relative_mse": 0.9697810602410607,
+        "energy_improvement_percent": 3.02189397589393,
+        "directional_residual_variance_ratios": [
+          1.0011787404259005,
+          0.954717951290583,
+          0.9535545729014216
+        ],
+        "impossible_conditional_advantage_bpw": 0.02229442238535496,
+        "passes_0p16_bpw_gate": false,
+        "passes_19p4_energy_gate": false,
+        "charged_predictor_bits_per_expert": 53152,
+        "private_predictor_bpw": 0.011264377170138888,
+        "net_advantage_after_private_table_charge_bpw": 0.011030045215216073
+      },
+      {
+        "bins_per_predictor_axis": 64,
+        "impossible_free_sideinfo_relative_mse": 0.9732234999288749,
+        "energy_improvement_percent": 2.6776500071125087,
+        "directional_residual_variance_ratios": [
+          1.0049939100082934,
+          0.9579651951392604,
+          0.9568201802981412
+        ],
+        "impossible_conditional_advantage_bpw": 0.019741395354950383,
+        "passes_0p16_bpw_gate": false,
+        "passes_19p4_energy_gate": false,
+        "charged_predictor_bits_per_expert": 203680,
+        "private_predictor_bpw": 0.04316541883680555,
+        "net_advantage_after_private_table_charge_bpw": -0.02342402348185517
+      },
+      {
+        "bins_per_predictor_axis": 128,
+        "impossible_free_sideinfo_relative_mse": 0.9871053642413523,
+        "energy_improvement_percent": 1.2894635758647688,
+        "directional_residual_variance_ratios": [
+          1.0192472189450463,
+          0.971712257051339,
+          0.9704682214925093
+        ],
+        "impossible_conditional_advantage_bpw": 0.009523671762303116,
+        "passes_0p16_bpw_gate": false,
+        "passes_19p4_energy_gate": false,
+        "charged_predictor_bits_per_expert": 799648,
+        "private_predictor_bpw": 0.1694675021701389,
+        "net_advantage_after_private_table_charge_bpw": -0.15994383040783577
+      }
+    ],
+    "best_optimistic_resolution": {
+      "bins_per_predictor_axis": 16,
+      "impossible_free_sideinfo_relative_mse": 0.969450095771172,
+      "energy_improvement_percent": 3.0549904228827973,
+      "directional_residual_variance_ratios": [
+        1.0001929221332717,
+        0.9547602875745882,
+        0.9535050061387935
+      ],
+      "impossible_conditional_advantage_bpw": 0.022533135954696068,
+      "passes_0p16_bpw_gate": false,
+      "passes_19p4_energy_gate": false,
+      "charged_predictor_bits_per_expert": 14752,
+      "private_predictor_bpw": 0.0031263563368055555,
+      "net_advantage_after_private_table_charge_bpw": 0.019406779617890512
+    },
+    "decision": {
+      "required_conditional_advantage_bpw": 0.16,
+      "required_energy_improvement_percent": 19.4,
+      "passes": false
+    },
+    "seconds": 41.3793114220025
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "bisco_two_stage_bsq_matched_gaussian_v1",
+  "status": "designed_not_run_gpu_excluded_while_sealed_run_active",
+  "objective": {
+    "metric": "pooled_original_coordinate_source_relative_mse",
+    "physical_bpw_min": 2.15,
+    "physical_bpw_max": 2.5,
+    "target_F_max": 0.8,
+    "target_s_min": 0.16096404744368115,
+    "cold_expert_read_amplification_max_exclusive": 2.0
+  },
+  "data_firewall": {
+    "auxiliary_directory": "qwen_weight_cache/rd_structure_diag_cross_expert",
+    "auxiliary_layer": 15,
+    "auxiliary_experts": [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120],
+    "auxiliary_validation_experts": [24, 56, 88, 120],
+    "auxiliary_roles_available": ["up", "down"],
+    "pinned_panel_identities": [
+      "layer5_expert18",
+      "layer12_expert7",
+      "layer18_expert20",
+      "layer28_expert83",
+      "layer36_expert76",
+      "layer45_expert41"
+    ],
+    "rule": "no pinned layer or expert may affect decoder training, hyperparameters, stopping, normalization tables, or the auxiliary gate",
+    "heldout_encoder_rule": "encoder inference and charged-code bit flips are allowed; heldout decoder updates are forbidden"
+  },
+  "codec": {
+    "stages": 2,
+    "decoder": "Linear(b_s,h)-SiLU-Linear(h,d)",
+    "stored_decoder_dtype": "fp16",
+    "encoder": "mirrored_training_only_not_deployed",
+    "dimensions": [16, 32, 64],
+    "hidden_width_rule": "h=4*d",
+    "production_code_rate_bpw": 2.25,
+    "production_stage_bits": {
+      "16": [18, 18],
+      "32": [36, 36],
+      "64": [72, 72]
+    },
+    "normalization": "per-matrix FP16 mean and RMS, both serialized",
+    "header_bytes": 256,
+    "code_packing": "dense bit packing with no per-chunk padding"
+  },
+  "control": {
+    "distribution": "iid Gaussian matched to training-role moments",
+    "matching": "identical architecture, seeds, initialization, batch schedule, updates, stop rule, and bit-flip search"
+  },
+  "early_kill": {
+    "first_cell": "d16_h64_shallow",
+    "checkpoint_fraction": 0.25,
+    "kill_if_upper_s_match_below": 0.08,
+    "upper_bound": "pooled heldout point estimate plus two whole-expert standard errors",
+    "minimum_late_training_improvement": 0.01,
+    "pinned_panel_opened_after_kill": false,
+    "residual_hidden_block_gate_s_match": 0.12
+  },
+  "promotion": {
+    "all_whole_expert_folds_must_be_positive": true,
+    "serialized_s_absolute_min": 0.16096404744368115,
+    "report_required": [
+      "D_Qwen",
+      "D_Gaussian",
+      "s_match",
+      "Gaussian_operational_gap",
+      "physical_R",
+      "s_absolute",
+      "cold_read_amplification"
+    ]
+  },
+  "ledger_evidence": {
+    "assessment_sha256": "859ba01b285ad497fbcca63c9ef47c6e4c079c7e549ba33ca22ac24fab54f581",
+    "ledger_script_sha256": "0c8be46df79b42e15d1435a4d4edd60a511201786f21dcd5920e97b5e0d70cc0"
+  },
+  "primary_source": "https://arxiv.org/abs/2607.08643"
+}

@@ -1,0 +1,23 @@
+{
+  "all_F_identities_recomputed": true,
+  "all_crossfit_selections_recomputed": true,
+  "all_rate_ledgers_recomputed": true,
+  "candidate_count": 540,
+  "early_kill": true,
+  "loo_free_s_bpw": 0.026177148441561885,
+  "panel_leaky_free_s_bpw": 0.039838744800183984,
+  "receipt_lock_sha256": "9c7657bd7a821c416943cfa24ee06796531a65cabd3e39ce72678abab645dc4f",
+  "required_s_bpw": 0.16096404744368115,
+  "result_file_sha256": "762838439094e7ce8daa97134fbe81d04ef8f6d3fe888bef25b8e0a796aa87be",
+  "result_lock_sha256": "f1bace69dce96ed1bd11a8db37a6e1873bbc8614591fcc36584ef957867740dd",
+  "result_path": "C:\\INT2__compression\\procedural_subspace_oracle\\smoke_v1.json",
+  "schema": "qwen-procedural-subspace-verification-receipt-v1",
+  "source_provenance": {
+    "all_source_hashes_unique": true,
+    "plan_lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "plan_reopened": false,
+    "source_bytes": 56623104,
+    "source_count": 18
+  },
+  "verified": true
+}

@@ -1,0 +1,3075 @@
+{
+  "best": {
+    "best_F": 0.9984917873401222,
+    "best_s_bpw": 0.0010887667149184358,
+    "captured_energy_fraction": 0.076683326835843,
+    "dimension_fraction": 0.0625,
+    "energy_enrichment": 1.226933229373488,
+    "ideal_rates": [
+      {
+        "F": 0.9984917873401228,
+        "rate_bpw": 2.15,
+        "relative_mse_oracle": 0.05068920918806472,
+        "s_bpw": 0.0010887667149180348,
+        "waterlevel": 0.05068920918806472
+      },
+      {
+        "F": 0.9984917873401223,
+        "rate_bpw": 2.3,
+        "relative_mse_oracle": 0.041172431632408066,
+        "s_bpw": 0.0010887667149183555,
+        "waterlevel": 0.041172431632408066
+      },
+      {
+        "F": 0.9984917873401222,
+        "rate_bpw": 2.5,
+        "relative_mse_oracle": 0.03120286835437882,
+        "s_bpw": 0.0010887667149184358,
+        "waterlevel": 0.03120286835437882
+      }
+    ],
+    "isotropic_expected_energy_fraction": 0.0625,
+    "k": 128,
+    "mode": "free_per_matrix_adaptive"
+  },
+  "claim_boundary": "Favourable router-derived subspace plus ideal Gaussian coding; not an operational codec, and free adaptive mode selection is source-leaky.",
+  "curves": [
+    {
+      "best_F": 0.9989692471900031,
+      "best_s_bpw": 0.0007439144455333666,
+      "captured_energy_fraction": 0.002267825971038095,
+      "dimension_fraction": 0.00048828125,
+      "energy_enrichment": 4.644507588686019,
+      "ideal_rates": [
+        {
+          "F": 0.9989692471900036,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05071344780726657,
+          "s_bpw": 0.0007439144455330459,
+          "waterlevel": 0.05071344780726657
+        },
+        {
+          "F": 0.9989692471900031,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04119211950893913,
+          "s_bpw": 0.0007439144455333666,
+          "waterlevel": 0.04119211950893913
+        },
+        {
+          "F": 0.9989692471900042,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031217788974687632,
+          "s_bpw": 0.000743914445532565,
+          "waterlevel": 0.031217788974687632
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00048828125,
+      "k": 1,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.999999963155579,
+      "best_s_bpw": 2.6577632190344344e-08,
+      "captured_energy_fraction": 0.0004943027557054341,
+      "dimension_fraction": 0.00048828125,
+      "energy_enrichment": 1.012332043684729,
+      "ideal_rates": [
+        {
+          "F": 0.999999963155579,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050765772901829154,
+          "s_bpw": 2.6577632190344344e-08,
+          "waterlevel": 0.050765772901829154
+        },
+        {
+          "F": 0.9999999631555798,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123462069238721,
+          "s_bpw": 2.6577631629744687e-08,
+          "waterlevel": 0.04123462069238721
+        },
+        {
+          "F": 0.9999999631555798,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03124999884861187,
+          "s_bpw": 2.6577631629744687e-08,
+          "waterlevel": 0.03124999884861187
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00048828125,
+      "k": 1,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9989692471900031,
+      "best_s_bpw": 0.0007439144455333666,
+      "captured_energy_fraction": 0.0022678259710380956,
+      "dimension_fraction": 0.00048828125,
+      "energy_enrichment": 4.64450758868602,
+      "ideal_rates": [
+        {
+          "F": 0.9989692471900036,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05071344780726657,
+          "s_bpw": 0.0007439144455330459,
+          "waterlevel": 0.05071344780726657
+        },
+        {
+          "F": 0.9989692471900031,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04119211950893913,
+          "s_bpw": 0.0007439144455333666,
+          "waterlevel": 0.04119211950893913
+        },
+        {
+          "F": 0.9989692471900042,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031217788974687632,
+          "s_bpw": 0.000743914445532565,
+          "waterlevel": 0.031217788974687632
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00048828125,
+      "k": 1,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.998919137094069,
+      "best_s_bpw": 0.0007800994433973598,
+      "captured_energy_fraction": 0.0023313662625780024,
+      "dimension_fraction": 0.00048828125,
+      "energy_enrichment": 4.774638105759749,
+      "ideal_rates": [
+        {
+          "F": 0.9989191370940697,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050710903929422575,
+          "s_bpw": 0.0007800994433968788,
+          "waterlevel": 0.050710903929422575
+        },
+        {
+          "F": 0.998919137094069,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.0411900532380643,
+          "s_bpw": 0.0007800994433973598,
+          "waterlevel": 0.0411900532380643
+        },
+        {
+          "F": 0.9989191370940691,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03121622303418966,
+          "s_bpw": 0.0007800994433972796,
+          "waterlevel": 0.03121622303418966
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00048828125,
+      "k": 1,
+      "mode": "free_per_matrix_adaptive"
+    },
+    {
+      "best_F": 0.9992838515199914,
+      "best_s_bpw": 0.000516776996949166,
+      "captured_energy_fraction": 0.0026758966321415788,
+      "dimension_fraction": 0.0009765625,
+      "energy_enrichment": 2.7401181513129766,
+      "ideal_rates": [
+        {
+          "F": 0.9992838515199914,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05072941893982511,
+          "s_bpw": 0.000516776996949166,
+          "waterlevel": 0.05072941893982511
+        },
+        {
+          "F": 0.9992838515199921,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04120509209963238,
+          "s_bpw": 0.0005167769969486851,
+          "waterlevel": 0.04120509209963238
+        },
+        {
+          "F": 0.999283851519992,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03122762035999975,
+          "s_bpw": 0.0005167769969487652,
+          "waterlevel": 0.03122762035999975
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0009765625,
+      "k": 2,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.9998399670308095,
+      "best_s_bpw": 0.00011544862355438237,
+      "captured_energy_fraction": 0.0016465218105634646,
+      "dimension_fraction": 0.0009765625,
+      "energy_enrichment": 1.6860383340169878,
+      "ideal_rates": [
+        {
+          "F": 0.99983996703081,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05075765057459469,
+          "s_bpw": 0.00011544862355398188,
+          "waterlevel": 0.05075765057459469
+        },
+        {
+          "F": 0.9998399670308095,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041228023312626975,
+          "s_bpw": 0.00011544862355438237,
+          "waterlevel": 0.041228023312626975
+        },
+        {
+          "F": 0.9998399670308095,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031244998969712796,
+          "s_bpw": 0.00011544862355438237,
+          "waterlevel": 0.031244998969712796
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0009765625,
+      "k": 2,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9992775272099441,
+      "best_s_bpw": 0.0005213423061958332,
+      "captured_energy_fraction": 0.002685825248632969,
+      "dimension_fraction": 0.0009765625,
+      "energy_enrichment": 2.7502850546001603,
+      "ideal_rates": [
+        {
+          "F": 0.9992775272099448,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050729097881325694,
+          "s_bpw": 0.0005213423061953523,
+          "waterlevel": 0.050729097881325694
+        },
+        {
+          "F": 0.9992775272099441,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.0412048313190968,
+          "s_bpw": 0.0005213423061958332,
+          "waterlevel": 0.0412048313190968
+        },
+        {
+          "F": 0.9992775272099441,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031227422725310754,
+          "s_bpw": 0.0005213423061958332,
+          "waterlevel": 0.031227422725310754
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0009765625,
+      "k": 2,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.9989460075815493,
+      "best_s_bpw": 0.0007606957718634056,
+      "captured_energy_fraction": 0.0031823081683602346,
+      "dimension_fraction": 0.0009765625,
+      "energy_enrichment": 3.2586835644008803,
+      "ideal_rates": [
+        {
+          "F": 0.9989460075815493,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05071226803053799,
+          "s_bpw": 0.0007606957718634056,
+          "waterlevel": 0.05071226803053799
+        },
+        {
+          "F": 0.99894600758155,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041191161232464225,
+          "s_bpw": 0.0007606957718628444,
+          "waterlevel": 0.041191161232464225
+        },
+        {
+          "F": 0.9989460075815499,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031217062736923436,
+          "s_bpw": 0.0007606957718629246,
+          "waterlevel": 0.031217062736923436
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0009765625,
+      "k": 2,
+      "mode": "free_per_matrix_adaptive"
+    },
+    {
+      "best_F": 0.9994415854242218,
+      "best_s_bpw": 0.00040292347926266126,
+      "captured_energy_fraction": 0.003820289859352105,
+      "dimension_fraction": 0.001953125,
+      "energy_enrichment": 1.9559884079882777,
+      "ideal_rates": [
+        {
+          "F": 0.9994415854242218,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050737426423681224,
+          "s_bpw": 0.00040292347926266126,
+          "waterlevel": 0.050737426423681224
+        },
+        {
+          "F": 0.9994415854242225,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041211596197583286,
+          "s_bpw": 0.00040292347926218047,
+          "waterlevel": 0.041211596197583286
+        },
+        {
+          "F": 0.9994415854242225,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031232549544506952,
+          "s_bpw": 0.00040292347926218047,
+          "waterlevel": 0.031232549544506952
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.001953125,
+      "k": 4,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.9998889387680506,
+      "best_s_bpw": 8.011819337917478e-05,
+      "captured_energy_fraction": 0.002686850020080882,
+      "dimension_fraction": 0.001953125,
+      "energy_enrichment": 1.3756672102814116,
+      "ideal_rates": [
+        {
+          "F": 0.9998889387680512,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050760136662777684,
+          "s_bpw": 8.01181933787743e-05,
+          "waterlevel": 0.050760136662777684
+        },
+        {
+          "F": 0.9998889387680506,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123004264371116,
+          "s_bpw": 8.011819337917478e-05,
+          "waterlevel": 0.04123004264371116
+        },
+        {
+          "F": 0.9998889387680518,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03124652933650162,
+          "s_bpw": 8.011819337829375e-05,
+          "waterlevel": 0.03124652933650162
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.001953125,
+      "k": 4,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9995750905795393,
+      "best_s_bpw": 0.00030657249424682214,
+      "captured_energy_fraction": 0.0035363912890172683,
+      "dimension_fraction": 0.001953125,
+      "energy_enrichment": 1.8106323399768414,
+      "ideal_rates": [
+        {
+          "F": 0.9995750905795399,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05074420391632704,
+          "s_bpw": 0.00030657249424642153,
+          "waterlevel": 0.05074420391632704
+        },
+        {
+          "F": 0.9995750905795406,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04121710123222614,
+          "s_bpw": 0.00030657249424586073,
+          "waterlevel": 0.04121710123222614
+        },
+        {
+          "F": 0.9995750905795393,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031236721580610603,
+          "s_bpw": 0.00030657249424682214,
+          "waterlevel": 0.031236721580610603
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.001953125,
+      "k": 4,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.9991473612936773,
+      "best_s_bpw": 0.0006153111729952542,
+      "captured_energy_fraction": 0.004380990060160403,
+      "dimension_fraction": 0.001953125,
+      "energy_enrichment": 2.2430669108021264,
+      "ideal_rates": [
+        {
+          "F": 0.9991473612936773,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050722489907737436,
+          "s_bpw": 0.0006153111729952542,
+          "waterlevel": 0.050722489907737436
+        },
+        {
+          "F": 0.999147361293678,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041199463976714736,
+          "s_bpw": 0.0006153111729947732,
+          "waterlevel": 0.041199463976714736
+        },
+        {
+          "F": 0.999147361293678,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031223355040427437,
+          "s_bpw": 0.0006153111729947732,
+          "waterlevel": 0.031223355040427437
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.001953125,
+      "k": 4,
+      "mode": "free_per_matrix_adaptive"
+    },
+    {
+      "best_F": 0.9995364303583711,
+      "best_s_bpw": 0.0003344723431455793,
+      "captured_energy_fraction": 0.006123592824347693,
+      "dimension_fraction": 0.00390625,
+      "energy_enrichment": 1.5676397630330094,
+      "ideal_rates": [
+        {
+          "F": 0.9995364303583718,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05074224130024657,
+          "s_bpw": 0.0003344723431450986,
+          "waterlevel": 0.05074224130024657
+        },
+        {
+          "F": 0.9995364303583711,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.0412155070926116,
+          "s_bpw": 0.0003344723431455793,
+          "waterlevel": 0.0412155070926116
+        },
+        {
+          "F": 0.9995364303583725,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03123551344869914,
+          "s_bpw": 0.00033447234314461786,
+          "waterlevel": 0.03123551344869914
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00390625,
+      "k": 8,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.9999113038991567,
+      "best_s_bpw": 6.398355000404199e-05,
+      "captured_energy_fraction": 0.004796708495952731,
+      "dimension_fraction": 0.00390625,
+      "energy_enrichment": 1.2279573749638992,
+      "ideal_rates": [
+        {
+          "F": 0.9999113038991573,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05076127204598617,
+          "s_bpw": 6.398355000364152e-05,
+          "waterlevel": 0.05076127204598617
+        },
+        {
+          "F": 0.9999113038991567,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123096486144304,
+          "s_bpw": 6.398355000404199e-05,
+          "waterlevel": 0.04123096486144304
+        },
+        {
+          "F": 0.9999113038991579,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031247228246848686,
+          "s_bpw": 6.398355000316096e-05,
+          "waterlevel": 0.031247228246848686
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00390625,
+      "k": 8,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9997677311651557,
+      "best_s_bpw": 0.00016756600902571135,
+      "captured_energy_fraction": 0.005408435579265994,
+      "dimension_fraction": 0.00390625,
+      "energy_enrichment": 1.3845595082920945,
+      "ideal_rates": [
+        {
+          "F": 0.9997677311651564,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05075398346490844,
+          "s_bpw": 0.00016756600902523072,
+          "waterlevel": 0.05075398346490844
+        },
+        {
+          "F": 0.9997677311651558,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04122504469399661,
+          "s_bpw": 0.00016756600902563122,
+          "waterlevel": 0.04122504469399661
+        },
+        {
+          "F": 0.9997677311651557,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031242741598911116,
+          "s_bpw": 0.00016756600902571135,
+          "waterlevel": 0.031242741598911116
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00390625,
+      "k": 8,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.999287757057782,
+      "best_s_bpw": 0.000513957733442074,
+      "captured_energy_fraction": 0.006752970611033544,
+      "dimension_fraction": 0.00390625,
+      "energy_enrichment": 1.7287604764245872,
+      "ideal_rates": [
+        {
+          "F": 0.999287757057782,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05072961720747695,
+          "s_bpw": 0.000513957733442074,
+          "waterlevel": 0.05072961720747695
+        },
+        {
+          "F": 0.9992877570577825,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.0412052531430077,
+          "s_bpw": 0.0005139577334416733,
+          "waterlevel": 0.0412052531430077
+        },
+        {
+          "F": 0.9992877570577825,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031227742408055703,
+          "s_bpw": 0.0005139577334416733,
+          "waterlevel": 0.031227742408055703
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.00390625,
+      "k": 8,
+      "mode": "free_per_matrix_adaptive"
+    },
+    {
+      "best_F": 0.9995320793922827,
+      "best_s_bpw": 0.00033761236419449736,
+      "captured_energy_fraction": 0.01082095880042725,
+      "dimension_fraction": 0.0078125,
+      "energy_enrichment": 1.385082726454688,
+      "ideal_rates": [
+        {
+          "F": 0.9995320793922827,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05074202042008205,
+          "s_bpw": 0.00033761236419449736,
+          "waterlevel": 0.05074202042008205
+        },
+        {
+          "F": 0.9995320793922834,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04121532768216871,
+          "s_bpw": 0.0003376123641940166,
+          "waterlevel": 0.04121532768216871
+        },
+        {
+          "F": 0.9995320793922834,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031235377481008856,
+          "s_bpw": 0.0003376123641940166,
+          "waterlevel": 0.031235377481008856
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0078125,
+      "k": 16,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.9999321353415374,
+      "best_s_bpw": 4.8955664306350395e-05,
+      "captured_energy_fraction": 0.008883213361227613,
+      "dimension_fraction": 0.0078125,
+      "energy_enrichment": 1.1370513102371345,
+      "ideal_rates": [
+        {
+          "F": 0.9999321353415378,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05076232957029824,
+          "s_bpw": 4.8955664306030034e-05,
+          "waterlevel": 0.05076232957029824
+        },
+        {
+          "F": 0.9999321353415374,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123182383809972,
+          "s_bpw": 4.8955664306350395e-05,
+          "waterlevel": 0.04123182383809972
+        },
+        {
+          "F": 0.9999321353415385,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031247879229423077,
+          "s_bpw": 4.895566430554948e-05,
+          "waterlevel": 0.031247879229423077
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0078125,
+      "k": 16,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9998841720134551,
+      "best_s_bpw": 8.355707010922978e-05,
+      "captured_energy_fraction": 0.00922955352056002,
+      "dimension_fraction": 0.0078125,
+      "energy_enrichment": 1.1813828506316826,
+      "ideal_rates": [
+        {
+          "F": 0.9998841720134557,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.0507598946747875,
+          "s_bpw": 8.35570701088293e-05,
+          "waterlevel": 0.0507598946747875
+        },
+        {
+          "F": 0.9998841720134553,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04122984608838624,
+          "s_bpw": 8.355707010914969e-05,
+          "waterlevel": 0.04122984608838624
+        },
+        {
+          "F": 0.9998841720134551,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031246380375420473,
+          "s_bpw": 8.355707010922978e-05,
+          "waterlevel": 0.031246380375420473
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0078125,
+      "k": 16,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.9992665835869889,
+      "best_s_bpw": 0.0005292422121732142,
+      "captured_energy_fraction": 0.011681337620219601,
+      "dimension_fraction": 0.0078125,
+      "energy_enrichment": 1.495211215388109,
+      "ideal_rates": [
+        {
+          "F": 0.9992665835869895,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050728542319827555,
+          "s_bpw": 0.0005292422121728135,
+          "waterlevel": 0.050728542319827555
+        },
+        {
+          "F": 0.9992665835869889,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04120438006293862,
+          "s_bpw": 0.0005292422121732142,
+          "waterlevel": 0.04120438006293862
+        },
+        {
+          "F": 0.9992665835869889,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031227080737093404,
+          "s_bpw": 0.0005292422121732142,
+          "waterlevel": 0.031227080737093404
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0078125,
+      "k": 16,
+      "mode": "free_per_matrix_adaptive"
+    },
+    {
+      "best_F": 0.9995221171757696,
+      "best_s_bpw": 0.00034480198435817624,
+      "captured_energy_fraction": 0.019773297973356436,
+      "dimension_fraction": 0.015625,
+      "energy_enrichment": 1.265491070294812,
+      "ideal_rates": [
+        {
+          "F": 0.9995221171757702,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05074151468044234,
+          "s_bpw": 0.0003448019843576955,
+          "waterlevel": 0.05074151468044234
+        },
+        {
+          "F": 0.9995221171757709,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04121491689393443,
+          "s_bpw": 0.00034480198435721477,
+          "waterlevel": 0.04121491689393443
+        },
+        {
+          "F": 0.9995221171757696,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.0312350661617428,
+          "s_bpw": 0.00034480198435817624,
+          "waterlevel": 0.0312350661617428
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.015625,
+      "k": 32,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.9999545722139803,
+      "best_s_bpw": 3.2769965143696975e-05,
+      "captured_energy_fraction": 0.01683663776203597,
+      "dimension_fraction": 0.015625,
+      "energy_enrichment": 1.0775448167703021,
+      "ideal_rates": [
+        {
+          "F": 0.9999545722139803,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05076346859551125,
+          "s_bpw": 3.2769965143696975e-05,
+          "waterlevel": 0.05076346859551125
+        },
+        {
+          "F": 0.9999545722139811,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123274901405855,
+          "s_bpw": 3.276996514313635e-05,
+          "waterlevel": 0.04123274901405855
+        },
+        {
+          "F": 0.999954572213981,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031248580381686906,
+          "s_bpw": 3.2769965143216436e-05,
+          "waterlevel": 0.031248580381686906
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.015625,
+      "k": 32,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9999443833639722,
+      "best_s_bpw": 4.012003817525492e-05,
+      "captured_energy_fraction": 0.016969144334900745,
+      "dimension_fraction": 0.015625,
+      "energy_enrichment": 1.0860252374336476,
+      "ideal_rates": [
+        {
+          "F": 0.9999443833639728,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05076295135064658,
+          "s_bpw": 4.012003817477438e-05,
+          "waterlevel": 0.05076295135064658
+        },
+        {
+          "F": 0.9999443833639723,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123232888067767,
+          "s_bpw": 4.012003817517483e-05,
+          "waterlevel": 0.04123232888067767
+        },
+        {
+          "F": 0.9999443833639722,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03124826198012413,
+          "s_bpw": 4.012003817525492e-05,
+          "waterlevel": 0.03124826198012413
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.015625,
+      "k": 32,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.9991887740658745,
+      "best_s_bpw": 0.0005854132994445128,
+      "captured_energy_fraction": 0.021156506898443155,
+      "dimension_fraction": 0.015625,
+      "energy_enrichment": 1.354016441500362,
+      "ideal_rates": [
+        {
+          "F": 0.999188774065875,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05072459225920352,
+          "s_bpw": 0.000585413299444112,
+          "waterlevel": 0.05072459225920352
+        },
+        {
+          "F": 0.9991887740658745,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041201171616730994,
+          "s_bpw": 0.0005854132994445128,
+          "waterlevel": 0.041201171616730994
+        },
+        {
+          "F": 0.9991887740658745,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031224649189558577,
+          "s_bpw": 0.0005854132994445128,
+          "waterlevel": 0.031224649189558577
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.015625,
+      "k": 32,
+      "mode": "free_per_matrix_adaptive"
+    },
+    {
+      "best_F": 0.9993441490414083,
+      "best_s_bpw": 0.00047325167101156744,
+      "captured_energy_fraction": 0.03796690864420128,
+      "dimension_fraction": 0.03125,
+      "energy_enrichment": 1.214941076614441,
+      "ideal_rates": [
+        {
+          "F": 0.999344149041409,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050732479990216725,
+          "s_bpw": 0.0004732516710110866,
+          "waterlevel": 0.050732479990216725
+        },
+        {
+          "F": 0.9993441490414084,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04120757844514828,
+          "s_bpw": 0.00047325167101148726,
+          "waterlevel": 0.04120757844514828
+        },
+        {
+          "F": 0.9993441490414083,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03122950465754401,
+          "s_bpw": 0.00047325167101156744,
+          "waterlevel": 0.03122950465754401
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.03125,
+      "k": 64,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.9999767371919214,
+      "best_s_bpw": 1.678076411069832e-05,
+      "captured_energy_fraction": 0.032451374985256194,
+      "dimension_fraction": 0.03125,
+      "energy_enrichment": 1.0384439995281982,
+      "ideal_rates": [
+        {
+          "F": 0.9999767371919219,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050764593817789264,
+          "s_bpw": 1.678076411029788e-05,
+          "waterlevel": 0.050764593817789264
+        },
+        {
+          "F": 0.9999767371919214,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123366297855025,
+          "s_bpw": 1.678076411069832e-05,
+          "waterlevel": 0.04123366297855025
+        },
+        {
+          "F": 0.9999767371919226,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03124927303724758,
+          "s_bpw": 1.6780764109817356e-05,
+          "waterlevel": 0.03124927303724758
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.03125,
+      "k": 64,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9999818067255739,
+      "best_s_bpw": 1.3123792778771693e-05,
+      "captured_energy_fraction": 0.03231094224134031,
+      "dimension_fraction": 0.03125,
+      "energy_enrichment": 1.03395015172289,
+      "ideal_rates": [
+        {
+          "F": 0.9999818067255745,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05076485117659287,
+          "s_bpw": 1.3123792778371257e-05,
+          "waterlevel": 0.05076485117659287
+        },
+        {
+          "F": 0.999981806725574,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.04123387201885521,
+          "s_bpw": 1.3123792778691606e-05,
+          "waterlevel": 0.04123387201885521
+        },
+        {
+          "F": 0.9999818067255739,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031249431460174185,
+          "s_bpw": 1.3123792778771693e-05,
+          "waterlevel": 0.031249431460174185
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.03125,
+      "k": 64,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.9989486731476054,
+      "best_s_bpw": 0.0007587709462119846,
+      "captured_energy_fraction": 0.03989639005452341,
+      "dimension_fraction": 0.03125,
+      "energy_enrichment": 1.2766844817447491,
+      "ideal_rates": [
+        {
+          "F": 0.9989486731476059,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05071240335006406,
+          "s_bpw": 0.0007587709462115838,
+          "waterlevel": 0.05071240335006406
+        },
+        {
+          "F": 0.9989486731476054,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041191271146073495,
+          "s_bpw": 0.0007587709462119846,
+          "waterlevel": 0.041191271146073495
+        },
+        {
+          "F": 0.9989486731476054,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.031217146035862668,
+          "s_bpw": 0.0007587709462119846,
+          "waterlevel": 0.031217146035862668
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.03125,
+      "k": 64,
+      "mode": "free_per_matrix_adaptive"
+    },
+    {
+      "best_F": 0.9988640327715411,
+      "best_s_bpw": 0.0008198929175149773,
+      "captured_energy_fraction": 0.07470641248652514,
+      "dimension_fraction": 0.0625,
+      "energy_enrichment": 1.1953025997844022,
+      "ideal_rates": [
+        {
+          "F": 0.9988640327715418,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.050708106515796145,
+          "s_bpw": 0.0008198929175144963,
+          "waterlevel": 0.050708106515796145
+        },
+        {
+          "F": 0.9988640327715411,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041187781032142635,
+          "s_bpw": 0.0008198929175149773,
+          "waterlevel": 0.041187781032142635
+        },
+        {
+          "F": 0.9988640327715411,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03121450102411066,
+          "s_bpw": 0.0008198929175149773,
+          "waterlevel": 0.03121450102411066
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0625,
+      "k": 128,
+      "mode": "router_pca"
+    },
+    {
+      "best_F": 0.9999880720264966,
+      "best_s_bpw": 8.604265426400478e-06,
+      "captured_energy_fraction": 0.06368925455849504,
+      "dimension_fraction": 0.0625,
+      "energy_enrichment": 1.0190280729359207,
+      "ideal_rates": [
+        {
+          "F": 0.9999880720264972,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.0507651692394484,
+          "s_bpw": 8.604265426000045e-06,
+          "waterlevel": 0.0507651692394484
+        },
+        {
+          "F": 0.9999880720264968,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041234130366171795,
+          "s_bpw": 8.604265426320392e-06,
+          "waterlevel": 0.041234130366171795
+        },
+        {
+          "F": 0.9999880720264966,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03124962725082802,
+          "s_bpw": 8.604265426400478e-06,
+          "waterlevel": 0.03124962725082802
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0625,
+      "k": 128,
+      "mode": "target_rank_dct"
+    },
+    {
+      "best_F": 0.9999873876436094,
+      "best_s_bpw": 9.097949382736842e-06,
+      "captured_energy_fraction": 0.06372309902681063,
+      "dimension_fraction": 0.0625,
+      "energy_enrichment": 1.01956958442897,
+      "ideal_rates": [
+        {
+          "F": 0.9999873876436094,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05076513449622085,
+          "s_bpw": 9.097949382736842e-06,
+          "waterlevel": 0.05076513449622085
+        },
+        {
+          "F": 0.9999873876436101,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041234102145902014,
+          "s_bpw": 9.097949382256322e-06,
+          "waterlevel": 0.041234102145902014
+        },
+        {
+          "F": 0.99998738764361,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03124960586386281,
+          "s_bpw": 9.097949382336409e-06,
+          "waterlevel": 0.03124960586386281
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0625,
+      "k": 128,
+      "mode": "target_modulated_router_pca"
+    },
+    {
+      "best_F": 0.9984917873401222,
+      "best_s_bpw": 0.0010887667149184358,
+      "captured_energy_fraction": 0.076683326835843,
+      "dimension_fraction": 0.0625,
+      "energy_enrichment": 1.226933229373488,
+      "ideal_rates": [
+        {
+          "F": 0.9984917873401228,
+          "rate_bpw": 2.15,
+          "relative_mse_oracle": 0.05068920918806472,
+          "s_bpw": 0.0010887667149180348,
+          "waterlevel": 0.05068920918806472
+        },
+        {
+          "F": 0.9984917873401223,
+          "rate_bpw": 2.3,
+          "relative_mse_oracle": 0.041172431632408066,
+          "s_bpw": 0.0010887667149183555,
+          "waterlevel": 0.041172431632408066
+        },
+        {
+          "F": 0.9984917873401222,
+          "rate_bpw": 2.5,
+          "relative_mse_oracle": 0.03120286835437882,
+          "s_bpw": 0.0010887667149184358,
+          "waterlevel": 0.03120286835437882
+        }
+      ],
+      "isotropic_expected_energy_fraction": 0.0625,
+      "k": 128,
+      "mode": "free_per_matrix_adaptive"
+    }
+  ],
+  "decision": "hard_kill",
+  "free_oracle_assumptions": [
+    "same-layer router is already decoder-visible and its bytes/read are free",
+    "orthonormal basis arithmetic is exact",
+    "per-matrix choice among three router-only basis families is free",
+    "all subspace and residual coordinates use infinite-block Gaussian reverse waterfilling",
+    "all water levels, component scales, framing, and finite-code loss are free"
+  ],
+  "matrix_projections": [
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0037019674320462135,
+        "target_modulated_router_pca": 0.0037019674320462165,
+        "target_rank_dct": 0.0005147729249338584
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 1,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0006418669406131572,
+        "target_modulated_router_pca": 0.0006418669406131578,
+        "target_rank_dct": 0.0004570545148017129
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 1,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0005807946440198535,
+        "target_modulated_router_pca": 0.000580794644019854,
+        "target_rank_dct": 0.0005314534452913962
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 1,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0024902755328304565,
+        "target_modulated_router_pca": 0.0024902755328304565,
+        "target_rank_dct": 0.0004881084219377293
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 1,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0009072078301239967,
+        "target_modulated_router_pca": 0.0009072078301239967,
+        "target_rank_dct": 0.0004845706563337115
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 1,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.00031618401958791116,
+        "target_modulated_router_pca": 0.00031618401958791116,
+        "target_rank_dct": 0.0004828866685327136
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 1,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.01379552422901122,
+        "target_modulated_router_pca": 0.013795524229011227,
+        "target_rank_dct": 0.0005588859728654276
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 1,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0006237740166295299,
+        "target_modulated_router_pca": 0.0006237740166295302,
+        "target_rank_dct": 0.0005286380308673893
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 1,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.00033916853537663304,
+        "target_modulated_router_pca": 0.00033916853537663326,
+        "target_rank_dct": 0.0005327096352022745
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 1,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.005050005448255064,
+        "target_modulated_router_pca": 0.00505000544825506,
+        "target_rank_dct": 0.0005497260661344359
+      },
+      "expert": 83,
+      "free_adaptive_mode": "router_pca",
+      "k": 1,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0007315771848493675,
+        "target_modulated_router_pca": 0.0007315771848493673,
+        "target_rank_dct": 0.0005058972107979266
+      },
+      "expert": 83,
+      "free_adaptive_mode": "router_pca",
+      "k": 1,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.000305033590789842,
+        "target_modulated_router_pca": 0.00030503359078984187,
+        "target_rank_dct": 0.0005134779030059033
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 1,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.003931374494235197,
+        "target_modulated_router_pca": 0.0039313744942351975,
+        "target_rank_dct": 0.00043960777931937884
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 1,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.000794165315779027,
+        "target_modulated_router_pca": 0.0007941653157790274,
+        "target_rank_dct": 0.00045036522533192975
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 1,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0003106880337048081,
+        "target_modulated_router_pca": 0.0003106880337048083,
+        "target_rank_dct": 0.0004284676320007804
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 1,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0018682190510023163,
+        "target_modulated_router_pca": 0.0018682190510023154,
+        "target_rank_dct": 0.0004545322432690699
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 1,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.002184886315099047,
+        "target_modulated_router_pca": 0.002184886315099046,
+        "target_rank_dct": 0.0005124648007303283
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 1,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 8.952753154503838e-05,
+        "target_modulated_router_pca": 8.952753154503833e-05,
+        "target_rank_dct": 0.00046355688056682253
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 1,
+      "layer": 45,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004126990361479652,
+        "target_modulated_router_pca": 0.004114938870967135,
+        "target_rank_dct": 0.0025034534425598647
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 2,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0009268373339382203,
+        "target_modulated_router_pca": 0.0009805132101880934,
+        "target_rank_dct": 0.001632380993726846
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0013327428999566186,
+        "target_modulated_router_pca": 0.0010065391307536532,
+        "target_rank_dct": 0.0022812826855401623
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0030030835939180447,
+        "target_modulated_router_pca": 0.0028108219421406574,
+        "target_rank_dct": 0.0016071165574645723
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 2,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0012437326018382158,
+        "target_modulated_router_pca": 0.0011796900762406923,
+        "target_rank_dct": 0.0016413326652929272
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0006993749420386952,
+        "target_modulated_router_pca": 0.000763306692775067,
+        "target_rank_dct": 0.002093498128266052
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.01422973269599111,
+        "target_modulated_router_pca": 0.01422585053069302,
+        "target_rank_dct": 0.0016719047799619911
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 2,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0009690792606930671,
+        "target_modulated_router_pca": 0.0009205314135028185,
+        "target_rank_dct": 0.0019850009837613734
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0006257918700142149,
+        "target_modulated_router_pca": 0.0006490842182329673,
+        "target_rank_dct": 0.0017104727004927987
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.005620959239951918,
+        "target_modulated_router_pca": 0.005887262497797533,
+        "target_rank_dct": 0.0020304846467322007
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 2,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0011022280624387747,
+        "target_modulated_router_pca": 0.001192818931650248,
+        "target_rank_dct": 0.0018615165703627947
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0005716793613490154,
+        "target_modulated_router_pca": 0.0006302989007400904,
+        "target_rank_dct": 0.0018333681499221705
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004479060445690719,
+        "target_modulated_router_pca": 0.004411780161478408,
+        "target_rank_dct": 0.001364339440084123
+      },
+      "expert": 76,
+      "free_adaptive_mode": "router_pca",
+      "k": 2,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0011537869452343092,
+        "target_modulated_router_pca": 0.0011911638960406215,
+        "target_rank_dct": 0.0012043604256410105
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0006940392975609761,
+        "target_modulated_router_pca": 0.000651770454973779,
+        "target_rank_dct": 0.0013899213734258203
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.002172947010637911,
+        "target_modulated_router_pca": 0.0025863853037685802,
+        "target_rank_dct": 0.0013476865279748776
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 2,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.002432832039162185,
+        "target_modulated_router_pca": 0.002649060693662922,
+        "target_rank_dct": 0.0011116591670506588
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 2,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0006240741909545578,
+        "target_modulated_router_pca": 0.00033724461088561434,
+        "target_rank_dct": 0.0008668663162386119
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 2,
+      "layer": 45,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0056499636669361825,
+        "target_modulated_router_pca": 0.005145798544377179,
+        "target_rank_dct": 0.0036129576475321472
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 4,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.00212636256580873,
+        "target_modulated_router_pca": 0.0016844349391451979,
+        "target_rank_dct": 0.0026121715749561868
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0029721599797830206,
+        "target_modulated_router_pca": 0.0024853877735306353,
+        "target_rank_dct": 0.0032634376994767414
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004372422758145647,
+        "target_modulated_router_pca": 0.0037679990569257386,
+        "target_rank_dct": 0.002788200459097572
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 4,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0026650862309381307,
+        "target_modulated_router_pca": 0.001948548357380667,
+        "target_rank_dct": 0.0028032392118356314
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0018632266144863283,
+        "target_modulated_router_pca": 0.0015483507621460626,
+        "target_rank_dct": 0.0032533709379218524
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.017214016717965262,
+        "target_modulated_router_pca": 0.015408438387305464,
+        "target_rank_dct": 0.0026803377152308486
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 4,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0021682706162172807,
+        "target_modulated_router_pca": 0.0016876767225289127,
+        "target_rank_dct": 0.003079341168964516
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0016593249047995393,
+        "target_modulated_router_pca": 0.0012681304833926765,
+        "target_rank_dct": 0.0026851388431833336
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0062498767095731655,
+        "target_modulated_router_pca": 0.006693161133205091,
+        "target_rank_dct": 0.0031808571451627196
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 4,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0016350056765099346,
+        "target_modulated_router_pca": 0.001870019856726533,
+        "target_rank_dct": 0.0029001996447102336
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0011510754876079582,
+        "target_modulated_router_pca": 0.001200150613597048,
+        "target_rank_dct": 0.002786120540697283
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004999581504228195,
+        "target_modulated_router_pca": 0.005241913467252388,
+        "target_rank_dct": 0.0024330666278868556
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 4,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0016844833668257604,
+        "target_modulated_router_pca": 0.0019684516014233425,
+        "target_rank_dct": 0.002089438733066008
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.001259576942852138,
+        "target_modulated_router_pca": 0.0013456218536209061,
+        "target_rank_dct": 0.0023439360724738455
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0043727405133554146,
+        "target_modulated_router_pca": 0.003679382356048964,
+        "target_rank_dct": 0.0024287064199693146
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 4,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.00361822976558789,
+        "target_modulated_router_pca": 0.00342524303210545,
+        "target_rank_dct": 0.0021774815825369625
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 4,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0009802698252046682,
+        "target_modulated_router_pca": 0.0011355590073855195,
+        "target_rank_dct": 0.0018134038896018944
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 4,
+      "layer": 45,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.008050260889139857,
+        "target_modulated_router_pca": 0.007310023688329711,
+        "target_rank_dct": 0.0059018817919058685
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004211678619441367,
+        "target_modulated_router_pca": 0.0035592323890707347,
+        "target_rank_dct": 0.004636360167889115
+      },
+      "expert": 18,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.005942450072545373,
+        "target_modulated_router_pca": 0.004949628323156962,
+        "target_rank_dct": 0.0051724808936832395
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.006981366280036923,
+        "target_modulated_router_pca": 0.005830587920365823,
+        "target_rank_dct": 0.005142096839141021
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.005160825769200332,
+        "target_modulated_router_pca": 0.0039266440927789555,
+        "target_rank_dct": 0.005059944044177357
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0038177380993032607,
+        "target_modulated_router_pca": 0.003427777002156397,
+        "target_rank_dct": 0.005411506781197062
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.02120685428731567,
+        "target_modulated_router_pca": 0.019002091471458375,
+        "target_rank_dct": 0.0053348663808263546
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004806636162013179,
+        "target_modulated_router_pca": 0.0034497666819547045,
+        "target_rank_dct": 0.00510129432447844
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004036707774663837,
+        "target_modulated_router_pca": 0.002935695250674006,
+        "target_rank_dct": 0.0045952324371452925
+      },
+      "expert": 20,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.007840262373240682,
+        "target_modulated_router_pca": 0.007880961036569803,
+        "target_rank_dct": 0.005468711833841693
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_modulated_router_pca",
+      "k": 8,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0031762310665345438,
+        "target_modulated_router_pca": 0.003069056562494481,
+        "target_rank_dct": 0.004838464886014657
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.002420257052172365,
+        "target_modulated_router_pca": 0.0022408114973028253,
+        "target_rank_dct": 0.004647925912661734
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.006619403527816472,
+        "target_modulated_router_pca": 0.006465825496579324,
+        "target_rank_dct": 0.004783672519024202
+      },
+      "expert": 76,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0032735352941840033,
+        "target_modulated_router_pca": 0.0031805101865620116,
+        "target_rank_dct": 0.004049355675280655
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0025603243665608955,
+        "target_modulated_router_pca": 0.00274863823855135,
+        "target_rank_dct": 0.004213591474728299
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.009869773210857594,
+        "target_modulated_router_pca": 0.007407047221570623,
+        "target_rank_dct": 0.004547672561692364
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0063499728871099885,
+        "target_modulated_router_pca": 0.005695330699185768,
+        "target_rank_dct": 0.004286500429345595
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 8,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0019356411518615779,
+        "target_modulated_router_pca": 0.0021080257335225655,
+        "target_rank_dct": 0.003699553820338685
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 8,
+      "layer": 45,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.013989229652286063,
+        "target_modulated_router_pca": 0.011161586010684994,
+        "target_rank_dct": 0.009968767060946446
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.009354125104430816,
+        "target_modulated_router_pca": 0.0070022187605826595,
+        "target_rank_dct": 0.008480414124377583
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.01237627226628358,
+        "target_modulated_router_pca": 0.009828513497046184,
+        "target_rank_dct": 0.009100933330160071
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.013036592582877503,
+        "target_modulated_router_pca": 0.009966676004012496,
+        "target_rank_dct": 0.009204604921610538
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.010196242231878906,
+        "target_modulated_router_pca": 0.007982891018941429,
+        "target_rank_dct": 0.0091343961866846
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.007889490725982565,
+        "target_modulated_router_pca": 0.007157333592548903,
+        "target_rank_dct": 0.009477745081371853
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 16,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.028656163287419066,
+        "target_modulated_router_pca": 0.02434563351011938,
+        "target_rank_dct": 0.010576816901705728
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.010146422784970216,
+        "target_modulated_router_pca": 0.007188885138054134,
+        "target_rank_dct": 0.008996381490612626
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.008902301718285668,
+        "target_modulated_router_pca": 0.006499266884387341,
+        "target_rank_dct": 0.008498196515416919
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0113605011588773,
+        "target_modulated_router_pca": 0.010658606182664787,
+        "target_rank_dct": 0.0096663884268253
+      },
+      "expert": 83,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0064550804017498254,
+        "target_modulated_router_pca": 0.00569232187343403,
+        "target_rank_dct": 0.008740607351200552
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 16,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004929015958204069,
+        "target_modulated_router_pca": 0.004440053931362365,
+        "target_rank_dct": 0.008329823060779524
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 16,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.010109941456844277,
+        "target_modulated_router_pca": 0.00951754550984333,
+        "target_rank_dct": 0.008981310770076857
+      },
+      "expert": 76,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0067093352784833825,
+        "target_modulated_router_pca": 0.006114997216646464,
+        "target_rank_dct": 0.008201487737701425
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 16,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.005418617057037579,
+        "target_modulated_router_pca": 0.0053792046885968725,
+        "target_rank_dct": 0.00806521437268565
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 16,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.01747331115806381,
+        "target_modulated_router_pca": 0.0160400296117493,
+        "target_rank_dct": 0.008613276737929037
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.011857328276039405,
+        "target_modulated_router_pca": 0.010829487081764996,
+        "target_rank_dct": 0.00844588532569376
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 16,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.004478100251539171,
+        "target_modulated_router_pca": 0.004289323640825197,
+        "target_rank_dct": 0.007678582921161462
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 16,
+      "layer": 45,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.023918868945175416,
+        "target_modulated_router_pca": 0.020303799972133715,
+        "target_rank_dct": 0.01782539802984043
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.018663580809786147,
+        "target_modulated_router_pca": 0.015180145030369447,
+        "target_rank_dct": 0.016429994845451695
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.021783283628225403,
+        "target_modulated_router_pca": 0.019703505530500518,
+        "target_rank_dct": 0.016809566253813975
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.024172044678896352,
+        "target_modulated_router_pca": 0.019480185392515614,
+        "target_rank_dct": 0.017343311636285403
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.02046896278207083,
+        "target_modulated_router_pca": 0.016213524230733196,
+        "target_rank_dct": 0.017088204832195218
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.015377262146619015,
+        "target_modulated_router_pca": 0.014597943819734737,
+        "target_rank_dct": 0.01735983807886906
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 32,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.04491353638335553,
+        "target_modulated_router_pca": 0.03495047311004562,
+        "target_rank_dct": 0.019188162545057102
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.02304430650336236,
+        "target_modulated_router_pca": 0.015211248019535542,
+        "target_rank_dct": 0.016747445475095032
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.01941864508600232,
+        "target_modulated_router_pca": 0.014398355817876289,
+        "target_rank_dct": 0.016293531438622638
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.01802254200104123,
+        "target_modulated_router_pca": 0.016456266413956897,
+        "target_rank_dct": 0.017782630913552953
+      },
+      "expert": 83,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.013324326547887778,
+        "target_modulated_router_pca": 0.011461239875017704,
+        "target_rank_dct": 0.016493056906774956
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 32,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.009614019575662247,
+        "target_modulated_router_pca": 0.009066417230325837,
+        "target_rank_dct": 0.016055393585430656
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 32,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.017240327165479623,
+        "target_modulated_router_pca": 0.015688716029176535,
+        "target_rank_dct": 0.017377896032937976
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 32,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.013817121211304921,
+        "target_modulated_router_pca": 0.012174959739123734,
+        "target_rank_dct": 0.01613831034935824
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 32,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.011162769061597274,
+        "target_modulated_router_pca": 0.011203882053829052,
+        "target_rank_dct": 0.01589781158916671
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 32,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.02842953164820167,
+        "target_modulated_router_pca": 0.027738233577160255,
+        "target_rank_dct": 0.01667544452857851
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.020788607259006962,
+        "target_modulated_router_pca": 0.020402267675333437,
+        "target_rank_dct": 0.01633501862706942
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 32,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.010624349103594189,
+        "target_modulated_router_pca": 0.009659712381574783,
+        "target_rank_dct": 0.01539711992932529
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 32,
+      "layer": 45,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.04346214741269096,
+        "target_modulated_router_pca": 0.03740498261333356,
+        "target_rank_dct": 0.03364850392701139
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.036822536587180196,
+        "target_modulated_router_pca": 0.030953984376931035,
+        "target_rank_dct": 0.03212577393628516
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.03954087251858639,
+        "target_modulated_router_pca": 0.036534612169558535,
+        "target_rank_dct": 0.03230627500770583
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.046497555499529435,
+        "target_modulated_router_pca": 0.038122041185836106,
+        "target_rank_dct": 0.03291746234042355
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.04155815087714203,
+        "target_modulated_router_pca": 0.0335356903148997,
+        "target_rank_dct": 0.03286254508353141
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.03278806638854388,
+        "target_modulated_router_pca": 0.029524662952537098,
+        "target_rank_dct": 0.032959169472292674
+      },
+      "expert": 7,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0752462117807314,
+        "target_modulated_router_pca": 0.05716499699578543,
+        "target_rank_dct": 0.03471319728218707
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.04820647831875769,
+        "target_modulated_router_pca": 0.033944923336361496,
+        "target_rank_dct": 0.03221022653414446
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.040616716235969796,
+        "target_modulated_router_pca": 0.030366480911418428,
+        "target_rank_dct": 0.03185438686858971
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.033354947549795226,
+        "target_modulated_router_pca": 0.02844036400732012,
+        "target_rank_dct": 0.033440310908510774
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.028853085997529206,
+        "target_modulated_router_pca": 0.02359445825491245,
+        "target_rank_dct": 0.03232530066338676
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.02112066547312158,
+        "target_modulated_router_pca": 0.018554356233058376,
+        "target_rank_dct": 0.03155346863323908
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.03241995169384939,
+        "target_modulated_router_pca": 0.028860697197201173,
+        "target_rank_dct": 0.03315752196293321
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.029111542008918904,
+        "target_modulated_router_pca": 0.0254148277638941,
+        "target_rank_dct": 0.03181349153143726
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.023373696208911224,
+        "target_modulated_router_pca": 0.023067908757895123,
+        "target_rank_dct": 0.031438831317742
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.047838030569330794,
+        "target_modulated_router_pca": 0.046445469477017796,
+        "target_rank_dct": 0.03236353887994887
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.03829834455338469,
+        "target_modulated_router_pca": 0.037264040411100124,
+        "target_rank_dct": 0.031837254778717114
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 64,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.023881769881976295,
+        "target_modulated_router_pca": 0.021466779610939627,
+        "target_rank_dct": 0.03086193486984207
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 64,
+      "layer": 45,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.08096616986074653,
+        "target_modulated_router_pca": 0.07172564138222486,
+        "target_rank_dct": 0.06490360822645054
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 5,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.07198028532478608,
+        "target_modulated_router_pca": 0.063125525801153,
+        "target_rank_dct": 0.06335295669836186
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 5,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.07540064114344518,
+        "target_modulated_router_pca": 0.06889722522817333,
+        "target_rank_dct": 0.06352114187071117
+      },
+      "expert": 18,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 5,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.0859120102264039,
+        "target_modulated_router_pca": 0.07486041726285289,
+        "target_rank_dct": 0.06447868545209791
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 12,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.07941141402693348,
+        "target_modulated_router_pca": 0.06815074146580558,
+        "target_rank_dct": 0.06402384445328338
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 12,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.06613350682973218,
+        "target_modulated_router_pca": 0.0611105017284382,
+        "target_rank_dct": 0.0644812110631115
+      },
+      "expert": 7,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 12,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.12901157428255422,
+        "target_modulated_router_pca": 0.10008022376802783,
+        "target_rank_dct": 0.06578682222624643
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 18,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.09635479019898391,
+        "target_modulated_router_pca": 0.07147945096923984,
+        "target_rank_dct": 0.06340881998779432
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 18,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.08358694481006362,
+        "target_modulated_router_pca": 0.06342733762223034,
+        "target_rank_dct": 0.06339159050491729
+      },
+      "expert": 20,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 18,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.06921098765996837,
+        "target_modulated_router_pca": 0.055336561665074585,
+        "target_rank_dct": 0.06413335324569504
+      },
+      "expert": 83,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 28,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.06349676114958898,
+        "target_modulated_router_pca": 0.050558206626552055,
+        "target_rank_dct": 0.06350669100156721
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 128,
+      "layer": 28,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.05038047569169778,
+        "target_modulated_router_pca": 0.04066791030531915,
+        "target_rank_dct": 0.06293375283151423
+      },
+      "expert": 83,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 128,
+      "layer": 28,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.06465111102429863,
+        "target_modulated_router_pca": 0.05651076058598365,
+        "target_rank_dct": 0.06433325384226034
+      },
+      "expert": 76,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 36,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.06223913149397091,
+        "target_modulated_router_pca": 0.05356309168375947,
+        "target_rank_dct": 0.06325499154719097
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 128,
+      "layer": 36,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.05223674827726114,
+        "target_modulated_router_pca": 0.048385503036292445,
+        "target_rank_dct": 0.06263183918292853
+      },
+      "expert": 76,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 128,
+      "layer": 36,
+      "role": "down"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.085818626775923,
+        "target_modulated_router_pca": 0.08150243908878423,
+        "target_rank_dct": 0.06345264201808001
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 45,
+      "role": "gate"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.07443299835271092,
+        "target_modulated_router_pca": 0.07026982995489646,
+        "target_rank_dct": 0.06275250000801426
+      },
+      "expert": 41,
+      "free_adaptive_mode": "router_pca",
+      "k": 128,
+      "layer": 45,
+      "role": "up"
+    },
+    {
+      "captured_energy_fraction": {
+        "router_pca": 0.05332078532500459,
+        "target_modulated_router_pca": 0.04742815389915585,
+        "target_rank_dct": 0.06235673903496222
+      },
+      "expert": 41,
+      "free_adaptive_mode": "target_rank_dct",
+      "k": 128,
+      "layer": 45,
+      "role": "down"
+    }
+  ],
+  "plan": {
+    "lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/plan.lock.json",
+    "sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868"
+  },
+  "router_bindings": {
+    "12": {
+      "absolute_byte_range_in_shard": [
+        2873271440,
+        2873795727
+      ],
+      "manifest_sha256": "20f93b416b550c5e58f1edcc91013409e56f8452b9c312941e7953a114c7cff9",
+      "sha256": "5a8b6debb42f8816244b4dacd3665497ae0fa360117fa0dae2484525d27594dc",
+      "shard": "model-00004-of-00016.safetensors",
+      "tensor": "model.layers.12.mlp.gate.weight"
+    },
+    "18": {
+      "absolute_byte_range_in_shard": [
+        3961701864,
+        3962226151
+      ],
+      "manifest_sha256": "34c599667ffc5d6b5db4c6b8a6bbb25f950ab769129a89567932d0270ac32310",
+      "sha256": "502d131682b5d6fb146309899a57629d550f4fa74eb6acbb314c80162611aa65",
+      "shard": "model-00006-of-00016.safetensors",
+      "tensor": "model.layers.18.mlp.gate.weight"
+    },
+    "28": {
+      "absolute_byte_range_in_shard": [
+        3961701872,
+        3962226159
+      ],
+      "manifest_sha256": "d990851dce72d95e7c5f95c1503e73b91d82126a816f0d6bab19a5786ed760bc",
+      "sha256": "65c0ae6328fcd8ac791dd981e3716ede89d0dc8ba33ae7728ee7579b791cfc07",
+      "shard": "model-00009-of-00016.safetensors",
+      "tensor": "model.layers.28.mlp.gate.weight"
+    },
+    "36": {
+      "absolute_byte_range_in_shard": [
+        2702881584,
+        2703405871
+      ],
+      "manifest_sha256": "2c4e643b8d965e8dcff597ecb3e1e0fc53b0e235117008e749963217093e3d1f",
+      "sha256": "1b66d06f605030ab2601493272f74875f90fa54e3a97a35806ff03362e6c93aa",
+      "shard": "model-00012-of-00016.safetensors",
+      "tensor": "model.layers.36.mlp.gate.weight"
+    },
+    "45": {
+      "absolute_byte_range_in_shard": [
+        1934791144,
+        1935315431
+      ],
+      "manifest_sha256": "912c0631b01d2c912ce077f1020302ac29ec63b42d2498dee0faa5c815990cfc",
+      "sha256": "89f8b3b974f6cab02e663a1c40fce9c1b589142a8111e5477b6cd3c2e55bca25",
+      "shard": "model-00015-of-00016.safetensors",
+      "tensor": "model.layers.45.mlp.gate.weight"
+    },
+    "5": {
+      "absolute_byte_range_in_shard": [
+        3961700656,
+        3962224943
+      ],
+      "manifest_sha256": "17216fddddd27353ce28d4abf9b8e50cbc93ebae40af3b4de340ffa33bf3977f",
+      "sha256": "2169e53fddaaae1c68a5e9c533f16b1566286367098a6b9b68e8055a2ef8751f",
+      "shard": "model-00002-of-00016.safetensors",
+      "tensor": "model.layers.5.mlp.gate.weight"
+    }
+  },
+  "runtime": {
+    "numpy": "2.5.2"
+  },
+  "schema": "qwen_router_sideinfo_oracle_v1",
+  "sources": [
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 841.670030962294,
+      "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+      "tensor": "model.layers.5.mlp.experts.18.gate_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 765.403527355119,
+      "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+      "tensor": "model.layers.5.mlp.experts.18.up_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 817.4187426624796,
+      "sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+      "tensor": "model.layers.5.mlp.experts.18.down_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 817.1288010804291,
+      "sha256": "eb56b4470fd98d169eba647262da183b66a94569a7a3a0869ac4d3148357abca",
+      "tensor": "model.layers.12.mlp.experts.7.gate_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 811.7096293478241,
+      "sha256": "825cded5f7994df0363a4d170461964210ad56a8bfaecaf25b6166a6f5e1f156",
+      "tensor": "model.layers.12.mlp.experts.7.up_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 849.62143454631,
+      "sha256": "160bbb9013002ff7301245402ff45654ac410f93208de8d42965b9b34b45df18",
+      "tensor": "model.layers.12.mlp.experts.7.down_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 1072.4005741883234,
+      "sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+      "tensor": "model.layers.18.mlp.experts.20.gate_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 810.1565218245569,
+      "sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+      "tensor": "model.layers.18.mlp.experts.20.up_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 885.1756646151205,
+      "sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+      "tensor": "model.layers.18.mlp.experts.20.down_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 885.463602058901,
+      "sha256": "236f15d3fea493b4b5012f3638d82b5e3db5429b952a93a81535d536d83e4867",
+      "tensor": "model.layers.28.mlp.experts.83.gate_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 892.6647426939127,
+      "sha256": "95f654526d3de5860112020b170402e9d72c590437f4dd8518d15b1b07f9ff47",
+      "tensor": "model.layers.28.mlp.experts.83.up_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 881.3383183621031,
+      "sha256": "1b64f058bc1b7ceb755d2526b4196cd06c3879120f114ebbd13567e3971757df",
+      "tensor": "model.layers.28.mlp.experts.83.down_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 888.9517319949757,
+      "sha256": "b77e0bd39b951ad983ffd511347f548cbda00806ab1dd300786df108cae1ad3f",
+      "tensor": "model.layers.36.mlp.experts.76.gate_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 972.523455844916,
+      "sha256": "b227044ca4db76a59086646727808b87f20664ab73e6ada19e106db38675fd26",
+      "tensor": "model.layers.36.mlp.experts.76.up_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 939.5597586471123,
+      "sha256": "442027369ca97e1ab072176a2a05a072329a36a90c62fc67c1946f1edeed4b69",
+      "tensor": "model.layers.36.mlp.experts.76.down_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 882.0293225790344,
+      "sha256": "8c064b7b0fd4e04dd5c033b4264b2d3fe594ab95ab387d8a06d711e99a47eb9b",
+      "tensor": "model.layers.45.mlp.experts.41.gate_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 1052.5524149096334,
+      "sha256": "ba210f1528279f64241f3c01ba7cf5a722cdd0b10288448bc8b1c35b00dc4939",
+      "tensor": "model.layers.45.mlp.experts.41.up_proj.weight"
+    },
+    {
+      "canonical_shape": [
+        768,
+        2048
+      ],
+      "energy_fp64": 1127.1262351828873,
+      "sha256": "35de3de5ab4838b4777e3c0fe808b8faf3bd0fc24f934185a1a9800521362349",
+      "tensor": "model.layers.45.mlp.experts.41.down_proj.weight"
+    }
+  ],
+  "target": {
+    "F_max": 0.8,
+    "rates_bpw": [
+      2.15,
+      2.3,
+      2.5
+    ]
+  }
+}

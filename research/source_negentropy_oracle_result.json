@@ -1,0 +1,2342 @@
+{
+  "architecture_hypothesis": "Replace RHT Gaussianisation with a class-matched nonlinear/vector source code so pre-RHT negentropy remains accessible.",
+  "best_mode": "global",
+  "best_net_shape_gain_bpw": -0.0016237020986025771,
+  "block_rms_normalisation": [
+    {
+      "block_ordinal": 0,
+      "normalised_mean": -0.0007521665705385262,
+      "normalised_variance": 0.9999993822632411,
+      "rms": 0.020475875091925715,
+      "staging_sha256": "73da84fa620471629771c320401a1804c1fb9e29aff59b93fc83f6d2cc9ee1a6",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 1,
+      "normalised_mean": -0.003465981999644661,
+      "normalised_variance": 0.9999880017227935,
+      "rms": 0.023893535293508416,
+      "staging_sha256": "451a9190bc2312802fd1252be7c20f35d6e987561a33c744942993807eb4ea6b",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 2,
+      "normalised_mean": -0.0018481311964170478,
+      "normalised_variance": 0.9999965458021233,
+      "rms": 0.02106679189941123,
+      "staging_sha256": "f19f8085bbf83d216149403a495e4428dfc1e7abe252b9597919536fd682ef3b",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 3,
+      "normalised_mean": -0.0008084595126487324,
+      "normalised_variance": 0.9999992784604843,
+      "rms": 0.0236082963266078,
+      "staging_sha256": "c478b1f630b5ce421958625fbccf2012850001b17795eb443d60d47720e6ba19",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 4,
+      "normalised_mean": -0.0007540692367351554,
+      "normalised_variance": 0.9999994391791209,
+      "rms": 0.01971148522474068,
+      "staging_sha256": "c1c5283fda082eeb65bda3b95e05b5a049d868bea69fa2ae655633a6dfadb761",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 5,
+      "normalised_mean": -0.00242562843814145,
+      "normalised_variance": 0.9999941246447568,
+      "rms": 0.026977220635718824,
+      "staging_sha256": "98249c58e02e920dcab1654f86a615cfe938b415f2a7fe324e118fa52fc4f325",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 6,
+      "normalised_mean": -0.0006744162483874993,
+      "normalised_variance": 0.9999995541621367,
+      "rms": 0.020849194466307973,
+      "staging_sha256": "33ff4b15f404cc708268bff1e6c2bb0db218c80d6a85c03b64df05218f4d6bf9",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 7,
+      "normalised_mean": -0.00044321544718945154,
+      "normalised_variance": 0.999999779015069,
+      "rms": 0.024862551773062718,
+      "staging_sha256": "f2e4d3c55b7e9d7f891ab7f953d76a8365fd3139a1e346a486ed2050038c759f",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 8,
+      "normalised_mean": -0.001510974350496492,
+      "normalised_variance": 0.9999976756238709,
+      "rms": 0.022159007881315897,
+      "staging_sha256": "9050b095214530037b7609da2a77d23726d6a4cd9c8b422abdbc5fbdc41d89f8",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 9,
+      "normalised_mean": -0.0013301005152343134,
+      "normalised_variance": 0.9999982088486316,
+      "rms": 0.02494439818273662,
+      "staging_sha256": "960808c1fc0aa67a63700b33c25f30f5fec41a57b88d4d672017f478e7297882",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 10,
+      "normalised_mean": 3.9784612742650954e-05,
+      "normalised_variance": 0.9999999653887947,
+      "rms": 0.022291035968816496,
+      "staging_sha256": "a3c6d9e2fa5be71c1f9287ad6099c90e8e1789aeaed6f18637a8a211f4ede485",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 11,
+      "normalised_mean": 3.7486229974709997e-06,
+      "normalised_variance": 1.0000000323160978,
+      "rms": 0.027412390771928346,
+      "staging_sha256": "ee8f28955e383e081d18c28f91fc15925ac2c4155d8651de87c76441e6b9668c",
+      "values": 2097152
+    },
+    {
+      "block_ordinal": 12,
+      "normalised_mean": 0.0005039396658265537,
+      "normalised_variance": 0.9999997058842376,
+      "rms": 0.0263277808596634,
+      "staging_sha256": "e1fb94659bad1a1bd4975311e8d9684a38e7651953f1bf324074fd17d0d51f53",
+      "values": 1048576
+    },
+    {
+      "block_ordinal": 13,
+      "normalised_mean": 0.0006623000085562011,
+      "normalised_variance": 0.9999996155702732,
+      "rms": 0.028938888404418793,
+      "staging_sha256": "ef299c4e2027278283972527ffce3ff5b1b2070a309dd0603c2c297c50218155",
+      "values": 1048576
+    },
+    {
+      "block_ordinal": 14,
+      "normalised_mean": 0.0017386863798755806,
+      "normalised_variance": 0.9999969644005108,
+      "rms": 0.029461651895449876,
+      "staging_sha256": "c6a3f441c6fc34944565833a3bd48c3569ad85663df217074fe5efb818530758",
+      "values": 1048576
+    }
+  ],
+  "claim_boundary": "Cross-fitted marginal-shape upper-bound screen only; not an achieved lossy-code rate or MSE result.",
+  "decision": "hard_kill",
+  "modes": [
+    {
+      "bins": 1024,
+      "class_count": 1,
+      "class_counts": [
+        28311552
+      ],
+      "class_excess_kurtosis": [
+        0.17051499867371822
+      ],
+      "class_means_after_block_rms": [
+        -0.0009271960927825214
+      ],
+      "class_variances_after_block_rms": [
+        0.9999991250139262
+      ],
+      "edge_sigma": 8.0,
+      "folds": [
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.042789477849826,
+              "gain_bpw": -0.0018750999126293522,
+              "gaussian_discrete_nll_bpw": 8.040914377937197,
+              "global_class_variance_before_standardisation": 0.9999991250139262,
+              "test_values": 4718592,
+              "train_values": 23592960
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0018750999126293522,
+          "heldout_expert": 0,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.048384180383067,
+              "gain_bpw": -0.0006992962576237716,
+              "gaussian_discrete_nll_bpw": 8.047684884125443,
+              "global_class_variance_before_standardisation": 0.9999991250139262,
+              "test_values": 4718592,
+              "train_values": 23592960
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0006992962576237716,
+          "heldout_expert": 1,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.043053295475532,
+              "gain_bpw": -0.0010151200138128758,
+              "gaussian_discrete_nll_bpw": 8.04203817546172,
+              "global_class_variance_before_standardisation": 0.9999991250139262,
+              "test_values": 4718592,
+              "train_values": 23592960
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0010151200138128758,
+          "heldout_expert": 2,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.048230263700354,
+              "gain_bpw": -0.0016588797615852968,
+              "gaussian_discrete_nll_bpw": 8.046571383938769,
+              "global_class_variance_before_standardisation": 0.9999991250139262,
+              "test_values": 4718592,
+              "train_values": 23592960
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0016588797615852968,
+          "heldout_expert": 3,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.047247821528327,
+              "gain_bpw": -0.001137983442522028,
+              "gaussian_discrete_nll_bpw": 8.046109838085805,
+              "global_class_variance_before_standardisation": 0.9999991250139262,
+              "test_values": 4718592,
+              "train_values": 23592960
+            }
+          ],
+          "gross_shape_gain_bpw": -0.001137983442522028,
+          "heldout_expert": 4,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.041999850697422,
+              "gain_bpw": 0.00011638901878008312,
+              "gaussian_discrete_nll_bpw": 8.042116239716202,
+              "global_class_variance_before_standardisation": 0.9999991250139262,
+              "test_values": 4718592,
+              "train_values": 23592960
+            }
+          ],
+          "gross_shape_gain_bpw": 0.00011638901878008312,
+          "heldout_expert": 5,
+          "test_values": 4718592
+        }
+      ],
+      "fraction_of_required_gain": -0.010087358788431844,
+      "gross_crossfit_shape_gain_bpw": -0.0010449983948988735,
+      "mode": "global",
+      "net_shape_gain_bpw": -0.0016237020986025771,
+      "passes_early_screen": false,
+      "probability_table_bits": 16384,
+      "probability_table_cost_bpw": 0.0005787037037037037,
+      "pseudocount": 0.5,
+      "required_gain_bpw": 0.16096404744368115
+    },
+    {
+      "bins": 1024,
+      "class_count": 3,
+      "class_counts": [
+        9437184,
+        9437184,
+        9437184
+      ],
+      "class_excess_kurtosis": [
+        0.17987405974997817,
+        0.19216165397073404,
+        0.11321665608589804
+      ],
+      "class_means_after_block_rms": [
+        -0.0031563244423238454,
+        0.0003597395011707648,
+        1.4996662805516116e-05
+      ],
+      "class_variances_after_block_rms": [
+        1.032145739585909,
+        1.0287196687746252,
+        0.939124453736546
+      ],
+      "edge_sigma": 8.0,
+      "folds": [
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.043609451793987,
+              "gain_bpw": 0.0003685482935136264,
+              "gaussian_discrete_nll_bpw": 8.0439780000875,
+              "global_class_variance_before_standardisation": 1.032145739585909,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.029959882592578,
+              "gain_bpw": -0.0006735312452992304,
+              "gaussian_discrete_nll_bpw": 8.02928635134728,
+              "global_class_variance_before_standardisation": 1.0287196687746252,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.051769465667931,
+              "gain_bpw": -0.0015462752670103441,
+              "gaussian_discrete_nll_bpw": 8.05022319040092,
+              "global_class_variance_before_standardisation": 0.939124453736546,
+              "test_values": 1572864,
+              "train_values": 7864320
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0006170860729319827,
+          "heldout_expert": 0,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.039064345832296,
+              "gain_bpw": -0.0006312787861517677,
+              "gaussian_discrete_nll_bpw": 8.038433067046144,
+              "global_class_variance_before_standardisation": 1.032145739585909,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.049015647656075,
+              "gain_bpw": -0.0010686535585602286,
+              "gaussian_discrete_nll_bpw": 8.047946994097515,
+              "global_class_variance_before_standardisation": 1.0287196687746252,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.05921402098881,
+              "gain_bpw": -0.0016638909138571023,
+              "gaussian_discrete_nll_bpw": 8.057550130074953,
+              "global_class_variance_before_standardisation": 0.939124453736546,
+              "test_values": 1572864,
+              "train_values": 7864320
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0011212744195230329,
+          "heldout_expert": 1,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.121603492551001,
+              "gain_bpw": -0.00248100470697743,
+              "gaussian_discrete_nll_bpw": 8.119122487844024,
+              "global_class_variance_before_standardisation": 1.032145739585909,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.030390189069683,
+              "gain_bpw": -0.001108602535886405,
+              "gaussian_discrete_nll_bpw": 8.029281586533797,
+              "global_class_variance_before_standardisation": 1.0287196687746252,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 7.973497566971226,
+              "gain_bpw": -0.002109096931856236,
+              "gaussian_discrete_nll_bpw": 7.971388470039369,
+              "global_class_variance_before_standardisation": 0.939124453736546,
+              "test_values": 1572864,
+              "train_values": 7864320
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0018995680582400236,
+          "heldout_expert": 2,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.039717935143138,
+              "gain_bpw": -0.003151578060561988,
+              "gaussian_discrete_nll_bpw": 8.036566357082576,
+              "global_class_variance_before_standardisation": 1.032145739585909,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.03943296207783,
+              "gain_bpw": -0.00042579421995903033,
+              "gaussian_discrete_nll_bpw": 8.039007167857871,
+              "global_class_variance_before_standardisation": 1.0287196687746252,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.070951362953094,
+              "gain_bpw": -0.005111200904288182,
+              "gaussian_discrete_nll_bpw": 8.065840162048806,
+              "global_class_variance_before_standardisation": 0.939124453736546,
+              "test_values": 1572864,
+              "train_values": 7864320
+            }
+          ],
+          "gross_shape_gain_bpw": -0.002896191061603067,
+          "heldout_expert": 3,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.019213595055932,
+              "gain_bpw": -0.0008577304430215094,
+              "gaussian_discrete_nll_bpw": 8.01835586461291,
+              "global_class_variance_before_standardisation": 1.032145739585909,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.046208211699176,
+              "gain_bpw": -0.002174129313200268,
+              "gaussian_discrete_nll_bpw": 8.044034082385975,
+              "global_class_variance_before_standardisation": 1.0287196687746252,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.082937208023907,
+              "gain_bpw": -0.00370756116208959,
+              "gaussian_discrete_nll_bpw": 8.079229646861817,
+              "global_class_variance_before_standardisation": 0.939124453736546,
+              "test_values": 1572864,
+              "train_values": 7864320
+            }
+          ],
+          "gross_shape_gain_bpw": -0.0022464736394371223,
+          "heldout_expert": 4,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.007775859745758,
+              "gain_bpw": 0.001221194520258706,
+              "gaussian_discrete_nll_bpw": 8.008997054266016,
+              "global_class_variance_before_standardisation": 1.032145739585909,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.077495812733623,
+              "gain_bpw": -0.0016619333495597743,
+              "gaussian_discrete_nll_bpw": 8.075833879384064,
+              "global_class_variance_before_standardisation": 1.0287196687746252,
+              "test_values": 1572864,
+              "train_values": 7864320
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.043029995423389,
+              "gain_bpw": -0.0012914507244214946,
+              "gaussian_discrete_nll_bpw": 8.041738544698967,
+              "global_class_variance_before_standardisation": 0.939124453736546,
+              "test_values": 1572864,
+              "train_values": 7864320
+            }
+          ],
+          "gross_shape_gain_bpw": -0.000577396517907521,
+          "heldout_expert": 5,
+          "test_values": 4718592
+        }
+      ],
+      "fraction_of_required_gain": -0.020475231115640143,
+      "gross_crossfit_shape_gain_bpw": -0.001559664961607125,
+      "mode": "role",
+      "net_shape_gain_bpw": -0.003295776072718236,
+      "passes_early_screen": false,
+      "probability_table_bits": 49152,
+      "probability_table_cost_bpw": 0.001736111111111111,
+      "pseudocount": 0.5,
+      "required_gain_bpw": 0.16096404744368115
+    },
+    {
+      "bins": 1024,
+      "class_count": 8,
+      "class_counts": [
+        3538944,
+        3538944,
+        3538944,
+        3538944,
+        3538944,
+        3538944,
+        3538944,
+        3538944
+      ],
+      "class_excess_kurtosis": [
+        0.07573955809734789,
+        0.0926983358349216,
+        0.1635471353558522,
+        0.1339861516024592,
+        0.17360640378402037,
+        0.18010227467025208,
+        0.18423760516275012,
+        0.20605407548529753
+      ],
+      "class_means_after_block_rms": [
+        0.00023849316117029707,
+        -0.0012614188901480486,
+        -0.0016029110585637765,
+        -0.0016120563829578095,
+        -0.0019732468400395532,
+        -0.0009975008148482988,
+        -6.394510334293913e-05,
+        -0.00014498281353004106
+      ],
+      "class_variances_after_block_rms": [
+        0.8354427915535744,
+        0.9779293093477212,
+        1.0480859616171017,
+        1.004562636795762,
+        1.0259195213982633,
+        1.0144583500825084,
+        1.0182921576545332,
+        1.0752974192733589
+      ],
+      "edge_sigma": 8.0,
+      "folds": [
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.110537291333257,
+              "gain_bpw": -0.008119368812437244,
+              "gaussian_discrete_nll_bpw": 8.10241792252082,
+              "global_class_variance_before_standardisation": 0.8354427915535744,
+              "test_values": 817152,
+              "train_values": 2721792
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.077310932825279,
+              "gain_bpw": -0.0075822143957431365,
+              "gaussian_discrete_nll_bpw": 8.069728718429536,
+              "global_class_variance_before_standardisation": 0.9779293093477212,
+              "test_values": 882688,
+              "train_values": 2656256
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.069283446177929,
+              "gain_bpw": -0.004316442228475381,
+              "gaussian_discrete_nll_bpw": 8.064967003949453,
+              "global_class_variance_before_standardisation": 1.0480859616171017,
+              "test_values": 569344,
+              "train_values": 2969600
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 7.9953519755983455,
+              "gain_bpw": -0.0044616663595293815,
+              "gaussian_discrete_nll_bpw": 7.990890309238816,
+              "global_class_variance_before_standardisation": 1.004562636795762,
+              "test_values": 632832,
+              "train_values": 2906112
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.03565074048847,
+              "gain_bpw": -0.000677215512750351,
+              "gaussian_discrete_nll_bpw": 8.034973524975719,
+              "global_class_variance_before_standardisation": 1.0259195213982633,
+              "test_values": 731136,
+              "train_values": 2807808
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.065248397739419,
+              "gain_bpw": -0.002556713680084144,
+              "gaussian_discrete_nll_bpw": 8.062691684059335,
+              "global_class_variance_before_standardisation": 1.0144583500825084,
+              "test_values": 841728,
+              "train_values": 2697216
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.032627301407798,
+              "gain_bpw": -0.0009162749018987171,
+              "gaussian_discrete_nll_bpw": 8.0317110265059,
+              "global_class_variance_before_standardisation": 1.0182921576545332,
+              "test_values": 229376,
+              "train_values": 3309568
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.113403510196054,
+              "gain_bpw": -0.0011902164044723662,
+              "gaussian_discrete_nll_bpw": 8.112213293791582,
+              "global_class_variance_before_standardisation": 1.0752974192733589,
+              "test_values": 14336,
+              "train_values": 3524608
+            }
+          ],
+          "gross_shape_gain_bpw": -0.004552828979925741,
+          "heldout_expert": 0,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.034937556498877,
+              "gain_bpw": -0.005512503553646297,
+              "gaussian_discrete_nll_bpw": 8.02942505294523,
+              "global_class_variance_before_standardisation": 0.8354427915535744,
+              "test_values": 366592,
+              "train_values": 3172352
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.056377308047416,
+              "gain_bpw": -0.007297732928410738,
+              "gaussian_discrete_nll_bpw": 8.049079575119006,
+              "global_class_variance_before_standardisation": 0.9779293093477212,
+              "test_values": 942080,
+              "train_values": 2596864
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.05450826025717,
+              "gain_bpw": -0.006911080420644922,
+              "gaussian_discrete_nll_bpw": 8.047597179836526,
+              "global_class_variance_before_standardisation": 1.0480859616171017,
+              "test_values": 1007616,
+              "train_values": 2531328
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.013273161282912,
+              "gain_bpw": -0.006704269671532259,
+              "gaussian_discrete_nll_bpw": 8.00656889161138,
+              "global_class_variance_before_standardisation": 1.004562636795762,
+              "test_values": 913408,
+              "train_values": 2625536
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.050931456923998,
+              "gain_bpw": -0.00376093806221256,
+              "gaussian_discrete_nll_bpw": 8.047170518861785,
+              "global_class_variance_before_standardisation": 1.0259195213982633,
+              "test_values": 546816,
+              "train_values": 2992128
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.105291772887517,
+              "gain_bpw": -0.0027290858755737446,
+              "gaussian_discrete_nll_bpw": 8.102562687011943,
+              "global_class_variance_before_standardisation": 1.0144583500825084,
+              "test_values": 495616,
+              "train_values": 3043328
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.044645298817684,
+              "gain_bpw": -0.002056243819115622,
+              "gaussian_discrete_nll_bpw": 8.042589054998569,
+              "global_class_variance_before_standardisation": 1.0182921576545332,
+              "test_values": 311296,
+              "train_values": 3227648
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.118897723189201,
+              "gain_bpw": -0.001863104874120225,
+              "gaussian_discrete_nll_bpw": 8.117034618315081,
+              "global_class_variance_before_standardisation": 1.0752974192733589,
+              "test_values": 135168,
+              "train_values": 3403776
+            }
+          ],
+          "gross_shape_gain_bpw": -0.005570388172886035,
+          "heldout_expert": 1,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.051080949983515,
+              "gain_bpw": -0.00658513692071061,
+              "gaussian_discrete_nll_bpw": 8.044495813062804,
+              "global_class_variance_before_standardisation": 0.8354427915535744,
+              "test_values": 1529856,
+              "train_values": 2009088
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.14862620871075,
+              "gain_bpw": -0.0037082696048234,
+              "gaussian_discrete_nll_bpw": 8.144917939105927,
+              "global_class_variance_before_standardisation": 0.9779293093477212,
+              "test_values": 51200,
+              "train_values": 3487744
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.200953162147757,
+              "gain_bpw": -0.002766688355833935,
+              "gaussian_discrete_nll_bpw": 8.198186473791923,
+              "global_class_variance_before_standardisation": 1.0480859616171017,
+              "test_values": 57344,
+              "train_values": 3481600
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.319273088303818,
+              "gain_bpw": -0.0067524727224643755,
+              "gaussian_discrete_nll_bpw": 8.312520615581354,
+              "global_class_variance_before_standardisation": 1.004562636795762,
+              "test_values": 106496,
+              "train_values": 3432448
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.38244584002007,
+              "gain_bpw": -0.011773381284632123,
+              "gaussian_discrete_nll_bpw": 8.370672458735438,
+              "global_class_variance_before_standardisation": 1.0259195213982633,
+              "test_values": 233472,
+              "train_values": 3305472
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.070568344524414,
+              "gain_bpw": -0.001875104269966954,
+              "gaussian_discrete_nll_bpw": 8.068693240254447,
+              "global_class_variance_before_standardisation": 1.0144583500825084,
+              "test_values": 512000,
+              "train_values": 3026944
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.023747142936678,
+              "gain_bpw": -0.004419040509162642,
+              "gaussian_discrete_nll_bpw": 8.019328102427515,
+              "global_class_variance_before_standardisation": 1.0182921576545332,
+              "test_values": 1214464,
+              "train_values": 2324480
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.033687937274223,
+              "gain_bpw": -0.0027184728107787492,
+              "gaussian_discrete_nll_bpw": 8.030969464463444,
+              "global_class_variance_before_standardisation": 1.0752974192733589,
+              "test_values": 1013760,
+              "train_values": 2525184
+            }
+          ],
+          "gross_shape_gain_bpw": -0.004868696385690815,
+          "heldout_expert": 2,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.0359813505235,
+              "gain_bpw": -0.009172498682673336,
+              "gaussian_discrete_nll_bpw": 8.026808851840826,
+              "global_class_variance_before_standardisation": 0.8354427915535744,
+              "test_values": 497664,
+              "train_values": 3041280
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.070383262202771,
+              "gain_bpw": -0.011944442589372883,
+              "gaussian_discrete_nll_bpw": 8.058438819613398,
+              "global_class_variance_before_standardisation": 0.9779293093477212,
+              "test_values": 942080,
+              "train_values": 2596864
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.104671254030485,
+              "gain_bpw": -0.008666157503959937,
+              "gaussian_discrete_nll_bpw": 8.096005096526525,
+              "global_class_variance_before_standardisation": 1.0480859616171017,
+              "test_values": 520192,
+              "train_values": 3018752
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.015668085835848,
+              "gain_bpw": -0.005380790665107327,
+              "gaussian_discrete_nll_bpw": 8.010287295170741,
+              "global_class_variance_before_standardisation": 1.004562636795762,
+              "test_values": 522240,
+              "train_values": 3016704
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 7.9904059761986215,
+              "gain_bpw": -0.010082871205241872,
+              "gaussian_discrete_nll_bpw": 7.98032310499338,
+              "global_class_variance_before_standardisation": 1.0259195213982633,
+              "test_values": 593920,
+              "train_values": 2945024
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.055845818101307,
+              "gain_bpw": -0.006150912822986854,
+              "gaussian_discrete_nll_bpw": 8.04969490527832,
+              "global_class_variance_before_standardisation": 1.0144583500825084,
+              "test_values": 563200,
+              "train_values": 2975744
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.114310187187211,
+              "gain_bpw": -0.009372750200864033,
+              "gaussian_discrete_nll_bpw": 8.104937436986347,
+              "global_class_variance_before_standardisation": 1.0182921576545332,
+              "test_values": 634880,
+              "train_values": 2904064
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.035948492548453,
+              "gain_bpw": 0.0005738679305213878,
+              "gaussian_discrete_nll_bpw": 8.036522360478974,
+              "global_class_variance_before_standardisation": 1.0752974192733589,
+              "test_values": 444416,
+              "train_values": 3094528
+            }
+          ],
+          "gross_shape_gain_bpw": -0.008113378165709886,
+          "heldout_expert": 3,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 7.9314192062358035,
+              "gain_bpw": -0.004471498112421202,
+              "gaussian_discrete_nll_bpw": 7.926947708123382,
+              "global_class_variance_before_standardisation": 0.8354427915535744,
+              "test_values": 104448,
+              "train_values": 3434496
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 7.995143124916738,
+              "gain_bpw": -0.004777179524281472,
+              "gaussian_discrete_nll_bpw": 7.9903659453924565,
+              "global_class_variance_before_standardisation": 0.9779293093477212,
+              "test_values": 366592,
+              "train_values": 3172352
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.013681602112886,
+              "gain_bpw": -0.0019514815435730526,
+              "gaussian_discrete_nll_bpw": 8.011730120569313,
+              "global_class_variance_before_standardisation": 1.0480859616171017,
+              "test_values": 839680,
+              "train_values": 2699264
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.087732439480694,
+              "gain_bpw": -0.00414956520296883,
+              "gaussian_discrete_nll_bpw": 8.083582874277726,
+              "global_class_variance_before_standardisation": 1.004562636795762,
+              "test_values": 878592,
+              "train_values": 2660352
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 7.9825542274821135,
+              "gain_bpw": -0.00949205594784086,
+              "gaussian_discrete_nll_bpw": 7.973062171534273,
+              "global_class_variance_before_standardisation": 1.0259195213982633,
+              "test_values": 839680,
+              "train_values": 2699264
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.048900284224098,
+              "gain_bpw": -0.0058632425491698115,
+              "gaussian_discrete_nll_bpw": 8.043037041674928,
+              "global_class_variance_before_standardisation": 1.0144583500825084,
+              "test_values": 657408,
+              "train_values": 2881536
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.090491571624757,
+              "gain_bpw": -0.007547332883390823,
+              "gaussian_discrete_nll_bpw": 8.082944238741366,
+              "global_class_variance_before_standardisation": 1.0182921576545332,
+              "test_values": 624640,
+              "train_values": 2914304
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.05254594049238,
+              "gain_bpw": -0.0002529843593421788,
+              "gaussian_discrete_nll_bpw": 8.052292956133037,
+              "global_class_variance_before_standardisation": 1.0752974192733589,
+              "test_values": 407552,
+              "train_values": 3131392
+            }
+          ],
+          "gross_shape_gain_bpw": -0.005116995076979168,
+          "heldout_expert": 4,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 7.9570386850261805,
+              "gain_bpw": -0.008380601164702739,
+              "gaussian_discrete_nll_bpw": 7.948658083861478,
+              "global_class_variance_before_standardisation": 0.8354427915535744,
+              "test_values": 223232,
+              "train_values": 3315712
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 7.977618274094443,
+              "gain_bpw": -0.00568213316975541,
+              "gaussian_discrete_nll_bpw": 7.971936140924687,
+              "global_class_variance_before_standardisation": 0.9779293093477212,
+              "test_values": 354304,
+              "train_values": 3184640
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.001511704121421,
+              "gain_bpw": -0.0007138047983445972,
+              "gaussian_discrete_nll_bpw": 8.000797899323077,
+              "global_class_variance_before_standardisation": 1.0480859616171017,
+              "test_values": 544768,
+              "train_values": 2994176
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.09219408937723,
+              "gain_bpw": -0.0007681776108903193,
+              "gaussian_discrete_nll_bpw": 8.09142591176634,
+              "global_class_variance_before_standardisation": 1.004562636795762,
+              "test_values": 485376,
+              "train_values": 3053568
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.089620172223938,
+              "gain_bpw": -8.233642335397917e-05,
+              "gaussian_discrete_nll_bpw": 8.089537835800584,
+              "global_class_variance_before_standardisation": 1.0259195213982633,
+              "test_values": 593920,
+              "train_values": 2945024
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 7.923483251702664,
+              "gain_bpw": -0.005186647700979208,
+              "gaussian_discrete_nll_bpw": 7.918296604001685,
+              "global_class_variance_before_standardisation": 1.0144583500825084,
+              "test_values": 468992,
+              "train_values": 3069952
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 7.992967288366863,
+              "gain_bpw": -0.004011003174249517,
+              "gaussian_discrete_nll_bpw": 7.9889562851926135,
+              "global_class_variance_before_standardisation": 1.0182921576545332,
+              "test_values": 524288,
+              "train_values": 3014656
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.048344241277333,
+              "gain_bpw": -0.002456260209116934,
+              "gaussian_discrete_nll_bpw": 8.045887981068216,
+              "global_class_variance_before_standardisation": 1.0752974192733589,
+              "test_values": 1523712,
+              "train_values": 2015232
+            }
+          ],
+          "gross_shape_gain_bpw": -0.002749270412304132,
+          "heldout_expert": 5,
+          "test_values": 4718592
+        }
+      ],
+      "fraction_of_required_gain": -0.06083070091767856,
+      "gross_crossfit_shape_gain_bpw": -0.005161926198915962,
+      "mode": "label",
+      "net_shape_gain_bpw": -0.00979155582854559,
+      "passes_early_screen": false,
+      "probability_table_bits": 131072,
+      "probability_table_cost_bpw": 0.004629629629629629,
+      "pseudocount": 0.5,
+      "required_gain_bpw": 0.16096404744368115
+    },
+    {
+      "bins": 1024,
+      "class_count": 24,
+      "class_counts": [
+        212992,
+        757760,
+        1699840,
+        2029568,
+        1845248,
+        1374208,
+        1058816,
+        458752,
+        385024,
+        405504,
+        403456,
+        468992,
+        956416,
+        1667072,
+        2127872,
+        3022848,
+        2940928,
+        2375680,
+        1435648,
+        1040384,
+        737280,
+        497664,
+        352256,
+        57344
+      ],
+      "class_excess_kurtosis": [
+        0.14251693568360935,
+        0.1395350841150096,
+        0.18593441636105368,
+        0.1367795160604084,
+        0.18714038527194177,
+        0.21970801954540553,
+        0.12935798055444447,
+        0.17298317683874842,
+        0.17358618268680015,
+        0.1499083031970483,
+        0.1605431726869453,
+        0.17585699517846942,
+        0.13779621523749652,
+        0.13727357228446735,
+        0.194121229013287,
+        0.21003144094368142,
+        0.055315706083404415,
+        0.0683615286009931,
+        0.11808067359598873,
+        0.10827208092456564,
+        0.16274969530501648,
+        0.19571364524812163,
+        0.22961530431125166,
+        0.18129853495268167
+      ],
+      "class_means_after_block_rms": [
+        -0.006032964168937871,
+        -0.0037681385136029266,
+        -0.003958055318425862,
+        -0.002114265524848822,
+        -0.0026529070100590633,
+        -0.002708954277272819,
+        -0.004209260902302265,
+        -0.003384442118765434,
+        0.0017269211914893545,
+        0.001862914407881822,
+        -0.000545262773740926,
+        -0.0027049588371903734,
+        -0.0010236749459445916,
+        -0.0003437218936392147,
+        0.0018914567528980134,
+        0.0003276666529100623,
+        0.0004978295766516805,
+        -0.0009951531421580572,
+        0.0008884056655095899,
+        -0.00013968645848290757,
+        -0.0015040142326916885,
+        0.0015383396436811625,
+        0.0005841115212362604,
+        0.0008553126117247987
+      ],
+      "class_variances_after_block_rms": [
+        0.7655965429373698,
+        0.9716872266779268,
+        1.092253659295914,
+        1.0134710217667537,
+        1.0573014197571482,
+        1.01842978257309,
+        1.0041262178998773,
+        1.1202194630951816,
+        0.7511141269106958,
+        0.9727166685502288,
+        1.0324546358912552,
+        0.9634239352398207,
+        1.0106569117903734,
+        1.0359678120463254,
+        1.0456272947010798,
+        1.071034586913764,
+        0.8515383314485824,
+        0.9808063209920496,
+        1.0001701372140788,
+        1.005725881678234,
+        0.9671740539172554,
+        0.9314237443965424,
+        0.8956738702451343,
+        0.9405365020503248
+      ],
+      "edge_sigma": 8.0,
+      "folds": [
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.206483333145503,
+              "gain_bpw": -0.010367460978589094,
+              "gaussian_discrete_nll_bpw": 8.196115872166914,
+              "global_class_variance_before_standardisation": 0.7655965429373698,
+              "test_values": 10240,
+              "train_values": 202752
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.112400704031177,
+              "gain_bpw": -0.006386075211828768,
+              "gaussian_discrete_nll_bpw": 8.106014628819349,
+              "global_class_variance_before_standardisation": 0.9716872266779268,
+              "test_values": 118784,
+              "train_values": 638976
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.092834596645117,
+              "gain_bpw": -0.008667088064566286,
+              "gaussian_discrete_nll_bpw": 8.08416750858055,
+              "global_class_variance_before_standardisation": 1.092253659295914,
+              "test_values": 425984,
+              "train_values": 1273856
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 7.99155478794049,
+              "gain_bpw": -0.0073522492926736405,
+              "gaussian_discrete_nll_bpw": 7.984202538647816,
+              "global_class_variance_before_standardisation": 1.0134710217667537,
+              "test_values": 518144,
+              "train_values": 1511424
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.013264163236084,
+              "gain_bpw": -0.004273476237329987,
+              "gaussian_discrete_nll_bpw": 8.008990686998754,
+              "global_class_variance_before_standardisation": 1.0573014197571482,
+              "test_values": 327680,
+              "train_values": 1517568
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.103413401864973,
+              "gain_bpw": -0.006570918540768744,
+              "gaussian_discrete_nll_bpw": 8.096842483324204,
+              "global_class_variance_before_standardisation": 1.01842978257309,
+              "test_values": 122880,
+              "train_values": 1251328
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.058871382163169,
+              "gain_bpw": -0.0063814361502512185,
+              "gaussian_discrete_nll_bpw": 8.052489946012917,
+              "global_class_variance_before_standardisation": 1.0041262178998773,
+              "test_values": 38912,
+              "train_values": 1019904
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.101946795126684,
+              "gain_bpw": -0.008576770329980832,
+              "gaussian_discrete_nll_bpw": 8.093370024796704,
+              "global_class_variance_before_standardisation": 1.1202194630951816,
+              "test_values": 10240,
+              "train_values": 448512
+            },
+            {
+              "class": 8,
+              "crossfit_table_nll_bpw": 8.15947812839061,
+              "gain_bpw": -0.009082040375307798,
+              "gaussian_discrete_nll_bpw": 8.150396088015302,
+              "global_class_variance_before_standardisation": 0.7511141269106958,
+              "test_values": 8192,
+              "train_values": 376832
+            },
+            {
+              "class": 9,
+              "crossfit_table_nll_bpw": 8.097470873461694,
+              "gain_bpw": -0.008703166353354774,
+              "gaussian_discrete_nll_bpw": 8.088767707108339,
+              "global_class_variance_before_standardisation": 0.9727166685502288,
+              "test_values": 55296,
+              "train_values": 350208
+            },
+            {
+              "class": 10,
+              "crossfit_table_nll_bpw": 7.946573438079717,
+              "gain_bpw": -0.020277803106296233,
+              "gaussian_discrete_nll_bpw": 7.926295634973421,
+              "global_class_variance_before_standardisation": 1.0324546358912552,
+              "test_values": 94208,
+              "train_values": 309248
+            },
+            {
+              "class": 11,
+              "crossfit_table_nll_bpw": 8.024582634169084,
+              "gain_bpw": -0.0017744097027136974,
+              "gaussian_discrete_nll_bpw": 8.02280822446637,
+              "global_class_variance_before_standardisation": 0.9634239352398207,
+              "test_values": 98304,
+              "train_values": 370688
+            },
+            {
+              "class": 12,
+              "crossfit_table_nll_bpw": 8.05444748722977,
+              "gain_bpw": -0.00453412921937435,
+              "gaussian_discrete_nll_bpw": 8.049913358010397,
+              "global_class_variance_before_standardisation": 1.0106569117903734,
+              "test_values": 403456,
+              "train_values": 552960
+            },
+            {
+              "class": 13,
+              "crossfit_table_nll_bpw": 8.047759313155206,
+              "gain_bpw": -0.006613801645110939,
+              "gaussian_discrete_nll_bpw": 8.041145511510095,
+              "global_class_variance_before_standardisation": 1.0359678120463254,
+              "test_values": 718848,
+              "train_values": 948224
+            },
+            {
+              "class": 14,
+              "crossfit_table_nll_bpw": 8.010581859670085,
+              "gain_bpw": 0.0005102557812843855,
+              "gaussian_discrete_nll_bpw": 8.011092115451369,
+              "global_class_variance_before_standardisation": 1.0456272947010798,
+              "test_values": 190464,
+              "train_values": 1937408
+            },
+            {
+              "class": 15,
+              "crossfit_table_nll_bpw": 8.084521894799416,
+              "gain_bpw": -0.0004705343032185283,
+              "gaussian_discrete_nll_bpw": 8.084051360496197,
+              "global_class_variance_before_standardisation": 1.071034586913764,
+              "test_values": 4096,
+              "train_values": 3018752
+            },
+            {
+              "class": 16,
+              "crossfit_table_nll_bpw": 8.098658675969014,
+              "gain_bpw": -0.010926607442616643,
+              "gaussian_discrete_nll_bpw": 8.087732068526398,
+              "global_class_variance_before_standardisation": 0.8515383314485824,
+              "test_values": 798720,
+              "train_values": 2142208
+            },
+            {
+              "class": 17,
+              "crossfit_table_nll_bpw": 8.06888546367981,
+              "gain_bpw": -0.00787752405598141,
+              "gaussian_discrete_nll_bpw": 8.06100793962383,
+              "global_class_variance_before_standardisation": 0.9808063209920496,
+              "test_values": 708608,
+              "train_values": 1667072
+            },
+            {
+              "class": 18,
+              "crossfit_table_nll_bpw": 7.934066451741836,
+              "gain_bpw": -0.0027615623421661795,
+              "gaussian_discrete_nll_bpw": 7.931304889399669,
+              "global_class_variance_before_standardisation": 1.0001701372140788,
+              "test_values": 49152,
+              "train_values": 1386496
+            },
+            {
+              "class": 19,
+              "crossfit_table_nll_bpw": 7.999827196064135,
+              "gain_bpw": -0.004866310014527642,
+              "gaussian_discrete_nll_bpw": 7.994960886049608,
+              "global_class_variance_before_standardisation": 1.005725881678234,
+              "test_values": 16384,
+              "train_values": 1024000
+            }
+          ],
+          "gross_shape_gain_bpw": -0.007325031720119995,
+          "heldout_expert": 0,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.13213479227361,
+              "gain_bpw": -0.015470213084121553,
+              "gaussian_discrete_nll_bpw": 8.116664579189488,
+              "global_class_variance_before_standardisation": 0.7655965429373698,
+              "test_values": 40960,
+              "train_values": 172032
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.074393770296927,
+              "gain_bpw": -0.008964413885403033,
+              "gaussian_discrete_nll_bpw": 8.065429356411524,
+              "global_class_variance_before_standardisation": 0.9716872266779268,
+              "test_values": 200704,
+              "train_values": 557056
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.05706772413984,
+              "gain_bpw": -0.004230642234865911,
+              "gaussian_discrete_nll_bpw": 8.052837081904974,
+              "global_class_variance_before_standardisation": 1.092253659295914,
+              "test_values": 458752,
+              "train_values": 1241088
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.00752451211225,
+              "gain_bpw": -0.007402882681013523,
+              "gaussian_discrete_nll_bpw": 8.000121629431236,
+              "global_class_variance_before_standardisation": 1.0134710217667537,
+              "test_values": 528384,
+              "train_values": 1501184
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.028341393627587,
+              "gain_bpw": -0.003070331036967744,
+              "gaussian_discrete_nll_bpw": 8.025271062590619,
+              "global_class_variance_before_standardisation": 1.0573014197571482,
+              "test_values": 219136,
+              "train_values": 1626112
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.127933804398502,
+              "gain_bpw": -0.002737134442819311,
+              "gaussian_discrete_nll_bpw": 8.125196669955683,
+              "global_class_variance_before_standardisation": 1.01842978257309,
+              "test_values": 98304,
+              "train_values": 1275904
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.076912507736356,
+              "gain_bpw": -0.00436121193531136,
+              "gaussian_discrete_nll_bpw": 8.072551295801045,
+              "global_class_variance_before_standardisation": 1.0041262178998773,
+              "test_values": 20480,
+              "train_values": 1038336
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.05226669056941,
+              "gain_bpw": 0.006848065579774243,
+              "gaussian_discrete_nll_bpw": 8.059114756149183,
+              "global_class_variance_before_standardisation": 1.1202194630951816,
+              "test_values": 6144,
+              "train_values": 452608
+            },
+            {
+              "class": 8,
+              "crossfit_table_nll_bpw": 8.084481023113963,
+              "gain_bpw": -0.016816626689800884,
+              "gaussian_discrete_nll_bpw": 8.067664396424162,
+              "global_class_variance_before_standardisation": 0.7511141269106958,
+              "test_values": 129024,
+              "train_values": 256000
+            },
+            {
+              "class": 9,
+              "crossfit_table_nll_bpw": 8.06481483089715,
+              "gain_bpw": -0.012085229698595157,
+              "gaussian_discrete_nll_bpw": 8.052729601198555,
+              "global_class_variance_before_standardisation": 0.9727166685502288,
+              "test_values": 178176,
+              "train_values": 227328
+            },
+            {
+              "class": 10,
+              "crossfit_table_nll_bpw": 8.104207655369175,
+              "gain_bpw": -0.011486476886600983,
+              "gaussian_discrete_nll_bpw": 8.092721178482574,
+              "global_class_variance_before_standardisation": 1.0324546358912552,
+              "test_values": 176128,
+              "train_values": 227328
+            },
+            {
+              "class": 11,
+              "crossfit_table_nll_bpw": 8.043155247952638,
+              "gain_bpw": -0.00722140648659142,
+              "gaussian_discrete_nll_bpw": 8.035933841466047,
+              "global_class_variance_before_standardisation": 0.9634239352398207,
+              "test_values": 180224,
+              "train_values": 288768
+            },
+            {
+              "class": 12,
+              "crossfit_table_nll_bpw": 8.06659924907925,
+              "gain_bpw": -0.0076200156315149314,
+              "gaussian_discrete_nll_bpw": 8.058979233447735,
+              "global_class_variance_before_standardisation": 1.0106569117903734,
+              "test_values": 215040,
+              "train_values": 741376
+            },
+            {
+              "class": 13,
+              "crossfit_table_nll_bpw": 8.119321365695821,
+              "gain_bpw": -0.0069937465186491465,
+              "gaussian_discrete_nll_bpw": 8.112327619177172,
+              "global_class_variance_before_standardisation": 1.0359678120463254,
+              "test_values": 303104,
+              "train_values": 1363968
+            },
+            {
+              "class": 14,
+              "crossfit_table_nll_bpw": 8.02511656293721,
+              "gain_bpw": -0.000587640805816747,
+              "gaussian_discrete_nll_bpw": 8.024528922131394,
+              "global_class_variance_before_standardisation": 1.0456272947010798,
+              "test_values": 262144,
+              "train_values": 1865728
+            },
+            {
+              "class": 15,
+              "crossfit_table_nll_bpw": 8.12581478627189,
+              "gain_bpw": -0.003727028880637917,
+              "gaussian_discrete_nll_bpw": 8.122087757391252,
+              "global_class_variance_before_standardisation": 1.071034586913764,
+              "test_values": 129024,
+              "train_values": 2893824
+            },
+            {
+              "class": 16,
+              "crossfit_table_nll_bpw": 8.040505641767183,
+              "gain_bpw": -0.0049031791051472595,
+              "gaussian_discrete_nll_bpw": 8.035602462662036,
+              "global_class_variance_before_standardisation": 0.8515383314485824,
+              "test_values": 196608,
+              "train_values": 2744320
+            },
+            {
+              "class": 17,
+              "crossfit_table_nll_bpw": 8.05183262357276,
+              "gain_bpw": -0.00913309353968117,
+              "gaussian_discrete_nll_bpw": 8.04269953003308,
+              "global_class_variance_before_standardisation": 0.9808063209920496,
+              "test_values": 563200,
+              "train_values": 1812480
+            },
+            {
+              "class": 18,
+              "crossfit_table_nll_bpw": 8.029100121260713,
+              "gain_bpw": -0.009945468305755156,
+              "gaussian_discrete_nll_bpw": 8.019154652954958,
+              "global_class_variance_before_standardisation": 1.0001701372140788,
+              "test_values": 372736,
+              "train_values": 1062912
+            },
+            {
+              "class": 19,
+              "crossfit_table_nll_bpw": 8.01659411393213,
+              "gain_bpw": -0.009703268683221467,
+              "gaussian_discrete_nll_bpw": 8.00689084524891,
+              "global_class_variance_before_standardisation": 1.005725881678234,
+              "test_values": 204800,
+              "train_values": 835584
+            },
+            {
+              "class": 20,
+              "crossfit_table_nll_bpw": 8.096943811593174,
+              "gain_bpw": -0.007008785403094464,
+              "gaussian_discrete_nll_bpw": 8.08993502619008,
+              "global_class_variance_before_standardisation": 0.9671740539172554,
+              "test_values": 112640,
+              "train_values": 624640
+            },
+            {
+              "class": 21,
+              "crossfit_table_nll_bpw": 8.055427832360978,
+              "gain_bpw": -0.00551492059094727,
+              "gaussian_discrete_nll_bpw": 8.049912911770031,
+              "global_class_variance_before_standardisation": 0.9314237443965424,
+              "test_values": 94208,
+              "train_values": 403456
+            },
+            {
+              "class": 22,
+              "crossfit_table_nll_bpw": 8.128563184955512,
+              "gain_bpw": -0.011221446260632817,
+              "gaussian_discrete_nll_bpw": 8.11734173869488,
+              "global_class_variance_before_standardisation": 0.8956738702451343,
+              "test_values": 28672,
+              "train_values": 323584
+            }
+          ],
+          "gross_shape_gain_bpw": -0.007364087776937308,
+          "heldout_expert": 1,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.235132982688263,
+              "gain_bpw": -0.007257608637040391,
+              "gaussian_discrete_nll_bpw": 8.227875374051223,
+              "global_class_variance_before_standardisation": 0.7655965429373698,
+              "test_values": 4096,
+              "train_values": 208896
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.19463437228508,
+              "gain_bpw": -0.003784102936759126,
+              "gaussian_discrete_nll_bpw": 8.19085026934832,
+              "global_class_variance_before_standardisation": 0.9716872266779268,
+              "test_values": 10240,
+              "train_values": 747520
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.173597043074366,
+              "gain_bpw": -0.0056197051941762055,
+              "gaussian_discrete_nll_bpw": 8.16797733788019,
+              "global_class_variance_before_standardisation": 1.092253659295914,
+              "test_values": 38912,
+              "train_values": 1660928
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.311839810360821,
+              "gain_bpw": -0.008124050136494532,
+              "gaussian_discrete_nll_bpw": 8.303715760224327,
+              "global_class_variance_before_standardisation": 1.0134710217667537,
+              "test_values": 90112,
+              "train_values": 1939456
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.358752768543825,
+              "gain_bpw": -0.01897985931386259,
+              "gaussian_discrete_nll_bpw": 8.339772909229962,
+              "global_class_variance_before_standardisation": 1.0573014197571482,
+              "test_values": 200704,
+              "train_values": 1644544
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.105611663851304,
+              "gain_bpw": -0.004109620308064166,
+              "gaussian_discrete_nll_bpw": 8.10150204354324,
+              "global_class_variance_before_standardisation": 1.01842978257309,
+              "test_values": 395264,
+              "train_values": 978944
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.029282515649857,
+              "gain_bpw": -0.005617006146714232,
+              "gaussian_discrete_nll_bpw": 8.023665509503143,
+              "global_class_variance_before_standardisation": 1.0041262178998773,
+              "test_values": 534528,
+              "train_values": 524288
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.08138366002938,
+              "gain_bpw": -0.011094433036431539,
+              "gaussian_discrete_nll_bpw": 8.070289226992948,
+              "global_class_variance_before_standardisation": 1.1202194630951816,
+              "test_values": 299008,
+              "train_values": 159744
+            },
+            {
+              "class": 9,
+              "crossfit_table_nll_bpw": 8.165967706326096,
+              "gain_bpw": -0.007940446235355836,
+              "gaussian_discrete_nll_bpw": 8.15802726009074,
+              "global_class_variance_before_standardisation": 0.9727166685502288,
+              "test_values": 2048,
+              "train_values": 403456
+            },
+            {
+              "class": 10,
+              "crossfit_table_nll_bpw": 8.209156475106017,
+              "gain_bpw": -0.008673693011829187,
+              "gaussian_discrete_nll_bpw": 8.200482782094188,
+              "global_class_variance_before_standardisation": 1.0324546358912552,
+              "test_values": 10240,
+              "train_values": 393216
+            },
+            {
+              "class": 11,
+              "crossfit_table_nll_bpw": 8.371330859853927,
+              "gain_bpw": -0.014978955855358578,
+              "gaussian_discrete_nll_bpw": 8.356351903998569,
+              "global_class_variance_before_standardisation": 0.9634239352398207,
+              "test_values": 16384,
+              "train_values": 452608
+            },
+            {
+              "class": 12,
+              "crossfit_table_nll_bpw": 8.390923004260792,
+              "gain_bpw": -0.004796265103896857,
+              "gaussian_discrete_nll_bpw": 8.386126739156895,
+              "global_class_variance_before_standardisation": 1.0106569117903734,
+              "test_values": 32768,
+              "train_values": 923648
+            },
+            {
+              "class": 13,
+              "crossfit_table_nll_bpw": 7.9386510082217265,
+              "gain_bpw": -0.004686793834899561,
+              "gaussian_discrete_nll_bpw": 7.933964214386827,
+              "global_class_variance_before_standardisation": 1.0359678120463254,
+              "test_values": 116736,
+              "train_values": 1550336
+            },
+            {
+              "class": 14,
+              "crossfit_table_nll_bpw": 8.011065038977591,
+              "gain_bpw": -0.00580758897483058,
+              "gaussian_discrete_nll_bpw": 8.00525745000276,
+              "global_class_variance_before_standardisation": 1.0456272947010798,
+              "test_values": 679936,
+              "train_values": 1447936
+            },
+            {
+              "class": 15,
+              "crossfit_table_nll_bpw": 8.006245618669775,
+              "gain_bpw": -0.0021971461671093095,
+              "gaussian_discrete_nll_bpw": 8.004048472502665,
+              "global_class_variance_before_standardisation": 1.071034586913764,
+              "test_values": 714752,
+              "train_values": 2308096
+            },
+            {
+              "class": 16,
+              "crossfit_table_nll_bpw": 8.037256765925557,
+              "gain_bpw": -0.0069306511423050665,
+              "gaussian_discrete_nll_bpw": 8.030326114783252,
+              "global_class_variance_before_standardisation": 0.8515383314485824,
+              "test_values": 1525760,
+              "train_values": 1415168
+            },
+            {
+              "class": 17,
+              "crossfit_table_nll_bpw": 8.137054428740633,
+              "gain_bpw": -0.0055887003857950646,
+              "gaussian_discrete_nll_bpw": 8.131465728354838,
+              "global_class_variance_before_standardisation": 0.9808063209920496,
+              "test_values": 38912,
+              "train_values": 2336768
+            },
+            {
+              "class": 18,
+              "crossfit_table_nll_bpw": 8.239028368995925,
+              "gain_bpw": -0.011412190122168653,
+              "gaussian_discrete_nll_bpw": 8.227616178873756,
+              "global_class_variance_before_standardisation": 1.0001701372140788,
+              "test_values": 8192,
+              "train_values": 1427456
+            }
+          ],
+          "gross_shape_gain_bpw": -0.006407030323641177,
+          "heldout_expert": 2,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.052303049191826,
+              "gain_bpw": -0.012748284566262313,
+              "gaussian_discrete_nll_bpw": 8.039554764625564,
+              "global_class_variance_before_standardisation": 0.7655965429373698,
+              "test_values": 61440,
+              "train_values": 151552
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 8.0887239609974,
+              "gain_bpw": -0.01271540065041421,
+              "gaussian_discrete_nll_bpw": 8.076008560346986,
+              "global_class_variance_before_standardisation": 0.9716872266779268,
+              "test_values": 135168,
+              "train_values": 622592
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 8.07906833441792,
+              "gain_bpw": -0.009992984438392583,
+              "gaussian_discrete_nll_bpw": 8.069075349979528,
+              "global_class_variance_before_standardisation": 1.092253659295914,
+              "test_values": 268288,
+              "train_values": 1431552
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.060695050488057,
+              "gain_bpw": -0.005185514455892104,
+              "gaussian_discrete_nll_bpw": 8.055509536032165,
+              "global_class_variance_before_standardisation": 1.0134710217667537,
+              "test_values": 296960,
+              "train_values": 1732608
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 7.97006612897875,
+              "gain_bpw": -0.009620123879442666,
+              "gaussian_discrete_nll_bpw": 7.960446005099308,
+              "global_class_variance_before_standardisation": 1.0573014197571482,
+              "test_values": 354304,
+              "train_values": 1490944
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.05101376387647,
+              "gain_bpw": -0.008076649208199171,
+              "gaussian_discrete_nll_bpw": 8.042937114668272,
+              "global_class_variance_before_standardisation": 1.01842978257309,
+              "test_values": 264192,
+              "train_values": 1110016
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.149451685449943,
+              "gain_bpw": -0.013628078551832346,
+              "gaussian_discrete_nll_bpw": 8.13582360689811,
+              "global_class_variance_before_standardisation": 1.0041262178998773,
+              "test_values": 137216,
+              "train_values": 921600
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.014648331260151,
+              "gain_bpw": -0.010253195704210682,
+              "gaussian_discrete_nll_bpw": 8.00439513555594,
+              "global_class_variance_before_standardisation": 1.1202194630951816,
+              "test_values": 55296,
+              "train_values": 403456
+            },
+            {
+              "class": 8,
+              "crossfit_table_nll_bpw": 8.063112085434877,
+              "gain_bpw": -0.01720139719162539,
+              "gaussian_discrete_nll_bpw": 8.045910688243252,
+              "global_class_variance_before_standardisation": 0.7511141269106958,
+              "test_values": 165888,
+              "train_values": 219136
+            },
+            {
+              "class": 9,
+              "crossfit_table_nll_bpw": 8.081758972214477,
+              "gain_bpw": -0.017386973988855914,
+              "gaussian_discrete_nll_bpw": 8.06437199822562,
+              "global_class_variance_before_standardisation": 0.9727166685502288,
+              "test_values": 81920,
+              "train_values": 323584
+            },
+            {
+              "class": 10,
+              "crossfit_table_nll_bpw": 8.121100248374814,
+              "gain_bpw": -0.013717155041723217,
+              "gaussian_discrete_nll_bpw": 8.107383093333091,
+              "global_class_variance_before_standardisation": 1.0324546358912552,
+              "test_values": 45056,
+              "train_values": 358400
+            },
+            {
+              "class": 11,
+              "crossfit_table_nll_bpw": 7.980347044504792,
+              "gain_bpw": -0.01100205596234538,
+              "gaussian_discrete_nll_bpw": 7.9693449885424466,
+              "global_class_variance_before_standardisation": 0.9634239352398207,
+              "test_values": 104448,
+              "train_values": 364544
+            },
+            {
+              "class": 12,
+              "crossfit_table_nll_bpw": 8.003550296923976,
+              "gain_bpw": -0.009847962572452573,
+              "gaussian_discrete_nll_bpw": 7.993702334351523,
+              "global_class_variance_before_standardisation": 1.0106569117903734,
+              "test_values": 133120,
+              "train_values": 823296
+            },
+            {
+              "class": 13,
+              "crossfit_table_nll_bpw": 8.045594365705654,
+              "gain_bpw": -0.006644758066586931,
+              "gaussian_discrete_nll_bpw": 8.038949607639067,
+              "global_class_variance_before_standardisation": 1.0359678120463254,
+              "test_values": 227328,
+              "train_values": 1439744
+            },
+            {
+              "class": 14,
+              "crossfit_table_nll_bpw": 8.118348165204406,
+              "gain_bpw": -0.010334177229582409,
+              "gaussian_discrete_nll_bpw": 8.108013987974823,
+              "global_class_variance_before_standardisation": 1.0456272947010798,
+              "test_values": 430080,
+              "train_values": 1697792
+            },
+            {
+              "class": 15,
+              "crossfit_table_nll_bpw": 8.040791874027455,
+              "gain_bpw": -0.00012972223830054475,
+              "gaussian_discrete_nll_bpw": 8.040662151789155,
+              "global_class_variance_before_standardisation": 1.071034586913764,
+              "test_values": 385024,
+              "train_values": 2637824
+            },
+            {
+              "class": 16,
+              "crossfit_table_nll_bpw": 8.06793847891052,
+              "gain_bpw": -0.011613689106747316,
+              "gaussian_discrete_nll_bpw": 8.056324789803773,
+              "global_class_variance_before_standardisation": 0.8515383314485824,
+              "test_values": 270336,
+              "train_values": 2670592
+            },
+            {
+              "class": 17,
+              "crossfit_table_nll_bpw": 8.066290447945015,
+              "gain_bpw": -0.012674531275969514,
+              "gaussian_discrete_nll_bpw": 8.053615916669045,
+              "global_class_variance_before_standardisation": 0.9808063209920496,
+              "test_values": 724992,
+              "train_values": 1650688
+            },
+            {
+              "class": 18,
+              "crossfit_table_nll_bpw": 8.136382382857681,
+              "gain_bpw": -0.009465692457938601,
+              "gaussian_discrete_nll_bpw": 8.126916690399742,
+              "global_class_variance_before_standardisation": 1.0001701372140788,
+              "test_values": 206848,
+              "train_values": 1228800
+            },
+            {
+              "class": 19,
+              "crossfit_table_nll_bpw": 7.948941415243626,
+              "gain_bpw": -0.008587803430760488,
+              "gaussian_discrete_nll_bpw": 7.940353611812865,
+              "global_class_variance_before_standardisation": 1.005725881678234,
+              "test_values": 120832,
+              "train_values": 919552
+            },
+            {
+              "class": 20,
+              "crossfit_table_nll_bpw": 8.030012604647084,
+              "gain_bpw": -0.013167380188209066,
+              "gaussian_discrete_nll_bpw": 8.016845224458875,
+              "global_class_variance_before_standardisation": 0.9671740539172554,
+              "test_values": 106496,
+              "train_values": 630784
+            },
+            {
+              "class": 21,
+              "crossfit_table_nll_bpw": 8.131711896445745,
+              "gain_bpw": -0.017250296789130815,
+              "gaussian_discrete_nll_bpw": 8.114461599656615,
+              "global_class_variance_before_standardisation": 0.9314237443965424,
+              "test_values": 71680,
+              "train_values": 425984
+            },
+            {
+              "class": 22,
+              "crossfit_table_nll_bpw": 8.007919981158917,
+              "gain_bpw": -0.01637668023475669,
+              "gaussian_discrete_nll_bpw": 7.99154330092416,
+              "global_class_variance_before_standardisation": 0.8956738702451343,
+              "test_values": 67584,
+              "train_values": 284672
+            },
+            {
+              "class": 23,
+              "crossfit_table_nll_bpw": 8.070959833319634,
+              "gain_bpw": -0.03457526377875553,
+              "gaussian_discrete_nll_bpw": 8.036384569540878,
+              "global_class_variance_before_standardisation": 0.9405365020503248,
+              "test_values": 4096,
+              "train_values": 53248
+            }
+          ],
+          "gross_shape_gain_bpw": -0.010018753853856319,
+          "heldout_expert": 3,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 7.99153026224584,
+              "gain_bpw": -0.005146138811974232,
+              "gaussian_discrete_nll_bpw": 7.986384123433866,
+              "global_class_variance_before_standardisation": 0.7655965429373698,
+              "test_values": 22528,
+              "train_values": 190464
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 7.996187873277535,
+              "gain_bpw": -0.0038823138361250287,
+              "gaussian_discrete_nll_bpw": 7.99230555944141,
+              "global_class_variance_before_standardisation": 0.9716872266779268,
+              "test_values": 145408,
+              "train_values": 612352
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 7.986165127042845,
+              "gain_bpw": -0.0022150319128559914,
+              "gaussian_discrete_nll_bpw": 7.983950095129989,
+              "global_class_variance_before_standardisation": 1.092253659295914,
+              "test_values": 258048,
+              "train_values": 1441792
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.099018067340715,
+              "gain_bpw": -0.004654053147046255,
+              "gaussian_discrete_nll_bpw": 8.094364014193669,
+              "global_class_variance_before_standardisation": 1.0134710217667537,
+              "test_values": 339968,
+              "train_values": 1689600
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 7.963734099428693,
+              "gain_bpw": -0.010752504990621858,
+              "gaussian_discrete_nll_bpw": 7.9529815944380715,
+              "global_class_variance_before_standardisation": 1.0573014197571482,
+              "test_values": 407552,
+              "train_values": 1437696
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 8.044395891561258,
+              "gain_bpw": -0.007342891509997784,
+              "gaussian_discrete_nll_bpw": 8.03705300005126,
+              "global_class_variance_before_standardisation": 1.01842978257309,
+              "test_values": 221184,
+              "train_values": 1153024
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 8.14579390279041,
+              "gain_bpw": -0.013626690726628254,
+              "gaussian_discrete_nll_bpw": 8.132167212063782,
+              "global_class_variance_before_standardisation": 1.0041262178998773,
+              "test_values": 110592,
+              "train_values": 948224
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 7.975505195250367,
+              "gain_bpw": -0.011552294190039447,
+              "gaussian_discrete_nll_bpw": 7.963952901060328,
+              "global_class_variance_before_standardisation": 1.1202194630951816,
+              "test_values": 67584,
+              "train_values": 391168
+            },
+            {
+              "class": 8,
+              "crossfit_table_nll_bpw": 8.00300222811057,
+              "gain_bpw": -0.009549620583976903,
+              "gaussian_discrete_nll_bpw": 7.993452607526594,
+              "global_class_variance_before_standardisation": 0.7511141269106958,
+              "test_values": 81920,
+              "train_values": 303104
+            },
+            {
+              "class": 9,
+              "crossfit_table_nll_bpw": 7.986359110740845,
+              "gain_bpw": -0.009057186409068052,
+              "gaussian_discrete_nll_bpw": 7.977301924331777,
+              "global_class_variance_before_standardisation": 0.9727166685502288,
+              "test_values": 88064,
+              "train_values": 317440
+            },
+            {
+              "class": 10,
+              "crossfit_table_nll_bpw": 8.032569848594699,
+              "gain_bpw": -0.012229963504248431,
+              "gaussian_discrete_nll_bpw": 8.02033988509045,
+              "global_class_variance_before_standardisation": 1.0324546358912552,
+              "test_values": 77824,
+              "train_values": 325632
+            },
+            {
+              "class": 11,
+              "crossfit_table_nll_bpw": 8.145333360809712,
+              "gain_bpw": -0.010422105597424292,
+              "gaussian_discrete_nll_bpw": 8.134911255212288,
+              "global_class_variance_before_standardisation": 0.9634239352398207,
+              "test_values": 69632,
+              "train_values": 399360
+            },
+            {
+              "class": 12,
+              "crossfit_table_nll_bpw": 7.998472898506604,
+              "gain_bpw": -0.011631505535357078,
+              "gaussian_discrete_nll_bpw": 7.986841392971247,
+              "global_class_variance_before_standardisation": 1.0106569117903734,
+              "test_values": 172032,
+              "train_values": 784384
+            },
+            {
+              "class": 13,
+              "crossfit_table_nll_bpw": 8.04099020760979,
+              "gain_bpw": -0.009047889563165157,
+              "gaussian_discrete_nll_bpw": 8.031942318046625,
+              "global_class_variance_before_standardisation": 1.0359678120463254,
+              "test_values": 296960,
+              "train_values": 1370112
+            },
+            {
+              "class": 14,
+              "crossfit_table_nll_bpw": 8.091279133563146,
+              "gain_bpw": -0.01055354124699548,
+              "gaussian_discrete_nll_bpw": 8.080725592316151,
+              "global_class_variance_before_standardisation": 1.0456272947010798,
+              "test_values": 450560,
+              "train_values": 1677312
+            },
+            {
+              "class": 15,
+              "crossfit_table_nll_bpw": 8.069862116886146,
+              "gain_bpw": -0.00045386300152117087,
+              "gaussian_discrete_nll_bpw": 8.069408253884625,
+              "global_class_variance_before_standardisation": 1.071034586913764,
+              "test_values": 335872,
+              "train_values": 2686976
+            },
+            {
+              "class": 17,
+              "crossfit_table_nll_bpw": 8.004922795900939,
+              "gain_bpw": -0.0031371048788813027,
+              "gaussian_discrete_nll_bpw": 8.001785691022057,
+              "global_class_variance_before_standardisation": 0.9808063209920496,
+              "test_values": 133120,
+              "train_values": 2242560
+            },
+            {
+              "class": 18,
+              "crossfit_table_nll_bpw": 8.045193991277747,
+              "gain_bpw": -0.0003117342165808168,
+              "gaussian_discrete_nll_bpw": 8.044882257061166,
+              "global_class_variance_before_standardisation": 1.0001701372140788,
+              "test_values": 503808,
+              "train_values": 931840
+            },
+            {
+              "class": 19,
+              "crossfit_table_nll_bpw": 8.074646703499228,
+              "gain_bpw": -0.007276097875976717,
+              "gaussian_discrete_nll_bpw": 8.067370605623251,
+              "global_class_variance_before_standardisation": 1.005725881678234,
+              "test_values": 468992,
+              "train_values": 571392
+            },
+            {
+              "class": 20,
+              "crossfit_table_nll_bpw": 8.024121815896955,
+              "gain_bpw": -0.01290427371631786,
+              "gaussian_discrete_nll_bpw": 8.011217542180637,
+              "global_class_variance_before_standardisation": 0.9671740539172554,
+              "test_values": 260096,
+              "train_values": 477184
+            },
+            {
+              "class": 21,
+              "crossfit_table_nll_bpw": 8.121186654349694,
+              "gain_bpw": -0.017645309736028736,
+              "gaussian_discrete_nll_bpw": 8.103541344613665,
+              "global_class_variance_before_standardisation": 0.9314237443965424,
+              "test_values": 139264,
+              "train_values": 358400
+            },
+            {
+              "class": 22,
+              "crossfit_table_nll_bpw": 7.976983139674097,
+              "gain_bpw": -0.011950994455787622,
+              "gaussian_discrete_nll_bpw": 7.965032145218309,
+              "global_class_variance_before_standardisation": 0.8956738702451343,
+              "test_values": 63488,
+              "train_values": 288768
+            },
+            {
+              "class": 23,
+              "crossfit_table_nll_bpw": 8.022550853977354,
+              "gain_bpw": 0.0014456106478988318,
+              "gaussian_discrete_nll_bpw": 8.023996464625252,
+              "global_class_variance_before_standardisation": 0.9405365020503248,
+              "test_values": 4096,
+              "train_values": 53248
+            }
+          ],
+          "gross_shape_gain_bpw": -0.007318854954839378,
+          "heldout_expert": 4,
+          "test_values": 4718592
+        },
+        {
+          "classes": [
+            {
+              "class": 0,
+              "crossfit_table_nll_bpw": 8.006776448544535,
+              "gain_bpw": -0.012472178287496583,
+              "gaussian_discrete_nll_bpw": 7.994304270257039,
+              "global_class_variance_before_standardisation": 0.7655965429373698,
+              "test_values": 73728,
+              "train_values": 139264
+            },
+            {
+              "class": 1,
+              "crossfit_table_nll_bpw": 7.980276481923274,
+              "gain_bpw": -0.003259409701513505,
+              "gaussian_discrete_nll_bpw": 7.97701707222176,
+              "global_class_variance_before_standardisation": 0.9716872266779268,
+              "test_values": 147456,
+              "train_values": 610304
+            },
+            {
+              "class": 2,
+              "crossfit_table_nll_bpw": 7.980457895098511,
+              "gain_bpw": -0.0044306342004682975,
+              "gaussian_discrete_nll_bpw": 7.976027260898043,
+              "global_class_variance_before_standardisation": 1.092253659295914,
+              "test_values": 249856,
+              "train_values": 1449984
+            },
+            {
+              "class": 3,
+              "crossfit_table_nll_bpw": 8.085936649346323,
+              "gain_bpw": 0.00031415181270411097,
+              "gaussian_discrete_nll_bpw": 8.086250801159027,
+              "global_class_variance_before_standardisation": 1.0134710217667537,
+              "test_values": 256000,
+              "train_values": 1773568
+            },
+            {
+              "class": 4,
+              "crossfit_table_nll_bpw": 8.119463441562008,
+              "gain_bpw": -0.005489087087948263,
+              "gaussian_discrete_nll_bpw": 8.11397435447406,
+              "global_class_variance_before_standardisation": 1.0573014197571482,
+              "test_values": 335872,
+              "train_values": 1509376
+            },
+            {
+              "class": 5,
+              "crossfit_table_nll_bpw": 7.923693813952117,
+              "gain_bpw": -0.008195211574292038,
+              "gaussian_discrete_nll_bpw": 7.915498602377825,
+              "global_class_variance_before_standardisation": 1.01842978257309,
+              "test_values": 272384,
+              "train_values": 1101824
+            },
+            {
+              "class": 6,
+              "crossfit_table_nll_bpw": 7.993952881996125,
+              "gain_bpw": -0.00579769941986541,
+              "gaussian_discrete_nll_bpw": 7.98815518257626,
+              "global_class_variance_before_standardisation": 1.0041262178998773,
+              "test_values": 217088,
+              "train_values": 841728
+            },
+            {
+              "class": 7,
+              "crossfit_table_nll_bpw": 8.010795930865815,
+              "gain_bpw": -0.0031309289647403205,
+              "gaussian_discrete_nll_bpw": 8.007665001901074,
+              "global_class_variance_before_standardisation": 1.1202194630951816,
+              "test_values": 20480,
+              "train_values": 438272
+            },
+            {
+              "class": 13,
+              "crossfit_table_nll_bpw": 7.889628761001022,
+              "gain_bpw": 0.005067684088325919,
+              "gaussian_discrete_nll_bpw": 7.894696445089348,
+              "global_class_variance_before_standardisation": 1.0359678120463254,
+              "test_values": 4096,
+              "train_values": 1662976
+            },
+            {
+              "class": 14,
+              "crossfit_table_nll_bpw": 7.995947190161297,
+              "gain_bpw": -0.0025794089512736207,
+              "gaussian_discrete_nll_bpw": 7.993367781210023,
+              "global_class_variance_before_standardisation": 1.0456272947010798,
+              "test_values": 114688,
+              "train_values": 2013184
+            },
+            {
+              "class": 15,
+              "crossfit_table_nll_bpw": 8.054763371118815,
+              "gain_bpw": -0.0026557485367373346,
+              "gaussian_discrete_nll_bpw": 8.052107622582078,
+              "global_class_variance_before_standardisation": 1.071034586913764,
+              "test_values": 1454080,
+              "train_values": 1568768
+            },
+            {
+              "class": 16,
+              "crossfit_table_nll_bpw": 7.950200732055125,
+              "gain_bpw": -0.008425927079675155,
+              "gaussian_discrete_nll_bpw": 7.9417748049754495,
+              "global_class_variance_before_standardisation": 0.8515383314485824,
+              "test_values": 149504,
+              "train_values": 2791424
+            },
+            {
+              "class": 17,
+              "crossfit_table_nll_bpw": 7.974963794750875,
+              "gain_bpw": -0.00570952502959976,
+              "gaussian_discrete_nll_bpw": 7.969254269721275,
+              "global_class_variance_before_standardisation": 0.9808063209920496,
+              "test_values": 206848,
+              "train_values": 2168832
+            },
+            {
+              "class": 18,
+              "crossfit_table_nll_bpw": 8.029524771070085,
+              "gain_bpw": 0.0011932437935033846,
+              "gaussian_discrete_nll_bpw": 8.030718014863588,
+              "global_class_variance_before_standardisation": 1.0001701372140788,
+              "test_values": 294912,
+              "train_values": 1140736
+            },
+            {
+              "class": 19,
+              "crossfit_table_nll_bpw": 8.092475416247886,
+              "gain_bpw": -0.0037468962711635356,
+              "gaussian_discrete_nll_bpw": 8.088728519976723,
+              "global_class_variance_before_standardisation": 1.005725881678234,
+              "test_values": 229376,
+              "train_values": 811008
+            },
+            {
+              "class": 20,
+              "crossfit_table_nll_bpw": 8.076702705066902,
+              "gain_bpw": -0.007756852746256371,
+              "gaussian_discrete_nll_bpw": 8.068945852320645,
+              "global_class_variance_before_standardisation": 0.9671740539172554,
+              "test_values": 258048,
+              "train_values": 479232
+            },
+            {
+              "class": 21,
+              "crossfit_table_nll_bpw": 7.983198714778983,
+              "gain_bpw": -0.010650586064969048,
+              "gaussian_discrete_nll_bpw": 7.972548128714014,
+              "global_class_variance_before_standardisation": 0.9314237443965424,
+              "test_values": 192512,
+              "train_values": 305152
+            },
+            {
+              "class": 22,
+              "crossfit_table_nll_bpw": 8.094207800120385,
+              "gain_bpw": -0.01617128480140373,
+              "gaussian_discrete_nll_bpw": 8.078036515318981,
+              "global_class_variance_before_standardisation": 0.8956738702451343,
+              "test_values": 192512,
+              "train_values": 159744
+            },
+            {
+              "class": 23,
+              "crossfit_table_nll_bpw": 8.124231201894041,
+              "gain_bpw": -0.07760623606302453,
+              "gaussian_discrete_nll_bpw": 8.046624965831016,
+              "global_class_variance_before_standardisation": 0.9405365020503248,
+              "test_values": 49152,
+              "train_values": 8192
+            }
+          ],
+          "gross_shape_gain_bpw": -0.005486816454320861,
+          "heldout_expert": 5,
+          "test_values": 4718592
+        }
+      ],
+      "fraction_of_required_gain": -0.13176224798643577,
+      "gross_crossfit_shape_gain_bpw": -0.00732009584728584,
+      "mode": "role_label",
+      "net_shape_gain_bpw": -0.02120898473617473,
+      "passes_early_screen": false,
+      "probability_table_bits": 393216,
+      "probability_table_cost_bpw": 0.013888888888888888,
+      "pseudocount": 0.5,
+      "required_gain_bpw": 0.16096404744368115
+    }
+  ],
+  "plan": {
+    "file_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "lock_sha256": "99b17b18f74187b40aa7715260892491dc5f5f56baa0ef520509aa87d655df7d",
+    "path": "/workspace/INT2__compression/strata_expert_affine_milestone_v1/plan.lock.json"
+  },
+  "required_gain_bpw": 0.16096404744368115,
+  "runtime": {
+    "numpy": "2.5.2",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]"
+  },
+  "schema": "strata_source_negentropy_oracle_v1"
+}

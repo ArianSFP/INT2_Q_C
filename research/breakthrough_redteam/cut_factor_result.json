@@ -1,0 +1,1099 @@
+{
+  "schema": "qwen-nanoquant-cut-factor-opportunity-v1",
+  "claim_boundary": "Greedy sign outer products with one uncharged FP32 coefficient per factor; physical rate is NanoQuant's factor+FP16-scale formula. This is a favorable source-opportunity screen, not a serialized codec or mathematical converse.",
+  "configuration": {
+    "identities": [
+      "layer18_expert20",
+      "layer5_expert18"
+    ],
+    "rows": 768,
+    "cols": 2048,
+    "max_rank": 1380,
+    "starts": 2,
+    "alternating_steps": 3,
+    "checkpoints": [
+      64,
+      128,
+      256,
+      512,
+      768,
+      1024,
+      1185,
+      1380
+    ],
+    "required_total_source_advantage_s_bpw": 0.160964047443681,
+    "required_increment_over_checkpoint_s_bpw": 0.15287192093
+  },
+  "records": [
+    {
+      "tensor": "model.layers.18.mlp.experts.20.down_proj.weight.bf16.bin",
+      "identity": "layer18_expert20",
+      "role": "down_proj",
+      "source_sha256": "b0910cf461fbae04f904b4329c7149e7df68ed65caf6d8abb1b690966edad064",
+      "source_mean": 3.365945754962851e-05,
+      "source_rms": 0.023722974755164706,
+      "gaussian_seed": 1369948160,
+      "search_seed": 3229592688,
+      "qwen": {
+        "initial_sse": 885.1756646151206,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.8912208094571247,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 6.121870521643829e-05,
+            "elapsed_seconds": 0.9820493819424883
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8061391966386746,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 0.000109100902454088,
+            "elapsed_seconds": 1.0267355770338327
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6636908438539083,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.00018926792742397045,
+            "elapsed_seconds": 1.1164491570089012
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.4516723749696573,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.00030858758219796505,
+            "elapsed_seconds": 1.2941861279541627
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.30693658710920274,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.0003900419185025749,
+            "elapsed_seconds": 1.4670702769653872
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.20808417224672757,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.00044567403345159963,
+            "elapsed_seconds": 1.6392526749987155
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.16286975447976676,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.00047111978159050774,
+            "elapsed_seconds": 1.7629553549923003
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.12095355568270273,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.0004947093606282559,
+            "elapsed_seconds": 1.893929342040792
+          }
+        ],
+        "elapsed_seconds": 1.8939313020091504
+      },
+      "gaussian": {
+        "initial_sse": 885.1756648099533,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.9155841223129736,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 4.7507534923038926e-05,
+            "elapsed_seconds": 0.043421001988463104
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8368449442130292,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 9.18203398991186e-05,
+            "elapsed_seconds": 0.08649770799092948
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6960022807205293,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.0001710837097549196,
+            "elapsed_seconds": 0.17241700703743845
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.47478524084026136,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002955801278822663,
+            "elapsed_seconds": 0.3441882630577311
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.3206876497921618,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.000382303095471354,
+            "elapsed_seconds": 0.5230133680161089
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.21625537801673186,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.0004410754415549503,
+            "elapsed_seconds": 0.6943058110773563
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.1688363512194612,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.0004677619000189439,
+            "elapsed_seconds": 0.8024813809897751
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.12526373339288724,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.0004922836776641529,
+            "elapsed_seconds": 0.9335213140584528
+          }
+        ],
+        "elapsed_seconds": 0.9335280549712479
+      }
+    },
+    {
+      "tensor": "model.layers.18.mlp.experts.20.gate_proj.weight.bf16.bin",
+      "identity": "layer18_expert20",
+      "role": "gate_proj",
+      "source_sha256": "74dbcaca0211e35a73cb18299fe3ff29bae0aeab58beb546f3c85d069b9fbaf6",
+      "source_mean": -0.0001503573910383397,
+      "source_rms": 0.02611156684310256,
+      "gaussian_seed": 1369948161,
+      "search_seed": 3229592689,
+      "qwen": {
+        "initial_sse": 1072.4005741883236,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.8454847663995811,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 0.00010535063593504105,
+            "elapsed_seconds": 0.04441536101512611
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.7569172960644641,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 0.00016573716952711143,
+            "elapsed_seconds": 0.0877530180150643
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6168649121251747,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.00026122682961466883,
+            "elapsed_seconds": 0.17402134602889419
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.4164785530738431,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0003978530294946214,
+            "elapsed_seconds": 0.3477023000596091
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.28218136915795233,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.0004894187140047092,
+            "elapsed_seconds": 0.5197566320421174
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.19086896385399804,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.0005516767847832789,
+            "elapsed_seconds": 0.6935503630666062
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.14921913136549686,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.0005800742231119826,
+            "elapsed_seconds": 0.8025746820494533
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.11069791923820484,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.0006063385229994001,
+            "elapsed_seconds": 0.9342167340219021
+          }
+        ],
+        "elapsed_seconds": 0.9342180340318009
+      },
+      "gaussian": {
+        "initial_sse": 1072.400574275387,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.9156376788798616,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 5.7519396836203874e-05,
+            "elapsed_seconds": 0.04369521397165954
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8365706372539106,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 0.0001114284094780693,
+            "elapsed_seconds": 0.08706624794285744
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.695807713469872,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.0002074025281643457,
+            "elapsed_seconds": 0.17337769991718233
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.4744686897366202,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.00035831455842663646,
+            "elapsed_seconds": 0.3455145600019023
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.32047851941177097,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.0004633072034258522,
+            "elapsed_seconds": 0.5177110129734501
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.2163846874396425,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.000534279825646298,
+            "elapsed_seconds": 0.689814215991646
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.16897137363494844,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.0005666068833699169,
+            "elapsed_seconds": 0.7982114509213716
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.12531267669549065,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.0005963739906596475,
+            "elapsed_seconds": 0.9290676749078557
+          }
+        ],
+        "elapsed_seconds": 0.9290691210189834
+      }
+    },
+    {
+      "tensor": "model.layers.18.mlp.experts.20.up_proj.weight.bf16.bin",
+      "identity": "layer18_expert20",
+      "role": "up_proj",
+      "source_sha256": "8f44135aa4099014c740c99c87c037dad49b623a1e15bdceea1abe7917775b07",
+      "source_mean": 2.412952541386293e-05,
+      "source_rms": 0.022695454275149456,
+      "gaussian_seed": 1369948162,
+      "search_seed": 3229592690,
+      "qwen": {
+        "initial_sse": 810.1565218245569,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.8989298155485805,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 5.205959689808356e-05,
+            "elapsed_seconds": 0.044508257997222245
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8112415778126927,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 9.722637810605742e-05,
+            "elapsed_seconds": 0.09105420298874378
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6652486983838833,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.0001724249283711991,
+            "elapsed_seconds": 0.18366813799366355
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.4495877882357325,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002835083365443488,
+            "elapsed_seconds": 0.35484988905955106
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.3044341476361771,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.00035827460036657536,
+            "elapsed_seconds": 0.525678443023935
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.20598865510827158,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.0004089822643792197,
+            "elapsed_seconds": 0.6969201900064945
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.161137617481461,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.0004320843000858395,
+            "elapsed_seconds": 0.8053239660803229
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.11961822977248028,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.0004534702564357241,
+            "elapsed_seconds": 0.9376711710356176
+          }
+        ],
+        "elapsed_seconds": 0.9376830239780247
+      },
+      "gaussian": {
+        "initial_sse": 810.1565218729963,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.9155280178664397,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 4.351013475711011e-05,
+            "elapsed_seconds": 0.04356960207223892
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8361947749568137,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 8.437339175619831e-05,
+            "elapsed_seconds": 0.08689258701633662
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6947910552370011,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.00015720813400792695,
+            "elapsed_seconds": 0.1731288490118459
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.47417583817433884,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002708434278211386,
+            "elapsed_seconds": 0.34680834400933236
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.3204340262734981,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.00035003332411838033,
+            "elapsed_seconds": 0.5191225520102307
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.2162078399019838,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.000403718528675187,
+            "elapsed_seconds": 0.6908071690704674
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.16897789058451176,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.00042804590353036766,
+            "elapsed_seconds": 0.7991381600731984
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.1253969474842468,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.00045049373476875273,
+            "elapsed_seconds": 0.9297557120444253
+          }
+        ],
+        "elapsed_seconds": 0.9297567820176482
+      }
+    },
+    {
+      "tensor": "model.layers.5.mlp.experts.18.down_proj.weight.bf16.bin",
+      "identity": "layer5_expert18",
+      "role": "down_proj",
+      "source_sha256": "8a1d32393816267ff6050d613a541250d73ff44a6ef6b2c43671d5904e1c7fe0",
+      "source_mean": -1.499462816212845e-05,
+      "source_rms": 0.022796948050507356,
+      "gaussian_seed": 1369948163,
+      "search_seed": 3229592691,
+      "qwen": {
+        "initial_sse": 817.4187426624796,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.8867346720840988,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 5.886409035754075e-05,
+            "elapsed_seconds": 0.04414475301746279
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.7993488502893811,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 0.0001042785738579034,
+            "elapsed_seconds": 0.08715987298637629
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6560138107313056,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.00017876991014055058,
+            "elapsed_seconds": 0.17321508401073515
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.44455225673053234,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002886666630585939,
+            "elapsed_seconds": 0.3451671969378367
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.3007457669120232,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.00036340301478243335,
+            "elapsed_seconds": 0.516646494041197
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.20330198893979445,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.00041404462669963817,
+            "elapsed_seconds": 0.688808919978328
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.15890368910373548,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.00043711846097399006,
+            "elapsed_seconds": 0.7968404309358448
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.11795100420469712,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.000458401605856522,
+            "elapsed_seconds": 0.9273059580009431
+          }
+        ],
+        "elapsed_seconds": 0.9273074039956555
+      },
+      "gaussian": {
+        "initial_sse": 817.4187425676507,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.9155445887033943,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 4.389154519045671e-05,
+            "elapsed_seconds": 0.051754218991845846
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8368309115062346,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 8.479910779949596e-05,
+            "elapsed_seconds": 0.09500343492254615
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6956583648761133,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.0001581666020181675,
+            "elapsed_seconds": 0.18060588999651372
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.47462836642805023,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002730360739723787,
+            "elapsed_seconds": 0.35213651799131185
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.32090331446669873,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.00035292711452062096,
+            "elapsed_seconds": 0.5230175940087065
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.21641710707439366,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.00040722868088257334,
+            "elapsed_seconds": 0.6945802309783176
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.16906282798128944,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.0004318387388758283,
+            "elapsed_seconds": 0.8048777119256556
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.125431550915895,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.00045451395123080753,
+            "elapsed_seconds": 0.9352485579438508
+          }
+        ],
+        "elapsed_seconds": 0.9352543759159744
+      }
+    },
+    {
+      "tensor": "model.layers.5.mlp.experts.18.gate_proj.weight.bf16.bin",
+      "identity": "layer5_expert18",
+      "role": "gate_proj",
+      "source_sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c",
+      "source_mean": -0.00012002191382842753,
+      "source_rms": 0.023132647800854864,
+      "gaussian_seed": 1369948164,
+      "search_seed": 3229592692,
+      "qwen": {
+        "initial_sse": 841.670030962294,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.8876034301091402,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 6.01455802678759e-05,
+            "elapsed_seconds": 0.044078320963308215
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8013990079368077,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 0.00010627524342303457,
+            "elapsed_seconds": 0.0871216079685837
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6582962961475276,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.00018285228638253797,
+            "elapsed_seconds": 0.17312176199629903
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.4465101182228671,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002961831751505533,
+            "elapsed_seconds": 0.3448532739421353
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.30258965417517075,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.0003731978083579558,
+            "elapsed_seconds": 0.5164926069555804
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.20453019380906665,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.0004256713277166447,
+            "elapsed_seconds": 0.6877898080274463
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.1599320930400753,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.0004495366375292273,
+            "elapsed_seconds": 0.7960410399828106
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.1185729576876907,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.0004716687133426054,
+            "elapsed_seconds": 0.9271993139991537
+          }
+        ],
+        "elapsed_seconds": 0.9272005129605532
+      },
+      "gaussian": {
+        "initial_sse": 841.6700310237616,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.9155863027236083,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 4.5171407652900644e-05,
+            "elapsed_seconds": 0.043512786040082574
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8368586863781039,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 8.730007675374123e-05,
+            "elapsed_seconds": 0.08677145408000797
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6958767353741803,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.0001627422501749114,
+            "elapsed_seconds": 0.17308022500947118
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.47494696408216136,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002809660537942978,
+            "elapsed_seconds": 0.3454111129976809
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.32073261070613684,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.00036348914785682394,
+            "elapsed_seconds": 0.5169829970691353
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.21641797233476912,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.00041930993342416444,
+            "elapsed_seconds": 0.6901599880075082
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.16905492495193117,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.00044465481876810274,
+            "elapsed_seconds": 0.8009197250939906
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.1252821418924276,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.0004680784849359124,
+            "elapsed_seconds": 0.9317980239866301
+          }
+        ],
+        "elapsed_seconds": 0.931799273006618
+      }
+    },
+    {
+      "tensor": "model.layers.5.mlp.experts.18.up_proj.weight.bf16.bin",
+      "identity": "layer5_expert18",
+      "role": "up_proj",
+      "source_sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b",
+      "source_mean": -1.1164437431654406e-05,
+      "source_rms": 0.02205970210928101,
+      "gaussian_seed": 1369948165,
+      "search_seed": 3229592693,
+      "qwen": {
+        "initial_sse": 765.403527355119,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.9020613355095478,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 4.7659935405315094e-05,
+            "elapsed_seconds": 0.04446018999442458
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.817927472187584,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 8.860204038851893e-05,
+            "elapsed_seconds": 0.08764390298165381
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6742272551079104,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.00015853094701443333,
+            "elapsed_seconds": 0.1738039730116725
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.4582851952808654,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.0002636149249159716,
+            "elapsed_seconds": 0.3466992250178009
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.3103628900355742,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.0003355984253010296,
+            "elapsed_seconds": 0.5199296709615737
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.2095734793826271,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.00038464562392030374,
+            "elapsed_seconds": 0.6913899499922991
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.1636981933022097,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.0004069699359651919,
+            "elapsed_seconds": 0.799593087984249
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.12141614833457959,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.00042754566677198337,
+            "elapsed_seconds": 0.9301111999666318
+          }
+        ],
+        "elapsed_seconds": 0.9301126200007275
+      },
+      "gaussian": {
+        "initial_sse": 765.4035273313311,
+        "curve": [
+          {
+            "rank": 64,
+            "relative_mse": 0.9154923658937958,
+            "physical_bits_nanoquant_formula": 225280,
+            "physical_bpw_nanoquant_formula": 0.14322916666666666,
+            "free_coefficient_bits_omitted": 2048,
+            "coefficient_sq_sum": 4.112398915129496e-05,
+            "elapsed_seconds": 0.04339634208008647
+          },
+          {
+            "rank": 128,
+            "relative_mse": 0.8366017339002888,
+            "physical_bits_nanoquant_formula": 405504,
+            "physical_bpw_nanoquant_formula": 0.2578125,
+            "free_coefficient_bits_omitted": 4096,
+            "coefficient_sq_sum": 7.95145670902376e-05,
+            "elapsed_seconds": 0.08657916402444243
+          },
+          {
+            "rank": 256,
+            "relative_mse": 0.6956540660841809,
+            "physical_bits_nanoquant_formula": 765952,
+            "physical_bpw_nanoquant_formula": 0.4869791666666667,
+            "free_coefficient_bits_omitted": 8192,
+            "coefficient_sq_sum": 0.0001481039892673962,
+            "elapsed_seconds": 0.1722373440861702
+          },
+          {
+            "rank": 512,
+            "relative_mse": 0.4747261865408233,
+            "physical_bits_nanoquant_formula": 1486848,
+            "physical_bpw_nanoquant_formula": 0.9453125,
+            "free_coefficient_bits_omitted": 16384,
+            "coefficient_sq_sum": 0.00025561422164453105,
+            "elapsed_seconds": 0.34397712408099324
+          },
+          {
+            "rank": 768,
+            "relative_mse": 0.3207238734544555,
+            "physical_bits_nanoquant_formula": 2207744,
+            "physical_bpw_nanoquant_formula": 1.4036458333333333,
+            "free_coefficient_bits_omitted": 24576,
+            "coefficient_sq_sum": 0.0003305564373333777,
+            "elapsed_seconds": 0.5167274550767615
+          },
+          {
+            "rank": 1024,
+            "relative_mse": 0.21640720440352296,
+            "physical_bits_nanoquant_formula": 2928640,
+            "physical_bpw_nanoquant_formula": 1.8619791666666667,
+            "free_coefficient_bits_omitted": 32768,
+            "coefficient_sq_sum": 0.0003813201062850237,
+            "elapsed_seconds": 0.688637905055657
+          },
+          {
+            "rank": 1185,
+            "relative_mse": 0.16886086716193094,
+            "physical_bits_nanoquant_formula": 3382016,
+            "physical_bpw_nanoquant_formula": 2.1502278645833335,
+            "free_coefficient_bits_omitted": 37920,
+            "coefficient_sq_sum": 0.00040445760167620126,
+            "elapsed_seconds": 0.7967226509936154
+          },
+          {
+            "rank": 1380,
+            "relative_mse": 0.12527578445334048,
+            "physical_bits_nanoquant_formula": 3931136,
+            "physical_bpw_nanoquant_formula": 2.4993489583333335,
+            "free_coefficient_bits_omitted": 44160,
+            "coefficient_sq_sum": 0.00042566743083836625,
+            "elapsed_seconds": 0.9279277180321515
+          }
+        ],
+        "elapsed_seconds": 0.927941014058888
+      }
+    }
+  ],
+  "aggregate_curve": [
+    {
+      "rank": 64,
+      "physical_bpw_nanoquant_formula": 0.14322916666666666,
+      "qwen_pooled_relative_mse": 0.8832827535244625,
+      "gaussian_pooled_relative_mse": 0.9155670332416872,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.025895087141262537,
+      "qwen_absolute_F_vs_gaussian_limit": 1.0772891890357912,
+      "gaussian_operational_F": 1.1166644687821656
+    },
+    {
+      "rank": 128,
+      "physical_bpw_nanoquant_formula": 0.2578125,
+      "qwen_pooled_relative_mse": 0.7966694009479978,
+      "gaussian_pooled_relative_mse": 0.8366510073069778,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.03532239608404095,
+      "qwen_absolute_F_vs_gaussian_limit": 1.138929201883998,
+      "gaussian_operational_F": 1.196087439625133
+    },
+    {
+      "rank": 256,
+      "physical_bpw_nanoquant_formula": 0.4869791666666667,
+      "qwen_pooled_relative_mse": 0.6537326423102895,
+      "gaussian_pooled_relative_mse": 0.6956472783934173,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.04482762509478614,
+      "qwen_absolute_F_vs_gaussian_limit": 1.2840763393437218,
+      "gaussian_operational_F": 1.366406008971877
+    },
+    {
+      "rank": 512,
+      "physical_bpw_nanoquant_formula": 0.9453125,
+      "qwen_pooled_relative_mse": 0.4430952669435397,
+      "gaussian_pooled_relative_mse": 0.47461758709508683,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.04957432234613713,
+      "qwen_absolute_F_vs_gaussian_limit": 1.6429787506731457,
+      "gaussian_operational_F": 1.7598621977434732
+    },
+    {
+      "rank": 768,
+      "physical_bpw_nanoquant_formula": 1.4036458333333333,
+      "qwen_pooled_relative_mse": 0.30025899735020684,
+      "gaussian_pooled_relative_mse": 0.320651463000236,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.047399256123843304,
+      "qwen_absolute_F_vs_gaussian_limit": 2.101720828859628,
+      "gaussian_operational_F": 2.244461829751208
+    },
+    {
+      "rank": 1024,
+      "physical_bpw_nanoquant_formula": 1.8619791666666667,
+      "qwen_pooled_relative_mse": 0.20309215082886345,
+      "gaussian_pooled_relative_mse": 0.216348867370439,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.04561254250788564,
+      "qwen_absolute_F_vs_gaussian_limit": 2.68359083443128,
+      "gaussian_operational_F": 2.858760592890354
+    },
+    {
+      "rank": 1185,
+      "physical_bpw_nanoquant_formula": 2.1502278645833335,
+      "qwen_pooled_relative_mse": 0.15880162845055723,
+      "gaussian_pooled_relative_mse": 0.1689610232139909,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.044732384914698234,
+      "qwen_absolute_F_vs_gaussian_limit": 3.1291120940920707,
+      "gaussian_operational_F": 3.329298234077491
+    },
+    {
+      "rank": 1380,
+      "physical_bpw_nanoquant_formula": 2.4993489583333335,
+      "qwen_pooled_relative_mse": 0.11783660235166038,
+      "gaussian_pooled_relative_mse": 0.125325808145444,
+      "qwen_vs_gaussian_advantage_s_bpw": 0.04444789955232238,
+      "qwen_absolute_F_vs_gaussian_limit": 3.7673695560414173,
+      "gaussian_operational_F": 4.006807942275844
+    }
+  ]
+}

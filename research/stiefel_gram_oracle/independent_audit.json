@@ -1,0 +1,24 @@
+{
+  "all_scores_independently_recomputed": true,
+  "decision": {
+    "best_optimistic_F_at_2p5": 0.9504908806946374,
+    "best_optimistic_free_table_candidate": "structured_gram.adaptive_rank",
+    "best_optimistic_rate_equivalent_s_bpw": 0.036627654806207784,
+    "gpu_followup_warranted": false,
+    "required_F": 0.8,
+    "required_rate_equivalent_s_bpw": 0.16096404744368115,
+    "rule": "hard-kill unless a source-locked optimistic oracle reaches s >= -0.5 log2(0.8)",
+    "shortfall_s_bpw": 0.12433639263747337,
+    "status": "hard_kill"
+  },
+  "experiment_script_sha256": "743870d15858aaa8afa9ff887b98d53352d6ae1c18c0f1042f1b432a9377733b",
+  "matrix_spectra_recomputed_from_serialized_values": 18,
+  "result_path": "/workspace/INT2__compression/stiefel_gram_oracle_v1/result.json",
+  "result_sha256": "fbdaea31f84d2826f4d46d474ed82f36d7bd6f591091d338db4d481270c30ccb",
+  "schema": "qwen-stiefel-gram-oracle-independent-audit-v1",
+  "source_hashes_all_match": true,
+  "source_hashes_recomputed": 18,
+  "status": "pass",
+  "verifier_path": "/workspace/INT2__compression/stiefel_gram_oracle_v1/verify_stiefel_gram_result.py",
+  "verifier_sha256": "ef93053b5683a316532364a6488bca0346aafc7cc37d361b7e02dfa4deb233a3"
+}

@@ -1,0 +1,44 @@
+{
+  "protocol": "bisco_raw_mse_aux_d16_preflight_v1",
+  "status": "ready_to_launch_gpu_not_run",
+  "date_utc": "2026-09-01",
+  "gpu_accessed_by_preflight": false,
+  "pinned_panel_opened": false,
+  "checks": {
+    "local_cpu_unittest": {
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0
+    },
+    "runpod_cpu_unittest": {
+      "python": "/workspace/int2-cupy-venv/bin/python",
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0,
+      "cupy_imported": false,
+      "cuda_queried": false
+    },
+    "runpod_auxiliary_filename_preflight": {
+      "directory": "/workspace/INT2__compression/qwen_weight_cache/rd_structure_diag_cross_expert",
+      "bf16_files": 32,
+      "bytes_per_file": 3145728,
+      "contents_opened": false,
+      "matches_frozen_identity_set": true
+    },
+    "python_compile": true,
+    "git_diff_check": true,
+    "physical_rate_gate": true,
+    "cold_read_amplification_strictly_below_2x": true
+  },
+  "bindings": {
+    "parent_protocol_sha256": "28c2bd6656f31ce7315601d0048d0b43759a7f2859142f745465e8fa0fe83164",
+    "assessment_sha256": "859ba01b285ad497fbcca63c9ef47c6e4c079c7e549ba33ca22ac24fab54f581",
+    "ledger_script_sha256": "0c8be46df79b42e15d1435a4d4edd60a511201786f21dcd5920e97b5e0d70cc0",
+    "launch_protocol_sha256": "0d79a1b8e3cacbc345bdea464986279b0935c4cf2e20290dea75507f7fbfcd4c",
+    "oracle_script_sha256": "5fd03329e8f11465b0d22b1bf21b1a14dd621c34648fba3050b3700f4ad6ba62",
+    "verifier_script_sha256": "af507607e38c784f28dd53ed55c29e2e649d487685ddc16aa5f246abf6d39054",
+    "tests_sha256": "ea2e719b1ccc6081416e109baee560594b219ef89b61e1bff99bed54c31707e4",
+    "readme_sha256": "34b5aacf7e3b3c41305565aa7cb6359fcf7211a63a75300812229b87fd0863ff"
+  },
+  "launch_blocker": "shared GPU remains reserved by the sealed encoder/auditor; wait for explicit release"
+}
