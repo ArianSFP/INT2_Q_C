@@ -1,0 +1,37 @@
+{
+  "format": "uwfa-sc-v2-integrated-bridge-reference-independent-audit-manifest-v1",
+  "sealed_utc": "2026-09-01T23:22:31Z",
+  "manifest_self_inclusion": false,
+  "claim": "PASS_REFERENCE_MECHANISMS_WITH_BLOCKING_SPEC_DIVERGENCES",
+  "launch_spec_conformance": "BLOCK",
+  "payload_authority": false,
+  "qwen_evidence": false,
+  "files": [
+    {
+      "path": "AUDIT_RESULT.json",
+      "bytes": 6699,
+      "sha256": "8684b6df6219faf4359a5c33f3503146d4d34b7a9a7ada8cfe378dd12daccd20"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1927,
+      "sha256": "fa56e305e1407d7b00ed63350fb8a3734687af0f82624f8f0f6bc2c22ebc5f0b"
+    },
+    {
+      "path": "independent_audit.py",
+      "bytes": 29291,
+      "sha256": "095fd3c8cacf22be2a6995c2f079965ec0fd04b498aab4b3d8b1680c854daba6"
+    }
+  ],
+  "audited_inputs": {
+    "public_transit_commit": "4b6a3fda87ba1c7b09269ccde442fd3b17153a74",
+    "producer_source_manifest_sha256": "51f158c7f82fad81bd2b15d30e6581a2847e0e436d98f085055b8d818bf43f31",
+    "normative_spec_path": "docs/UWFA_SC_V2_INTEGRATED_CONTAINER_SPEC.md",
+    "normative_spec_sha256": "99460ee4f77cef68408d043b162d8b0996853d363a0982712300223855dba367"
+  },
+  "runpod_execution": {
+    "python": "/usr/bin/python3.12",
+    "producer_tests": "17/17 PASS",
+    "independent_tests": "13/13 PASS"
+  }
+}

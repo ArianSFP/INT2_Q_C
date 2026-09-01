@@ -1,0 +1,128 @@
+{
+  "format": "uwfa-sc-v2-integrated-bridge-reference-independent-audit-result-v1",
+  "sealed_utc": "2026-09-01T23:22:31Z",
+  "claim": "PASS_REFERENCE_MECHANISMS_WITH_BLOCKING_SPEC_DIVERGENCES",
+  "launch_spec_conformance": "BLOCK",
+  "payload_authority": false,
+  "qwen_evidence": false,
+  "control_evidence": false,
+  "audited_public_transit_commit": "4b6a3fda87ba1c7b09269ccde442fd3b17153a74",
+  "producer_manifest_sha256": "51f158c7f82fad81bd2b15d30e6581a2847e0e436d98f085055b8d818bf43f31",
+  "audit_source": {
+    "README.md": {
+      "bytes": 1927,
+      "sha256": "fa56e305e1407d7b00ed63350fb8a3734687af0f82624f8f0f6bc2c22ebc5f0b"
+    },
+    "independent_audit.py": {
+      "bytes": 29291,
+      "sha256": "095fd3c8cacf22be2a6995c2f079965ec0fd04b498aab4b3d8b1680c854daba6"
+    }
+  },
+  "execution": {
+    "host": "provided RunPod",
+    "python": "/usr/bin/python3.12",
+    "bytecode_writes_disabled": true,
+    "source_execution": "authenticated immutable in-memory bytes",
+    "command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3.12 independent_audit.py ../uwfa_sc_v2_integrated_bridge_reference_v0",
+    "producer_tests": {
+      "run": 17,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_seconds": 26.194
+    },
+    "independent_tests": {
+      "run": 13,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_seconds": 15.816
+    }
+  },
+  "fixture": {
+    "container_bytes": 266240,
+    "source_decisions": 983040,
+    "physical_bpw_exact": "13/6",
+    "physical_bpw": 2.1666666666666665,
+    "relative_mse_header_fixture": 0.03,
+    "f_actual_from_header_fixture": 0.604762103949539,
+    "maximum_cold_read_amplification": 1.3856146259321627,
+    "storage_conservation_bytes": 266240,
+    "semantic_decoded_hash": "515fc01ba0ac75882c516748235608633d4b80e0b8d974bb48b9adf0c9f6a5a5"
+  },
+  "positive_mechanisms": [
+    "The complete producer inventory and every listed hash are authenticated before execution.",
+    "Explicit dense UWFA model rows are complete, lexicographic and canonical.",
+    "The decode(original_freq1) path uses the serialized model and causally regenerated context.",
+    "Decoded payloads are required to re-encode to identical arithmetic bytes and logical lengths.",
+    "The parser rejects hostile integer ranges, overflow, gaps, overlaps, noncanonical row order, padding, roots, CRCs and frame hashes.",
+    "The six-expert/fifteen-frame topology is two private plus one pair-shared frame per expert.",
+    "The physical rate is an exact rational and the independent page-union/storage-share calculation matches and conserves all bytes."
+  ],
+  "accepted_counterexamples": {
+    "semantic_scale_mutation": {
+      "accepted": true,
+      "old_binary16_bits": 12288,
+      "new_binary16_bits": 12289,
+      "decoded_hash_unchanged": true,
+      "classification": "DECLARED_REFERENCE_BOUNDARY",
+      "meaning": "The synthetic callback hashes decisions rather than reconstructed numerical values."
+    },
+    "untrusted_evidence_and_zero_mse": {
+      "accepted": true,
+      "reported_relative_mse": 0.0,
+      "reported_f": 0.0,
+      "classification": "UNADVERTISED_INTEGRATION_GAP",
+      "meaning": "Evidence hashes are bound but not compared to trusted expected values, and this reference API does not independently recompute SSE/energy."
+    },
+    "source_weight_geometry_mismatch": {
+      "accepted": true,
+      "header_source_weights": 983041,
+      "sum_decision_counts": 983040,
+      "reported_rate": 2.1666644626215996,
+      "classification": "UNADVERTISED_VALIDATION_DEFECT",
+      "meaning": "The global source-weight count is not tied to decoded block geometry."
+    },
+    "rate_f_and_cold_gates_not_enforced": {
+      "accepted": true,
+      "rate": 2.5806494400092848,
+      "rate_in_range": false,
+      "f": 1.0735617613645474,
+      "f_pass": false,
+      "maximum_cold_read_amplification": 2.371346233017703,
+      "classification": "UNADVERTISED_PROMOTION_API_GAP",
+      "meaning": "Verification returns flags and a ledger but does not reject violations of any of the three promotion gates."
+    },
+    "post_complete_external_mutation": {
+      "accepted_by_filesystem": true,
+      "complete_still_present": true,
+      "classification": "DECLARED_REFERENCE_BOUNDARY",
+      "meaning": "CompletionLastCapsule disables only its own API, not direct filesystem writes."
+    },
+    "symlink_ancestor": {
+      "accepted": true,
+      "classification": "DECLARED_REFERENCE_BOUNDARY",
+      "meaning": "CompletionLastCapsule is explicitly not the normative external bootstrap."
+    }
+  },
+  "declared_reference_boundaries": [
+    "The README explicitly excludes a real inherited-STRATA parser and inverse RHT/group/XKLT reconstruction callback; the fixture decision hash is only a stand-in.",
+    "The README explicitly states that CompletionLastCapsule is not the external authenticated bootstrap and omits ancestor-symlink, held-descriptor and immutable-snapshot protections.",
+    "The README and producer manifest explicitly deny Qwen/current/control payload authority and independent-audit authority.",
+    "The fixture deliberately uses synthetic source/bootstrap/evidence hashes and a literal MSE fixture value.",
+    "The source-only reference does not implement the frozen 150-cell selection pipeline or matched-Gaussian controls required of the eventual experiment."
+  ],
+  "unadvertised_blocking_defects": [
+    "No verifier input or API compares bound evidence hashes against trusted expected hashes.",
+    "source_weights is not constrained to equal the restored block geometry or total decision count.",
+    "parse/verify do not enforce the 2.15-to-2.5 bpw, F<=0.8, or cold-read<2 promotion gates; callers can receive a normal verification object for a packet violating all three."
+  ],
+  "normative_missing_components": [
+    "Real literal inherited-STRATA metadata validation and full inverse reconstruction.",
+    "Independent original-BF16 FP64 SSE and source-energy scoring.",
+    "Trusted expected binding comparison for baseline artifact, plan, audit, universal decoder, source manifest and bootstrap.",
+    "Geometry-to-source-weight conservation check.",
+    "Hard promotion-gate rejection.",
+    "Frozen whole-artifact/holdout selection plus the complete symmetric matched-Gaussian control pipeline.",
+    "Separately pinned launcher with symlink-ancestor rejection, held descriptors, immutable execution, post-run identity verification and COMPLETE-last enforcement."
+  ],
+  "conclusion": "The reference bridge mechanisms pass their source-free tests, but the package is a hard BLOCK for launch or UWFA-SC v2 integrated-container conformance. It is not Qwen evidence and grants no payload authority."
+}
