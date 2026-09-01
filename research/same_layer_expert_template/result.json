@@ -1,0 +1,130 @@
+{
+  "schema": "same_layer_expert_template_source_free_result_v1",
+  "decision": "EARLY_KILL_NO_NEW_PAYLOAD_OR_GPU",
+  "protocol": {
+    "path": "protocol.lock.json",
+    "bytes": 5585,
+    "sha256": "46293ec2b5c6b8bb3be6b46bce9512822f7ea2af544ac655eb10e5265ce0f09b"
+  },
+  "verifier": {
+    "path": "verify_source_free_gate.py",
+    "sha256": "d63c44b6e2af5873816246958c029ed6f9a73572fa7fada6d41b672e9662745c"
+  },
+  "thresholds": {
+    "full_required_s_bpw": 0.16096404744368115,
+    "full_required_F": 0.8,
+    "nested_remaining_required_s_bpw": 0.11356,
+    "nested_remaining_required_F": 0.8543386760409252
+  },
+  "evidence": {
+    "unaligned_train_span": {
+      "file": "../neural_flow_oracle/shared_expert_basis_oracle.json",
+      "sha256": "6ac8014943d55d243c1467f8ae0acb992da066a7e8b88962b2f3cd9da513c45e",
+      "json_pointers": [
+        "/pooled/template",
+        "/pooled/pca_rank_1",
+        "/pooled/pca_rank_15"
+      ],
+      "cohort": "16 authenticated layer-15 experts, Up and transposed Down, leave-one-expert-out"
+    },
+    "bounded_neuron_alignment": {
+      "file": "../../../agent_rd_structure_diag_cross_expert_result.json",
+      "sha256": "e60797e1845ed0f4fd7b6d6373e2668d3cec8d7cd6a2d549a457584f7d4f3b74",
+      "crossfit_json_pointer": "/variant_results/ref_e0_concat_cosine/crossfit_alignment_fit_then_eval_columns/rate_distortion/role_specific/fp64_klt_oracle/side_free_gain_vs_same_total_rate_diagonal_percent",
+      "stress_json_pointer": "/variant_results/ref_e0_concat_cosine/full_columns_optimistic/rate_distortion/role_specific/fp16_decodable_gaussian_proxy/side_free_gain_vs_same_total_rate_diagonal_percent",
+      "control": "same-total-rate diagonal reverse-waterfilled moment-matched Gaussian"
+    }
+  },
+  "computed": {
+    "qwen": {
+      "mean_q": 1.066793197267109,
+      "rank1_q": 0.9999993076481116,
+      "rank15_q": 0.9999871875561103,
+      "rank15_s_bpw": 9.242283838939825e-06,
+      "rank15_fraction_of_nested_need": 8.138678970535246e-05
+    },
+    "gaussian_control": {
+      "mean_q": 1.0666666666666667,
+      "rank1_q": 0.9999993642171224,
+      "rank15_q": 0.9999904632568359,
+      "rank15_s_bpw": 6.879338837808302e-06,
+      "qwen_minus_control_rank15_s_bpw": 2.362945001131523e-06
+    },
+    "bounded_alignment": {
+      "crossfit_gain_percent": 0.00927946412057068,
+      "crossfit_F": 0.9999072053587943,
+      "crossfit_s_bpw": 6.694029024241615e-05,
+      "leaky_full_gain_percent": 0.2478521499169828,
+      "leaky_full_F": 0.9975214785008302,
+      "leaky_full_s_bpw": 0.0017900946493584705,
+      "crossfit_charged_s_bpw": -0.03486448098966481,
+      "crossfit_charged_F": 1.0495194926712919,
+      "leaky_full_charged_s_bpw": -0.03314132663054876,
+      "leaky_full_charged_F": 1.0470153934626816
+    },
+    "physical_one_prototype_crossfit": {
+      "template_bytes_each": 1268121,
+      "template_bpw_each": 2.149998982747396,
+      "template_bank_count": 2,
+      "two_bank_amortized_bpw": 0.03359373410542806,
+      "permutation_bits_per_expert": 6260,
+      "permutation_bpw": 0.0013266669379340278,
+      "fp16_gain_bits_per_expert": 48,
+      "fp16_gain_bpw": 1.0172526041666666e-05,
+      "cluster_id_bits_per_expert": 0,
+      "cluster_id_bpw": 0.0,
+      "header_bits": 512,
+      "side_bpw": 0.03493142127990723,
+      "residual_budget_bpw": 2.1150685787200927,
+      "cold_read_amplification": 1.9843745342520782,
+      "hot_cached_read_amplification": 0.9843750073928241
+    }
+  },
+  "F_s_read_ledger": {
+    "unaligned_full_train_span_free_exact": {
+      "F": 0.9999871875561103,
+      "s_bpw": 9.242283838939825e-06,
+      "shortfall_to_nested_s_bpw": 0.11355075771616106,
+      "interpretation": "strictly dominates every unaligned mean, medoid, cluster mean, or scalar prototype in the training span"
+    },
+    "aligned_column_split_free_exact": {
+      "F": 0.9999072053587943,
+      "s_bpw": 6.694029024241615e-05,
+      "fraction_of_nested_need": 0.0005894708544716092
+    },
+    "aligned_outcome_leaky_full_column_stress": {
+      "F": 0.9975214785008302,
+      "s_bpw": 0.0017900946493584705,
+      "fraction_of_nested_need": 0.01576342176546815,
+      "charged_s_bpw_using_one_prototype_crossfit_ledger": -0.03314132663054876,
+      "charged_F": 1.0470153934626816
+    },
+    "one_prototype_physical_row": {
+      "attributed_total_bpw": 2.15,
+      "side_bpw": 0.03493142127990723,
+      "residual_budget_bpw": 2.1150685787200927,
+      "cold_read_amplification": 1.9843745342520782,
+      "hot_template_cached_read_amplification": 0.9843750073928241,
+      "template_quantization_error_assumed": 0,
+      "favorability": "template is charged as a 2.15-bpw stream but treated as mathematically exact"
+    }
+  },
+  "early_stop_reason": "The exact rank-15 train-span oracle supplies only 0.00814% of the nested required s. The leakage-safe bounded alignment result supplies 0.05895%, and even its explicitly outcome-leaky full-column stress row supplies only 1.576%. Template, mapping, and gain charges make the strongest aligned stress row regress. Fetching 128 experts cannot be justified under the frozen early-stop rule.",
+  "gate_projection_residual_requirement": {
+    "status": "not independently tested by the bound inputs",
+    "if_up_and_down_supply_zero_nested_gain_gate_only_s_needed_bpw": 0.34068,
+    "corresponding_gate_only_F": 0.623577163470379,
+    "if_up_and_down_supply_zero_full_gain_gate_only_s_needed_bpw": 0.48289214233104344,
+    "corresponding_gate_only_F": 0.512
+  },
+  "access_receipt": {
+    "new_qwen_payload_reads": 0,
+    "network_calls": 0,
+    "gpu_jobs": 0,
+    "pinned_production_matrices_opened": 0,
+    "excluded_or_sealed_payload_files_opened": 0,
+    "source_free_files_read": 3
+  },
+  "promotion_verdict": "KILL_UNALIGNED_TRAIN_ONLY_PROTOTYPES_AND_BOUNDED_COLUMN_ALIGNMENT",
+  "claim_boundary": "This source-free dominance gate kills unaligned train-only prototypes/clusters and the previously bounded identity/reference/barycenter column-alignment family for authenticated layer-15 Up/Down. It does not rule out arbitrary combinatorial neuron permutation, nonlinear functional alignment, or a separately preregistered gate_proj-only structure test."
+}

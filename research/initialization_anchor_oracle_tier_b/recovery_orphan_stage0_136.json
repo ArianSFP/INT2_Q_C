@@ -1,0 +1,30 @@
+{
+  "schema": "qwen3_initialization_anchor_tier_b_interruption_recovery_v1",
+  "action": "move_unjournaled_partial_without_content_change",
+  "old_absolute_path": "/workspace/INT2__compression/tier_b_initialization_anchor_run_v1/state/files/stage0_136.npz",
+  "new_absolute_path": "/workspace/INT2__compression/tier_b_initialization_anchor_run_v1/interrupted_orphans/stage0_136.partial.sha256-7bb36fd08dc69647b50af44b801c2be1d4578da49c9e864cbf591c748016cd04.npz",
+  "file_bytes": 192751,
+  "file_sha256": "7bb36fd08dc69647b50af44b801c2be1d4578da49c9e864cbf591c748016cd04",
+  "zip_integrity": {
+    "status": "BadZipFile",
+    "message": "File is not a zip file",
+    "end_of_central_directory_present": false
+  },
+  "state_reference_count": 0,
+  "last_journal_event": {
+    "absolute_path": "/workspace/INT2__compression/tier_b_initialization_anchor_run_v1/state/events/000136.json",
+    "event_sha256": "16db813027de03d0b6f7f4d748e051cd2a2b4c9e9062dceb116fa3a919c4e8e9",
+    "sequence": 136,
+    "kind": "stage0",
+    "key": "135",
+    "target_relative_path": "files/stage0_135.npz",
+    "target_file_bytes": 486952,
+    "target_file_sha256": "c67c2a1b71546ed3424466b83c544c8103220284b419b29d09740be17bb23a1d"
+  },
+  "post_move_journal_validation": {
+    "event_count": 137,
+    "hash_chain_and_all_referenced_targets_valid": true,
+    "next_resumable_stage0_key": "136"
+  },
+  "reason": "SIGINT arrived during np.savez_compressed for stage0 shard 136. The target had no journal event, was truncated, and blocked create-new resume semantics; it was preserved outside state/ for forensic audit."
+}

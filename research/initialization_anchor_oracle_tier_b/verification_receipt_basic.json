@@ -1,0 +1,45 @@
+{
+  "bias_corrected_capture": -0.0013008375530373373,
+  "bias_corrected_upper_3se": 0.0016152599529326538,
+  "calibration_sha256": "92710a3c73533512f38f05b6010f4f59f307d308bced053411c51c8f4fbd1b23",
+  "cuda_libraries_imported": false,
+  "decision_state": "HARD_KILL_BOUNDED_TIER_B_PROCEDURAL_SET",
+  "effective_candidate_count": 28311552,
+  "excluded_payloads_opened": 0,
+  "exclusion_manifest_verification": {
+    "current_external_manifest_if_present_revalidated_fail_closed": true,
+    "current_full_external_manifest_revalidated_at_runtime": false,
+    "immutable_binding_verified": true,
+    "recorded_full_external_manifest_revalidated_at_runtime": false
+  },
+  "journal_verification": {
+    "embedded_event_chain_verified": true,
+    "event_count": 392,
+    "last_event_sha256": "2a1632c5735a1616af4fc6aab4997a1c46072af401c6422968d7385003dcf16a",
+    "performed": false
+  },
+  "logical_candidate_count": 37748736,
+  "payload_verification": {
+    "eligible_hashed": 0,
+    "excluded_payloads_opened": 0,
+    "rehash_performed": false
+  },
+  "pinned_panel_opened": false,
+  "raw_source_validation_capture": -0.0007326564576186634,
+  "recovery_evidence_sha256": "075cdaa3feeb518f0a42336c946cbfe29cc2a4fee5cc84ca39b40395bb6f95b1",
+  "result_path": "/workspace/INT2__compression/INT2_Q_C/research/initialization_anchor_oracle_tier_b/result.json",
+  "result_sha256": "e450c10767b54c190f901df8460c6ac57fe86cfaca7719c3db48475d4196fb92",
+  "schema": "qwen3_initialization_anchor_tier_b_verification_receipt_v1",
+  "sealed_package_hashes": {
+    "candidate_lock": "bd1376d9bf4b13620d4a7c6c48a24cecd82d0054fa6899f4b343bad1ace23f23",
+    "common": "75d8bbd7af9271ea5d2f099e7d720c1560bcc72864ac88f458095647468e7da3",
+    "kernels": "b563b977251dd754f1d6ed7dfe08a486ae4ed6aab3ff60b1e9f9399be804a195",
+    "runner": "83eb7682c8185d8f27dbd4b7d39de96cb54dad1c887a4cf026ac4ea759159665",
+    "tier_a_common": "4e92cd001963f232721b2cf37d90b53f3992c162e1bad2f5f28a3471555c0d11"
+  },
+  "search_domain_count": 33,
+  "source_firewall_verified": true,
+  "status": "PASS",
+  "union_shortlist_count": 67437,
+  "verifier_sha256": "5544db2870d208e2890fa3d3e9bda68739374be4ee8ea6b3f83cc4ec78340fb8"
+}

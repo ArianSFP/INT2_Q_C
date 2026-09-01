@@ -1,0 +1,90 @@
+{
+  "schema": "same_layer_expert_template_source_free_protocol_v1",
+  "status": "FROZEN AFTER REPOSITORY-EVIDENCE REVIEW AND BEFORE ANY NEW SOURCE, NETWORK, OR GPU ACCESS",
+  "created_utc": "2026-09-01T04:26:37Z",
+  "objective": "Decide whether a new all-128-expert same-layer template/prototype experiment is justified before opening any additional Qwen payload.",
+  "target": {
+    "model": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "target_rate_bpw": 2.15,
+    "full_required_s_bpw": 0.16096404744368115,
+    "nested_remaining_required_s_bpw": 0.11356,
+    "promotion_rule": "promote only if a leakage-safe optimistic bound supplies at least the nested remaining requirement; otherwise stop before new payload or GPU access"
+  },
+  "nonduplication_review": {
+    "prior_mean_and_pca": "research/neural_flow_oracle/shared_expert_basis_oracle.json already tests leave-one-expert-out mean templates and exact learned PCA spans on 16 authenticated layer-15 Up/Down experts",
+    "prior_alignment": "agent_rd_structure_diag_cross_expert_result.json already tests identity, reference-Hungarian, and two-pass barycenter-Hungarian neuron alignment with disjoint fit/evaluation columns on the same authenticated cohort",
+    "new_hypothesis_considered": "a held-out expert chooses one train-only clustered prototype after a function-preserving shared permutation of gate/up rows and down columns",
+    "reason_it_is_distinct": "prototype choice is nonlinear in expert identity and reads only one prototype, unlike a dense expert-axis KLT or a multi-basis PCA decoder"
+  },
+  "bound_inputs": [
+    {
+      "path_from_this_directory": "../neural_flow_oracle/shared_expert_basis_oracle.json",
+      "bytes": 52033,
+      "sha256": "6ac8014943d55d243c1467f8ae0acb992da066a7e8b88962b2f3cd9da513c45e",
+      "source_free": true
+    },
+    {
+      "path_from_this_directory": "../../../agent_rd_structure_diag_cross_expert_result.json",
+      "bytes": 517531,
+      "sha256": "e60797e1845ed0f4fd7b6d6373e2668d3cec8d7cd6a2d549a457584f7d4f3b74",
+      "source_free": true
+    },
+    {
+      "path_from_this_directory": "../../../agent_rd_structure_diag_cross_expert_report.md",
+      "bytes": 3276,
+      "sha256": "a079a3066a5649e2ab2b4ab1fa4c6823cf8138918a2524e58f1e2aca95eeba83",
+      "source_free": true
+    }
+  ],
+  "unaligned_dominance_gate": {
+    "cohort": "16 authenticated layer-15 experts {0,8,...,120}; Up and transposed Down",
+    "heldout_rule": "each learned object excludes the evaluated expert",
+    "candidate_family": "each direct mean, medoid, cluster mean, or scalar-gained prototype is a vector in the span of the 15 training experts",
+    "optimistic_bound": "orthogonal projection onto the complete exact rank-15 training span has no larger SSE than choosing any one vector in that span",
+    "physical_favor": "the bound ignores prototype quantization error, cluster mappings, gains, and read costs"
+  },
+  "aligned_plausibility_gate": {
+    "bounded_family": "the already-tested identity, fixed-reference Hungarian, and two-pass barycenter Hungarian column-split alignments",
+    "leakage_safe_row": "alignment fit on canonical columns j mod 4 in {0,1}; opportunity scored on disjoint columns j mod 4 in {2,3}",
+    "optimistic_stress_row": "also inspect the explicitly outcome-leaky full-column role-specific KLT opportunity; failure by a wide margin stops rather than promoting a new 128-expert fetch",
+    "moment_matched_control": "same-total-rate reverse water filling on the fitted covariance diagonal, exactly as recorded in the prior result",
+    "not_a_converse_for": "arbitrary combinatorial neuron permutations, nonlinear function-space matching, or an untested gate-projection-only family"
+  },
+  "hypothetical_all_128_protocol_if_promoted": {
+    "layer": 15,
+    "experts": "0 through 127",
+    "roles": [
+      "gate rows",
+      "up rows",
+      "down columns"
+    ],
+    "expert_crossfit": "even expert IDs train odd IDs and odd IDs train even IDs",
+    "alignment_crossfit": "fit held-out permutations only on columns j mod 4 in {0,1}; score j mod 4 in {2,3}",
+    "prototype_counts": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "fitting": "deterministic train-only cluster means; held-out assignment may use its fit columns and must store a literal cluster ID",
+    "control": "independently fit a role-wise moment-matched iid Gaussian cohort with identical dimensions, folds, fitting, assignment, and stopping",
+    "physical_accounting": "charge both crossfit prototype banks, enumerative neuron permutations, cluster IDs, gains, headers, and residual streams over all 128 experts",
+    "cold_read_rule": "one residual plus one selected prototype and local mapping must remain below 2x attributed expert bytes"
+  },
+  "strict_access_contract": {
+    "new_qwen_payload_reads": false,
+    "network_access": false,
+    "gpu_access": false,
+    "permitted_inputs": "only the three exact source-free files bound above",
+    "forbidden": [
+      "the six pinned production-panel BF16 expert triplets",
+      "blind_protocol_v2/unblinded/sources",
+      "any holdout, confirmation, quarantine, or sealed payload directory",
+      "any unlisted local weight file",
+      "any model shard or HTTP byte range"
+    ]
+  },
+  "claim_boundary": "This gate can kill unaligned train-only linear-combination prototypes/clusters and the named bounded column-alignment family. It is not a theorem about arbitrary combinatorial neuron permutation, nonlinear functional alignment, or gate_proj considered alone."
+}
