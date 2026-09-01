@@ -1,0 +1,44 @@
+{
+  "schema": "tied-mps-entropy-census-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "sealed_date": "2026-09-01",
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 9179,
+      "sha256": "f494f42da589f0d1efd2f99b3d0e91a566a0ca099a5dce1a0cdf53d6bfb9e309"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 11570,
+      "sha256": "2a442445bdf8efbd8c55c3ac63644c66603649c88509face5185df801678e13b"
+    },
+    {
+      "name": "evidence_bindings.json",
+      "bytes": 2929,
+      "sha256": "b34150682dd5e8bd05e82a00b5cb833579df59bcd6e85ed32567c4c29aa02dc8"
+    },
+    {
+      "name": "mps_common.py",
+      "bytes": 18760,
+      "sha256": "38cc3300e4a82ee0308f23abdcaabd0a70d5658c6f59da8eddd83a9da89ae1db"
+    },
+    {
+      "name": "stage0_census.py",
+      "bytes": 39423,
+      "sha256": "d27c181fb69462091a27eaf48072ce29d7f62d9f84b7ddebf7357249f1798f41"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 9577,
+      "sha256": "b7535de22fac395ef3316e84589cf84848e5a7d6d8c9218b76e042dc54d1ebad"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 12233,
+      "sha256": "0dfaaee07e41e4ffc1f1016833481232791ddc68a4e0e43f8ff9635722d30046"
+    }
+  ],
+  "closure": "Exactly these seven regular source members plus this manifest; no payload, decoded stream, control, result, model tensor or review receipt is a member.",
+  "authorization": "OPEN_AUTHENTICATED_TIED_MPS_ENTROPY_CENSUS_AFTER_INDEPENDENT_SOURCE_REVIEW_V0"
+}

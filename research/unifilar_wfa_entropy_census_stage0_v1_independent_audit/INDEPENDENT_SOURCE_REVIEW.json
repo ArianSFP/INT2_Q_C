@@ -1,0 +1,21 @@
+{
+  "authorization_token": null,
+  "blocking_findings": [
+    "AUTHENTICATED_SOURCE_TOCTOU",
+    "SYMLINK_ANCESTOR_NOT_PINNED",
+    "CURRENT_OBJECT_BYTES_NOT_BOUND_TO_ARTIFACT",
+    "SERIALIZED_MODEL_NOT_USED_BY_FINAL_ACCEPTANCE_DECODE",
+    "NO_LITERAL_FULL_PHYSICAL_CONTAINER",
+    "MATCHED_GAUSSIAN_CONTROL_GEOMETRY_NOT_ENFORCED"
+  ],
+  "no_payload_access_attestation": {
+    "current_finite_artifact_or_selected_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false
+  },
+  "payload_authority_granted": false,
+  "review_sha256": "dcaa7181e2e26b0c8ad83dc8e9c03cb8d0575628a0fc327b8ca5455a5fa2e059",
+  "reviewed_source_manifest_sha256": "1dbea65550d879c3cc6ca81974223d251d669c15f5af17fa9681800cf03cf9ff",
+  "schema": "unifilar-wfa-entropy-census-independent-source-review-v1",
+  "status": "BLOCK_INDEPENDENT_SOURCE_REVIEW"
+}

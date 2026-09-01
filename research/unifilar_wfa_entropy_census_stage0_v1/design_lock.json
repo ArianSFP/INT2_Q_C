@@ -1,0 +1,146 @@
+{
+  "schema": "unifilar-wfa-entropy-census-design-v1",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "frozen_date": "2026-09-01",
+  "objective": {
+    "current_finite_F": 0.9888693569009007,
+    "current_finite_s_bpw": 0.008074080480766676,
+    "target_F_maximum": 0.8,
+    "standalone_exact_physical_saving_required_bpw": 0.15288996696291447,
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "cold_read_amplification_exclusive_maximum": 2.0
+  },
+  "question": "Can a frozen universal sparse unifilar probability law losslessly recode selected POLARIS/STRATA arithmetic decisions by at least 0.15288996696291447 physical bits per source weight while leaving reconstruction unchanged?",
+  "scope": {
+    "included": "selected binary SC decisions, their decoder-regenerated Q0.16 base probability bucket, polar level, four-phase coordinate, causal unifilar state, and exact current arithmetic payload",
+    "excluded": [
+      "source-coordinate quantizer-label copula before selected SC decisions",
+      "unselected quantizer labels or analog source weights",
+      "dense HMM forward beliefs",
+      "arbitrary nonnegative or Born MPS",
+      "MERA, TTN, RCC, Gray-Wyner, flow, fibre, or LDGM claims",
+      "model provenance, ancestors, router activations, or checkpoint-specific decoder side information"
+    ],
+    "negative_result_boundary": "closes only this frozen finite topology/state/reset/search rule; it is not a converse for arbitrary MPS or source-coordinate copulas"
+  },
+  "candidate_bank": {
+    "topologies": {
+      "suffix": "s' = ((s << 1) | y) & (chi-1)",
+      "xor_sketch": "if y=1, s' = s XOR nonzero_mix(public_context,t)&(chi-1); otherwise s'=s",
+      "modular_ones": "s' = (s + odd_mix(public_context,t)*y) mod chi",
+      "rolling_affine": "s' = (a*s + mix(public_context,t) + y) mod chi, with frozen odd a",
+      "signed_saturating": "s' = clip(s + (2*y-1), 0, chi-1)"
+    },
+    "state_sizes": [2, 4, 8, 16, 32, 64],
+    "reset_lengths": [32, 128, 512, 2048, 4096],
+    "cells": 150,
+    "selector_bytes": 2,
+    "runtime": "each cell performs one integer transition and one table lookup per selected symbol; the frozen 150-cell bank is O(150*N)=O(N), never O(N*chi^2)",
+    "completeness_claim": false
+  },
+  "causal_probability_and_reset": {
+    "contexts": 384,
+    "context_formula": "((polar_level*16 + min(15,floor(base_freq1*16/65536)))*4 + (t mod 4))",
+    "emission": "one Q0.16 p(y=1|state,context) uint16 value",
+    "fit": "exact integer counts with Jeffreys one-half count per binary outcome, then deterministic integer nearest rounding and clamp to [1,65535]",
+    "t0_law": "before symbol position zero and every position divisible by reset_length, set state=0; look up frequency at state=0 and t=0; arithmetic-code y; only then apply the exact symbol-conditioned transition",
+    "stream_boundary": "every canonical arithmetic stream starts a fresh state=0 and t=0",
+    "forbidden_probability_keys": [
+      "model or checkpoint identity",
+      "layer identity",
+      "expert identity",
+      "stream identity",
+      "absolute site or block ordinal",
+      "source weight",
+      "future decision",
+      "encoder-only search state"
+    ]
+  },
+  "model_packet": {
+    "header_bytes": 64,
+    "selector_bytes": 2,
+    "frequency_tensor_bytes": "2*384*chi",
+    "all_fitted_values_serialized_and_charged": true,
+    "maximum_chi64_packet_bytes": 49218,
+    "shared_model_pages_enter_every_routed_cold_read": true
+  },
+  "input_contract": {
+    "stream_lock_schema": "unifilar-wfa-canonical-stream-lock-v1",
+    "required_arrays_per_stream": [
+      "selected_bits_u8",
+      "polar_level_u8",
+      "regenerated_base_freq1_u16le",
+      "original_arithmetic_payload"
+    ],
+    "required_partition_only_metadata": [
+      "layer_group",
+      "expert_group",
+      "stream_key",
+      "weight_charge"
+    ],
+    "weight_charge_rule": "stream charges are positive integers and sum exactly to panel source weights",
+    "baseline_replay": "before CuPy import, canonical CPU arithmetic encoding must reproduce every current logical bit length and every current payload byte",
+    "identity_metadata_never_enters_probability_model": true
+  },
+  "nested_scientific_holdout": {
+    "outer_test": "one exact (layer_group,expert_group) cell",
+    "outer_development": "exclude every stream sharing the outer layer OR outer expert",
+    "inner_validation": "sort outer-development streams by a frozen SHA-256 partition digest; take max(1,floor(n/5)) and never more than n-1 as validation",
+    "inner_train": "all remaining outer-development streams",
+    "selection": "fit all 150 cells on inner train; select minimum exact byte-padded validation arithmetic bits plus one literal model packet; ties by selector ordinal",
+    "outer_score": "refit selected cell on all outer development and exact-arithmetic-code the untouched outer test",
+    "restriction": "no full-panel or outer-test selection is used for the heldout claim",
+    "physical_interpretation": "fold replicas are scientific evidence only; their separately charged models are not represented as one deployable packet"
+  },
+  "final_physical_packet": {
+    "topology_selection": "majority of nested outer-fold selections, ties by selector ordinal, fixed before full-panel parameter fitting",
+    "parameter_fit": "fit only Q0.16 table values on the full source panel and serialize them literally",
+    "output": "one model packet and one concatenation of canonical terminated arithmetic payloads; every stream is decoded and canonically re-encoded before acceptance",
+    "ledger": "charge global header, literal model and selector, directory, immutable global/local decoder state, expert headers, arithmetic termination, final-byte padding, page alignment, and any rate-floor padding",
+    "hard_kill_evidence": "only exact canonical arithmetic bytes and the literal physical ledger; continuous NLL is never a hard-kill bound",
+    "pass": "F<=0.8 at a literal 2.15..2.5 bpw and cold read <2x"
+  },
+  "gaussian_controls": {
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "opening_gate": "source final physical packet and pooled nested heldout score must both meet the standalone threshold",
+    "baseline_order": "load, authenticate, and independently replay all eight current Gaussian arithmetic baselines before fitting any control model",
+    "candidate": "source-selected topology/state/reset only; fitted Q0.16 tables are independently refit and charged for each control",
+    "specificity_rule": "source final exact physical saving must exceed every one of eight independently replayed/refit controls",
+    "controls_cannot_make_a_source_physical_failure_pass": true
+  },
+  "status_lattice": {
+    "HARD_KILL_EXACT_PHYSICAL_SOURCE_PACKET": "one final physical packet misses the absolute target; controls cannot repair it",
+    "NO_PROMOTION_NESTED_HELDOUT_THRESHOLD_FAIL": "physical source fit survives but untouched nested folds do not",
+    "NO_PROMOTION_GAUSSIAN_SPECIFICITY_FAIL": "physical and heldout source gates survive but the source does not beat every matched Gaussian control",
+    "PROMOTE_FINITE_UNIVERSAL_CELL": "physical, sealed nested holdout, and Gaussian specificity all pass",
+    "positive_source_status_never_depends_on_in_sample_alone": true
+  },
+  "implementation": {
+    "cpu_reference": "portable standard-library exact transition, fitting, model packet, arithmetic encoder, arithmetic decoder, and canonical re-encode verification",
+    "gpu": "CuPy RawKernel only; uint64 exact counts and exact 32-bit arithmetic logical-length replay; runtime synthetic CPU/GPU equality preflight",
+    "source_free_fixture": "cumulative-prefix-parity law proves a chi=2 XOR cell can beat every suffix depth 1..6 under exact heldout arithmetic coding",
+    "no_numpy_or_other_gpu_framework_in_producer_source": true
+  },
+  "lifecycle": {
+    "wrong_token": "reject before output reservation, input access, project import, CuPy import, or CUDA",
+    "valid_token": "reserve an absent output directory first; externally authenticate the independent review receipt and source manifest; verify every declared source member; only then import project code",
+    "numeric_import": "hold/authenticate/replay the source panel before importing CuPy",
+    "symlink_policy": "reject the unresolved leaf with lstat before open; also use O_NOFOLLOW and hold regular-file descriptors",
+    "completion": "COMPLETE.json is created exclusively last; incomplete directories are never resumed",
+    "payload_launch_requires_separate_independent_review": true
+  },
+  "universality": {
+    "algorithm": "one frozen topology/fitting/search/split/seed/control rule for arbitrary canonical SwiGLU-MoE SC decision streams",
+    "checkpoint_adaptation": "only fitted Q0.16 values serialized in the literal model packet",
+    "qwen_role": "evaluation panel only, never a decoder key or architectural dependency"
+  },
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_or_selected_stream_opened": false,
+    "gaussian_control_opened": false,
+    "numpy_imported": false,
+    "cupy_imported": false,
+    "cuda_initialized": false,
+    "gpu_job_launched": false
+  }
+}

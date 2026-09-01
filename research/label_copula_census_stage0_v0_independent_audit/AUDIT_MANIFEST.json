@@ -1,0 +1,22 @@
+{
+  "schema": "label-copula-census-independent-audit-manifest-v0",
+  "status": "SEALED_BLOCK_INDEPENDENT_SOURCE_REVIEW",
+  "source_manifest_sha256": "e1bc2873f204b1db5fefa666d0daf6ddebae38bd3f1add3ce45f3bc0538aae14",
+  "files": [
+    {
+      "name": "AUDIT_REPORT.md",
+      "bytes": 4090,
+      "sha256": "4cc1b7cef6f4773ad6f18a11832855c90aee5ebed9a5672b3654f20441b587ed"
+    },
+    {
+      "name": "AUDIT_RESULT.json",
+      "bytes": 1460,
+      "sha256": "adc7d63905546a507923243f7a860b062edadbcd1400c396255b1916c18a8852"
+    },
+    {
+      "name": "independent_hostile_audit.py",
+      "bytes": 19474,
+      "sha256": "22377d296fcfede1377149ad0df4c054e99b45b8b44c5085a18acd2a1c991cff"
+    }
+  ]
+}

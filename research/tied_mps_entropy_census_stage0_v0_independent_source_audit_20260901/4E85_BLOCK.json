@@ -1,0 +1,63 @@
+{
+  "schema": "tied-mps-entropy-census-independent-source-review-v0",
+  "status": "BLOCK_INDEPENDENT_SOURCE_REVIEW",
+  "source_manifest_sha256": "4e85f7f4890fcb17aa967590fcad2c5ee0bab195c5b301f6c41eca0766618de0",
+  "authorization": "DENIED_NO_PAYLOAD_AUTHORITY",
+  "payload_authority_granted": false,
+  "closure": {
+    "status": "PASS_EXACT_EIGHT_REGULAR_MEMBERS",
+    "declared_members": 7,
+    "manifest_member": 1,
+    "all_declared_byte_counts_match": true,
+    "all_declared_sha256_match": true,
+    "extra_members": 0
+  },
+  "source_free_tests": {
+    "status": "PASS_SELECTED_NATIVE_SOURCE_ONLY_TESTS",
+    "runtime": "/usr/bin/python3.12 on the provided RunPod",
+    "passed": 13,
+    "failed": 0,
+    "classes": [
+      "MathAndModelTests",
+      "ArithmeticAndLedgerTests",
+      "StrictJsonAndLifecycleTests"
+    ],
+    "frozen_package_tests_executed_from_relocated_copy": false,
+    "reason": "The native full verifier resolves nine repository-relative metadata bindings. Closure and all seven member hashes were instead independently checked against the exact manifest before the relocated source-only test run."
+  },
+  "blocking_findings": [
+    "B01_FULL_PANEL_HYPERPARAMETER_SELECTION_LEAKS_INTO_CROSSFIT",
+    "B02_FOLD_IDENTITY_SELECTS_DISTINCT_PHYSICAL_PROBABILITY_MODELS",
+    "B03_NO_BIT_EXACT_INDEPENDENT_DECODER_FOR_FLOAT64_HMM_FILTER",
+    "B04_UNROUNDED_NLL_IS_NOT_A_SAFE_Q016_ARITHMETIC_HARD_KILL_BOUND",
+    "B05_GAUSSIAN_CONTROL_BASELINES_ARE_NOT_BYTE_EXACTLY_REPLAYED",
+    "B06_FINAL_SURVIVE_STATUS_IGNORES_HOLDOUT_OUTCOME",
+    "B07_DOCUMENTED_FIRST_SYMBOL_TRANSITION_DIFFERS_FROM_IMPLEMENTATION",
+    "B08_SUFFIX_RESET_RETAINS_CROSS_BOUNDARY_HISTORY",
+    "B09_CLI_RESOLVE_FOLLOWS_LEAF_SYMLINKS_BEFORE_ONOFOLLOW",
+    "B10_DENSE_TIME_SERIAL_CUPY_EM_GRID_IS_NOT_OPERATIONALLY_FEASIBLE",
+    "B11_RUNTIME_SELF_VERIFICATION_EXECUTES_UNVERIFIED_CODE"
+  ],
+  "scope_limitations": [
+    "The input is the existing codec's selected SC decision-bit stream, not a canonical source-coordinate reconstruction-label stream; a miss does not close the broader source-coordinate copula or MPS hypothesis.",
+    "The frozen hidden-dimension ladder omits chi=2.",
+    "A1 is a factorized row-stochastic state-emitting persistent-regime HMM, not an arbitrary nonnegative MPS, edge-emitting WFA, TTN, MERA model, or terminal-parity model."
+  ],
+  "positive_findings": [
+    "The standalone threshold is 0.1528899669629145 bpw and is not replaced by the speculative composite gap.",
+    "The direct model-byte formulas and page/read ledger are internally arithmetically consistent under their stated framing assumptions.",
+    "The wrong authorization token path passed its no-output/no-input/no-CuPy source-only test.",
+    "No NumPy dependency or top-level CuPy import is present in the reviewed stage source.",
+    "The written claim boundary correctly says that the bounded state-emitting HMM is not generic MPS or parity evidence."
+  ],
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_opened_statted_or_hashed": false,
+    "extracted_decision_arrays_opened_statted_or_hashed": false,
+    "gaussian_controls_opened_statted_or_hashed": false,
+    "cupy_imported_by_auditor": false,
+    "cuda_initialized_by_auditor": false,
+    "gpu_job_launched_by_auditor": false
+  },
+  "conclusion": "The 4e85 source seal is closed and its basic source-only tests pass, but the experiment cannot safely issue a hard kill, claim untouched whole-layer/expert holdout, or guarantee independent arithmetic decoding. No payload run is authorized."
+}

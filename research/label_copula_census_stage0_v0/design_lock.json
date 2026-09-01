@@ -1,0 +1,117 @@
+{
+  "schema": "label-copula-census-design-lock-v0",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "objective": {
+    "question": "Do universal canonical SwiGLU Lloyd-4 labels contain held-out nonlocal structure beyond the strongest charged factorized public-context model?",
+    "target_F": 0.8,
+    "current_finite_s_bpw": 0.008074080480766676,
+    "standalone_net_physical_saving_required_bpw": 0.1528899669629145,
+    "gate_uses_source_lower_95_result_not_control_subtraction": true
+  },
+  "scope": {
+    "primary_stream_A": "raw checkpoint weights -> canonical micro-neuron order -> public-block RMS normalization -> fixed Gaussian Lloyd-4 labels -> ordered Gray bitplanes",
+    "canonical_orientation": "Gate[j,k],Up[j,k],Down[k,j]",
+    "arbitrary_shape_rule": "Gate and Up semantic [d_ff,d_model], Down semantic [d_model,d_ff], with any positive integers d_ff and d_model",
+    "normalization_block_source_weights": 2048,
+    "lloyd4_threshold_standard_deviations": 0.981598821873,
+    "gray_map": [0, 1, 3, 2],
+    "diagnostic_only": "Raw Lloyd labels omit reconstruction levels/scales and therefore are not a complete 2.15-2.5 bpw weight codec.",
+    "deferred_stream_B": "Deferred: current STRATA transformed indices/bitplanes require a separately authenticated extractor, byte-exact current-stream replay, and independently full-encoded Gaussian controls. They are not in the v0 launch surface."
+  },
+  "universal_decoder_context": {
+    "allowed": [
+      "semantic role Gate/Up/Down",
+      "Gray bitplane",
+      "position modulo 8 within public reset",
+      "clipped distance to public reset boundary",
+      "causally decoded exact-integer unifilar state"
+    ],
+    "forbidden": [
+      "checkpoint or model identity",
+      "layer identity",
+      "expert identity",
+      "absolute tensor site",
+      "source weight",
+      "future label",
+      "encoder-only search identity",
+      "control/source flag"
+    ],
+    "identity_metadata_use": "Layer/expert strings are split and reporting metadata only and never index a probability."
+  },
+  "candidate_bank": {
+    "topologies": ["suffix", "parity_sketch", "modular", "rolling", "regime"],
+    "state_sizes_chi": [2, 4, 8, 16, 32, 64],
+    "reset_symbols": [32, 64, 128, 256, 512, 1024, 2048, 4096],
+    "cells": 240,
+    "state_update": "O(1) exact integer and unifilar for every cell",
+    "baseline": "Factorized chi=1 model independently selects reset on validation.",
+    "claim_boundary": "A miss closes only this finite topology/context/reset bank; it does not close arbitrary MPS, TTN, MERA, learned transforms, or site-specific models."
+  },
+  "probability_and_code": {
+    "fit": "Jeffreys-smoothed counts rounded by integer arithmetic to uint16 f1 in [1,65535]",
+    "normalization": "f0=65536-f1 exactly; no float is used by the probability decoder",
+    "model_packet": "256-byte header plus dense context-by-state uint16 f1 table; topology successor rule is universal",
+    "physical_code": "32-bit finite binary arithmetic coder with literal termination and final-byte padding",
+    "verification": "Every outer-test frame must decode exactly to the original labels from only model bytes and the public role/plane schedule."
+  },
+  "nested_protocol": {
+    "outer_test": "Deterministic hash-ranked whole layers; no test layer enters fit or selection.",
+    "inner_validation": "Deterministic hash-ranked whole expert slots among non-test layers; no validation expert enters training.",
+    "selection": "Actual validation container bytes including the complete model, headers, directory, frame termination, byte/page alignment; deterministic tie break.",
+    "refit": "After topology selection, refit only that topology on train plus validation and score untouched whole-layer test.",
+    "no_full_panel_selection": true
+  },
+  "physical_ledger": {
+    "container_header_bytes": 4096,
+    "model_header_bytes": 256,
+    "directory_entry_bytes_per_expert": 64,
+    "frame_header_bytes_per_expert": 256,
+    "frame_alignment_bytes": 64,
+    "page_bytes": 4096,
+    "cold_read": "container header + all selected-model pages + one addressed directory page + exact pages intersecting the expert frame",
+    "reported": [
+      "literal arithmetic bits and bytes",
+      "model raw and page bytes",
+      "directory and framing bytes",
+      "final container padding",
+      "physical bits per source weight",
+      "maximum routed cold-read amplification"
+    ]
+  },
+  "controls": {
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "raw_A_pipeline": "Independently sample Gaussian weights matched to each source public normalization block's mean and variance, then independently repeat canonicalization, normalization, Lloyd labeling, nested selection, refit, arithmetic coding, and all charges.",
+    "opened_or_generated_only_after_source_absolute_survival": true,
+    "source_gate_bpw": 0.1528899669629145,
+    "no_control_created_pass": "Control subtraction may characterize Qwen-specific excess but can never turn an absolute source miss into survival."
+  },
+  "promotion": {
+    "primary": "The paired whole-test-layer 95% lower bound on net physical saving versus the independently validation-selected factorized model must exceed 0.1528899669629145 bpw before controls.",
+    "confidence": "4096-replicate deterministic paired whole-test-layer percentile cluster bootstrap; shared-byte delta is allocated by source weights with exact total closure.",
+    "universality": "A positive Qwen result is one evaluation, not a universal claim; promotion requires at least one independently sourced different SwiGLU-MoE family with the frozen algorithm.",
+    "next_stage": "Only a survivor earns integration with an unchanged finite 2.15-2.5 bpw reconstruction and one end-to-end byte/read ledger."
+  },
+  "lifecycle": {
+    "authorization": "OPEN_AUTHENTICATED_LABEL_COPULA_CENSUS_AFTER_INDEPENDENT_SOURCE_REVIEW_V0",
+    "order": [
+      "reject wrong token before output/input/CuPy",
+      "reserve absent output and write INCOMPLETE state",
+      "verify sealed source",
+      "authenticate independent source-review receipt",
+      "authenticate source-only input metadata",
+      "import CuPy for future GPU work",
+      "write outputs exclusively",
+      "write COMPLETE.json last"
+    ],
+    "v0_payload_authority": false
+  },
+  "access_attestation": {
+    "model_or_checkpoint_payload_opened": false,
+    "current_codec_payload_opened": false,
+    "gaussian_control_payload_opened_or_generated": false,
+    "network_used": false,
+    "cupy_imported": false,
+    "cuda_context_created": false,
+    "gpu_job_launched": false
+  }
+}

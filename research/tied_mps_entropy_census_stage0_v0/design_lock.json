@@ -1,0 +1,198 @@
+{
+  "schema": "tied-mps-entropy-census-design-v0",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "frozen_date": "2026-09-01",
+  "objective": {
+    "current_finite_F": 0.9888693569009007,
+    "current_finite_s_bpw": 0.008074080480766676,
+    "target_F_maximum": 0.8,
+    "total_required_s_bpw": 0.16096404744368115,
+    "standalone_net_physical_saving_required_bpw": 0.1528899669629145,
+    "speculative_composite_gap_bpw_not_applicable_to_this_lossless_cell": 0.11356063457,
+    "physical_rate_minimum_bpw": 2.15,
+    "physical_rate_maximum_bpw": 2.5,
+    "maximum_cold_read_amplification_exclusive": 2.0
+  },
+  "question": "Can a small tied causal nonnegative persistent-regime HMM losslessly recode the actual decoder-reconstructed POLARIS/STRATA selected decisions enough to make the current finite reconstruction satisfy F<=0.8?",
+  "input_contract": {
+    "stream_lock_schema": "tied-mps-canonical-stream-lock-v0",
+    "extraction_receipt_schema": "tied-mps-independent-stream-extraction-v0",
+    "extraction_receipt_status": "PASS_INDEPENDENT_CANONICAL_EXTRACTION",
+    "required_per_stream_arrays": [
+      "selected_bits_u8",
+      "regenerated_base_freq1_u16le",
+      "polar_level_u8"
+    ],
+    "required_authentication": [
+      "current finite artifact held regular-file descriptor, exact bytes and SHA-256",
+      "independent extraction receipt held descriptor and SHA-256",
+      "every raw stream array held descriptor, bytes and SHA-256",
+      "every original arithmetic payload held descriptor, bytes and SHA-256",
+      "extraction receipt binds a canonical trace-inventory SHA-256 without a lock/receipt hash cycle",
+      "exact original arithmetic logical length, payload bytes and payload SHA-256 replayed from extracted bits and frequencies"
+    ],
+    "evaluation_only_fold_metadata": [
+      "layer_group",
+      "expert_group"
+    ],
+    "fold_metadata_is_forbidden_from_every_probability_context": true
+  },
+  "public_decoder_context": {
+    "fields": [
+      "polar level in 0..5",
+      "16-bin regenerated base-probability bucket",
+      "small coordinate phase t mod P for P in {1,2,4}",
+      "causal decoded hidden state"
+    ],
+    "base_probability_bucket": "min(15, floor(freq1_u16*16/65536))",
+    "resets": "at every canonical arithmetic-stream boundary and every 4096 selected decisions",
+    "allowed_periods": [1, 2, 4],
+    "forbidden_keys": [
+      "model identity",
+      "checkpoint identity",
+      "layer identity",
+      "expert identity",
+      "absolute site or block ordinal",
+      "source weights",
+      "future decisions",
+      "encoder-only search state"
+    ]
+  },
+  "gate_A0_local_subclass": {
+    "family": "deterministic suffix-state HMM / nonnegative MPS",
+    "suffix_depths": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "states": [1, 2, 4, 8, 16, 32, 64, 128, 256],
+    "probability_fit": "Jeffreys 1/2 count smoothing, then deterministic Q0.16 rounding",
+    "purpose": "cheap exact finite-order screen and initialization only",
+    "claim_boundary": "failure closes only the depth<=8 Markov subclass; it cannot close a latent-state HMM or a general edge-emitting WFA because long persistent regimes and global constraints may have zero short-context gain"
+  },
+  "gate_A1_true_hidden_state": {
+    "family": "tied nonnegative state-emitting persistent-regime HMM subclass",
+    "hidden_dimensions_chi": [4, 8, 16, 32, 64],
+    "matrix_definition": "A_(c,y)[i,j] = T[i,j] * E[c,j,y] with one shared nonnegative row-stochastic T, context/state emissions E, and initial pi",
+    "causal_probability": "p(y_t|prefix,c_t) = alpha_(t-1) A_(c_t,y_t) 1 / (alpha_(t-1)(A_(c_t,0)+A_(c_t,1))1)",
+    "causal_update": "alpha_t = alpha_(t-1) A_(c_t,y_t) normalized to sum one",
+    "chunk_reset_length": 4096,
+    "fit": {
+      "algorithm": "scaled Baum-Welch forward/backward on canonical reset chunks",
+      "iterations": 12,
+      "seeds": [314159, 271828, 161803],
+      "pseudocount": 0.5,
+      "selection": "minimum exact quantized-model arithmetic packet bytes; ties by smaller chi, smaller P, then seed order"
+    },
+    "physical_parameters": {
+      "header_bytes": 256,
+      "selection_bytes_in_header": 16,
+      "initial_u16_values": "chi",
+      "transition_u16_values": "chi*chi",
+      "emission_u16_values": "6*16*P*chi",
+      "transition_rows_sum": 65535,
+      "initial_sum": 65535,
+      "emission_frequency_range_inclusive": [1, 65534],
+      "all_tensors_and_rounding_are_decoder_visible": true
+    },
+    "claim_boundary": "a miss closes this finite chi<=64, P<=4, reset-4096 state-emitting HMM cell only; symbol-independent T followed by target-state emission is not a generic edge-emitting WFA and cannot realize the canonical fixed-horizon even-parity language without a terminal right environment or terminal-position context; this is not a converse for arbitrary tensor networks, unbounded bond dimension, or noncausal site-specific MPS"
+  },
+  "score_order": [
+    "authenticate source-only manifest and independent review before numeric import",
+    "reserve an absent output directory before opening any receipt or stream",
+    "hold and authenticate the current exact artifact, extraction receipt and all source stream arrays",
+    "replay the current arithmetic codelength from canonical bits and regenerated frequencies",
+    "run A0, retaining its local-only claim boundary",
+    "run every A1 chi/period/seed cell or emit an explicit incomplete result that cannot kill A1",
+    "compute the direct physical packet and standalone saving versus the current exact artifact",
+    "hard kill if every complete A1 cell has net saving below 0.1528899669629145 bpw",
+    "only after an absolute source survivor, open independently encoded Gaussian-control locks and refit every candidate independently",
+    "write result and controls, verify all held descriptors stable, then write COMPLETE.json last"
+  ],
+  "whole_layer_expert_holdout": {
+    "rule": "for each test stream, training excludes every stream with the same layer_group OR the same expert_group",
+    "identities_used_only_for_partitioning": true,
+    "crossfit_models_are_retrained_and_fully_charged_once_per_unique_layer/expert_fold": true,
+    "required_reports": [
+      "whole-panel directly fitted physical saving",
+      "pooled disjoint holdout physical saving",
+      "minimum per-fold saving",
+      "selected chi, period and seed",
+      "model bytes, stream framing and arithmetic termination"
+    ]
+  },
+  "gaussian_controls": {
+    "opened_only_after_absolute_source_survival": true,
+    "replicates": 8,
+    "seeds": [
+      10619863,
+      10619881,
+      10619909,
+      10619927,
+      10619953,
+      10619971,
+      10619999,
+      10620017
+    ],
+    "construction": "moment-matched Gaussian tensors are independently passed through the complete frozen POLARIS/STRATA encoder and independent extractor; source decisions are never permuted or reused",
+    "model_refit": "the source-selected A1 chi and P are independently refit from all three frozen seeds, quantized, training-selected, arithmetic-coded and charged for each control; source bits or fitted tensors are never reused",
+    "reported_statistic": "source direct saving minus the distribution of independently encoded Gaussian direct savings",
+    "control_subtraction_can_never_create_a_pass": true
+  },
+  "physical_packet": {
+    "layout": "one page-rounded global model/directory followed by one sequential variable-length expert frame per routed expert",
+    "global_charges": [
+      "fixed header",
+      "quantized pi, T and E tensors",
+      "model selector",
+      "stream directory",
+      "integrity hashes",
+      "alignment"
+    ],
+    "local_charges": [
+      "expert frame header",
+      "immutable current-codec decoder fields",
+      "byte-padded arithmetic payloads",
+      "the exact arithmetic termination bits and final byte padding already present in every measured payload",
+      "any padding required to keep R>=2.15"
+    ],
+    "storage_rule": "all model, header, directory, payload, termination, alignment and padding bytes count once",
+    "cold_rule": "all global model pages plus the worst-unaligned page union of the selected sequential expert frame",
+    "rejection": "reject any emitted candidate outside 2.15<=R<=2.5 or with cold read amplification >=2"
+  },
+  "information_identities_and_proposal_critique": {
+    "deterministic_statistic": "for b=f(q), H(q)-H(q|b)=H(b); transmitting b at its entropy cannot itself save lossless rate",
+    "FIBER_boundary": "a deterministic fibre label can change lossy cell geometry or search, but its mere transmission supplies no entropy rebate",
+    "RCC_boundary": "fixed-cap allocation cannot create entropy; tail probability, failure fallback, candidate-search selector, reservoir slack, framing and termination must all be charged",
+    "ORBIT_MERA_boundary": "an orthogonal transform preserves raw SSE and helps only through a changed quantizer factorization; source-adaptive transforms require transmitted parameters",
+    "Riemannian_flow_boundary": "volume-preserving flows preserve differential entropy; other flows must charge their Jacobian-realizing parameters and can only be credited through one finite decoded packet",
+    "Gray_Wyner_evidence": {
+      "prior_same_layer_pooled_capture": 0.015534903625203362,
+      "prior_same_layer_favourable_capture": 0.016534903625203354,
+      "speculative_gap_equivalent_capture": 0.14566207552117194,
+      "standalone_gap_equivalent_capture": 0.19099525693951513,
+      "proposal_common_variance_aspiration": 0.25,
+      "interpretation": "even the audited favourable same-layer opportunity is far below the 14.57% speculative capture and about fifteen times below a 25% common-variance aspiration; shared pages also enter every cold routed read"
+    }
+  },
+  "universality": {
+    "architecture": "one versioned algorithm for arbitrary SwiGLU-MoE expert shapes and any canonical POLARIS-like binary decision trace",
+    "Qwen_role": "evaluation panel only",
+    "decoder_inputs": "shape/role semantics, selected expert bytes, charged global model bytes and causally decoded state",
+    "forbidden": "model provenance, public ancestors, router or token activations, model-specific pretrained networks, identity keys and untransmitted fitted state"
+  },
+  "lifecycle": {
+    "authorization": "OPEN_AUTHENTICATED_TIED_MPS_ENTROPY_CENSUS_AFTER_INDEPENDENT_SOURCE_REVIEW_V0",
+    "independent_review_status": "PASS_INDEPENDENT_SOURCE_REVIEW",
+    "wrong_token_behavior": "reject before output creation, review input, stream input, NumPy, CuPy or CUDA",
+    "valid_token_behavior": "reserve create-new output, authenticate review and source closure, then import CuPy and open held inputs",
+    "symlink_policy": "O_NOFOLLOW regular held descriptors and exclusive O_EXCL output members",
+    "completion": "COMPLETE.json is exclusive and last; incomplete outputs are never resumed"
+  },
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_or_decoded_stream_opened": false,
+    "gaussian_control_payload_opened": false,
+    "numpy_imported": false,
+    "cupy_imported": false,
+    "cuda_initialized": false,
+    "gpu_job_launched": false
+  },
+  "claim_boundary": "This is a frozen producer source package. It contains no MPS numerical result, does not authorize a payload run without a separate independent source review, and does not claim that MPS, Gray-Wyner, FIBER, RCC, ORBIT, MERA or a Riemannian flow meets the target."
+}

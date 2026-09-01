@@ -1,0 +1,31 @@
+{
+  "schema": "label-copula-census-independent-hostile-audit-v0",
+  "status": "BLOCK_INDEPENDENT_SOURCE_REVIEW",
+  "source_manifest_sha256": "e1bc2873f204b1db5fefa666d0daf6ddebae38bd3f1add3ce45f3bc0538aae14",
+  "payloads_opened": 0,
+  "current_codec_payloads_opened": 0,
+  "gaussian_control_payloads_opened_or_generated": 0,
+  "network_resources_opened": 0,
+  "cupy_imported": false,
+  "cuda_jobs": 0,
+  "passes": [
+    "external manifest and exact package closure",
+    "native 18-test source-only suite and synthetic parity fixture",
+    "canonical arbitrary-shape Gate/Up/Down semantic orientation",
+    "fixed RMS/Gaussian-Lloyd4 threshold boundaries",
+    "240-cell exact-integer unifilar state-law cross-check",
+    "Q0.16 model packet and independent arithmetic decoding",
+    "identity-free probability fit on a regular panel",
+    "literal physical/model/header/directory/frame/page/read arithmetic",
+    "0.1528899669629145 physical diagnostic lower-bound gate and no-control rescue",
+    "diagnostic-label scope and transformed-STRATA deferral"
+  ],
+  "blockers": [
+    "LIFECYCLE_COMPLETE_NOT_FINAL",
+    "SOURCE_PACKAGE_SYMLINK_ACCEPTED",
+    "DEGENERATE_ONE_CLUSTER_CONFIDENCE_GATE",
+    "GAUSSIAN_CONTROL_PROVENANCE_UNBOUND",
+    "EXPERT_SLOT_UNIVERSE_NOT_VALIDATED"
+  ],
+  "runtime_scope": "Each fixed candidate pass is O(N); the frozen bank is O(240N). No scientific CuPy path exists in v0; stage0 only performs a late availability import."
+}

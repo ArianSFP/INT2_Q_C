@@ -1,0 +1,38 @@
+{
+  "schema": "unifilar-wfa-entropy-census-independent-audit-manifest-v1",
+  "status": "SEALED_BLOCK_INDEPENDENT_SOURCE_REVIEW",
+  "reviewed_source_manifest_sha256": "1dbea65550d879c3cc6ca81974223d251d669c15f5af17fa9681800cf03cf9ff",
+  "payload_authority_granted": false,
+  "members": [
+    {
+      "name": "AUDIT_REPORT.md",
+      "bytes": 1840,
+      "sha256": "a7398a24457b155929ffa6fb1223c4a48657f7c8b837502a5cf5b9680fe060d5"
+    },
+    {
+      "name": "audit_source_only.py",
+      "bytes": 33978,
+      "sha256": "186d7e86ba30277c704b0251db921d2294798f954c9c13732f6eeef02baafaaa"
+    },
+    {
+      "name": "HOSTILE_TEST_RESULT.json",
+      "bytes": 3627,
+      "sha256": "117d73485507f0d4eb33a2bc8aef59be87ca1609b0bdf9dad14f90321dd3228b"
+    },
+    {
+      "name": "INDEPENDENT_SOURCE_REVIEW.json",
+      "bytes": 961,
+      "sha256": "dda039db6161ad5fec84e95657a5b11b111695c3edf11231362041716d7e589a"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1559,
+      "sha256": "145702b5e20780b7847fc7a0d3797b66475f8fcffebff562d949d13becba50e3"
+    }
+  ],
+  "no_payload_access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_or_selected_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "tied-mps-entropy-census-independent-audit-manifest-v0",
+  "status": "SEALED_INDEPENDENT_BLOCK_NO_PAYLOAD_AUTHORITY",
+  "reviewed_source_manifests": [
+    {
+      "sha256": "a469aeeabdeacc3927b79cf7b5b671b4dae1b96061bc0d0e550e54fa8ed36aa3",
+      "result": "BLOCK_SOURCE_MANIFEST_CLOSURE_MISMATCH"
+    },
+    {
+      "sha256": "4e85f7f4890fcb17aa967590fcad2c5ee0bab195c5b301f6c41eca0766618de0",
+      "result": "BLOCK_INDEPENDENT_SOURCE_REVIEW"
+    }
+  ],
+  "files": [
+    {
+      "name": "4E85_BLOCK.json",
+      "bytes": 3632,
+      "sha256": "4def5c06b2ebff51a71645c0866f4b62734978a664287f08e40ed299f13c77bd"
+    },
+    {
+      "name": "A469_BLOCK.json",
+      "bytes": 2115,
+      "sha256": "556309ddc2e395d5db8bbc955a2aaf93dec9993255d254e59d7cdb55451e4faf"
+    },
+    {
+      "name": "AUDIT_REPORT_4E85.md",
+      "bytes": 9538,
+      "sha256": "a140bfdd37a7a3c3879aca6ebc449de857f605d3285eef030344ea42d2155922"
+    },
+    {
+      "name": "README.md",
+      "bytes": 461,
+      "sha256": "f49f839181a5003768b21a7ef5da92b1ab2eac0bc39542332046b606cb5c2ac1"
+    }
+  ],
+  "closure": "Exactly these four regular audit members plus this manifest. The producer package is not a member and was not modified.",
+  "payload_authority_granted": false
+}

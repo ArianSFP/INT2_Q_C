@@ -37,6 +37,12 @@ than the final research claim: at its own physical rate it has
 - [Lossy-tail v8 authenticated early-kill checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_LOSSY_V8.md)
 - [Universal SwiGLU-MoE codec contract](docs/UNIVERSAL_SWIGLU_MOE_CODEC_CONTRACT.md)
 - [Universal radical-gate v9 checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_V9.md)
+- [ORBIT–MERA–RCC proposal research assessment and corrected entropy-census gate](docs/ORBIT_MERA_RCC_RESEARCH_ASSESSMENT_2026-09-01.md)
+- [ORBIT/MPS source-model checkpoint: synthetic pass and audited production blocks](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_ORBIT_MPS.md)
+- [Source-free nonlocal WFA mechanism proof](research/nonlocal_wfa_global_state_synthetic_v0/README.md)
+- [Blocked dense-HMM census audit](research/tied_mps_entropy_census_stage0_v0_independent_source_audit_20260901/AUDIT_REPORT_4E85.md)
+- [Blocked exact-unifilar SC census audit](research/unifilar_wfa_entropy_census_stage0_v1_independent_audit/AUDIT_REPORT.md)
+- [Blocked raw-label copula census audit](research/label_copula_census_stage0_v0_independent_audit/AUDIT_REPORT.md)
 
 Verify the source-free compact checkpoint:
 

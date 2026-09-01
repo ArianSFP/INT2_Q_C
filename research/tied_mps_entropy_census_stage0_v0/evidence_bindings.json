@@ -1,0 +1,67 @@
+{
+  "schema": "tied-mps-entropy-census-evidence-bindings-v0",
+  "rows": [
+    {
+      "path": "docs/UNIVERSAL_SWIGLU_MOE_CODEC_CONTRACT.md",
+      "bytes": 6073,
+      "sha256": "0c0941a2e38dbb4e043db91eda3eb500a5989f4c6c23aa4a4fa61e1ab11d860e",
+      "use": "normative universality, rate, read and scientific-promotion contract"
+    },
+    {
+      "path": "docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_V9.md",
+      "bytes": 12682,
+      "sha256": "9cbe9f51ce8868f861fcfda703977c8eb86adb4ec12c8f48be6cac771d399ae8",
+      "use": "current finite and composite frontiers plus non-additivity boundary"
+    },
+    {
+      "path": "research/universal_causal_noise_shaping_syndrome_mdl_nogo_v0/derivation.json",
+      "bytes": 6928,
+      "sha256": "096ff80b0a3fa4b0cd58e8734953a0f20f361cc33bbe6b959a71f00a338fbe69",
+      "use": "prior finite-context, syndrome and LZ/MDL scoped no-go; does not close hidden-state HMM"
+    },
+    {
+      "path": "research/bitplane_context/agent_bitplane_context_report.md",
+      "bytes": 6193,
+      "sha256": "fa9a2db49e81a3c3b817d5daa94cac925ec600bd04bd7083bb272508764f08da",
+      "use": "local categorical-context evidence and explicit long-memory claim boundary"
+    },
+    {
+      "path": "research/nonparametric_rd/qwen_nonparametric_ba_summary.json",
+      "bytes": 7665,
+      "sha256": "afb2daec6865d21483b745d3bf1a33426f53b8d55f671341b1e4c90069f5cfe4",
+      "use": "nonparametric scalar/adjacent-vector rate-distortion negative evidence"
+    },
+    {
+      "path": "research/additive_vq/final_xklt/verification_receipt.json",
+      "bytes": 627,
+      "sha256": "de35fdc3533531e33ac6d1bb5d1dbda683a127b4acfffc5c412f45945bd521d3",
+      "use": "additive residual VQ negative evidence"
+    },
+    {
+      "path": "research/ravel_decoded_residual_lut_stage0_v1_independent_result_audit_20260901/audit_receipt.json",
+      "bytes": 2988,
+      "sha256": "b4595cecaba95b22ec9ab727b0f7e83b749ca77bb11337897e0ad40127e37bfe",
+      "use": "decoded-feature conditional-mean negative evidence"
+    },
+    {
+      "path": "research/same_layer_expert_alignment_superoracle_v0_independent_result_audit_20260901/audit_receipt.json",
+      "bytes": 1764,
+      "sha256": "55bf52ea46986f9d29a59ec2fc300b67f6985934608910078dc4e92788310304",
+      "use": "same-layer common-component opportunity for Gray-Wyner critique"
+    },
+    {
+      "path": "research/neural_flow_oracle/README.md",
+      "bytes": 6508,
+      "sha256": "6eeefb58b21ec8d2fb44b11530abeeea2c3303a070ad9003e7cdeab3d0027684",
+      "use": "prior nonlinear flow and shared-basis scoped evidence"
+    }
+  ],
+  "seal_time_access": {
+    "bound_metadata_artifacts_opened_or_hashed": 9,
+    "model_payloads": 0,
+    "decoded_finite_streams": 0,
+    "control_streams": 0,
+    "gpu_jobs": 0
+  },
+  "boundary": "These hashes bind prior committed metadata evidence only. They are not decoder side information and are not added as gains."
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "unifilar-wfa-source-manifest-v1",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "members": [
+    {
+      "name": "cupy_backend.py",
+      "bytes": 9593,
+      "sha256": "e01f4aaf4854f581cb100fc12c1e595b0306b5213b6333a087135fc327effd28"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 9305,
+      "sha256": "21c4fdcb194a3082a445a7c8b9dc4fdc5b862e290c072a9d8450f564a422e632"
+    },
+    {
+      "name": "fixture_long_memory.py",
+      "bytes": 4303,
+      "sha256": "21eb6e8002a7b2876eb02a93155f4091eef59b5b1b318c6d4025a883e09c2e09"
+    },
+    {
+      "name": "README.md",
+      "bytes": 7471,
+      "sha256": "d05d70468a49dd88722677712fd2f3d085c769382ed87febe47db8d47b0548ee"
+    },
+    {
+      "name": "stage0_census.py",
+      "bytes": 29515,
+      "sha256": "073fa298593f92219e34cd63e837030d06fef04ab66826d76aae9361113b797c"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 10449,
+      "sha256": "976e23d842ab928249291b48c80eae1720793d14f80745e42a530b2b2c7c51d3"
+    },
+    {
+      "name": "uwfa_common.py",
+      "bytes": 30979,
+      "sha256": "fe52bb4f8ae942ad37615f3b6c6b1a04e57d8054bcab9a8216badd1a46cf4768"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 6440,
+      "sha256": "0ca73c5250394d918de4c03e9595391a03d7f9a496b0fd414536caff081e8612"
+    }
+  ],
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_or_selected_stream_opened": false,
+    "gaussian_control_opened": false,
+    "numpy_imported": false,
+    "cupy_imported": false,
+    "cuda_initialized": false,
+    "gpu_job_launched": false
+  },
+  "payload_authority_granted": false
+}

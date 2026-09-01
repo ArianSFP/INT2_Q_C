@@ -1,0 +1,48 @@
+{
+  "schema": "tied-mps-entropy-census-independent-source-review-v0",
+  "status": "BLOCK_SOURCE_MANIFEST_CLOSURE_MISMATCH",
+  "reviewed_source_manifest_sha256": "a469aeeabdeacc3927b79cf7b5b671b4dae1b96061bc0d0e550e54fa8ed36aa3",
+  "expected_status_for_payload_authority": "PASS_INDEPENDENT_SOURCE_REVIEW",
+  "payload_authority_granted": false,
+  "authorization_token_granted": null,
+  "failure_stage": "manifest closure before implementation execution",
+  "mismatches": [
+    {
+      "name": "stage0_census.py",
+      "manifest_bytes": 38989,
+      "observed_bytes": 39423,
+      "manifest_sha256": "351905053ab9df0532ef4638a2053c9823432d23971789418976a74293c7ba57",
+      "observed_sha256": "d27c181fb69462091a27eaf48072ce29d7f62d9f84b7ddebf7357249f1798f41"
+    },
+    {
+      "name": "test_source_only.py",
+      "manifest_bytes": 9121,
+      "observed_bytes": 9577,
+      "manifest_sha256": "2ee97b2820bf6afe0b4c9fd640bcad9194cf223002641e5f9ff2281a82434d3f",
+      "observed_sha256": "b7535de22fac395ef3316e84589cf84848e5a7d6d8c9218b76e042dc54d1ebad"
+    },
+    {
+      "name": "verify_source.py",
+      "manifest_bytes": 11760,
+      "observed_bytes": 12227,
+      "manifest_sha256": "ba8a94ebcc9cbf712852809b21299c0944fd5b61cf9e8f9b2f25eeff77cca02",
+      "observed_sha256": "5b4d37ea0cc9ce214d36ea6e438818c0c8b05dac523d62d91ef4d5479a51a682"
+    }
+  ],
+  "matched_declared_members": [
+    "README.md",
+    "design_lock.json",
+    "evidence_bindings.json",
+    "mps_common.py"
+  ],
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_opened_statted_or_hashed": false,
+    "extracted_decision_arrays_opened_statted_or_hashed": false,
+    "gaussian_controls_opened_statted_or_hashed": false,
+    "cupy_imported": false,
+    "cuda_initialized": false,
+    "gpu_job_launched": false
+  },
+  "conclusion": "The manifest file itself matched the supplied A469 digest, but three declared members did not match their sealed byte counts or hashes. This source version is not closed and cannot authorize any payload access or numeric run."
+}

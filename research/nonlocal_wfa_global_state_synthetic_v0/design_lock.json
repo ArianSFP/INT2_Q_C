@@ -1,0 +1,70 @@
+{
+  "schema": "nonlocal-wfa-global-state-synthetic-design-v0",
+  "status": "SOURCE_FREE_SYNTHETIC_ONLY_NO_PAYLOAD_AUTHORITY",
+  "architecture": {
+    "family": "tied nonnegative unifilar weighted finite automaton/HMM",
+    "alphabet": 2,
+    "block_length": 32,
+    "body_symbols": 26,
+    "checksum_symbols": 6,
+    "candidate_syndrome_bits": [0, 1, 2, 3, 4, 5, 6],
+    "candidate_chi": [1, 2, 4, 8, 16, 32, 64],
+    "contexts": "six body residue classes and six checksum ordinals, all derived from coordinate mod 32",
+    "normalization": "for every c,i, sum_(y,j) A[c,y,i,j]=65535 exactly",
+    "fit": "Jeffreys-smoothed transition weights on train; select topology on untouched validation after physical model-page and termination charge",
+    "reset": "every 32 public coordinates"
+  },
+  "universality": {
+    "allowed": [
+      "versioned codec rule",
+      "role and integer shape",
+      "public coordinate modulo 32",
+      "serialized global model packet",
+      "causally decoded WFA state"
+    ],
+    "forbidden": [
+      "model/checkpoint/layer/expert identity as hidden key",
+      "provenance or external reference weights",
+      "router or activation data",
+      "source weights or future symbols",
+      "unserialized fitted state"
+    ]
+  },
+  "synthetic_fixture": {
+    "source": "26 iid fair body bits followed by six disjoint residue-class parity checks",
+    "matched_control": "32 iid fair bits with identical per-site marginals",
+    "suffix_population_result": "all suffix depths <=25 require exactly 1 bit/symbol",
+    "chi64_population_result": "26/32=0.8125 bit/symbol",
+    "gross_opportunity_bps": 0.1875
+  },
+  "physical_ledger": {
+    "q16_total": 65535,
+    "header_bytes": 256,
+    "page_bytes": 4096,
+    "local_frame_header_bytes": 256,
+    "sparse_model_formula_bytes": "256 + 2*chi + C*2*chi + 2*C*chi",
+    "dense_equivalent_formula_bytes": "256 + 2*chi + 2*C*2*chi^2",
+    "cold_rule": "one global model page union plus worst-unaligned contiguous selected local frame",
+    "scope": "synthetic raw one-bit stream only"
+  },
+  "compute": {
+    "generic_dense_forward": "O(N*chi^2)",
+    "unifilar_prototype_forward": "O(N)",
+    "gpu": "no GPU path in v0; any future GPU path must use CuPy only"
+  },
+  "capacity": {
+    "nonnegative_cut_bound": "I(left;right)<=log2(chi)",
+    "born_rough_cut_bound": "approximately <=2*log2(chi)",
+    "required_bits_at_length_2048": 313.1186523416473,
+    "single_parity_bpw_at_length_2048": 0.00048828125,
+    "warning": "cut information does not upper-bound total savings when a state is queried repeatedly or reset and reused"
+  },
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "production_decision_stream_opened": false,
+    "cupy_imported": false,
+    "cuda_initialized": false,
+    "gpu_job_launched": false
+  },
+  "claim_boundary": "A negative closes only this reset-32, unifilar parity-bank, chi<=64 finite packet; it does not close arbitrary nonnegative/Born MPS, TTN, non-unifilar HMM, longer reset, other public context, or lossy RD gains. A synthetic pass is not Qwen evidence."
+}

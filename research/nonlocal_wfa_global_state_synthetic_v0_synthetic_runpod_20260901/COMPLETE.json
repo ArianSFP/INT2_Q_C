@@ -1,0 +1,10 @@
+{
+  "completion_sha256": "41cdfe25f2e341b3867a63df378834f60eb03303c7bd5dd3de1a3e0b9a8e865b",
+  "control_model_sha256": "9d12ee89baf24d5e83fcf9f3519a35f6572971c936a2479caeefb0cd3eb2e8d0",
+  "control_payload_sha256": "c9f8a287c4877bd140f25d08042672f06cd250fd742d635cb5b127c033860f60",
+  "schema": "nonlocal-wfa-global-state-synthetic-complete-v0",
+  "status": "PASS_SOURCE_FREE_SYNTHETIC_ONLY",
+  "structured_model_sha256": "ab54b9dd24959e4deeed3aa3de4dae319b31bdd71a8a1cda99393e8b08a4a0ba",
+  "structured_payload_sha256": "b2f32f23bc03cd5636224f97d80d3808bba554ab02447b6d1f7cb859caf6c740",
+  "synthetic_result_sha256": "9359dfbcee026a9ea02b425725d0c5e8c2b5289cd12912a4532993ddf765ad8a"
+}

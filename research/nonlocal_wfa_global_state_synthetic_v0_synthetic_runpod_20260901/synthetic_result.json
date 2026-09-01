@@ -1,0 +1,793 @@
+{
+  "access_attestation": {
+    "decoded_production_symbol_stream_opened": false,
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "runpod_job_launched": false
+  },
+  "capacity_sanity": {
+    "block_length": 2048,
+    "chi64_born_rough_cut_bound_bits": 12.0,
+    "chi64_nonnegative_cut_state_bits": 6.0,
+    "fixture_constraints_per_2048_if_reset_every_32": 384,
+    "fixture_constraints_per_32_symbols": 6,
+    "fixture_gross_saving_bps": 0.1875,
+    "interpretation": "I(left;right)<=log2(chi) for one nonnegative factorization cut. This limits independent information crossing that cut, not total sequence savings: a small state may be queried repeatedly or reset and reused across blocks.",
+    "single_parity_saving_bits_per_block": 1,
+    "single_parity_saving_bpw": 0.00048828125,
+    "standalone_required_bits_per_block": 313.11865234004887,
+    "standalone_required_bpw": 0.1528899669629145
+  },
+  "claim_boundary": {
+    "negative_run_could_kill": "Only the frozen tied, causal, quantized, reset-32 parity-bank WFA candidates k<=6 under this fitting/selection and packet ledger.",
+    "negative_run_could_not_kill": "Arbitrary HMM/MPS/TTN priors, chi>64, longer resets, non-unifilar states, Born models, learned disentanglers, other public contexts, or lossy RD gains.",
+    "not_claimed": "No Qwen entropy saving, no universal SwiGLU-MoE target pass, no current-codec cold-read result, and no authorization to open a model payload.",
+    "positive": "The tied nonnegative WFA class can expose a genuinely nonlocal source law whose site marginals and every bounded suffix d<=25 are uninformative."
+  },
+  "compute_ledger": {
+    "dense_equivalent_storage": "O(C*chi^2)",
+    "generic_dense_forward_time": "O(N*chi^2)",
+    "generic_dense_forward_work_per_symbol": "two chi-by-chi nonnegative matrix-vector products",
+    "prototype_sparse_storage": "O(C*chi)",
+    "prototype_unifilar_forward_time": "O(N)",
+    "training_search": "seven fixed universal parity-bank topologies, k=0..6; all fitted on train and selected on untouched validation"
+  },
+  "detected_control_minus_structured_logical_bps": 0.18323950223914653,
+  "environment": {
+    "cuda_initialized": false,
+    "cupy_imported": false,
+    "gpu_path_present": false,
+    "numpy": "2.1.2",
+    "python": "3.12.3"
+  },
+  "fixture": {
+    "block_length": 32,
+    "body_symbols": 26,
+    "gross_population_saving_bps": 0.1875,
+    "independent_nonlocal_checks": 6,
+    "standalone_required_bpw_reference_only": 0.1528899669629145
+  },
+  "matched_control": {
+    "actual_arithmetic_bps": 1.000091552734375,
+    "actual_arithmetic_meaningful_bits": 262162,
+    "actual_arithmetic_payload_bytes": 32771,
+    "amortized_experts": 8,
+    "best_suffix_logical_bps": 1.000067343545345,
+    "candidate_rows": [
+      {
+        "chi": 1,
+        "logical_bits": 262161.64173129655,
+        "logical_bps": 1.0000672978641378,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 266289.64173129655,
+        "physical_proxy_bps": 1.0158143681766378,
+        "syndrome_bits": 0,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 2,
+        "logical_bits": 262171.5717050492,
+        "logical_bps": 1.0001051777078598,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 266299.5717050492,
+        "physical_proxy_bps": 1.0158522480203598,
+        "syndrome_bits": 1,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 4,
+        "logical_bits": 262207.74784199725,
+        "logical_bps": 1.0002431787185564,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 266335.74784199725,
+        "physical_proxy_bps": 1.0159902490310564,
+        "syndrome_bits": 2,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 8,
+        "logical_bits": 262252.0236161588,
+        "logical_bps": 1.000412077393184,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 266380.0236161588,
+        "physical_proxy_bps": 1.016159147705684,
+        "syndrome_bits": 3,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 16,
+        "logical_bits": 262385.29287091224,
+        "logical_bps": 1.0009204592548837,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 266513.29287091224,
+        "physical_proxy_bps": 1.0166675295673837,
+        "syndrome_bits": 4,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 32,
+        "logical_bits": 262677.7896473585,
+        "logical_bps": 1.0020362459081975,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 266805.7896473585,
+        "physical_proxy_bps": 1.0177833162206975,
+        "syndrome_bits": 5,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 64,
+        "logical_bits": 263274.5354433287,
+        "logical_bps": 1.0043126504643582,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 267402.5354433287,
+        "physical_proxy_bps": 1.0200597207768582,
+        "syndrome_bits": 6,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      }
+    ],
+    "constrained": false,
+    "exact_normalization_probe": {
+      "all_exactly_normalized": true,
+      "steps": [
+        {
+          "context": 0,
+          "p0": [
+            33011,
+            65535
+          ],
+          "p1": [
+            32524,
+            65535
+          ],
+          "position": 0
+        },
+        {
+          "context": 1,
+          "p0": [
+            32831,
+            65535
+          ],
+          "p1": [
+            32704,
+            65535
+          ],
+          "position": 1
+        },
+        {
+          "context": 2,
+          "p0": [
+            32843,
+            65535
+          ],
+          "p1": [
+            32692,
+            65535
+          ],
+          "position": 2
+        },
+        {
+          "context": 3,
+          "p0": [
+            11013,
+            21845
+          ],
+          "p1": [
+            10832,
+            21845
+          ],
+          "position": 3
+        },
+        {
+          "context": 4,
+          "p0": [
+            6575,
+            13107
+          ],
+          "p1": [
+            6532,
+            13107
+          ],
+          "position": 4
+        },
+        {
+          "context": 5,
+          "p0": [
+            6532,
+            13107
+          ],
+          "p1": [
+            6575,
+            13107
+          ],
+          "position": 5
+        },
+        {
+          "context": 0,
+          "p0": [
+            33011,
+            65535
+          ],
+          "p1": [
+            32524,
+            65535
+          ],
+          "position": 6
+        },
+        {
+          "context": 1,
+          "p0": [
+            32831,
+            65535
+          ],
+          "p1": [
+            32704,
+            65535
+          ],
+          "position": 7
+        }
+      ]
+    },
+    "logical_bits": 262161.64173129655,
+    "logical_bps": 1.0000672978641378,
+    "model_ledger": {
+      "chi": 1,
+      "contexts": 12,
+      "dense_equivalent_matrix_u16_bytes": 48,
+      "dense_equivalent_page_bytes": 4096,
+      "dense_equivalent_physical_bytes": 306,
+      "header_bytes": 256,
+      "initial_u16_bytes": 2,
+      "sparse_frequency_u16_bytes": 24,
+      "sparse_packet_sha256": "9d12ee89baf24d5e83fcf9f3519a35f6572971c936a2479caeefb0cd3eb2e8d0",
+      "sparse_page_bytes": 4096,
+      "sparse_physical_bytes": 306,
+      "sparse_successor_u8_bytes": 24
+    },
+    "name": "matched_iid_control",
+    "packet_sha256": "9d12ee89baf24d5e83fcf9f3519a35f6572971c936a2479caeefb0cd3eb2e8d0",
+    "payload_sha256": "c9f8a287c4877bd140f25d08042672f06cd250fd742d635cb5b127c033860f60",
+    "population_reason": "At checksum j, suffix depth d<=25 omits unique iid body bit j. Earlier checks use disjoint residue classes, so the target checksum remains fair.",
+    "population_suffix_bps_depth_le_25": 1.0,
+    "roundtrip_exact": true,
+    "selected_chi": 1,
+    "selected_syndrome_bits": 0,
+    "stream_ledger": {
+      "aggregate_physical_bytes": 268312,
+      "aggregate_saving_bps": -0.015716552734375,
+      "baseline_raw_one_bit_aggregate_bytes": 264192,
+      "cold_below_two": true,
+      "expert_count": 8,
+      "global_model_page_bytes": 4096,
+      "local_frame_header_bytes": 256,
+      "local_physical_bytes_per_expert": 33027,
+      "payload_bytes_per_expert": 32771,
+      "scope": "synthetic binary-stream ledger only; not a Qwen/current-codec read claim",
+      "symbols_per_expert": 262144,
+      "synthetic_cold_read_amplification_vs_raw_one_bit_frame": 1.1,
+      "synthetic_cold_read_bytes": 45056,
+      "worst_unaligned_baseline_page_union_bytes": 40960,
+      "worst_unaligned_local_page_union_bytes": 40960
+    },
+    "suffix_rows": [
+      {
+        "depth": 0,
+        "logical_bits": 262161.65370635095,
+        "logical_bps": 1.000067343545345,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 280,
+        "states": 1
+      },
+      {
+        "depth": 1,
+        "logical_bits": 262183.9509236703,
+        "logical_bps": 1.0001524006792843,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 304,
+        "states": 2
+      },
+      {
+        "depth": 2,
+        "logical_bits": 262223.63972028764,
+        "logical_bps": 1.0003038014232164,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 352,
+        "states": 4
+      },
+      {
+        "depth": 3,
+        "logical_bits": 262314.0818739546,
+        "logical_bps": 1.000648810859507,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 448,
+        "states": 8
+      },
+      {
+        "depth": 4,
+        "logical_bits": 262504.1548217281,
+        "logical_bps": 1.001373881613648,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 640,
+        "states": 16
+      },
+      {
+        "depth": 5,
+        "logical_bits": 262830.9629417168,
+        "logical_bps": 1.0026205556553527,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 1024,
+        "states": 32
+      },
+      {
+        "depth": 6,
+        "logical_bits": 263359.05621934874,
+        "logical_bps": 1.0046350716375303,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 1792,
+        "states": 64
+      },
+      {
+        "depth": 7,
+        "logical_bits": 264428.5591122607,
+        "logical_bps": 1.0087149013986996,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 3328,
+        "states": 128
+      },
+      {
+        "depth": 8,
+        "logical_bits": 266923.39890898694,
+        "logical_bps": 1.0182319599494436,
+        "page_table_bytes": 8192,
+        "raw_q16_table_bytes": 6400,
+        "states": 256
+      },
+      {
+        "depth": 9,
+        "logical_bits": 271432.4845778102,
+        "logical_bps": 1.0354327567207726,
+        "page_table_bytes": 16384,
+        "raw_q16_table_bytes": 12544,
+        "states": 512
+      },
+      {
+        "depth": 10,
+        "logical_bits": 278923.340213677,
+        "logical_bps": 1.0640081032321052,
+        "page_table_bytes": 28672,
+        "raw_q16_table_bytes": 24832,
+        "states": 1024
+      },
+      {
+        "depth": 11,
+        "logical_bits": 287579.07153512596,
+        "logical_bps": 1.0970270978360213,
+        "page_table_bytes": 53248,
+        "raw_q16_table_bytes": 49408,
+        "states": 2048
+      },
+      {
+        "depth": 12,
+        "logical_bits": 290423.56813736656,
+        "logical_bps": 1.107877991246668,
+        "page_table_bytes": 102400,
+        "raw_q16_table_bytes": 98560,
+        "states": 4096
+      },
+      {
+        "depth": 13,
+        "logical_bits": 286076.05926828645,
+        "logical_bps": 1.0912935610515078,
+        "page_table_bytes": 200704,
+        "raw_q16_table_bytes": 196864,
+        "states": 8192
+      },
+      {
+        "depth": 14,
+        "logical_bits": 279582.8802486093,
+        "logical_bps": 1.0665240487999317,
+        "page_table_bytes": 397312,
+        "raw_q16_table_bytes": 393472,
+        "states": 16384
+      },
+      {
+        "depth": 15,
+        "logical_bits": 274770.0334657309,
+        "logical_bps": 1.0481644953374134,
+        "page_table_bytes": 790528,
+        "raw_q16_table_bytes": 786688,
+        "states": 32768
+      },
+      {
+        "depth": 16,
+        "logical_bits": 271925.49284961366,
+        "logical_bps": 1.0373134340271517,
+        "page_table_bytes": 1576960,
+        "raw_q16_table_bytes": 1573120,
+        "states": 65536
+      }
+    ],
+    "symbols_per_expert": 262144,
+    "train_blocks": 4096,
+    "validation_blocks": 8192
+  },
+  "receipt_sha256": "3b691a54e03abfc4b4e99f011d706de4ff2a2d8064749bb99ff3069bdde6067e",
+  "schema": "nonlocal-wfa-global-state-synthetic-v0",
+  "status": "PASS_SOURCE_FREE_SYNTHETIC_ONLY",
+  "structured": {
+    "actual_arithmetic_bps": 0.81683349609375,
+    "actual_arithmetic_meaningful_bits": 214128,
+    "actual_arithmetic_payload_bytes": 26766,
+    "amortized_experts": 8,
+    "best_suffix_logical_bps": 1.0000543059754914,
+    "candidate_rows": [
+      {
+        "chi": 1,
+        "logical_bits": 262158.19637054694,
+        "logical_bps": 1.0000541548559072,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 266286.19637054694,
+        "physical_proxy_bps": 1.0158012251684072,
+        "syndrome_bits": 0,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 2,
+        "logical_bits": 253980.07236344338,
+        "logical_bps": 0.9688570875680671,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 258108.07236344338,
+        "physical_proxy_bps": 0.9846041578805671,
+        "syndrome_bits": 1,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 4,
+        "logical_bits": 245823.05778219935,
+        "logical_bps": 0.9377405463493322,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 249951.05778219935,
+        "physical_proxy_bps": 0.9534876166618322,
+        "syndrome_bits": 2,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 8,
+        "logical_bits": 237701.0066547488,
+        "logical_bps": 0.9067573801221802,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 241829.0066547488,
+        "physical_proxy_bps": 0.9225044504346802,
+        "syndrome_bits": 3,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 16,
+        "logical_bits": 229674.4106553469,
+        "logical_bps": 0.8761383463109852,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 233802.4106553469,
+        "physical_proxy_bps": 0.8918854166234852,
+        "syndrome_bits": 4,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 32,
+        "logical_bits": 221784.22684432796,
+        "logical_bps": 0.8460396837018126,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 225912.22684432796,
+        "physical_proxy_bps": 0.8617867540143126,
+        "syndrome_bits": 5,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      },
+      {
+        "chi": 64,
+        "logical_bits": 214126.50565631772,
+        "logical_bps": 0.8168277956249913,
+        "model_page_bits_per_expert": 4096.0,
+        "physical_proxy_bits_per_expert": 218254.50565631772,
+        "physical_proxy_bps": 0.8325748659374913,
+        "syndrome_bits": 6,
+        "termination_bits_per_expert": 32.0,
+        "validation_symbols": 262144
+      }
+    ],
+    "constrained": true,
+    "exact_normalization_probe": {
+      "all_exactly_normalized": true,
+      "steps": [
+        {
+          "context": 0,
+          "p0": [
+            2199,
+            4369
+          ],
+          "p1": [
+            2170,
+            4369
+          ],
+          "position": 0
+        },
+        {
+          "context": 1,
+          "p0": [
+            383,
+            771
+          ],
+          "p1": [
+            388,
+            771
+          ],
+          "position": 1
+        },
+        {
+          "context": 2,
+          "p0": [
+            10661,
+            21845
+          ],
+          "p1": [
+            11184,
+            21845
+          ],
+          "position": 2
+        },
+        {
+          "context": 3,
+          "p0": [
+            6781,
+            13107
+          ],
+          "p1": [
+            6326,
+            13107
+          ],
+          "position": 3
+        },
+        {
+          "context": 4,
+          "p0": [
+            11721,
+            21845
+          ],
+          "p1": [
+            10124,
+            21845
+          ],
+          "position": 4
+        },
+        {
+          "context": 5,
+          "p0": [
+            11578,
+            21845
+          ],
+          "p1": [
+            10267,
+            21845
+          ],
+          "position": 5
+        },
+        {
+          "context": 0,
+          "p0": [
+            33968,
+            65535
+          ],
+          "p1": [
+            31567,
+            65535
+          ],
+          "position": 6
+        },
+        {
+          "context": 1,
+          "p0": [
+            11007,
+            21845
+          ],
+          "p1": [
+            10838,
+            21845
+          ],
+          "position": 7
+        }
+      ]
+    },
+    "logical_bits": 214126.50565631772,
+    "logical_bps": 0.8168277956249913,
+    "model_ledger": {
+      "chi": 64,
+      "contexts": 12,
+      "dense_equivalent_matrix_u16_bytes": 196608,
+      "dense_equivalent_page_bytes": 200704,
+      "dense_equivalent_physical_bytes": 196992,
+      "header_bytes": 256,
+      "initial_u16_bytes": 128,
+      "sparse_frequency_u16_bytes": 1536,
+      "sparse_packet_sha256": "ab54b9dd24959e4deeed3aa3de4dae319b31bdd71a8a1cda99393e8b08a4a0ba",
+      "sparse_page_bytes": 4096,
+      "sparse_physical_bytes": 3456,
+      "sparse_successor_u8_bytes": 1536
+    },
+    "name": "six_nonlocal_parities",
+    "packet_sha256": "ab54b9dd24959e4deeed3aa3de4dae319b31bdd71a8a1cda99393e8b08a4a0ba",
+    "payload_sha256": "b2f32f23bc03cd5636224f97d80d3808bba554ab02447b6d1f7cb859caf6c740",
+    "population_reason": "At checksum j, suffix depth d<=25 omits unique iid body bit j. Earlier checks use disjoint residue classes, so the target checksum remains fair.",
+    "population_suffix_bps_depth_le_25": 1.0,
+    "roundtrip_exact": true,
+    "selected_chi": 64,
+    "selected_syndrome_bits": 6,
+    "stream_ledger": {
+      "aggregate_physical_bytes": 220272,
+      "aggregate_saving_bps": 0.16754150390625,
+      "baseline_raw_one_bit_aggregate_bytes": 264192,
+      "cold_below_two": true,
+      "expert_count": 8,
+      "global_model_page_bytes": 4096,
+      "local_frame_header_bytes": 256,
+      "local_physical_bytes_per_expert": 27022,
+      "payload_bytes_per_expert": 26766,
+      "scope": "synthetic binary-stream ledger only; not a Qwen/current-codec read claim",
+      "symbols_per_expert": 262144,
+      "synthetic_cold_read_amplification_vs_raw_one_bit_frame": 0.9,
+      "synthetic_cold_read_bytes": 36864,
+      "worst_unaligned_baseline_page_union_bytes": 40960,
+      "worst_unaligned_local_page_union_bytes": 32768
+    },
+    "suffix_rows": [
+      {
+        "depth": 0,
+        "logical_bits": 262158.2359856392,
+        "logical_bps": 1.0000543059754914,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 280,
+        "states": 1
+      },
+      {
+        "depth": 1,
+        "logical_bits": 262167.52153299534,
+        "logical_bps": 1.0000897275276006,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 304,
+        "states": 2
+      },
+      {
+        "depth": 2,
+        "logical_bits": 262197.56264526607,
+        "logical_bps": 1.000204325276436,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 352,
+        "states": 4
+      },
+      {
+        "depth": 3,
+        "logical_bits": 262268.79659699486,
+        "logical_bps": 1.0004760612373156,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 448,
+        "states": 8
+      },
+      {
+        "depth": 4,
+        "logical_bits": 262399.0289307573,
+        "logical_bps": 1.0009728581648152,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 640,
+        "states": 16
+      },
+      {
+        "depth": 5,
+        "logical_bits": 262675.7954057442,
+        "logical_bps": 1.0020286384801644,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 1024,
+        "states": 32
+      },
+      {
+        "depth": 6,
+        "logical_bits": 263324.55330281093,
+        "logical_bps": 1.0045034534561574,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 1792,
+        "states": 64
+      },
+      {
+        "depth": 7,
+        "logical_bits": 264410.7939527709,
+        "logical_bps": 1.0086471326933704,
+        "page_table_bytes": 4096,
+        "raw_q16_table_bytes": 3328,
+        "states": 128
+      },
+      {
+        "depth": 8,
+        "logical_bits": 266686.93589679623,
+        "logical_bps": 1.0173299251434182,
+        "page_table_bytes": 8192,
+        "raw_q16_table_bytes": 6400,
+        "states": 256
+      },
+      {
+        "depth": 9,
+        "logical_bits": 271351.93204772467,
+        "logical_bps": 1.035125473204516,
+        "page_table_bytes": 16384,
+        "raw_q16_table_bytes": 12544,
+        "states": 512
+      },
+      {
+        "depth": 10,
+        "logical_bits": 278675.4307878247,
+        "logical_bps": 1.0630624038231837,
+        "page_table_bytes": 28672,
+        "raw_q16_table_bytes": 24832,
+        "states": 1024
+      },
+      {
+        "depth": 11,
+        "logical_bits": 286798.3309187934,
+        "logical_bps": 1.094048808741735,
+        "page_table_bytes": 53248,
+        "raw_q16_table_bytes": 49408,
+        "states": 2048
+      },
+      {
+        "depth": 12,
+        "logical_bits": 290068.511488009,
+        "logical_bps": 1.1065235576172219,
+        "page_table_bytes": 102400,
+        "raw_q16_table_bytes": 98560,
+        "states": 4096
+      },
+      {
+        "depth": 13,
+        "logical_bits": 285823.6381730365,
+        "logical_bps": 1.0903306509896717,
+        "page_table_bytes": 200704,
+        "raw_q16_table_bytes": 196864,
+        "states": 8192
+      },
+      {
+        "depth": 14,
+        "logical_bits": 279404.17515780433,
+        "logical_bps": 1.0658423429786847,
+        "page_table_bytes": 397312,
+        "raw_q16_table_bytes": 393472,
+        "states": 16384
+      },
+      {
+        "depth": 15,
+        "logical_bits": 274446.1284385801,
+        "logical_bps": 1.046928895716019,
+        "page_table_bytes": 790528,
+        "raw_q16_table_bytes": 786688,
+        "states": 32768
+      },
+      {
+        "depth": 16,
+        "logical_bits": 271422.48462972895,
+        "logical_bps": 1.0353946099461706,
+        "page_table_bytes": 1576960,
+        "raw_q16_table_bytes": 1573120,
+        "states": 65536
+      }
+    ],
+    "symbols_per_expert": 262144,
+    "train_blocks": 4096,
+    "validation_blocks": 8192
+  },
+  "structured_aggregate_model_charged_saving_bps": 0.16754150390625
+}

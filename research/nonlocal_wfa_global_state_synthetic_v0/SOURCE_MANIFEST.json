@@ -1,0 +1,49 @@
+{
+  "schema": "nonlocal-wfa-global-state-source-manifest-v0",
+  "status": "SEALED_SOURCE_FREE_SYNTHETIC_ONLY_NO_PAYLOAD_AUTHORITY",
+  "files": [
+    {
+      "path": "design_lock.json",
+      "bytes": 3133,
+      "sha256": "3df094eb502491c9f02a4d02dfc2c4c878c447de40953f2d22c9bb3e23404859"
+    },
+    {
+      "path": "nonlocal_wfa.py",
+      "bytes": 26716,
+      "sha256": "57304b9e16fc76ace7cc7f7b53c2eac70b41f7c8f6d2f974802baa3083e1371b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4167,
+      "sha256": "56739f5447a720527c56b6247849bc003c2b260a97b4b8d8ff9dd08633383c1d"
+    },
+    {
+      "path": "run_synthetic.py",
+      "bytes": 8883,
+      "sha256": "38636d3fe1a3d7d94db2d7bf6ad21552773e27e70eef31d32a0f1b5f74c7fdfa"
+    },
+    {
+      "path": "test_source_only.py",
+      "bytes": 4789,
+      "sha256": "bff9879a609f93450a0104fcf564d65124a0c1e5a62590a5ada27e6a78a18c49"
+    },
+    {
+      "path": "verify_result.py",
+      "bytes": 4453,
+      "sha256": "e4f077eac08760fad04f01eecd52d8f9365ec828fb9f520e3203f7249d93b7e9"
+    },
+    {
+      "path": "verify_source.py",
+      "bytes": 3103,
+      "sha256": "c9edfac7cfa6306c81eea86b42e79c295b03cababfc09ec42b1fc0215cd3c901"
+    }
+  ],
+  "access_attestation": {
+    "model_payloads": 0,
+    "production_symbol_streams": 0,
+    "external_reference_checkpoints": 0,
+    "gpu_jobs": 0
+  },
+  "authorization": null,
+  "boundary": "This manifest authenticates a source-free synthetic prototype only and grants no permission to open a Qwen or other model payload."
+}

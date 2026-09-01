@@ -1,0 +1,72 @@
+{
+  "schema": "unifilar-wfa-entropy-census-independent-hostile-tests-v1",
+  "status": "BLOCK_SOURCE_REVIEW",
+  "reviewed_source_manifest_sha256": "1dbea65550d879c3cc6ca81974223d251d669c15f5af17fa9681800cf03cf9ff",
+  "payload_authority_granted": false,
+  "passing_evidence": {
+    "manifest_closure": "PASS: 8/8 members, exact bytes and hashes, no extras, no leaf symlinks",
+    "producer_tests": "PASS: 14/14 source-only tests",
+    "transition_cases": 75600,
+    "candidate_cells": 150,
+    "q016_cases": 6,
+    "exhaustive_arithmetic_cases": 2046,
+    "actual_model_and_arithmetic_roundtrip": true,
+    "reset_before_t0_emission": true,
+    "cpu_cupy": "PASS_ALL_150_CPU_CUPY_EXACT",
+    "cpu_cupy_streams": 4,
+    "cpu_cupy_symbols_per_cell": 4964,
+    "nested_folds": 9,
+    "nested_deterministic_replay": true,
+    "identity_relabel_probability_input_invariant": true,
+    "valid_synthetic_baseline_exactly_replayed": true,
+    "tampered_synthetic_baseline_rejected": true,
+    "long_memory_fixture_separation_bits_per_symbol": 0.037607828776041664,
+    "control_load_before_fit_order": true,
+    "status_precedence": true,
+    "model_bytes_and_page_formula": true
+  },
+  "measured_count_kernel_scaling": [
+    {"symbols": 131072, "seconds": 0.001325872028246522},
+    {"symbols": 262144, "seconds": 0.00258522795047611},
+    {"symbols": 524288, "seconds": 0.005102478084154427}
+  ],
+  "complexity_scope": {
+    "fixed_cell": "O(N)",
+    "fixed_150_cell_bank": "O(150*N)",
+    "full_nested_protocol": "O(outer_folds*150*N), so not globally O(N) when fold count grows"
+  },
+  "blocking_findings": [
+    {
+      "id": "AUTHENTICATED_SOURCE_TOCTOU",
+      "evidence": "bootstrap_source hashes and closes source leaves, then load_module reopens them by pathname; a temp-clone member replaced after authentication executed successfully"
+    },
+    {
+      "id": "SYMLINK_ANCESTOR_NOT_PINNED",
+      "evidence": "leaf symlinks reject, but both bootstrap and HeldRegularFile accepted a regular leaf through a symlinked ancestor"
+    },
+    {
+      "id": "CURRENT_OBJECT_BYTES_NOT_BOUND_TO_ARTIFACT",
+      "evidence": "a sealed synthetic lock naming a 13-byte current artifact but current_object_bytes=10000000 passed load_panel and baseline replay"
+    },
+    {
+      "id": "SERIALIZED_MODEL_NOT_USED_BY_FINAL_ACCEPTANCE_DECODE",
+      "evidence": "replacing serialize_model with an all-0xFF same-length packet still let final_packet accept because decode used in-memory candidate/frequencies"
+    },
+    {
+      "id": "NO_LITERAL_FULL_PHYSICAL_CONTAINER",
+      "evidence": "only model, concatenated arithmetic payload, and result JSON are emitted; charged headers, directory, immutable state, rate padding, and placement are ledger-only"
+    },
+    {
+      "id": "MATCHED_GAUSSIAN_CONTROL_GEOMETRY_NOT_ENFORCED",
+      "evidence": "all controls replay before fitting, but no equality check binds source/control weights, expert/stream geometry, immutable bytes, or baseline physical geometry"
+    }
+  ],
+  "claim_boundary": "The frozen test covers current selected POLARIS/STRATA SC arithmetic decisions only. A miss cannot close arbitrary MPS, MERA, TTN, RCC, or source-coordinate quantizer-label copulas.",
+  "no_payload_access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_opened_statted_hashed_or_enumerated": false,
+    "extracted_selected_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_payload_opened_statted_hashed_or_enumerated": false,
+    "all_dynamic_inputs": "deterministic memory or temporary synthetic files"
+  }
+}

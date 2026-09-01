@@ -93,8 +93,10 @@ packet, keeping cold reads near `1x`.  A read amplification between `1x` and
 
 Every new family proceeds in this order:
 
-1. freeze the model-agnostic algorithm, all dimensions, seeds, fits and rate
-   ledgers before opening the evaluation payload;
+1. freeze the model-agnostic fitting rule, hyperparameter search space,
+   dimensions, seeds, promotion criteria and rate ledgers before opening the
+   evaluation payload; source-adaptive fitted values may be produced after
+   opening it only when their literal serialized representation is charged;
 2. run a source-leaking or otherwise dominant oracle and stop when its upper
    opportunity is certainly below the required gain;
 3. use matched Gaussian and structure-destroying controls when selection or
