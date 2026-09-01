@@ -1,0 +1,131 @@
+{
+  "schema": "unifilar-wfa-entropy-census-design-v2",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "frozen_date": "2026-09-02",
+  "objective": {
+    "standalone_exact_physical_saving_required_bpw": 0.15288996696291447,
+    "target_F_maximum": 0.8,
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "cold_read_amplification_exclusive_maximum": 2.0,
+    "authoritative_rate": "8*literal_container_bytes/shape_derived_weights",
+    "authoritative_F": "independently_audited_relative_mse*2^(2*authoritative_rate)"
+  },
+  "candidate_bank": {
+    "topologies": ["suffix", "xor_sketch", "modular_ones", "rolling_affine", "signed_saturating"],
+    "state_sizes": [2, 4, 8, 16, 32, 64],
+    "reset_lengths": [32, 128, 512, 2048, 4096],
+    "cells": 150,
+    "selector_bytes": 2,
+    "fit": "exact uint64 counts; Jeffreys half-count; integer nearest Q0.16 rounding; clamp 1..65535",
+    "reset_law": "reset state before t=0 emission; lookup; code/decode symbol; transition afterward",
+    "forbidden_keys": ["model identity", "checkpoint identity", "layer identity", "expert identity", "stream identity", "absolute site", "future symbol", "source weight"]
+  },
+  "integrated_decoder": {
+    "source": "literal inherited STRATA metadata and new arithmetic payload only",
+    "context": "polar level plus prior bin of the original frequency regenerated inside universal SC recursion plus t_mod_4",
+    "free_extracted_arrays": false,
+    "full_path": ["SC", "inverse signed RHT", "canonical group restoration", "inverse XKLT", "matrix-order FP64 reconstruction digest"],
+    "canonical_reencode_required": true,
+    "transmitted_model_deserialization_required": true
+  },
+  "container": {
+    "magic": "UWFCV2\\0\\0",
+    "version": 2,
+    "endianness": "little",
+    "global_header_bytes": 4096,
+    "page_bytes": 4096,
+    "directory_record_bytes": 160,
+    "region_header_bytes": 128,
+    "frame_header_bytes": 128,
+    "frame_alignment_bytes": 64,
+    "sections": ["fixed header", "literal inherited metadata", "page padding", "serialized model", "page padding", "directory", "page padding", "page-aligned owner regions with literal frames and rate padding"],
+    "model_internal_tensor_checksum": "truncated SHA-256 plus complete-container SHA-256 roots",
+    "same_framing_counterfactual": "original payloads with identical selected model and physical framing charge",
+    "unknown_version_reserved_nonzero_overlap_truncation_trailing_tamper": "reject"
+  },
+  "cold_read": {
+    "physical_ownership": "global section owned by all experts; each region owned by its literal owner mask",
+    "denominator": "G/E + sum(B_region/owner_count_region) for regions containing expert",
+    "numerator": "instrumented exact union of literal 4096-byte pages read for global plus addressed regions",
+    "total_divided_by_experts_for_unequal_regions": false,
+    "tail_duplication": false
+  },
+  "scientific_holdout": {
+    "outer": "one semantic layer/expert parsed from literal route",
+    "development": "exclude every stream with any owner sharing outer layer OR outer expert",
+    "inner_split": "length-prefixed SHA-256 rank; max(1,floor(n/5)), at most n-1 validation",
+    "selection": "all 150 cells; exact byte-padded validation arithmetic plus full model; ordinal tie",
+    "outer_score": "refit winner on complete development; untouched outer test; full fold model charged",
+    "shared_tail_attribution": "divide test stream bytes and weights by literal owner count when pooling semantic expert folds",
+    "confidence": "two-sided Student-t across six semantic expert folds, df=5 critical 2.570581835636305",
+    "heldout_gate": "pooled saving meets standalone threshold AND confidence lower bound is positive"
+  },
+  "survivor_shuffles": {
+    "within_public_context": "deterministic exact count-preserving bit permutation",
+    "multiscale_chunks": [32, 128, 512],
+    "search": "repeat complete 150-cell nested selection on each variant",
+    "can_rescue_physical_failure": false
+  },
+  "gaussian_controls": {
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "opening_gate": "source literal rate/F, cold, reconstruction/integrity, and heldout gates all pass",
+    "pre_fit_order": "all eight artifacts authenticate, parse, replay, geometry-check, provenance-check, and score-bind before first control fit",
+    "pipeline": "independently repeat complete 150-cell nested selection, refit, literal pack, parse, standalone decode",
+    "specificity_statistic": "source absolute physical saving bpw minus strongest independently selected matched-null physical saving bpw",
+    "controls_can_rescue_source_failure": false
+  },
+  "runtime": {
+    "honest_complexity": "O(outer_folds*150*selected_symbols) plus final coding, four survivor searches, and eight independent control searches",
+    "maximum_projected_wall_seconds_per_panel_survivor": 21600.0,
+    "conservative_precalibration_updates_per_second": 1000000.0,
+    "host_memory_budget_bytes": 103079215104,
+    "vram_budget_bytes": 30064771072,
+    "gpu": "CuPy RawKernel only; one cached panel transfer; descriptor-only subsets; explicit synchronization after every kernel",
+    "required_metrics": ["H2D bytes", "kernel count", "count updates", "length updates", "elapsed seconds", "host peak", "VRAM peak", "runtime/driver/device/compute capability"]
+  },
+  "trust_and_lifecycle": {
+    "direct_producer_launch": "always reject before argument or dynamic input/output access",
+    "authority": "separate independently pinned dispatcher hard-codes producer manifest digest and independent review digest",
+    "public_self_seal_or_token_is_authority": false,
+    "source_import": "compile/exec exact buffered authenticated bytes; no pathname module import",
+    "input_paths": "descriptor-relative no-follow walk of every component; retain descriptors",
+    "output": "retained output directory descriptor; exclusive member writes; fsync file/directory; COMPLETE.json exclusive and last; no resume",
+    "python": "isolated -I -B"
+  },
+  "status_lattice": [
+    "FAIL_EVIDENCE_INTEGRITY_SOURCE_STANDALONE_DECODE",
+    "HARD_KILL_PHYSICAL_RATE_OR_F",
+    "FAIL_STRICT_COLD_READ",
+    "NO_PROMOTION_NESTED_HELDOUT",
+    "ABORT_RUNTIME_BUDGET_BEFORE_FIT",
+    "SOURCE_SURVIVOR_CONTROLS_AUTHORIZED_NOT_YET_OPENED",
+    "NO_PROMOTION_GAUSSIAN_SPECIFICITY",
+    "PASS_MATCHED_NULL_SPECIFICITY_AWAITING_EXTERNAL_RESULT_AUDIT"
+  ],
+  "promotion": {
+    "conjunction": ["literal physical rate/F", "strict cold read", "nested heldout", "matched-null specificity", "standalone decode", "all integrity gates", "external independent result audit"],
+    "producer_can_self_promote": false
+  },
+  "post_seal_requirements": [
+    "EXTERNAL_PINNED_DISPATCHER_INDEPENDENT_AUDIT",
+    "ALL_150_CPU_CUPY_RUNPOD_PREFLIGHT",
+    "NO_PAYLOAD_LAUNCH_BEFORE_BOTH_PASS",
+    "FRESH_PROCESS_INDEPENDENT_RESULT_AUDIT_AFTER_ANY_NUMERIC_RUN"
+  ],
+  "universality": {
+    "meaning": "model-agnostic algorithm, fitting rule, format, and universal decoder for SwiGLU-MoE evaluation panels",
+    "qwen_role": "evaluation panel only",
+    "qwen_pass_proves_universal_performance": false,
+    "disjoint_family_required_before_performance_generality": true
+  },
+  "negative_result_boundary": "closes only this frozen selected-SC-decision sparse-unifilar recoder; not arbitrary WFA/MPS, source-coordinate copula, MERA, TTN, flow, RCC, Gray-Wyner, or another quantizer",
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_or_selected_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "numpy_imported_by_builder": false,
+    "cupy_imported_by_builder": false,
+    "cuda_initialized_by_builder": false,
+    "gpu_job_launched_by_builder": false
+  }
+}

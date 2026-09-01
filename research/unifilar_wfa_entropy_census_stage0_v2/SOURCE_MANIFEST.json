@@ -1,0 +1,91 @@
+{
+  "schema": "unifilar-wfa-source-manifest-v2",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "members": [
+    {
+      "name": "INDEPENDENT_BOOTSTRAP_ABI.md",
+      "bytes": 3716,
+      "sha256": "a91e02e31588abb0ccec135477a5c2702f562cd280c27ff6e7eabdc5ce415db7"
+    },
+    {
+      "name": "README.md",
+      "bytes": 6946,
+      "sha256": "7e273eb8b6b6b49e699198607d51ab808f22552b6333162f8f857acb43d5bda2"
+    },
+    {
+      "name": "container_codec.py",
+      "bytes": 29223,
+      "sha256": "04171ef490684456ba117b85afe38c84c0daccd4cceb6b9ec91f9137a87f0ccc"
+    },
+    {
+      "name": "cupy_backend.py",
+      "bytes": 12844,
+      "sha256": "24e3e3ae32162cccbbf205fa55e2cddbf8616852a336e103162e9b5965bc9e0f"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 7873,
+      "sha256": "5735b924075d5e36bb276a8fab7cba35445db23d2db8e1e193fb6595ee3d42fb"
+    },
+    {
+      "name": "dispatcher_contract.py",
+      "bytes": 9205,
+      "sha256": "3e488779ff7e1730457d5f9754bf8c6e292030cbc1507c9a2c6a4fabfa553850"
+    },
+    {
+      "name": "fixture_long_memory.py",
+      "bytes": 4307,
+      "sha256": "36363f86f16c39b535a9f4c11f9316844bc202a7cbe6e357086300fedf83a0ac"
+    },
+    {
+      "name": "protocol.py",
+      "bytes": 8911,
+      "sha256": "a25c9e141a3dedd4a9372c97a7bc0b06efadabe9142353da93aaad381689fe68"
+    },
+    {
+      "name": "result_envelope.py",
+      "bytes": 2688,
+      "sha256": "0735bfc788135bf3d731d9afd1dc80f8c595dddea2b937ad83c73424a2ffc6ab"
+    },
+    {
+      "name": "stage0_census.py",
+      "bytes": 38113,
+      "sha256": "940e2e3cff4e143941ed61831b2ed8b4022cef8f77d0e9061c3148f30948b39c"
+    },
+    {
+      "name": "strata_sc_adapter.py",
+      "bytes": 24454,
+      "sha256": "0b997a801b8dcfb390baa7d9890d2ed13fcbcea44e1f1d4fbfc3d0f744085cec"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 31729,
+      "sha256": "b7e4ae0162e27d227b2e85d68d969a24e63ca8e4906f7e72a80f50cab05db146"
+    },
+    {
+      "name": "uwfa_common.py",
+      "bytes": 32154,
+      "sha256": "16434af960c0be97e4771d9c64ce74d39f78c121497a2022f8582df413117568"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 7739,
+      "sha256": "26f68d006b24a342c4dab21f23f8bce74d4b5b7a8603ef1fe6538ad68e2e145f"
+    }
+  ],
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_or_selected_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "numpy_imported_by_builder": false,
+    "cupy_imported_by_builder": false,
+    "cuda_initialized_by_builder": false,
+    "gpu_job_launched_by_builder": false
+  },
+  "post_seal_requirements": [
+    "EXTERNAL_PINNED_DISPATCHER_INDEPENDENT_AUDIT",
+    "ALL_150_CPU_CUPY_RUNPOD_PREFLIGHT",
+    "NO_PAYLOAD_LAUNCH_BEFORE_BOTH_PASS",
+    "FRESH_PROCESS_INDEPENDENT_RESULT_AUDIT_AFTER_ANY_NUMERIC_RUN"
+  ]
+}
