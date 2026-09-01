@@ -1,0 +1,80 @@
+{
+  "schema": "fuseed_pmg1_v2_source_bindings_draft_v1",
+  "status": "SOURCE_ONLY_DEPENDENCY_CLOSURE_NO_EXECUTION_AUTHORITY",
+  "dependencies": [
+    {
+      "id": "fuseed_v1_design",
+      "path": "../fuseed_u32_v1/design_lock.json",
+      "sha256": "7524a1dfc906dc8bb9addec5a624d16fdee068b01b8ed54ef118bcbf07d7eb48",
+      "role": "prospectively frozen three-family parent and coordinate grammar"
+    },
+    {
+      "id": "fuseed_v1_plan_verifier",
+      "path": "../fuseed_u32_v1/verify_design.ps1",
+      "sha256": "48fd85b716aafa9097c65919d51becb449b24e5c7497fc0e8f6806bd32a99511",
+      "role": "independent comparator for the frozen parent plan digests"
+    },
+    {
+      "id": "fuseed_v1_source_bindings",
+      "path": "../fuseed_u32_v1/source_bindings.json",
+      "sha256": "22a918d9430291e9f98ebe5a4c4e7a4791e6c68d72989459835e6c9dd8a9c3e1",
+      "role": "transitive public-source provenance closure"
+    },
+    {
+      "id": "current_pmg_candidate_lock",
+      "path": "../initialization_anchor_oracle_tier_c_grouped_v4/candidate_lock.json",
+      "sha256": "a2997e9aa28d47b1accf231ba3c5eb30d39a8d26aa6d61fdb36fdb54babf1cc0",
+      "role": "later projection-major compatibility ABI and source/control panel metadata"
+    },
+    {
+      "id": "current_pmg_common",
+      "path": "../initialization_anchor_oracle_tier_c_grouped_v4/common.py",
+      "sha256": "92fb078c53284abbb1c67609321a98c164a4446dc96483fa4b073a4402832cea",
+      "role": "decoded-FP16 affine and physical-ledger semantics"
+    },
+    {
+      "id": "current_pmg_native_maps",
+      "path": "../initialization_anchor_oracle_tier_c_grouped_v4/kernels.py",
+      "sha256": "50770cf63812df3c19ab0ca0ed3aa36287a7797b37690254a2aca407ca9ff4c5",
+      "role": "later projection-major native index mapping and fixed launch lineage"
+    },
+    {
+      "id": "control_transform_source",
+      "path": "../initialization_anchor_oracle_tier_b/common.py",
+      "sha256": "75d8bbd7af9271ea5d2f099e7d720c1560bcc72864ac88f458095647468e7da3",
+      "role": "frozen Gaussian and sign/permutation control grammars, used only after descriptor seal"
+    },
+    {
+      "id": "direct_counter_calibration_source",
+      "path": "../fuseed_u32_direct_counter_calibration_v0/calibrate_direct.py",
+      "sha256": "f5a7c8b9a525e02d469ca974f9a6607030b2ca2822b66d4bce31604251516ed5",
+      "role": "source-free direct-counter implementation evidence; not successor execution authority"
+    },
+    {
+      "id": "direct_counter_calibration_manifest",
+      "path": "../fuseed_u32_direct_counter_calibration_v0/artifact_sha256.txt",
+      "sha256": "c4ddddcb32fa932abc164c617333d1267ef137c2d06b577b892f72f5497f6ab8",
+      "role": "frozen calibration artifact closure"
+    },
+    {
+      "id": "v1_independent_audit_receipt",
+      "path": "../fuseed_u32_direct_counter_calibration_v0_audit/audit_receipt.json",
+      "sha256": "eb5273689438b6b549dbd59fe469181e45c1603a87fef8293f5da4d334668196",
+      "role": "authoritative list of runtime/compiler, dual-reference parity, generator-state, exact-plan and journal blockers"
+    },
+    {
+      "id": "v1_independent_audit_scope",
+      "path": "../fuseed_u32_direct_counter_calibration_v0_audit/README.md",
+      "sha256": "6585f321324795d8bdd1d18db5166a6e56f4263b7f69d77a5e49017b8d99e78d",
+      "role": "independent BLOCK claim boundary"
+    }
+  ],
+  "selection_rule": "The one ABI and every coordinate/K/arithmetic rule are inherited or source-motivated; no target statistic is a dependency.",
+  "probe_policy": "Unsealed timing probes may motivate feasibility discussion but are deliberately excluded from the authoritative dependency closure and cannot authorize a run.",
+  "access_attestation": {
+    "target_payload_or_manifest_accessed": false,
+    "accelerator_or_runtime_accessed": false,
+    "network_used": false,
+    "production_output_created": false
+  }
+}

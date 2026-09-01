@@ -1,0 +1,140 @@
+{
+  "access": {
+    "accelerator_or_framework_execution": false,
+    "network_operations": 0,
+    "payload_paths_opened": 0,
+    "producer_modules_imported": false,
+    "third_party_packages_imported": false,
+    "workspace_enumeration": false
+  },
+  "authenticated": {
+    "abi1_plan": {
+      "attempts": 531,
+      "attempts_by_abi": [16102, 531, 518],
+      "bundle_sha256": "16aacb6f5fa6a1ed12fe0c01506410ad69585894077a4a6af627674b6b90adda",
+      "bundles": 256,
+      "complete_plan_sha256": "86639758eda1835b9ea9e883372bb55ec13ec3487705a91d892878972db74760",
+      "coordinates": 1024
+    },
+    "common_seed_capture_bytes_changed": 119,
+    "derived_sources": {
+      "explicit_fma_sites": {
+        "baseline": 2,
+        "local_sum_x2[category]": 1,
+        "sse": 5,
+        "sum_xw0[category]": 1,
+        "sum_xw1[category]": 1
+      },
+      "rounding_intrinsic_occurrences": 19,
+      "v1_cuda_sha256": "d0af6e0e93706b69c523d0bfded4ffb57717b827fa9c5bc69f0a37d7bb1c7d43",
+      "v2_cuda_sha256": "c2de564889b34f00ca9e2f937dd70d9804845957c8bae3e847c37b8ddeae3ab8"
+    },
+    "design_source_semantics": true,
+    "explicit_fma_is_result_changing": true,
+    "hash_dependency_graph": "design manifest -> v1 script and v1 result; v1 script -> v2 wrapper; v2 result self-binds wrapper. No artifact authenticates wall-clock execution order or prospective choice.",
+    "journals": "three exact packed 12-byte TopK replays per version; strict header/finite/order/hash checks PASS",
+    "parity_v1": {
+      "direct_rows": 132,
+      "scaled_bf16_sha256": "3dfafb5b177db96730ea9f12214bf8925bc4af2c10e3b9e79fb0d3963f951366",
+      "sequential_raw_sha256": "c50ebadeb892b2d4433d44d52b9222da6aa2ed8459c3326927991647935f03b5",
+      "sequential_rows": 132,
+      "torch_cases": 8,
+      "torch_coordinates": 56
+    },
+    "parity_v2": {
+      "direct_rows": 132,
+      "scaled_bf16_sha256": "3dfafb5b177db96730ea9f12214bf8925bc4af2c10e3b9e79fb0d3963f951366",
+      "sequential_raw_sha256": "58601f456e20857871cb012ed979a8cd930e790d79ecf20b9911e3fde4c3f27c",
+      "sequential_rows": 132,
+      "torch_cases": 8,
+      "torch_coordinates": 56
+    },
+    "prior_open_validation_receipts": {
+      "experts": [24, 56, 88, 120],
+      "initialization_anchor_result_sha256": "6ef38ff14f69ab02caf0e48ad37e5dbc3dfa9ebe7ba5e663f85080114e0f828d",
+      "matrix_rows_per_receipt": 8,
+      "tier_b_result_sha256": "e450c10767b54c190f901df8460c6ac57fe86cfaca7719c3db48475d4196fb92"
+    },
+    "projection_v1": {
+      "below_650": false,
+      "best_capture": 0.03529210911201497,
+      "best_seed_u32": 10309563,
+      "global_capture_sha256": "08e63307c50312a54e73e17d520741d1e59b19309b4a3cf606f0471a5abe4080",
+      "global_seed_sha256": "37a2a852e29304a34ddc4e064964cbcad5353940ec36fdbd9f386639296fe186",
+      "projection_seconds": 696.8922319519334,
+      "topk_capture_sha256": "0f3416fefc2fe2a9f259f38b2f674db759b2587272d98490e76023b882f02532",
+      "topk_seed_sha256": "c0512306421385749e76d9ac6c52ed01b731559ccb64ca1cdc03a6f94ac40098"
+    },
+    "projection_v2": {
+      "below_650": true,
+      "best_capture": 0.03529210911201497,
+      "best_seed_u32": 10309563,
+      "global_capture_sha256": "d2edee778d5467b5b363b467590b31a99e98cbdab6f398aa712854fb92ace528",
+      "global_seed_sha256": "37a2a852e29304a34ddc4e064964cbcad5353940ec36fdbd9f386639296fe186",
+      "projection_seconds": 520.8358833260136,
+      "topk_capture_sha256": "e5ed3f210faac81b2eeeff0567c5c9b72b5bb46d55ee19bbc7a10fffeed2b209",
+      "topk_seed_sha256": "4aaaa1a09e0d705bc95dc0a8f6ddb5ed35752462f416a31f02b6712f2f5750b4"
+    },
+    "result_chronology_authenticated": false,
+    "runtime_receipt": {
+      "cubin_receipts_checked": 4,
+      "headers_rehashed": 5,
+      "runtime_files_rehashed": 11
+    },
+    "scientific_prospective_chronology": false,
+    "topk_and_synthetic_global_merge": true,
+    "topk_seed_overlap": 8192,
+    "untouched_validation_claim": false,
+    "wrapper_template_derivation": {
+      "derived_python_sha256": "e517dc9e533ea016bbc95a4d5a033fda16c6db5df5a2d5b403add7a93a90515b",
+      "label_replacement_counts": {
+        "BINARY64_STAGE0_MARGIN_PASS_PENDING_FULL_PIPELINE_AND_INDEPENDENT_AUDIT": 1,
+        "EARLY_KILL_BINARY64_STAGE0_NO_QWEN": 1,
+        "fuseed_pmg1_binary64_parity.cu": 1,
+        "fuseed_pmg1_binary64_shard_journal_v1": 1,
+        "fuseed_pmg1_binary64_source_free_stage0_calibration_v1": 1,
+        "fuseed_pmg1_binary64_stage0.cu": 1
+      },
+      "template_sha256": "9376720ec812b93e070ccb93433e83ff243213d6d244c7a18afa84b3d8690c24"
+    }
+  },
+  "authorization": "NONE",
+  "checks": 148185,
+  "inputs": {
+    "design_manifest_sha256": "ea7086c401cd6981d097ecc9b52196d3d01cda123d0cb8ab28c001cf008b27ff",
+    "v1_result_sha256": "2e2e6dc73a16921221cfd309a243fce6794464c201f80714ca3e2dcc94078c4d",
+    "v1_script_sha256": "9376720ec812b93e070ccb93433e83ff243213d6d244c7a18afa84b3d8690c24",
+    "v2_result_sha256": "82e29cbfc8ec1ac23761c37712a3fda3d2745b04c9a71ae296ce864796ddc75e",
+    "v2_script_sha256": "0e2f354415d2d8cfebfceda58b6ade77eddc2b4e025488baba329beba09d0a87"
+  },
+  "limitations": {
+    "cubin_bytes_archived": false,
+    "cubin_note": "Results bind cubin size/hash/magic and code loads the exact just-hashed blob, but cubin bytes are not serialized; this source-only audit cannot independently rehash them.",
+    "full_pipeline_projection_claimed": false,
+    "global_merge_note": "The calibration merge is a synthetic repeated-shard shape probe, not a 256-distinct-shard/two-tree production proof.",
+    "journal_note": "Calibration files are fsynced create-new probes, not the design's temp+atomic-rename+parent-fsync crash-safe protocol."
+  },
+  "missing_prerequisites": [
+    "a new genuinely untouched validation panel: the frozen [24,56,88,120] panel was already opened and scored in two prior published branches",
+    "independent prospective chronology and untouched-validation firewall attestation",
+    "256-cell source-free retention PASS",
+    "complete stage1/stage2/one-descriptor-validation timing and semantics",
+    "full future compiler/runtime closure including OS/kernel, raw argv/environment, compiled-intermediate and serialized loaded-kernel bytes",
+    "crash-safe 256-shard journal/resume audit and two-tree byte-identical global merge",
+    "durable no-retry selection commit before validation visibility"
+  ],
+  "receipt_internal_sha256": "bd5b7732f24a4e17a109d5c113113daa7ed2a54ee407103139bdafccb4f673bc",
+  "repair_assessment": {
+    "distinct_v3_with_new_unopened_experts": "DIRECTIONALLY_VALID_IF_RESEALED",
+    "requirements": [
+      "give the repair a new protocol/version; v2's untouched-validation claim cannot be repaired retrospectively",
+      "derive and precommit new expert identities and coordinate plan using source-only rules with no target statistic",
+      "prove the new identities are outside every prior opened cache/result/log, not only outside one current cache",
+      "keep the validation root absent and inaccessible until one descriptor, all selection states, thresholds, controls and a no-retry sentinel are durably sealed",
+      "permit exactly one open and no retry, ABI/arithmetic/K/threshold/identity change after visibility",
+      "retain the same fixed-descriptor controls and do not interpret them as a p-value or matched search"
+    ]
+  },
+  "schema": "fuseed_pmg1_binary64_fma_v2_independent_source_audit_v1",
+  "verdict": "BLOCK_PAYLOAD_AUTHORIZATION_STAGE0_V2_SURVIVOR_AUTHENTICATED"
+}

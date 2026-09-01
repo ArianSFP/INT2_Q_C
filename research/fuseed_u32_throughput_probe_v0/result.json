@@ -1,0 +1,73 @@
+{
+  "access": {
+    "model_or_qwen_path_arguments": 0,
+    "network_operations": 0,
+    "payload_files_opened": 0
+  },
+  "aggregate": {
+    "median_end_to_end_seconds": 0.009544976986944675,
+    "median_kernel_normal_values_per_second": 728041999710.6559,
+    "median_kernel_seconds": 0.007374175009317696,
+    "memory_pool_total_bytes": 607189504,
+    "projected_full_u32_end_to_end_seconds_linear": 2.443514108657837,
+    "projected_full_u32_kernel_seconds_linear": 1.8877888023853302,
+    "projection_warning": "Linear single-shard projection only; full implementation must measure exact sharding, journal, global Top-K merge, all ABI maps, and retention path."
+  },
+  "claim_boundary": "Unsealed source-free engineering calibration only; no Qwen/model path interface, retention claim, initializer result, or execution authorization.",
+  "rows": [
+    {
+      "best_score": 33.36697769165039,
+      "best_seed": 1967134,
+      "candidate_rate_per_second": 2284722268.8933616,
+      "end_to_end_seconds": 0.2039045620476827,
+      "kernel_seconds": 0.007343219011090696,
+      "normal_value_rate_per_second": 731111126045.8756,
+      "repetition": 0,
+      "topk_seconds": 0.196561343036592,
+      "topk_seed_sha256": "fcfd2a48040194c37d86d49fd7770a19350c7ecc5bcd67fe8fc5bba4f5e58414",
+      "topk_value_sha256": "9a1c1e9a616ac546b06a86c18dbed890bedb32acd061f5c58c93f4e616a7e747"
+    },
+    {
+      "best_score": 33.36697769165039,
+      "best_seed": 1967134,
+      "candidate_rate_per_second": 2275131249.0957994,
+      "end_to_end_seconds": 0.009544976986944675,
+      "kernel_seconds": 0.007374175009317696,
+      "normal_value_rate_per_second": 728041999710.6559,
+      "repetition": 1,
+      "topk_seconds": 0.0021708019776269794,
+      "topk_seed_sha256": "fcfd2a48040194c37d86d49fd7770a19350c7ecc5bcd67fe8fc5bba4f5e58414",
+      "topk_value_sha256": "9a1c1e9a616ac546b06a86c18dbed890bedb32acd061f5c58c93f4e616a7e747"
+    },
+    {
+      "best_score": 33.36697769165039,
+      "best_seed": 1967134,
+      "candidate_rate_per_second": 2274383661.6258087,
+      "end_to_end_seconds": 0.009471032884903252,
+      "kernel_seconds": 0.007376598892733455,
+      "normal_value_rate_per_second": 727802771720.2588,
+      "repetition": 2,
+      "topk_seconds": 0.0020944339921697974,
+      "topk_seed_sha256": "fcfd2a48040194c37d86d49fd7770a19350c7ecc5bcd67fe8fc5bba4f5e58414",
+      "topk_value_sha256": "9a1c1e9a616ac546b06a86c18dbed890bedb32acd061f5c58c93f4e616a7e747"
+    }
+  ],
+  "runtime": {
+    "cuda_runtime": 12090,
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "numpy": "2.5.2",
+    "python": "3.12.3"
+  },
+  "schema": "fuseed_u32_source_free_throughput_probe_v0",
+  "script_sha256": "001a3d08902441ee47501ff5a99bb0ce5159bff35b23b5cd11491539a564f401",
+  "shape": {
+    "candidates": 16777216,
+    "normal4_bundles_per_candidate": 80,
+    "normal_values_per_candidate": 320,
+    "repetitions": 3,
+    "score_buffer_bytes": 67108864,
+    "top_k": 2048
+  }
+}

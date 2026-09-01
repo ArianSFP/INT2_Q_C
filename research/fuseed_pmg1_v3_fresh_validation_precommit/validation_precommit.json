@@ -1,0 +1,72 @@
+{
+  "schema": "fuseed_pmg1_v3_fresh_validation_precommit_v1",
+  "status": "SEALED_SOURCE_ONLY_FRESH_VALIDATION_PRECOMMIT_PAYLOAD_BLOCKED",
+  "sealed": true,
+  "family": "FUSEED-PMG1-v3",
+  "purpose": "Replace the scientifically contaminated PMG1-v2 validation panel with source-independently selected, never-materialized Qwen layer-15 experts while preserving the already calibrated selection family.",
+  "checkpoint": {
+    "repo": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "layer": 15,
+    "dtype": "BF16",
+    "rows": 768,
+    "columns": 2048
+  },
+  "selection_rule": {
+    "namespace": "FUSEED-PMG1-v3|fresh-validation|layer=15|expert=E",
+    "eligible_experts": "every integer E in [0,127] with E mod 8 != 0",
+    "exclusion_reason": "multiples of eight are the complete previously materialized auxiliary layer-15 cohort",
+    "ranking": "ascending lowercase SHA-256 hex of the UTF-8 namespace after decimal substitution for E",
+    "selected_count": 4,
+    "selected_in_rank_order": [67, 95, 69, 34],
+    "selected_hashes_in_rank_order": [
+      "034d9a6fd2d7f1c53c5a17e71f1a7b4dcbd61780388a63491822f9780204aa9a",
+      "03fb4a2abe45c953a93ef17c92ca49e4a785c232fbe0ac64d9777a5cdc34dcaf",
+      "06ca5c34443be9a2dbcf6bb2a597e37844204ef884f82439d89e7262e2f0bb5f",
+      "0a146d6a79c0d5daa7ac233234d8add354cc710c639e11a598bbb2cf36d934dd"
+    ],
+    "roles_in_validation": ["gate", "up", "down"],
+    "descriptor_or_protocol_retry_after_reveal": false
+  },
+  "public_metadata_bindings": {
+    "index_path": "../../../qwen_weight_cache/model.safetensors.index.json",
+    "index_sha256": "df0d481ec595c55a0ba58426d517390c6214a566ec4ff1c8fc4bbce9f57b3c24",
+    "headers": [
+      {
+        "path": "../../../qwen_weight_cache/headers/model-00005-of-00016.safetensors.header.json",
+        "sha256": "bba5ddba4c3b5d7aa9069140b3f6944ce7251ef2f9f5fc74274fb0584ca92df9",
+        "header_length": 156128,
+        "data_start": 156136
+      },
+      {
+        "path": "../../../qwen_weight_cache/headers/model-00006-of-00016.safetensors.header.json",
+        "sha256": "ed5d18fb3e50449fab1fe22cea6907cbe89efcba55c25bcc1fd8a451f2fc2639",
+        "header_length": 156128,
+        "data_start": 156136
+      }
+    ]
+  },
+  "tensors": [
+    {"expert": 67, "role": "down", "name": "model.layers.15.mlp.experts.67.down_proj.weight", "shard": "model-00005-of-00016.safetensors", "shape": [2048, 768], "relative_offsets": [3923796992, 3926942720], "http_range_inclusive": [3923953128, 3927098855]},
+    {"expert": 67, "role": "gate", "name": "model.layers.15.mlp.experts.67.gate_proj.weight", "shard": "model-00005-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [3926942720, 3930088448], "http_range_inclusive": [3927098856, 3930244583]},
+    {"expert": 67, "role": "up", "name": "model.layers.15.mlp.experts.67.up_proj.weight", "shard": "model-00005-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [3930088448, 3933234176], "http_range_inclusive": [3930244584, 3933390311]},
+    {"expert": 95, "role": "down", "name": "model.layers.15.mlp.experts.95.down_proj.weight", "shard": "model-00006-of-00016.safetensors", "shape": [2048, 768], "relative_offsets": [519049216, 522194944], "http_range_inclusive": [519205352, 522351079]},
+    {"expert": 95, "role": "gate", "name": "model.layers.15.mlp.experts.95.gate_proj.weight", "shard": "model-00006-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [522194944, 525340672], "http_range_inclusive": [522351080, 525496807]},
+    {"expert": 95, "role": "up", "name": "model.layers.15.mlp.experts.95.up_proj.weight", "shard": "model-00006-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [525340672, 528486400], "http_range_inclusive": [525496808, 528642535]},
+    {"expert": 69, "role": "down", "name": "model.layers.15.mlp.experts.69.down_proj.weight", "shard": "model-00006-of-00016.safetensors", "shape": [2048, 768], "relative_offsets": [273682432, 276828160], "http_range_inclusive": [273838568, 276984295]},
+    {"expert": 69, "role": "gate", "name": "model.layers.15.mlp.experts.69.gate_proj.weight", "shard": "model-00006-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [276828160, 279973888], "http_range_inclusive": [276984296, 280130023]},
+    {"expert": 69, "role": "up", "name": "model.layers.15.mlp.experts.69.up_proj.weight", "shard": "model-00006-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [279973888, 283119616], "http_range_inclusive": [280130024, 283275751]},
+    {"expert": 34, "role": "down", "name": "model.layers.15.mlp.experts.34.down_proj.weight", "shard": "model-00005-of-00016.safetensors", "shape": [2048, 768], "relative_offsets": [3584058368, 3587204096], "http_range_inclusive": [3584214504, 3587360231]},
+    {"expert": 34, "role": "gate", "name": "model.layers.15.mlp.experts.34.gate_proj.weight", "shard": "model-00005-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [3587204096, 3590349824], "http_range_inclusive": [3587360232, 3590505959]},
+    {"expert": 34, "role": "up", "name": "model.layers.15.mlp.experts.34.up_proj.weight", "shard": "model-00005-of-00016.safetensors", "shape": [768, 2048], "relative_offsets": [3590349824, 3593495552], "http_range_inclusive": [3590505960, 3593651687]}
+  ],
+  "firewall": {
+    "specific_tensor_payloads_materialized_by_this_design_turn": 0,
+    "specific_tensor_payload_bytes_read_by_this_design_turn": 0,
+    "only_public_index_and_safetensors_header_metadata_inspected": true,
+    "payload_fetch_before_winner_and_no_retry_commit": false,
+    "payload_access_authorized": false,
+    "execution_authorized": false,
+    "required_next": "independent source-only audit, a sealed v3 design and retention/full-pipeline calibration; only then may selection execute, and these ranges remain forbidden until the one-descriptor/no-retry commit"
+  }
+}

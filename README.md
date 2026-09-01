@@ -33,6 +33,7 @@ than the final research claim: at its own physical rate it has
 - [Rate-relative breakthrough search](research/RATE_RELATIVE_BREAKTHROUGH_SEARCH.md)
 - [Post-locality research checkpoint: five independently checked architecture gates](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01.md)
 - [SILWARP, finite-bridge, and ancestry negative-result checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_SILWARP.md)
+- [PMG1 explicit-FMA stage-0 survivor and fresh-validation checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_PMG1_FMA.md)
 
 Verify the source-free compact checkpoint:
 

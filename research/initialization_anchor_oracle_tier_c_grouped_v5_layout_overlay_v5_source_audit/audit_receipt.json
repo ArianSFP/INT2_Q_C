@@ -1,0 +1,165 @@
+{
+  "schema": "tier_c_grouped_v5_layout_overlay_v5_independent_source_audit_block_receipt_v1",
+  "status": "BLOCKED_AUTHENTICATED_DISPATCH_AND_ATOMIC_TOCTOU_REPAIRS_REQUIRED",
+  "audited_utc": "2026-09-01T13:08:48Z",
+  "audited_target": {
+    "path": "../initialization_anchor_oracle_tier_c_grouped_v5_layout_overlay_v5",
+    "artifact_manifest_sha256": "e9ef19853d1350ac4085a18a65b19a6805620ef7a091447ce57404715f88805f",
+    "artifact_count": 16,
+    "exact_package_member_count": 17,
+    "candidate_lock_file_sha256": "cec0b12927340d82c1c8c78cd02b7849c7371b1b16d7f2c1b1d24ae889ada58d",
+    "candidate_lock_internal_sha256": "4b6b3a73e4fca1175adb26b492978a3e42bcf2ce8af4296d45366b104b568a6e",
+    "runner_sha256": "95cab78f0fd8f79ccfb7b263c2066d8ad52801a76f91e3dd331625c6ae73cdaf",
+    "common_sha256": "c63b910f4ba714495691f5eb6fca7457a71af8bead9f119b4f9f58b07f695d8d",
+    "bootstrap_sha256": "5e5ff07aa363b5d0358a898e7f94f094e97656931f3e582a004bdbf842515acf",
+    "kernels_sha256": "bc2fe7c0c2ce8d532a9d5e8a3d9afe9960a49623daf7de164de371aac753a300",
+    "overlay_sha256": "aa4cac471dcdcf81acd554582b024c5e7ea38978ec5c2a91970f8b965602a377",
+    "parity_sha256": "b0c26ecefe5a63200892b5941f8bd0b9fe3fc2fad592681306b452279ffcf97c",
+    "source_trace_sha256": "45bbdf9af7fa8b1f6ca5fa097af506a5ed6e4037f13d2e534d5ba09211301c3d"
+  },
+  "authentication": {
+    "artifact_manifest_file_hash_passed": true,
+    "manifest_rows_passed": "16_OF_16",
+    "exact_regular_non_link_closure_passed": "17_OF_17",
+    "candidate_lock_placeholder_normalized_internal_seal_passed": true,
+    "frozen_named_dependency_hashes_passed": "16_OF_16",
+    "producer_files_modified": false
+  },
+  "independent_source_only_execution": {
+    "verifier": "run_source_audit.ps1",
+    "assertions_passed": 209,
+    "assertions_failed": 0,
+    "adversarial_evidence_sha256": "1b6e73051b53e40fec660d28baa672d1711b538e3c5665dfa69556a3b9fc2ce3",
+    "producer_runtime_test_suite_not_relied_upon_for_block_verdict": true,
+    "source_only_static_and_in_memory_adversarial_replay": true
+  },
+  "verified_v4_blocker_repairs": {
+    "raw_entrypoint_component_object_and_mount_binding": {
+      "status": "PASS_AT_CHECK_INSTANTS",
+      "evidence": [
+        "verify_prelaunch.py:81",
+        "verify_prelaunch.py:83-100",
+        "verify_prelaunch.py:104-146",
+        "verify_prelaunch.py:268-306"
+      ],
+      "finding": "The bootstrap captures unmodified argv0 before package derivation, requires one exact absolute canonical spelling, walks components with lstat, opens the verifier and package without following the final link, binds object and mount identities, and revalidates them around package authentication."
+    },
+    "literal_direct_script_rejection": {
+      "status": "PASS",
+      "evidence": [
+        "source_trace.py:13-18",
+        "tier_c_gate.py:8-14",
+        "verify_v4_reuse.py:28-34"
+      ],
+      "finding": "Literal execution of the source-trace and runner files is rejected before package or numeric imports, and standalone reuse-helper execution is rejected."
+    },
+    "pairwise_path_object_and_mount_disjointness": {
+      "status": "PASS_AT_CHECK_INSTANTS",
+      "evidence": [
+        "common.py:420-531",
+        "common.py:532-676"
+      ],
+      "finding": "The boundary guard rejects lexical ancestor relationships in either direction, existing device/inode aliases, and same-mount underlying-coordinate ancestry; it records and revalidates path components and input/output identities."
+    },
+    "closure_before_output_or_journal": {
+      "status": "PASS",
+      "evidence": [
+        "tier_c_gate.py:2057-2072"
+      ],
+      "finding": "Workspace and auxiliary closure is completed and the production boundary is revalidated before output-root create/open, followed by a second revalidation before journal construction."
+    }
+  },
+  "scientific_and_ledger_replay": {
+    "status": "PASS_WITHIN_SOURCE_SCOPE",
+    "stage0_generated_values": 21609054208,
+    "stage1_generated_values": 6572408832,
+    "post_selection_reporting_generated_values": 2162688,
+    "end_to_end_generated_values": 28183625728,
+    "side_bpw": 0.000022605613425925925,
+    "maximum_compatible_base_codec_bpw": 2.149977394386574,
+    "conservative_appended_cold_read_amplification": 1.169459771358204,
+    "finding": "The frozen lock arithmetic, full-replay control-flow tokens, pre-TopK guards, canonical result path, optimized-mode guard persistence, and sub-2.0 appended-read ledger replay exactly. This conditional result does not cure the three execution-boundary blockers."
+  },
+  "adversarial_tests": {
+    "manifest_mutations_rejected": [
+      "duplicate",
+      "unsorted",
+      "uppercase",
+      "extra",
+      "missing",
+      "crlf",
+      "no_terminal_lf"
+    ],
+    "lexical_ancestor_both_directions_rejected": true,
+    "device_inode_alias_rejected": true,
+    "mount_coordinate_alias_rejected_at_check_time": true,
+    "import_then_call_bypass_proved_from_source": true,
+    "mount_swap_between_revalidation_and_create_proved_from_source": true,
+    "transient_swap_between_hash_and_import_proved_from_source": true
+  },
+  "release_blockers": [
+    {
+      "id": "AUTHENTICATED_DISPATCH_CAPABILITY_ABSENT",
+      "severity": "RELEASE_AUTHENTICATION",
+      "evidence": {
+        "literal_guard": "source_trace.py:13-18",
+        "public_argv_only_entry": "source_trace.py:471",
+        "bootstrap_argv_only_dispatch": "verify_prelaunch.py:711",
+        "producer_regression_gap": "test_source_trace.py has no import-and-call rejection case"
+      },
+      "finding": "The direct-file guard is conditional only on __name__ being __main__. An external process can import source_trace and invoke its public main(argv) without running the bootstrap. The function accepts no authenticated bootstrap capability, and the bootstrap calls the same public function with only argv.",
+      "impact": "Source-trace provenance can be produced through an unauthenticated import-and-call route despite the lock's single authenticated-entrypoint claim.",
+      "required_repair": "In a distinct successor, make the authenticated bootstrap own the complete dispatch operation and require a non-forgeable, process-local, one-shot authorization context bound to the authenticated package closure and raw bootstrap identity. The source-trace operation must reject import-and-call without that context, and an adversarial regression must prove the rejection."
+    },
+    {
+      "id": "BOUNDARY_REVALIDATE_AND_CREATE_NOT_ATOMIC",
+      "severity": "CRITICAL_MUTATION_BOUNDARY",
+      "evidence": {
+        "source_trace_check_then_create": "source_trace.py:489-492",
+        "calibration_check_then_create": "tier_c_gate.py:591-594",
+        "journal_check_then_create_examples": "tier_c_gate.py:267-293",
+        "pathname_reopen": "common.py:292-315",
+        "boundary_class": "common.py:532-676"
+      },
+      "finding": "Boundary revalidation and every create-new remain separate operations. The create helper reopens an absolute pathname and protects only the final component. It receives no bound directory descriptor or boundary context, and source-trace has no post-create boundary validation. An ancestor or mount replacement after revalidation can therefore redirect the subsequent create.",
+      "impact": "The package cannot prove output/input/package disjointness at the mutation instant; check-time PASS is not a closed TOCTOU guarantee.",
+      "required_repair": "Bind output-directory descriptors during boundary construction and route every create through one boundary-owned primitive using descriptor-relative no-follow, beneath, and no-cross-mount resolution with exclusive creation. Verify the created descriptor and parent identities before writing, then revalidate after creation. No protected output create may reopen an absolute pathname."
+    },
+    {
+      "id": "AUTHENTICATED_PACKAGE_BYTES_REOPENED_FOR_IMPORT",
+      "severity": "RELEASE_AUTHENTICATION_TOCTOU",
+      "evidence": {
+        "authenticated_descriptor_closed": "verify_prelaunch.py:279-304",
+        "authentication_before_import": "verify_prelaunch.py:429-430",
+        "path_import_setup": "verify_prelaunch.py:409-430",
+        "missing_authenticated_byte_loader": "verify_prelaunch.py contains no authenticated-byte loader"
+      },
+      "finding": "Package bytes are hashed from descriptors that are closed before normal pathname imports. The later import does not consume the authenticated bytes. A same-object, same-size transient content substitution during import, restored before post-import replay, can satisfy identity and both hash checks while executing bytes that were never authenticated.",
+      "impact": "The executed package bytes are not cryptographically identical by construction to the bytes admitted by the pre-import manifest check.",
+      "required_repair": "Compile and execute package modules directly from the exact byte buffers authenticated from pinned descriptors, or establish equivalent immutable-file enforcement that is independently verified before dispatch. Add a transient hash-to-import substitution regression."
+    }
+  ],
+  "access_ledger": {
+    "payload_paths_supplied": 0,
+    "payload_files_opened": 0,
+    "payload_manifest_or_directory_operations": 0,
+    "python_runtime_imports": 0,
+    "numeric_runtime_imports": 0,
+    "accelerator_initializations": 0,
+    "accelerator_jobs": 0,
+    "network_operations": 0,
+    "production_runs": 0,
+    "producer_files_modified": 0,
+    "only_exact_producer_source_package_and_named_source_dependencies_opened": true
+  },
+  "authorization": {
+    "source_package_passed": false,
+    "source_free_calibration_authorized": false,
+    "payload_or_manifest_launch_authorized": false,
+    "production_run_authorized": false,
+    "implementation_authorized_by_this_audit": false,
+    "required_action": "Preserve v5 byte-for-byte. Repair all three blockers in a distinct successor and obtain a fresh independent source audit."
+  },
+  "verdict": "BLOCK_DO_NOT_AUTHORIZE_CALIBRATION_OR_PRODUCTION",
+  "audit_receipt_sha256": "bb159c95dc5068c4d9b3893643436eb66ecc2e0c7a8deb800e6db30dc02fde6a"
+}

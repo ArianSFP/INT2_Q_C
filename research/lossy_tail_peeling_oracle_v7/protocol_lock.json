@@ -1,0 +1,122 @@
+{
+  "schema": "qwen-lossy-tail-peeling-oracle-protocol-v7",
+  "status": "FROZEN_V7_BEFORE_ANY_RUNTIME_CALIBRATION_PAYLOAD_OR_GPU_EXECUTION",
+  "created_utc": "2026-09-01T13:40:00Z",
+  "objective": "Test whether explicitly lossy sparse-tail peeling supplies a genuine Qwen-specific rate-distortion advantage large enough to justify a finite residual codec, with read-valid search retention, finite-only decisions, parent-issued one-use child provenance, executable runtime memory closure, optimistic kill, numerical-boundary, matched-control, support-angle, rate, and read contracts.",
+  "predecessor": {
+    "v6_launch_manifest_sha256": "bbbfb811e439ed300ee8fa7e2d3dc5207e67cd9bb18191f43b1bf4a4f0dbe266",
+    "v6_oracle_sha256": "6a3a49258af174dd0770659c3eed539d14057dfb87cef540f3b21a359475a149",
+    "v6_block_audit_manifest_file_sha256": "b5131498a17093582f0d62ff1481e8005c3b083b57904126668553dff7d51690",
+    "v6_block_audit_manifest_internal_sha256": "cd2310603db0e924372df81eb6eceba875e80bf66098f4490da75c376253562f",
+    "v6_block_audit_receipt_file_sha256": "04f9473615af4812769b63b04896dfc2480d9099413b74d6d6db4b9d7742f391",
+    "v6_block_audit_receipt_internal_sha256": "06e338b987e835ca2fa4ca1ef39b7f407013f4011be973ba59dd06478c182d2e",
+    "v6_release_blocker_count": 5,
+    "v6_status": "PRESERVED_BLOCKED_NO_EXECUTION"
+  },
+  "source_scope": {
+    "model": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "cohort": "authenticated auxiliary layer-15 experts only",
+    "layer": 15,
+    "expert_ids": [24, 56, 80, 88, 96, 120],
+    "roles": ["up", "down_transposed"],
+    "matrix_shape": [768, 2048],
+    "source_binding_file": "source_bindings.json",
+    "forbidden": "all frozen production, holdout, confirmation, quarantine, blind_protocol_v2/unblinded, and sealed payload containers"
+  },
+  "rates_bpw": [2.15, 2.3, 2.5],
+  "target": {
+    "formula": "F = source_relative_MSE * 2^(2*actual_physical_bpw)",
+    "maximum_F": 0.8,
+    "required_s_bpw": 0.16096404744368115,
+    "optimistic_kill_guard_bpw": 0.02,
+    "optimistic_kill_threshold_s_bpw": 0.14096404744368115,
+    "numeric_boundary_guard_bpw": 0.0001,
+    "maximum_cold_and_page_read_amplification_exclusive": 2.0
+  },
+  "mask_grid": {
+    "families": [
+      {"name": "coordinate", "unit": 1, "ordering": "stable descending absolute value then canonical flat ordinal"},
+      {"name": "block16", "unit": 16, "ordering": "stable descending contiguous-flat-block energy then block ordinal"},
+      {"name": "block64", "unit": 64, "ordering": "stable descending contiguous-flat-block energy then block ordinal"}
+    ],
+    "fractions": [0.0, 0.03125, 0.0625, 0.125, 0.25],
+    "support_code": "fixed-length enumerative rank with ceil(log2 binomial(number_of_units,selected_units)) bits, then byte padding",
+    "tail_levels": [1, 2, 4, 8, 16],
+    "tail_symbols": "fixed log2(K) bits per selected scalar in canonical support order, then byte padding"
+  },
+  "tail_reconstruction": {
+    "optimistic_gate": "deterministic source-fitted scalar Lloyd centroids are revealed free; support, symbols, descriptors, framing, and residual directories remain charged",
+    "finite_tail_row": "each centroid is rounded to IEEE FP16, serialized literally at 16 bits, and scored with the rounded centroid",
+    "stronger_zero_error_envelope": "selected scalars are reconstructed with zero error while support and K-ary symbols remain charged; this is deliberately non-materializable and may only prevent a kill, never promote"
+  },
+  "bulk_oracle": {
+    "raw": "one ideal Gaussian RD component per unpeeled matrix",
+    "support_xklt": "for a uniform mask profile, partition each expert's Up/Down pair by the three nonempty known-bulk support patterns and diagonalize each two-role Gram block",
+    "xklt_angle_charge": "charge exactly one serialized FP16 angle for each expert with any live retained component whose name contains .both_axis_; retained eigenvalue rank does not waive the angle",
+    "allocation": "one panel-wide integer-bit reverse waterfill over every live bulk component after all tail and framing charges; tail and bulk SSE are added once",
+    "favorability": "ideal Gaussian components omit finite-vector shaping and implementation loss"
+  },
+  "search": {
+    "raw": "deterministic coordinate descent over all per-matrix profile choices, seeded only by read-valid best-uniform and read-valid zero-tail choices, with every eligible coordinate trial evaluated and ranking/filtering inside the strict <2x set, exactly four maximum full passes",
+    "support_xklt": "complete uniform profile grid with separate global diagnostics and a retained winner selected only inside the strict <2x set",
+    "read_valid_retention": "for every rate/mode/geometry, an invalid global minimum-F row can never erase an evaluated read-valid row; every retained calibration/decision row is explicitly revalidated below 2x",
+    "score_modes": ["free_lloyd", "finite_fp16", "zero_tail_error"],
+    "control_replicates": 4
+  },
+  "matched_controls": {
+    "replicates": 4,
+    "domain": "lossy-tail-peeling-gaussian-v1",
+    "rng": "CuPy default_rng with SHA-256-derived 64-bit seeds; exact runtime vector hashes must match the independently audited runtime receipt",
+    "construction": "independent float32 normal samples RNE-rounded to BF16, then a positive FP32 lookup-table affine transform",
+    "observed_moments": "mean and population variance after the exact FP32 lookup-table affine are reduced in float64 using the independently calibrated runtime semantics",
+    "mean_absolute_tolerance": "64 * 2^-23 * max(sqrt(target_variance), abs(target_mean), 2^-126)",
+    "variance_absolute_tolerance": "256 * 2^-23 * max(target_variance, target_mean^2, 2^-252)",
+    "fail_closed": "every target, affine parameter, observed moment, error, and tolerance must be finite; target/pre-affine variance and scale must be strictly positive; each absolute error must not exceed its tolerance",
+    "reporting": "record every cell's absolute and normalized mean/variance mismatch and panel maxima",
+    "calibration": "s_excess = s_Qwen - mean(s_control); F_calibrated = 2^(-2*s_excess)"
+  },
+  "decision": {
+    "finite_only": "every individual absolute/calibrated/control score, every aggregate/standard deviation/joint score, every selection key, and every boundary distance must be finite before selection or status; NaN and both infinities fail closed regardless of operand order",
+    "read_valid": "both maximum cold logical and maximum cold page amplification are strictly below 2.0",
+    "joint_score": "min(s_absolute_bpw, s_calibrated_bpw)",
+    "optimistic_m": "maximum joint_score among read-valid free_lloyd and zero_tail_error rows",
+    "finite_best": "deterministically selected maximum joint_score among read-valid finite_fp16 rows",
+    "finite_residual_codec_warranted_only_if": "finite_best has both s_absolute and s_calibrated at least 0.16096404744368115 and no numeric-boundary hold applies",
+    "EARLY_KILL_FAR_SHORT": "optimistic_m < 0.14096404744368115 and no numeric-boundary hold applies",
+    "HOLD_OPTIMISTIC_NEAR_BOUNDARY": "0.14096404744368115 <= optimistic_m < 0.16096404744368115 and no numeric-boundary hold applies",
+    "OPTIMISTIC_SURVIVOR": "optimistic_m >= 0.16096404744368115, no finite promotion, and no numeric-boundary hold applies",
+    "HOLD_NUMERIC_BOUNDARY": "if optimistic_m or either absolute/calibrated score of finite_best is within or equal to 0.0001 bpw of either 0.14096404744368115 or 0.16096404744368115; this status can neither kill nor promote",
+    "consistency": "fail closed if a finite joint score exceeds optimistic_m beyond 1e-12 bpw, or if finite promotion coexists with optimistic_m below target",
+    "no_gain_addition": "never add this tail gain to a prior architecture; all reported tail and bulk distortion uses one same-rate allocation"
+  },
+  "serialization": {
+    "global_header_bytes": 4096,
+    "route_table_bytes": 144,
+    "expert_header_bits": 256,
+    "matrix_descriptor_bits": 128,
+    "residual_directory_bits_per_component": 64,
+    "xklt_angle_bits": 16,
+    "expert_frames": "all non-common bytes remain inside the owning expert frame; each frame ends on a byte boundary",
+    "container": "whole-byte capacity floor(R*N/8); unused closure bytes are an explicit trailer",
+    "page_read": "exact 4096-byte pages intersecting the common prefix or the contiguous expert frame"
+  },
+  "runtime_release": {
+    "phase_1": "independently source-audit this immutable package without CuPy, CUDA, GPU, or payload access",
+    "phase_2": "only after phase-1 PASS, separately authorize one source-free runtime_calibrate execution on the pinned RTX5090 runtime; it creates a receipt outside the stage",
+    "phase_3": "independently audit and seal that runtime receipt",
+    "phase_4": "a separately approved one-shot production authorization must bind exact package manifest, source audit, runtime receipt, runtime audit, source, output action/path, raw launcher, interpreter, environment, mountinfo, and filesystem identities",
+    "production_gate": "stdlib-only preflight reauthenticates authorization/runtime evidence, spawns the stdlib-only oracle bootstrap over one inherited Unix SOCK_SEQPACKET capability, binds SO_PEERCRED parent/child PIDs and exact /proc parent cmdline, sends one nonce-bearing record then EOF, verifies one acknowledgement, and waits; only the authenticated child descriptor-executes the scientific core, which reauthenticates all evidence and runtime probes before payload",
+    "direct_entry_firewall": "direct scientific-core execution fails before NumPy import; direct oracle-bootstrap execution fails without the live one-use inherited capability; the authorization names only preflight_launch.py",
+    "no_self_trust": "a runtime receipt authored by runtime_calibrate is not launch authority until an external independent audit and later production authorization bind it"
+  },
+  "path_and_output_release": {
+    "entrypoint": "audit/calibration/preflight and the child bootstrap validate raw sys.argv[0] as absolute, lexically canonical, symlink-free, exact __file__ identity before third-party import; the scientific core has a top-of-file context firewall before NumPy and cannot be a direct entrypoint",
+    "stage_closure": "exact unique cardinality and exact regular non-symlink member set; added files, directories, devices, duplicate rows, and JSON duplicate keys fail",
+    "disjointness": "stage, source, and the existing parent of the create-new run root must be pairwise disjoint in both ancestry directions; authorization/runtime evidence and their parents cannot nest in or contain any protected root",
+    "output": "authorization binds action CREATE_NEW_RUN_ROOT_AND_RESULT_JSON; run root and result must be absent and are created exclusively",
+    "mounts": "authorization binds exact /proc/self/mountinfo SHA-256, mount IDs, st_dev/st_ino identities, and rejects nested mount transitions below protected roots",
+    "claim_limit": "descriptor execution/reads and exact mount receipt close cooperative pathname aliasing; no claim is made against a privileged process changing mounts or directories after authorization"
+  },
+  "claim_boundary": "This bounded oracle tests stable coordinate and contiguous block-16/block-64 masks with scalar tail reconstruction on auxiliary Up/Down matrices. It is not a converse for learned semantic masks, vector tail codebooks, Gate matrices, arbitrary blocks, or a finite bulk codec. A source-only seal, runtime receipt, or optimistic survivor is not a compression result or production authorization."
+}

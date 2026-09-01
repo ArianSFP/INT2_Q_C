@@ -1,0 +1,528 @@
+{
+  "access": {
+    "model_or_qwen_path_arguments": 0,
+    "network_operations": 0,
+    "payload_files_opened": 0
+  },
+  "aggregate": {
+    "full_pipeline_projection_claimed": false,
+    "full_pipeline_wall_gate_seconds": 900.0,
+    "median_complete_stage0_shard_seconds": 2.7174683440243825,
+    "one_time_cold_excess_seconds": 0.38061003875918686,
+    "projected_complete_u32_stage0_seconds_including_finite_topk_journal_and_global_merge": 696.8922319519334,
+    "prospective_stage0_margin_gate_seconds": 650.0,
+    "replay_deterministic": true,
+    "reserved_seconds_for_unmeasured_stage1_stage2_validation_and_final_journal": 250.0,
+    "stage0_projection_below_margin_gate": false
+  },
+  "bindings": {
+    "base_calibration": {
+      "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_pmg1_direct_source_calibration_v0/calibrate.py",
+      "sha256": "0432aaf16d809587157644db1335dc0a3d05b9d2d05a9ba1fdaebec655ca5c96"
+    },
+    "cuda_headers": {
+      "/usr/local/cuda/include/cuda_bf16.h": "4d5a2ad88adb17983aef0505ed6ed2a0603497c79c103bba82c928301ea12310",
+      "/usr/local/cuda/include/cuda_fp16.h": "8eb1600a8e2e33d40572bffe7001a27f6046a74949d80353fe02cf88b2563dda",
+      "/usr/local/cuda/include/curand_kernel.h": "4a37c07a1d77c9b5c8c627a4720733cee6b4da4200a844e8a49291858bc26adf",
+      "/usr/local/cuda/include/curand_normal.h": "967998564d9f9f4a045563b2b5d2a15eb1cbdfa18b0a332707c3a765e09a61c0",
+      "/usr/local/cuda/include/curand_philox4x32_x.h": "4f6d483fe45d837fed49553d25ee1d2cabb012a138a2f7f08bbaf584e63dd83c"
+    },
+    "design_bundle_sha256": "16aacb6f5fa6a1ed12fe0c01506410ad69585894077a4a6af627674b6b90adda",
+    "design_complete_plan_sha256": "86639758eda1835b9ea9e883372bb55ec13ec3487705a91d892878972db74760",
+    "design_manifest": {
+      "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_pmg1_v2_design_draft/ARTIFACT_SHA256SUMS.txt",
+      "sha256": "ea7086c401cd6981d097ecc9b52196d3d01cda123d0cb8ab28c001cf008b27ff"
+    },
+    "direct": {
+      "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_u32_direct_counter_calibration_v0/calibrate_direct.py",
+      "sha256": "f5a7c8b9a525e02d469ca974f9a6607030b2ca2822b66d4bce31604251516ed5"
+    },
+    "domain_probe": {
+      "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_u32_direct_domain_collapse_probe_v0/probe.py",
+      "sha256": "d3274d82e5321a33f0850ca02251635d41fefc804dd3d5960bac1c01cbab971a"
+    },
+    "plan": {
+      "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_pmg1_direct_source_calibration_v0/plan.py",
+      "sha256": "adcf1d8153c2a8a5048153edfa90f8f12d959d1d09e1cf7524359a532da950d1"
+    },
+    "shape": {
+      "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_u32_33domain_calibration_v0/calibrate.py",
+      "sha256": "6d3cdac6ab4f1a1fcbe742f43a2fd817c8bf56d1bfeff9e38c2432fe6848149a"
+    }
+  },
+  "claim_boundary": "Source-free binary64 stage0 calibration only. This closes the v0 metric/wire mismatch but does not time stage1/stage2/validation, test Qwen, or authorize payload.",
+  "compiled_kernels": {
+    "parity": {
+      "arch": "120",
+      "cubin_bytes": 253167,
+      "cubin_magic_hex": "7f454c4602010141",
+      "cubin_sha256": "dd19fd8f3c2997f2e48754bd594976f0ea2bb28d22d1ef2e86d393f91819e809",
+      "filename": "fuseed_pmg1_binary64_parity.cu",
+      "options": [
+        "--std=c++17",
+        "--fmad=false",
+        "--ftz=false",
+        "--prec-div=true",
+        "--prec-sqrt=true",
+        "-I/usr/local/cuda/include"
+      ]
+    },
+    "parity_source_sha256": "63cc615c7f9b0a5f07920cc6c9b04516160e3784d3dabf5427f170efe3bd46b1",
+    "performance": {
+      "arch": "120",
+      "cubin_bytes": 915911,
+      "cubin_magic_hex": "7f454c4602010141",
+      "cubin_sha256": "932065b3709a96e64c2f44ebc8564724b886d355556aaeb4e5970c5056bd9e1f",
+      "filename": "fuseed_pmg1_binary64_stage0.cu",
+      "options": [
+        "--std=c++17",
+        "--fmad=false",
+        "--ftz=false",
+        "--prec-div=true",
+        "--prec-sqrt=true",
+        "-I/usr/local/cuda/include"
+      ]
+    }
+  },
+  "derivation": {
+    "abi_id": "CURRENT_PMG_GATE_UP_DIRECT_BF16",
+    "active_domain_replacement_counts": {
+      "active_define_insertion": 1,
+      "cross_moment_guard": 1,
+      "output_guard": 1
+    },
+    "active_domains": 1,
+    "binary64_capture_replacement_counts": {
+      "metric_call_sites_plus_definition": 2,
+      "metric_function_signature": 1,
+      "metric_return": 1,
+      "output_pointer": 1
+    },
+    "direct_replacement_counts": {
+      "generator": 1,
+      "scale_function": 1,
+      "signature": 1
+    },
+    "metric_order": "capture descending then seed_u32 ascending",
+    "metric_wire": "IEEE-754 binary64 capture, canonical positive zero",
+    "performance_cuda_sha256": "d0af6e0e93706b69c523d0bfded4ffb57717b827fa9c5bc69f0a37d7bb1c7d43"
+  },
+  "global_merge_shape_probe": {
+    "capture_sha256": "08e63307c50312a54e73e17d520741d1e59b19309b4a3cf606f0471a5abe4080",
+    "input_records": 2097152,
+    "output_records": 8192,
+    "seconds": 0.8397258429322392,
+    "seed_sha256": "37a2a852e29304a34ddc4e064964cbcad5353940ec36fdbd9f386639296fe186",
+    "uses_synthetic_repeated_shard_metrics": true
+  },
+  "parity": {
+    "direct_shifted_and_original_offset_sequential_three_replays": {
+      "identical": true,
+      "receipt": {
+        "counter_sha256": "ea92e270c740221b0360669de11afb698807c91caac42389b6dab3a28a6139fb",
+        "direct_equals_original_offset_sequential_j_plus_1": true,
+        "direct_equals_shifted": true,
+        "raw_float32_sha256": "c50ebadeb892b2d4433d44d52b9222da6aa2ed8459c3326927991647935f03b5",
+        "rows": 132,
+        "scaled_bf16_sha256": "3dfafb5b177db96730ea9f12214bf8925bc4af2c10e3b9e79fb0d3963f951366",
+        "terminal_counters_equal": true,
+        "terminal_sha256": "0b5397649cd8f389c8db9675b92df3dafe08b34b8ef0168eed2d0d929112de1e"
+      },
+      "repetitions": 3
+    },
+    "direct_shifted_reference_three_replays": {
+      "identical": true,
+      "receipt": {
+        "direct_counter_sha256": "ea92e270c740221b0360669de11afb698807c91caac42389b6dab3a28a6139fb",
+        "max_normal4_indices_by_call_size": [
+          95,
+          47,
+          2,
+          0
+        ],
+        "offset_values": [
+          0,
+          388,
+          8760,
+          9148,
+          17179869180,
+          17179869184,
+          17179869188
+        ],
+        "raw_bitwise_equal": true,
+        "raw_float32_sha256": "58601f456e20857871cb012ed979a8cd930e790d79ecf20b9911e3fde4c3f27c",
+        "rows": 132,
+        "scaled_bf16_bitwise_equal": true,
+        "scaled_widened_bf16_sha256": "3dfafb5b177db96730ea9f12214bf8925bc4af2c10e3b9e79fb0d3963f951366",
+        "terminal_counter_equal": true,
+        "terminal_counter_sha256": "0b5397649cd8f389c8db9675b92df3dafe08b34b8ef0168eed2d0d929112de1e",
+        "vector_sha256": "3bcb66a01866882c05d67026869f8cd258631cbcbab4642846f7c3ae640349ba",
+        "zero_kat_words": [
+          "6627e8d5",
+          "e169c58d",
+          "bc57ac4c",
+          "9b00dbd8"
+        ]
+      },
+      "repetitions": 3
+    },
+    "torch_initial_terminal_and_bf16_three_replays": {
+      "case_count": 8,
+      "coordinate_count": 56,
+      "direct_output_sha256": "9dc0be889c8abaaed0d11269322d11a223c51130f1b65622b69d3e1a47090fe6",
+      "identical": true,
+      "repetitions": 3,
+      "rows": [
+        {
+          "base_seed": 4294966272,
+          "bf16_widened_sha256": "5cb35ea62443427bd563cb673c3c32e5329514574dd0225023ff6e9b7313941d",
+          "effective_seed": 4294967296,
+          "expected_increment": 16,
+          "expert": 0,
+          "initial_offset": 11520,
+          "initial_seed": 4294967296,
+          "initial_state_sha256": "0ebf286aceb14eacdca36ab9d8902aa7c1a7afb2c126e0cf986f746b41688b0d",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            3145727
+          ],
+          "numel": 3145728,
+          "offset": 11520,
+          "role": "up",
+          "scale_bits": 1006834287,
+          "terminal_offset": 11536,
+          "terminal_state_sha256": "7fd0ea953d212ade913261f705d311ae0569695bd2cf4fbc50eb7ef49ef0041d"
+        },
+        {
+          "base_seed": 2358,
+          "bf16_widened_sha256": "112a79c1e512d31c7cdf954be3c37f586f691bc55c7009856fe84fbe99b84ec6",
+          "effective_seed": 3382,
+          "expected_increment": 8,
+          "expert": 31,
+          "initial_offset": 12280,
+          "initial_seed": 3382,
+          "initial_state_sha256": "004510e8c58cb4cfdbea1a03ad9b909e5a25d88c7e9b027c883a1ae14852aafa",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            1572863
+          ],
+          "numel": 1572864,
+          "offset": 12280,
+          "role": "down",
+          "scale_bits": 978717224,
+          "terminal_offset": 12288,
+          "terminal_state_sha256": "250339e84bd3d446fb55fbcd5b9983a91af38cabff1b86a2ac219c86fe913fce"
+        },
+        {
+          "base_seed": 4294966172,
+          "bf16_widened_sha256": "5cb35ea62443427bd563cb673c3c32e5329514574dd0225023ff6e9b7313941d",
+          "effective_seed": 4294967296,
+          "expected_increment": 16,
+          "expert": 32,
+          "initial_offset": 11520,
+          "initial_seed": 4294967296,
+          "initial_state_sha256": "0ebf286aceb14eacdca36ab9d8902aa7c1a7afb2c126e0cf986f746b41688b0d",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            3145727
+          ],
+          "numel": 3145728,
+          "offset": 11520,
+          "role": "up",
+          "scale_bits": 1006834287,
+          "terminal_offset": 11536,
+          "terminal_state_sha256": "7fd0ea953d212ade913261f705d311ae0569695bd2cf4fbc50eb7ef49ef0041d"
+        },
+        {
+          "base_seed": 4294967295,
+          "bf16_widened_sha256": "ed5ebba75655f871e7bd0b0f5afd3766deaac993d6aab182aa8c5f6b407916e8",
+          "effective_seed": 4294968419,
+          "expected_increment": 8,
+          "expert": 63,
+          "initial_offset": 12280,
+          "initial_seed": 4294968419,
+          "initial_state_sha256": "acd89215153781e2c190178c1cad541e76597d3ce2c59059adee91a342eccf0a",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            1572863
+          ],
+          "numel": 1572864,
+          "offset": 12280,
+          "role": "down",
+          "scale_bits": 978717224,
+          "terminal_offset": 12288,
+          "terminal_state_sha256": "3664f775ae8de302b927bf674ab88cd8586c409822869b8f46734cd8c7c10963"
+        },
+        {
+          "base_seed": 4294966072,
+          "bf16_widened_sha256": "5cb35ea62443427bd563cb673c3c32e5329514574dd0225023ff6e9b7313941d",
+          "effective_seed": 4294967296,
+          "expected_increment": 16,
+          "expert": 64,
+          "initial_offset": 11520,
+          "initial_seed": 4294967296,
+          "initial_state_sha256": "0ebf286aceb14eacdca36ab9d8902aa7c1a7afb2c126e0cf986f746b41688b0d",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            3145727
+          ],
+          "numel": 3145728,
+          "offset": 11520,
+          "role": "up",
+          "scale_bits": 1006834287,
+          "terminal_offset": 11536,
+          "terminal_state_sha256": "7fd0ea953d212ade913261f705d311ae0569695bd2cf4fbc50eb7ef49ef0041d"
+        },
+        {
+          "base_seed": 1,
+          "bf16_widened_sha256": "21b316598be697a446fcb322a5b88dc31a720f78273c026e393d13860ab3cbfe",
+          "effective_seed": 1225,
+          "expected_increment": 8,
+          "expert": 95,
+          "initial_offset": 12280,
+          "initial_seed": 1225,
+          "initial_state_sha256": "56d62e10646b1a8b2d0344d0527b42949ce4afd0422d4ca61805400a5949d9df",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            1572863
+          ],
+          "numel": 1572864,
+          "offset": 12280,
+          "role": "down",
+          "scale_bits": 978717224,
+          "terminal_offset": 12288,
+          "terminal_state_sha256": "c8059782f1020053742673e191afcaa47f73e7d38774f32be8bc9425432ed253"
+        },
+        {
+          "base_seed": 4294965972,
+          "bf16_widened_sha256": "5cb35ea62443427bd563cb673c3c32e5329514574dd0225023ff6e9b7313941d",
+          "effective_seed": 4294967296,
+          "expected_increment": 16,
+          "expert": 96,
+          "initial_offset": 11520,
+          "initial_seed": 4294967296,
+          "initial_state_sha256": "0ebf286aceb14eacdca36ab9d8902aa7c1a7afb2c126e0cf986f746b41688b0d",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            3145727
+          ],
+          "numel": 3145728,
+          "offset": 11520,
+          "role": "up",
+          "scale_bits": 1006834287,
+          "terminal_offset": 11536,
+          "terminal_state_sha256": "7fd0ea953d212ade913261f705d311ae0569695bd2cf4fbc50eb7ef49ef0041d"
+        },
+        {
+          "base_seed": 4294967294,
+          "bf16_widened_sha256": "14e4f3c4911d37f020ca15ac490672d91f9f6e314cf9796f60aa8832096d4b98",
+          "effective_seed": 4294968618,
+          "expected_increment": 8,
+          "expert": 127,
+          "initial_offset": 12280,
+          "initial_seed": 4294968618,
+          "initial_state_sha256": "e5d1b58da4a28515a0f509357c53b20345213c3e028963d730389f741250ec4e",
+          "native_indices": [
+            0,
+            1,
+            261119,
+            261120,
+            1044479,
+            1044480,
+            1572863
+          ],
+          "numel": 1572864,
+          "offset": 12280,
+          "role": "down",
+          "scale_bits": 978717224,
+          "terminal_offset": 12288,
+          "terminal_state_sha256": "e6dbc2f5c74f9c49acebb12f9bae78ffd6ab4166073e0237db778e54a98840df"
+        }
+      ],
+      "stride": 261120
+    }
+  },
+  "rows": [
+    {
+      "best_capture": 0.03529210911201497,
+      "best_seed_u32": 10309563,
+      "boundary_tie_cardinality": 1,
+      "finite_and_zero_validation_seconds": 0.16603141592349857,
+      "journal_bytes": 99006,
+      "journal_fsync_seconds": 0.0025689639151096344,
+      "journal_sha256": "ce1f38ad8702d099bfcb951c021f63a69dead14afa544cefd52e3ab8d5e387a4",
+      "kernel_seconds": 2.7073868919396773,
+      "negative_zero_count": 0,
+      "packed_record_bytes": 98304,
+      "q_sentinel_sha256": "9200a1ca88c77af0d97f4cd153737ae5d2f0274516465127395ab4380566aa66",
+      "repetition": 0,
+      "shard_end_to_end_seconds": 3.0980783827835694,
+      "threshold_capture": 0.015274256004005782,
+      "topk_capture_sha256": "0f3416fefc2fe2a9f259f38b2f674db759b2587272d98490e76023b882f02532",
+      "topk_seconds": 0.2220911110052839,
+      "topk_seed_sha256": "c0512306421385749e76d9ac6c52ed01b731559ccb64ca1cdc03a6f94ac40098"
+    },
+    {
+      "best_capture": 0.03529210911201497,
+      "best_seed_u32": 10309563,
+      "boundary_tie_cardinality": 1,
+      "finite_and_zero_validation_seconds": 0.0010970990406349301,
+      "journal_bytes": 99006,
+      "journal_fsync_seconds": 0.0030805360293015838,
+      "journal_sha256": "85e4e1315d0d8e3cd8e5f6f7f82c4350ca27c76fc7ffc7c186ed10b894fc41d1",
+      "kernel_seconds": 2.707364402944222,
+      "negative_zero_count": 0,
+      "packed_record_bytes": 98304,
+      "q_sentinel_sha256": "9200a1ca88c77af0d97f4cd153737ae5d2f0274516465127395ab4380566aa66",
+      "repetition": 1,
+      "shard_end_to_end_seconds": 2.7174683440243825,
+      "threshold_capture": 0.015274256004005782,
+      "topk_capture_sha256": "0f3416fefc2fe2a9f259f38b2f674db759b2587272d98490e76023b882f02532",
+      "topk_seconds": 0.005926306010223925,
+      "topk_seed_sha256": "c0512306421385749e76d9ac6c52ed01b731559ccb64ca1cdc03a6f94ac40098"
+    },
+    {
+      "best_capture": 0.03529210911201497,
+      "best_seed_u32": 10309563,
+      "boundary_tie_cardinality": 1,
+      "finite_and_zero_validation_seconds": 0.0007712480146437883,
+      "journal_bytes": 99006,
+      "journal_fsync_seconds": 0.002634710050188005,
+      "journal_sha256": "4194b051c88247c7f5d17f20b1ad825f6c1b19aa588e1a236807f466ed140154",
+      "kernel_seconds": 2.707595309941098,
+      "negative_zero_count": 0,
+      "packed_record_bytes": 98304,
+      "q_sentinel_sha256": "9200a1ca88c77af0d97f4cd153737ae5d2f0274516465127395ab4380566aa66",
+      "repetition": 2,
+      "shard_end_to_end_seconds": 2.7165224180789664,
+      "threshold_capture": 0.015274256004005782,
+      "topk_capture_sha256": "0f3416fefc2fe2a9f259f38b2f674db759b2587272d98490e76023b882f02532",
+      "topk_seconds": 0.0055211500730365515,
+      "topk_seed_sha256": "c0512306421385749e76d9ac6c52ed01b731559ccb64ca1cdc03a6f94ac40098"
+    }
+  ],
+  "runtime": {
+    "compute_capability": "120",
+    "cuda_driver_api": 13000,
+    "cuda_runtime": 12090,
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "file_bindings": {
+      "/usr/bin/python3.12": {
+        "resolved": "/usr/bin/python3.12",
+        "sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5"
+      },
+      "/usr/lib/x86_64-linux-gnu/libcuda.so.580.126.09": {
+        "resolved": "/usr/lib/x86_64-linux-gnu/libcuda.so.580.126.09",
+        "sha256": "e8e541166449da5a1278f40b27a28d072174b31f2941b101a9609b6d1d3aed32"
+      },
+      "/usr/local/lib/python3.12/dist-packages/nvidia/cuda_nvrtc/lib/libnvrtc.so.12": {
+        "resolved": "/usr/local/lib/python3.12/dist-packages/nvidia/cuda_nvrtc/lib/libnvrtc.so.12",
+        "sha256": "43731e24cd89e3749826304f304e8aa11fbecf1188715271b1f5018d6212b5e6"
+      },
+      "/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib/libcudart.so.12": {
+        "resolved": "/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+        "sha256": "c3a75b33af334a3486d197dbd1584a2985183ba4688d237a2be5f2f679329920"
+      },
+      "/usr/local/lib/python3.12/dist-packages/torch/_C.cpython-312-x86_64-linux-gnu.so": {
+        "resolved": "/usr/local/lib/python3.12/dist-packages/torch/_C.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "db1e4f96208c6b297186585a04acee533035705706254ebdd4953fbae6b90224"
+      },
+      "/usr/local/lib/python3.12/dist-packages/torch/__init__.py": {
+        "resolved": "/usr/local/lib/python3.12/dist-packages/torch/__init__.py",
+        "sha256": "2f0deb66d5dff6b9c02a62832c3bf3824c2ee031c462a3afeb9ca170466da5bf"
+      },
+      "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/__init__.py": {
+        "resolved": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/__init__.py",
+        "sha256": "8c4724758587dea5f1c1d7c217c74a9fa0e4ed7f9d76a2b86fa001117cf3c718"
+      },
+      "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/cuda/compiler.py": {
+        "resolved": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/cuda/compiler.py",
+        "sha256": "09226d26ab41bf6e7b5b6e57b59187b4c3a5637690747af9a83d288a87d0fb6e"
+      },
+      "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy_backends/cuda/api/runtime.cpython-312-x86_64-linux-gnu.so": {
+        "resolved": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy_backends/cuda/api/runtime.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "65a5c75db5e05c9bd35132b7f41631cadff6a6a6300acd85b273db3ba7ce28de"
+      },
+      "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy_backends/cuda/libs/nvrtc.cpython-312-x86_64-linux-gnu.so": {
+        "resolved": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy_backends/cuda/libs/nvrtc.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "a3e9213226fa693231cab5e873aa1de8d31f7c6d82d9c56716c326ce438af373"
+      },
+      "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py": {
+        "resolved": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+        "sha256": "09295a80660f17925ae23765ce8cbd7ff7ceae968d5f2f89349f1cb74c0b9e11"
+      }
+    },
+    "loaded_cuda_libraries": [
+      "/usr/lib/x86_64-linux-gnu/libcuda.so.580.126.09",
+      "/usr/local/lib/python3.12/dist-packages/nvidia/cuda_nvrtc/lib/libnvrtc.so.12",
+      "/usr/local/lib/python3.12/dist-packages/nvidia/cuda_runtime/lib/libcudart.so.12"
+    ],
+    "numpy": "2.5.2",
+    "nvrtc": [
+      12,
+      8
+    ],
+    "python": "3.12.3",
+    "pythonpath": "/usr/local/lib/python3.12/dist-packages",
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8"
+  },
+  "schema": "fuseed_pmg1_binary64_source_free_stage0_calibration_v1",
+  "script_sha256": "9376720ec812b93e070ccb93433e83ff243213d6d244c7a18afa84b3d8690c24",
+  "shape": {
+    "abi_count": 1,
+    "active_domains": 1,
+    "all_shard_topk_record_bytes": 25165824,
+    "block_threads": 256,
+    "candidates_per_shard": 16777216,
+    "complete_candidate_count": 4294967296,
+    "grid_blocks": 65535,
+    "journal_record_bytes": 12,
+    "normal4_bundles_per_candidate": 256,
+    "normal_values_per_candidate": 1024,
+    "q_bytes": 134217728,
+    "q_dtype": "binary64",
+    "repetitions": 3,
+    "shards": 256,
+    "top_k": 8192,
+    "warps_per_block": 8
+  },
+  "status": "EARLY_KILL_BINARY64_STAGE0_NO_QWEN"
+}

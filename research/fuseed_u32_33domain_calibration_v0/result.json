@@ -1,0 +1,117 @@
+{
+  "access": {
+    "model_or_qwen_path_arguments": 0,
+    "network_operations": 0,
+    "payload_files_opened": 0
+  },
+  "aggregate": {
+    "abis": 3,
+    "median_end_to_end_seconds_per_shard_excluding_journal": 3.8963711500400677,
+    "median_kernel_seconds_per_shard": 3.3351742995437235,
+    "projected_three_abi_end_to_end_seconds_excluding_journal": 2992.413043230772,
+    "projected_three_abi_kernel_seconds": 2561.4138620495796,
+    "projection_warning": "Linear planning projection from one source-free shard; excludes exact ABI parity, compile, journals, global merges, controls construction, stage1/2, and validation.",
+    "replay_deterministic": true,
+    "shards_per_abi": 256
+  },
+  "claim_boundary": "Unsealed synthetic runtime calibration only; no exact producer ABI parity, model/Qwen access, scientific retention, journal, or run authorization.",
+  "frozen_shape_emulated": {
+    "affine_storage": "alpha and mu independently FP16-round/reload",
+    "candidate_count": 16777216,
+    "common_fp64_moments": 8,
+    "domain_fp64_cross_moments": 4,
+    "domain_ownership": "lane0 source+control0; lanes1..31 controls1..31",
+    "domains": 33,
+    "fit_counts": {
+      "down": 268,
+      "up": 244
+    },
+    "normal4_bundles_per_candidate": 256,
+    "q_bytes": 2214592512,
+    "q_shape": [
+      33,
+      16777216
+    ],
+    "repetitions": 2,
+    "score_counts": {
+      "down": 268,
+      "up": 244
+    },
+    "top_k_per_domain": 8192,
+    "widened_bf16_anchor_values_per_candidate": 1024
+  },
+  "kernel": {
+    "attributes": {
+      "binary_version": 120,
+      "cache_mode_ca": 0,
+      "const_size_bytes": 72,
+      "local_size_bytes": 0,
+      "max_dynamic_shared_size_bytes": 49152,
+      "max_threads_per_block": 512,
+      "num_regs": 106,
+      "preferred_shared_memory_carveout": -1,
+      "ptx_version": 120,
+      "shared_size_bytes": 0
+    },
+    "block_threads": 256,
+    "grid_blocks": 65535,
+    "register_spill_proxy_local_size_bytes": 0,
+    "warps_per_block": 8
+  },
+  "memory": {
+    "cupy_pool_total_bytes": 2785686528,
+    "cupy_pool_used_bytes": 2214867456,
+    "device_free_after_q_and_inputs_bytes": 30920278016,
+    "device_free_before_bytes": 33136967680,
+    "device_total_bytes": 33668857856,
+    "measured_allocation_delta_bytes": 2216689664
+  },
+  "rows": [
+    {
+      "anchor_value_rate_per_second_kernel": 5151150236.606784,
+      "best_q_domain_0": 0.964850664138794,
+      "best_seed_domain_0": 4102321,
+      "candidate_rate_per_second_kernel": 5030420.152936312,
+      "cold_first_domain_topk_seconds": 0.745251442072913,
+      "domain_cross_moments_per_second_kernel": 169987957808.02386,
+      "domain_topk_seed_sha256": "1218b873bed1165c82366406efdc1cfeaf75954a9c516dd6211cb87f6f1d4ecb",
+      "domain_topk_value_sha256": "8eed79e59f6a4126d73f313aaf4cc888fbd572869ca205f7d40cf80280fbe328",
+      "end_to_end_seconds_excluding_journal": 4.342181421117857,
+      "finite_validation_seconds": 0.15661953995004296,
+      "kernel_seconds": 3.3351520330179483,
+      "max_boundary_tie_cardinality": 2,
+      "median_domain_topk_seconds": 0.0032282720785588026,
+      "q_sentinel_sha256": "3813260130f0dd7148ee28f5f093666a745446f37541abeae11091582e2cb461",
+      "remaining_domain_topk_seconds_sum": 0.10515840607695282,
+      "repetition": 0
+    },
+    {
+      "anchor_value_rate_per_second_kernel": 5151081456.12129,
+      "best_q_domain_0": 0.964850664138794,
+      "best_seed_domain_0": 4102321,
+      "candidate_rate_per_second_kernel": 5030352.9844934475,
+      "cold_first_domain_topk_seconds": 0.0036153949331492186,
+      "domain_cross_moments_per_second_kernel": 169985688052.00256,
+      "domain_topk_seed_sha256": "1218b873bed1165c82366406efdc1cfeaf75954a9c516dd6211cb87f6f1d4ecb",
+      "domain_topk_value_sha256": "8eed79e59f6a4126d73f313aaf4cc888fbd572869ca205f7d40cf80280fbe328",
+      "end_to_end_seconds_excluding_journal": 3.4505608789622784,
+      "finite_validation_seconds": 0.002772058011032641,
+      "kernel_seconds": 3.3351965660694987,
+      "max_boundary_tie_cardinality": 2,
+      "median_domain_topk_seconds": 0.003494733013212681,
+      "q_sentinel_sha256": "3813260130f0dd7148ee28f5f093666a745446f37541abeae11091582e2cb461",
+      "remaining_domain_topk_seconds_sum": 0.10897685994859785,
+      "repetition": 1
+    }
+  ],
+  "runtime": {
+    "cuda_runtime": 12090,
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "numpy": "2.5.2",
+    "python": "3.12.3"
+  },
+  "schema": "fuseed_u32_source_free_33domain_calibration_v0",
+  "script_sha256": "6d3cdac6ab4f1a1fcbe742f43a2fd817c8bf56d1bfeff9e38c2432fe6848149a"
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "fuseed_u32_direct_counter_calibration_v0_independent_audit_receipt_v1",
+  "status": "BLOCKED_FROZEN_V1_RELEASE_PREREQUISITES_UNMET",
+  "audited_utc": "2026-09-01T13:50:00Z",
+  "audited_target": {
+    "path": "../fuseed_u32_direct_counter_calibration_v0",
+    "artifact_manifest_sha256": "c4ddddcb32fa932abc164c617333d1267ef137c2d06b577b892f72f5497f6ab8",
+    "script_sha256": "f5a7c8b9a525e02d469ca974f9a6607030b2ca2822b66d4bce31604251516ed5",
+    "result_sha256": "9fcd38bc2aaf27ccdc82175c09d5e35015015d278e340e16c10d82580306d83f",
+    "readme_sha256": "00b3697cf7838a3a0dea0886eda7bf1792f82b8d97e5122ef2eafea68b159e1e",
+    "verifier_sha256": "c34d72b913501f14d89b5161ff7eb1d0e887e37db143c34acb09726762a20356",
+    "exact_members": 5
+  },
+  "audited_frozen_gate": {
+    "design_path": "../fuseed_u32_v1/design_lock.json",
+    "pre_audit_design_sha256": "7524a1dfc906dc8bb9addec5a624d16fdee068b01b8ed54ef118bcbf07d7eb48",
+    "required_runtime_and_compiler_hash_binding": true,
+    "required_new_parity_repetitions": 3,
+    "required_shifted_offset_reference": true,
+    "required_original_offset_sequential_reference": true,
+    "required_torch_initial_and_terminal_generator_state_parity": true,
+    "required_exact_final_bundle_plan_and_journal_shape": true,
+    "prospective_runtime_gate_seconds": 900.0
+  },
+  "authentication": {
+    "target_exact_regular_non_reparse_closure": "5_OF_5",
+    "target_manifest_rows": "4_OF_4",
+    "all_target_hashes_match": true,
+    "producer_source_only_verifier": "PASS",
+    "producer_artifacts_modified": false
+  },
+  "independent_positive_findings": {
+    "direct_counter_u64_key_carry_present": true,
+    "direct_counter_low64_to_high64_carry_present": true,
+    "performance_core_curand_init_calls": 0,
+    "performance_core_curand_normal4_calls": 0,
+    "performance_core_direct_philox_calls_per_bundle": 1,
+    "performance_core_pinned_box_muller_calls_per_bundle": 2,
+    "parity_rows": 132,
+    "parity_vector_sha256": "3bcb66a01866882c05d67026869f8cd258631cbcbab4642846f7c3ae640349ba",
+    "raw_float32_sha256": "58601f456e20857871cb012ed979a8cd930e790d79ecf20b9911e3fde4c3f27c",
+    "scaled_bf16_sha256": "3dfafb5b177db96730ea9f12214bf8925bc4af2c10e3b9e79fb0d3963f951366",
+    "terminal_counter_sha256": "0b5397649cd8f389c8db9675b92df3dafe08b34b8ef0168eed2d0d929112de1e",
+    "three_score_q_topk_replays_deterministic": true,
+    "kernel_projection_seconds": 2560.1452746391296,
+    "warm_projection_seconds": 2672.980880373507,
+    "both_projections_exceed_900_seconds": true,
+    "omitted_later_work_can_only_add_wall_time": true,
+    "observed_timing_is_compelling_but_conditional": true
+  },
+  "release_blockers": [
+    {
+      "id": "RUNTIME_COMPILER_AND_COMPILED_KERNEL_IDENTITY_UNBOUND",
+      "severity": "BLOCKING",
+      "finding": "The result binds Python, NumPy, CuPy, CUDA runtime integer, device name, five CUDA header hashes, derived CUDA source, and kernel attributes, but not CUDA driver identity, NVRTC/compiler identity or binary/library hash, explicit compile options, or compiled PTX/cubin/kernel bytes.",
+      "required_repair": "In a distinct replay package, bind the exact runtime, driver, NVRTC/compiler implementation and options, source headers, and compiled executable representation used for parity and timing."
+    },
+    {
+      "id": "SECOND_REQUIRED_REFERENCE_CONSTRUCTION_AND_PARITY_REPETITIONS_ABSENT",
+      "severity": "BLOCKING",
+      "finding": "The calibration compares direct generation only with curand_init(seed,sequence,O+4*j) plus one normal4. It does not compare curand_init(seed,sequence,O) followed by j+1 normal4 calls, and run_parity is executed once rather than three times.",
+      "required_repair": "Run both frozen reference constructions bitwise over the complete boundary vector set for three independently receipted repetitions and require stable raw/BF16/counter hashes."
+    },
+    {
+      "id": "TORCH_GENERATOR_STATE_PARITY_ABSENT",
+      "severity": "BLOCKING",
+      "finding": "The frozen design requires Torch initial_seed and terminal generator-state parity; the calibration has no Torch import or generator-state path.",
+      "required_repair": "Add a source-free, hash-bound Torch generator initial/terminal-state parity receipt for the fixed runtime before timing authority is granted."
+    },
+    {
+      "id": "FINAL_PLAN_AND_JOURNAL_PERFORMANCE_SHAPE_NOT_BOUND",
+      "severity": "BLOCKING_UNDER_EXACT_FROZEN_GATE",
+      "finding": "The timed core uses a synthetic 256-bundle instruction-shape plan and explicitly omits the frozen final bundle-plan digest, journal/global merge, and later stages. Kernel-only timing already exceeds the limit, but the frozen gate required the exact final plan and journal shape.",
+      "required_repair": "Bind the exact frozen bundle plan and measure the exact journal/global-merge path in the distinct hardened replay; retain the original 900-second limit."
+    }
+  ],
+  "claim_boundary": "The audit supports the numerical timing observation and its arithmetic, not final v1 release authority. It neither tests an initializer family on model data nor authorizes model, Qwen, CuPy, CUDA, GPU, or production access.",
+  "access_ledger": {
+    "frozen_calibration_metadata_and_source_files_read": 5,
+    "model_or_qwen_paths_supplied": 0,
+    "model_or_qwen_files_opened_statted_hashed_enumerated_or_named": 0,
+    "model_manifests_or_source_locks_opened": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "network_operations": 0,
+    "production_runs": 0,
+    "production_outputs_created": 0
+  },
+  "authorization": {
+    "calibration_release_passed": false,
+    "fuseed_v1_runtime_kill_finalized": false,
+    "model_or_qwen_access_authorized": false,
+    "gpu_or_cupy_execution_authorized": false,
+    "required_action": "Preserve v0 and use a distinct hardened replay package; do not relax the 900-second gate."
+  },
+  "verdict": "BLOCK_DO_NOT_FINALIZE_FUSEED_V1_RUNTIME_KILL",
+  "audit_internal_payload_grammar": "UTF8 LF-join: schema,status,target manifest,script,result,pre-audit design,ordered blocker ids,verdict",
+  "audit_internal_sha256": "432e860bf1addb86b247895cecdc144ea5dce3c5bd142ca06d9570d9f2b4042b"
+}

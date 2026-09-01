@@ -1,0 +1,262 @@
+{
+  "schema": "fuseed_u32_source_bindings_v1",
+  "status": "SOURCE_ONLY_DESIGN_WITH_EXTERNAL_SYNTHETIC_RUNTIME_EVIDENCE_NO_MODEL_ACCESS",
+  "dependencies": [
+    {
+      "id": "qwen_initializer_candidate_ledger",
+      "path": "../qwen_initializer_provenance/candidate_ledger.json",
+      "sha256": "6a9389ad283e6ba9976cdce18602009e95d50410aafcce00482e1432a08ddf46",
+      "role": "public-source provenance axes and conservative finite candidate ledger"
+    },
+    {
+      "id": "qwen_initializer_source_manifest",
+      "path": "../qwen_initializer_provenance/source_manifest.json",
+      "sha256": "5bc4aed5b2a5ab3c8cdc72f9bfd1caf4acd89d7a19204e8c1a71471783b76718",
+      "role": "hash-bound primary public-source bytes"
+    },
+    {
+      "id": "legacy_public_descriptor_lock",
+      "path": "../legacy_packed_public_descriptor_gate/descriptor_lock.json",
+      "sha256": "ba1f4a72ad4e2721ccdce8ccfece7f542d0ba6acc78ae8062c5baa50f685f41d",
+      "role": "fixed PAI PP2/EP4/ETP1 giant-packed FC1/FC2 geometry"
+    },
+    {
+      "id": "legacy_runtime_requirements",
+      "path": "../legacy_packed_public_descriptor_gate/runtime_receipt_requirements.json",
+      "sha256": "70d505acc7cb198a09cd217c23b3cab2155c221bc73c654590af751a39862763",
+      "role": "prior source-free giant-call runtime axes; insufficient for u64 effective-seed carry by itself"
+    },
+    {
+      "id": "direct_rng_state_design",
+      "path": "../direct_rng_state_envelope_v1/design_lock.json",
+      "sha256": "da3598bfbcd6fba52319f4b16cc6c19c3363616c59a727900eaaae3c5f1b99a8",
+      "role": "bounded CURRENT-PMG state envelope, cascade, controls, thresholds and physical ledger"
+    },
+    {
+      "id": "direct_rng_state_bindings",
+      "path": "../direct_rng_state_envelope_v1/source_bindings.json",
+      "sha256": "cc9330c893881b807917a1fc2097cc7c205c6da506cdf83a340cc230746f9b2e",
+      "role": "source-only dependency closure for direct envelope"
+    },
+    {
+      "id": "procedural_anchor_draft",
+      "path": "../procedural_anchor_expansion/candidate_lock_draft.json",
+      "sha256": "0fdd558a91c2c35d9b2d38ef9dab82f0ec9511a30ecdab26612da44845a0a2fc",
+      "role": "3.27T broad Cartesian comparator; draft/unsealed and not execution authority"
+    },
+    {
+      "id": "procedural_philox_reference",
+      "path": "../procedural_anchor_expansion/philox_reference.py",
+      "sha256": "f96dac90b471eee29e1d7c63998322f76950f2d4dea9973bfd811485d9345196",
+      "role": "integer Philox reference only; does not certify cuRAND Box-Muller or BF16"
+    },
+    {
+      "id": "procedural_cascade_kill_readme",
+      "path": "../procedural_anchor_expansion_cascade_v2/README.md",
+      "sha256": "0c7553ee7889081ed3a0d14c74264b43240519e4ef35a2914561ed9f215d0d7b",
+      "role": "broad 100x early-stopping impossibility boundary"
+    },
+    {
+      "id": "current_pmg_candidate_lock",
+      "path": "../initialization_anchor_oracle_tier_c_grouped_v4/candidate_lock.json",
+      "sha256": "a2997e9aa28d47b1accf231ba3c5eb30d39a8d26aa6d61fdb36fdb54babf1cc0",
+      "role": "later pinned projection-major grouped ABI, controls and panel split metadata"
+    },
+    {
+      "id": "current_pmg_kernel",
+      "path": "../initialization_anchor_oracle_tier_c_grouped_v4/kernels.py",
+      "sha256": "50770cf63812df3c19ab0ca0ed3aa36287a7797b37690254a2aca407ca9ff4c5",
+      "role": "later random-access native map and fixed-runtime policy"
+    },
+    {
+      "id": "current_pmg_common",
+      "path": "../initialization_anchor_oracle_tier_c_grouped_v4/common.py",
+      "sha256": "92fb078c53284abbb1c67609321a98c164a4446dc96483fa4b073a4402832cea",
+      "role": "FP16 affine semantics, decision thresholds and physical ledger formulas"
+    },
+    {
+      "id": "synthetic_throughput_probe_benchmark",
+      "path": "../fuseed_u32_throughput_probe_v0/benchmark.py",
+      "sha256": "001a3d08902441ee47501ff5a99bb0ce5159bff35b23b5cd11491539a564f401",
+      "role": "feasibility-only synthetic one-score benchmark; not an ABI or execution receipt"
+    },
+    {
+      "id": "synthetic_throughput_probe_result",
+      "path": "../fuseed_u32_throughput_probe_v0/result.json",
+      "sha256": "9e991c07e5dbe686bb5958b01775a2915ddb6bcc964245ff36b4e481eaf64f6f",
+      "role": "feasibility-only timing observation with no model access"
+    },
+    {
+      "id": "synthetic_throughput_probe_scope",
+      "path": "../fuseed_u32_throughput_probe_v0/README.md",
+      "sha256": "5726c00f1be7233faf06594b3f64c0fce671e86bc4ef28971e2ea9cd865e796e",
+      "role": "authoritative limitations for the synthetic probe"
+    },
+    {
+      "id": "synthetic_throughput_probe_manifest",
+      "path": "../fuseed_u32_throughput_probe_v0/artifact_sha256.txt",
+      "sha256": "460fe8e24385b6d7fa41d1e66a52c7840d20c175cc04d516d91613f393d6d850",
+      "role": "probe artifact closure"
+    },
+    {
+      "id": "synthetic_complete_scan_probe",
+      "path": "../fuseed_u32_complete_scan_probe_v0/complete_scan.py",
+      "sha256": "ad9b5628647a96dff20106d70642d77a54009b90cc2346192c0e0517ef8cd46e",
+      "role": "feasibility-only complete-u32 traversal and exact tie-aware TopK implementation probe"
+    },
+    {
+      "id": "synthetic_complete_scan_result",
+      "path": "../fuseed_u32_complete_scan_probe_v0/result.json",
+      "sha256": "867a756ec11aaa8587ca8c37a5d5324ee7baeb35ca5fdd741e5c8b77886d84fb",
+      "role": "two identical source-free complete-u32 synthetic replay receipts"
+    },
+    {
+      "id": "synthetic_complete_scan_scope",
+      "path": "../fuseed_u32_complete_scan_probe_v0/README.md",
+      "sha256": "b2e68482d693ec954df2a9092fd955dcf8fb5dd5ae4ba84bf2879b189e5ede9d",
+      "role": "authoritative limitations for complete-scan probe"
+    },
+    {
+      "id": "synthetic_complete_scan_verifier",
+      "path": "../fuseed_u32_complete_scan_probe_v0/verify_result.ps1",
+      "sha256": "9f893160ab22e38f8342bf705ab09b60af7404b622587efe0f0722ad34927a05",
+      "role": "source-free complete-scan result verifier"
+    },
+    {
+      "id": "synthetic_complete_scan_manifest",
+      "path": "../fuseed_u32_complete_scan_probe_v0/artifact_sha256.txt",
+      "sha256": "03504437042bc60c7eacaea05fca14ab925c3ed8f646f7ae35f4d8997dd7ab48",
+      "role": "complete-scan artifact closure"
+    },
+    {
+      "id": "exact_shape_33domain_calibration",
+      "path": "../fuseed_u32_33domain_calibration_v0/calibrate.py",
+      "sha256": "6d3cdac6ab4f1a1fcbe742f43a2fd817c8bf56d1bfeff9e38c2432fe6848149a",
+      "role": "source-free non-authoritative 256-bundle/1024-anchor/33-domain surrogate calibration"
+    },
+    {
+      "id": "exact_shape_33domain_result",
+      "path": "../fuseed_u32_33domain_calibration_v0/result.json",
+      "sha256": "3121d6da67f342ae16a523afd46f617adf359577dbce4027a6fa48a8388e3b31",
+      "role": "surrogate timing warning with zero model access; no v1 decision authority"
+    },
+    {
+      "id": "exact_shape_33domain_scope",
+      "path": "../fuseed_u32_33domain_calibration_v0/README.md",
+      "sha256": "ed47fde1f1d49f5719adfb4ec8db19f6ec88bbbbfff04ed6652e372bf7542a13",
+      "role": "surrogate calibration scope, architectural mismatches and blocked disposition"
+    },
+    {
+      "id": "exact_shape_33domain_verifier",
+      "path": "../fuseed_u32_33domain_calibration_v0/verify_result.ps1",
+      "sha256": "2dc4809ff9f62866330419a629e17f4ea70d534ad175da770fab2badc69525c9",
+      "role": "source-free surrogate result verifier"
+    },
+    {
+      "id": "exact_shape_33domain_manifest",
+      "path": "../fuseed_u32_33domain_calibration_v0/artifact_sha256.txt",
+      "sha256": "9e389c866c2a574da087fe645c4e9b799fbb74099f2329e5f9fe950057b2a7ed",
+      "role": "surrogate calibration artifact closure"
+    },
+    {
+      "id": "exact_direct_counter_calibration",
+      "path": "../fuseed_u32_direct_counter_calibration_v0/calibrate_direct.py",
+      "sha256": "f5a7c8b9a525e02d469ca974f9a6607030b2ca2822b66d4bce31604251516ed5",
+      "role": "architecture-equivalent direct Philox counter, pinned Box-Muller/BF16 parity and full-shard calibration"
+    },
+    {
+      "id": "exact_direct_counter_result",
+      "path": "../fuseed_u32_direct_counter_calibration_v0/result.json",
+      "sha256": "9fcd38bc2aaf27ccdc82175c09d5e35015015d278e340e16c10d82580306d83f",
+      "role": "three-replay source-free runtime-gate failure pending independent audit"
+    },
+    {
+      "id": "exact_direct_counter_scope",
+      "path": "../fuseed_u32_direct_counter_calibration_v0/README.md",
+      "sha256": "00b3697cf7838a3a0dea0886eda7bf1792f82b8d97e5122ef2eafea68b159e1e",
+      "role": "direct calibration scope and omitted-work boundary"
+    },
+    {
+      "id": "exact_direct_counter_verifier",
+      "path": "../fuseed_u32_direct_counter_calibration_v0/verify_result.ps1",
+      "sha256": "c34d72b913501f14d89b5161ff7eb1d0e887e37db143c34acb09726762a20356",
+      "role": "source-free direct calibration result verifier"
+    },
+    {
+      "id": "exact_direct_counter_manifest",
+      "path": "../fuseed_u32_direct_counter_calibration_v0/artifact_sha256.txt",
+      "sha256": "c4ddddcb32fa932abc164c617333d1267ef137c2d06b577b892f72f5497f6ab8",
+      "role": "direct calibration artifact closure"
+    }
+  ],
+  "primary_public_source_commits": {
+    "pai_megatron_patch": "2c3e3c98fd880a9c3c5f1d28c7f6eb4527d57e51",
+    "legacy_mcore": "6ba97dd37150a6bfba03d31808674211cf2a4d0d",
+    "current_pinned_mcore": "1cb3264479f28b8526db3d335faa9c5ef2183989",
+    "classification": "exact public revision labels; exact source bytes remain governed by the bound source_manifest and current source-trace package"
+  },
+  "probe_claim_boundary": {
+    "synthetic_only": true,
+    "normal4_bundles": 80,
+    "roles": 2,
+    "seed_shard_size": 16777216,
+    "reported_linear_full_u32_kernel_seconds": 1.88779,
+    "reported_linear_full_u32_end_to_end_seconds": 2.44351,
+    "complete_scan_reported_median_wall_seconds": 2.915525191,
+    "complete_scan_reported_kernel_seconds": 1.947533493,
+    "complete_scan_reported_selection_seconds": 0.823327038,
+    "complete_scan_reported_host_merge_seconds": 0.135859112,
+    "complete_scan_identical_replays": 2,
+    "not_exercised": [
+      "33-domain scoring",
+      "the three frozen ABIs",
+      "256-bundle FUSEED coordinate plan",
+      "exact 33-domain shard and rolling TopK",
+      "journal and resume",
+      "retention",
+      "model/Qwen data",
+      "production authorization"
+    ]
+  },
+  "surrogate_33domain_calibration_claim_boundary": {
+    "source_free": true,
+    "model_or_qwen_access": false,
+    "bound_calibration_used_cupy_cuda_gpu": true,
+    "design_author_turn_used_cupy_cuda_gpu": false,
+    "shape": "2^24 candidates; 256 normal4 bundles; 1024 widened BF16 anchors; 33 domains; FP64 moments; FP16 affine reload; q[33,N]; exact tie-aware Top8192",
+    "median_shard_kernel_seconds": 3.3351742995437235,
+    "median_shard_end_to_end_seconds": 3.8963711500400677,
+    "projected_768_shard_end_to_end_seconds": 2992.413043230772,
+    "prospective_limit_seconds": 900,
+    "verdict": "BLOCKED_SURROGATE_NOT_A_V1_RUNTIME_DECISION",
+    "architecturally_equivalent_to_v1": false,
+    "exact_driver_nvrtc_header_and_compiled_kernel_hashes_bound": false,
+    "not_claimed": [
+      "exact ABI/Box-Muller/BF16 parity",
+      "initializer statistical result",
+      "retention result",
+      "model execution authorization"
+    ]
+  },
+  "exact_direct_counter_calibration_claim_boundary": {
+    "source_free": true,
+    "model_or_qwen_access": false,
+    "bound_calibration_used_cupy_cuda_gpu": true,
+    "architecturally_equivalent_direct_counter_core": true,
+    "raw_and_bf16_parity_rows": 132,
+    "timed_repetitions": 3,
+    "deterministic_topk_repetitions": 3,
+    "projected_warm_end_to_end_seconds": 2672.980880373507,
+    "prospective_limit_seconds": 900,
+    "verdict": "EARLY_KILL_RUNTIME_NO_QWEN_PENDING_INDEPENDENT_DIRECT_CALIBRATION_AUDIT",
+    "omitted_work_only_adds_runtime": true,
+    "not_claimed": ["initializer statistical result", "retention result", "model execution authorization"]
+  },
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_enumerated_or_named": false,
+    "model_manifest_or_source_lock_opened_statted_hashed_or_enumerated": false,
+    "cuda_gpu_torch_cupy_used_by_this_design_turn": false,
+    "network_used_by_this_design_turn": false,
+    "production_result_opened_or_created": false
+  }
+}

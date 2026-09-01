@@ -1,0 +1,42 @@
+{
+  "schema": "lossy-tail-v7-artifact-manifest-v1",
+  "status": "FROZEN_SOURCE_ONLY_CANDIDATE_REQUIRES_FRESH_INDEPENDENT_AUDIT",
+  "created_utc": "2026-09-01T13:20:00Z",
+  "member_count_excluding_this_manifest": 16,
+  "members": [
+    {"path": "audit_lock_entrypoint.py", "bytes": 8900, "sha256": "445c7398b9b617f7eb81082bb73a1e60249dbe1ac2544b4b33a0fa6ecbab23df"},
+    {"path": "authorization_contract.json", "bytes": 4978, "sha256": "f9a63d9e5da16029d3a0ee6af575185980f82d36d3c60668d1fc4f775c64bbaf"},
+    {"path": "CPU_TEST_RECEIPT.json", "bytes": 5459, "sha256": "658f029fd8107c48f285c44b067c9c9aa8c35f55f618d592f254f4439ed0989a"},
+    {"path": "launch_manifest.json", "bytes": 3268, "sha256": "3d5bc5ed95071cc45406d0d2906b54f40d32adad0dffc6323b8fa80ca491ed63"},
+    {"path": "lossy_tail_core.py", "bytes": 103317, "sha256": "d1393a80b4e2b48a30c61ec0b519db9fe35b26c0aed12ca4287023f49d88fd79"},
+    {"path": "lossy_tail_oracle.py", "bytes": 14482, "sha256": "998771c07df30ae0d924e773e0961245c34c48ff967412748bcfd2fb57211aea"},
+    {"path": "preflight_launch.py", "bytes": 26793, "sha256": "9aa89718850ce7b3a2e6909577358df7f14def471b6fa850ff3f922c191765b0"},
+    {"path": "protocol_lock.json", "bytes": 11663, "sha256": "7c65886f8acce79340ff13267fe3f2e61b28f7b80c7b79e23493c1bead826e3b"},
+    {"path": "README.md", "bytes": 9728, "sha256": "1d2725e44f4de86018a911579828185069da45d3ef494f63b44d422ae9e665dc"},
+    {"path": "repair_lock.json", "bytes": 5585, "sha256": "6f879caed79aed81f824968a5188ef809ee1a8a1184ed5262b3e23633e18c781"},
+    {"path": "runtime_calibrate.py", "bytes": 13730, "sha256": "68847908b689939115165a131b2596448302a5a1f404a310c5d9ad9213c92dd7"},
+    {"path": "runtime_contract.json", "bytes": 4845, "sha256": "0cd6bf4cecf38a685e49b38fe29db629820296123c1acd0603be53a4d35cefe1"},
+    {"path": "source_bindings.json", "bytes": 2308, "sha256": "79edb94c8227e89debaf7eac5f4e181924d97300c9f7bc961a29151292e62a22"},
+    {"path": "test_lossy_tail_core.py", "bytes": 11347, "sha256": "7e6dfb8a41fbb4c7b5c6862b78797b5dea431fc5775b667a089be239749b9528"},
+    {"path": "test_release_security.py", "bytes": 27465, "sha256": "0b095e5b3aa6833b5a1beaf8e9ce3d7e5ea3390fef0fa765395849b2633b672d"},
+    {"path": "verify_package.py", "bytes": 14609, "sha256": "97ebc453210ebd450efcbc8b2241d5b292f02375afae7a32532b567d86ab692d"}
+  ],
+  "stage": {
+    "launch_manifest_sha256": "3d5bc5ed95071cc45406d0d2906b54f40d32adad0dffc6323b8fa80ca491ed63",
+    "repair_lock_file_sha256": "6f879caed79aed81f824968a5188ef809ee1a8a1184ed5262b3e23633e18c781",
+    "repair_lock_internal_sha256": "b580de6404add47e7a2b4e27e877a15cf531b41d83f4d690ae2744d0cd67bf56",
+    "stage_member_count": 11
+  },
+  "access_ledger": {
+    "qwen_or_model_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "torch_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0
+  },
+  "authorization": "NO RUNTIME CALIBRATION OR PRODUCTION AUTHORIZATION; FRESH INDEPENDENT SOURCE AUDIT REQUIRED",
+  "artifact_manifest_sha256": "fe9ff01ebe20dcea5a3ac5554cab01183e7b13a0f90fe9765be7aaf03aea3b63"
+}

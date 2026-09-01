@@ -1,0 +1,72 @@
+{
+  "schema": "lossy-tail-release-repair-lock-v7",
+  "status": "FROZEN_V7_SOURCE_PACKAGE_NO_RUNTIME_OR_PRODUCTION_AUTHORIZATION",
+  "created_utc": "2026-09-01T13:05:00Z",
+  "purpose": "Bind a distinct v7 source-only candidate that repairs all five blockers in the independently sealed v6 audit without modifying v6 or its audit package.",
+  "authenticated_identities": {
+    "scientific_protocol_sha256": "7c65886f8acce79340ff13267fe3f2e61b28f7b80c7b79e23493c1bead826e3b",
+    "source_bindings_sha256": "79edb94c8227e89debaf7eac5f4e181924d97300c9f7bc961a29151292e62a22",
+    "runtime_contract_sha256": "0cd6bf4cecf38a685e49b38fe29db629820296123c1acd0603be53a4d35cefe1",
+    "authorization_contract_sha256": "f9a63d9e5da16029d3a0ee6af575185980f82d36d3c60668d1fc4f775c64bbaf",
+    "oracle_bootstrap_sha256": "998771c07df30ae0d924e773e0961245c34c48ff967412748bcfd2fb57211aea",
+    "scientific_core_sha256": "d1393a80b4e2b48a30c61ec0b519db9fe35b26c0aed12ca4287023f49d88fd79",
+    "preflight_sha256": "9aa89718850ce7b3a2e6909577358df7f14def471b6fa850ff3f922c191765b0",
+    "audit_entrypoint_sha256": "445c7398b9b617f7eb81082bb73a1e60249dbe1ac2544b4b33a0fa6ecbab23df",
+    "runtime_calibrate_sha256": "68847908b689939115165a131b2596448302a5a1f404a310c5d9ad9213c92dd7"
+  },
+  "preserved_v6": {
+    "package": "../lossy_tail_peeling_oracle_v6",
+    "launch_manifest_sha256": "bbbfb811e439ed300ee8fa7e2d3dc5207e67cd9bb18191f43b1bf4a4f0dbe266",
+    "oracle_sha256": "6a3a49258af174dd0770659c3eed539d14057dfb87cef540f3b21a359475a149",
+    "status": "PRESERVED_IMMUTABLE_BLOCKED_NO_EXECUTION"
+  },
+  "independent_v6_block_audit": {
+    "package": "../lossy_tail_peeling_oracle_v6_source_audit",
+    "manifest_file_sha256": "b5131498a17093582f0d62ff1481e8005c3b083b57904126668553dff7d51690",
+    "manifest_internal_sha256": "cd2310603db0e924372df81eb6eceba875e80bf66098f4490da75c376253562f",
+    "receipt_file_sha256": "04f9473615af4812769b63b04896dfc2480d9099413b74d6d6db4b9d7742f391",
+    "receipt_internal_sha256": "06e338b987e835ca2fa4ca1ef39b7f407013f4011be973ba59dd06478c182d2e",
+    "status": "BLOCKED_SOURCE_ONLY_RELEASE_CONFORMANCE",
+    "release_blocker_count": 5,
+    "payload_files_opened": 0,
+    "cupy_imports": 0,
+    "gpu_jobs": 0
+  },
+  "repairs": [
+    {
+      "v6_blocker": "DIRECT_ORACLE_ENTRY_CAN_REUSE_PREFLIGHT_BOUND_AUTHORIZATION",
+      "v7_repair": "preflight alone spawns the immutable stdlib bootstrap over an inherited Unix SOCK_SEQPACKET; the child requires SO_PEERCRED parent identity, exact live /proc parent command line, child/parent PIDs, nonce, manifest/authorization/bootstrap/core hashes, exactly one record then EOF, and one hash acknowledgement; the scientific core independently reproves that same live parent before NumPy and again in main"
+    },
+    {
+      "v6_blocker": "NUMPY_IMPORT_PRECEDES_RAW_ARGV0_STAGE_AND_AUTHENTICATION",
+      "v7_repair": "lossy_tail_oracle.py is a stdlib-only bootstrap; lossy_tail_core.py has a top-of-file raw grammar/bootstrap/core/stage/live-parent firewall before its NumPy import; direct execution and forged production contexts reject before NumPy"
+    },
+    {
+      "v6_blocker": "UNCONSTRAINED_GLOBAL_WINNER_CAN_ERASE_AN_EVALUATED_READ_VALID_ROW",
+      "v7_repair": "every eligible uniform, support-XKLT, and coordinate-trial profile is evaluated; validation and ranking occur inside the strict <2x set; only read-valid seeds and winners may be retained; separate unconstrained winners are diagnostics and coverage assertions are executable"
+    },
+    {
+      "v6_blocker": "RUNTIME_POOL_FREE_OCCURS_WHILE_AFFINE_TABLE_OR_GATHERED_CONSUMERS_REMAIN_LIVE",
+      "v7_repair": "raw, rounding, BF16, table, affine_table, gathered, RNG, and host hash buffers are explicitly deleted after their final hashes/reductions; the stream synchronizes, used_bytes must already be zero, then free_all_blocks runs and both used/total bytes must close to zero for all 48 cells and five order adversaries"
+    },
+    {
+      "v6_blocker": "POSITIVE_INFINITY_INDIVIDUAL_SCORE_CAN_BE_PROMOTED",
+      "v7_repair": "all valid scored rows, expert/read fields, individual Qwen/control absolute and calibrated scores, means, sample standard deviations, excesses, selection keys, joints, boundary values, and distances pass recursive math.isfinite checks before ranking or status; NaN and both infinities fail closed"
+    }
+  ],
+  "adversarial_source_tests": {
+    "one_use_capability": "missing capability and inherited regular-file descriptors reject; a complete source-free authorization-shaped parent reaches exactly one authenticated stub boundary with NumPy/CuPy absent",
+    "preimport_firewall": "direct core and forged production-context wrappers reject under import tracing before NumPy; bootstrap import closure excludes NumPy/CuPy/Torch",
+    "read_valid_selection": "a lower-F 2.25x global row cannot erase the higher-F 1.25x row, and uniform/XKLT/coordinate participation ledgers close",
+    "memory_lifetime": "AST adversaries removing affine_table, gathered, or rounding from the deletion barrier are rejected",
+    "nonfinite": "NaN, +infinity, and -infinity injected into individual, aggregate, nested control, rate, and scored-candidate fields all reject"
+  },
+  "runtime_release_sequence": {
+    "fresh_independent_v7_source_audit_required": true,
+    "runtime_calibration_authorized_now": false,
+    "runtime_receipt_exists": false,
+    "production_authorization_exists": false,
+    "production_run_authorized": false
+  },
+  "repair_lock_sha256": "b580de6404add47e7a2b4e27e877a15cf531b41d83f4d690ae2744d0cd67bf56"
+}

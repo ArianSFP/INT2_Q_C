@@ -1,0 +1,294 @@
+{
+  "access": {
+    "model_or_qwen_path_arguments": 0,
+    "network_operations": 0,
+    "payload_files_opened": 0
+  },
+  "claim_boundary": "Unsealed source-free launch autotune only; FP32 cross-moment screen lacks numerical/retention authorization and no model/Qwen data is accessed.",
+  "cuda_headers": {
+    "/usr/local/cuda/include/cuda_bf16.h": "4d5a2ad88adb17983aef0505ed6ed2a0603497c79c103bba82c928301ea12310",
+    "/usr/local/cuda/include/cuda_fp16.h": "8eb1600a8e2e33d40572bffe7001a27f6046a74949d80353fe02cf88b2563dda",
+    "/usr/local/cuda/include/curand_kernel.h": "4a37c07a1d77c9b5c8c627a4720733cee6b4da4200a844e8a49291858bc26adf",
+    "/usr/local/cuda/include/curand_normal.h": "967998564d9f9f4a045563b2b5d2a15eb1cbdfa18b0a332707c3a765e09a61c0",
+    "/usr/local/cuda/include/curand_philox4x32_x.h": "4f6d483fe45d837fed49553d25ee1d2cabb012a138a2f7f08bbaf584e63dd83c"
+  },
+  "decision": {
+    "next_step_if_fail": "do not authorize payload; redesign screen statistic",
+    "next_step_if_pass": "distinct direct-counter FP32 shortlist plus exact FP64 refinement calibration",
+    "promotion_margin_gate_seconds": 800.0,
+    "winner_projection_below_margin_gate": false
+  },
+  "derivation": {
+    "base_fp32_cuda_sha256": "c7b8c680d7755ffdf3ac9e6c44c9fb10b7b878621addc37207c49753bd7d9312",
+    "common_moments_affine_half_reload_and_q_remain_fp64": true,
+    "direct_replacement_counts": {
+      "generator": 1,
+      "scale_function": 1,
+      "signature": 1
+    },
+    "fp32_replacement_counts": {
+      "accumulator0": 1,
+      "accumulator1": 1,
+      "fma0": 1,
+      "fma1": 1,
+      "parameters": 2,
+      "type_insertion": 1
+    },
+    "per_domain_xw_only_is_fp32": true
+  },
+  "direct_script": {
+    "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_u32_direct_counter_calibration_v0/calibrate_direct.py",
+    "sha256": "f5a7c8b9a525e02d469ca974f9a6607030b2ca2822b66d4bce31604251516ed5"
+  },
+  "parity": {
+    "direct_counter_sha256": "ea92e270c740221b0360669de11afb698807c91caac42389b6dab3a28a6139fb",
+    "max_normal4_indices_by_call_size": [
+      95,
+      47,
+      2,
+      0
+    ],
+    "offset_values": [
+      0,
+      388,
+      8760,
+      9148,
+      17179869180,
+      17179869184,
+      17179869188
+    ],
+    "raw_bitwise_equal": true,
+    "raw_float32_sha256": "58601f456e20857871cb012ed979a8cd930e790d79ecf20b9911e3fde4c3f27c",
+    "rows": 132,
+    "scaled_bf16_bitwise_equal": true,
+    "scaled_widened_bf16_sha256": "3dfafb5b177db96730ea9f12214bf8925bc4af2c10e3b9e79fb0d3963f951366",
+    "terminal_counter_equal": true,
+    "terminal_counter_sha256": "0b5397649cd8f389c8db9675b92df3dafe08b34b8ef0168eed2d0d929112de1e",
+    "vector_sha256": "3bcb66a01866882c05d67026869f8cd258631cbcbab4642846f7c3ae640349ba",
+    "zero_kat_words": [
+      "6627e8d5",
+      "e169c58d",
+      "bc57ac4c",
+      "9b00dbd8"
+    ]
+  },
+  "rows": [
+    {
+      "attributes": {
+        "binary_version": 120,
+        "cache_mode_ca": 0,
+        "const_size_bytes": 72,
+        "local_size_bytes": 0,
+        "max_dynamic_shared_size_bytes": 49152,
+        "max_threads_per_block": 640,
+        "num_regs": 86,
+        "preferred_shared_memory_carveout": -1,
+        "ptx_version": 120,
+        "shared_size_bytes": 0
+      },
+      "block_threads": 128,
+      "configured_cuda_sha256": "9ed1e63bfb6ca774a5f4ca265e9e422c4bd61c596e83b984a2ceed2144db2b9f",
+      "grid_blocks": 65535,
+      "median_seconds": 0.07455370493698865,
+      "name": "warp4_block128",
+      "options": [
+        "--std=c++17"
+      ],
+      "projected_three_abi_full_u32_seconds": 916.1159262657166,
+      "q_sentinel_sha256": "29c3d5e949dc5034f953946320cf3f34f253158e80d2745fdce53cd5c39cb17d",
+      "times_seconds": [
+        0.07454113499261439,
+        0.07459685497451574,
+        0.07456439698580652,
+        0.0745488170068711,
+        0.07455370493698865
+      ],
+      "warps_per_block": 4
+    },
+    {
+      "attributes": {
+        "binary_version": 120,
+        "cache_mode_ca": 0,
+        "const_size_bytes": 72,
+        "local_size_bytes": 0,
+        "max_dynamic_shared_size_bytes": 49152,
+        "max_threads_per_block": 640,
+        "num_regs": 86,
+        "preferred_shared_memory_carveout": -1,
+        "ptx_version": 120,
+        "shared_size_bytes": 0
+      },
+      "block_threads": 256,
+      "configured_cuda_sha256": "c7b8c680d7755ffdf3ac9e6c44c9fb10b7b878621addc37207c49753bd7d9312",
+      "grid_blocks": 65535,
+      "median_seconds": 0.07460232998710126,
+      "name": "warp8_block256",
+      "options": [
+        "--std=c++17"
+      ],
+      "projected_three_abi_full_u32_seconds": 916.7134308815002,
+      "q_sentinel_sha256": "29c3d5e949dc5034f953946320cf3f34f253158e80d2745fdce53cd5c39cb17d",
+      "times_seconds": [
+        0.07455468398984522,
+        0.0746165910968557,
+        0.07460688706487417,
+        0.07460232998710126,
+        0.07459990005008876
+      ],
+      "warps_per_block": 8
+    },
+    {
+      "attributes": {
+        "binary_version": 120,
+        "cache_mode_ca": 0,
+        "const_size_bytes": 72,
+        "local_size_bytes": 0,
+        "max_dynamic_shared_size_bytes": 49152,
+        "max_threads_per_block": 640,
+        "num_regs": 86,
+        "preferred_shared_memory_carveout": -1,
+        "ptx_version": 120,
+        "shared_size_bytes": 0
+      },
+      "block_threads": 512,
+      "configured_cuda_sha256": "a1a26628597125695f56b073935d6e5484192db8c5b89d2a8af3ae45ceedc4fe",
+      "grid_blocks": 65535,
+      "median_seconds": 0.08397336106281728,
+      "name": "warp16_block512",
+      "options": [
+        "--std=c++17"
+      ],
+      "projected_three_abi_full_u32_seconds": 1031.8646607398987,
+      "q_sentinel_sha256": "29c3d5e949dc5034f953946320cf3f34f253158e80d2745fdce53cd5c39cb17d",
+      "times_seconds": [
+        0.0838920030510053,
+        0.08397313102614135,
+        0.08397670299746096,
+        0.08397336106281728,
+        0.08397448505274951
+      ],
+      "warps_per_block": 16
+    },
+    {
+      "attributes": {
+        "binary_version": 120,
+        "cache_mode_ca": 0,
+        "const_size_bytes": 72,
+        "local_size_bytes": 8,
+        "max_dynamic_shared_size_bytes": 49152,
+        "max_threads_per_block": 768,
+        "num_regs": 80,
+        "preferred_shared_memory_carveout": -1,
+        "ptx_version": 120,
+        "shared_size_bytes": 0
+      },
+      "block_threads": 128,
+      "configured_cuda_sha256": "9ed1e63bfb6ca774a5f4ca265e9e422c4bd61c596e83b984a2ceed2144db2b9f",
+      "grid_blocks": 65535,
+      "median_seconds": 0.07447809306904674,
+      "name": "warp4_block128_r80",
+      "options": [
+        "--std=c++17",
+        "--maxrregcount=80"
+      ],
+      "projected_three_abi_full_u32_seconds": 915.1868076324463,
+      "q_sentinel_sha256": "29c3d5e949dc5034f953946320cf3f34f253158e80d2745fdce53cd5c39cb17d",
+      "times_seconds": [
+        0.0744439319241792,
+        0.07449612999334931,
+        0.07448005699552596,
+        0.07447809306904674,
+        0.07446635095402598
+      ],
+      "warps_per_block": 4
+    },
+    {
+      "attributes": {
+        "binary_version": 120,
+        "cache_mode_ca": 0,
+        "const_size_bytes": 72,
+        "local_size_bytes": 8,
+        "max_dynamic_shared_size_bytes": 49152,
+        "max_threads_per_block": 768,
+        "num_regs": 80,
+        "preferred_shared_memory_carveout": -1,
+        "ptx_version": 120,
+        "shared_size_bytes": 0
+      },
+      "block_threads": 256,
+      "configured_cuda_sha256": "c7b8c680d7755ffdf3ac9e6c44c9fb10b7b878621addc37207c49753bd7d9312",
+      "grid_blocks": 65535,
+      "median_seconds": 0.07442336296662688,
+      "name": "warp8_block256_r80",
+      "options": [
+        "--std=c++17",
+        "--maxrregcount=80"
+      ],
+      "projected_three_abi_full_u32_seconds": 914.5142841339111,
+      "q_sentinel_sha256": "29c3d5e949dc5034f953946320cf3f34f253158e80d2745fdce53cd5c39cb17d",
+      "times_seconds": [
+        0.07430156494956464,
+        0.07443932793103158,
+        0.07443277805577964,
+        0.07442336296662688,
+        0.0744205720257014
+      ],
+      "warps_per_block": 8
+    }
+  ],
+  "runtime": {
+    "cuda_runtime": 12090,
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "numpy": "2.5.2",
+    "python": "3.12.3"
+  },
+  "schema": "fuseed_u32_source_free_direct_numeric_autotune_v0",
+  "script_sha256": "22a39ca44b8a0f2c0eaa6f1687db1b7eb9443ab3d0214c2010091205348b3fc1",
+  "shape": {
+    "bundles_per_candidate": 256,
+    "candidates": 1048576,
+    "domains": 33,
+    "q_bytes": 138412032,
+    "repetitions": 5,
+    "values_per_candidate": 1024
+  },
+  "shape_source": {
+    "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_u32_33domain_calibration_v0/calibrate.py",
+    "sha256": "6d3cdac6ab4f1a1fcbe742f43a2fd817c8bf56d1bfeff9e38c2432fe6848149a"
+  },
+  "winner": {
+    "attributes": {
+      "binary_version": 120,
+      "cache_mode_ca": 0,
+      "const_size_bytes": 72,
+      "local_size_bytes": 8,
+      "max_dynamic_shared_size_bytes": 49152,
+      "max_threads_per_block": 768,
+      "num_regs": 80,
+      "preferred_shared_memory_carveout": -1,
+      "ptx_version": 120,
+      "shared_size_bytes": 0
+    },
+    "block_threads": 256,
+    "configured_cuda_sha256": "c7b8c680d7755ffdf3ac9e6c44c9fb10b7b878621addc37207c49753bd7d9312",
+    "grid_blocks": 65535,
+    "median_seconds": 0.07442336296662688,
+    "name": "warp8_block256_r80",
+    "options": [
+      "--std=c++17",
+      "--maxrregcount=80"
+    ],
+    "projected_three_abi_full_u32_seconds": 914.5142841339111,
+    "q_sentinel_sha256": "29c3d5e949dc5034f953946320cf3f34f253158e80d2745fdce53cd5c39cb17d",
+    "times_seconds": [
+      0.07430156494956464,
+      0.07443932793103158,
+      0.07443277805577964,
+      0.07442336296662688,
+      0.0744205720257014
+    ],
+    "warps_per_block": 8
+  }
+}

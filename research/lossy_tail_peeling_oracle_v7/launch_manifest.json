@@ -1,0 +1,34 @@
+{
+  "schema": "lossy-tail-v7-launch-manifest-v1",
+  "status": "FROZEN_V7_SOURCE_STAGE_NO_RUNTIME_OR_PRODUCTION_AUTHORIZATION",
+  "allowed_members": [
+    "authorization_contract.json",
+    "audit_lock_entrypoint.py",
+    "launch_manifest.json",
+    "lossy_tail_core.py",
+    "lossy_tail_oracle.py",
+    "preflight_launch.py",
+    "protocol_lock.json",
+    "repair_lock.json",
+    "runtime_calibrate.py",
+    "runtime_contract.json",
+    "source_bindings.json"
+  ],
+  "members": [
+    {"path": "authorization_contract.json", "bytes": 4978, "sha256": "f9a63d9e5da16029d3a0ee6af575185980f82d36d3c60668d1fc4f775c64bbaf"},
+    {"path": "audit_lock_entrypoint.py", "bytes": 8900, "sha256": "445c7398b9b617f7eb81082bb73a1e60249dbe1ac2544b4b33a0fa6ecbab23df"},
+    {"path": "lossy_tail_core.py", "bytes": 103317, "sha256": "d1393a80b4e2b48a30c61ec0b519db9fe35b26c0aed12ca4287023f49d88fd79"},
+    {"path": "lossy_tail_oracle.py", "bytes": 14482, "sha256": "998771c07df30ae0d924e773e0961245c34c48ff967412748bcfd2fb57211aea"},
+    {"path": "preflight_launch.py", "bytes": 26793, "sha256": "9aa89718850ce7b3a2e6909577358df7f14def471b6fa850ff3f922c191765b0"},
+    {"path": "protocol_lock.json", "bytes": 11663, "sha256": "7c65886f8acce79340ff13267fe3f2e61b28f7b80c7b79e23493c1bead826e3b"},
+    {"path": "repair_lock.json", "bytes": 5585, "sha256": "6f879caed79aed81f824968a5188ef809ee1a8a1184ed5262b3e23633e18c781"},
+    {"path": "runtime_calibrate.py", "bytes": 13730, "sha256": "68847908b689939115165a131b2596448302a5a1f404a310c5d9ad9213c92dd7"},
+    {"path": "runtime_contract.json", "bytes": 4845, "sha256": "0cd6bf4cecf38a685e49b38fe29db629820296123c1acd0603be53a4d35cefe1"},
+    {"path": "source_bindings.json", "bytes": 2308, "sha256": "79edb94c8227e89debaf7eac5f4e181924d97300c9f7bc961a29151292e62a22"}
+  ],
+  "source_audit_invocation": "python3 -B -I ABSOLUTE_CANONICAL_STAGE/audit_lock_entrypoint.py --manifest ABSOLUTE_CANONICAL_STAGE/launch_manifest.json --manifest-sha256 THIS_FILE_SHA256",
+  "runtime_calibration_invocation_after_independent_source_pass_only": "env CUDA_VISIBLE_DEVICES=0 /workspace/int2-cupy-venv/bin/python -B -I ABSOLUTE_CANONICAL_STAGE/runtime_calibrate.py --manifest ABSOLUTE_CANONICAL_STAGE/launch_manifest.json --manifest-sha256 THIS_FILE_SHA256 --output ABSOLUTE_CANONICAL_ABSENT_RUNTIME_RUN_ROOT/runtime_receipt.json",
+  "production_invocation_after_independent_runtime_receipt_audit_and_separate_authorization_only": "env CUDA_VISIBLE_DEVICES=0 /workspace/int2-cupy-venv/bin/python -B -I ABSOLUTE_CANONICAL_STAGE/preflight_launch.py --manifest ABSOLUTE_CANONICAL_STAGE/launch_manifest.json --manifest-sha256 THIS_FILE_SHA256 --authorization ABSOLUTE_CANONICAL_EXTERNAL_AUTHORIZATION.json --authorization-sha256 EXACT_AUTHORIZATION_FILE_SHA256",
+  "production_child_grammar": "preflight alone spawns the authenticated stdlib bootstrap with exact stage locks, manifest and authorization identities, controls=4, passes=4, and one inherited SOCK_SEQPACKET capability fd; bootstrap consumes one bound record plus EOF and removes the capability flag before descriptor-executing the core",
+  "authorization": "NONE_EXISTS; THIS SOURCE CANDIDATE REQUIRES A FRESH INDEPENDENT SOURCE AUDIT AND DOES NOT AUTHORIZE RUNTIME CALIBRATION OR PRODUCTION"
+}

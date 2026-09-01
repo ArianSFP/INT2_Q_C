@@ -1,0 +1,88 @@
+{
+  "access": {
+    "model_or_qwen_path_arguments": 0,
+    "network_operations": 0,
+    "payload_files_opened": 0
+  },
+  "aggregate": {
+    "complete_replay_deterministic": true,
+    "median_full_scan_wall_seconds": 2.9155251910560764,
+    "median_host_merge_seconds_sum": 0.13585911208065227,
+    "median_kernel_seconds_sum": 1.9475334925809875,
+    "median_selection_seconds_sum": 0.8233270378550515,
+    "projection_used": false
+  },
+  "claim_boundary": "Unsealed source-free engineering traversal only; synthetic two-role score, not exact FUSEED domains/ABI, Qwen access, retention, or authorization.",
+  "kernel_source": {
+    "path": "/workspace/INT2__compression/INT2_Q_C/research/fuseed_u32_throughput_probe_v0/benchmark.py",
+    "sha256": "001a3d08902441ee47501ff5a99bb0ce5159bff35b23b5cd11491539a564f401"
+  },
+  "rows": [
+    {
+      "best_score": 45.72521209716797,
+      "best_seed": 3796240241,
+      "candidate_rate_per_second_wall": 1419996037.7295964,
+      "full_domain_candidate_count": 4294967296,
+      "full_domain_first_seed": 0,
+      "full_domain_last_seed": 4294967295,
+      "global_topk_seed_sha256": "d89470e2dfd360d33cdcf16c76c18ae57a469620d9ea2fe06adfa5133c6ce14f",
+      "global_topk_value_sha256": "4174b2b20040d58fa57a1a4897b9d9c55c7060283e7b08a7950779a8c6e79cec",
+      "host_merge_seconds_sum": 0.13755821157246828,
+      "kernel_seconds_sum": 1.9416689263889566,
+      "kernel_shard_seconds_max": 0.007655724999494851,
+      "kernel_shard_seconds_median": 0.0076023805304430425,
+      "kernel_shard_seconds_min": 0.007347978069446981,
+      "max_boundary_tie_cardinality": 1,
+      "normal_value_rate_per_second_kernel": 707839279931.2283,
+      "per_shard_topk_sha256": "f5ff05ed5d4f5efceac8158ae4a8e8930fd6a77dae74239e8b6fd00e8dd9a894",
+      "repetition": 0,
+      "selection_seconds_sum": 0.9364842048380524,
+      "shard_count": 256,
+      "wall_seconds": 3.024633296066895
+    },
+    {
+      "best_score": 45.72521209716797,
+      "best_seed": 3796240241,
+      "candidate_rate_per_second_wall": 1530409473.8292713,
+      "full_domain_candidate_count": 4294967296,
+      "full_domain_first_seed": 0,
+      "full_domain_last_seed": 4294967295,
+      "global_topk_seed_sha256": "d89470e2dfd360d33cdcf16c76c18ae57a469620d9ea2fe06adfa5133c6ce14f",
+      "global_topk_value_sha256": "4174b2b20040d58fa57a1a4897b9d9c55c7060283e7b08a7950779a8c6e79cec",
+      "host_merge_seconds_sum": 0.13416001258883625,
+      "kernel_seconds_sum": 1.9533980587730184,
+      "kernel_shard_seconds_max": 0.007656462956219912,
+      "kernel_shard_seconds_median": 0.007630526495631784,
+      "kernel_shard_seconds_min": 0.007602464058436453,
+      "max_boundary_tie_cardinality": 1,
+      "normal_value_rate_per_second_kernel": 703589075737.7382,
+      "per_shard_topk_sha256": "f5ff05ed5d4f5efceac8158ae4a8e8930fd6a77dae74239e8b6fd00e8dd9a894",
+      "repetition": 1,
+      "selection_seconds_sum": 0.7101698708720505,
+      "shard_count": 256,
+      "wall_seconds": 2.8064170860452577
+    }
+  ],
+  "runtime": {
+    "cuda_runtime": 12090,
+    "cuda_visible_devices": "0",
+    "cupy": "14.2.0",
+    "device": "NVIDIA GeForce RTX 5090",
+    "numpy": "2.5.2",
+    "python": "3.12.3"
+  },
+  "schema": "fuseed_u32_source_free_complete_scan_probe_v0",
+  "script_sha256": "ad9b5628647a96dff20106d70642d77a54009b90cc2346192c0e0517ef8cd46e",
+  "shape": {
+    "candidate_count": 4294967296,
+    "candidate_domain": "inclusive uint32 0..4294967295",
+    "normal4_bundles_per_candidate": 80,
+    "normal_values_per_candidate": 320,
+    "repetitions": 2,
+    "score_buffer_bytes": 67108864,
+    "shard_candidates": 16777216,
+    "shard_count": 256,
+    "tie_order": "score descending, uint32 seed ascending",
+    "top_k": 2048
+  }
+}

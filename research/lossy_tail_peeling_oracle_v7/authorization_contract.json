@@ -1,0 +1,77 @@
+{
+  "schema": "lossy-tail-v7-production-authorization-contract-v1",
+  "status": "FROZEN_TEMPLATE_ONLY_NO_AUTHORIZATION_EXISTS",
+  "purpose": "Define the exact independently approved, create-new one-shot authorization consumed by v7 preflight and its capability-bound child. This template is not itself launch authority.",
+  "required_top_level_keys": [
+    "schema",
+    "status",
+    "authorization_path",
+    "authorization_nonce",
+    "action",
+    "stage",
+    "source",
+    "output",
+    "source_audit",
+    "runtime_receipt",
+    "runtime_audit",
+    "execution",
+    "filesystem",
+    "fixed_scientific_arguments",
+    "authorization_sha256"
+  ],
+  "required_values": {
+    "schema": "lossy-tail-v7-one-shot-production-authorization-v1",
+    "status": "AUTHORIZED_ONCE_AFTER_INDEPENDENT_SOURCE_AND_RUNTIME_AUDITS",
+    "action": "CREATE_NEW_RUN_ROOT_AND_RESULT_JSON",
+    "fixed_scientific_arguments": {
+      "control_replicates": 4,
+      "maximum_coordinate_passes": 4
+    }
+  },
+  "path_fields": {
+    "authorization_path": "exact absolute canonical path of this external authorization",
+    "stage.path": "exact immutable stage root",
+    "source.path": "exact authenticated auxiliary source root",
+    "output.run_root": "exact absent create-new run directory",
+    "output.result_path": "exact run_root/result.json",
+    "source_audit.manifest_path": "external independent v7 source-audit manifest",
+    "source_audit.receipt_path": "external independent v7 source-audit receipt",
+    "runtime_receipt.path": "external source-free runtime receipt",
+    "runtime_audit.manifest_path": "external independent runtime-audit manifest",
+    "runtime_audit.receipt_path": "external independent runtime-audit receipt"
+  },
+  "identity_fields": {
+    "stage": ["launch_manifest_file_sha256", "launch_manifest_internal_stage_member_count"],
+    "source": ["bindings_file_sha256"],
+    "source_audit": ["manifest_file_sha256", "receipt_file_sha256", "receipt_internal_field", "receipt_internal_sha256", "required_status", "receipt.audited_target.launch_manifest_sha256", "receipt.audited_target.repair_lock_internal_sha256", "receipt zero-access ledger"],
+    "runtime_receipt": ["file_sha256", "internal_sha256", "required_status", "runtime_contract_file_sha256"],
+    "runtime_audit": ["manifest_file_sha256", "receipt_file_sha256", "receipt_internal_field", "receipt_internal_sha256", "required_status"],
+    "execution": ["python_executable", "raw_launcher_path", "cuda_visible_devices", "runtime_tuple"],
+    "filesystem": ["mountinfo_path", "mountinfo_file_sha256", "identities"]
+  },
+  "filesystem_identity_labels": [
+    "stage",
+    "source",
+    "output_existing_parent",
+    "authorization_parent",
+    "source_audit_manifest",
+    "source_audit_receipt",
+    "runtime_receipt",
+    "runtime_audit_manifest",
+    "runtime_audit_receipt"
+  ],
+  "filesystem_identity_row_keys": ["label", "path", "st_dev", "st_ino", "mount_id"],
+  "rules": [
+    "Parse every JSON with duplicate-key rejection and require exact key sets/cardinalities.",
+    "Every supplied path is checked from its original spelling before normalization; every component must be non-symlink and realpath-equal.",
+    "Stage, source, and the existing parent of the absent run root are pairwise non-overlapping in both ancestry directions; therefore the run root and result are also disjoint.",
+    "Authorization and all audit/runtime evidence paths and their parent directories are outside and not ancestors/descendants of stage, source, or the output existing parent.",
+    "Run root and result path are absent; output_existing_parent exists and result_path is exactly run_root/result.json.",
+    "Every bound identity and live /proc/self/mountinfo hash/mount ID must match; nested mount transitions below stage/source/run root are rejected.",
+    "raw_launcher_path must be the exact canonical preflight_launch.py path; preflight alone issues one inherited Unix SOCK_SEQPACKET capability bound to SO_PEERCRED parent/child PIDs, exact /proc parent cmdline, nonce, authorization, manifest, bootstrap, and scientific-core hashes.",
+    "The oracle bootstrap must consume exactly one capability record followed by EOF, acknowledge its canonical hash once, close the channel before third-party import, and descriptor-execute the authenticated scientific core; direct bootstrap/core execution is forbidden.",
+    "authorization_nonce is nonempty and the authorization is operationally one-shot because successful output creation makes replay fail closed.",
+    "authorization_sha256 is SHA-256 of canonical JSON after removing only authorization_sha256; the outer CLI also supplies the exact file SHA-256."
+  ],
+  "claim_boundary": "The independent approver remains the trust root. No self-authored runtime receipt, audit receipt, copied authorization, alternate mount view, or absent output action is accepted. Privileged concurrent namespace mutation remains outside the cooperative release claim."
+}

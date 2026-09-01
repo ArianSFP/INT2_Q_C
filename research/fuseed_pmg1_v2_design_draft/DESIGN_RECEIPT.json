@@ -1,0 +1,82 @@
+{
+  "schema": "fuseed_pmg1_v2_source_only_design_receipt_v1",
+  "status": "PASS_DESIGN_LOGIC_CONDITIONALLY_DEFENSIBLE_EXECUTION_BLOCKED",
+  "family": "FUSEED-PMG1-v2",
+  "scientific_verdict": {
+    "control_movement_invalidates_narrowed_claim": false,
+    "reason": "Candidate multiplicity is handled by an untouched one-descriptor validation firewall. The post-selection controls are restrictive fixed-descriptor diagnostics and capture subtraction, not matched searches or a p-value.",
+    "chronology_and_validation_independence_authenticated": false,
+    "consequence": "The source-only architecture is defensible, but execution remains blocked until an independent chronology/firewall audit passes.",
+    "terminal_no_retry": true
+  },
+  "frozen_architecture": {
+    "abi_id": "CURRENT_PMG_GATE_UP_DIRECT_BF16",
+    "candidate_count": 4294967296,
+    "stage0_domains": 1,
+    "stage0_objective_precision": "binary64",
+    "stage0_top_k": 8192,
+    "stage1_top_k": 256,
+    "stage2_winners": 1,
+    "post_selection_controls": 32,
+    "controls_search_seeds": false,
+    "validation_descriptors": 1
+  },
+  "plan_receipt": {
+    "parent_v1_stage0_sha256": "97ac7933a1d3735960bed34977279d45212c553e1717d03bd7c87fe4ff7e9981",
+    "parent_v1_full_plan_sha256": "f19492e5ed1cc93949f1c9ca8038576a7fe17fe7f519b473773d721d17d6f260",
+    "abi1_original_stage0_records_sha256": "d4cb9d33f09779ed10c1993ccc08bb4aa8a864f0f975f2ec86a2922a8729749f",
+    "abi1_category_ordered_bundle_array_sha256": "16aacb6f5fa6a1ed12fe0c01506410ad69585894077a4a6af627674b6b90adda",
+    "stage1_fit_set_sha256": "568990c4fc1e9fb2c259a7d1a70a7aea9a062ddbaadb778392c6eea12f0aaadd",
+    "stage1_score_set_sha256": "41711a4ff0d0198b21b4732cb2716aee68d8a8b4d87e51a601a54bad5faa090b",
+    "full_fit_set_sha256": "21181a92fb1252865475193cb7d34bd578f21cd82df027026d05520bffac1f69",
+    "full_score_set_sha256": "d5b646fd653c173b18e9cfce65b62833f6122f3a90a2c0f0fe7e2e6d5bd5ff42",
+    "validation_fit_set_sha256": "35061888d4458fd0e1b0db4f457ebc4197f55c7fcbaead17279f0e89cb0dde37",
+    "validation_score_set_sha256": "37ad183ce83f4f964bb246ff267e528951457c4bac436b2639d386645d9969c0",
+    "v2_complete_plan_sha256": "86639758eda1835b9ea9e883372bb55ec13ec3487705a91d892878972db74760",
+    "abi1_stage0_coordinates": 1024,
+    "abi1_stage0_bundles": 256,
+    "abi1_stage0_attempts_under_parent_collision_history": 531
+  },
+  "compute_and_storage": {
+    "stage0_generated_normal_values": 4398046511104,
+    "maximum_generated_normal_values": 4398092530192,
+    "one_shard_metric_buffer_bytes": 134217728,
+    "all_packed_shard_topk_bytes": 25165824,
+    "rolling_topk_bytes": 98304,
+    "feasibility_kernel_projection_seconds": 512.6280722618103,
+    "unchanged_future_complete_wall_gate_seconds": 900.0,
+    "feasibility_is_execution_authority": false
+  },
+  "physical_ledger": {
+    "side_metadata_bytes": 80,
+    "side_bpw": 0.000022605613425925925,
+    "maximum_base_codec_bpw_at_2_15": 2.149977394386574,
+    "maximum_base_codec_bpw_at_2_5": 2.499977394386574,
+    "read_amplification_at_2_15": 1.1694597713582042,
+    "read_amplification_at_2_5": 1.1694575633680555,
+    "conditional_on_gate_confirmation": true
+  },
+  "required_pre_execution_gates": [
+    "independent chronology and untouched-validation firewall audit",
+    "256-cell source-free retention PASS",
+    "complete-shape source-free calibration within the unchanged wall gate",
+    "exact toolchain/source/compiled-byte closure",
+    "three repetitions of both reference parity constructions",
+    "initial and terminal generator-state parity",
+    "exact-plan packed Top-K and crash-safe journal/global-merge audit",
+    "independent source-only successor audit"
+  ],
+  "self_verification": {
+    "command": "pwsh -NoLogo -NoProfile -File research/fuseed_pmg1_v2_design_draft/verify_design.ps1",
+    "checks_minimum": 126000,
+    "status": "PASS_SOURCE_ONLY_DESIGN_DRAFT",
+    "independent_audit": false
+  },
+  "access_ledger": {
+    "target_payload_or_manifest_accessed": 0,
+    "accelerator_or_runtime_jobs": 0,
+    "network_operations": 0,
+    "production_outputs": 0
+  },
+  "authorization": "NONE"
+}

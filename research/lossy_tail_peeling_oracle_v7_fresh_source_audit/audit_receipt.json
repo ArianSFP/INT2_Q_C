@@ -1,0 +1,95 @@
+{
+  "schema": "lossy-tail-v7-fresh-independent-source-audit-receipt-v1",
+  "status": "BLOCKED_SOURCE_ONLY_RELEASE_CONFORMANCE",
+  "created_utc": "2026-09-01T15:20:00Z",
+  "independence": {
+    "producer_tests_executed": false,
+    "producer_receipts_used_as_evidence": false,
+    "producer_verifier_used_as_evidence": false,
+    "method": "fresh byte authentication, source inspection, independent static/dataflow checks, and source-free semantic models",
+    "host_limit": "Windows host cannot execute Linux SO_PEERCRED/SOCK_SEQPACKET; the peer/record/EOF state machine was independently replayed and its exact source ordering inspected, without treating producer tests as evidence"
+  },
+  "audited_target": {
+    "package_path": "../lossy_tail_peeling_oracle_v7",
+    "launch_manifest_sha256": "3d5bc5ed95071cc45406d0d2906b54f40d32adad0dffc6323b8fa80ca491ed63",
+    "repair_lock_file_sha256": "6f879caed79aed81f824968a5188ef809ee1a8a1184ed5262b3e23633e18c781",
+    "repair_lock_internal_sha256": "b580de6404add47e7a2b4e27e877a15cf531b41d83f4d690ae2744d0cd67bf56",
+    "stage_member_count": 11
+  },
+  "checks": [
+    {"id": "launch_manifest_exact_file_identity", "status": "PASS", "evidence": "exact file SHA-256 is 3d5bc5ed95071cc45406d0d2906b54f40d32adad0dffc6323b8fa80ca491ed63"},
+    {"id": "manifested_dependency_closure", "status": "PASS", "evidence": "11 unique allowed members, 10 unique non-manifest rows, exact byte lengths and hashes independently recomputed"},
+    {"id": "strict_json_and_lock_identity", "status": "PASS", "evidence": "duplicate keys rejected by independent System.Text.Json property enumeration; repair identity map matches live stage-member bytes"},
+    {"id": "one_record_peer_credential_eof_transcript", "status": "PASS_WITH_BLOCKER", "evidence": "AF_UNIX/SOCK_SEQPACKET, inherited fd, SO_PEERCRED PID/UID/GID, one record, EOF, one acknowledgement and close ordering are present; parent-source provenance remains insufficient"},
+    {"id": "preimport_and_optimization_firewalls", "status": "PASS_WITH_LIMITATION", "evidence": "release entrypoints reject optimize mode and production firewall precedes NumPy; arbitrary nonproduction descriptor contexts remain an intentional test/calibration import surface"},
+    {"id": "direct_execution_and_parent_provenance", "status": "BLOCK", "evidence": "production parent is identified as the Python executable plus /proc cmdline, but a process controls its own argv/cmdline bytes; no unforgeable association to an executing preflight source descriptor exists"},
+    {"id": "path_and_output_toctou", "status": "BLOCK", "evidence": "output writer creates run_root by pathname and then opens result by pathname without a held/revalidated parent or run-root dirfd"},
+    {"id": "read_valid_selection", "status": "PASS", "evidence": "global diagnostics are separate; uniform, XKLT and coordinate winners filter inside strict logical/page <2.0; independent 2.25x-vs-1.25x model retains the 1.25x row"},
+    {"id": "recursive_finite_validation", "status": "PASS", "evidence": "calibration/decision scalar and recursive gates reject modeled nested NaN, +infinity and -infinity before selection/status"},
+    {"id": "rate_read_mse_and_decision_rules", "status": "PASS", "evidence": "physical byte-floor rate, relative SSE/energy MSE, F=MSE*2^(2R), strict early-kill, numeric-boundary precedence, finite promotion and strict read rules match the frozen protocol"},
+    {"id": "matched_control_separation", "status": "PASS", "evidence": "four fixed replicas use the frozen seed domain and execute the same search; per-cell moment validation is finite and positive with fixed tolerances"},
+    {"id": "runtime_probe_array_liveness", "status": "PASS_WITH_BLOCKER", "evidence": "48-cell deletion barrier contains raw/bits/rounding/words/zbf/table/affine/gathered/RNG, synchronizes, and checks pool closure; stable-order rows omit two contract-required evidence fields"},
+    {"id": "stable_order_memory_receipt_shape", "status": "BLOCK", "evidence": "five stable-order memory_release objects omit total_bytes_before_free and all_per_cell_gpu_arrays_deleted_before_free required for every adversary by runtime_contract.json"},
+    {"id": "production_panel_cleanup", "status": "BLOCK", "evidence": "build_panel calls free_all_blocks after deleting aggregate lists while last masks and, on controls, x/words loop locals remain live"},
+    {"id": "audit_pass_status_binding", "status": "BLOCK", "evidence": "source/runtime audit required_status is supplied by the later authorization and merely mirrored against receipt status; the contract does not pin either to a PASS value"},
+    {"id": "model_gpu_network_isolation_of_this_audit", "status": "PASS", "evidence": "audit opened only frozen source/audit bytes; no source/model traversal, CuPy/CUDA/GPU, network, runtime calibration, or production execution"},
+    {"id": "authorization_separation", "status": "PASS", "evidence": "this receipt is explicitly BLOCK and creates no runtime or production authority"}
+  ],
+  "blockers": [
+    {
+      "id": "PARENT_PROVENANCE_RESTS_ON_SELF_MUTABLE_CMDLINE",
+      "severity": "critical",
+      "source_locations": ["lossy_tail_oracle.py:169", "lossy_tail_oracle.py:192", "lossy_tail_core.py:79", "lossy_tail_core.py:89"],
+      "finding": "SO_PEERCRED authenticates the peer process, but the claimed preflight-source identity is inferred from that process's Python executable inode and /proc cmdline. A same-identity process can rewrite its own argv storage (the data exposed by /proc/<pid>/cmdline), so these predicates do not prove that preflight_launch.py issued the capability.",
+      "required_repair": "Bind the child to an unforgeable, already-authenticated preflight-held object or descriptor whose identity/contents the child verifies; do not use self-controlled cmdline text as the source-code trust root."
+    },
+    {
+      "id": "AUDIT_REQUIRED_STATUS_IS_AUTHORIZATION_CHOSEN_NOT_PASS_PINNED",
+      "severity": "critical",
+      "source_locations": ["authorization_contract.json:required_values", "preflight_launch.py:174", "preflight_launch.py:183", "lossy_tail_core.py:1528", "lossy_tail_core.py:1538"],
+      "finding": "The authorization chooses required_status and validation only requires receipt.status to equal that chosen string. Neither source-audit nor runtime-audit status is frozen to an independently defined PASS value, so a correctly sealed BLOCK receipt can be rebound as acceptable evidence.",
+      "required_repair": "Freeze exact PASS schemas/status strings for both independent audits in the stage contract and enforce them in preflight and core independently of authorization-supplied values."
+    },
+    {
+      "id": "OUTPUT_CREATE_OPEN_IS_PATH_BASED_AND_RACEABLE",
+      "severity": "high",
+      "source_locations": ["lossy_tail_core.py:409", "lossy_tail_core.py:414", "lossy_tail_core.py:416", "lossy_tail_core.py:1617", "lossy_tail_core.py:2012"],
+      "finding": "Authorization-time absence and parent inode checks are separated from result creation by the runtime replay and full experiment. At write time os.mkdir(path.parent) and os.open(path) are separate pathname resolutions; no held parent/run-root dirfd or inode recheck closes rename/replacement between them.",
+      "required_repair": "Hold an authenticated output-parent dirfd, create the run root relative to it, open and verify the new directory by descriptor, and create/fsync result relative to that held directory before any pathname publication."
+    },
+    {
+      "id": "STABLE_ORDER_MEMORY_EVIDENCE_VIOLATES_RUNTIME_CONTRACT",
+      "severity": "high",
+      "source_locations": ["runtime_contract.json:probe.memory_evidence_per_cell", "runtime_contract.json:probe.memory_rule", "lossy_tail_core.py:1475", "lossy_tail_core.py:1498"],
+      "finding": "The contract requires total_bytes_before_free and all_per_cell_gpu_arrays_deleted_before_free for all 48 cells and all five stable-order adversaries. Stable-order memory_release rows record neither field.",
+      "required_repair": "Record and validate the complete six-field memory evidence object for every stable-order adversary, then refreeze all dependent hashes."
+    },
+    {
+      "id": "PANEL_POOL_FREE_RUNS_WITH_LIVE_LOOP_LOCALS",
+      "severity": "medium",
+      "source_locations": ["lossy_tail_core.py:832", "lossy_tail_core.py:845", "lossy_tail_core.py:851", "lossy_tail_core.py:863", "lossy_tail_core.py:864"],
+      "finding": "After del pair_x/pair_words/pair_masks, Python's last loop bindings still retain masks and, for controls, x/words when free_all_blocks is called. The call therefore cannot close all panel allocations and no used_bytes/synchronization assertion detects it.",
+      "required_repair": "Delete every live GPU-bearing loop local, synchronize, assert used_bytes()==0, free, and assert used/total closure before continuing."
+    }
+  ],
+  "non_blocking_observations": [
+    "The producer directory intentionally contains README/tests/receipts outside the 11-member launch stage; a launch stage must copy only allowed_members.",
+    "The scientific core permits explicitly injected source_cpu_test and runtime_calibration contexts before NumPy; production main separately rejects those modes, but the top-file statement that every direct import fails is broader than the implementation.",
+    "Linux peer-credential behavior was not runtime-exercised on this Windows host; no producer Linux test or receipt was substituted for that missing environment."
+  ],
+  "access_ledger": {
+    "model_or_qwen_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "network_calls": 0,
+    "producer_tests_executed": 0,
+    "producer_receipts_trusted": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "production_authorizations_created": 0
+  },
+  "authorization": "NONE; BLOCK RECEIPT MUST NEVER BE USED AS LAUNCH AUTHORITY",
+  "audit_receipt_internal_sha256": "8c66b7bfe3f076fa00c993ac3862069268dbad9dbc4572f833d66401967e1ec4"
+}

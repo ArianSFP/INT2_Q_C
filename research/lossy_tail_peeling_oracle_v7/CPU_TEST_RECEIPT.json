@@ -1,0 +1,105 @@
+{
+  "schema": "lossy-tail-v7-source-only-cpu-test-receipt-v1",
+  "status": "PASS_PRODUCER_SOURCE_TESTS_CANDIDATE_ONLY",
+  "created_utc": "2026-09-01T13:15:00Z",
+  "execution": {
+    "host": "root@74.2.96.53:12079",
+    "isolated_source_copy": "/tmp/lossy_tail_v7_source_dev.ruO0SYXJ/lossy_tail_peeling_oracle_v7",
+    "exact_stage_copy": "/tmp/lossy_tail_v7_exact_stage_final.bhDmWDhL",
+    "python": "CPython 3.12.3",
+    "numpy": "2.5.2",
+    "commands": [
+      "/workspace/int2-cupy-venv/bin/python -B -I test_lossy_tail_core.py",
+      "/workspace/int2-cupy-venv/bin/python -B -I test_release_security.py",
+      "python3 -B -I /tmp/lossy_tail_v7_exact_stage_final.bhDmWDhL/audit_lock_entrypoint.py --manifest /tmp/lossy_tail_v7_exact_stage_final.bhDmWDhL/launch_manifest.json --manifest-sha256 3d5bc5ed95071cc45406d0d2906b54f40d32adad0dffc6323b8fa80ca491ed63"
+    ],
+    "scientific_test_seconds": 0.003,
+    "release_test_seconds": 1.111,
+    "exact_stage_audit_exit_code": 0
+  },
+  "tests_run": 28,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "path": "test_lossy_tail_core.py",
+      "tests": 10,
+      "coverage": [
+        "exact target/kill/numeric-boundary constants and explicit self-test checks",
+        "post-FP32 mean/variance tolerance accept/reject and normalized reporting",
+        "EARLY_KILL, near-boundary HOLD, optimistic survivor, and finite-warranted states",
+        "1e-4 numeric-boundary values cannot kill or promote",
+        "finite joint score cannot exceed optimistic envelope",
+        "rank-one live .both_axis_1 support-XKLT component pays the angle",
+        "strict JSON duplicate-key rejection",
+        "2.25x lower-F global winner cannot erase a 1.25x read-valid row and all eligible-profile ledgers close",
+        "NaN, positive infinity, and negative infinity reject in individual, aggregate, nested control, and rate fields",
+        "positive-infinity scored candidate rejects before ranking"
+      ]
+    },
+    {
+      "path": "test_release_security.py",
+      "tests": 18,
+      "coverage": [
+        "exact isolated eleven-member stage audit",
+        "optimized audit rejection and zero assert statements in release entrypoints",
+        "added directory, duplicate manifest row, symlink-bearing and relative raw launch rejection",
+        "runtime calibrator unknown/bypass grammar rejects before output",
+        "runtime calibrator and preflight require explicit CUDA_VISIBLE_DEVICES=0 before third-party or authorization access",
+        "both ancestry-overlap directions reject",
+        "direct scientific-core execution rejects under import tracing before NumPy",
+        "forged production context with the wrong live parent rejects under import tracing before NumPy",
+        "bootstrap import closure is stdlib-only and the core firewall precedes NumPy in the module body",
+        "direct bootstrap without a capability cannot reach the core",
+        "an inherited regular-file descriptor cannot masquerade as a capability socket",
+        "runtime deletion-barrier checker accepts exact source and rejects affine_table, gathered, and rounding removal mutations",
+        "full source-free authorization/runtime-audit/mount path reaches exactly one capability-bound stub with NumPy and CuPy absent"
+      ]
+    }
+  ],
+  "stage_identities": {
+    "launch_manifest_sha256": "3d5bc5ed95071cc45406d0d2906b54f40d32adad0dffc6323b8fa80ca491ed63",
+    "repair_lock_file_sha256": "6f879caed79aed81f824968a5188ef809ee1a8a1184ed5262b3e23633e18c781",
+    "repair_lock_internal_sha256": "b580de6404add47e7a2b4e27e877a15cf531b41d83f4d690ae2744d0cd67bf56",
+    "protocol_sha256": "7c65886f8acce79340ff13267fe3f2e61b28f7b80c7b79e23493c1bead826e3b",
+    "runtime_contract_sha256": "0cd6bf4cecf38a685e49b38fe29db629820296123c1acd0603be53a4d35cefe1",
+    "authorization_contract_sha256": "f9a63d9e5da16029d3a0ee6af575185980f82d36d3c60668d1fc4f775c64bbaf",
+    "oracle_bootstrap_sha256": "998771c07df30ae0d924e773e0961245c34c48ff967412748bcfd2fb57211aea",
+    "scientific_core_sha256": "d1393a80b4e2b48a30c61ec0b519db9fe35b26c0aed12ca4287023f49d88fd79",
+    "preflight_sha256": "9aa89718850ce7b3a2e6909577358df7f14def471b6fa850ff3f922c191765b0",
+    "audit_entrypoint_sha256": "445c7398b9b617f7eb81082bb73a1e60249dbe1ac2544b4b33a0fa6ecbab23df",
+    "runtime_calibrate_sha256": "68847908b689939115165a131b2596448302a5a1f404a310c5d9ad9213c92dd7"
+  },
+  "isolated_audit": {
+    "event": "V7_SOURCE_ONLY_STAGE_AND_LOCK_PASS",
+    "stage_member_count": 11,
+    "payload_paths_supplied": 0,
+    "payload_files_opened": 0,
+    "runtime_receipts_opened": 0,
+    "production_authorizations_opened": 0,
+    "cupy_imported": false,
+    "cuda_initialized": false,
+    "result_files_written": 0
+  },
+  "access_ledger": {
+    "qwen_or_model_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "production_result_files_opened": 0,
+    "torch_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "production_outputs_created": 0,
+    "source_free_capability_stub_boundaries_reached": 1
+  },
+  "authorization": {
+    "fresh_independent_source_audit_required": true,
+    "runtime_calibration_authorized": false,
+    "production_authorization_exists": false,
+    "production_run_authorized": false
+  },
+  "cpu_test_receipt_sha256": "99a8ef025a1fb8e82d46e8b80ffac6fb712ae5b739706e081652461afa917676"
+}
