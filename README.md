@@ -34,6 +34,7 @@ than the final research claim: at its own physical rate it has
 - [Post-locality research checkpoint: five independently checked architecture gates](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01.md)
 - [SILWARP, finite-bridge, and ancestry negative-result checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_SILWARP.md)
 - [PMG1 explicit-FMA stage-0 survivor and fresh-validation checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_PMG1_FMA.md)
+- [Lossy-tail v8 authenticated early-kill checkpoint](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_LOSSY_V8.md)
 
 Verify the source-free compact checkpoint:
 

@@ -1,0 +1,59 @@
+{
+  "schema": "lossy-tail-v8-independent-runtime-audit-manifest-v1",
+  "status": "IMMUTABLE_PASS_AUDIT_ARTIFACT_SET",
+  "created_utc": "2026-09-01T15:13:50Z",
+  "audited_target": {
+    "remote_path": "/var/tmp/int2_lossy_tail_v8_runtime_evidence_6c5f5cd0/calibration_v1/runtime_receipt.json",
+    "copied_path": "runtime_receipt.json",
+    "file_sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "bytes": 82235,
+    "runtime_receipt_internal_sha256": "de096442f734689ed981c0b3870a335255c9914d9d818b56aca1ac956add4d50",
+    "probe_aggregate_sha256": "85f049ad8372e13df9c8643eb7b4727f167ec2fb4e4ef8aa2188e77b44ad30d1",
+    "launch_manifest_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "runtime_contract_file_sha256": "c83f065122a05f05e5b4788ffc717b517e8c0310cb771dfc1324fc1115745f0a"
+  },
+  "source_audit_binding": {
+    "manifest_file_sha256": "045eac28701decf60837be335cfdf316b3ab1650125bc2f3744f097c0e75bb87",
+    "manifest_internal_sha256": "afe6c6f43a0939861973e4362a5ffa8389f0ac77941dfe8b8e9a5b98a6e1d483",
+    "receipt_file_sha256": "6e2bc929904c7c05274a3c2bfc634707336d8646f85db2776ef024032988dde0",
+    "receipt_internal_sha256": "b06d584ec0e5c8fd69d8f6b609f72631b69dc1feee0af467018e76607384f38b",
+    "receipt_status": "PASS_V8_INDEPENDENT_SOURCE_AUDIT"
+  },
+  "audit_artifacts": [
+    {"path": "README.md", "bytes": 1875, "sha256": "b444b26d0f6e526424b156b18fd8fbf0c4b8e8c28d92d7f5bbdc25823a652ec8"},
+    {"path": "audit_receipt.json", "bytes": 4656, "sha256": "4c1f72a11beff243ac67460dacdc18b9eac7b69445bfebc15f38a0593b135321"},
+    {"path": "runtime_receipt.json", "bytes": 82235, "sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3"},
+    {"path": "verify_runtime_audit.py", "bytes": 32463, "sha256": "45e2a077ca00a2b2d5671a93a2cc3b5badbbd1976e98454e27b09d9a53429a0e"}
+  ],
+  "audit_scope": {
+    "scientific_evidence_and_schema_only": true,
+    "strict_duplicate_key_rejection": true,
+    "canonical_internal_seal_recomputed": true,
+    "probe_aggregate_recomputed": true,
+    "runtime_tuple_exactly_bound": true,
+    "ordered_rng_cells_verified": 48,
+    "affine_rows_verified": 96,
+    "stable_order_rows_verified": 5,
+    "six_field_memory_rows_verified": 53,
+    "independent_evidence_check_count": 3243,
+    "payload_access_authorized": false,
+    "production_authorized": false,
+    "compression_claim_authorized": false,
+    "result": "PASS"
+  },
+  "access_ledger": {
+    "model_or_qwen_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "validation_data_files_opened": 0,
+    "production_result_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "production_authorizations_created": 0,
+    "external_data_network_calls": 0
+  },
+  "authorization": "RUNTIME-EVIDENCE PASS ONLY; NO MODEL/PAYLOAD/PRODUCTION AUTHORITY; A SEPARATE EXTERNAL ONE-SHOT AUTHORIZATION REMAINS REQUIRED",
+  "audit_manifest_sha256": "f420b221d73dbe87c1ba8517fadd575997c0379146c55a3baaecc4ec42b76420"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "lossy-tail-v8-artifact-manifest-v1",
+  "status": "FROZEN_SOURCE_ONLY_CANDIDATE_REQUIRES_FRESH_INDEPENDENT_AUDIT",
+  "created_utc": "2026-09-01T16:40:00Z",
+  "member_count_excluding_this_manifest": 16,
+  "members": [
+    {"path": "audit_lock_entrypoint.py", "bytes": 8900, "sha256": "d069656c7b53d170e4cc71aa24c049ede48ef6262b2e66f83bad1059c507f5cd"},
+    {"path": "authorization_contract.json", "bytes": 6473, "sha256": "f97c11a5254deec2c140bb894c32d5f455af26ae8344b995569deb87c516f6eb"},
+    {"path": "CPU_TEST_RECEIPT.json", "bytes": 5241, "sha256": "eeec972aaab17e7cd59ac506050f53519972dc968c2d7a6e38257101e21f1dc9"},
+    {"path": "launch_manifest.json", "bytes": 3405, "sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94"},
+    {"path": "lossy_tail_core.py", "bytes": 112900, "sha256": "be51a7f895af2cf1f2863b491affa4e9dbdcc2eb59798e239560bd1f85172c66"},
+    {"path": "lossy_tail_oracle.py", "bytes": 18264, "sha256": "b8574858ab90c528769cbdd3cd6d0cdf5cd62f58dfa2bf6e46ec8f465a2059b2"},
+    {"path": "preflight_launch.py", "bytes": 34222, "sha256": "f32618bcb33ffb3a3a319b0dbfb2c7e2df18e437cfeec478edec80bff3c2bca8"},
+    {"path": "protocol_lock.json", "bytes": 12045, "sha256": "7cc2ce69587f6426e108a3970e3e61a5f467f0c984622b98989af251ce758e9b"},
+    {"path": "README.md", "bytes": 8326, "sha256": "ff1aff3b7850ffbf2a8f1f541b1bf182aff79cde2a700e1a2ef88147fd4806cc"},
+    {"path": "repair_lock.json", "bytes": 6131, "sha256": "7bcaf3bca835f34bbbf3df39c08c2ebebf70890a4f2e9b5f9128ed71c0fea442"},
+    {"path": "runtime_calibrate.py", "bytes": 13730, "sha256": "f454f69ee802a52b2797576fd426558a456d4398052aeb2cbeb8e7d941140a47"},
+    {"path": "runtime_contract.json", "bytes": 5264, "sha256": "c83f065122a05f05e5b4788ffc717b517e8c0310cb771dfc1324fc1115745f0a"},
+    {"path": "source_bindings.json", "bytes": 2308, "sha256": "79edb94c8227e89debaf7eac5f4e181924d97300c9f7bc961a29151292e62a22"},
+    {"path": "test_lossy_tail_core.py", "bytes": 11347, "sha256": "fe24db0b9037b66d40f5f3502ad1e8f2a7280199294041ace53844a16727aefd"},
+    {"path": "test_release_security.py", "bytes": 38620, "sha256": "317629582ca3f6d126a87f1e4001463a0c97c1e1194f0c0e0fca190f4d67c6ae"},
+    {"path": "verify_package.py", "bytes": 19473, "sha256": "dc590714895a82fc01090ed40af7cb6c06c09cea4d6571f19c8cd0f47ad87072"}
+  ],
+  "stage": {
+    "launch_manifest_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "repair_lock_file_sha256": "7bcaf3bca835f34bbbf3df39c08c2ebebf70890a4f2e9b5f9128ed71c0fea442",
+    "repair_lock_internal_sha256": "270746d99395b9c713500dad8b9c41d8c93aa58ee0d0e04adb815da44870fd32",
+    "stage_member_count": 11
+  },
+  "predecessor_block_audit": {
+    "package": "../lossy_tail_peeling_oracle_v7_fresh_source_audit",
+    "manifest_file_sha256": "120b616c726253a82850e93b720e48c56c2aa7af59f1c2b7ec288bec215e4621",
+    "manifest_internal_sha256": "ff8fa4ccb2ded027d4bd22b00b8a00d1014b92f9888ef55be1c68377d496e0f9",
+    "receipt_file_sha256": "b82146a04188b74a3213fd54db2ee1bb34c7d132dd685b8169b7f8ce36a78dff",
+    "receipt_internal_sha256": "8c66b7bfe3f076fa00c993ac3862069268dbad9dbc4572f833d66401967e1ec4",
+    "status": "BLOCKED_SOURCE_ONLY_RELEASE_CONFORMANCE"
+  },
+  "access_ledger": {
+    "qwen_or_model_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "torch_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "network_calls": 0
+  },
+  "authorization": "NO RUNTIME CALIBRATION OR PRODUCTION AUTHORIZATION; FRESH INDEPENDENT V8 SOURCE AUDIT REQUIRED",
+  "artifact_manifest_sha256": "941884d4cd9a8ff04986d3f634603b3b88b2707af9c8aca9d33fb984d1a1488d"
+}

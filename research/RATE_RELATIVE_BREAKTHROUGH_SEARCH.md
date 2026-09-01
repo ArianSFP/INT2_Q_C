@@ -104,6 +104,7 @@ operational reconstructions.
 | SILWARP-v2 implicit hyperdecoder | both fixed seeds select the exact identity bypass at updates 256 and 512; matched gain and cluster SE are exactly zero | `1.371045x` at its auxiliary 2.15643-bpw ledger | Hard kill for the frozen recurrent 256-D cell |
 | Scalar rotated-dither finite bridge | actual N19 payload `2.40758324 bpw`; full FP16-system rate `2.41416770 bpw`, identity MSE `0.05070059` | `1.334465x` | Kill as a bridge; shaping-rate gap needs a 44.46% correction |
 | Dense-to-MoE public ancestry | best free optimal neuron match captures `0.51297%`; matched controls capture `0.50033%`; corrected `0.01264%` | reference granted free in the screen | Scoped hard kill for Qwen3-1.7B layers 9/15 as ancestors |
+| Lossy stable-tail peeling v8 | impossible zero-tail-error envelope has calibrated `s=0.01138630`; finite FP16-centroid row has joint `s=-0.00160328` | worst observed logical/page read `1.015753x` / `1.022287x` | Early kill for coordinate/block16/block64 scalar-tail family |
 
 ### Direct empirical rate-distortion oracle
 
@@ -360,6 +361,28 @@ identity MSE is `0.05070058749`; the same-rate target would require a 44.46%
 nonlinear correction. Scalar dither is therefore dead as the bridge. Direct
 finite POLARIS codewords with list analysis-by-synthesis remain the only
 credible bridge after a future ideal survivor.
+
+The independently source- and runtime-audited [lossy-tail v8
+experiment](lossy_tail_peeling_oracle_v8/README.md) then tested stable
+coordinate, contiguous block-16, and contiguous block-64 supports on six
+authenticated auxiliary layer-15 Up/Down expert pairs. It searched 732 Qwen
+profiles at each of three physical rates and repeated the exact search for four
+moment-matched Gaussian controls. The strongest deliberately impossible row
+reconstructed every selected tail scalar with zero error while still charging
+support and symbols. Its absolute `F=0.2153922718` is not materializable, and
+the controls reproduce essentially all of that apparent gain: calibrated
+`F=0.9843391685`, `s=0.0113862960`, only `7.0738%` of the required rate
+advantage. The strongest finite FP16-centroid row has joint
+`s=-0.0016032827`. All 225 retained Qwen/control read ledgers remain local;
+the worst logical and 4-KiB page amplifications are `1.0157528281x` and
+`1.0222869023x`. Thus read bandwidth is decisively solved for this branch, but
+stable scalar-tail structure is not the missing information source. The
+one-shot result has now passed a separate standard-library result audit and a
+disjoint RunPod replay: 207,877 checks independently traverse all 225
+score/read ledgers and reproduce `EARLY_KILL_FAR_SHORT`.  The sealed audit
+manifest/receipt file hashes are respectively
+`fdfd809308957b38289960e20e8277393080b50cdc1c254c348199a4f832a4f9` and
+`46df33b485ed65f62c5444daacd5653f4e3c5de117d5847455678136feb9428a`.
 
 The [public dense-ancestry screen](dense_upcycle_reference/README.md) grants
 Qwen3-1.7B-Base layers 9 and 15, rectangular neuron assignment, and separate

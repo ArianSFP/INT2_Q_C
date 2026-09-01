@@ -1,0 +1,43 @@
+{
+  "schema": "int2-qc-rate-relative-lossy-tail-v8-checkpoint-v1",
+  "date": "2026-09-01",
+  "status": "AUTHENTICATED_EARLY_KILL_NO_CODEC_PROMOTION",
+  "objective": {
+    "physical_rate_bpw_min": 2.15,
+    "physical_rate_bpw_max": 2.5,
+    "maximum_F": 0.8,
+    "minimum_s_bpw": 0.16096404744368115,
+    "maximum_expert_read_amplification_exclusive": 2.0
+  },
+  "baseline": {
+    "physical_rate_bpw": 2.5,
+    "relative_mse": 0.030902167403153148,
+    "F": 0.9888693569009007,
+    "s_bpw": 0.008074080480766676,
+    "worst_cold_page_read_amplification": 1.1694444444444445
+  },
+  "lossy_tail_v8": {
+    "decision": "EARLY_KILL_FAR_SHORT",
+    "finite_residual_codec_warranted": false,
+    "score_rows_independently_verified": 225,
+    "profile_rows_independently_verified": 2700,
+    "independent_checks": 207877,
+    "optimistic_calibrated_excess_s_bpw": 0.011386295964214366,
+    "fraction_of_required_s": 0.07073813155821804,
+    "finite_best_joint_s_bpw": -0.0016032826638503746,
+    "maximum_logical_read_amplification": 1.015752828100462,
+    "maximum_page_read_amplification": 1.022286902319691
+  },
+  "sha256": {
+    "producer_launch_manifest": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "source_audit_manifest": "045eac28701decf60837be335cfdf316b3ab1650125bc2f3744f097c0e75bb87",
+    "runtime_receipt": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "runtime_audit_manifest": "7d0fbd622fd061641a3c0b96f00d1c6d4bf9c4b5f785d664fd6c8268df2a4134",
+    "authorization": "16bf378c1c6baa23eaff7054ca4c1b82fa06ec45bd89e152956d6a51c752d1ef",
+    "result": "2f3ebe509fa3c78c2caf6084510bb14e9e2a2fef9cabbdb4b99c9b396a4bfdf9",
+    "result_audit_manifest": "fdfd809308957b38289960e20e8277393080b50cdc1c254c348199a4f832a4f9",
+    "result_audit_receipt": "46df33b485ed65f62c5444daacd5653f4e3c5de117d5847455678136feb9428a",
+    "result_audit_verifier": "1024563d3dbde7b2236d58b152a67a7b7c09e9b3145f8a3254196a4f05fd27c9"
+  },
+  "claim_boundary": "This checkpoint authenticates a bounded auxiliary early kill and its physical read arithmetic. It is not a finite residual codec, a pinned-panel reproduction, or a universal converse."
+}

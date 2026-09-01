@@ -1,0 +1,61 @@
+{
+  "schema": "lossy-tail-v8-runtime-calibration-contract-v1",
+  "status": "FROZEN_SOURCE_FREE_BEFORE_RUNTIME_CALIBRATION",
+  "purpose": "Specify the exact source-free CuPy RNG, BF16 rounding, FP32 affine, float64 reduction, stable-order, and runtime tuple evidence that must be independently audited before any production authorization.",
+  "expected_runtime_tuple": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "numpy_version": "2.5.2",
+    "cupy_version": "14.2.0",
+    "cuda_runtime_integer": 12090,
+    "device_count": 1,
+    "device_ordinal": 0,
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "cuda_visible_devices": "0"
+  },
+  "probe": {
+    "rows": 768,
+    "columns": 2048,
+    "values_per_vector": 1572864,
+    "seed_domain": "stable_seed('lossy-tail-peeling-gaussian-v1', replica, ordinal)",
+    "replicas": [0, 1, 2, 3],
+    "ordinals": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "rng_call": "cp.random.default_rng(seed_u64).standard_normal(1572864,dtype=cp.float32), exactly one call from a fresh generator per cell",
+    "rne_bf16": "view float32 as uint32; add uint32(0x7fff)+((bits>>16)&1); shift right 16; cast uint16",
+    "hashes_per_cell": ["raw_float32_u32_little_endian_sha256", "rne_bf16_u16_little_endian_sha256"],
+    "reductions_per_cell": ["float64_mean_of_bf16_values_as_float_hex", "float64_population_variance_about_that_mean_as_float_hex"],
+    "affine_sentinels": [
+      {"scale_float32_hex": "0x1.4000000000000p-2", "offset_float32_hex": "-0x1.8000000000000p-7"},
+      {"scale_float32_hex": "0x1.8000000000000p+0", "offset_float32_hex": "0x1.0000000000000p-8"}
+    ],
+    "affine_semantics": "build all 65536 BF16 float32 values on device; evaluate table*cp.float32(scale)+cp.float32(offset); gather by each cell's BF16 words; hash gathered float32 uint32 little-endian bytes; reduce gathered mean and population variance in cp.float64",
+    "stable_order_adversaries": "the five arrays frozen literally in lossy_tail_core.runtime_probe; compare stable_descending against numpy.lexsort((ordinal,-value)) and record int64-little-endian order hashes",
+    "memory_evidence_per_cell": ["stream_synchronized", "used_bytes_before_free", "total_bytes_before_free", "used_bytes_after_free", "total_bytes_after_free", "all_per_cell_gpu_arrays_deleted_before_free"],
+    "memory_evidence_required_values": {"used_bytes_before_free": 0, "used_bytes_after_free": 0, "total_bytes_after_free": 0, "all_per_cell_gpu_arrays_deleted_before_free": true},
+    "aggregate": "canonical-JSON SHA-256 over the ordered 48 cell rows, two affine rows per cell, stable-order rows, and exact runtime tuple",
+    "execution_order": "replica ascending, ordinal ascending, affine sentinel order as listed; a new RNG is constructed for each cell",
+    "memory_rule": "materialize and hash one vector/cell at a time; delete raw/bits/rounding/words/zbf/table/affine_table/gathered/RNG and all host hash buffers only after their final consumer; synchronize; require pool.used_bytes()==0 before free; free; require used_bytes()==total_bytes()==0 after free; record all six memory fields for every one of 48 cells and all five stable-order adversaries",
+    "deterministic_float_reporting": "all float64 scalars are serialized by Python float.hex(), never decimal-only"
+  },
+  "production_panel_memory_rule": "After all live affine, gathered, mask, source/control, histogram, and XKLT consumers for one expert have completed, explicitly delete every GPU-bearing owning container and loop alias including masks, x, and words; synchronize; assert used_bytes()==0 before free_all_blocks; then assert used_bytes()==total_bytes()==0 and emit the complete per-expert memory-release ledger.",
+  "calibration_output": {
+    "schema": "lossy-tail-v8-source-free-runtime-receipt-v1",
+    "status": "UNTRUSTED_UNTIL_INDEPENDENT_RUNTIME_AUDIT",
+    "filename": "runtime_receipt.json",
+    "creation": "create absent run root and result exclusively; never write inside stage or any model/source tree",
+    "internal_seal_field": "runtime_receipt_sha256",
+    "required_zero_access": {
+      "model_or_qwen_paths_supplied": 0,
+      "model_or_qwen_paths_opened": 0,
+      "payload_files_opened": 0,
+      "production_results_opened": 0
+    }
+  },
+  "production_replay": {
+    "required": "live runtime tuple and every ordered probe row must exactly equal the independently audited receipt before first source payload open",
+    "receipt_binding": "a later external production authorization binds runtime receipt path/file/internal SHA-256 and an independent audit receipt path/file/internal SHA-256",
+    "failure": "any tuple, vector hash, reduction hex, affine hash, stable-order hash, aggregate, path, or receipt mismatch aborts before payload access"
+  },
+  "environment_launch_rule": "Frozen shell invocations contain exactly one explicit CUDA_VISIBLE_DEVICES=0 assignment; calibration, preflight, and oracle require the effective value to equal literal 0 before importing CuPy. Python can observe only the effective environment mapping, so rejection of duplicate textual shell assignments is an invocation-review property, not an in-process claim.",
+  "authorization": "NOT_AUTHORIZED_TO_CALIBRATE_OR_RUN_PRODUCTION_BY_THIS CONTRACT"
+}

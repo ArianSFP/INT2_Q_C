@@ -1,0 +1,108 @@
+{
+  "schema": "lossy-tail-v8-independent-source-audit-receipt-v1",
+  "status": "PASS_V8_INDEPENDENT_SOURCE_AUDIT",
+  "created_utc": "2026-09-01T14:54:41Z",
+  "audited_target": {
+    "package_path": "../lossy_tail_peeling_oracle_v8",
+    "artifact_manifest_file_sha256": "c71ff25df401188b0557e859e5b105ec274f25e6411ce7c24177fd348734c6b2",
+    "launch_manifest_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "repair_lock_file_sha256": "7bcaf3bca835f34bbbf3df39c08c2ebebf70890a4f2e9b5f9128ed71c0fea442",
+    "repair_lock_internal_sha256": "270746d99395b9c713500dad8b9c41d8c93aa58ee0d0e04adb815da44870fd32",
+    "package_member_count": 17,
+    "stage_member_count": 11
+  },
+  "verdict": {
+    "result": "PASS",
+    "source_free_runtime_calibration_warranted": true,
+    "payload_access_authorized": false,
+    "production_authorized": false,
+    "compression_claim_authorized": false,
+    "runtime_receipt_trusted_before_separate_audit": false
+  },
+  "independent_recomputation": {
+    "matrix_values": 1572864,
+    "panel_values": 18874368,
+    "target_formula": "-0.5*log2(0.8)",
+    "target_s_bpw_binary64": "0.16096404744368115",
+    "kill_formula": "target_s_bpw-0.02",
+    "kill_threshold_s_bpw_binary64": "0.14096404744368116",
+    "protocol_kill_threshold_decimal": "0.14096404744368115",
+    "kill_threshold_difference_is_inside_numeric_hold_guard": true,
+    "numeric_boundary_guard_s_bpw": "0.0001",
+    "rates": [
+      {"requested_bpw": "2.15", "capacity_bytes": 5072486, "physical_bits": 40579888, "physical_rate_bpw": "2.1499998304578991"},
+      {"requested_bpw": "2.30", "capacity_bytes": 5426380, "physical_bits": 43411040, "physical_rate_bpw": "2.2999996609157987"},
+      {"requested_bpw": "2.50", "capacity_bytes": 5898240, "physical_bits": 47185920, "physical_rate_bpw": "2.5"}
+    ],
+    "control_tolerance_fixture": {
+      "target_mean": "0.01",
+      "target_variance": "0.0004",
+      "mean_absolute_tolerance": "1.52587890625e-7",
+      "variance_absolute_tolerance": "1.2207031250000001e-8",
+      "inside_0.99_tolerance_accepted": true,
+      "outside_1.01_tolerance_rejected": true
+    },
+    "decision_fixture_statuses": [
+      "EARLY_KILL_FAR_SHORT",
+      "HOLD_NUMERIC_BOUNDARY",
+      "HOLD_OPTIMISTIC_NEAR_BOUNDARY",
+      "FINITE_CODEC_WARRANTED",
+      "OPTIMISTIC_SURVIVOR"
+    ],
+    "strict_read_gate": "maximum logical and every expert logical and page amplification are each <2.0; equality rejects",
+    "rate_ledger_closure_recomputed": true,
+    "finite_only_decision_tree_confirmed": true,
+    "support_xklt_live_rank_one_angle_charge_confirmed": true
+  },
+  "documented_replay": {
+    "replay_receipt_path": "replay_receipt.json",
+    "unique_test_cases": 33,
+    "unique_test_cases_passed": 33,
+    "explicit_linux_subset_reexecutions": 3,
+    "total_test_case_executions": 36,
+    "total_passed_executions": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "isolated_stage_replay_passed": true,
+    "producer_verifier_passed_but_not_used_as_independent_authority": true
+  },
+  "source_free_calibration_boundary": {
+    "calibrator_cli_flags": ["--manifest", "--manifest-sha256", "--output"],
+    "model_or_source_cli_arguments": 0,
+    "runtime_core_calls": ["exact_runtime_tuple", "runtime_probe"],
+    "qwen_panel_builder_called": false,
+    "payload_loader_called": false,
+    "receipt_status": "UNTRUSTED_UNTIL_INDEPENDENT_RUNTIME_AUDIT",
+    "separate_explicit_runtime_approval_still_required": true,
+    "separate_independent_runtime_audit_still_required": true,
+    "later_one_shot_production_authorization_still_required": true
+  },
+  "check_summary": {
+    "independent_check_count": 1139,
+    "blocker_count": 0,
+    "non_blocking_observation_count": 1,
+    "non_blocking_observation": "Binary64 target-minus-0.02 renders as 0.14096404744368116 while protocol JSON records 0.14096404744368115; the 2.8e-17 difference is dominated by the frozen 1e-4 numeric HOLD guard and cannot change promotion or kill."
+  },
+  "access_ledger": {
+    "model_or_qwen_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "validation_data_files_opened": 0,
+    "production_result_files_opened": 0,
+    "torch_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "production_authorizations_created": 0,
+    "external_data_network_calls": 0
+  },
+  "audit_transport": {
+    "provided_runpod_source_only_transport_used": true,
+    "audited_program_network_calls": 0,
+    "external_data_sources_contacted": 0
+  },
+  "authorization": "PASS WARRANTS ONLY A SEPARATELY APPROVED SOURCE-FREE RUNTIME CALIBRATION; NO MODEL/PAYLOAD/GPU/PRODUCTION AUTHORITY IS CREATED BY THIS AUDIT",
+  "audit_receipt_sha256": "b06d584ec0e5c8fd69d8f6b609f72631b69dc1feee0af467018e76607384f38b"
+}

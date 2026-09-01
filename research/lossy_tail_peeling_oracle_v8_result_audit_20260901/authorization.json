@@ -1,0 +1,140 @@
+{
+  "action": "CREATE_NEW_RUN_ROOT_AND_RESULT_JSON",
+  "authorization_nonce": "2a409e1714281378b841ca8c4c27d9478cb82e85dd68025e8fcb144e209e0565",
+  "authorization_path": "/var/tmp/int2_lossy_tail_v8_authorization_evidence_6c5f5cd0/authorization.json",
+  "authorization_sha256": "5dd327a2a4b15be84c57c8dc9821d9d4ade707e254083730ca6449d4a90207a9",
+  "execution": {
+    "cuda_visible_devices": "0",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "raw_launcher_path": "/workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/isolated_stage/preflight_launch.py",
+    "runtime_tuple": {
+      "cuda_driver_integer": 13000,
+      "cuda_runtime_integer": 12090,
+      "cuda_visible_devices": "0",
+      "cupy_version": "14.2.0",
+      "device_compute_capability": [
+        12,
+        0
+      ],
+      "device_count": 1,
+      "device_multiprocessor_count": 170,
+      "device_name": "NVIDIA GeForce RTX 5090",
+      "device_ordinal": 0,
+      "device_total_global_mem": 33668857856,
+      "numpy_version": "2.5.2",
+      "python_executable": "/workspace/int2-cupy-venv/bin/python",
+      "python_implementation": "CPython",
+      "python_version": "3.12.3"
+    }
+  },
+  "filesystem": {
+    "identities": [
+      {
+        "label": "stage",
+        "mount_id": 2626,
+        "path": "/workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/isolated_stage",
+        "st_dev": 66307,
+        "st_ino": 2169372951
+      },
+      {
+        "label": "source",
+        "mount_id": 2626,
+        "path": "/workspace/INT2__compression/qwen_weight_cache/rd_structure_diag_cross_expert",
+        "st_dev": 66307,
+        "st_ino": 4298642391
+      },
+      {
+        "label": "output_existing_parent",
+        "mount_id": 2559,
+        "path": "/var/tmp/int2_lossy_tail_v8_production_output_6c5f5cd0",
+        "st_dev": 51,
+        "st_ino": 8590128824
+      },
+      {
+        "label": "authorization_parent",
+        "mount_id": 2559,
+        "path": "/var/tmp/int2_lossy_tail_v8_authorization_evidence_6c5f5cd0",
+        "st_dev": 51,
+        "st_ino": 10737687203
+      },
+      {
+        "label": "source_audit_manifest",
+        "mount_id": 2559,
+        "path": "/var/tmp/int2_lossy_tail_v8_source_audit_evidence_6c5f5cd0/audit_manifest.json",
+        "st_dev": 51,
+        "st_ino": 2148778782
+      },
+      {
+        "label": "source_audit_receipt",
+        "mount_id": 2559,
+        "path": "/var/tmp/int2_lossy_tail_v8_source_audit_evidence_6c5f5cd0/audit_receipt.json",
+        "st_dev": 51,
+        "st_ino": 2148778783
+      },
+      {
+        "label": "runtime_receipt",
+        "mount_id": 2559,
+        "path": "/var/tmp/int2_lossy_tail_v8_runtime_evidence_6c5f5cd0/calibration_v1/runtime_receipt.json",
+        "st_dev": 51,
+        "st_ino": 10790855978
+      },
+      {
+        "label": "runtime_audit_manifest",
+        "mount_id": 2559,
+        "path": "/var/tmp/int2_lossy_tail_v8_runtime_audit_evidence_6c5f5cd0/audit_manifest.json",
+        "st_dev": 51,
+        "st_ino": 6447587222
+      },
+      {
+        "label": "runtime_audit_receipt",
+        "mount_id": 2559,
+        "path": "/var/tmp/int2_lossy_tail_v8_runtime_audit_evidence_6c5f5cd0/audit_receipt.json",
+        "st_dev": 51,
+        "st_ino": 6447587233
+      }
+    ],
+    "mountinfo_file_sha256": "eaa7746ba4412f70b41c8c67e699e88724d8af875889d5e2fb8ccc603353a90c",
+    "mountinfo_path": "/proc/self/mountinfo"
+  },
+  "fixed_scientific_arguments": {
+    "control_replicates": 4,
+    "maximum_coordinate_passes": 4
+  },
+  "output": {
+    "result_path": "/var/tmp/int2_lossy_tail_v8_production_output_6c5f5cd0/aux_oracle_v1/result.json",
+    "run_root": "/var/tmp/int2_lossy_tail_v8_production_output_6c5f5cd0/aux_oracle_v1"
+  },
+  "runtime_audit": {
+    "manifest_file_sha256": "7d0fbd622fd061641a3c0b96f00d1c6d4bf9c4b5f785d664fd6c8268df2a4134",
+    "manifest_path": "/var/tmp/int2_lossy_tail_v8_runtime_audit_evidence_6c5f5cd0/audit_manifest.json",
+    "receipt_file_sha256": "4c1f72a11beff243ac67460dacdc18b9eac7b69445bfebc15f38a0593b135321",
+    "receipt_internal_field": "audit_receipt_sha256",
+    "receipt_internal_sha256": "f19c47de87e1626b9bdf36e6d90e2a31e9a5006134d79095a113043a4e4e3ea2",
+    "receipt_path": "/var/tmp/int2_lossy_tail_v8_runtime_audit_evidence_6c5f5cd0/audit_receipt.json"
+  },
+  "runtime_receipt": {
+    "file_sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "internal_sha256": "de096442f734689ed981c0b3870a335255c9914d9d818b56aca1ac956add4d50",
+    "path": "/var/tmp/int2_lossy_tail_v8_runtime_evidence_6c5f5cd0/calibration_v1/runtime_receipt.json",
+    "runtime_contract_file_sha256": "c83f065122a05f05e5b4788ffc717b517e8c0310cb771dfc1324fc1115745f0a"
+  },
+  "schema": "lossy-tail-v8-one-shot-production-authorization-v1",
+  "source": {
+    "bindings_file_sha256": "79edb94c8227e89debaf7eac5f4e181924d97300c9f7bc961a29151292e62a22",
+    "path": "/workspace/INT2__compression/qwen_weight_cache/rd_structure_diag_cross_expert"
+  },
+  "source_audit": {
+    "manifest_file_sha256": "045eac28701decf60837be335cfdf316b3ab1650125bc2f3744f097c0e75bb87",
+    "manifest_path": "/var/tmp/int2_lossy_tail_v8_source_audit_evidence_6c5f5cd0/audit_manifest.json",
+    "receipt_file_sha256": "6e2bc929904c7c05274a3c2bfc634707336d8646f85db2776ef024032988dde0",
+    "receipt_internal_field": "audit_receipt_sha256",
+    "receipt_internal_sha256": "b06d584ec0e5c8fd69d8f6b609f72631b69dc1feee0af467018e76607384f38b",
+    "receipt_path": "/var/tmp/int2_lossy_tail_v8_source_audit_evidence_6c5f5cd0/audit_receipt.json"
+  },
+  "stage": {
+    "launch_manifest_file_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "launch_manifest_internal_stage_member_count": 11,
+    "path": "/workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/isolated_stage"
+  },
+  "status": "AUTHORIZED_ONCE_AFTER_INDEPENDENT_SOURCE_AND_RUNTIME_AUDITS"
+}

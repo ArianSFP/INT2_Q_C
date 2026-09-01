@@ -1,0 +1,100 @@
+{
+  "schema": "lossy-tail-v8-independent-runtime-audit-receipt-v1",
+  "status": "PASS_V8_INDEPENDENT_RUNTIME_AUDIT",
+  "created_utc": "2026-09-01T15:13:50Z",
+  "audited_target": {
+    "remote_path": "/var/tmp/int2_lossy_tail_v8_runtime_evidence_6c5f5cd0/calibration_v1/runtime_receipt.json",
+    "copied_path": "runtime_receipt.json",
+    "file_sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "bytes": 82235,
+    "runtime_receipt_internal_sha256": "de096442f734689ed981c0b3870a335255c9914d9d818b56aca1ac956add4d50",
+    "launch_manifest_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "runtime_contract_file_sha256": "c83f065122a05f05e5b4788ffc717b517e8c0310cb771dfc1324fc1115745f0a",
+    "calibrator_sha256": "f454f69ee802a52b2797576fd426558a456d4398052aeb2cbeb8e7d941140a47",
+    "scientific_core_sha256": "be51a7f895af2cf1f2863b491affa4e9dbdcc2eb59798e239560bd1f85172c66"
+  },
+  "audited_runtime_receipt": {
+    "file_sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "internal_sha256": "de096442f734689ed981c0b3870a335255c9914d9d818b56aca1ac956add4d50"
+  },
+  "source_audit_binding": {
+    "manifest_schema": "lossy-tail-v8-independent-source-audit-manifest-v1",
+    "manifest_status": "IMMUTABLE_PASS_AUDIT_ARTIFACT_SET",
+    "manifest_file_sha256": "045eac28701decf60837be335cfdf316b3ab1650125bc2f3744f097c0e75bb87",
+    "manifest_internal_sha256": "afe6c6f43a0939861973e4362a5ffa8389f0ac77941dfe8b8e9a5b98a6e1d483",
+    "receipt_schema": "lossy-tail-v8-independent-source-audit-receipt-v1",
+    "receipt_status": "PASS_V8_INDEPENDENT_SOURCE_AUDIT",
+    "receipt_file_sha256": "6e2bc929904c7c05274a3c2bfc634707336d8646f85db2776ef024032988dde0",
+    "receipt_internal_sha256": "b06d584ec0e5c8fd69d8f6b609f72631b69dc1feee0af467018e76607384f38b",
+    "repair_lock_internal_sha256": "270746d99395b9c713500dad8b9c41d8c93aa58ee0d0e04adb815da44870fd32"
+  },
+  "runtime_identity": {
+    "file_sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "bytes": 82235,
+    "internal_sha256": "de096442f734689ed981c0b3870a335255c9914d9d818b56aca1ac956add4d50",
+    "probe_aggregate_sha256": "85f049ad8372e13df9c8643eb7b4727f167ec2fb4e4ef8aa2188e77b44ad30d1",
+    "schema": "lossy-tail-v8-source-free-runtime-receipt-v1",
+    "status": "UNTRUSTED_UNTIL_INDEPENDENT_RUNTIME_AUDIT"
+  },
+  "runtime_tuple": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "numpy_version": "2.5.2",
+    "cupy_version": "14.2.0",
+    "cuda_runtime_integer": 12090,
+    "cuda_driver_integer": 13000,
+    "device_count": 1,
+    "device_ordinal": 0,
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "device_total_global_mem": 33668857856,
+    "device_compute_capability": [12, 0],
+    "device_multiprocessor_count": 170,
+    "cuda_visible_devices": "0"
+  },
+  "probe_closure": {
+    "ordered_rng_cells": 48,
+    "affine_rows_per_cell": 2,
+    "total_affine_rows": 96,
+    "stable_order_rows": 5,
+    "memory_release_rows": 53,
+    "memory_fields_per_row": 6,
+    "seed_domain_recomputed": true,
+    "stable_fixture_hashes_recomputed": true,
+    "probe_aggregate_recomputed": true,
+    "runtime_internal_seal_recomputed": true,
+    "duplicate_json_keys": 0,
+    "nonfinite_values": 0,
+    "duplicate_seed_or_evidence_hashes": 0,
+    "schema_or_order_drift": 0
+  },
+  "check_summary": {
+    "independent_evidence_check_count": 3243,
+    "blocker_count": 0,
+    "non_blocking_observation_count": 0,
+    "verdict": "PASS"
+  },
+  "access_ledger": {
+    "model_or_qwen_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "validation_data_files_opened": 0,
+    "production_result_files_opened": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "production_authorizations_created": 0,
+    "external_data_network_calls": 0
+  },
+  "audit_transport": {
+    "provided_runpod_used": true,
+    "transport": "SSH/SCP exact-receipt transport and identity check only",
+    "remote_receipt_identity_checked_before_and_after_copy": true,
+    "audited_program_reexecuted": false,
+    "cupy_or_cuda_used_by_audit": false,
+    "external_data_sources_contacted": 0
+  },
+  "authorization": "PASS AUTHENTICATES ONLY THE SOURCE-FREE RUNTIME RECEIPT REQUIRED BY THE FROZEN CONTRACT; NO MODEL/PAYLOAD/PRODUCTION ACCESS OR COMPRESSION CLAIM; A SEPARATE ONE-SHOT PRODUCTION AUTHORIZATION IS STILL REQUIRED",
+  "audit_receipt_sha256": "f19c47de87e1626b9bdf36e6d90e2a31e9a5006134d79095a113043a4e4e3ea2"
+}

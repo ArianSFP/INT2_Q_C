@@ -1,0 +1,92 @@
+{
+  "schema": "lossy-tail-v8-independent-result-audit-manifest-v1",
+  "status": "IMMUTABLE_PASS_AUDIT_ARTIFACT_SET",
+  "created_utc": "2026-09-01T15:34:49Z",
+  "audited_target": {
+    "remote_result_path": "/var/tmp/int2_lossy_tail_v8_production_output_6c5f5cd0/aux_oracle_v1/result.json",
+    "copied_result_path": "result.json",
+    "result_bytes": 3800771,
+    "result_file_sha256": "2f3ebe509fa3c78c2caf6084510bb14e9e2a2fef9cabbdb4b99c9b396a4bfdf9",
+    "result_internal_sha256": "83ef57d23fddc1ecc5443ecc5bd4da5a35497c8f5e7e5f9d6584095458943d1c",
+    "authorization_file_sha256": "16bf378c1c6baa23eaff7054ca4c1b82fa06ec45bd89e152956d6a51c752d1ef",
+    "authorization_internal_sha256": "5dd327a2a4b15be84c57c8dc9821d9d4ade707e254083730ca6449d4a90207a9",
+    "launch_manifest_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94"
+  },
+  "prior_pass_bindings": {
+    "source_audit_manifest_file_sha256": "045eac28701decf60837be335cfdf316b3ab1650125bc2f3744f097c0e75bb87",
+    "source_audit_receipt_file_sha256": "6e2bc929904c7c05274a3c2bfc634707336d8646f85db2776ef024032988dde0",
+    "source_audit_receipt_internal_sha256": "b06d584ec0e5c8fd69d8f6b609f72631b69dc1feee0af467018e76607384f38b",
+    "runtime_receipt_file_sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "runtime_receipt_internal_sha256": "de096442f734689ed981c0b3870a335255c9914d9d818b56aca1ac956add4d50",
+    "runtime_audit_manifest_file_sha256": "7d0fbd622fd061641a3c0b96f00d1c6d4bf9c4b5f785d664fd6c8268df2a4134",
+    "runtime_audit_receipt_file_sha256": "4c1f72a11beff243ac67460dacdc18b9eac7b69445bfebc15f38a0593b135321",
+    "runtime_audit_receipt_internal_sha256": "f19c47de87e1626b9bdf36e6d90e2a31e9a5006134d79095a113043a4e4e3ea2"
+  },
+  "audit_artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 3046,
+      "sha256": "c657990d11e9d3888cabdeffa48164775d6f8417332c66eb17ebadd9b5757f9c"
+    },
+    {
+      "path": "audit_receipt.json",
+      "bytes": 8262,
+      "sha256": "46df33b485ed65f62c5444daacd5653f4e3c5de117d5847455678136feb9428a"
+    },
+    {
+      "path": "authorization.json",
+      "bytes": 5960,
+      "sha256": "16bf378c1c6baa23eaff7054ca4c1b82fa06ec45bd89e152956d6a51c752d1ef"
+    },
+    {
+      "path": "result.json",
+      "bytes": 3800771,
+      "sha256": "2f3ebe509fa3c78c2caf6084510bb14e9e2a2fef9cabbdb4b99c9b396a4bfdf9"
+    },
+    {
+      "path": "verify_result_audit.py",
+      "bytes": 73338,
+      "sha256": "1024563d3dbde7b2236d58b152a67a7b7c09e9b3145f8a3254196a4f05fd27c9"
+    }
+  ],
+  "audit_scope": {
+    "standard_library_only": true,
+    "strict_duplicate_key_rejection": true,
+    "finite_tree_validation": true,
+    "result_internal_seal_recomputed": true,
+    "authorization_internal_seal_recomputed": true,
+    "prior_source_and_runtime_pass_chain_recomputed": true,
+    "score_rows_verified": 225,
+    "embedded_profile_rows_verified": 2700,
+    "calibrated_rows_verified": 18,
+    "source_receipts_verified": 12,
+    "matched_control_cells_verified": 48,
+    "independent_evidence_check_count_before_audit_self_seals": 207847,
+    "result": "PASS"
+  },
+  "scientific_verdict": {
+    "recomputed_status": "EARLY_KILL_FAR_SHORT",
+    "recomputed_optimistic_m_s_bpw": 0.011386295964214366,
+    "recomputed_finite_best_joint_s_bpw": -0.0016032826638503746,
+    "finite_residual_codec_warranted": false,
+    "all_225_scored_rows_strictly_below_2x": true,
+    "maximum_logical_read_amplification": 1.015752828100462,
+    "maximum_page_read_amplification": 1.022286902319691
+  },
+  "access_ledger": {
+    "runpod_connections": 0,
+    "model_or_qwen_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "validation_data_files_opened": 0,
+    "production_result_files_opened": 1,
+    "production_authorization_files_opened": 1,
+    "numpy_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "production_runs": 0,
+    "external_data_network_calls": 0
+  },
+  "authorization": "AUDIT PASS ONLY; AUTHENTICATED BOUNDED-ORACLE EARLY KILL; NO FINITE CODEC, BROADER CONVERSE, PAYLOAD REPRODUCTION, COMPRESSION PROMOTION, OR NEW PRODUCTION AUTHORITY",
+  "audit_manifest_sha256": "03c8a3f24f37b89493c0773ebd63222494e13a432e75780a1dc6be65dfe33412"
+}

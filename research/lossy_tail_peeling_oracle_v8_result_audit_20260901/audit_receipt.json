@@ -1,0 +1,154 @@
+{
+  "schema": "lossy-tail-v8-independent-result-audit-receipt-v1",
+  "status": "PASS_V8_INDEPENDENT_RESULT_AUDIT",
+  "created_utc": "2026-09-01T15:34:49Z",
+  "audited_result": {
+    "copied_path": "result.json",
+    "remote_path": "/var/tmp/int2_lossy_tail_v8_production_output_6c5f5cd0/aux_oracle_v1/result.json",
+    "bytes": 3800771,
+    "file_sha256": "2f3ebe509fa3c78c2caf6084510bb14e9e2a2fef9cabbdb4b99c9b396a4bfdf9",
+    "internal_sha256": "83ef57d23fddc1ecc5443ecc5bd4da5a35497c8f5e7e5f9d6584095458943d1c",
+    "schema": "qwen_lossy_tail_peeling_oracle_result_v8"
+  },
+  "audited_authorization": {
+    "copied_path": "authorization.json",
+    "remote_path": "/var/tmp/int2_lossy_tail_v8_authorization_evidence_6c5f5cd0/authorization.json",
+    "bytes": 5960,
+    "file_sha256": "16bf378c1c6baa23eaff7054ca4c1b82fa06ec45bd89e152956d6a51c752d1ef",
+    "internal_sha256": "5dd327a2a4b15be84c57c8dc9821d9d4ade707e254083730ca6449d4a90207a9",
+    "nonce": "2a409e1714281378b841ca8c4c27d9478cb82e85dd68025e8fcb144e209e0565",
+    "action": "CREATE_NEW_RUN_ROOT_AND_RESULT_JSON"
+  },
+  "frozen_evidence_binding": {
+    "launch_manifest_file_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "protocol_file_sha256": "7cc2ce69587f6426e108a3970e3e61a5f467f0c984622b98989af251ce758e9b",
+    "repair_lock_file_sha256": "7bcaf3bca835f34bbbf3df39c08c2ebebf70890a4f2e9b5f9128ed71c0fea442",
+    "repair_lock_internal_sha256": "270746d99395b9c713500dad8b9c41d8c93aa58ee0d0e04adb815da44870fd32",
+    "runtime_contract_file_sha256": "c83f065122a05f05e5b4788ffc717b517e8c0310cb771dfc1324fc1115745f0a",
+    "source_bindings_file_sha256": "79edb94c8227e89debaf7eac5f4e181924d97300c9f7bc961a29151292e62a22",
+    "oracle_bootstrap_file_sha256": "b8574858ab90c528769cbdd3cd6d0cdf5cd62f58dfa2bf6e46ec8f465a2059b2",
+    "scientific_core_file_sha256": "be51a7f895af2cf1f2863b491affa4e9dbdcc2eb59798e239560bd1f85172c66",
+    "preflight_file_sha256": "f32618bcb33ffb3a3a319b0dbfb2c7e2df18e437cfeec478edec80bff3c2bca8",
+    "source_audit_manifest_file_sha256": "045eac28701decf60837be335cfdf316b3ab1650125bc2f3744f097c0e75bb87",
+    "source_audit_receipt_file_sha256": "6e2bc929904c7c05274a3c2bfc634707336d8646f85db2776ef024032988dde0",
+    "source_audit_receipt_internal_sha256": "b06d584ec0e5c8fd69d8f6b609f72631b69dc1feee0af467018e76607384f38b",
+    "runtime_receipt_file_sha256": "45862549f34530964c4f8f7a4134228ccf036a8de3534f23e63e07acde7985b3",
+    "runtime_receipt_internal_sha256": "de096442f734689ed981c0b3870a335255c9914d9d818b56aca1ac956add4d50",
+    "runtime_audit_manifest_file_sha256": "7d0fbd622fd061641a3c0b96f00d1c6d4bf9c4b5f785d664fd6c8268df2a4134",
+    "runtime_audit_receipt_file_sha256": "4c1f72a11beff243ac67460dacdc18b9eac7b69445bfebc15f38a0593b135321",
+    "runtime_audit_receipt_internal_sha256": "f19c47de87e1626b9bdf36e6d90e2a31e9a5006134d79095a113043a4e4e3ea2"
+  },
+  "independent_recomputation": {
+    "result_and_authorization_duplicate_json_keys": 0,
+    "result_nonfinite_numeric_values": 0,
+    "matrix_values": 1572864,
+    "panel_values": 18874368,
+    "profile_count": 61,
+    "rates": [
+      {
+        "requested_bpw": 2.15,
+        "capacity_bytes": 5072486,
+        "physical_bits": 40579888,
+        "physical_rate_bpw": 2.149999830457899
+      },
+      {
+        "requested_bpw": 2.3,
+        "capacity_bytes": 5426380,
+        "physical_bits": 43411040,
+        "physical_rate_bpw": 2.2999996609157987
+      },
+      {
+        "requested_bpw": 2.5,
+        "capacity_bytes": 5898240,
+        "physical_bits": 47185920,
+        "physical_rate_bpw": 2.5
+      }
+    ],
+    "score_rows_verified": 225,
+    "embedded_profile_rows_verified": 2700,
+    "retained_qwen_rows_verified": 18,
+    "retained_control_rows_verified": 72,
+    "calibrated_rows_verified": 18,
+    "source_receipts_verified": 12,
+    "control_moment_cells_verified": 48,
+    "panel_memory_release_rows_verified": 30,
+    "allocation_rd_equations_and_bit_closures_recomputed": true,
+    "rate_and_container_bit_closures_recomputed": true,
+    "logical_and_page_read_ledgers_recomputed": true,
+    "control_tolerances_and_calibration_recomputed": true,
+    "finite_decision_tree_recomputed_without_producer_decision": true,
+    "independent_evidence_check_count_before_audit_self_seals": 207847
+  },
+  "read_result": {
+    "strict_limit_exclusive": 2.0,
+    "all_225_scored_rows_below_limit": true,
+    "maximum_all_225_logical_read_amplification": 1.015752828100462,
+    "maximum_all_225_page_read_amplification": 1.022286902319691,
+    "maximum_retained_qwen_logical_read_amplification": 1.015752828100462,
+    "maximum_retained_qwen_page_read_amplification": 1.022286902319691,
+    "maximum_retained_control_logical_read_amplification": 1.015752828100462,
+    "maximum_retained_control_page_read_amplification": 1.022286902319691
+  },
+  "matched_control_result": {
+    "replicates": 4,
+    "moment_cells": 48,
+    "all_cells_within_tolerance": true,
+    "maximum_mean_normalized_mismatch": 0.0026034803392443696,
+    "maximum_variance_normalized_mismatch": 0.0025734907392643233
+  },
+  "recomputed_decision": {
+    "status": "EARLY_KILL_FAR_SHORT",
+    "target_F": 0.8,
+    "required_s_bpw": 0.16096404744368115,
+    "optimistic_kill_threshold_s_bpw": 0.14096404744368116,
+    "numeric_boundary_guard_s_bpw": 0.0001,
+    "optimistic_m_s_bpw": 0.011386295964214366,
+    "best_optimistic_rate_bpw": 2.5,
+    "best_optimistic_mode": "zero_tail_error",
+    "best_optimistic_geometry": "raw_adaptive",
+    "best_optimistic_absolute_s_bpw": 1.1074808038288768,
+    "best_optimistic_calibrated_s_bpw": 0.011386295964214366,
+    "finite_best_joint_s_bpw": -0.0016032826638503746,
+    "finite_best_absolute_s_bpw": -0.0016032826638503746,
+    "finite_best_calibrated_s_bpw": 5.103902803865745e-11,
+    "finite_residual_codec_warranted": false,
+    "early_kill": true
+  },
+  "verdict": {
+    "result_integrity": "PASS",
+    "authorization_and_prior_audit_chain": "PASS",
+    "rate_read_control_and_decision_arithmetic": "PASS",
+    "oracle_decision_authenticated": true,
+    "finite_codec_warranted": false,
+    "compression_claim_authorized": false,
+    "broader_architecture_converse_claim_authorized": false,
+    "result": "PASS"
+  },
+  "evidence_boundaries": {
+    "non_blocking_observation_count": 4,
+    "observations": [
+      "This audit did not open Qwen payloads; it authenticates all 12 documentary source receipts against the frozen bindings but does not independently regenerate source moments or candidate-ledger preimages.",
+      "The result contains winners and global diagnostics, not every uniform or coordinate-trial row; exhaustive-search coverage is bound to the independently source-audited frozen core and sealed execution, not independently replayed from this result alone.",
+      "The one-use capability record and live remote mount namespace are not retained in result.json; the audit verifies their sealed hashes, authorization bindings, descriptor identities, and internal consistency but cannot replay the transient channel or live inode checks.",
+      "No OS-level production file-open trace was emitted; the audit verifies source/runtime zero-access ledgers and the authenticated program's 12 expected source receipts, but makes no stronger kernel-observed access-count claim."
+    ],
+    "blocker_count_for_bounded_result_arithmetic_verdict": 0
+  },
+  "access_ledger": {
+    "runpod_connections": 0,
+    "model_or_qwen_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "validation_data_files_opened": 0,
+    "production_result_files_opened": 1,
+    "production_authorization_files_opened": 1,
+    "torch_imports": 0,
+    "numpy_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "production_runs": 0,
+    "external_data_network_calls": 0
+  },
+  "claim_boundary": "PASS authenticates the exact supplied lossy-tail-v8 bounded auxiliary-oracle result and its independently recomputed arithmetic. The result is an EARLY_KILL for this scalar-tail family, not a finite codec, broader compression result, architecture converse, payload reproduction, or new production authority.",
+  "audit_receipt_sha256": "74db815bf5f610b68d5b871ebad474aa2d59c0e44a18ccf220b857296d7f8100"
+}

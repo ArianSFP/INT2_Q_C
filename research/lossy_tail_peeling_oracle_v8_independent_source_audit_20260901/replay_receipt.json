@@ -1,0 +1,126 @@
+{
+  "schema": "lossy-tail-v8-independent-source-audit-replay-receipt-v1",
+  "status": "PASS_DOCUMENTED_SOURCE_ONLY_REPLAY",
+  "created_utc": "2026-09-01T14:54:41Z",
+  "audited_target": {
+    "package_path": "../lossy_tail_peeling_oracle_v8",
+    "artifact_manifest_file_sha256": "c71ff25df401188b0557e859e5b105ec274f25e6411ce7c24177fd348734c6b2",
+    "launch_manifest_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "repair_lock_file_sha256": "7bcaf3bca835f34bbbf3df39c08c2ebebf70890a4f2e9b5f9128ed71c0fea442",
+    "repair_lock_internal_sha256": "270746d99395b9c713500dad8b9c41d8c93aa58ee0d0e04adb815da44870fd32",
+    "package_member_count": 17,
+    "stage_member_count": 11
+  },
+  "linux_environment": {
+    "endpoint": "root@74.2.96.53:12079",
+    "scratch_root": "/workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g",
+    "kernel": "Linux 6.8.0-107-generic x86_64",
+    "python_implementation": "CPython",
+    "python_version": "3.12.3",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "numpy_version": "2.5.2",
+    "cupy_present_in_sys_modules_during_environment_probe": false,
+    "torch_present_in_sys_modules_during_environment_probe": false
+  },
+  "commands": [
+    {
+      "id": "producer_package_verifier",
+      "command": "cd /workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/research/lossy_tail_peeling_oracle_v8 && python3 -B verify_package.py",
+      "exit_code": 0,
+      "result": "PASS_PRODUCER_VERIFICATION_ONLY"
+    },
+    {
+      "id": "scientific_cpu_suite",
+      "command": "cd /workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/research/lossy_tail_peeling_oracle_v8 && /workspace/int2-cupy-venv/bin/python -B -I test_lossy_tail_core.py",
+      "exit_code": 0,
+      "tests_run": 10,
+      "tests_passed": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "id": "release_source_suite_linux",
+      "command": "cd /workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/research/lossy_tail_peeling_oracle_v8 && /workspace/int2-cupy-venv/bin/python -B -I test_release_security.py",
+      "exit_code": 0,
+      "tests_run": 23,
+      "tests_passed": 23,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "id": "linux_deferred_subset_explicit_replay",
+      "command": "cd /workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/research/lossy_tail_peeling_oracle_v8 && /workspace/int2-cupy-venv/bin/python -B -I test_release_security.py -v ReleaseSecurityTests.test_raw_link_parent_launcher_is_rejected ReleaseSecurityTests.test_direct_bootstrap_rejects_non_socket_capability_descriptor ReleaseSecurityTests.test_full_authorized_preflight_reaches_descriptor_stub_without_payload",
+      "exit_code": 0,
+      "tests_run": 3,
+      "tests_passed": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "id": "isolated_stage_replay",
+      "command": "python3 -B -I /workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/isolated_stage/audit_lock_entrypoint.py --manifest /workspace/INT2__compression/source_only_audits/lossy_v8_20260901T143028Z_n1g/isolated_stage/launch_manifest.json --manifest-sha256 6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+      "exit_code": 0,
+      "event": "V8_SOURCE_ONLY_STAGE_AND_LOCK_PASS",
+      "stage_member_count": 11,
+      "payload_paths_supplied": 0,
+      "payload_files_opened": 0,
+      "cupy_imported": false,
+      "cuda_initialized": false,
+      "runtime_receipts_opened": 0,
+      "production_authorizations_opened": 0,
+      "result_files_written": 0
+    }
+  ],
+  "test_totals": {
+    "unique_test_cases": 33,
+    "unique_test_cases_passed": 33,
+    "explicit_linux_subset_reexecutions": 3,
+    "total_test_case_executions": 36,
+    "total_passed_executions": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "tested_package_members": [
+    {"path": "ARTIFACT_HASHES.json", "bytes": 3731, "sha256": "c71ff25df401188b0557e859e5b105ec274f25e6411ce7c24177fd348734c6b2"},
+    {"path": "audit_lock_entrypoint.py", "bytes": 8900, "sha256": "d069656c7b53d170e4cc71aa24c049ede48ef6262b2e66f83bad1059c507f5cd"},
+    {"path": "authorization_contract.json", "bytes": 6473, "sha256": "f97c11a5254deec2c140bb894c32d5f455af26ae8344b995569deb87c516f6eb"},
+    {"path": "CPU_TEST_RECEIPT.json", "bytes": 5241, "sha256": "eeec972aaab17e7cd59ac506050f53519972dc968c2d7a6e38257101e21f1dc9"},
+    {"path": "launch_manifest.json", "bytes": 3405, "sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94"},
+    {"path": "lossy_tail_core.py", "bytes": 112900, "sha256": "be51a7f895af2cf1f2863b491affa4e9dbdcc2eb59798e239560bd1f85172c66"},
+    {"path": "lossy_tail_oracle.py", "bytes": 18264, "sha256": "b8574858ab90c528769cbdd3cd6d0cdf5cd62f58dfa2bf6e46ec8f465a2059b2"},
+    {"path": "preflight_launch.py", "bytes": 34222, "sha256": "f32618bcb33ffb3a3a319b0dbfb2c7e2df18e437cfeec478edec80bff3c2bca8"},
+    {"path": "protocol_lock.json", "bytes": 12045, "sha256": "7cc2ce69587f6426e108a3970e3e61a5f467f0c984622b98989af251ce758e9b"},
+    {"path": "README.md", "bytes": 8326, "sha256": "ff1aff3b7850ffbf2a8f1f541b1bf182aff79cde2a700e1a2ef88147fd4806cc"},
+    {"path": "repair_lock.json", "bytes": 6131, "sha256": "7bcaf3bca835f34bbbf3df39c08c2ebebf70890a4f2e9b5f9128ed71c0fea442"},
+    {"path": "runtime_calibrate.py", "bytes": 13730, "sha256": "f454f69ee802a52b2797576fd426558a456d4398052aeb2cbeb8e7d941140a47"},
+    {"path": "runtime_contract.json", "bytes": 5264, "sha256": "c83f065122a05f05e5b4788ffc717b517e8c0310cb771dfc1324fc1115745f0a"},
+    {"path": "source_bindings.json", "bytes": 2308, "sha256": "79edb94c8227e89debaf7eac5f4e181924d97300c9f7bc961a29151292e62a22"},
+    {"path": "test_lossy_tail_core.py", "bytes": 11347, "sha256": "fe24db0b9037b66d40f5f3502ad1e8f2a7280199294041ace53844a16727aefd"},
+    {"path": "test_release_security.py", "bytes": 38620, "sha256": "317629582ca3f6d126a87f1e4001463a0c97c1e1194f0c0e0fca190f4d67c6ae"},
+    {"path": "verify_package.py", "bytes": 19473, "sha256": "dc590714895a82fc01090ed40af7cb6c06c09cea4d6571f19c8cd0f47ad87072"}
+  ],
+  "producer_bytes_unchanged_after_replay": true,
+  "access_ledger": {
+    "model_or_qwen_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "validation_data_files_opened": 0,
+    "torch_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "production_outputs_created": 0,
+    "external_data_network_calls": 0
+  },
+  "audit_transport": {
+    "provided_runpod_used": true,
+    "transport": "SSH/SCP source-only orchestration",
+    "external_data_sources_contacted": 0
+  },
+  "replay_receipt_sha256": "fa0fdeba885539f2fb476850ce94c62ec911af8df480f127f7d3bbf90c2574d3"
+}

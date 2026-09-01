@@ -1,0 +1,111 @@
+{
+  "schema": "lossy-tail-v8-source-only-cpu-test-receipt-v1",
+  "status": "PASS_PRODUCER_CPU_AND_ADVERSARIAL_SOURCE_TESTS_LINUX_ONLY_TESTS_DEFERRED",
+  "created_utc": "2026-09-01T16:35:00Z",
+  "execution": {
+    "host": "Windows source-only workspace",
+    "python": "CPython 3.12.13",
+    "numpy": "2.3.5",
+    "commands": [
+      "python.exe -B -I research/lossy_tail_peeling_oracle_v8/test_lossy_tail_core.py",
+      "python.exe -B -I research/lossy_tail_peeling_oracle_v8/test_release_security.py"
+    ],
+    "scientific_suite_result": "Ran 10 tests; OK",
+    "release_suite_result": "Ran 23 tests; OK (skipped=3)",
+    "linux_only_deferred_tests": [
+      "raw symlink-parent launcher adversary unavailable without Windows symlink privilege",
+      "inherited POSIX non-socket capability descriptor adversary",
+      "full Linux SO_PEERCRED/SOCK_SEQPACKET/sealed-memfd source-free stub path"
+    ],
+    "defer_reason": "The frozen build order forbids network and Linux runtime access; deferred tests must be rerun by the fresh independent Linux source audit before calibration authority."
+  },
+  "tests_run": 33,
+  "tests_passed": 30,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 3,
+  "suites": [
+    {
+      "path": "test_lossy_tail_core.py",
+      "tests": 10,
+      "passed": 10,
+      "coverage": [
+        "target, kill, numeric-boundary constants and self-test",
+        "post-FP32 moment tolerances and normalized reporting",
+        "EARLY_KILL, near-boundary HOLD, optimistic survivor, and finite warranted states",
+        "numeric-boundary HOLD cannot kill or promote",
+        "finite joint cannot exceed optimistic envelope",
+        "rank-one live support-XKLT component pays angle",
+        "duplicate JSON keys reject",
+        "2.25x global winner cannot erase 1.25x eligible row; all eligible participation ledgers close",
+        "NaN, positive infinity, and negative infinity reject at individual and aggregate boundaries",
+        "positive-infinity scored candidate rejects before ranking"
+      ]
+    },
+    {
+      "path": "test_release_security.py",
+      "tests": 23,
+      "passed": 20,
+      "skipped": 3,
+      "coverage": [
+        "exact isolated eleven-member stage and lock audit",
+        "optimized execution, additions, duplicate rows, raw alias, and relative entry rejection",
+        "runtime/preflight exact grammar and CUDA_VISIBLE_DEVICES pre-import gates",
+        "bidirectional ancestry rejection",
+        "direct/forged core and bootstrap entry rejection before NumPy",
+        "stdlib bootstrap closure and no assert statements",
+        "runtime affine consumer deletion mutation panel",
+        "sealed memfd provenance and cmdline-reintroduction mutation panel",
+        "frozen audit PASS schemas/statuses and required_status mutation panel",
+        "descriptor-relative output anchor/O_EXCL/O_NOFOLLOW/fsync mutation panel",
+        "complete six-field 48-cell/five-adversary memory shape mutation panel",
+        "build_panel masks/x/words/synchronization/pre-free/post-free mutation panel"
+      ]
+    }
+  ],
+  "stage_identities": {
+    "launch_manifest_sha256": "6c5f5cd05973dbc0bf16cd9ea39951e690b15e15e13e969d2a33823117c2aa94",
+    "repair_lock_file_sha256": "7bcaf3bca835f34bbbf3df39c08c2ebebf70890a4f2e9b5f9128ed71c0fea442",
+    "repair_lock_internal_sha256": "270746d99395b9c713500dad8b9c41d8c93aa58ee0d0e04adb815da44870fd32",
+    "protocol_sha256": "7cc2ce69587f6426e108a3970e3e61a5f467f0c984622b98989af251ce758e9b",
+    "runtime_contract_sha256": "c83f065122a05f05e5b4788ffc717b517e8c0310cb771dfc1324fc1115745f0a",
+    "authorization_contract_sha256": "f97c11a5254deec2c140bb894c32d5f455af26ae8344b995569deb87c516f6eb",
+    "oracle_bootstrap_sha256": "b8574858ab90c528769cbdd3cd6d0cdf5cd62f58dfa2bf6e46ec8f465a2059b2",
+    "scientific_core_sha256": "be51a7f895af2cf1f2863b491affa4e9dbdcc2eb59798e239560bd1f85172c66",
+    "preflight_sha256": "f32618bcb33ffb3a3a319b0dbfb2c7e2df18e437cfeec478edec80bff3c2bca8",
+    "audit_entrypoint_sha256": "d069656c7b53d170e4cc71aa24c049ede48ef6262b2e66f83bad1059c507f5cd",
+    "runtime_calibrate_sha256": "f454f69ee802a52b2797576fd426558a456d4398052aeb2cbeb8e7d941140a47"
+  },
+  "isolated_audit": {
+    "event": "V8_SOURCE_ONLY_STAGE_AND_LOCK_PASS",
+    "stage_member_count": 11,
+    "payload_paths_supplied": 0,
+    "payload_files_opened": 0,
+    "runtime_receipts_opened": 0,
+    "production_authorizations_opened": 0,
+    "cupy_imported": false,
+    "cuda_initialized": false,
+    "result_files_written": 0
+  },
+  "access_ledger": {
+    "qwen_or_model_paths_traversed": 0,
+    "model_payload_files_opened": 0,
+    "production_result_files_opened": 0,
+    "torch_imports": 0,
+    "cupy_imports": 0,
+    "cuda_initializations": 0,
+    "gpu_jobs": 0,
+    "runtime_calibrations": 0,
+    "production_runs": 0,
+    "production_outputs_created": 0,
+    "source_free_capability_stub_boundaries_reached": 0,
+    "network_calls": 0
+  },
+  "authorization": {
+    "fresh_independent_source_audit_required": true,
+    "runtime_calibration_authorized": false,
+    "production_authorization_exists": false,
+    "production_run_authorized": false
+  },
+  "cpu_test_receipt_sha256": "52b16e76370f55e0932da0e5aa9e55577e382b4c05daabadda460e152e47ab53"
+}
