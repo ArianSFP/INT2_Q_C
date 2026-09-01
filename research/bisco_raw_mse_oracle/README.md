@@ -1,8 +1,9 @@
 # BiSCo shallow raw-MSE oracle
 
-Status: **implemented, preregistered, CPU-audited, and ready for a CuPy
-launch when the shared GPU is released.**  No pinned Qwen matrix has been
-opened by this branch and no result is claimed yet.
+Status: **executed on CuPy, independently replayed from serialized state, and
+hard-killed at the preregistered update-512 gate.**  No pinned Qwen matrix was
+opened by this branch.  The sealed outcome is a negative result for this exact
+shallow cell, not a negative result for nonlinear quantization in general.
 
 This is the cheapest favorable falsification test for the nonlinear implicit
 binary codebook described in the BiSCo red-team assessment.  It is deliberately
@@ -30,6 +31,49 @@ and the architectural/rate argument is
 [`BISCO_BSQ_ASSESSMENT.md`](../breakthrough_redteam/BISCO_BSQ_ASSESSMENT.md).
 `launch_protocol.json` freezes every remaining implementation choice before an
 auxiliary result exists.
+
+## Sealed run_1 outcome
+
+The frozen CuPy run stopped at update 512 with
+
+| Statistic | Published FP32-reduction result | Independent FP64 replay |
+|---|---:|---:|
+| `D_Qwen` | 0.11020813815423404 | 0.11020813758494276 |
+| `D_Gaussian` | 0.10961316220157559 | 0.10961316325045290 |
+| `s_match` | -0.003904857950836688 | -0.003904847322141395 |
+
+The published `upper_s_match_2se` is `-0.00133385222544977`.  Together
+with the update-256 value, it gives a recent improvement of only
+`0.0018524339032029444`; both frozen early-stop inequalities hold.  The exact
+decision is therefore `HARD_KILL_D16_SHALLOW_BEFORE_PINNED`.
+
+The state-backed replay regenerated all eight untouched Qwen validation
+matrices and all eight filename-seeded matched-Gaussian controls from the 32
+frozen auxiliary files.  Its independently written evaluator reproduced every
+published FP32 matrix SSE exactly.  Replacing the published FP32 reduction
+with FP64 accumulation changed any matrix SSE by at most
+`3.3301501363830925e-08` relative; independently blocked FP64 source energies
+differed by at most `1.2299459866810625e-15` relative.
+
+The replay also proves byte-for-byte that each 18,048-byte FP16 two-role
+decoder is the IEEE-binary16 rounding of the decoder fields in its 72,224-byte
+FP32 training state.  It parses those states from a separately defined closed
+schema and fail-closes on extra, missing, reordered, or inconsistent
+history/decision fields.
+
+Frozen bindings:
+
+- result SHA-256: `5904e3887e69cf47ee4a882aeaacceb27823504c1e23eeff6adb4b3360874d92`;
+- replay receipt SHA-256: `f75fc33b9b67cb3b711e2f54a95994757ed062364d980ad9849458e69feb76e7`;
+- canonical unsigned receipt seal: `4ca302c0232640efa34b072baec50c74ec295046f53c57e65973b7212345c04b`;
+- independent replay implementation SHA-256:
+  `0a3c38fab4cbac640b1731e66b72e94fefe370b015a9cbe99d19a585114d0bd1`.
+
+See [`run_1/independent_replay_receipt.json`](run_1/independent_replay_receipt.json)
+for per-matrix code/reconstruction hashes, FP64 SSEs, normalization checks,
+comparison errors, backend identity, input bindings, and the canonical seal.
+The concise result-specific audit narrative is
+[`run_1/INDEPENDENT_REPLAY.md`](run_1/INDEPENDENT_REPLAY.md).
 
 ## Fixed codec
 
@@ -148,7 +192,7 @@ keeps `pinned_panel.opened=false`.  A survival would require a new,
 independently frozen gate-role training source and protocol before any target
 access.
 
-## RunPod launch (only after the GPU is released)
+## Executed RunPod launch
 
 From `/workspace/INT2__compression`:
 
@@ -174,13 +218,15 @@ qwen_training_state.fp32.bin
 gaussian_training_state.fp32.bin
 qwen_aux_up_down_decoder.fp16.bin
 gaussian_aux_up_down_decoder.fp16.bin
+verification_receipt.json
+independent_replay_receipt.json
 ```
 
 The JSON includes per-matrix sufficient statistics, per-expert folds, all
 checkpoint curves, exact source and protocol hashes, paired initialization
 hashes, both physical ledgers, model schemas, and artifact hashes.
 
-## Independent verification
+## Arithmetic and binding verification
 
 ```bash
 /workspace/int2-cupy-venv/bin/python \
@@ -196,19 +242,63 @@ recomputes both ledgers, every pooled/fold statistic, Gaussian and absolute
 sizes/hashes, and (when `--aux-dir` is given) all 32 auxiliary source hashes.
 It rejects CPU-labelled results and any result claiming pinned access.
 
-## CPU preflight
+## Independent serialized-state replay
+
+`independent_replay.py` shares no evaluator code with the training oracle and
+does not import it.  A fresh RunPod replay is:
+
+```bash
+cd /workspace/INT2__compression/INT2_Q_C
+/workspace/int2-cupy-venv/bin/python \
+  research/bisco_raw_mse_oracle/independent_replay.py \
+  --result /workspace/INT2__compression/bisco_raw_mse_d16_run_1/bisco_raw_mse_result.json \
+  --aux-dir /workspace/INT2__compression/qwen_weight_cache/rd_structure_diag_cross_expert \
+  --output /workspace/INT2__compression/bisco_raw_mse_d16_run_1/independent_replay_receipt_fresh.json \
+  --backend cupy
+```
+
+The replay performs four distinct checks:
+
+1. It requires the exact frozen result and artifact hashes, parses both FP32
+   states from its own hard-coded shapes/offsets, and exactly links the FP16
+   decoder byte streams to rounded state fields.
+2. It checks the complete field sets and exactly recomputes every derived
+   statistic at updates 256 and 512, the final-history identity, the complete
+   early-kill object, and the top-level decision.
+3. It rehashes the exact 32-file auxiliary set, independently recomputes
+   training-role moments, reconstructs held-out Qwen normalization and seeded
+   Gaussian controls, and evaluates stored update-512 states with CuPy.
+4. It accumulates scaled reconstruction errors in FP64, also emulates the
+   original FP32 reduction, compares both paths under recorded justified
+   tolerances, and seals all evidence with canonical JSON SHA-256.
+
+The packaged receipt can be checked without a GPU or source cache.  This
+revalidates its seal, current replay-script hash, local result/artifact hashes,
+decoder/state equality, exact history/decision, every receipt comparison, and
+all per-expert/pooled replay arithmetic:
+
+```bash
+python research/bisco_raw_mse_oracle/independent_replay.py \
+  --verify-receipt research/bisco_raw_mse_oracle/run_1/independent_replay_receipt.json
+```
+
+## Tests
 
 No CUDA context is created by the tests:
 
 ```bash
-cd INT2_Q_C/research/bisco_raw_mse_oracle
-/workspace/int2-cupy-venv/bin/python -m unittest -v test_bisco_raw_mse_oracle.py
+cd /workspace/INT2__compression/INT2_Q_C/research/bisco_raw_mse_oracle
+BISCO_RUN_DIR=/workspace/INT2__compression/bisco_raw_mse_d16_run_1 \
+  /workspace/int2-cupy-venv/bin/python -m unittest -v \
+  test_bisco_raw_mse_oracle.py test_independent_replay.py
 ```
 
-The suite covers protocol bindings, exact independent ledgers, the strict file
+The combined suites cover protocol bindings, exact independent ledgers, the strict file
 firewall, charged FP16 normalization, paired initialization, a numerical
 gradient check, monotone bit flips, whole-expert aggregation, deterministic
-Gaussian generation, and both sides of the early-stop boundary.
+Gaussian generation, both sides of the early-stop boundary, closed state
+schemas, decoder/state byte equality, history and decision exactness, BF16
+orientation, receipt input rebinding, and receipt tampering.
 
 ## Claim boundary
 

@@ -7,10 +7,12 @@ The only scalable logical loophole is still a compact shared learned prior,
 tested on whole held-out experts against an identically trained
 moment-matched Gaussian control. Published neural codecs do not supply the
 needed raw-MSE evidence, and the two stricter structural screens added here
-both fail by wide margins.  A later primary-source lead, BiSCo-LLM, is a
-genuinely untested implicit nonlinear codebook but still only merits a bounded
-oracle, not a production run; see
-[`BISCO_BSQ_ASSESSMENT.md`](BISCO_BSQ_ASSESSMENT.md).
+both fail by wide margins. A later primary-source lead, BiSCo-LLM, motivated a
+bounded shallow implicit-codebook gate; that gate has now been executed and
+independently replayed, with a slightly negative Qwen-versus-Gaussian
+advantage. See [`BISCO_BSQ_ASSESSMENT.md`](BISCO_BSQ_ASSESSMENT.md) for the
+pre-run assessment and [`../bisco_raw_mse_oracle/`](../bisco_raw_mse_oracle/)
+for the sealed result.
 
 The exact target is
 
@@ -71,8 +73,16 @@ favorable oracle and physical/read ledgers for `d=16/32/64` are frozen in
 shallow FP16 role/stage decoders amortized over only 128 experts projects
 external cold reads of `1.020x`, `1.080x`, and `1.315x`; the required matched
 Qwen-vs-Gaussian advantages are respectively `0.16135`, `0.16240`, and
-`0.16657 bpw`, before any finite-dimensional Gaussian gap.  No GPU run was
-started while the sealed run was active.
+`0.16657 bpw`, before any finite-dimensional Gaussian gap.
+
+The subsequent frozen `d=16, h=64, 18+18` CuPy gate stopped at update 512.
+Independent state-backed FP64 replay measured
+`D_Qwen=0.11020813758494276`, `D_Gaussian=0.1096131632504529`, and
+`s_match=-0.0039048473221413946`; every whole-expert fold was negative. The
+production ledger remained favorable at `2.2503823174 bpw` and `1.0204278591x`
+cold reads, but the source-specific mechanism was absent. This hard-kills the
+frozen shallow cell before pinned-panel access, not arbitrary nonlinear
+codebooks.
 
 ## 2. NanoQuant-style overcomplete binary factorization
 

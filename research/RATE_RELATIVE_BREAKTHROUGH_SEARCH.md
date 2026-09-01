@@ -95,6 +95,7 @@ operational reconstructions.
 | 2-D spectral scale fields | impossible free IPF `F=0.94972524`; best charged `F=0.97829416` | all candidates below `1.04528x` | Kill |
 | Nested role + polar composite | best charged `F=0.93639762`, `s=0.04740341` | `1.00278x` | Kill; normal-field predictor isolated |
 | Polar normal-field predictors | even exact continuous coefficients at an impossible one bit each give `F=0.86210289` | budget-fitting fields remain near `1.003x` | Kill |
+| BiSCo shallow nonlinear binary decoder | independent FP64 `s_match=-0.00390485`; `D_Qwen=0.11020814` at the 512-update gate | analytic production ledger `1.020428x` at `2.250382 bpw` | Hard kill before pinned panel |
 
 ### Direct empirical rate-distortion oracle
 
@@ -236,11 +237,16 @@ only about `s=0.0496` and falls to `s=0.04445` at its 2.5-bpw ledger; even
 perfect Gaussian shaping would then be only 5.98% below the reference.
 
 BiSCo's shared nonlinear binary-spherical decoder is not strictly contained
-by these additive/linear screens, but its paper publishes recovered model
-quality rather than the required codec-only raw MSE and omits a reproducible
-decoder-byte ledger. A shallow held-out, matched-Gaussian gate is therefore
-preregistered as a bounded remaining experiment, not counted as evidence of a
-survivor.
+by these additive/linear screens. The preregistered shallow `d=16, h=64,
+18+18` CuPy gate nevertheless stopped at update 512: independent state-backed
+FP64 replay measured `D_Qwen=0.1102081376`, `D_Gaussian=0.1096131633`, and
+`s_match=-0.0039048473`. All four untouched whole-expert folds were negative.
+The physical deployment ledger was favorable (`2.250382 bpw`, `1.020428x`
+cold reads), but locality cannot rescue a codec whose matched source advantage
+is negative. The sealed run, serialized states, independent evaluator, and
+per-matrix code/reconstruction hashes are retained in
+[`bisco_raw_mse_oracle/`](bisco_raw_mse_oracle/). This kills only the frozen
+shallow cell; the pinned panel was never opened by that branch.
 
 ### Long-range scale fields and a genuinely nested composite
 

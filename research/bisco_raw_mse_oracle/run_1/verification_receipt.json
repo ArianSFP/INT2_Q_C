@@ -1,0 +1,51 @@
+{
+  "verified": true,
+  "result_sha256": "5904e3887e69cf47ee4a882aeaacceb27823504c1e23eeff6adb4b3360874d92",
+  "decision": "HARD_KILL_D16_SHALLOW_BEFORE_PINNED",
+  "backend": {
+    "name": "cupy",
+    "cupy_version": "14.2.0",
+    "device": 0
+  },
+  "final": {
+    "D_Qwen": 0.11020813815423404,
+    "D_Gaussian": 0.10961316220157559,
+    "s_match": -0.003904857950836688,
+    "upper_s_match_2se": -0.00133385222544977
+  },
+  "physical_ledger": {
+    "production_128": {
+      "decoder_parameters": 13536,
+      "decoder_bytes": 27072,
+      "header_bytes": 256,
+      "local_scale_bytes_per_expert": 12,
+      "code_bits_per_expert": 10616832,
+      "code_bytes_per_expert": 1327104,
+      "attributed_physical_bytes_per_expert": 1327329.5,
+      "cold_bytes_per_expert": 1354444,
+      "physical_bpw": 2.250382317437066,
+      "side_bpw": 0.0003823174370660709,
+      "cold_read_amplification": 1.020427859096027,
+      "minimum_matched_s_if_gaussian_code_is_ideal": 0.16134636488074722,
+      "target_relative_mse": 0.035336605535138337
+    },
+    "self_contained_panel_6": {
+      "decoder_parameters": 13536,
+      "decoder_bytes": 27072,
+      "header_bytes": 256,
+      "local_scale_bytes_per_expert": 12,
+      "code_bits_per_expert": 10616832,
+      "code_bytes_per_expert": 1327104,
+      "attributed_physical_bytes_per_expert": 1331670.6666666667,
+      "cold_bytes_per_expert": 1354444,
+      "physical_bpw": 2.2577424225983798,
+      "side_bpw": 0.007742422598379761,
+      "cold_read_amplification": 1.0171013253527148,
+      "minimum_matched_s_if_gaussian_code_is_ideal": 0.1687064700420609,
+      "target_relative_mse": 0.03497788967717064
+    }
+  },
+  "artifacts_verified": 4,
+  "auxiliary_sources_rehashed": 32,
+  "pinned_panel_opened": false
+}
