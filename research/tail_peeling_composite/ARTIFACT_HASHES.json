@@ -1,0 +1,58 @@
+{
+  "schema": "qwen-sparse-tail-peeling-artifact-hashes-v1",
+  "artifacts": [
+    {
+      "path": "__init__.py",
+      "bytes": 52,
+      "sha256": "cccc3ac32a33d962083aa748fca5ad831fea3150e1a075acf3758bf4690c30f7"
+    },
+    {
+      "path": "tail_peeling_composite.py",
+      "bytes": 67752,
+      "sha256": "f8c211520ba78a1e96dedbd6b7225a25a21928254f9578ba38835be729825f4f"
+    },
+    {
+      "path": "verify_tail_peeling_result.py",
+      "bytes": 17477,
+      "sha256": "e696469078a9eda01291a75ecae9ec470f60816df93026adbe787366ea47db9a"
+    },
+    {
+      "path": "test_tail_peeling_composite.py",
+      "bytes": 7813,
+      "sha256": "16ba37ce1aaa735b9033192a0797a4ce01cf6574335068342727c185a43ba216"
+    },
+    {
+      "path": "protocol_lock.json",
+      "bytes": 2541,
+      "sha256": "30145dea08b24c97f2025e2c04c59d414347c50e089d5bc375d5066b5a052f64"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5363,
+      "sha256": "b4784865f10fc0351b27a26b49539a257dcc55cf347b98d4d94b767b4fa3d384"
+    },
+    {
+      "path": "COVERAGE_AUDIT.md",
+      "bytes": 4675,
+      "sha256": "4e0f24987533de8f10e9a66423896af3a74dcea0071011fa5ea03b0236c2476b"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 5553,
+      "sha256": "33515466436518fa9afafe1af87125374adfcdc9a708f39eea39d0878bbf49ed"
+    },
+    {
+      "path": "pilot_qwen_numpy_dual/result.json",
+      "bytes": 726380,
+      "sha256": "f2c3c1006d274d9025c1a61e3da9549bf22cd61bc333457c8198a34c538e2cf2"
+    },
+    {
+      "path": "pilot_qwen_numpy_dual/verification_receipt.json",
+      "bytes": 998,
+      "sha256": "51e27bde4529d1cc76fc82fddd9386d51f9743d3038889eaaa2913b52ab0801f"
+    }
+  ],
+  "result_lock_sha256": "f7d38fb4f67b77c5af577d8123286e4b26ded8b7f387f05a91f8b37faa85f547",
+  "source_lock_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+  "note": "This inventory intentionally omits itself to avoid a recursive digest."
+}

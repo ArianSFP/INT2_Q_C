@@ -1,0 +1,65 @@
+{
+  "schema": "qwen-sparse-tail-peeling-protocol-v1",
+  "frozen_before_qwen_execution": true,
+  "physical_rates_bpw": [
+    2.15,
+    2.3,
+    2.5
+  ],
+  "tail_counts": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    24,
+    48,
+    96,
+    192,
+    384,
+    768,
+    1536,
+    3072,
+    6144,
+    12288,
+    24576,
+    49152,
+    98304,
+    196608
+  ],
+  "tail_selection": "stable per-matrix top absolute BF16 value; canonical flat ordinal breaks ties",
+  "charged_tail_stream": {
+    "support": "fixed-length combinatorial number system with ceil(log2 C(N,k)) bits",
+    "values": "minimum exact length among literal BF16, canonical word Huffman, magnitude/sign Huffman, and sign/exponent/mantissa Huffman",
+    "matrix_descriptor_bits": 128,
+    "residual_directory_bits_per_live_waterfill_component": 64,
+    "value_mode_bits_inside_descriptor": 2
+  },
+  "residual_geometries": [
+    "raw robust bulk",
+    "support-pattern-conditioned expert-local Gate/Up/Down XKLT robust bulk"
+  ],
+  "residual_channel": "procedural orthogonal RHT followed by an ideal Gaussian polar-lattice test channel",
+  "allocation": "one panel-wide reverse waterfill closed to exact integer payload bits",
+  "matched_controls": {
+    "default_replicates": 4,
+    "rng": "PCG64DXSM",
+    "domain": "tail-peeling-gaussian-v1",
+    "construction": "normal samples rounded RNE to BF16 symbols and conceptually rescaled to exact per-matrix source energy"
+  },
+  "early_kill": {
+    "absolute_target_F": 0.8,
+    "required_s_bpw": 0.16096404744368115,
+    "promotion_rule": "only a charged ideal-RD F <= 0.8 warrants a finite CuPy polar-lattice run; a hard kill additionally requires a complete-grid Lagrange-dual lower bound F > 0.8 for every rate and both residual geometries",
+    "global_certificate": "enumerate all 20^3 expert-local tail triples, minimize D+mu(side+payload) independently for all six experts, and maximize the resulting weak-duality lower bound over positive mu",
+    "stronger_diagnostic": "also report a mask-charged envelope with exact tail values and XKLT basis revealed for free"
+  },
+  "deployment_gates": {
+    "maximum_physical_bpw": 2.5,
+    "maximum_cold_expert_read_amplification": 2.0,
+    "target_formula": "MSE <= 0.8 * 2^(-2R_actual)"
+  },
+  "pinned_source_lock_sha256": "bf39877a4ac161f20b22fae9400f21cb604a0c5b69df666c54f00ec2e7e7cf23",
+  "claim_boundary": "This protocol gates one exact-lossless-tail architecture. It is not a converse for lossy tail quantization, learned semantic support, or arbitrary nonlinear codecs."
+}

@@ -1,0 +1,11 @@
+{
+  "best_F": 0.9981959259638405,
+  "best_cold_read_amplification": 1.1322916666666667,
+  "candidate_rows_verified": 480,
+  "decision": "HARD_KILL_SHARED_LINEAR_SUBSPACE",
+  "internal_result_seal": "80198ed55c193c71b3a3e0054aa4eb54dc7f70371ea36c03d951a09600a6af14",
+  "result_sha256": "6a756c26e05926a2468bcc2a20086d7efbb2273e0f078a9294c5c002f2f7734f",
+  "schema": "qwen_aux_shared_subspace_verification_v1",
+  "sources_verified": 32,
+  "status": "PASS"
+}

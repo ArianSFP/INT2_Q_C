@@ -96,6 +96,11 @@ operational reconstructions.
 | Nested role + polar composite | best charged `F=0.93639762`, `s=0.04740341` | `1.00278x` | Kill; normal-field predictor isolated |
 | Polar normal-field predictors | even exact continuous coefficients at an impossible one bit each give `F=0.86210289` | budget-fitting fields remain near `1.003x` | Kill |
 | BiSCo shallow nonlinear binary decoder | independent FP64 `s_match=-0.00390485`; `D_Qwen=0.11020814` at the 512-update gate | analytic production ledger `1.020428x` at `2.250382 bpw` | Hard kill before pinned panel |
+| Decoder-visible shared input/output subspaces | best held-out ideal row `F=0.99819593`, `s=0.00130254` | `1.132292x` cold | Hard kill before pinned panel |
+| Bounded HF initialization anchors | corrected validation capture `-0.00076870`; optimistic `+2 SE` upper `0.00138069` vs `0.14580062` required | `1.169491x` cold | Hard kill for the sealed 56-key Tier-A family |
+| Haar/Stiefel orientation entropy | charged optimistic `s=-0.00012473`; needed nested `s=0.11356063` | `1.005556x` page-exact | Hard kill before pinned panel |
+| Exact charged sparse-tail peeling | complete `20^18`-grid certificate `F>=0.9798226703`; best exhibited `F=0.9798226742` | `1.039217x` cold | Hard kill for exact lossless tails |
+| Dual model-axis polar oracle | raw `s=0.10875534`, but Gaussian/MP null `s~=0.08955`; generous source-specific upper `0.01928120` | about `1.00034x` | Hard kill; raw gain is mostly Jacobian leakage |
 
 ### Direct empirical rate-distortion oracle
 
@@ -280,6 +285,52 @@ source-specific coefficient exact reconstruction for an impossible one-bit
 ledger produces only `F=0.86210289`, above the target. The best genuinely
 budget-fitting FP16 candidate is indistinguishable from the original charged
 polar oracle. No GPU integration is justified.
+
+## Auxiliary breakthrough gates after the locality checkpoint
+
+The [shared-subspace gate](shared_subspace_gate/README.md) implements the raw-
+MSE analogue of a layer-shared expert input/output basis. It fits on twelve
+Layer-15 experts and scores four untouched experts, granting exact basis
+arithmetic after only an FP16-sized physical charge. Across 480 rate rows, the
+best role-specific right-rank-16 candidate reaches only `F=0.99819592596`.
+This separates functional activation-guided gains from the much stricter raw
+source-coordinate objective.
+
+The [Tier-A initialization-anchor gate](initialization_anchor_oracle/README.md)
+tests 56 source-decodable Hugging Face v4.51 initializer streams: four stream
+scopes, seven common seeds, and two dtype paths. The winner has negative
+untouched-validation capture after the predeclared chance correction. Its
+optimistic `+2 SE` upper bound, `0.00138069335`, is over two orders of
+magnitude below the `0.14580061598` capture needed even when nested with the
+ideal composite. This rejects only that finite family; production seed,
+framework, layout, and offsets are not public.
+
+The [Haar-manifold entropy gate](haar_manifold_entropy/README.md) asks whether
+Qwen Stiefel orientations are compressibly non-Haar under a cross-fitted
+diagonal angular-central-Gaussian model. A small likelihood signal is present,
+but its charged optimistic rate advantage is negative. The model needs
+`0.11356063457 bpw` to close the composite gap and supplies less than zero
+after its 512-byte table.
+
+The [sparse-tail composite](tail_peeling_composite/RESULT.md) losslessly sends
+stable top-absolute BF16 values with exact enumerative supports and the best of
+four self-describing value codes, then rebuilds raw and support-pattern-XKLT
+residuals and jointly waterfills them. A Lagrange dual enumerates all 8,000
+three-role choices within each expert and certifies every one of the full
+`20^18` panel configurations. Its weakest lower bound is
+`F=0.979822670284832`; the best constructed row differs by only `3.93e-9`.
+The illegal free-value envelope passes, showing that transmitting the tail
+values—not support locality—is the bottleneck.
+
+Finally, the [dual-polar red team](dual_polar_oracle/README.md) tests the tall
+model-axis stack `[Gate; Up; Down.T]`. Its initial continuous-coordinate score
+`F=0.86004813447` is not operational: three matched iid-Gaussian replicas and
+an independent Marchenko--Pastur null reproduce 82.34% of its apparent rate
+advantage. The missing polar-coordinate metric/Jacobian is therefore exposed
+directly. After the frozen control subtraction, the most favourable new
+Qwen-specific opportunity is `0.01928120447 bpw`; even adding the entire
+previous composite with an invalidly generous zero-overlap assumption reaches
+only `0.06668461734 bpw`, versus `0.16096404744` required.
 
 ## Relationship to recent PTQ architectures
 

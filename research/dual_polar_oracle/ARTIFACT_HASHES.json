@@ -1,0 +1,47 @@
+{
+  "schema": "qwen_dual_polar_oracle_artifact_hashes_v1",
+  "decision": "HARD_KILL_DUAL_POLAR_AND_NAIVE_NESTING",
+  "artifacts": {
+    "MATCHED_GAUSSIAN_PROTOCOL.md": {
+      "bytes": 3145,
+      "sha256": "63750d357c40d6e673639e6d6a7569e928027b9fb24337c5dba55a6bfaba70ee"
+    },
+    "PROTOCOL.md": {
+      "bytes": 1455,
+      "sha256": "b48dac01a0628961a565388b34845ebd2329411161a4c954d8881d1a0178c893"
+    },
+    "README.md": {
+      "bytes": 8001,
+      "sha256": "65eed045c92c46e97258cda8a164c488569ce34aa138bd2d7b97c655bc82daca"
+    },
+    "dual_polar_matched_gaussian.py": {
+      "bytes": 21452,
+      "sha256": "6218224cd6dc6939ce16afe6b1dedc31ac9e0672d7dcee58741f4ca44315451d"
+    },
+    "dual_polar_oracle.py": {
+      "bytes": 11024,
+      "sha256": "590778152ec9353c44892084ac7d1e21ecb9a01c7dc8d54193c595279558e8b0"
+    },
+    "matched_gaussian_result.json": {
+      "bytes": 1701741,
+      "sha256": "4cc8c755e027475f3909d11069662ae2a5e40bbd665e65f6d7f32ea90494763d"
+    },
+    "matched_gaussian_verification.json": {
+      "bytes": 1400,
+      "sha256": "9a8ed58c23c8434e346f11bc6ff4de10c0a2591cd34893cfe1ce558f001c611f"
+    },
+    "result.json": {
+      "bytes": 3242266,
+      "sha256": "4f7387e35bb506bcd6042273f5d9a260510810bbf63d9e5edc07d489c85a1ed0"
+    },
+    "test_dual_polar_redteam.py": {
+      "bytes": 2167,
+      "sha256": "07cbd6b4845cda744084f417dd56fcd7e16a531c6adf7bbdfe4db7b8fc42b7df"
+    },
+    "verify_matched_gaussian.py": {
+      "bytes": 14589,
+      "sha256": "6ca310280f14a63a7be63c0d0856271eacaf052e8b0d8f7d62ec4abb91af79f0"
+    }
+  },
+  "note": "This manifest excludes itself. The control result separately binds the source lock, all source receipts, source result/script, frozen control protocol, composite parent, and executing control script."
+}

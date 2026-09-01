@@ -1,0 +1,31 @@
+{
+  "schema": "qwen_haar_manifold_entropy_artifact_hashes_v1",
+  "decision": "HARD_KILL_HAAR_ACG_ORIENTATION_ENTROPY",
+  "artifacts": {
+    "README.md": {
+      "bytes": 10031,
+      "sha256": "4f9c890fd5323d67d1515ab418d8b5996416767f07fad7dc659d0e0f7ebe89ba"
+    },
+    "haar_manifold_entropy.py": {
+      "bytes": 35949,
+      "sha256": "7ce145bb2923275f121b04d71a285b861def83d423a3f0859068678cfb30ef31"
+    },
+    "result.json": {
+      "bytes": 154015,
+      "sha256": "ca1fd877e1ec206658a6aa68906d4fb217b9d85425d83e73775839f8d83c683c"
+    },
+    "test_haar_manifold_entropy.py": {
+      "bytes": 4633,
+      "sha256": "8438c84d93de64df3033d8dd6363871ec5173fb35983e1ed826baa50700f30db"
+    },
+    "verification_receipt.json": {
+      "bytes": 1415,
+      "sha256": "9ccc62167a1790e929b5fd8072b49ad606b6d1f5fd6167b2e539920fb18029ce"
+    },
+    "verify_result.py": {
+      "bytes": 15212,
+      "sha256": "7fb0fe5fc6139a325c4ceed5ef691a08dc7cb215f1c56bbd544c059830fdb38e"
+    }
+  },
+  "note": "This manifest intentionally excludes itself. The result also embeds a canonical content hash and binds its executing script, every auxiliary source, the target source lock, and the parent composite result."
+}

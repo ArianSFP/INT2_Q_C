@@ -1,0 +1,18 @@
+{
+  "schema": "qwen3_initialization_anchor_tier_a_artifact_hashes_v1",
+  "decision": "HARD_KILL_BOUNDED_INITIALIZER_SET",
+  "artifacts": {
+    "arm_runpod_launch.sh": {"bytes": 1136, "sha256": "cbdeb48a0d67b1bce449d6a1be760edc5698d9819d7ab37e370df24a1cd68239"},
+    "candidate_lock.json": {"bytes": 11351, "sha256": "8f5ad9cb3bff21893e9fc2daf287942a43610f0af288e5070f173c93f05fb6ca"},
+    "common.py": {"bytes": 35372, "sha256": "4e92cd001963f232721b2cf37d90b53f3992c162e1bad2f5f28a3471555c0d11"},
+    "exclusion_intersection_lock.json": {"bytes": 570, "sha256": "6521f4613183147a1602044c7f427fa38f27b82757e6b25543bb3d5194df88c7"},
+    "initialization_anchor_gate.py": {"bytes": 36782, "sha256": "885b225e0e23a999a807252adb5affb8a581339b1e7c1e35caa63b65604c8a9b"},
+    "README.md": {"bytes": 8269, "sha256": "d1a0429f357e42736eecdcaf3b57e2dc897e09967e043d56f47500b9c13a7a7a"},
+    "result.json": {"bytes": 201724, "sha256": "6ef38ff14f69ab02caf0e48ad37e5dbc3dfa9ebe7ba5e663f85080114e0f828d"},
+    "RUNPOD_RESULT.md": {"bytes": 1944, "sha256": "b3ac571072d4ecf3da97faaaae85c81c81c46a7b32ef41e77542c32b44f29dd4"},
+    "test_initialization_anchor_gate.py": {"bytes": 8837, "sha256": "9a93a8fb909239f418e9c9a5ce1649510eee04597b47837bd663aba62d428e07"},
+    "verification_receipt.json": {"bytes": 6071, "sha256": "13aa44df48cefa368222f943b9a097f2252ecd17928edceb7d7b8dd5e53f8007"},
+    "verify_result.py": {"bytes": 21421, "sha256": "04b7f016c0e0c2ebc2c6d3639f5c1defb288b074ef6c8b0d1a9c8813e003c7bc"}
+  },
+  "note": "This inventory excludes itself. The result and independent receipt were copied byte-for-byte from the sealed RunPod output directory."
+}

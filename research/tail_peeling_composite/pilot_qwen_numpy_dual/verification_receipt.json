@@ -1,0 +1,18 @@
+{
+  "best_charged_F": 0.9798226742103275,
+  "best_charged_rate": "2.50",
+  "best_charged_variant": "charged_support_xklt_bulk",
+  "complete_grid_dual_certificate_passed": true,
+  "maximum_cold_expert_read_amplification": 1.0392171223958333,
+  "oracle_sha256": "f8c211520ba78a1e96dedbd6b7225a25a21928254f9578ba38835be729825f4f",
+  "passed": true,
+  "protocol_sha256": "30145dea08b24c97f2025e2c04c59d414347c50e089d5bc375d5066b5a052f64",
+  "result_lock_sha256": "f7d38fb4f67b77c5af577d8123286e4b26ded8b7f387f05a91f8b37faa85f547",
+  "result_path": "/workspace/INT2__compression/INT2_Q_C/research/tail_peeling_composite/pilot_qwen_numpy_dual/result.json",
+  "result_sha256": "f2c3c1006d274d9025c1a61e3da9549bf22cd61bc333457c8198a34c538e2cf2",
+  "schema": "qwen_sparse_tail_peeling_verification_v1",
+  "selected_rows_verified": 15,
+  "sources_rehashed": 18,
+  "verifier_sha256": "e696469078a9eda01291a75ecae9ec470f60816df93026adbe787366ea47db9a",
+  "weakest_certified_lower_bound_F": 0.979822670284832
+}

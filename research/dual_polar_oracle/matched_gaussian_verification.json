@@ -1,0 +1,31 @@
+{
+  "schema": "qwen_dual_polar_matched_gaussian_verification_v1",
+  "passed": true,
+  "check_count": 15,
+  "checks": [
+    "schema",
+    "canonical_content_hash",
+    "all_parent_hashes",
+    "all_18_source_hashes",
+    "source_score_binding",
+    "all_control_spectra_and_moments",
+    "all_control_rank_searches",
+    "all_control_waterfills",
+    "control_statistics",
+    "marchenko_pastur_quantiles",
+    "marchenko_pastur_rank_search_and_waterfill",
+    "control_subtraction",
+    "iid_gaussian_Rd_contradiction",
+    "non_double_counting_union_arithmetic",
+    "decision_reselection"
+  ],
+  "result_sha256": "4cc8c755e027475f3909d11069662ae2a5e40bbd665e65f6d7f32ea90494763d",
+  "result_content_sha256": "890b3c6e211ea671fc1dcd5d68ef794d4cf8b4a1c7545a7a9417756ea060004e",
+  "decision": "HARD_KILL_DUAL_POLAR_AND_NAIVE_NESTING",
+  "source_s_bpw": 0.10875534461889687,
+  "matched_control_mean_s_bpw": 0.08955277315858347,
+  "marchenko_pastur_s_bpw": 0.08959477631590239,
+  "source_specific_excess_upper_s_bpw": 0.019281204467028926,
+  "favourable_zero_overlap_union_upper_s_bpw": 0.06668461734282799,
+  "verification_boundary": "independently rebuilds all serialized spectra curves, selected ranks, local/global rank optimality, waterfills, MP quantiles, controls, and nesting arithmetic; regenerating Gaussian matrices and their SVDs is delegated to the source-bound deterministic experiment"
+}

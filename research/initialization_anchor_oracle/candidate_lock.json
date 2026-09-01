@@ -1,0 +1,226 @@
+{
+  "schema": "qwen3_initialization_anchor_candidate_lock_v1",
+  "status": "FROZEN_BEFORE_AUXILIARY_PAYLOAD_ACCESS",
+  "lock_sha256": "b7f100835e366c7ca68c189206dd953fbba7b737f00a19cacf74af277b131dbd",
+  "objective": "Bounded, source-decodable test of whether a publicly plausible Qwen3 initializer stream predicts enough final expert-weight energy to close the charged F gap without increasing expert reads above 2x.",
+  "claim_boundary": {
+    "public_lineage_status": "initializer family and scale are public; production seed, RNG implementation, framework, construction order, offsets, and parallel layout are not public",
+    "positive_result": "auxiliary survivor only; requires a separately frozen gate-role protocol and full physical codec replay",
+    "negative_result": "rejects only this finite candidate lock, not every possible initializer lineage or procedural predictor",
+    "forbidden_claim": "No candidate is described as the actual Qwen production initializer unless independently documented. Safetensors serialization order is never treated as initialization order."
+  },
+  "provenance": {
+    "repository": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "revision_is_immutable_commit": true,
+    "config_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/raw/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39/config.json",
+    "transformers_source_url": "https://github.com/huggingface/transformers/blob/v4.51.0/src/transformers/models/qwen3_moe/modeling_qwen3_moe.py",
+    "qwen3_report_url": "https://arxiv.org/abs/2505.09388",
+    "source_manifest": {
+      "workspace_relative_path": "agent_rd_structure_diag_cross_expert_sources.json",
+      "sha256": "4194ff0aa13e71e2c9631f6f2cfd145c5146edf9c6d287084197499872dff782"
+    },
+    "source_freeze": {
+      "workspace_relative_path": "agent_rd_structure_diag_cross_expert_freeze.json",
+      "sha256": "37743eaf6cb70c2bc68704dcf4d60e013552b76c11daf1ab4855f64ad4417193"
+    },
+    "exclusion_manifest": {
+      "workspace_relative_path": "qwen_polaris_heldout32_manifest.json",
+      "sha256": "3b882c74870c1e27bcddf7427e4c6ffea816d4f9847447eb218729ca69426a55",
+      "runtime_rule": "revalidate the full manifest when present; otherwise use only the separately sealed exact tensor-identity intersection"
+    },
+    "packaged_exclusion_intersection": {
+      "package_relative_path": "exclusion_intersection_lock.json",
+      "sha256": "6521f4613183147a1602044c7f427fa38f27b82757e6b25543bb3d5194df88c7"
+    }
+  },
+  "qwen_config": {
+    "transformers_version": "4.51.0",
+    "torch_dtype": "bfloat16",
+    "initializer_mean": 0.0,
+    "initializer_std": 0.02,
+    "vocab_size": 151936,
+    "hidden_size": 2048,
+    "intermediate_size": 6144,
+    "moe_intermediate_size": 768,
+    "num_hidden_layers": 48,
+    "num_attention_heads": 32,
+    "num_key_value_heads": 4,
+    "head_dim": 128,
+    "num_experts": 128,
+    "attention_bias": false,
+    "decoder_sparse_step": 1,
+    "mlp_only_layers": []
+  },
+  "data_firewall": {
+    "layer": 15,
+    "experts_in_order": [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120],
+    "roles_in_order": ["up", "down"],
+    "candidate_selection_experts": [0, 8, 16, 32, 40, 48, 64, 72, 80, 96, 104, 112],
+    "untouched_validation_experts": [24, 56, 88, 120],
+    "native_shapes": {
+      "up": [768, 2048],
+      "down": [2048, 768]
+    },
+    "canonical_shape_for_scoring": [768, 2048],
+    "down_canonicalization": "transpose native [2048,768] to [768,2048] only after sparse coordinate reads",
+    "dtype": "little_endian_bfloat16",
+    "bytes_per_tensor": 3145728,
+    "weights_per_tensor": 1572864,
+    "required_directory_rule": "exactly 32 regular non-symlink files l15e{expert}_{up|down}.bf16.bin and no other *.bf16.bin",
+    "excluded_tensor_identities_from_manifest": true,
+    "expected_excluded_tensors": [
+      "model.layers.15.mlp.experts.0.up_proj.weight"
+    ],
+    "eligible_tensor_count": 31,
+    "candidate_selection_tensor_count": 23,
+    "validation_tensor_count": 8,
+    "forbidden_path_components": ["blind_protocol", "blind_protocol_v2", "qwen_polaris_heldout32", "heldout", "quarantine"],
+    "candidate_selection_before_validation_payload_open": true,
+    "pinned_panel_access": "forbidden"
+  },
+  "sampler": {
+    "total_coordinates": 65536,
+    "fit_coordinates": 32768,
+    "score_coordinates": 32768,
+    "allocation": "independent quotient-remainder allocation over the 31 eligible tensors in frozen source-manifest order",
+    "algorithm": "SHA256 rejection sampling of u64 lanes, domain-separated by revision, tensor identity, and split; reject modulo tail and duplicates",
+    "domain_utf8": "QWEN3-INIT-ANCHOR-COORD-v1",
+    "split_domains": ["fit", "score"],
+    "coordinate_order": "canonical row-major [768,2048]",
+    "fit_score_disjoint": true,
+    "no_data_dependent_retry_or_salt": true
+  },
+  "regression": {
+    "model": "w_hat = mu + alpha * g",
+    "fit_rule": "independent float64 ordinary least squares with intercept per matrix on fit coordinates only",
+    "zero_anchor_variance_rule": "alpha=0 and mu=fit mean",
+    "score_rule": "score coordinates only; denominator is squared error of the serialized fit-only mean predictor",
+    "reported_correlation": "score-only centered Pearson correlation; descriptive and never used to refit mu or alpha",
+    "winner_rule": "minimum pooled candidate-selection score q, then frozen candidate ordinal",
+    "fold_unit": "whole untouched validation expert pooled over up and down",
+    "all_complete_validation_folds_must_be_positive": true
+  },
+  "seeds_in_order": [0, 1, 42, 1234, 2023, 2024, 3407],
+  "dtype_paths_in_order": ["fp32_then_bfloat16", "bfloat16_direct"],
+  "families_in_order": [
+    {
+      "id": "hf451_tensor_reset",
+      "framework_hypothesis": "Transformers v4.51.0 Qwen3-MoE normal initializer",
+      "stream_scope": "reset the same seed at every tensor",
+      "constructor_prefix": false,
+      "orders": ["gate_up_down"]
+    },
+    {
+      "id": "hf451_layer_reset",
+      "framework_hypothesis": "Transformers v4.51.0 post_init traversal",
+      "stream_scope": "reset at the beginning of each decoder layer",
+      "constructor_prefix": false,
+      "orders": ["attention_router_numeric_expert_gate_up_down"]
+    },
+    {
+      "id": "hf451_global_post_init",
+      "framework_hypothesis": "Transformers v4.51.0 post_init traversal",
+      "stream_scope": "one model-body stream beginning at embedding post_init",
+      "constructor_prefix": false,
+      "orders": ["embedding_numeric_layer_attention_router_numeric_expert_gate_up_down"]
+    },
+    {
+      "id": "hf451_constructor_then_global_post_init",
+      "framework_hypothesis": "direct Transformers v4.51.0 construction followed by post_init",
+      "stream_scope": "one stream including reachable and overwritten torch module constructor draws before post_init",
+      "constructor_prefix": true,
+      "orders": ["qwen3_moe_python_registration_then_post_init"]
+    }
+  ],
+  "candidate_enumeration": {
+    "tier": "A_exact_huggingface_v4.51_torch_cuda",
+    "cartesian_axis_order": ["family", "seed", "dtype_path"],
+    "expected_hf_candidates": 56,
+    "expected_mcore_candidates": 0,
+    "expected_total_candidates": 56,
+    "arbitrary_seed_search": false,
+    "arbitrary_offset_search": false,
+    "arbitrary_per_tensor_candidate_selection": false,
+    "winning_candidate_is_global": true
+  },
+  "cuda_parity": {
+    "required_before_any_payload_open": true,
+    "authoritative_generator": "torch.Generator(device='cuda') normal_ with explicit Philox offset",
+    "cupy_role": "batched float64 sufficient-statistic evaluation and deterministic device-side staging via DLPack",
+    "cupy_default_rng_forbidden": true,
+    "offset_formula": "PyTorch DistributionTemplates calc_execution_policy for contiguous normal float4, checked against Generator.get_offset",
+    "normal_unroll_factor": 4,
+    "parity_numels": [1, 257, 65537, 1572864, 3145728],
+    "parity_seed": 1234,
+    "requirements": [
+      "torch CUDA available",
+      "CuPy CUDA available on the same device",
+      "Generator get_offset and set_offset available",
+      "calculated offset increments exactly match observed increments for both locked dtype paths",
+      "sequential-stream target equals offset-jump target bitwise",
+      "DLPack CuPy view equals the PyTorch tensor bitwise"
+    ],
+    "failure": "abort before source payload access; never skip a locked Tier-A candidate family or substitute another RNG"
+  },
+  "controls": {
+    "matched_gaussian": {
+      "enabled": true,
+      "generation": "stateless SHA256 Box-Muller, domain separated by tensor and split",
+      "moments": "per-matrix fit-only Qwen mean and centered RMS",
+      "same_candidate_search_count_and_tie_break": true
+    },
+    "permuted_anchor": {
+      "enabled": true,
+      "generation": "fixed SHA256 ordering permutation independently within each matrix and split",
+      "same_candidate_search_count_and_tie_break": true
+    },
+    "bias_correction": "validation source capture minus max(0, matched-Gaussian validation capture, permuted-anchor validation capture)"
+  },
+  "target_math": {
+    "target_F_max": 0.8,
+    "current_F": 0.9888693569009007,
+    "perfect_role_polar_composite_F": 0.936397621,
+    "unadjusted_current_required_capture": 0.1909952569395151,
+    "unadjusted_composite_required_capture": 0.1456620755340428,
+    "unadjusted_current_required_abs_rho": 0.437030041232311,
+    "unadjusted_composite_required_abs_rho": 0.381657012950166,
+    "metadata_adjustment": "recomputed from physical_ledger at runtime and independently by verifier",
+    "hard_kill": "bias-corrected validation capture + 2 whole-expert SE is below metadata-adjusted composite requirement",
+    "composite_only": "not hard-killed but standalone promotion does not pass",
+    "standalone_promotion": "bias-corrected validation capture - 2 whole-expert SE reaches metadata-adjusted current requirement and every whole-expert fold has positive raw capture"
+  },
+  "physical_ledger": {
+    "target_matrix_count": 18,
+    "weights_per_matrix": 1572864,
+    "target_weights": 28311552,
+    "metadata_bytes_per_matrix": {
+      "family_id": 1,
+      "seed_u64": 8,
+      "stream_offset_u64": 8,
+      "alpha_fp16": 2,
+      "mean_fp16": 2,
+      "layout_flags_u16": 2,
+      "total": 23
+    },
+    "metadata_bytes_total": 414,
+    "strict_total_bpw_cap": 2.5,
+    "weights_per_expert": 4718592,
+    "metadata_bytes_per_expert": 69,
+    "current_worst_cold_read_amplification": 1.169444,
+    "strict_cold_read_amplification_max_exclusive": 2.0,
+    "generator_external_read_bytes": 0,
+    "generator_learned_table_bytes": 0,
+    "decoder_executable_accounting": "No model-specific generator table exists. Executable code is treated identically to the baseline codec implementation; a separate self-contained 4096-byte descriptor sensitivity is also reported."
+  },
+  "execution": {
+    "production_backend": "cupy",
+    "candidate_batch_size": 16,
+    "float_accumulation": "float64",
+    "output_json": "initialization_anchor_result.json",
+    "output_directory_must_not_exist": true,
+    "cpu_backend": "unit-test/preflight only and categorically rejected by production verifier",
+    "no_cli_scientific_knobs": true,
+    "deterministic_tie_break": "candidate ordinal"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "qwen_aux_shared_subspace_artifact_hashes_v1",
+  "decision": "HARD_KILL_SHARED_LINEAR_SUBSPACE",
+  "artifacts": {
+    "PROTOCOL.md": {"bytes": 2404, "sha256": "896d4f8246e6b8e517c22a7854c9a9d9173ccbcc0569f1019c1a696defd8e328"},
+    "README.md": {"bytes": 3419, "sha256": "bcf7d0471281e531c7608bc700c901fcafb6294fa8e2a278170a8ec0b92d7420"},
+    "result.json": {"bytes": 510476, "sha256": "6a756c26e05926a2468bcc2a20086d7efbb2273e0f078a9294c5c002f2f7734f"},
+    "shared_subspace_gate.py": {"bytes": 14458, "sha256": "5c8c5c9b4b2e13570d8fb8919cf89202463129a6da81b472452a2ea19d39fef8"},
+    "verification_receipt.json": {"bytes": 456, "sha256": "e8791db74991bbc8e0cbede2c43252933aa57ee1f042e9590deb2b95f545c0e5"},
+    "verify_result.py": {"bytes": 7678, "sha256": "e080feee2e436648e54bc04a4bae91d0202a7f795f0289be6791b52f3a8ed8ec"}
+  },
+  "note": "This inventory excludes itself. The result binds all 32 auxiliary source payloads and the independent verifier reselects all 480 candidate rows."
+}

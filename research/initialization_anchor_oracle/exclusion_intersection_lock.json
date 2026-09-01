@@ -1,0 +1,12 @@
+{
+  "schema": "qwen3_initialization_anchor_exclusion_intersection_v1",
+  "status": "DERIVED_AND_FROZEN_BEFORE_AUXILIARY_PAYLOAD_ACCESS",
+  "source_exclusion_manifest_sha256": "3b882c74870c1e27bcddf7427e4c6ffea816d4f9847447eb218729ca69426a55",
+  "source_exclusion_manifest_revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+  "source_panel_tensor_count": 32,
+  "intersection_count": 1,
+  "excluded_tensor_identities": [
+    "model.layers.15.mlp.experts.0.up_proj.weight"
+  ],
+  "derivation": "exact tensor-identity set intersection; no held-out payload was opened"
+}
