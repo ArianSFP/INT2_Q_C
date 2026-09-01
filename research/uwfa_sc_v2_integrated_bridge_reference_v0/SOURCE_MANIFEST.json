@@ -1,0 +1,43 @@
+{
+  "format": "uwfa-sc-v2-integrated-bridge-reference-source-manifest-v1",
+  "sealed_utc": "2026-09-01T23:01:02Z",
+  "claim_boundary": "Source-only synthetic reference; no Qwen/current/control payload authority and no independent audit authority.",
+  "manifest_self_inclusion": false,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "bc95180b98688999e3dd75797cce4b8f26fa0499e5ee444725760e3142944625"
+    },
+    {
+      "path": "synthetic_fixture.py",
+      "sha256": "f495614561ff5ab9b263b3279115ebe95bbecca1e30443589dd7d1f0f3e795c7"
+    },
+    {
+      "path": "test_uwfa_bridge.py",
+      "sha256": "3d276087a7907e734e5443acdba1316acc11ca983b4662d99c368fa7ad90a2e9"
+    },
+    {
+      "path": "uwfa_bridge.py",
+      "sha256": "225b3a4148ff57e4568e4f1bf3ccb002ab49a9f27eeea6566a95bf00ea236ffd"
+    }
+  ],
+  "clean_test": {
+    "host": "provided RunPod",
+    "python": "/usr/bin/python3.12",
+    "command": "python3.12 -m unittest -v test_uwfa_bridge.py",
+    "tests_run": 17,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 25.747
+  },
+  "synthetic_fixture": {
+    "container_bytes": 266240,
+    "source_decisions": 983040,
+    "physical_bpw": 2.1666666666666665,
+    "relative_mse_fixture_value": 0.03,
+    "f_actual": 0.604762103949539,
+    "maximum_cold_read_amplification": 1.3856146259321627,
+    "global_bytes": 139328,
+    "touched_bytes_per_expert": [61440, 61440, 61440, 61440, 61440, 61440]
+  }
+}

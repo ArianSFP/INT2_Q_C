@@ -1,0 +1,140 @@
+{
+  "schema": "label-copula-census-stage0-v1-independent-source-audit-v1",
+  "status": "BLOCK_SOURCE_PREFLIGHT_READINESS",
+  "audited_utc_date": "2026-09-02",
+  "producer": {
+    "package": "research/label_copula_census_stage0_v1",
+    "source_manifest_sha256": "81fc371df5db5f654815d9fe0c673c34cb403d959b313425ae91c09c37fc5bd7",
+    "manifest_and_all_seven_member_hashes_match": true,
+    "producer_bytes_modified": false
+  },
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened": false,
+    "checkpoint_payload_opened": false,
+    "current_codec_payload_opened": false,
+    "external_gaussian_control_payload_opened": false,
+    "producer_synthetic_in_memory_control_fixture_executed": true,
+    "cupy_imported": false,
+    "cuda_context_created": false,
+    "cuda_kernels_launched": 0,
+    "network_use": "SSH only to the user-provided RunPod for source-free execution; no research or payload network access"
+  },
+  "runpod_source_free_evidence": {
+    "source_path": "/workspace/INT2__compression/research/label_copula_census_stage0_v1",
+    "source_manifest_sha256": "81fc371df5db5f654815d9fe0c673c34cb403d959b313425ae91c09c37fc5bd7",
+    "all_known_source_ancestors_non_symlink": true,
+    "producer_verifier_status": "PASS_SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+    "producer_unit_tests": {
+      "passed": 23,
+      "failed": 0
+    },
+    "source_free_parity_fixture_status": "PASS_SOURCE_FREE_NONLOCAL_INTEGER_AND_ARITHMETIC_FIXTURE",
+    "exhaustive_integer_probe": {
+      "nonlocal_cells": 240,
+      "factorized_cells": 8,
+      "total_cells": 248,
+      "all_q016_packets_deserialized": true,
+      "all_frames_roundtrip_from_deserialized_models": true
+    },
+    "unequal_frame_ledger_probe": {
+      "synthetic_experts": 5,
+      "total_physical_bytes": 73728,
+      "physical_denominator_sum": 73728.0,
+      "frame_offset_alignment_and_page_union_close": true
+    }
+  },
+  "hard_blockers": [
+    {
+      "id": "LCV1-B01-SOURCE-BANK-NOT-FROZEN",
+      "severity": "HARD_BLOCK",
+      "requirement": "The source and every control must run the identical complete 240-cell nonlocal search.",
+      "evidence": "evaluate_raw_source_panel exposes an optional bank parameter and passes it directly to evaluate_nested without requiring candidate_bank().",
+      "runpod_counterexample": {
+        "input": "synthetic rectangular 10-layer by 3-slot raw SwiGLU panel plus a one-candidate tuple",
+        "returned_schema": "label-copula-census-result-v1",
+        "returned_nonlocal_candidate_cells": 1,
+        "required_nonlocal_candidate_cells": 240
+      },
+      "impact": "A source-side scored result and absolute-survival field can be produced under a different search than the controls. The later control replay would reject it, but the frozen source/preflight surface itself does not enforce search symmetry."
+    },
+    {
+      "id": "LCV1-B02-SCORED-DECODE-BYPASSES-SERIALIZED-MODEL",
+      "severity": "HARD_BLOCK",
+      "requirement": "Every scored outer-test frame must decode from the serialized uint16 model packet and public schedule.",
+      "evidence": "encode_panel uses only len(model.serialize()) for accounting, while evaluate_nested passes the original in-memory QuantizedModel to decode_stream.",
+      "runpod_counterexample": {
+        "mutation": "Temporarily replace QuantizedModel.serialize with an all-zero invalid packet of the correct charged length.",
+        "invalid_packet_rejected_by_QuantizedModel_deserialize": true,
+        "evaluate_nested_still_returned_scored_result": true,
+        "reported_roundtrip_still_succeeded": true
+      },
+      "impact": "The existing score does not prove that transmitted model bytes reproduce the coded labels."
+    },
+    {
+      "id": "LCV1-B03-PRODUCER-CODE-EXECUTES-BEFORE-AUTHENTICATION",
+      "severity": "HARD_BLOCK",
+      "requirement": "Wrong authorization and unverified source must be rejected before producer code execution.",
+      "evidence": "stage0_census.py executes same-directory label_copula_common.py at module import before main and the token branch; verify_source.py does the same before verify_manifest.",
+      "runpod_counterexample": {
+        "fixture": "temporary clone only; producer bytes were not modified",
+        "tamper": "add a marker write to the cloned common module",
+        "authorization": "WRONG",
+        "stage_returncode": 2,
+        "marker_written_before_token_check": true,
+        "output_directory_created": false
+      },
+      "impact": "The self-verifier and stage entrypoint cannot form the root of trust. Hash verification after import is too late."
+    }
+  ],
+  "trust_boundary_finding": {
+    "id": "LCV1-T01-EXTERNAL-ROOT-ABSENT-BY-DESIGN",
+    "classification": "ACKNOWLEDGED_NON_AUTHORITY_AND_LAUNCH_PREREQUISITE",
+    "runpod_counterexample": {
+      "unsigned_caller_authored_review_with_public_hashes_accepted_by__review": true,
+      "signature_or_external_trust_root_checked": false
+    },
+    "assessment": "This is consistent with the package's explicit no-payload/no-claim-authority boundary, but it means the package cannot issue a standalone preflight authorization. A PASS receipt from this package alone would have no launch authority."
+  },
+  "controls_assessment": {
+    "frozen_scientific_orchestrator_replays_full_source_240_bank_before_controls": true,
+    "frozen_scientific_orchestrator_checks_source_absolute_gate_before_control_generation": true,
+    "each_control_reruns_all_240_nonlocal_and_8_factorized_cells": true,
+    "source_tensor_geometry_block_moments_generated_tensor_labels_bank_and_result_are_hashed": true,
+    "raw_control_builder_is_callable_without_a_source_result_or_gate": true,
+    "raw_control_builder_assessment": "Library-level misuse surface, not a separate runner-semantic blocker: the frozen orchestration function orders the gate correctly, but no future payload runner has yet been frozen to prohibit direct helper use.",
+    "source_specific_excess_has_only_a_point_estimate": true,
+    "source_specific_confidence_or_veto_gate_present": false,
+    "source_specific_confidence_assessment": "Not a contradiction of design_lock.json, which deliberately makes the absolute source lower bound primary and forbids control-created passes. It is nevertheless insufficient for a strong claim that a survivor is Qwen-specific rather than shared by matched Gaussian controls."
+  },
+  "passing_contract_checks": {
+    "canonical_arbitrary_shape_orientation_gate_up_down_transpose": true,
+    "lloyd4_threshold_and_ordered_gray_msb_lsb_schedule": true,
+    "one_identical_reusable_slot_universe_required_in_every_layer": true,
+    "outer_whole_layer_test_isolated_from_fit_and_selection": true,
+    "inner_whole_slot_validation_isolated_from_training": true,
+    "at_least_five_test_layer_clusters_required": true,
+    "paired_bootstrap_resamples_whole_layers_and_closes_shared_delta": true,
+    "bootstrap_limitation": "The stated layer-independence assumption and five-cluster minimum make this a prespecified screening interval, not a distribution-free 95% guarantee for correlated layers of one checkpoint.",
+    "exact_integer_unifilar_successors": true,
+    "q016_rows_sum_to_65536": true,
+    "primitive_model_serialize_deserialize_roundtrip": true,
+    "arithmetic_termination_and_byte_padding_primitive": true,
+    "physical_model_directory_frame_alignment_and_page_ledger_math": true,
+    "completion_writer_rejects_later_writer_members_and_second_completion": true,
+    "symlinked_leaf_and_ancestor_fixture_rejection": true,
+    "actual_local_and_runpod_source_ancestor_chains_non_reparse_or_non_symlink": true
+  },
+  "additional_limitations": [
+    "No literal diagnostic container writer/parser exists; header, directory and frame storage are an exact-size ledger rather than independently parsed bytes.",
+    "The raw-label census omits reconstruction scales and levels and is not an end-to-end 2.15-2.5 bpw codec.",
+    "The source-free parity fixture validates mechanism only and supplies no model-weight evidence.",
+    "The source-only package contains a CPU reference; no authenticated CuPy payload adapter exists and none was launched."
+  ],
+  "decision": {
+    "source_or_preflight_readiness": false,
+    "payload_authority_granted": false,
+    "qwen_claim_authority_granted": false,
+    "controls_authorized": false,
+    "claim_boundary": "BLOCK is entirely source-level and is not evidence for or against nonlocal dependence in Qwen or any other SwiGLU-MoE."
+  }
+}

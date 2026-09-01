@@ -1,0 +1,40 @@
+{
+  "schema": "label-copula-census-source-manifest-v1",
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 12667,
+      "sha256": "177c2980d050f5375e17f30321a5449580f305f078ab36978db2c105b5264af1"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 8283,
+      "sha256": "6715d5738bbceb89935e6fb4641df0053e45c23d907f964af447b392aa7ee389"
+    },
+    {
+      "name": "label_copula_common.py",
+      "bytes": 62996,
+      "sha256": "be70763627de9d747664eb210cc3713874c3f58ced0a32f73fc0cd73a9797e62"
+    },
+    {
+      "name": "run_source_free_fixture.py",
+      "bytes": 4215,
+      "sha256": "5096dccdda19e3d481ab980f96a40613c0e0f86116e006819e5e93c97fd807c2"
+    },
+    {
+      "name": "stage0_census.py",
+      "bytes": 6021,
+      "sha256": "e43a770db5cd1a37fa97f3cdfa860ca55194dba8326874854b2e8c3122aadd36"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 20168,
+      "sha256": "8fd606953ea79637cdb29f4b6a81a4ea6d18eb8762c232400868f5882eb8ff23"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 12214,
+      "sha256": "c380182ec36fb53708fb6c54dc7446c9ccfd17b964e7cfe23d3d351a02c81875"
+    }
+  ]
+}
