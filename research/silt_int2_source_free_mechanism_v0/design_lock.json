@@ -1,0 +1,120 @@
+{
+  "schema": "silt-int2-source-free-mechanism-design-v0",
+  "status": "SOURCE_ONLY_UNSEALED_NO_PAYLOAD_AUTHORITY",
+  "compute_contract": {
+    "cpu_role": "bit-exact reference and independent decoder",
+    "optimization_search_role": "CuPy is mandatory; fail closed when CUDA/CuPy is unavailable",
+    "canonical_device": "provided RunPod RTX 5090",
+    "equality": "selected candidate coefficients and inverse leaves must equal the CPU reference byte-for-byte",
+    "required_measured_telemetry": [
+      "h2d_ms",
+      "kernel_ms",
+      "d2h_ms",
+      "wall_ms",
+      "sampled_peak_device_used_bytes"
+    ],
+    "telemetry_policy": "record CUDA-event timings and sampled device memory; never infer missing values"
+  },
+  "date": "2026-09-02",
+  "scope": {
+    "purpose": "mechanism closure for reversible tree lifting and exact finite coding",
+    "claim": "synthetic unit test only; no model-source gain claim",
+    "payload_authority": false,
+    "result_authority": false
+  },
+  "alphabet_cells": [
+    {
+      "name": "GF2",
+      "modulus": 2,
+      "parity_checks_per_32_details": 6,
+      "state_count": 64
+    },
+    {
+      "name": "Z4",
+      "modulus": 4,
+      "parity_checks_per_32_details": 3,
+      "state_count": 64
+    }
+  ],
+  "tree": {
+    "topology": "unique iterative balanced adjacent-pair tree after serialized leaf permutation",
+    "odd_lane_rule": "carry the last lane unchanged to the next level",
+    "internal_nodes": "lane_count - 1 for every positive lane_count",
+    "permutation": "lexicographic Lehmer rank, unsigned big-endian, minimum byte length implied by lane_count",
+    "selector": "three bits per internal node: swap, predict coefficient p in {0,1}, update coefficient u in {0,1}",
+    "selector_order": "finest to coarsest, left to right within each level",
+    "coefficient_order": "root first; details coarsest to finest; row-major vectors then nodes within a level"
+  },
+  "lifting": {
+    "forward": "optional swap; d=(y-p*x) mod A; c=(x+u*d) mod A",
+    "inverse": "x=(c-u*d) mod A; y=(d+p*x) mod A; undo swap",
+    "supported_moduli": [2, 4],
+    "arithmetic": "exact integer modular arithmetic"
+  },
+  "probability_model": {
+    "family": "nonnegative unifilar tree-coefficient automaton",
+    "q16_total": 65536,
+    "state_count": 64,
+    "state": "base-A residue accumulators, reset every 32 detail coefficients",
+    "contexts": "one root context plus body/check contexts derived only from detail position modulo 32",
+    "fit": "Laplace-one counts followed by exact largest-remainder Q16 quantization",
+    "decode_probabilities": "literal uint16 frequency rows summing exactly to 65536",
+    "transition": "fixed public modular accumulator rule; no fitted hidden transition"
+  },
+  "finite_coder": {
+    "backend": "reference 32-bit inclusive arithmetic coder",
+    "production_rans_claim": false,
+    "separation": "the reference stream proves finite roundtrip and byte accounting; it is not presented as the proposed 256-way production rANS",
+    "termination": "meaningful bit length plus zero byte tail is literal in each frame"
+  },
+  "container": {
+    "global_header_bytes": 4096,
+    "model_alignment_bytes": 4096,
+    "frame_header_bytes": 256,
+    "frame_alignment_bytes": 4096,
+    "layout": "global header, one page-rounded model, then one page-rounded contiguous frame per synthetic expert",
+    "cold_rule": "global header pages plus model pages plus selected expert frame pages",
+    "physical_rate": "eight times complete container bytes divided by literal leaf-symbol count",
+    "tail_rule": "all alignment and arithmetic tail bits must be zero and are charged"
+  },
+  "synthetic_source": {
+    "transformed_root": "iid uniform and independent for every vector",
+    "structured_details": "uniform body symbols followed by residue-class modular checks in every public block of 32",
+    "matched_control": "iid uniform detail symbols with identical alphabet and uniform marginals",
+    "long_range": "all suffixes through depth 25 for GF2 and 28 for Z4 omit at least one independent check input",
+    "interpretation": "a mechanism fixture deliberately constructed to be visible after tree lifting; never evidence about weights"
+  },
+  "early_kill": {
+    "exact_roundtrip": "mandatory for every adversarial dimension and both alphabets",
+    "independent_reencode": "complete container bytes must match exactly",
+    "structured_minus_control_finite_gap_bps": 0.15,
+    "matched_control_floor_fraction_of_log2_alphabet": 0.98,
+    "cold_read": "must be below 2x for the canonical large synthetic fixture",
+    "failure_action": "stop before any external/model payload"
+  },
+  "universality": {
+    "allowed_decoder_inputs": [
+      "codec version",
+      "alphabet",
+      "positive lane/vector/expert counts",
+      "serialized permutation rank and lifting selectors",
+      "serialized Q16 model",
+      "causally decoded state",
+      "selected expert-local frame"
+    ],
+    "forbidden": [
+      "model, checkpoint, layer, or expert identity as a hidden key",
+      "source weights or untransmitted fitted values",
+      "router or activation data",
+      "ancestor/reference checkpoints",
+      "external dictionaries or services"
+    ]
+  },
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_container_opened_statted_hashed_or_enumerated": false,
+    "matched_control_payload_opened_statted_hashed_or_enumerated": false,
+    "external_input_path_supported": false,
+    "network_access_supported": false
+  }
+}
