@@ -1,0 +1,91 @@
+{
+  "schema": "tactic-cage-graph-krylov-oracle-v0-design-lock",
+  "status": "SOURCE_ONLY_FROZEN_AWAITING_INDEPENDENT_TEST_AND_EXPLICIT_QWEN_PILOT",
+  "date": "2026-09-02",
+  "source_contract": {
+    "coarse_codec": "tactic_actual_coarse_n18_v6",
+    "required_coarse_rate_exact": "307/128",
+    "roles": ["gate", "up", "down_transposed"],
+    "geometry": {"intermediate": 768, "hidden": 2048},
+    "input_identity_fields_forbidden": true,
+    "all_external_sources_require_literal_sha256": true
+  },
+  "pending_external_qwen_pilot_evidence_not_yet_authoritative": {
+    "status": "RAW_V6_RESULT_AWAITING_INDEPENDENT_RESULT_AUDIT_DO_NOT_CONSUME_YET",
+    "coarse_bin_sha256": "6c13780bf1494567f91bc73bf6afd8846c6e3326cac329e4d8e3faf48a9051d7",
+    "result_json_sha256": "519466bbb39280bb528e610acba8ccc4258ccfd54d73bb8ded1738b435e64fb3",
+    "raw_coarse_relative_mse": 0.036975150060595235,
+    "raw_coarse_F_at_307_over_128": 1.02781086823352,
+    "target_capture_fraction_at_final_D_0p025": 0.323870222053737,
+    "ideal_gaussian_use_of_remaining_13_over_128_bpw_preserves_F": true,
+    "used_as_codec_or_graph_input": false
+  },
+  "oracle_contract": {
+    "block_values": 4096,
+    "fine_bits_per_block": 384,
+    "fine_bpw": 0.09375,
+    "source_score_dtype": "IEEE-754 FP64",
+    "accelerator": "CuPy on the exact v6 runtime lock",
+    "primary_family": "coarse-programmed path-graph DCT-II spectral/Krylov envelope",
+    "finite_codec_executed": false,
+    "free_support_and_amplitudes_in_topk_envelope": true,
+    "waterfill_assumption": "independent Gaussian graph-spectral coefficients with ideal fractional allocation",
+    "graph_uses_source_or_residual": false,
+    "rank_curves": "all integer ranks 1 through 384 with isotropic k/4096 baseline and Qwen-minus-control excess",
+    "promotion_uses_raw_continuous_capture": false,
+    "promotion_uses_qwen_minus_matched_control_excess": true
+  },
+  "candidate_families": [
+    "public_coordinate_path_dct",
+    "coarse_signed_path_dct",
+    "coarse_magnitude_path_dct",
+    "coarse_context_path_dct"
+  ],
+  "graph_inputs": [
+    "decoded canonical I32 coarse symbols",
+    "public role ordinal",
+    "public tile/block ordinal",
+    "public coordinate",
+    "frozen integer constants"
+  ],
+  "forbidden_graph_inputs": [
+    "original BF16 values",
+    "coarse residual",
+    "model/checkpoint/layer/expert/tensor identity",
+    "external weights",
+    "source-fitted transform or graph selector"
+  ],
+  "hard_kill": {
+    "target_relative_mse": 0.025,
+    "continuous_top384_target_tolerance": 1e-12,
+    "minimum_graph_over_public_advantage_bpw": 0.03,
+    "minimum_qwen_over_control_advantage_bpw": 0.03,
+    "composite_gap_eligibility_bpw": 0.11356063,
+    "controls_open_only_after_continuous_source_survival": true
+  },
+  "controls": {
+    "permutation": "one frozen odd-affine within-block permutation per public block coordinate",
+    "gaussian": "counter-generated Gaussian, exactly centered/scaled to each residual block mean and centered energy",
+    "scope": "conditional residual controls, not full matched-Gaussian PTQ"
+  },
+  "traffic": {
+    "compressed_frame_file_reads": 1,
+    "compressed_frame_refetches": 0,
+    "decoded_coarse_state_buffered_once": true,
+    "external_storage_host_parse_scratch_and_hbm_ledgers_are_disjoint": true,
+    "below_2x_inference_hbm_claim_authority": false
+  },
+  "secondary_screen_routing": {
+    "document": "SECONDARY_SCREENS.md",
+    "hook": "secondary_hooks.py",
+    "execution_order": [
+      "ramanujan_non_dyadic_phase",
+      "coarse_signature_collaborative_patches",
+      "coarse_seriated_hankel_displacement_rank"
+    ],
+    "compressed_frame_refetch_allowed": false,
+    "controls_open_after_each_individual_source_survival": true,
+    "bispectral_volterra": "deferred unless Ramanujan excess >=0.03 bpw and cheap heldout prediction >=5%"
+  },
+  "claim_boundary": "A survivor is only eligible for a finite graph-lifting/refinement build. This oracle cannot establish physical 2.5-bpw coding, F<=0.8, below-2x routed inference reads, Qwen-wide transfer, or universal SwiGLU-MoE performance."
+}

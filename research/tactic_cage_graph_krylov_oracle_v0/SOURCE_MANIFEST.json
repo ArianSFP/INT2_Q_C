@@ -1,0 +1,57 @@
+{
+  "schema": "tactic-cage-graph-krylov-oracle-v0-source-manifest",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_EXPLICIT_QWEN_PILOT",
+  "source_root_sha256": "7259606fb3cf7f2506be031b4b86bfcc5d2a710d6697b94f9201b532d0478a4b",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 8743,
+      "sha256": "e2aae5336572ba466da909a4820fb2e542393c08922e9e5744629290835140bd"
+    },
+    {
+      "name": "SECONDARY_SCREENS.md",
+      "bytes": 5245,
+      "sha256": "94500b565566d23793be2e40ffdcde033483c5175d5bb9f9c88ea397fc0afe5e"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 4114,
+      "sha256": "62c49a0164a141f1f9ae3485f099a97d4e01957dd78910ba2c609c069b012196"
+    },
+    {
+      "name": "oracle_core.py",
+      "bytes": 27763,
+      "sha256": "53605660faa502af1e01606226d1cd04587147e9278618e83480e67e34c35744"
+    },
+    {
+      "name": "run_oracle.py",
+      "bytes": 38499,
+      "sha256": "e6ad569c9c835efbb570e29ff3642fd453f3cfcf734bb794b4b9a33130fdbbed"
+    },
+    {
+      "name": "secondary_hooks.py",
+      "bytes": 3778,
+      "sha256": "139dccb3160e5040590139bad1061fe1cffed0cdca8308a010e0bf86b64f92d6"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 11699,
+      "sha256": "935faab1347145ee5e7482535a6d81ddb8e65df4100217ee345eb182e934a846"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 6343,
+      "sha256": "14573672e9b36c467af5e3eb00d4a368b2bd87f60f3ea20a72f644edf012e9f5"
+    }
+  ],
+  "access_attestation": {
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "completed_v6_result_opened_statted_hashed_or_enumerated": false,
+    "bf16_source_opened_statted_hashed_or_enumerated": false,
+    "matched_control_opened_statted_hashed_or_enumerated": false,
+    "cuda_or_cupy_initialized_during_source_build_or_tests": false,
+    "source_or_test_process_accessed_network": false,
+    "isolated_source_only_tests_passed": true
+  },
+  "claim_boundary": "Source-only implementation and synthetic tests establish no Qwen gain, finite codec, target F, routed-read result, or universal SwiGLU-MoE performance."
+}
