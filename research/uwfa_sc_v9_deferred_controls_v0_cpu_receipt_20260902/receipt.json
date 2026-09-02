@@ -1,0 +1,29 @@
+{
+  "schema": "uwfa-sc-v9-deferred-controls-cpu-receipt-v0",
+  "date_utc": "2026-09-02",
+  "source_manifest_sha256": "00e89b35c5462dca6310da5725b19b75bf71b8bcc562a2229f239846db366804",
+  "remote_source_path": "/tmp/uwfa_sc_v9_deferred_controls_v0_00e89b35",
+  "python": "/workspace/int2-cupy-venv/bin/python",
+  "tests": {
+    "command": "/workspace/int2-cupy-venv/bin/python -I -B /tmp/uwfa_sc_v9_deferred_controls_v0_00e89b35/test_source_only.py",
+    "tests_run": 8,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS"
+  },
+  "source_verifier": {
+    "command": "/workspace/int2-cupy-venv/bin/python -I -B /tmp/uwfa_sc_v9_deferred_controls_v0_00e89b35/verify_source.py --package /tmp/uwfa_sc_v9_deferred_controls_v0_00e89b35",
+    "members": 7,
+    "payload_access_authority": false,
+    "status": "PASS_SOURCE_ONLY_BOUNDED_BLOCK_VERIFIED"
+  },
+  "access_boundary": {
+    "remote_parent": "/tmp",
+    "workspace_parent_mutated": false,
+    "qwen_or_model_payload_accessed": false,
+    "live_primary_result_accessed": false,
+    "numpy_or_cupy_imported_by_tests": false,
+    "cuda_initialized_by_tests": false
+  },
+  "claim_boundary": "CPU mechanics only. Matched-Gaussian payload execution remains blocked until an independently audited primary survivor and a separately frozen full-PTQ control producer exist."
+}

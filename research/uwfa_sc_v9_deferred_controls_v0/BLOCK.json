@@ -1,0 +1,33 @@
+{
+  "schema": "uwfa-sc-v9-deferred-controls-block-v0",
+  "status": "BLOCK_MISSING_DECODER_CLOSED_MATCHED_CONTROL_PRODUCER_AND_AUDIT_PINS",
+  "positive_claim_authority": false,
+  "payload_access_authority": false,
+  "blocked_inputs": [
+    "independently audited v9 primary survivor with immutable external auditor and receipt pins",
+    "authenticated producer that maps exact moment-matched BF16 matrices through the identical current STRATA PTQ pipeline",
+    "eight sealed control artifacts, score receipts, generator sources, moment replays and symmetric closures"
+  ],
+  "bounded_api_finding": {
+    "v8_can": [
+      "decode and extract a complete existing STRATA artifact",
+      "consume already-authenticated Gaussian control artifact bundles",
+      "replay supplied moment-match receipts through an injected authenticated replayer",
+      "run all-150 nested WFA fitting and literal container scoring"
+    ],
+    "v8_cannot": [
+      "obtain original BF16 source moments from the compressed artifact",
+      "generate moment-matched BF16 SwiGLU expert matrices",
+      "encode arbitrary matrices through the identical current STRATA quantizer into a control artifact",
+      "independently score such an artifact without an external source/scorer"
+    ]
+  },
+  "row_column_shuffle": "BLOCKED_AT_THIS_APERTURE_BECAUSE_SELECTED_SC_DECISIONS_HAVE_NO_ONE_TO_ONE_MATRIX_COORDINATE",
+  "next_authorized_successor": "copy to a new v1 only after exact external pins exist; never edit this v0 in place",
+  "shortcuts_rejected": [
+    "Gaussian-looking selected-bit resampling",
+    "label shuffling presented as a Gaussian pipeline",
+    "source winner reuse on controls",
+    "unmatched reconstruction or unpaid model/page bytes"
+  ]
+}

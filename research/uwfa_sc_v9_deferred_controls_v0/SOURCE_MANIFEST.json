@@ -1,0 +1,51 @@
+{
+  "schema": "uwfa-sc-v9-deferred-controls-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_BOUNDED_BLOCK",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 4862,
+      "sha256": "1dc887adbb5ae79cac67197c71b4c708bd7f2dd8099939f072d62d6116c9e632"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 6922,
+      "sha256": "50dbfd20659408b9a728f3d53b56d02c33e77c80875a692bd5e2785c307aa2f3"
+    },
+    {
+      "name": "BLOCK.json",
+      "bytes": 1739,
+      "sha256": "6259b4be10b685757b7bcc97f48ed405c40059128b89161b443ac5c651924fd0"
+    },
+    {
+      "name": "control_core.py",
+      "bytes": 13220,
+      "sha256": "5998f9b3fd65f64ca1dea3ab5b5ee065be50d57cb905b0e193b83f2866606193"
+    },
+    {
+      "name": "deferred_controls.py",
+      "bytes": 1365,
+      "sha256": "d0f9120b9838eaa2043da3aae3138f90890cc2517449d323f252b95bc2b02e48"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 6895,
+      "sha256": "37098a43748f3e72b4533e2c38aeb3cd302e93c85feb79a6d077a9d03a8594df"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 3664,
+      "sha256": "8c3f4e8f5844ba65a905e82a81409f1369554d04d74f14f7bc871b27632f6da4"
+    }
+  ],
+  "access_attestation": {
+    "runpod_accessed": false,
+    "live_primary_result_opened_statted_hashed_or_enumerated": false,
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "original_bf16_source_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "numpy_or_cupy_imported": false,
+    "cuda_launched": false
+  },
+  "claim_boundary": "immutable source-only control design and bounded blocker; no payload, specificity, compression, universality or promotion evidence"
+}

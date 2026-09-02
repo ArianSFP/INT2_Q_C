@@ -1,0 +1,112 @@
+{
+  "schema": "uwfa-sc-v9-deferred-controls-design-v0",
+  "status": "SOURCE_ONLY_BLOCKED_MISSING_DECODER_CLOSED_CONTROL_PRODUCER_AND_AUDIT_PINS",
+  "design_date": "2026-09-02",
+  "inheritance": {
+    "v9_primary_commit": "9ef874f",
+    "v9_primary_source_manifest_sha256": "d1e3eaff6762df2e273f6e3f4216ff9110abe74a7534a0098544a4ceef632c5e",
+    "v9_primary_runner_sha256": "d1ff04ce3c2cc36208e464eaed943d6c94eb91a47e9d3c460b2d562b7162cc4d",
+    "pinned_repaired_qwen_support_sha256": "399cb25260d34ec299cc91a17f129da9be5ba5b799c961e43f0c1b0637ee0174",
+    "sealed_v8_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+    "candidate_bank": "unchanged exact ordered 150 cells: 5 topologies x 6 state sizes x 5 reset lengths",
+    "fit_score_packet": "unchanged exact v8 counts, Q0.16 fit, literal model/page/framing grammar, component holdout and deterministic selector tie",
+    "source_winner_reuse_forbidden": true
+  },
+  "opening_gate": {
+    "required_primary_status": "PRIMARY_SOURCE_SURVIVOR_NONPROMOTING_DEFERRED_STAGES_REQUIRED",
+    "independent_result_audit_required": true,
+    "independent_auditor_manifest_sha256": null,
+    "independent_audit_receipt_sha256": null,
+    "all_primary_rate_F_cold_integrity_and_component_gates_must_be_replayed": true,
+    "untrusted_RESULT_or_COMPLETE_is_never_authority": true,
+    "v0_payload_access_authority": false
+  },
+  "matched_gaussian_controls": {
+    "seeds_in_order": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "required_positive_specificity_count": 8,
+    "all_eight_bundles_authenticate_before_first_fit": true,
+    "each_pipeline": "generate BF16 weights, run identical current STRATA transform/quantizer/container, extract selected SC decisions, repeat all-150 component nested selection, refit, literal pack/parse/standalone+routed decode, charge model/pages/framing and score its own reconstruction",
+    "specificity_statistic": "source absolute physical saving bpw minus maximum independently selected matched-control absolute physical saving bpw",
+    "early_kill": "after all bundle authentication, fit controls in seed order and stop as soon as any control saving is >= source saving",
+    "positive_survivor": "all eight independently selected control savings are strictly below source saving",
+    "controls_can_rescue_source_failure": false,
+    "decoder_closed_producer_manifest_sha256": null,
+    "eight_control_bundle_root_sha256": null,
+    "bounded_block": "v8 has a control consumer/replayer but no authenticated arbitrary-BF16 STRATA encoder or UWFA matched-control artifact producer"
+  },
+  "structure_diagnostics": {
+    "order": [
+      "v8_within_public_context_phase_preserving",
+      "v9_within_role_profile_public_context_phase_preserving",
+      "v9_within_role_profile_level_prior_phase_destroying",
+      "v8_multiscale_chunk_32_phase_preserving",
+      "v8_multiscale_chunk_128_phase_preserving",
+      "v8_multiscale_chunk_512_phase_preserving"
+    ],
+    "every_variant_repeats_all_150_selection_and_exact_literal_component_score": true,
+    "source_selected_winner_reuse_forbidden": true,
+    "phase_preserving_definition": "position-mod-4 retained in each selected-bit permutation bucket",
+    "phase_destroying_definition": "role, STRATA profile, polar level and prior bin retained; selected bits permuted across position-mod-4",
+    "within_role_stratum_definition": "role plus transmitted STRATA profile_q; mixed-role blocks remain a separate literal role and are never mislabeled",
+    "dyadic_definition": "exact retained v8 chunk shuffles at 32,128,512 symbols move bit, level and base triplets together; all widths are multiples of four",
+    "row_column_disposition": "INAPPLICABLE_AT_SELECTED_SC_SYMBOL_LAYER_REQUIRES_REENCODE_FROM_SOURCE",
+    "row_column_reason": "one selected polar decision is not one matrix coordinate; RHT plus SC levels erase a decoder-legal row/column label at this aperture",
+    "claim_use": "diagnostic attribution only; a shuffle cannot rescue or promote the physical codec"
+  },
+  "aperture": {
+    "evaluation_artifact_sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b",
+    "evaluation_artifact_bytes": 8847360,
+    "panel_streams": 15,
+    "panel_selected_symbols": 126627266,
+    "source_weights": 28311552,
+    "disjoint_stream_owner_components": 3,
+    "folds": [
+      {"component_ordinal": 0, "identity_indices": [0, 1], "cell_symbol_updates": 12865688966},
+      {"component_ordinal": 1, "identity_indices": [2, 3], "cell_symbol_updates": 12794875916},
+      {"component_ordinal": 2, "identity_indices": [4, 5], "cell_symbol_updates": 12707496716}
+    ],
+    "updates_per_complete_pipeline": 38621316130,
+    "matched_control_updates_for_positive_specificity": 308970529040,
+    "six_shuffle_updates": 231727896780,
+    "maximum_deferred_updates": 540698425820,
+    "minimum_decisive_null_kill_updates": 38621316130
+  },
+  "cupy_execution_plan": {
+    "candidate_fit_and_lengths": "exact sealed-v8 CuPy backend; no new kernel or reduced bank",
+    "new_shuffle_reference": "bucket-wise bijective affine gather frozen in control_core.py",
+    "production_shuffle": "CuPy stable bucket grouping plus gather must byte-match the standard-library reference on KATs before payload authority",
+    "peak_design": "one uint8 bit vector, uint16 base vector, uint8 levels, uint32 bucket id and uint32 index; release sorting scratch before backend cache packing",
+    "one_cuda_owner_process": true,
+    "fresh_backend_per_matched_control": true,
+    "early_stop_saves_expected_work_but_not_positive_pass_work": true
+  },
+  "output_grammar_for_successor": {
+    "members": [
+      "RESULT.json",
+      "PRIMARY_AUDIT_BINDING.json",
+      "CONTROL_INPUT_ROOT.json",
+      "CONTROL_00.json through CONTROL_07.json for every executed seed",
+      "SHUFFLES.json when reached",
+      "TELEMETRY.json",
+      "COMPLETE.json written last"
+    ],
+    "terminal_statuses": [
+      "BLOCK_PRIMARY_NOT_INDEPENDENTLY_AUDITED",
+      "BLOCK_CONTROL_BUNDLE_OR_MOMENT_REPLAY",
+      "HARD_KILL_MATCHED_GAUSSIAN_NOT_SPECIFIC",
+      "PASS_ALL_EIGHT_MATCHED_NULLS_AND_SHUFFLE_DIAGNOSTICS_NONPROMOTING"
+    ],
+    "positive_claim_authority": false,
+    "fresh_independent_composite_audit_required": true
+  },
+  "source_only_build_attestation": {
+    "runpod_accessed": false,
+    "live_primary_result_opened_statted_hashed_or_enumerated": false,
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "original_bf16_source_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "numpy_or_cupy_imported": false,
+    "cuda_launched": false
+  },
+  "claim_boundary": "v0 freezes control mathematics, work, seeds, aperture, stopping and honest blockers only; it is not executable payload evidence and cannot promote UWFA-SC"
+}
