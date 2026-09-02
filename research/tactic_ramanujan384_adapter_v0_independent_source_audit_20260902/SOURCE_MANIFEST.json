@@ -1,0 +1,27 @@
+{
+  "schema": "tactic-ramanujan384-independent-source-audit-manifest-v0",
+  "status": "HOLD_PAYLOAD_AUTHORITY_PENDING_LITERAL_WEIGHT_REPLAY_AND_BACKEND_STABLE_CONTROLS",
+  "source_root_sha256": "009070ebea6f91fffca5d6a6b366930b74be7993baa84d90d79c8a9f7d0572a3",
+  "producer": {
+    "source_manifest_sha256": "287b8ad4c377956c9bb264d9d8731893a83e45180f75472f9b42968e3f20acde",
+    "source_root_sha256": "2a66a5d745fc0a31e311cf6ab5f44836726ae341db977bca8eac314df61124ad"
+  },
+  "members": [
+    {"name":"README.md","bytes":7281,"sha256":"72b29574ef5a01cd5cb7c34dd0ef29bbc0d8877359af90c9649c37e42acf3c7a"},
+    {"name":"audit_contract.json","bytes":2055,"sha256":"7151372f23ab815df7575291927fe3fd88ed2f18e697b3ea9d0d053fe881d9bc"},
+    {"name":"run_cupy_identity_audit.py","bytes":5594,"sha256":"deb873c8877037165191abd275605ff0cb648febc34c50b894c5d9aa4016088e"},
+    {"name":"test_independent_source.py","bytes":16086,"sha256":"99dcc0276a6f7f45a52976915cb766b9019f4f02efb0d81d54a5a4e7626a302b"},
+    {"name":"verify_audit.py","bytes":7645,"sha256":"9cde67a7e06a63155b092230f7c002e31f66d02c3934a93a6a77dc2995775197"}
+  ],
+  "access_attestation": {
+    "qwen_payload_accessed": false,
+    "coarse_payload_accessed": false,
+    "matched_control_payload_accessed": false,
+    "network_accessed": false
+  },
+  "execution": {
+    "source_runtime_tests": "PENDING_PYTHON_NUMPY_ENVIRONMENT",
+    "source_free_cpu_cupy_identity": "PENDING_CUPY_GPU_ENVIRONMENT",
+    "payload_execution_authorized": false
+  }
+}

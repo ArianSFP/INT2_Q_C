@@ -1,0 +1,62 @@
+{
+  "schema": "strata-bmp-qtt6-v1-independent-audit-source-manifest-v1",
+  "status": "FROZEN_INDEPENDENT_SOURCE_AUDIT__RUNTIME_PENDING__HOLD_PAYLOAD",
+  "producer_pins": {
+    "source_manifest_sha256": "916aaca15620e3bf033e849b74a73604015fab280dfe8953683d6cbe04e0d2e4",
+    "source_root_sha256": "369e01b30173977a5d8227e71104c8515f1b68ef440198dccd1488050e865203"
+  },
+  "audit_source_root_sha256": "db0dea7fe3f52e88c8ab59af75eb7ceef71610c07f214fc5b2783f77dd98b56c",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 6893,
+      "sha256": "2aa0f383511b140f4cb4f87d743992f6379709c0b2ff59bbc68171eb78e5666e"
+    },
+    {
+      "name": "STATIC_REVIEW.json",
+      "bytes": 2642,
+      "sha256": "6ea89a4386c54b8d09c50d77c7af0a81724faf61a3c9ba49ab793034f581d2f1"
+    },
+    {
+      "name": "THREAT_MODEL.md",
+      "bytes": 2079,
+      "sha256": "ab481c381f007c8d25033f611751340991f46211c89924a164a421efb00d4667"
+    },
+    {
+      "name": "run_audit.py",
+      "bytes": 6327,
+      "sha256": "96458090f7815b6b4cb006de5a40337f67a75b573cf16a0ebcc65f53d1ee8bf5"
+    },
+    {
+      "name": "run_real_cupy_audit.py",
+      "bytes": 10687,
+      "sha256": "b3f7f416abede12a2940efc214be09c84f08242aaf7aca5d43bec0790a8a6a6e"
+    },
+    {
+      "name": "test_benign_audit.py",
+      "bytes": 20436,
+      "sha256": "1eab5638fe4bb0558e3aa23eb2c881ba9c19eec9e35c4cc6c1c0c35bf0433301"
+    },
+    {
+      "name": "verify_audit_source.py",
+      "bytes": 8163,
+      "sha256": "0d581735fb816f4cec21409ae321114bd7934c606e3ef5e63e10c4e52ab3d170"
+    }
+  ],
+  "static_disposition": "PASS_V0_SEMANTIC_CANONICALITY_AND_UINT16_REPAIRS__HOLD_EXACT_WORKSPACE_LEDGER_AND_REPLAY_DOC_CORRECTIONS__HOLD_RUNTIME_CUPY_RECEIPT__HOLD_ALL_PAYLOAD_AND_PRODUCTION_AUTHORITY",
+  "execution_attestation": {
+    "independent_cpu_tests_declared": 21,
+    "independent_cpu_tests_executed": false,
+    "fresh_cupy_receipt_validator_present": true,
+    "fresh_cupy_receipt_executed": false,
+    "runtime_pass_claimed": false
+  },
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "strata_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_payload_opened_statted_hashed_or_enumerated": false,
+    "network_used": false,
+    "payload_authority": false
+  },
+  "claim_boundary": "Independent source-only audit freeze. It confirms v0 canonicality and uint16 repairs, identifies exact-workspace and verifier-replay defects, and freezes CPU/CuPy tests. It is not a runtime pass, Qwen result, F<=0.8 result, complete physical-codec result, routed-read result or production authorization."
+}

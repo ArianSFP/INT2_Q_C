@@ -183,6 +183,84 @@ audit roots are respectively
 and
 `f0e558027e42b893664c189ad8e48ce71281f3dd5807887022326ffb440ff0e8`.
 
+### Current-STRATA algebraic gates
+
+The first direct bridge now targets the actual 64-way STRATA reconstruction
+index rather than a foreign four-level label. `STRATA-RM6 v0` constrains six
+completed level-major planes and scores a literal `D[4096,64]` table. Its
+local RM(5,12)^6 dimension is 9,516 information bits, or
+`2.3232421875 bpw`, before arithmetic termination and framing. A source-free
+CuPy legal-flip smoke reduced exact fixture distortion, but no Qwen or matched
+control payload has been opened under this package.
+
+Independent source review retained the local mechanism while recording five
+authority gaps: hypothetical packets above 2.5 bpw were mislabelled as below
+2.15, fractional tiny-oracle orders were silently truncated, the global
+current-K candidate had no physical packet, the outer transform/expert/read
+path was absent, and the CuPy receipt did not bind the frozen source/runtime.
+The status is therefore mechanism-only, not a rate-distortion result.
+
+The cheapest production-shaped algebraic experiment keeps each current
+`N=2^20` or `N=2^21` selected count `K` and changes only row ordering from the
+integer-Q31 BEC construction to `(-popcount(phase), phase)`. Source-only v0
+implements that exact rule and hard-holds proxy block lengths and a zero-coset
+format fork. Its independent review found that v0's integration hook and
+physical-result receipt were caller-trusted and that the CuPy smoke admitted a
+facade. Hardened v1 moved integration and accelerator checks to isolated
+workers and required literal packet decode/re-encode plus exact BF16 scoring.
+The subsequent reproducibility review still found hash-to-import races for
+external modules and the independent decoder, declarative provenance/read
+claims, and controls that did not affect acceptance. No global-RM Qwen claim
+exists until a narrower authority successor closes those gaps and emits one
+literal packet.
+
+The deterministic coordinate-function branch is now a six-plane
+BMP/ROBDD/QTT mechanism rather than a value tensor factorization. Its exact
+4,096-site mechanism packets span useful bounded points:
+
+```text
+rank-0 GF(2) factor                    0.078125 bpw
+terminal ROBDD / rank-1 BMP-QTT       0.11328125 bpw
+rank-2 BMP-QTT plus 64 exceptions     0.58203125 bpw
+rank-4 factor plus 64 exceptions      2.046875 bpw
+240-node ROBDD plus 64 exceptions     2.83203125 bpw
+```
+
+These rates omit STRATA scale/transform and outer expert fields. Independent
+review of v0 found noncanonical GF(2)/QTT aliases and uint16 geometry accepted
+past the serializer's range. Hardened v1 requires minimum-rank gauge-normal
+factors, a unique exact GF(2) TT form, explicit uint16 bounds, an integer
+2.15--2.5-bpw ledger, named workspace accounting, and an isolated real-CuPy
+worker. It remains source-only and unexecuted while awaiting independent v1
+review and the production STRATA/scorer/control/read bindings.
+
+### Finite non-dyadic Ramanujan refinement
+
+The non-dyadic residual proposal has been converted from a continuous oracle
+into a literal `RPF0` record. Each 4,096-value block receives exactly 48 bytes:
+14 charged `(9-bit support, 11-bit coefficient)` entries, one FP16 scale,
+header, CRC and canonical padding. With the independently audited
+`307/128-bpw` coarse stream, a 512-byte expert header and page alignment, the
+Qwen-shaped object is:
+
+```text
+coarse bytes       1,414,656
+fine bytes            55,296
+expert header            512
+total bytes        1,470,464 = 359 pages
+physical rate      2.4930555555555556 bpw
+layout reads       1 packet pass
+```
+
+This is a valid finite-rate design, not a Qwen distortion result. Independent
+review found that v0's manifest writer and verifier used different dictionary
+key orders and therefore disagreed on the source root. More importantly, v0
+did not reconstruct and rescore weights from decoded coarse+fine bytes, and
+its Gaussian controls used backend-specific NumPy/CuPy RNG streams. The
+claimed `1.0x` read is layout arithmetic rather than an instrumented runtime
+trace. A successor must repair all four boundaries before the source-first
+`D <= 0.025` gate is allowed to open controls or payloads.
+
 ## Assessment of the proposed branches
 
 ### 1. ε-TCQ and causal states — high scientific value, hard integration

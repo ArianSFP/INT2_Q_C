@@ -1,0 +1,57 @@
+{
+  "schema": "tactic-ramanujan384-authority-source-manifest-v1",
+  "status": "FROZEN_SOURCE_ONLY_NO_QWEN_OR_COARSE_PAYLOAD_AUTHORITY",
+  "source_root_algorithm": "sha256(canonical_json(sorted_member_rows)); sorted object keys",
+  "source_root_sha256": "6840b6a0eb4f2856f84c610ba11888382ecca257d88ebda7f5b49c0de9f3b3c5",
+  "members": [
+    {"bytes":4635,"name":"AUDIT_REPAIR_MAP.json","sha256":"41168a0c01b818f04bdc84bfe82bd448ad9502ebd7e85bf2a0db4a18fd2cdaab"},
+    {"bytes":4056,"name":"README.md","sha256":"e8949cec2ffafe305f72efb95dd81c29f8697d95b25c26ecb8d178fba0f21f27"},
+    {"bytes":12654,"name":"adapter.py","sha256":"d2564eb2851b6078aa69540447ece5ea29ca94f94311a119d3918c82ed98a12d"},
+    {"bytes":4091,"name":"authenticated_io.py","sha256":"f8caac951a67f14d0a1eaf857e3b6e0ea1c3d6aaa7e86142c48f4d74a7ee6d5e"},
+    {"bytes":12332,"name":"codec_authority.py","sha256":"661e0ebf3ccb5a4f287d88093b8f92edb142ed32ac8a32750b7510d0326c9b55"},
+    {"bytes":3895,"name":"contract.py","sha256":"3582da2e2f7b3b0f0d49b054e24e38caf20716913cd2f789a9107e45a3dec945"},
+    {"bytes":1421,"name":"dependency_lock.json","sha256":"5837e4a3b7c66fb22b5e31f2fd7ada26707e8ba234953e9d80b3218af571eae3"},
+    {"bytes":2795,"name":"design_lock.json","sha256":"45b09b7c0ed14a647705f61c49e93afac75468a3bb753961acfd6965d8a0cc6c"},
+    {"bytes":2170,"name":"freeze_source.py","sha256":"4598c8956be4c465183e15d7e121f4be6b1e0701eb5342bf71c7a33d39c2bb46"},
+    {"bytes":2647,"name":"manifest.py","sha256":"8874ad9f06e733520ff09497e7da834342c1ade2b3392d9e9438328cc9f4662c"},
+    {"bytes":2456,"name":"read_trace.py","sha256":"42ea11541c20a0922e95148c99337d4233dba36ebee75f8e8619cf70a6446f6e"},
+    {"bytes":1819,"name":"run_source_free_cupy_smoke.py","sha256":"048feba18dac55b9c89f9240b408dc216dd5a7500b0230d450cded0b23783eee"},
+    {"bytes":8746,"name":"run_source_free_fixture.py","sha256":"377d9d857411e5475f1c16bf1352df638842ffd9cfecbf13a27a0524aba3830c"},
+    {"bytes":4095,"name":"stable_controls.py","sha256":"b2e71aa3a658f2dfdd4b8ff68cae1b3c1ac9714afab7e92159abf13b423ee6e9"},
+    {"bytes":7531,"name":"test_source_only.py","sha256":"f2142455a4dd5ce22c7e66546c4438be666418437445c3ad83e88961bb9d41c3"},
+    {"bytes":2924,"name":"verify_source.py","sha256":"cc4444de20a803eabd614113fbc1d434d27e95c89539d224c9e280a4065070b4"}
+  ],
+  "dependency_pins": {
+    "schema": "tactic-ramanujan384-authority-dependency-lock-v1",
+    "status": "PINNED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+    "producer_v0": {
+      "path": "research/tactic_ramanujan384_adapter_v0",
+      "source_manifest_sha256": "287b8ad4c377956c9bb264d9d8731893a83e45180f75472f9b42968e3f20acde",
+      "claimed_source_root_sha256": "2a66a5d745fc0a31e311cf6ab5f44836726ae341db977bca8eac314df61124ad",
+      "own_sorted_key_root_sha256": "64669f3eeb9dd4f34a9fa36c9c6db592dcf5e37bdeb5ce149b3dbd51e2e24733",
+      "packet_py_sha256": "51024bfa32d7063f877136f1d41937bc986862fa0bbbb74e5139e781082c7c85",
+      "ramanujan_codec_py_sha256": "915b913b468243ec57800e1a717606e6c017921733977b09b737ee2d1fc1cc62",
+      "container_py_sha256": "833987b27f05e61c9563c1c28c4880fdf86fce52e1979e0d61ede4dd246e6e24",
+      "authenticated_io_py_sha256": "4d461bcdacb1a38fe129b2f320b82cb9d22cb57626b4413228dd197b67348382"
+    },
+    "independent_audit_v0": {
+      "path": "research/tactic_ramanujan384_adapter_v0_independent_source_audit_20260902",
+      "source_manifest_sha256": "bf9be5ae30bb27cf84f5ef038dabb67b3232f4fb2ca6256ba3442f3f2d1cfd56",
+      "claimed_source_root_sha256": "009070ebea6f91fffca5d6a6b366930b74be7993baa84d90d79c8a9f7d0572a3",
+      "disposition": "HOLD_PAYLOAD_AUTHORITY_PENDING_LITERAL_WEIGHT_REPLAY_AND_BACKEND_STABLE_CONTROLS"
+    },
+    "claim_boundary": "v1 repairs the listed source-authority gaps; neither v0 nor its audit is modified"
+  },
+  "access_attestation": {
+    "qwen_payload_accessed": false,
+    "coarse_model_payload_accessed": false,
+    "matched_model_control_payload_accessed": false,
+    "network_accessed": false
+  },
+  "execution_attestation": {
+    "source_only_tests": "NOT_EXECUTED_LOCAL_PYTHON_ABSENT_AND_RUNPOD_ENDPOINT_REFUSED",
+    "source_free_cupy_smoke": "NOT_EXECUTED_RUNPOD_ENDPOINT_REFUSED",
+    "payload_execution_authorized": false
+  },
+  "claim_boundary": "source authority repair only; no payload result or performance claim"
+}

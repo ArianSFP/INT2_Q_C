@@ -1,0 +1,28 @@
+{
+  "schema": "strata-rm-global-swap-v2-authority-execution-status",
+  "date": "2026-09-02",
+  "v1_source_root_sha256": "980a5f1d272ca5ffc7b4d35e7c234a86994d135fcacaf0d47a8b3e00fc3d4f14",
+  "v1_review_source_root_sha256": "1dfa55969b87543adbee785d72933f9ccb6f754eaade9e4e340a022c96c1afa8",
+  "local_static_hash_check": {
+    "executed": false,
+    "receipt": null
+  },
+  "source_only_hostile_tests": {
+    "executed": false,
+    "receipt": null
+  },
+  "immutable_current_integration_n20_n21": {
+    "executed": false,
+    "receipt": null
+  },
+  "independent_cpu_gpu_rm_order_parity": {
+    "executed": false,
+    "receipt": null
+  },
+  "model_data_accessed": false,
+  "payloads_opened": 0,
+  "qwen_result": null,
+  "matched_control_result": null,
+  "physical_result": null,
+  "status": "FROZEN_V2_AUTHORITY_SOURCE_ONLY__AWAIT_EXECUTION__HOLD_PAYLOAD_AND_RD"
+}

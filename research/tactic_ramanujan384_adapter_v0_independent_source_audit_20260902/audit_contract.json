@@ -1,0 +1,47 @@
+{
+  "schema": "tactic-ramanujan384-independent-source-audit-contract-v0",
+  "date": "2026-09-02",
+  "status": "HOLD_PAYLOAD_AUTHORITY_PENDING_LITERAL_WEIGHT_REPLAY_AND_BACKEND_STABLE_CONTROLS",
+  "producer": {
+    "path": "research/tactic_ramanujan384_adapter_v0",
+    "source_manifest_sha256": "287b8ad4c377956c9bb264d9d8731893a83e45180f75472f9b42968e3f20acde",
+    "claimed_source_root_sha256": "2a66a5d745fc0a31e311cf6ab5f44836726ae341db977bca8eac314df61124ad",
+    "own_verifier_sorted_key_source_root_sha256": "64669f3eeb9dd4f34a9fa36c9c6db592dcf5e37bdeb5ce149b3dbd51e2e24733"
+  },
+  "verified_source_mechanics": {
+    "periods_are_all_120_non_powers_of_two_3_through_127": true,
+    "dictionary_labels_are_384_unique_and_cover_every_period": true,
+    "exact_shift_rank_and_atom_identity_test_present": true,
+    "literal_packet_bytes": 48,
+    "outer_header_bytes": 512,
+    "qwen_physical_bytes": 1470464,
+    "qwen_physical_rate_exact": "359/144",
+    "qwen_external_object_pages": 359,
+    "source_first_absolute_D_gate": 0.025,
+    "phase_controls": 1,
+    "gaussian_controls": 8,
+    "authenticated_explicit_path_capability_surface": true
+  },
+  "authority_gaps": {
+    "decoded_composite_reconstructed_and_rescored": false,
+    "every_candidate_scored_after_literal_packet_replay": false,
+    "numpy_cupy_gaussian_stream_identity_specified": false,
+    "actual_input_manifest_opened_and_hashed": false,
+    "actual_auditor_source_manifest_opened_and_hashed": false,
+    "all_positive_universal_shapes_encodable": false,
+    "external_read_trace_measured": false,
+    "accelerator_HBM_measured": false,
+    "producer_source_root_matches_own_verifier": false
+  },
+  "access_attestation": {
+    "qwen_payload_accessed": false,
+    "coarse_payload_accessed": false,
+    "matched_control_payload_accessed": false,
+    "network_accessed": false
+  },
+  "execution": {
+    "source_runtime_tests": "PENDING_PYTHON_NUMPY_ENVIRONMENT",
+    "source_free_cpu_cupy_identity": "PENDING_CUPY_GPU_ENVIRONMENT",
+    "payload_execution_authorized": false
+  }
+}

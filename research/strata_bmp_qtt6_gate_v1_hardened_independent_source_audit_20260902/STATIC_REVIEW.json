@@ -1,0 +1,52 @@
+{
+  "schema": "strata-bmp-qtt6-v1-independent-static-review-v1",
+  "date": "2026-09-02",
+  "producer_manifest_sha256": "916aaca15620e3bf033e849b74a73604015fab280dfe8953683d6cbe04e0d2e4",
+  "producer_source_root_sha256": "369e01b30173977a5d8227e71104c8515f1b68ef440198dccd1488050e865203",
+  "verified_repairs": {
+    "bmp_minimum_rank_and_fixed_gauge": true,
+    "qtt_minimum_cut_ranks_fixed_gauge_and_unique_zero": true,
+    "uint16_geometry_prepack_validation": true,
+    "literal_six_plane_d64_abi": true,
+    "arbitrary_uint16_outer_geometry_with_power_of_two_local_tile": true,
+    "exact_packet_byte_formula": true,
+    "integer_complete_rate_bounds": true,
+    "fresh_cupy_worker_source_and_real_rank01_search": true,
+    "production_hooks_fail_closed_when_unbound": true
+  },
+  "findings": [
+    {
+      "id": "A1",
+      "severity": "hold_exact_workspace_claim",
+      "finding": "the declared logical plan is a conservative design-capacity ledger, not exact runtime ownership: accepted skew geometry admits a 3316-byte BMP packet although the bank formula uses a 2048-byte factor, and no literal bank is allocated",
+      "additional_evidence": "stable_order_i32 charges four bytes per item although np.argsort normally returns platform intp",
+      "codec_semantics_invalidated": false
+    },
+    {
+      "id": "A2",
+      "severity": "reproducibility_documentation",
+      "finding": "README passes nonexistent --manifest option and the frozen manifest member order violates verify_source.py's mandatory UTF-8 byte ordering, so the verifier cannot pass its own pinned source",
+      "codec_semantics_invalidated": false
+    },
+    {
+      "id": "A3",
+      "severity": "expected_production_hold",
+      "finding": "production hook authorization validates digest syntax/count only; separate object authentication and launch review remain mandatory",
+      "codec_semantics_invalidated": false
+    },
+    {
+      "id": "A4",
+      "severity": "execution_pending",
+      "finding": "independent CPU and fresh-CuPy runtime receipts are not part of this source freeze",
+      "codec_semantics_invalidated": false
+    }
+  ],
+  "disposition": "PASS_V0_SEMANTIC_CANONICALITY_AND_UINT16_REPAIRS__HOLD_EXACT_WORKSPACE_LEDGER_AND_REPLAY_DOC_CORRECTIONS__HOLD_RUNTIME_CUPY_RECEIPT__HOLD_ALL_PAYLOAD_AND_PRODUCTION_AUTHORITY",
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "strata_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_payload_opened_statted_hashed_or_enumerated": false,
+    "network_used": false,
+    "payload_authority": false
+  }
+}

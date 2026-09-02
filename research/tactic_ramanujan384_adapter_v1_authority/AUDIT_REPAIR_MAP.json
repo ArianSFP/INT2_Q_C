@@ -1,0 +1,72 @@
+{
+  "schema": "tactic-ramanujan384-v0-audit-repair-map-v1",
+  "date": "2026-09-02",
+  "pinned_audit_disposition": "HOLD_PAYLOAD_AUTHORITY_PENDING_LITERAL_WEIGHT_REPLAY_AND_BACKEND_STABLE_CONTROLS",
+  "repairs": [
+    {
+      "v0_finding": "no decoded-weight replay",
+      "repair": "adapter emits to a new regular file, instrumented-replays the exact bytes, literal-decodes coarse and fine streams to weights, checks the decoded coarse FP32 role hashes, and calls an independent FP64 scorer",
+      "source": ["adapter.py", "codec_authority.py"],
+      "tests": ["CodecTests.test_source_free_fixture_literal_weight_replay"],
+      "source_status": "IMPLEMENTED_NOT_RUNTIME_EXECUTED"
+    },
+    {
+      "v0_finding": "winner selection not packet-replayed for every candidate",
+      "repair": "every representable rank-0..14 candidate is canonical packet encoded and decoded before valid-coordinate SSE comparison; the final stream is decoded again",
+      "source": ["codec_authority.py"],
+      "tests": ["CodecTests.test_every_defined_rank_candidate_is_packet_replayed_and_tail_not_scored"],
+      "source_status": "IMPLEMENTED_NOT_RUNTIME_EXECUTED"
+    },
+    {
+      "v0_finding": "backend-dependent Gaussian controls",
+      "repair": "SplitMix64 plus twelve specified uint16 lanes generates one host FP64 normal-like stream; moment matching occurs on host and identical bytes are copied to NumPy/CuPy; backend RNG APIs are absent",
+      "source": ["stable_controls.py", "adapter.py"],
+      "tests": ["StableControlTests.test_frozen_integer_prng_and_control_bytes_repeat", "run_source_free_cupy_smoke.py"],
+      "source_status": "CPU_SOURCE_IMPLEMENTED_CUPY_IDENTITY_EXECUTION_PENDING"
+    },
+    {
+      "v0_finding": "actual input and auditor source manifests not opened",
+      "repair": "both paths are mandatory explicit capabilities; both regular files are opened, duplicate-key parsed, and hashed against binding and independent receipt",
+      "source": ["authenticated_io.py"],
+      "tests": ["CodecTests.test_source_free_fixture_literal_weight_replay"],
+      "source_status": "IMPLEMENTED_NOT_RUNTIME_EXECUTED"
+    },
+    {
+      "v0_finding": "universal geometry conditional and padded tails scored",
+      "repair": "contract explicitly rejects non-byte-integral 307/128 shapes; charges all fine tail packets; exposes valid last-block count; excludes nonexistent padded coordinates from candidate, final, and control scores",
+      "source": ["contract.py", "codec_authority.py", "adapter.py"],
+      "tests": ["ContractTests.test_qwen_shape_exact_integrality_tail_and_ledger", "ContractTests.test_tail_is_explicit_and_nonintegral_coarse_shape_rejected", "CodecTests.test_every_defined_rank_candidate_is_packet_replayed_and_tail_not_scored"],
+      "source_status": "IMPLEMENTED_NOT_RUNTIME_EXECUTED"
+    },
+    {
+      "v0_finding": "read amplification unmeasured",
+      "repair": "records an instrumented regular-file read event ledger separately from the contiguous-object layout bound; explicitly denies physical-storage and HBM telemetry claims",
+      "source": ["read_trace.py", "adapter.py"],
+      "tests": ["ReadTraceTests.test_trace_is_observation_and_layout_bound_is_distinct"],
+      "source_status": "IMPLEMENTED_NOT_RUNTIME_EXECUTED"
+    },
+    {
+      "v0_finding": "producer source-root closure fails its verifier",
+      "repair": "freezer and verifier import the same canonical sorted-row/sorted-key implementation",
+      "source": ["manifest.py", "freeze_source.py", "verify_source.py"],
+      "tests": ["ManifestTests.test_one_sorted_key_root_algorithm_is_order_invariant"],
+      "source_status": "IMPLEMENTED_STATIC_MANIFEST_FROZEN"
+    }
+  ],
+  "remaining_holds": [
+    "source-only tests were not executable locally because no Python runtime is installed",
+    "RunPod source-only and CuPy execution are pending because 74.2.96.53:12079 refused the connection",
+    "v1 requires an independent hostile source audit before any payload authorization",
+    "a production coarse decoder and its independent reconstruction receipt remain external pinned dependencies",
+    "no Qwen, coarse-model, or matched-model-control payload has been accessed",
+    "the file-read trace is not physical storage telemetry and accelerator HBM remains unmeasured",
+    "no universal performance, target pass, or portability claim is made"
+  ],
+  "test_inventory": {
+    "unittest_methods": 9,
+    "source_free_fixture": "run_source_free_fixture.py",
+    "source_free_cupy_smoke": "run_source_free_cupy_smoke.py",
+    "canonical_verifier": "verify_source.py"
+  },
+  "payload_execution_authorized": false
+}

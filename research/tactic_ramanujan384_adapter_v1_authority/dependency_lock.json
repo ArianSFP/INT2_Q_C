@@ -1,0 +1,21 @@
+{
+  "schema": "tactic-ramanujan384-authority-dependency-lock-v1",
+  "status": "PINNED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "producer_v0": {
+    "path": "research/tactic_ramanujan384_adapter_v0",
+    "source_manifest_sha256": "287b8ad4c377956c9bb264d9d8731893a83e45180f75472f9b42968e3f20acde",
+    "claimed_source_root_sha256": "2a66a5d745fc0a31e311cf6ab5f44836726ae341db977bca8eac314df61124ad",
+    "own_sorted_key_root_sha256": "64669f3eeb9dd4f34a9fa36c9c6db592dcf5e37bdeb5ce149b3dbd51e2e24733",
+    "packet_py_sha256": "51024bfa32d7063f877136f1d41937bc986862fa0bbbb74e5139e781082c7c85",
+    "ramanujan_codec_py_sha256": "915b913b468243ec57800e1a717606e6c017921733977b09b737ee2d1fc1cc62",
+    "container_py_sha256": "833987b27f05e61c9563c1c28c4880fdf86fce52e1979e0d61ede4dd246e6e24",
+    "authenticated_io_py_sha256": "4d461bcdacb1a38fe129b2f320b82cb9d22cb57626b4413228dd197b67348382"
+  },
+  "independent_audit_v0": {
+    "path": "research/tactic_ramanujan384_adapter_v0_independent_source_audit_20260902",
+    "source_manifest_sha256": "bf9be5ae30bb27cf84f5ef038dabb67b3232f4fb2ca6256ba3442f3f2d1cfd56",
+    "claimed_source_root_sha256": "009070ebea6f91fffca5d6a6b366930b74be7993baa84d90d79c8a9f7d0572a3",
+    "disposition": "HOLD_PAYLOAD_AUTHORITY_PENDING_LITERAL_WEIGHT_REPLAY_AND_BACKEND_STABLE_CONTROLS"
+  },
+  "claim_boundary": "v1 repairs the listed source-authority gaps; neither v0 nor its audit is modified"
+}

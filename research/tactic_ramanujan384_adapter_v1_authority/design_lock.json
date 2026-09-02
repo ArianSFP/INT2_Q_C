@@ -1,0 +1,41 @@
+{
+  "schema": "tactic-ramanujan384-adapter-authority-design-v1",
+  "date": "2026-09-02",
+  "status": "FROZEN_SOURCE_ONLY_NO_QWEN_OR_COARSE_PAYLOAD_AUTHORITY",
+  "supersedes": "no files; hardened sibling of v0",
+  "pinned_findings": {
+    "v0_source_manifest_sha256": "287b8ad4c377956c9bb264d9d8731893a83e45180f75472f9b42968e3f20acde",
+    "v0_source_root_sha256": "2a66a5d745fc0a31e311cf6ab5f44836726ae341db977bca8eac314df61124ad",
+    "v0_independent_audit_manifest_sha256": "bf9be5ae30bb27cf84f5ef038dabb67b3232f4fb2ca6256ba3442f3f2d1cfd56",
+    "v0_independent_audit_root_sha256": "009070ebea6f91fffca5d6a6b366930b74be7993baa84d90d79c8a9f7d0572a3",
+    "v0_audit_disposition": "HOLD_PAYLOAD_AUTHORITY_PENDING_LITERAL_WEIGHT_REPLAY_AND_BACKEND_STABLE_CONTROLS"
+  },
+  "repairs": {
+    "manifest_root": "one canonical sorted-member/sorted-key compact-JSON algorithm imported by freezer and verifier",
+    "literal_replay": "instrumented file replay; container coarse bytes decoded by an explicit pinned coarse decoder; fine bytes decoded from container; FP64 source MSE and F independently recomputed",
+    "candidate_authority": "each rank 0..14 candidate that is representable is encoded to a canonical 48-byte packet and decoded before its exact valid-coordinate SSE enters winner selection; selected stream is replayed again",
+    "controls": "SplitMix64 and twelve fixed uint16 lanes generate normal-like controls on host; FP64 bytes are copied unchanged to NumPy or CuPy; no backend random API",
+    "manifest_authentication": "actual input and auditor source manifests are explicit paths, opened, duplicate-key parsed, and content-hash checked against binding and receipt",
+    "read_accounting": "one instrumented regular-file data read is reported separately from the one-object layout upper bound; neither is HBM/device telemetry",
+    "universal_contract": "positive uint32 SwiGLU dimensions; no model identity; exact 307/128-bpw byte integrality mandatory; partial 4096-value role tails charged but nonexistent coordinates never enter MSE; actual physical rate decides eligibility"
+  },
+  "physical_contract": {
+    "rate_interval_bpw": [2.15, 2.5],
+    "target_relative_mse_at_2p5": 0.025,
+    "target_F": 0.8,
+    "coarse_rate_exact": "307/128",
+    "fine_packet_bits_per_4096_role_values": 384,
+    "header_bytes": 512,
+    "page_bytes": 4096,
+    "strict_cold_read_amplification_below": 2.0
+  },
+  "authorization": {
+    "source_free_fixture": true,
+    "source_free_cupy_smoke": true,
+    "qwen_payload": false,
+    "coarse_model_payload": false,
+    "matched_model_control_payload": false,
+    "network": false
+  },
+  "claim_boundary": "source authority repair only; no Qwen result, target pass, production read measurement, HBM measurement, or universal performance claim"
+}
