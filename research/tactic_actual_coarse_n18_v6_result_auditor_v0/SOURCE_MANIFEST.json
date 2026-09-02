@@ -1,0 +1,23 @@
+{
+  "schema": "tactic-actual-coarse-n18-v6-result-auditor-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_EXTERNAL_QWEN_RESULT_PINS",
+  "source_snapshot_root_sha256": "2f46047afc58818b85b6c40c34bfded620928be807702d48a41a5fbd43225fb5",
+  "members": [
+    {"name": "README.md", "bytes": 3459, "sha256": "cbd5ab0c76cbe9d75a025cb47b78597dfb24e7d5f83ed1829e98de8b146a6cf7"},
+    {"name": "UNRESOLVED_EXTERNAL_PINS.json", "bytes": 2140, "sha256": "04f87e872ecc76822a5bd7da834d36fe8c52470df7529179225e13cdfc58e415"},
+    {"name": "audit_core.py", "bytes": 36851, "sha256": "74d7144e800922b6d3e3e4e190a4d37aa1829be479b94f5be9a396c3a06b1607"},
+    {"name": "design_lock.json", "bytes": 2447, "sha256": "c528aa2da8308378a507dbb25397573bd673c2e60d5cbbb2ae7bafb0ab529f66"},
+    {"name": "result_auditor.py", "bytes": 39434, "sha256": "4b52b4d54d09f97b8a2c21f807b0c3eeb9db2997f5da00bb2de3b8b7f65caa75"},
+    {"name": "test_source_only.py", "bytes": 11464, "sha256": "20192cfe46aae17299375dc105d123c6b49984c823d03925656c115de97826ed"},
+    {"name": "verify_source.py", "bytes": 6040, "sha256": "c564ff80e728215e07ce62dae59894acee36f5874296dadfa17837da8a26cf61"}
+  ],
+  "access_attestation": {
+    "completed_v6_result_accessed": false,
+    "cuda_or_cupy_initialized": false,
+    "network_accessed": false,
+    "qwen_or_model_payload_accessed": false,
+    "runpod_access_scope": "source-only hostile tests in a fresh /tmp copy; no live result, payload, input manifest, or model path opened",
+    "runpod_accessed": true
+  },
+  "claim_boundary": "source-only independent result-auditor mechanics; no Qwen result, MSE, final TACTIC, universal-tail, universal-SwiGLU-MoE, or below-2x inference-HBM claim"
+}

@@ -1,0 +1,47 @@
+{
+  "build_access_attestation": {
+    "completed_v6_result_accessed": false,
+    "cuda_or_cupy_initialized": false,
+    "network_accessed": false,
+    "qwen_or_model_payload_accessed": false,
+    "runpod_access_scope": "source-only hostile tests in a fresh /tmp copy; no live result, payload, input manifest, or model path opened",
+    "runpod_accessed": true
+  },
+  "claim_boundary": {
+    "accelerator_hbm_measured": false,
+    "final_2_5_bpw_codec": false,
+    "qwen_checkpoint_provenance_from_shape": false,
+    "strict_below_2x_inference_hbm_authority": false,
+    "universal_arbitrary_shape_below_2_5_bpw": false,
+    "universal_swiglu_moe_performance": false
+  },
+  "frozen_source_pins": {
+    "frozen_decoder_core_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "polaris_encoder_source_sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+    "predecessor_lock_sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+    "runtime_lock_sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+    "source_free_smoke_file_sha256": "480e6d0667380ac7b3bc6ab6be9f54db0348cd2b78e1ca6948962d7915b8b1cd",
+    "v4_source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+    "v6_source_manifest_sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d",
+    "v6_source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2"
+  },
+  "independence": {
+    "COARSE_parser_reimplemented": true,
+    "BF16_scorer_reimplemented": true,
+    "canonical_packet_reencode_reimplemented": true,
+    "producer_RESULT_used_as_numerical_input": false,
+    "producer_decoder_imported": false,
+    "producer_encoder_imported": false,
+    "producer_packet_module_imported": false,
+    "separately_pinned_polar_arithmetic_core_injected_after_authentication": true
+  },
+  "purpose": "independently authenticate, causally decode, canonical-reencode and FP64-score one exact externally pinned N18-v6 Qwen-shaped coarse result",
+  "schema": "tactic-actual-coarse-n18-v6-result-auditor-design-v0",
+  "status": "SOURCE_ONLY_FROZEN_AWAITING_EXTERNAL_QWEN_RESULT_PINS",
+  "traffic_scope": {
+    "audit_external_file_read_reported": true,
+    "host_and_scratch_lower_bounds_reported": true,
+    "inference_ready_routed_decoder_executed": false,
+    "page_projection_reported_as_nonexecuted": true
+  }
+}

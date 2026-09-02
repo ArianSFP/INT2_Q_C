@@ -1,0 +1,75 @@
+{
+  "hashes": {
+    "frozen_decoder_core_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "input_manifest_sha256": null,
+    "polaris_encoder_source_sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+    "predecessor_lock_sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+    "runtime_lock_sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+    "smoke_receipt_sha256": "480e6d0667380ac7b3bc6ab6be9f54db0348cd2b78e1ca6948962d7915b8b1cd",
+    "v4_source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+    "v6_source_manifest_sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d",
+    "v6_source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2"
+  },
+  "input_roles": {
+    "down_transposed": {
+      "absolute_path": null,
+      "bytes": null,
+      "sha256": null
+    },
+    "gate": {
+      "absolute_path": null,
+      "bytes": null,
+      "sha256": null
+    },
+    "up": {
+      "absolute_path": null,
+      "bytes": null,
+      "sha256": null
+    }
+  },
+  "paths": {
+    "frozen_decoder_core": null,
+    "input_manifest": null,
+    "polaris_encoder_source": null,
+    "publication_directory": null,
+    "smoke_receipt": null,
+    "v4_package": null,
+    "v6_package": null
+  },
+  "publication_members": {
+    "COARSE.bin": {
+      "bytes": null,
+      "sha256": null
+    },
+    "COMPLETE.json": {
+      "bytes": null,
+      "sha256": null
+    },
+    "DECODER_RECEIPT.json": {
+      "bytes": null,
+      "sha256": null
+    },
+    "ENCODER_RECEIPT.json": {
+      "bytes": null,
+      "sha256": null
+    },
+    "INPUT_BINDING.json": {
+      "bytes": null,
+      "sha256": null
+    },
+    "RESULT.json": {
+      "bytes": null,
+      "sha256": null
+    },
+    "RUNTIME_RECEIPT.json": {
+      "bytes": null,
+      "sha256": null
+    },
+    "SMOKE_BINDING.json": {
+      "bytes": null,
+      "sha256": null
+    }
+  },
+  "schema": "tactic-actual-coarse-n18-v6-qwen-result-external-pins-v0",
+  "status": "UNRESOLVED_TEMPLATE_NOT_AUDIT_AUTHORITY"
+}
