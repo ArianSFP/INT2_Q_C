@@ -1,0 +1,102 @@
+{
+  "schema": "unifilar-wfa-entropy-census-independent-source-review-v8",
+  "status": "PASS_INDEPENDENT_SOURCE_REVIEW",
+  "review_date": "2026-09-02",
+  "reviewed_public_commit": "d563c4ac1e78a6b6e7f0722291211d1209f775af",
+  "reviewed_public_commit_parent": "2315551e504b0c7c1e357793aa259b745ff4d717",
+  "reviewed_source_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+  "reviewed_manifest_bytes": 3518,
+  "reviewed_member_count_excluding_manifest": 17,
+  "reviewed_member_bytes_excluding_manifest": 633319,
+  "reviewed_package_bytes_including_manifest": 636837,
+  "source_inventory": "SOURCE_INVENTORY.tsv",
+  "freeze_transition": {
+    "changed_paths": [
+      "M\tresearch/unifilar_wfa_entropy_census_stage0_v8/README.md",
+      "A\tresearch/unifilar_wfa_entropy_census_stage0_v8/SOURCE_MANIFEST.json",
+      "M\tresearch/unifilar_wfa_entropy_census_stage0_v8/design_lock.json"
+    ],
+    "only_lifecycle_readme_design_and_manifest": true,
+    "non_lifecycle_members_byte_identical_to_prefreeze_parent": true,
+    "python_members_byte_identical_to_prefreeze_parent": true,
+    "design_lock_only_status_changed": true,
+    "prefreeze_readme_bytes": 16067,
+    "prefreeze_readme_sha256": "ba6d7aa17494dd8a1ef34cf28fa0aea5e3b187443ae6dd3278f61eda3b3c43f2",
+    "sealed_readme_bytes": 16213,
+    "sealed_readme_sha256": "253b89f19c041118fb4148d8cbf76ebc71301b701e20f8cfefa421d77df68d0c"
+  },
+  "independent_reviewer": {
+    "path": "independent_source_review.py",
+    "bytes": 14321,
+    "sha256": "a9d5a2c8ca046312e2dbce657ceadf11ed965468375ca6988f7f68f5de14e9c2",
+    "imports_producer_modules": false
+  },
+  "audit_launcher": {
+    "path": "run_independent_source_review.py",
+    "bytes": 8730,
+    "sha256": "1e0f77166c2724896c00387be13d74eead0fe3033094e9fa23d6bcb227f2b10e"
+  },
+  "runpod_execution": {
+    "hostname": "1113c8d18a24",
+    "kernel": "Linux 1113c8d18a24 6.8.0-107-generic #107~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Mar 18 23:40:43 UTC  x86_64 x86_64 x86_64 GNU/Linux",
+    "python_version": "Python 3.12.3",
+    "python_executable": "/usr/bin/python3.12",
+    "python_executable_sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5",
+    "gpu_identity_csv": "NVIDIA GeForce RTX 5090, GPU-c06e0fe0-9836-2f98-8f10-0514d085f722, 00000000:16:00.0, 580.126.09",
+    "isolated_checkout": "/workspace/uwfa_v8_final_source_audit_d563c4a_20260902/clean-repo",
+    "sparse_checkout_paths": [
+      "research/unifilar_wfa_entropy_census_stage0_v8"
+    ],
+    "tracked_worktree_clean_before_and_after": true,
+    "transport_bundle_bytes": 51886783,
+    "transport_bundle_sha256": "e4a525cf6b8ffe71c30573e0dab101c36c31af77d27e5c3b449a1be5701c0988",
+    "git_bundle_verified_complete_history": true,
+    "anonymous_github_clone_available_from_runpod": false
+  },
+  "sealed_source_verifier": {
+    "command": "/usr/bin/python3.12 -I -B verify_source.py --package /workspace/uwfa_v8_final_source_audit_d563c4a_20260902/clean-repo/research/unifilar_wfa_entropy_census_stage0_v8 --compact",
+    "schema": "unifilar-wfa-source-verification-v8",
+    "status": "PASS_SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+    "source_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+    "candidate_cells": 150,
+    "expert_count_range_inclusive": [1, 256],
+    "owner_set_bytes": 32,
+    "return_code": 0,
+    "stdout_bytes": 3069,
+    "stdout_sha256": "e6c4038c53f909206675921041a36e4723f27b2aadf8e797c472213b829c8ae5",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "payload_authority_granted": false
+  },
+  "source_only_tests": {
+    "command": "/usr/bin/python3.12 -I -B test_source_only.py",
+    "return_code": 0,
+    "reported_tests": 68,
+    "explicit_ok_lines": 68,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "reported_seconds": 78.303,
+    "launcher_wall_seconds": 78.52737709798384,
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_bytes": 10804,
+    "stderr_sha256": "08a25d0d5bc263e1b3c095b49e511ef29efd5a5df56a7ddf04c39831258497d2",
+    "summary": "Ran 68 tests; all 68 explicit test lines passed; OK"
+  },
+  "scope": {
+    "reviewed": "sealed source, freeze transition, source verifier, and synthetic source-only tests only",
+    "producer_modules_imported_by_independent_reviewer": false,
+    "qwen_opened_statted_hashed_or_enumerated": false,
+    "current_artifact_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "payload_authority_granted": false,
+    "qwen_or_payload_performance_claim": false
+  },
+  "remaining_external_gates": [
+    "EXTERNAL_PINNED_DISPATCHER_AUDIT",
+    "PUBLIC_GITHUB_COMMIT_FRESH_RTX5090_ALL150_AND_REPRESENTATIVE_REPLAY",
+    "FRESH_PROCESS_INDEPENDENT_RESULT_AUDIT",
+    "NO_PAYLOAD_BEFORE_EXTERNAL_AUTHORITY"
+  ]
+}
