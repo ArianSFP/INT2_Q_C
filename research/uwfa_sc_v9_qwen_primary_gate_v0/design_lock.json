@@ -1,0 +1,83 @@
+{
+  "schema": "uwfa-sc-v9-qwen-primary-design-v0",
+  "status": "SOURCE_ONLY_NONPROMOTING_NO_PAYLOAD_ACCESSED_DURING_BUILD",
+  "sealed_v8_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+  "pinned_repaired_qwen_support_sha256": "399cb25260d34ec299cc91a17f129da9be5ba5b799c961e43f0c1b0637ee0174",
+  "scientific_scope": {
+    "executed": [
+      "unchanged sealed-v8 150-candidate bank",
+      "unchanged sealed-v8 disjoint stream-owner dependence-component nested holdout",
+      "unchanged sealed-v8 complete-panel winner fit",
+      "unchanged sealed-v8 literal final container, standalone decode, routed decode, canonical rebuild and physical metrics"
+    ],
+    "unreachable_and_deferred": [
+      "four survivor shuffles",
+      "coordinate-disjoint diagnostic",
+      "matched Gaussian controls",
+      "any positive promotion"
+    ],
+    "positive_claim_authority": false
+  },
+  "runtime_admission": {
+    "exact_primary_cell_symbol_updates": 38621316130,
+    "definition": "three exact disjoint-component nested folds plus complete-panel final fit and exact score",
+    "live_throughput_source": "sealed-v8 source-free representative CuPy receipt, independently GPU-identity-bound and revalidated by sealed-v8 receipt validation",
+    "conservative_formula": "0.5 * authenticated live measured updates per second",
+    "conservative_tamper_bounds_updates_per_second": [1800000.0, 4500000.0],
+    "kernel_work_budget_seconds": 21600.0,
+    "admission_formula": "38621316130 / authenticated_live_conservative_updates_per_second <= 21600",
+    "authenticated_reference_observation_updates_per_second": 3242398.2106118356,
+    "authenticated_reference_projected_primary_gpu_kernel_work_seconds": 11911.3426609967,
+    "not_a_total_launch_wall_time_projection": true,
+    "unmodeled_wall_components": [
+      "one authenticated STRATA panel decode",
+      "host-side final arithmetic encode/decode and canonical rebuild",
+      "routed and standalone causal decode and physical metrics",
+      "publication and filesystem synchronization"
+    ]
+  },
+  "evaluation_workload_pins": {
+    "purpose": "detect scientific weakening or a different Qwen evaluation panel; never decoder identity inputs",
+    "panel_streams": 15,
+    "panel_symbols": 126627266,
+    "folds": [
+      {"component_ordinal": 0, "identity_indices": [0, 1], "cell_symbol_updates": 12865688966},
+      {"component_ordinal": 1, "identity_indices": [2, 3], "cell_symbol_updates": 12794875916},
+      {"component_ordinal": 2, "identity_indices": [4, 5], "cell_symbol_updates": 12707496716}
+    ],
+    "v8_full_survivor_maximum_updates_disclosed_but_not_admitted": 286625070746,
+    "coordinate_diagnostic_updates_disclosed_but_not_admitted": 93518490096,
+    "serialized_into_decoder_state": false
+  },
+  "source_access_order": [
+    "authenticate this source-only package",
+    "authenticate repaired Qwen support and exact sealed-v8 package",
+    "import NumPy and CuPy and authenticate external decoder sources",
+    "run exact all-150 source-free gate and representative source-free outer fold",
+    "validate complete source-free receipts and live throughput; seal SourceFreeReview capability",
+    "only then open the exact pinned Qwen artifact through a retained no-follow descriptor",
+    "decode once and reuse the identical panel object for the second extraction request",
+    "admit exact primary workload and execute exact primary plus literal final container"
+  ],
+  "semantic_bridge": {
+    "container_abi": "list[list[int]]",
+    "scalar_abi": "exact built-in int",
+    "tuple_rows_forbidden": true,
+    "reason": "a Python list preserves one-axis NumPy advanced indexing; a tuple is interpreted as one index per array axis",
+    "bound_into_decoder_bundle": true,
+    "production_authority": false
+  },
+  "panel_cache": {
+    "extract_requests": 2,
+    "underlying_causal_decodes": 1,
+    "same_panel_object_required": true,
+    "positive_claim_authority": false
+  },
+  "claim_boundary": "A failure may kill this exact v8 source recoder. A primary survivor remains nonpromoting and requires separately authorized shuffles, coordinate diagnostics, matched controls and a fresh independent result audit.",
+  "build_access_attestation": {
+    "qwen_artifact_opened_statted_hashed_or_enumerated": false,
+    "qwen_bf16_source_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "cuda_launched_during_builder_edit": false
+  }
+}

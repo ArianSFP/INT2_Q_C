@@ -1,0 +1,33 @@
+{
+  "schema": "uwfa-sc-v9-primary-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 4288,
+      "sha256": "b70d5115ed10d1588b074a1536e2c748f6a7fcb71db9393a8df948e636f361eb"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 4506,
+      "sha256": "3ca49b26bc41ab0100494085139ab35d20b4be5ea4e75949cb75f089ea7ebbf7"
+    },
+    {
+      "name": "primary_gate.py",
+      "bytes": 37864,
+      "sha256": "d1ff04ce3c2cc36208e464eaed943d6c94eb91a47e9d3c460b2d562b7162cc4d"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 13984,
+      "sha256": "1c272b40c95208c91f05d463d7de85d37604e405114d270163c79bffc7db6964"
+    }
+  ],
+  "access_attestation": {
+    "qwen_artifact_opened_statted_hashed_or_enumerated": false,
+    "qwen_bf16_source_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "cuda_initialized_during_source_build": false
+  },
+  "claim_boundary": "Source-only nonpromoting primary diagnostic. A primary survivor still requires separately authorized diagnostics, controls and independent result audit."
+}
