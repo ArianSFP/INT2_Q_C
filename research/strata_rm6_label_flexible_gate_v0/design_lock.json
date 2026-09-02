@@ -1,0 +1,80 @@
+{
+  "schema": "strata-rm6-label-flexible-gate-v0-design-lock",
+  "status": "GO_LOCAL_MECHANISM_HOLD_PRODUCTION_AND_PAYLOAD",
+  "date": "2026-09-02",
+  "authenticated_strata": {
+    "auditor_bytes": 116835,
+    "auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "current_polar_block_log2": [20, 21],
+    "level_major_planes": 6,
+    "reconstruction_indices": 64,
+    "eta": 0.25,
+    "frozen_coset": "procedural current_random"
+  },
+  "candidate_a_local_direct_rm4096": {
+    "block_values": 4096,
+    "variables": 12,
+    "uniform_orders": [5, 5, 5, 5, 5, 5],
+    "per_plane_dimension": 1586,
+    "information_bits": 9516,
+    "raw_information_bpw": 2.3232421875,
+    "information_rule": "popcount(internal_sc_phase)>=m-r",
+    "transform": "polar_transform(internal[bit_reverse])",
+    "exact_rm": true,
+    "header_bytes": 40,
+    "crc_bytes": 4,
+    "alignment_bytes": 128,
+    "maximum_packet_bytes": 1280,
+    "target_minimum_physical_bpw": 2.15,
+    "maximum_physical_bpw": 2.5,
+    "promotion_rate_source": "actual emitted literal packet, never selected dimension",
+    "subminimum_packet_status": "mechanism fixture unless literal charged refinement/padding is implemented",
+    "literal_padding_or_refinement_implemented": false,
+    "scale_field": "literal FP16 bits",
+    "profile_q_field": "literal uint8",
+    "sc_seed_field": "literal uint32",
+    "rht_seed_field": "literal uint64",
+    "orders_field": "six literal uint8 values",
+    "coset_selector_field": "literal uint8",
+    "arithmetic_stream": "canonical current 32-bit integer binary coder",
+    "arithmetic_overflow": "fail closed; no raw-information fallback",
+    "drop_in_current_global_strata": false
+  },
+  "candidate_b_global_strata_rm_ordered": {
+    "block_log2": [20, 21],
+    "selected_counts": "retain current per-level K exactly",
+    "ordering": "descending phase popcount then ascending phase",
+    "exact_rm_condition": "K equals sum_{j=0}^r binom(m,j) for an integer r",
+    "otherwise_classification": "RM-ordered truncated polar set",
+    "physical_rate": "must be measured from canonical current arithmetic stream",
+    "local_4096_dimension_ledger_applies": false,
+    "status": "HOLD_NO_CURRENT_K_ARITHMETIC_PAYLOAD_MEASUREMENT"
+  },
+  "coset_controls": {
+    "zero_frozen": "tests low-degree coordinate-function codewords",
+    "current_random": "tests affine covering geometry, not low-degree label structure",
+    "selector_charged_in_header": true,
+    "untransmitted_dither": false
+  },
+  "abi": {
+    "completed_level_major_bitplanes": 6,
+    "index_alphabet": 64,
+    "four_level_label_abstraction": false,
+    "fail_closed_if_plane_count_is_not_six": true
+  },
+  "optimization": {
+    "distortion": "exact float64 N-by-64 table using current eta/alphabet and FP16 scale",
+    "small_n_exact_joint_oracle": true,
+    "cupy_full_rm5_12_single_flip_local_search_smoke": true,
+    "production_joint_rm5_12_encoder": false,
+    "unconstrained_64way_bound_is_not_legal_codeword": true
+  },
+  "verdicts": {
+    "mechanism": "GO_LOCAL_RM_FROZEN_SET_AND_LITERAL_PACKET",
+    "dominant_oracle": "GO_SMALL_N_EXACT_ONLY",
+    "production_local_search": "HOLD_NO_FULL_JOINT_RM5_12_ENCODER",
+    "global_swap": "HOLD_NO_CURRENT_K_ARITHMETIC_PAYLOAD_MEASUREMENT",
+    "local_target_packet": "HOLD_CONTROL_PACKETS_BELOW_2_15_AND_NO_LITERAL_REFINEMENT",
+    "payload": "HOLD_NO_QWEN_COARSE_OR_CONTROL_PAYLOAD"
+  }
+}

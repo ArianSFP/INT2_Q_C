@@ -1,0 +1,19 @@
+{
+  "schema": "strata-rm6-label-flexible-gate-v0-source-manifest",
+  "status": "FROZEN_GO_LOCAL_MECHANISM_HOLD_PRODUCTION_AND_PAYLOAD",
+  "source_root_sha256": "d17718615dedebca08ead66c0555e9d649768a353f3a55d169a9bf400f11bd32",
+  "members": [
+    {"name": "README.md", "bytes": 3760, "sha256": "fa683ae5ff1d52f65f6c0ede6cae889ec25b69cb5d983794d87c97c1f399fe5a"},
+    {"name": "RED_TEAM.md", "bytes": 2955, "sha256": "cb5cffe335944c09d12445d4fd96b435450c77c46fbe954c71fe7892798541cd"},
+    {"name": "cupy_soft_search_smoke.py", "bytes": 7274, "sha256": "e92947fe6badcc708ef30c702f08c939893182f6d5b5b34cd1ceb6bcb1fc864f"},
+    {"name": "design_lock.json", "bytes": 3441, "sha256": "bb9077345c5a0256176314350255cf0506be5d3da13e34f19b90f98ac96351ef"},
+    {"name": "exact_oracle.py", "bytes": 3140, "sha256": "232ee16005efbf02b41c5498fc0af237ba7ebb3512e6d34591f9aca724a2384b"},
+    {"name": "packet_codec.py", "bytes": 7586, "sha256": "8d84f9fdac845c5cc478216f591e56e59cd3c06fc084837b8e5a8a67d0bdf6b5"},
+    {"name": "rm6_core.py", "bytes": 8310, "sha256": "f939880de6ab84d6da07bbfb445d0ff28446285584a04a326ef7b24e39c9843b"},
+    {"name": "run_gate.py", "bytes": 6840, "sha256": "7c4f7391b64a2bacb0d11870f40e7d7043007691cb0ef5509e6080f6d7b7448d"},
+    {"name": "strata_rm_sc.py", "bytes": 15892, "sha256": "4f2eb9c31d3588b1cbcc4276666bb33566dc4353c86a4c8977f719d7bd3735cd"},
+    {"name": "strata_semantics.py", "bytes": 3021, "sha256": "384cbef3994b0ba538578c1b878489dfced89e9ca578bed6429abc09fb53be31"},
+    {"name": "test_source_only.py", "bytes": 9562, "sha256": "30660602cea10f787211cfa17dc40cc2ba8160366042b7046c01f451a9f3242c"},
+    {"name": "verify_source.py", "bytes": 3277, "sha256": "eea0306d66e7c32ed461a426a2ffc931470c422b3decb1624ec90ae8c944980c"}
+  ]
+}
