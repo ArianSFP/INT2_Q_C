@@ -1,0 +1,32 @@
+{
+  "exploratory_semantic_bridge": {
+    "operation": "for every group ordinal emitted by the pinned STRATA helper, apply built-in int without reordering",
+    "positive_claim_authority": false,
+    "receipt_sha256": "a33018d3354c0042203516aca90ce0febf856c61aeb5056986cb3d5d7503ba78",
+    "schema": "uwfa-sc-v8-qwen-early-gate-strata-group-ordinal-abi-v0",
+    "status": "EXPLORATORY_VALUE_PRESERVING_NUMPY_INTEGER_TO_PYTHON_INT"
+  },
+  "members": [
+    {
+      "name": "strata_expert_local_codec/common.py",
+      "sha256": "3f085c9531b714d0d7877388f54ae50495dc3ea631491563abceb4db55608fd1"
+    },
+    {
+      "name": "strata_v2_klt_mixed_independent_auditor_v1.py",
+      "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+    },
+    {
+      "name": "strata_sc_adapter.py",
+      "sha256": "08fc8808ac168f6930ee9482e160f25f2bd087829fca4630553aea3510d722c6"
+    },
+    {
+      "name": "universal_adapter.py",
+      "sha256": "a5ab2e1919af98c2aa9b3032faa0ba5552efe05cca250bd6844fd48c76aabbc8"
+    },
+    {
+      "name": "container_codec.py",
+      "sha256": "645debb547a76818a880bfc346a2dd6230af97b07dc832afb3548a83d6920fed"
+    }
+  ],
+  "schema": "uwfa-sc-v8-qwen-early-gate-decoder-bundle-v0"
+}

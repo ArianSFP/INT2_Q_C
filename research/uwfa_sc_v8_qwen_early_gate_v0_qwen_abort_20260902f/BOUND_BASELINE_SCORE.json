@@ -1,0 +1,15 @@
+{
+  "artifact_bytes": 8847360,
+  "artifact_sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b",
+  "independent_decoder_source_sha256": "fec93c229ef431e048caf676663e2920e348462596a1f9bba679aa67d4102dcf",
+  "normalization": "FP64_SSE_SUM_DIVIDED_BY_FP64_SOURCE_ENERGY_SUM",
+  "original_source_panel_sha256": "4ba7afd544b8055e066c0cb859071cef5b9bfb63b807e1d4549f572850bbf67a",
+  "reconstruction_f64_sha256": "84309366c3bbc6459d461f1b3e23c48944623ae7dfb8bab7e0c4698f3e661d67",
+  "relative_mse": 0.030902167403153148,
+  "schema": "uwfa-bound-baseline-score-v8",
+  "score_receipt_sha256": "8a87b431ab75c6b5fc6439c28911c51363665732f50047dae164749dc3933c48",
+  "source_energy_fp64": 16192.89450885593,
+  "sse_fp64": 500.39553685426534,
+  "status": "PASS_INDEPENDENT_BASELINE_SCORE",
+  "weights": 28311552
+}

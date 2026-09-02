@@ -1,0 +1,30 @@
+{
+  "completion_sha256": "dcfe412abb4e7127a6f364dcb27ba19c9fc8545670d9fea931b24d9376c37364",
+  "controls_run": false,
+  "members": [
+    {
+      "bytes": 823,
+      "name": "BOUND_BASELINE_SCORE.json",
+      "sha256": "06cc568271a834026afd33e331a8d933644f61ab9c973de1b7eb975229bb3dea"
+    },
+    {
+      "bytes": 1223,
+      "name": "DECODER_BUNDLE.json",
+      "sha256": "d463a50dbb58daff710a04827349ba9846dfac1efe5c47b77ea65d628988c066"
+    },
+    {
+      "bytes": 844088,
+      "name": "RESULT.json",
+      "sha256": "797ebdbe5a6d570e96d82398fa6f19b93fbf0f6973d54c5dd5dd83ffd1477d68"
+    },
+    {
+      "bytes": 1666658,
+      "name": "SOURCE_PREFLIGHT.json",
+      "sha256": "65b2cb5b172e83922d87055eb58c13fcdada7caf1bfd90d2d8488025efa058b4"
+    }
+  ],
+  "positive_claim_authority": false,
+  "schema": "uwfa-sc-v8-qwen-early-gate-completion-v0",
+  "source_snapshot_root_sha256": "be06cf4d6c474a01517c4062f448b0c41c7f59d31724d6d5af380b8c064de4fa",
+  "status": "EARLY_DIAGNOSTIC_ABORT_RUNTIME_BUDGET_BEFORE_FIT"
+}
