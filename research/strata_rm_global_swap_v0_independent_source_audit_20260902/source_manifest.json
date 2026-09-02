@@ -1,0 +1,16 @@
+{
+  "schema": "strata-rm-global-swap-v0-independent-audit-manifest",
+  "status": "FROZEN_INDEPENDENT_AUDIT_UNEXECUTED__HOLD_RUNPOD_AND_PAYLOAD",
+  "producer_source_root_sha256": "4f856e268d37ee1d6f32b4a2d1b8cd6879c235639ad75809ffd75fc7c4372d6c",
+  "source_root_sha256": "7eabe4580908d4a79eceb2f7fdaf838d535028c06263c2f4841032664db11ad0",
+  "members": [
+    {"name": "AUDIT_ASSESSMENT.md", "bytes": 4067, "sha256": "2c245e59bb0bf0d44f3e4393d73bacbb531bff38303571463b444860860ab056"},
+    {"name": "EXECUTION_STATUS.json", "bytes": 803, "sha256": "85ee53e57b27b43c205c30756357497f5583a71a5fc093114300982664cb4529"},
+    {"name": "independent_auth.py", "bytes": 6701, "sha256": "5dc775ac2a28ebf6544b6b22d65ba5a47145c6039ca80c6a7472394bd0e1780d"},
+    {"name": "README.md", "bytes": 1106, "sha256": "5222bc7d2d37b6dbf8856b78246a3f893cd80fb946eb67111bc1a73d0a4143b3"},
+    {"name": "run_audit.py", "bytes": 2968, "sha256": "113579dd0c8efa77a0e09241cade4b4f8c8f2789f2e6c197aa0ae151341c3816"},
+    {"name": "run_real_cupy_audit.py", "bytes": 4323, "sha256": "7e6b208462c7669a22672c32cab0fde07f0e1afd30fcbb9bcc8e5d1e9548c1f5"},
+    {"name": "test_hostile_audit.py", "bytes": 14321, "sha256": "644832cb2ad5f9550fc96fac1583d5386373ac7c87733bdfe9302e3a690f29ab"},
+    {"name": "verify_audit.py", "bytes": 2919, "sha256": "6d82f5566b9c7cd11511b9e65faab82de02beeb228010a7c7f0e4746f0dccbd4"}
+  ]
+}

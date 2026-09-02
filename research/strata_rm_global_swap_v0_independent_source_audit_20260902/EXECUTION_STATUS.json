@@ -1,0 +1,22 @@
+{
+  "schema": "strata-rm-global-swap-v0-independent-audit-execution-status",
+  "producer_source_root_sha256": "4f856e268d37ee1d6f32b4a2d1b8cd6879c235639ad75809ffd75fc7c4372d6c",
+  "local_static_authentication": {
+    "executed": true,
+    "member_hashes_and_sizes_match": true,
+    "independent_root_recalculation_match": true,
+    "external_pin_hashes_match": true,
+    "payloads_opened": 0
+  },
+  "python_hostile_suite": {
+    "executed": false,
+    "reason": "local Windows workspace has no Python interpreter; RunPod endpoint unavailable at freeze time",
+    "receipt": null
+  },
+  "real_cupy_full_order_audit": {
+    "executed": false,
+    "reason": "RunPod endpoint unavailable at freeze time",
+    "receipt": null
+  },
+  "status": "FROZEN_INDEPENDENT_AUDIT_UNEXECUTED__HOLD_RUNPOD_AND_PAYLOAD"
+}

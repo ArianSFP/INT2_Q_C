@@ -1,0 +1,88 @@
+{
+  "schema": "strata-bmp-obdd-qtt6-hardened-source-lock-v1",
+  "status": "FROZEN_SOURCE_ONLY__EXECUTION_PENDING__NO_PAYLOAD_AUTHORITY",
+  "date": "2026-09-02",
+  "predecessor_pins": {
+    "v0_source_manifest_sha256": "a7778080a00d5d2967636ac8d60dd31698401c4dcf8da160c9451c92dc5f6b18",
+    "v0_source_root_sha256": "6b7baf9706349d10108121d4dcb03661b2378dc436303bbfe1bbccd38a0c8914",
+    "v0_independent_audit_manifest_sha256": "6038fea16ba29fad6c8b351bc0968fd00f94f007f1e113a4209775974cc33df1",
+    "v0_independent_audit_source_root_sha256": "e905324af56f544b27423390e22c97de5c4b15696c621ab133c2da5533e9f4a9"
+  },
+  "semantic_contract": {
+    "completed_planes": 6,
+    "distortion_columns": 64,
+    "decoded_index_range": [0, 63],
+    "four_level_abi_accepted": false,
+    "internal_sc_decisions_accepted": false,
+    "gf2_factor_canonical_minimum_rank": true,
+    "qtt_canonical_minimum_cut_ranks": true,
+    "qtt_zero_has_unique_empty_representation": true
+  },
+  "coordinate_contract": {
+    "domain": "role(base3) x row(base arbitrary uint16) x column(base arbitrary uint16)",
+    "only_local_tile_is_power_of_two": true,
+    "fixture_shape": [704, 2304, 3],
+    "fixture_tile": [16, 256],
+    "fixture_weights": 4096,
+    "uint16_geometry_checked_before_pack": true,
+    "variable_order_bank_size": 4
+  },
+  "family_bank": {
+    "gf2_matrix_factor_semantic_rank_cap": 4,
+    "robdd_total_node_cap": 240,
+    "gf2_qtt_semantic_bond_rank_cap": 2,
+    "joint_exception_cap": 64,
+    "families_are_label_functions_not_value_tensor_decompositions": true,
+    "families_are_not_probability_mps_models": true
+  },
+  "rate_contract": {
+    "mandatory_complete_rate_cap_argument": true,
+    "minimum": "ceil(43*N/20) bits",
+    "maximum": "floor(5*N/2) bits",
+    "outer_prior_and_reserved_bits_charged": true,
+    "source_fixture_complete_rate_claim": false
+  },
+  "workspace_contract": {
+    "cpu_named_logical_buffers_exact": true,
+    "cpu_python_allocator_peak_claimed": false,
+    "cpu_cap_bytes": 67108864,
+    "gpu_dedicated_pool_samples": true,
+    "gpu_cap_bytes": 134217728
+  },
+  "cupy_contract": {
+    "fresh_process_flags": ["-I", "-B"],
+    "nonce_and_distinct_pid_required": true,
+    "module_origin_file_hash_distribution_and_version_recorded": true,
+    "compiled_kernel_probe_required": true,
+    "active_device_recorded": true,
+    "actual_search_scope": "rank-0/rank-1 BMP bounded search",
+    "robdd_and_qtt_gpu_search_held": true
+  },
+  "production_hooks": {
+    "strata_packet": "HELD",
+    "scales": "HELD",
+    "forward_inverse_transforms": "HELD",
+    "component_expert_framing": "HELD",
+    "original_bf16_scorer": "HELD",
+    "minimum_eight_complete_gaussian_controls": "HELD",
+    "routed_read_ledger": "HELD",
+    "independent_audit_receipt": "HELD"
+  },
+  "payload_authority": {
+    "qwen": false,
+    "other_model": false,
+    "current_strata_artifact": false,
+    "coarse_artifact": false,
+    "matched_control_artifact": false,
+    "requires_independent_source_audit": true,
+    "requires_separate_production_launch_review": true
+  },
+  "execution_attestation": {
+    "source_tests_executed": false,
+    "n4096_fixture_executed": false,
+    "fresh_cupy_search_executed": false,
+    "reason": "provided RunPod SSH endpoint refused connections",
+    "runtime_pass_claimed": false
+  },
+  "claim_boundary": "Hardened source-only gate; no Qwen, F<=0.8, full physical bpw, or routed-read claim."
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "strata-bmp-qtt6-independent-audit-execution-status-v0",
+  "date": "2026-09-02",
+  "source_manifest_sha256": "a7778080a00d5d2967636ac8d60dd31698401c4dcf8da160c9451c92dc5f6b18",
+  "source_root_sha256": "6b7baf9706349d10108121d4dcb03661b2378dc436303bbfe1bbccd38a0c8914",
+  "static_review_completed": true,
+  "hostile_tests_executed": false,
+  "n4096_fixture_executed": false,
+  "real_cupy_audit_executed": false,
+  "runpod_connection_result": "ssh: connect to host 74.2.96.53 port 12079: Connection refused",
+  "payloads_accessed": false,
+  "qwen_result": false,
+  "runtime_pass_claimed": false,
+  "disposition": "HOLD_PRODUCTION__CORRECT_SEMANTIC_CANONICALITY_AND_UINT16_GEOMETRY__THEN_SEPARATELY_BIND_STRATA_CONTROL_SCORER_AND_READ_LEDGER"
+}

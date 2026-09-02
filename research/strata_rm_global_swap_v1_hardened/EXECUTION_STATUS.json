@@ -1,0 +1,32 @@
+{
+  "schema": "strata-rm-global-swap-v1-hardened-execution-status",
+  "date": "2026-09-02",
+  "source_manifest_frozen": true,
+  "local_static_hash_check": {
+    "executed": true,
+    "members_checked": 14,
+    "exact_entry_set": true,
+    "member_sizes_and_sha256_match": true,
+    "canonical_source_root_matches": true,
+    "payloads_opened": 0,
+    "status": "PASS_LOCAL_STATIC_CLOSURE"
+  },
+  "python_source_and_hostile_suites": {
+    "executed": false,
+    "reason": "local Windows workspace has no Python interpreter; RunPod endpoint unavailable at authoring time",
+    "receipt": null
+  },
+  "isolated_current_hook_worker": {
+    "executed": false,
+    "reason": "RunPod endpoint unavailable at authoring time",
+    "receipt": null
+  },
+  "isolated_real_cupy_worker": {
+    "executed": false,
+    "reason": "RunPod endpoint unavailable at authoring time",
+    "receipt": null
+  },
+  "payloads_opened": 0,
+  "qwen_result": null,
+  "status": "FROZEN_SOURCE_ONLY_UNEXECUTED__HOLD_RUNPOD_AND_PAYLOAD"
+}

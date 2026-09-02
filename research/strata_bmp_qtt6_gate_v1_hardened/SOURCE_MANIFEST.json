@@ -1,0 +1,128 @@
+{
+    "schema": "strata-bmp-obdd-qtt6-hardened-source-manifest-v1",
+  "status": "FROZEN_SOURCE_ONLY__EXECUTION_PENDING__NO_PAYLOAD_AUTHORITY",
+  "source_root_sha256": "369e01b30173977a5d8227e71104c8515f1b68ef440198dccd1488050e865203",
+  "members": [
+    {
+      "name": "codec.py",
+      "bytes": 36232,
+      "sha256": "6f08aada5ce9eb1124d1c8fac623114792b00b29e60980c2c14a063e8dae278a"
+    },
+    {
+      "name": "cupy_backend.py",
+      "bytes": 8433,
+      "sha256": "3cfc5a41febcf2aeb721090a120943ffa99476b5d5b146d34c8d3085d3193d24"
+    },
+    {
+      "name": "cupy_worker.py",
+      "bytes": 2182,
+      "sha256": "c0e31586aa1239ce9c52dc1358c450781b6d870e91616514330f138a46f92a17"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 3424,
+      "sha256": "5baa14519d2030720dfb4f0003812bd24cb7d4d221ee9cca26aa81e7ba180f8b"
+    },
+    {
+      "name": "production_hooks.py",
+      "bytes": 2154,
+      "sha256": "3bab7e5481cfed66e336a44048da8931b307474da4340ad176080f99ff8896cf"
+    },
+    {
+      "name": "README.md",
+      "bytes": 6197,
+      "sha256": "89221a6f340c3cabfbdfe944e4d63b5fb907cb65f492906436ff18717d510a70"
+    },
+    {
+      "name": "run_cupy_smoke.py",
+      "bytes": 1888,
+      "sha256": "4b057a2d1277996304c558847b56a5b4501d84a1d43db4af6fb239d4554160ec"
+    },
+    {
+      "name": "run_source_free_fixture.py",
+      "bytes": 5616,
+      "sha256": "c554c841fed185297b0e9704b2ad1877e21d71963f6d8d423e9e0de412da7b7c"
+    },
+    {
+      "name": "search.py",
+      "bytes": 21726,
+      "sha256": "22d2df8022ebd015381a732eee6ed86aaefb28cf2748eb443611a6dc24751122"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 14183,
+      "sha256": "4ea7a2248970a1323ea1eace42c196ec816985467d44e6666af4eb4819fafbdc"
+    },
+    {
+      "name": "THREAT_MODEL.md",
+      "bytes": 3875,
+      "sha256": "8a304bb9bfefd508a393b258982cb26ceee7f50a8384e2333aae41c9bbcc3711"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 10709,
+      "sha256": "84572de7bfb6d0dee59253c919c80412584b420f77e81976b00e5e3ef4df9ee8"
+    }
+  ],
+  "predecessor_pins": {
+    "v0_source_manifest_sha256": "a7778080a00d5d2967636ac8d60dd31698401c4dcf8da160c9451c92dc5f6b18",
+    "v0_source_root_sha256": "6b7baf9706349d10108121d4dcb03661b2378dc436303bbfe1bbccd38a0c8914",
+    "v0_independent_audit_manifest_sha256": "6038fea16ba29fad6c8b351bc0968fd00f94f007f1e113a4209775974cc33df1",
+    "v0_independent_audit_source_root_sha256": "e905324af56f544b27423390e22c97de5c4b15696c621ab133c2da5533e9f4a9"
+  },
+  "access_attestation": {
+    "model_checkpoint_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_strata_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_artifact_opened_statted_hashed_or_enumerated": false,
+    "network_used_by_tests_or_fixtures": false,
+    "live_payload_authority": false
+  },
+  "test_attestation": {
+    "source_only_hostile_tests_executed": false,
+    "source_only_test_count_declared": 22,
+    "n4096_fixture_executed": false,
+    "fresh_cupy_search_executed": false,
+    "static_source_review_completed": true,
+    "independent_source_audit_passed": false,
+    "qwen_payload_run": false
+  },
+  "semantic_attestation": {
+    "exact_distortion_columns": 64,
+    "completed_planes": 6,
+    "decoded_index_range": [
+      0,
+      63
+    ],
+    "four_level_adapter": false,
+    "variable_arbitrary_uint16_rows_and_columns": true,
+    "roles": 3,
+    "bmp_semantically_canonical": true,
+    "qtt_semantically_canonical": true,
+    "packet_is_complete_production_strata_packet": false
+  },
+  "rate_attestation": {
+    "explicit_cap_argument_required": true,
+    "integer_minimum": "ceil(43*N/20)",
+    "integer_maximum": "floor(5*N/2)",
+    "source_fixture_is_complete_codec": false
+  },
+  "workspace_attestation": {
+    "cpu_named_logical_buffers_exact": true,
+    "cpu_allocator_peak_claimed": false,
+    "gpu_fresh_dedicated_pool_receipt_source_present": true,
+    "gpu_receipt_executed": false
+  },
+  "caps": {
+    "weights": 4096,
+    "active_features": 12,
+    "bmp_rank": 4,
+    "qtt_rank": 2,
+    "obdd_nodes": 240,
+    "exceptions": 64,
+    "family_candidates": 32,
+    "search_evaluations": 1000000,
+    "cpu_workspace_bytes": 67108864,
+    "gpu_workspace_bytes": 134217728
+  },
+  "claim_boundary": "Exact source inventory only. No runtime pass, Qwen result, F<=0.8 result, complete physical-rate result, or routed-read result."
+}

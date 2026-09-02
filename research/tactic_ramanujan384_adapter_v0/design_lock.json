@@ -1,0 +1,104 @@
+{
+  "schema": "tactic-ramanujan384-adapter-design-v0",
+  "status": "FROZEN_SOURCE_ONLY_RUNPOD_EXECUTION_PENDING_NO_PAYLOAD_AUTHORITY",
+  "date": "2026-09-02",
+  "objective": {
+    "universal_target": "SwiGLU-MoE Gate/Up/Down-transposed expert-local PTQ refinement",
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "coarse_rate_exact": "307/128",
+    "fine_rate_exact": "12/128",
+    "coarse_plus_fine_rate_exact": "319/128",
+    "legacy_metadata_allowance_consumed": false,
+    "fine_bits_per_4096_values": 384,
+    "target_relative_mse_at_2p5": 0.025,
+    "required_coarse_residual_capture": 0.32387022205373717,
+    "strict_external_read_amplification_below": 2.0
+  },
+  "dictionary": {
+    "periods": "every integer 3..127 except powers of two",
+    "period_count": 120,
+    "columns": 384,
+    "construction": "coverage-first shifts of exact integer Ramanujan sums",
+    "every_period_represented": true,
+    "checkpoint_layer_expert_identity_used": false,
+    "source_or_coarse_values_used_to_build_dictionary": false,
+    "trigonometric_or_QR_decoder_state": false,
+    "audited_parent_exact_period_dimension_check_required": true
+  },
+  "search": {
+    "candidate_ranks": "0..14",
+    "support_screen": "deterministic normalized absolute correlations with atom-index tie break",
+    "coefficient_fit": "batched float64 ridge-stabilised least squares",
+    "coefficient_scale": "one positive IEEE binary16 scale per block",
+    "coefficient_quantizer": "signed symmetric 11-bit integer, -1023..1023",
+    "winner_metric": "exact original-source-coordinate FP64 SSE after literal packet decode",
+    "projection_energy_can_select_winner": false
+  },
+  "packet": {
+    "schema": "RPF0 version 1",
+    "bytes_per_block": 48,
+    "bits_per_block": 384,
+    "header_bits": 42,
+    "maximum_entries": 14,
+    "entry_bits": 20,
+    "support_index_bits": 9,
+    "signed_coefficient_bits": 11,
+    "crc_bits": 32,
+    "padding": "all unused pre-CRC bits must be zero",
+    "canonical_support": "strictly increasing atom indices",
+    "canonical_decode_reencode": true
+  },
+  "container": {
+    "header_bytes": 512,
+    "header_fields": "magic/version/universal shape/three block counts/coarse and fine lengths/full coarse fine and source-binding SHA256",
+    "header_crc_bits": 32,
+    "header_padding": "canonical zero",
+    "page_alignment_bytes": 4096,
+    "qwen_768x2048x3_physical_bytes": 1470464,
+    "qwen_768x2048x3_physical_rate_bpw": 2.4930555555555554,
+    "legacy_4608_byte_TACTIC_header_used": false,
+    "canonical_decode_reencode_required": true
+  },
+  "controls": {
+    "source_first": true,
+    "controls_forbidden_before_absolute_D_le_0p025": true,
+    "phase_destruction": "frozen odd-affine permutation reruns complete finite search",
+    "gaussian_seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "gaussian_matching": "each block matches binary64 mean and centred energy",
+    "minimum_source_minus_strongest_control_bpw": 0.03,
+    "control_subtraction_cannot_create_absolute_pass": true
+  },
+  "authentication": {
+    "expected_binding_sha256_required": true,
+    "independent_coarse_audit_receipt_sha256_required": true,
+    "coarse_artifact_sha256_required": true,
+    "source_role_sha256_required": true,
+    "independent_reconstruction_f32_sha256_required": true,
+    "input_manifest_sha256_required": true,
+    "auditor_source_manifest_sha256_required": true,
+    "symlinks_hardlinks_identity_drift_and_duplicate_json_keys_rejected": true
+  },
+  "whole_expert_adapter": {
+    "role_order": ["gate", "up", "down_transposed"],
+    "pooled_original_domain_score": true,
+    "one_shared_authenticated_coarse_artifact_required": true,
+    "all_nine_controls_pool_and_rerun_all_three_role_searches": true,
+    "physical_rate_checked_before_promotion": true,
+    "payload_execution_authorized": false
+  },
+  "traffic": {
+    "expert_packet_is_contiguous_and_page_aligned": true,
+    "external_packet_passes": 1,
+    "external_packet_refetches": 0,
+    "tail_free_external_read_amplification": 1.0,
+    "host_scratch_reported_separately": true,
+    "accelerator_HBM_measured": false
+  },
+  "execution": {
+    "source_only_cpu_tests": "pending execution in authenticated Python environment",
+    "source_free_CuPy_smoke": "pending RunPod endpoint recovery",
+    "Qwen_payload": "forbidden pending independent source audit and launch review",
+    "matched_control_payload": "not opened"
+  },
+  "claim_boundary": "source mechanics only; no Qwen result, target pass, portability result, universal performance claim, or HBM measurement"
+}

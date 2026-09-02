@@ -1,0 +1,29 @@
+{
+  "schema": "strata-rm-global-swap-v1-hardened-design-lock",
+  "date": "2026-09-02",
+  "candidate": "global RM-ordered truncated polar selected-set swap",
+  "v0_source_root_sha256": "4f856e268d37ee1d6f32b4a2d1b8cd6879c235639ad75809ffd75fc7c4372d6c",
+  "v0_audit_source_root_sha256": "7eabe4580908d4a79eceb2f7fdaf838d535028c06263c2f4841032664db11ad0",
+  "production_lengths": [1048576, 2097152],
+  "retained_quantity": "exact selected count from authenticated current bg_codec_bec_encoder.bec_flags for each of six levels",
+  "replacement_order": "descending Arikan generator-row weight, ascending internal phase tie break",
+  "coset": "current_random only",
+  "physical_rate": "literal packet bytes plus every charged shared byte divided by original source weights",
+  "source_metric": "raw unweighted exact-BF16-source FP64 SSE divided by FP64 source energy",
+  "target": {"minimum_bpw": 2.15, "maximum_bpw": 2.5, "maximum_F": 0.8},
+  "routed_read": {"maximum_amplification_exclusive": 2.0, "preferred": 1.0},
+  "matched_control": "same committed decoder pipeline, geometry, and weight count",
+  "production_decoder": "literal fresh-process decoder whose exact source hash is bound by a separately frozen independent-audit closure",
+  "universal_contract": "shape-parameterized Gate/Up/Down SwiGLU-MoE; no Qwen-specific tables; at least two architecture families before universal claim",
+  "forbidden_authority_shortcuts": [
+    "caller-supplied base module or reliability hook",
+    "self-declared packet hash without literal packet",
+    "declared canonical replay boolean without byte equality",
+    "production decoder without a separately pinned independent-audit source root",
+    "caller-supplied rate, MSE, F, reconstruction, read, or universal fields",
+    "CuPy or NumPy facade from sys.modules, PYTHONPATH, source package, external root, or temporary cwd",
+    "selected-count, ideal NLL, overlap, or projected residual capture as physical rate-distortion evidence"
+  ],
+  "payload_authority": false,
+  "status": "FROZEN_SOURCE_ONLY_UNEXECUTED__HOLD_RUNPOD_AND_PAYLOAD"
+}

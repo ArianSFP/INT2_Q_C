@@ -1,0 +1,18 @@
+{
+  "schema": "strata-rm-global-swap-v1-hardened-reproducibility-review-manifest",
+  "status": "FROZEN_REPRODUCIBILITY_REVIEW_UNEXECUTED__CORRECTNESS_GAPS_RECORDED__HOLD_PAYLOAD_AND_PHYSICAL_RESULT",
+  "producer_source_root_sha256": "980a5f1d272ca5ffc7b4d35e7c234a86994d135fcacaf0d47a8b3e00fc3d4f14",
+  "producer_manifest_sha256": "4c2c5b371b1b9661d371de607e6a650f8c43fe0128726476854c2eb2ca560c85",
+  "source_root_sha256": "1dfa55969b87543adbee785d72933f9ccb6f754eaade9e4e340a022c96c1afa8",
+  "members": [
+    {"name": "EXECUTION_STATUS.json", "bytes": 1167, "sha256": "8395a458f343ae1df3e749294d24f038b61c332d06607fbff9cbfe2b419daf5f"},
+    {"name": "fixture_tools.py", "bytes": 4535, "sha256": "d0dcf3fd8cbc3c9078b890f4175a887053e1a9cca796cd7c3783ad904030550f"},
+    {"name": "independent_auth.py", "bytes": 7649, "sha256": "a9b0eec19b4debec15fda04cb9f78482abc824bb44a32749e88e04723a53a720"},
+    {"name": "README.md", "bytes": 2581, "sha256": "b410fbba9971e679788d7a8f002ec27c241100b5e0575b6240656144f9303776"},
+    {"name": "REVIEW_ASSESSMENT.md", "bytes": 8621, "sha256": "9610a51b1332215dc23ea0b80161df393cff2c0e6b3ff723cdafd94922f14a13"},
+    {"name": "run_real_cupy_review.py", "bytes": 3509, "sha256": "eb872eae880e93b5ad34431de9ac97effe44946604b7e14ef467ebe1a1a835c7"},
+    {"name": "run_review.py", "bytes": 4384, "sha256": "b500a5d816898fe7e3b847d9af94780ca930bc65b97cb3a7cf5ab200e599fc90"},
+    {"name": "test_reproducibility_review.py", "bytes": 14908, "sha256": "7c5c5ed180b9e329571961ef57b49be986eb8970ad2faa521f392511293c6b1d"},
+    {"name": "verify_review.py", "bytes": 3543, "sha256": "be18f4113f31d099da69c6473f1cc86bc515ee118f114a5721b608e5c60f27ab"}
+  ]
+}

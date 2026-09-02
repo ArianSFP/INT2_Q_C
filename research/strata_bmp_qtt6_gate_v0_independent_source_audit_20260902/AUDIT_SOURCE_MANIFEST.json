@@ -1,0 +1,52 @@
+{
+  "schema": "strata-bmp-qtt6-independent-audit-source-v0",
+  "status": "FROZEN_INDEPENDENT_STATIC_AUDIT__UNEXECUTED_ENDPOINT_REFUSED__HOLD_PRODUCTION",
+  "producer_source_manifest_sha256": "a7778080a00d5d2967636ac8d60dd31698401c4dcf8da160c9451c92dc5f6b18",
+  "producer_source_root_sha256": "6b7baf9706349d10108121d4dcb03661b2378dc436303bbfe1bbccd38a0c8914",
+  "audit_source_root_sha256": "e905324af56f544b27423390e22c97de5c4b15696c621ab133c2da5533e9f4a9",
+  "members": [
+    {
+      "name": "EXECUTION_STATUS.json",
+      "bytes": 756,
+      "sha256": "821dce0bf1782085991ea1045fa3298c336cb5591ae4c222f69207014f9d3cd8"
+    },
+    {
+      "name": "independent_auth.py",
+      "bytes": 5405,
+      "sha256": "72b2a2d3f965c94ec466da348841e13dd3b5c87d47561ce1e6e16912c12723a3"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4188,
+      "sha256": "f5c36ec117c6f5339268eb4f346fcecc38a43e9add899f2be80611ff9a724a4b"
+    },
+    {
+      "name": "run_audit.py",
+      "bytes": 2970,
+      "sha256": "48c78901fc6f50452e1c83c35bec37d26b4cf909112333adb62bd214ab8841d5"
+    },
+    {
+      "name": "run_real_cupy_audit.py",
+      "bytes": 3736,
+      "sha256": "e95bb63b7d89d5615c7a6d9003cf52e706536f7bba5ec3642b468f8651ff36cd"
+    },
+    {
+      "name": "test_hostile_audit.py",
+      "bytes": 14648,
+      "sha256": "8c1ccca3929aa9588b778efa3fd74b48fb25d30deab94c35e3df298f14c06b08"
+    },
+    {
+      "name": "verify_audit_source.py",
+      "bytes": 5054,
+      "sha256": "4cdb9522aa97a7f1b65fcf9db5267f7a67f821f275b04e5db9f3221e01e74f4a"
+    }
+  ],
+  "execution_attestation": {
+    "hostile_tests_executed": false,
+    "n4096_fixture_executed": false,
+    "real_cupy_audit_executed": false,
+    "payloads_accessed": false,
+    "runtime_pass_claimed": false
+  },
+  "claim_boundary": "Externally source-pinned independent static audit with 22 unexecuted hostile tests. It identifies semantic-canonicality and uint16-geometry defects and freezes a real-CuPy audit. It is not a runtime pass, Qwen result, complete-codec rate result, F<=0.8 result or routed-read result."
+}

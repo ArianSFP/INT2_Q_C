@@ -1,0 +1,23 @@
+{
+  "schema": "strata-rm-global-swap-v1-hardened-source-manifest",
+  "status": "FROZEN_SOURCE_ONLY_UNEXECUTED__HOLD_RUNPOD_AND_PAYLOAD",
+  "v0_source_root_sha256": "4f856e268d37ee1d6f32b4a2d1b8cd6879c235639ad75809ffd75fc7c4372d6c",
+  "v0_audit_source_root_sha256": "7eabe4580908d4a79eceb2f7fdaf838d535028c06263c2f4841032664db11ad0",
+  "source_root_sha256": "980a5f1d272ca5ffc7b4d35e7c234a86994d135fcacaf0d47a8b3e00fc3d4f14",
+  "members": [
+    {"name": "AUDIT_REPAIR_MAP.md", "bytes": 3920, "sha256": "74d2be202624b3ce22d8e7dd76af1392da4bf036c3f3ae5f4a795e87739ad400"},
+    {"name": "authority.py", "bytes": 17472, "sha256": "31fba902286735b26ee4b1428640525d8c0811bb2322ffb0c16008ab3b5de7d0"},
+    {"name": "current_integration_worker.py", "bytes": 4030, "sha256": "ee4c2bfe0ab4d2192db1e604701052f646debb09abe76d8ff61d54b89774b9c9"},
+    {"name": "DESIGN_LOCK.json", "bytes": 2086, "sha256": "97d88affb3d5a582f2fcc99ba66b34cce84b2d940555f939c605b2349813c8b7"},
+    {"name": "EXECUTION_STATUS.json", "bytes": 1005, "sha256": "d8741105e3e9b34a965a6fe9687d79a80132c4bd628909c5ac237599264cacb0"},
+    {"name": "fixture_decoder_worker.py", "bytes": 4932, "sha256": "6dc3c91773a23ff4b58aaa97bfea8f80c238f9c935392a5d4c0b3bfc77da04ac"},
+    {"name": "hostile_tests.py", "bytes": 2859, "sha256": "554f51d2a0116d495fb11412438ae3fe8915b8f71bfbc2833e2c693b57c23479"},
+    {"name": "physical_authority.py", "bytes": 27137, "sha256": "89343cfa417fc5f4ab39fc1aef75aa85f9a1a6f66c041790f7426e56965d5678"},
+    {"name": "README.md", "bytes": 5573, "sha256": "b11e98bd19e45d7be9035748d846a5a2062b221ced124a9b87cf36cbd5764a58"},
+    {"name": "real_cupy_worker.py", "bytes": 4003, "sha256": "70c6e5c10cfafde8945ec30bd68663b9eff834ff0d66d9b9fcfdc1b86d92e379"},
+    {"name": "rm_order.py", "bytes": 3116, "sha256": "e5d85d844633d206125a775efcd35711d02bf9eec5060715c17e8e7d50df0f92"},
+    {"name": "run_source_gate.py", "bytes": 2916, "sha256": "5c6cdad5d512aa55fcd430bca9ed7587e40c52be77cebbfd28220ce13f30a450"},
+    {"name": "test_source_only.py", "bytes": 11982, "sha256": "634067ea42b1ac81e844fb1b7befd8a08d939117cd5394895fd340b1ae689920"},
+    {"name": "verify_source.py", "bytes": 3248, "sha256": "5e46ebce8a55fb59ee346dc09a3b12be684efe8633bd77b697e6df6bad36f666"}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "tactic-ramanujan384-dependency-lock-v0",
+  "status": "PINNED_AUDITED_SOURCE_DEPENDENCY",
+  "dependency": {
+    "package": "research/mosaic_secondary_oracles_v0",
+    "source_manifest_sha256": "4259e8e8dc87b4c25301ca89ade7dbd63c1e0c9e3415fdaa4d7881d7d10ccc06",
+    "source_root_sha256": "60bf8cb7575c165c1e8e648360b9d81f39c092070a9489684904bcf06d0bd820",
+    "residual_oracles_py_sha256": "f990aedf8eba0e9058bd9c77caaa05df98226b2855486bace0eaee15cfac806f",
+    "gate_contract_py_sha256": "0556915344dfd996ccfdd5005cab437c0c5ad154a98efafe59a07f32f30bb0e2"
+  },
+  "reused_mechanisms": [
+    "primitive_real_frequencies exact-period dimension audit",
+    "odd_affine_permutation phase-destroying control",
+    "moment_matched_gaussian_blocks control"
+  ],
+  "finite_backend_difference": "exact integer shifted Ramanujan sums replace source-independent trigonometric QR so packet decoding is procedural"
+}
+

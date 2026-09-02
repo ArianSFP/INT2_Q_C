@@ -1,0 +1,38 @@
+{
+  "schema": "tactic-ramanujan384-source-manifest-v0",
+  "status": "FROZEN_SOURCE_ONLY_RUNPOD_EXECUTION_PENDING_NO_PAYLOAD_AUTHORITY",
+  "source_root_sha256": "2a66a5d745fc0a31e311cf6ab5f44836726ae341db977bca8eac314df61124ad",
+  "members": [
+    {"name":"README.md","bytes":5320,"sha256":"3bc4a5f640680561720c8e2c9bd67be966b662aa4a9cbc1a14e31120a3f1f260"},
+    {"name":"adapter.py","bytes":7977,"sha256":"894c14f0238a0270237ad79a1e135f86e73c5d7463a9e2c8e4457bb1a6ba2e2e"},
+    {"name":"authenticated_io.py","bytes":8816,"sha256":"4d461bcdacb1a38fe129b2f320b82cb9d22cb57626b4413228dd197b67348382"},
+    {"name":"container.py","bytes":7851,"sha256":"833987b27f05e61c9563c1c28c4880fdf86fce52e1979e0d61ede4dd246e6e24"},
+    {"name":"cupy_backend.py","bytes":2476,"sha256":"9c5b719c101e64f1213fbd7502837c5ccc50316b891c3fc9aa0c81f691ebd755"},
+    {"name":"dependency_lock.json","bytes":917,"sha256":"38dc28bd074f23ebb65184b1539c729c2f7f47de3da649d87434c313e92fc33a"},
+    {"name":"design_lock.json","bytes":4599,"sha256":"7e873476d4680ba331b64622b5eef04c7b91058a2e0a41ad780b2ee678081e48"},
+    {"name":"packet.py","bytes":6324,"sha256":"51024bfa32d7063f877136f1d41937bc986862fa0bbbb74e5139e781082c7c85"},
+    {"name":"ramanujan_codec.py","bytes":18128,"sha256":"915b913b468243ec57800e1a717606e6c017921733977b09b737ee2d1fc1cc62"},
+    {"name":"run_source_free_cupy_smoke.py","bytes":1346,"sha256":"3c2c99f08dc2d74b7a69ac3866314d367cd3c1344c1ec09c6e43b3a28931b20f"},
+    {"name":"run_source_free_fixture.py","bytes":2270,"sha256":"98ef1eb89393bb80ce28550ed55f5dd1e96d52c22aef92c399fa0485559d0aae"},
+    {"name":"test_source_only.py","bytes":16417,"sha256":"07f73cc85eb9f44501bd8b6f0989450e034d3c8d9b701c3b0570aa9af6bb16b0"},
+    {"name":"verify_source.py","bytes":10573,"sha256":"6d37e0796d7028f9e74b60149317e20768f1b4035fac3b46977ddd2b3ecdbd73"}
+  ],
+  "dependency_pins": {
+    "SOURCE_MANIFEST.json": "4259e8e8dc87b4c25301ca89ade7dbd63c1e0c9e3415fdaa4d7881d7d10ccc06",
+    "residual_oracles.py": "f990aedf8eba0e9058bd9c77caaa05df98226b2855486bace0eaee15cfac806f",
+    "gate_contract.py": "0556915344dfd996ccfdd5005cab437c0c5ad154a98efafe59a07f32f30bb0e2"
+  },
+  "access_attestation": {
+    "qwen_model_checkpoint_payload_accessed": false,
+    "coarse_result_or_COARSE_bin_accessed": false,
+    "matched_control_payload_accessed": false,
+    "network_used_by_tests": false,
+    "production_adapter_source_present": true
+  },
+  "execution_attestation": {
+    "source_only_cpu_tests_run": false,
+    "source_free_cupy_smoke_run": false,
+    "runpod_execution_pending": true
+  },
+  "claim_boundary": "source mechanics only; no Qwen result, target pass, portability result, universal performance claim, or HBM measurement"
+}

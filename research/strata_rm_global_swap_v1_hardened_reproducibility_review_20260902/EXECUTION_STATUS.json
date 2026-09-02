@@ -1,0 +1,29 @@
+{
+  "schema": "strata-rm-global-swap-v1-hardened-reproducibility-review-execution-status",
+  "date": "2026-09-02",
+  "producer_source_root_sha256": "980a5f1d272ca5ffc7b4d35e7c234a86994d135fcacaf0d47a8b3e00fc3d4f14",
+  "producer_manifest_sha256": "4c2c5b371b1b9661d371de607e6a650f8c43fe0128726476854c2eb2ca560c85",
+  "local_static_review": {
+    "executed": true,
+    "producer_members_checked": 14,
+    "manifest_and_member_hashes_match": true,
+    "canonical_source_root_matches": true,
+    "payloads_opened": 0,
+    "status": "PASS_LOCAL_STATIC_REVIEW"
+  },
+  "python_reproducibility_suite": {
+    "executed": false,
+    "reason": "local Windows workspace has no Python interpreter; no remote execution was authorized for this narrowed review",
+    "receipt": null
+  },
+  "trusted_runner_real_cupy_review": {
+    "executed": false,
+    "reason": "no remote execution was authorized for this narrowed review",
+    "receipt": null
+  },
+  "model_data_accessed": false,
+  "payloads_opened": 0,
+  "qwen_result": null,
+  "correctness_gaps_recorded": 9,
+  "status": "FROZEN_REPRODUCIBILITY_REVIEW_UNEXECUTED__CORRECTNESS_GAPS_RECORDED__HOLD_PAYLOAD_AND_PHYSICAL_RESULT"
+}
