@@ -1,0 +1,13 @@
+{
+  "schema": "epsilon-tcq-polar-cow-memory-v2-independent-audit-manifest",
+  "status": "FROZEN_PASS_GO_MEMORY_CAPACITY_HOLD_COMPUTE_AND_PAYLOAD",
+  "audit_root_sha256": "89518224adf969622adf3e4c337abb8efbdc7ee264fa1a5f7b61375d379053e6",
+  "members": [
+    {"name": "AUDIT_RECEIPT.json", "bytes": 4521, "sha256": "3164b05d183e83e3084c0591c1c6083d1117bdccd333d536e205b54f646fa3b9"},
+    {"name": "README.md", "bytes": 1024, "sha256": "021dacc153e41fcda6aefb78a351990ec75c82ea4fc09ea12dcd026b9303b4bb"},
+    {"name": "cupy_receipt.json", "bytes": 2493, "sha256": "083979b2531066e0a81f4bec3a9afa5dd027d4cd934b6fb9ce240491fa099c14"},
+    {"name": "independent_audit.py", "bytes": 12536, "sha256": "05db827123c7ce5217e10645cc9142a26113fc7e49d562559d3a2e8271bd0a3b"},
+    {"name": "test_independent_audit.py", "bytes": 3817, "sha256": "d4e06c997eaeb7bfa1873dce8ab446a5d93629ee7c9b24c8ddc48bbba24925ed"},
+    {"name": "verify_audit.py", "bytes": 3028, "sha256": "5a0e11adbae69730acdde3585608f7305e1fb5f8d510a82af70c6104c7267998"}
+  ]
+}

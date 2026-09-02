@@ -1,0 +1,16 @@
+{
+  "schema": "epsilon-tcq-polar-cow-memory-v2-source-manifest",
+  "status": "FROZEN_SOURCE_ONLY_GO_MEMORY_CAPACITY_HOLD_COMPUTE_AND_PAYLOAD",
+  "source_root_sha256": "92c7969cddbebf255c19f1aa10869d704c68727a8562f8f47bd27dd4c3593ff4",
+  "members": [
+    {"name": "README.md", "bytes": 4496, "sha256": "2a44210f96455d3127059f7cd5632cb58f5b2e0611a94902fe71f69d3645e021"},
+    {"name": "compact_sc.py", "bytes": 15441, "sha256": "772cc0240ed1102e015dde5e4bce3ef0e609bd1d34f20913a7a05abc62341392"},
+    {"name": "cupy_state_smoke.py", "bytes": 8565, "sha256": "1c5f10f5d647c35392ccf5f80368ba66f6519655d379125b896727809cd22f10"},
+    {"name": "design_lock.json", "bytes": 2391, "sha256": "badcc7b7b632ea64459cf687dba88e931fa9b95cf80d7c0c0db2a653603681eb"},
+    {"name": "memory_plan.py", "bytes": 12692, "sha256": "7ab4ee1388f7231615902a2883c0df30bfa0a7973f49ba83631abd298cd8fc51"},
+    {"name": "persistent_state.py", "bytes": 5308, "sha256": "8523304a44d6c8d7d3a87556768484d992c0d057ff66ac29f3651ae81a54bc76"},
+    {"name": "run_gate.py", "bytes": 4903, "sha256": "4e2ab2e11700271e99a4619a0bbf67bc9536f3ff96e2d900f65c497bbb28a8f9"},
+    {"name": "test_source_only.py", "bytes": 11017, "sha256": "976bfad02739abc7f497f1a5349210009c7510d910776f558d9e689e5c8eb921"},
+    {"name": "verify_source.py", "bytes": 3732, "sha256": "125a439a19e2b6a2a4dc07b296c981a2bcacad131ac056db52aeff4c4ba0ffb0"}
+  ]
+}

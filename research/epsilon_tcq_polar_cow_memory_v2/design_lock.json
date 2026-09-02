@@ -1,0 +1,54 @@
+{
+  "schema": "epsilon-tcq-polar-cow-memory-v2-design-lock",
+  "status": "SOURCE_ONLY_GO_MEMORY_CAPACITY_HOLD_COMPUTE_AND_PAYLOAD",
+  "date": "2026-09-02",
+  "authenticated_current_decoder": {
+    "bytes": 116835,
+    "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "indices": 64,
+    "processing_order": "six complete level-major polar SC passes",
+    "coordinate_local_six_event_abi": false
+  },
+  "frozen_geometry": {
+    "production_bound_block_values": 2097152,
+    "depth": 21,
+    "beam_widths": [4, 8, 16, 32],
+    "memory_cap_bytes": 4294967296,
+    "likelihood_cells_per_path": 2097151,
+    "partial_sum_cells_per_path": 2097151,
+    "maximum_selected_events": 12582912
+  },
+  "state_architecture": {
+    "ragged_level_offsets": "offset(c)=2^c-1; length(c)=2^c",
+    "layer_granular_copy_on_write": true,
+    "candidate_children_pruned_before_mutating_persistent_state": true,
+    "physical_bank_upper_bound": "B, not 2B",
+    "partial_sums": "uint8 ragged banks; packed alternative accounted but not selected",
+    "likelihood_checkpoint_recompute": "accounted but not selected because ragged full tree fits",
+    "shared_immutable_likelihood_layers": "allowed opportunistically; zero sharing gain assumed",
+    "survivor_history": "packed (parent, decision) symbols and exact winner backtrace",
+    "prefix_copying": false,
+    "direct_int2_fallback": false
+  },
+  "semantic_lock": {
+    "dense_authenticated_schedule_reproduced": true,
+    "ragged_dense_array_equality_required": ["output", "frequencies", "selected", "internal"],
+    "source_free_six_level_dense_ragged_replay_harness": true,
+    "source_free_winning_selected_bits_replayed_through_canonical_arithmetic_encoder": true,
+    "production_list_search_and_replay": "required for compute promotion; not implemented",
+    "current_codec_reconstruction_unchanged": "normative requirement inherited from v1; no payload tested"
+  },
+  "verdicts": {
+    "memory": "GO_MEMORY_CAPACITY",
+    "compute": "HOLD_COMPUTE_AND_DEVICE_COW_IMPLEMENTATION",
+    "payload": "HOLD_PAYLOAD"
+  },
+  "compute_promotion_requires": {
+    "persistent_cupy_kernel": true,
+    "bounded_kernel_launch_count": true,
+    "measured_whole_block_runtime_and_peak": true,
+    "exact_compact_state_semantic_replay": true,
+    "device_cow_implementation": true,
+    "independent_source_and_receipt_audit": true
+  }
+}
