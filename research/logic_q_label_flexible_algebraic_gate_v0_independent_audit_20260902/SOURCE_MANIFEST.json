@@ -1,0 +1,33 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v0-independent-audit-manifest",
+  "status": "SEALED_INDEPENDENT_AUDIT__HOLD_FOR_CAPPED_ADAPTER_SUCCESSOR",
+  "audited_parent_manifest_sha256": "31edbc3325dfdae2b3f43cce4afb360062d5c70583b57dd1e6530835a178cced",
+  "source_root_sha256": "a94e21046050df53281798caaa4d912ca6e945379be315c67a9a26a70ce7a21c",
+  "members": [
+    {
+      "name": "AUDIT_REPORT.json",
+      "bytes": 3676,
+      "sha256": "3e3691b366a0fe68dc6018d2233bd2a2f83d981bfc5275df6e31f053a637056d"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4317,
+      "sha256": "e2b4b5c788e4b4a15905a2195fa57563fed3977959d5295581092418113ef81a"
+    },
+    {
+      "name": "adversarial_checks.py",
+      "bytes": 8930,
+      "sha256": "4ebdaffdc9bc33a6354e74d4309dc469fd7c52b0b2ce2be0293ec817ff321c97"
+    }
+  ],
+  "access_attestation": {
+    "model_or_qwen_payload_opened": false,
+    "current_codec_or_coarse_payload_opened": false,
+    "matched_control_artifact_opened": false,
+    "audited_parent_modified": false
+  },
+  "authorization": {
+    "direct_qwen_payload_run": false,
+    "separate_capped_adapter_successor": true
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v0-source-manifest",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_INDEPENDENT_AUDIT",
+  "source_root_sha256": "2177f2aec39a65afddbbded9b6b3cd2c2a33118c060a41e070102f9fb6c95d4a",
+  "members": [
+    {
+      "name": "PRIOR_ART.md",
+      "bytes": 2669,
+      "sha256": "e75c9c92617290f95ac186d2ee5c6d0aa619bde9c2827c00546ac1aac7e74305"
+    },
+    {
+      "name": "README.md",
+      "bytes": 8355,
+      "sha256": "1b8eac5f308f12069f499c22d47e1e6f5c331948a40bc9ae2d323a05501b999a"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 5850,
+      "sha256": "dec978e6c0e35f0e8a417282c348fbf4d666b01e269c776064db48c5e492f9ed"
+    },
+    {
+      "name": "logicq_core.py",
+      "bytes": 74495,
+      "sha256": "eb1beddc20f2a111c2ad5e1be33caabc7c28402c62e712e1b9d663015ae5180c"
+    },
+    {
+      "name": "panel_protocol.py",
+      "bytes": 14215,
+      "sha256": "54f5aff278fbf85f09c00b0e87108fd5d04b3451dd9ae8f59bb350500736a510"
+    },
+    {
+      "name": "run_source_free_fixture.py",
+      "bytes": 5007,
+      "sha256": "ac75a6011bf866460feac3406de75877870d2b32a9cbdd55fb9d40b8914f4c70"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 16493,
+      "sha256": "142e4c1b48048ca7a1d0a69fabd80957acbcfba5c974d11134f57ce69af64563"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 8302,
+      "sha256": "564f948e6dec2a2ae66ed01cd784282a149d636002102489a3f783925dc93702"
+    }
+  ],
+  "access_attestation": {
+    "model_checkpoint_or_weight_payload_opened_statted_hashed_or_enumerated": false,
+    "current_codec_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_artifact_opened_statted_hashed_or_enumerated": false,
+    "cuda_or_cupy_initialized_during_source_build_fixture_or_tests": false,
+    "source_fixture_or_tests_accessed_network": false,
+    "payload_adapter_included": false
+  },
+  "test_attestation": {
+    "runpod_source_only_tests_passed": true,
+    "runpod_source_only_test_count": 25,
+    "runpod_source_free_fixture_passed": true,
+    "independent_source_verification_passed_after_freeze": true
+  },
+  "claim_boundary": "Source-only finite mechanism; no model result, no complete 2.15-2.5 bpw codec, no F<=0.8 result, no below-2x routed-read result, and no universal SwiGLU-MoE claim."
+}

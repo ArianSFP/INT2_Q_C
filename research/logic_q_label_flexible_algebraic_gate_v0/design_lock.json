@@ -1,0 +1,116 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v0-design-lock",
+  "status": "SEALED_SOURCE_ONLY_NO_MODEL_PAYLOAD_AUTHORITY",
+  "date": "2026-09-02",
+  "objective": {
+    "finite_reference_rate_bpw": 2.5,
+    "finite_reference_relative_mse": 0.030902167403153148,
+    "finite_reference_F": 0.9888693569009007,
+    "target_F": 0.8,
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "unchanged_mse_required_physical_saving_bpw": 0.1528899669629145,
+    "same_2p5_rate_required_mse_reduction_fraction": 0.190995257
+  },
+  "source_access": {
+    "model_or_checkpoint_payload_opened_statted_hashed_enumerated": false,
+    "current_codec_payload_opened_statted_hashed_enumerated": false,
+    "coarse_result_opened_statted_hashed_enumerated": false,
+    "matched_control_artifact_opened_statted_hashed_enumerated": false,
+    "cuda_or_cupy_initialized": false,
+    "network_used_by_source_or_fixture": false,
+    "payload_adapter_included": false,
+    "independent_source_audit_required_before_payload_adapter": true
+  },
+  "quantizer": {
+    "labels": 4,
+    "gray_bit_mapping": {"0": "00", "1": "01", "2": "11", "3": "10"},
+    "distortion": "sum_i weight_i*(source_i-decoded_level_i[label_i])^2 in IEEE-754 binary64",
+    "search_objective": "distortion + lambda*literal_physical_packet_bits",
+    "scale_payload": "one transmitted BF16 positive scale per public quantization block",
+    "profile_selector": "one complete byte in every 64-byte role-component header",
+    "finite_numeric_decode_required": true
+  },
+  "families": {
+    "literal4": "two literal bits per ordered label",
+    "rm1_plus_exceptions": {
+      "base": "one RM(1,m) affine Boolean function per Gray bitplane and 2^m block",
+      "exact_pair_search_max_pairs": 4096,
+      "larger_search": "bounded no-exception shortlist followed by exact exception optimization; no global-negative authority",
+      "scalable_rpa": "not implemented in v0"
+    },
+    "gf2_rank_plus_exceptions": {
+      "base": "one U*V mod 2 factor product per Gray bitplane",
+      "implemented_factor_bits": "2*r*(rows+cols)",
+      "ideal_rank_matrix_counting_bound_is_operational": false,
+      "search": "exact tiny enumeration or deterministic bounded alternating heuristic",
+      "global_negative_authority": false
+    },
+    "romdd_plus_exceptions": {
+      "base": "bounded reduced ordered mixed-radix decision diagram over exact role dimensions",
+      "padded_23bit_domain_forbidden": true,
+      "invalid_domain_mask_is_free": false,
+      "global_negative_authority": false
+    }
+  },
+  "exception_packet": {
+    "count_bits": "ceil(log2(n+1))",
+    "position_bits": "ceil(log2(binomial(n,e))) combinatorial lexicographic rank",
+    "replacement_bits": "ceil(log2(3^e)) base-3 rank among labels other than the base",
+    "physical_alignment": "RM overlays are optimized with per-block byte alignment; GF2 and ROMDD overlays are optimized with whole-family-payload byte alignment",
+    "optimization_uses_unpadded_ideal_bits": false,
+    "unused_binary_ranks_reject": true,
+    "optimization": "exact best alternatives and exact best e-position set for every evaluated base object"
+  },
+  "physical_packet": {
+    "component_header_bytes": 64,
+    "component_header_charges_family_model_role_profile_shape_and_parameters": true,
+    "component_payload_byte_padding": true,
+    "expert_header_bytes": 64,
+    "role_packet_alignment_bytes": 64,
+    "expert_final_page_bytes": 4096,
+    "roles": ["gate", "up", "down_transposed"],
+    "three_role_headers_paid_separately": true
+  },
+  "coordinate_domain": {
+    "qwen_role_shape": [768, 2048],
+    "exact_role_radices": [3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "exact_sites_per_role": 1572864,
+    "exact_sites_per_expert": 4718592,
+    "naive_23bit_sites": 8388608,
+    "invalid_naive_23bit_sites": 3670016,
+    "invalid_domain_mask_is_free": false,
+    "role_identity": "separate physical component packet, not a padded two-bit truth-table variable"
+  },
+  "hard_kill_order": [
+    "mandatory zero-exception physical packet exceeds 2.5 bpw",
+    "unchanged-MSE descriptor saving upper bound misses 0.1528899669629145 bpw",
+    "optimistic nearest-label distortion plus impossible-best minimum packet rate, padded to 2.15 bpw, still has F above 0.8",
+    "exact enumerated small-family operational curve misses its frozen threshold"
+  ],
+  "non_global_kills": [
+    "RM bounded-list miss",
+    "GF2 alternating-factor miss",
+    "ROMDD bounded-depth miss",
+    "unimplemented canonical rank serializer miss",
+    "unimplemented QTT or RPA miss"
+  ],
+  "holdout": {
+    "minimum_layers": 10,
+    "minimum_whole_test_layers": 5,
+    "outer_test": "frozen hash-ranked whole layers",
+    "inner_validation": "frozen whole expert slots among non-test layers",
+    "panel_closure": "exactly Gate, Up, Down-transposed for an identical reusable expert-slot universe in every layer",
+    "global_search_choices_selected_without_test": true,
+    "test_mode_choice_requires_literal_charged_selector": true,
+    "uncertainty": "paired whole-test-layer cluster bootstrap"
+  },
+  "controls": {
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "generation": "independent Gaussian values matched to each immutable source quantization block binary64 mean and centered energy",
+    "rerun": "profile selection, BF16 scale fit, every label-flexible family search, exception packing, byte/page framing, decode, and global model selection",
+    "prebuilt_control_labels_forbidden": true,
+    "controls_open_only_after_absolute_source_survival": true,
+    "control_subtraction_cannot_create_pass": true
+  },
+  "claim_boundary": "Source-only finite mechanism. No model result, no complete 2.15-2.5 bpw codec, no F<=0.8 result, no below-2x read result, and no universal SwiGLU-MoE claim."
+}

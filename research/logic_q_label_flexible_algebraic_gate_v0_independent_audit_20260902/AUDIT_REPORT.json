@@ -1,0 +1,96 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v0-independent-audit",
+  "status": "MECHANISM_VALID__HOLD_FOR_CAPPED_ADAPTER_SUCCESSOR",
+  "date": "2026-09-02",
+  "audited_parent": {
+    "source_manifest_sha256": "31edbc3325dfdae2b3f43cce4afb360062d5c70583b57dd1e6530835a178cced",
+    "source_root_sha256": "2177f2aec39a65afddbbded9b6b3cd2c2a33118c060a41e070102f9fb6c95d4a"
+  },
+  "independent_replay": {
+    "interpreter": "/workspace/int2-cupy-venv/bin/python -I -B",
+    "source_verifier": {
+      "status": "PASS_INDEPENDENT_SOURCE_VERIFICATION",
+      "bytes": 1865,
+      "sha256": "272de43095a6a355844b4f119af968ca844d6334e9fcd6f171d6fe2a0fb1f54e"
+    },
+    "source_tests": {
+      "status": "PASS_SOURCE_ONLY_TESTS",
+      "test_count": 25,
+      "bytes": 4286,
+      "sha256": "fb1d3a5c74ed8a56a60505474a85f96259f6f0f7fc1a1feb1f24a7a047d8d437"
+    },
+    "source_free_fixture": {
+      "status": "PASS_SOURCE_FREE_MECHANISM_FIXTURE",
+      "bytes": 8379,
+      "sha256": "7da357ccb9bb8e5fdda7b16d8fd6c85bd0eddc63ce7b841e1f54ae1cef2ea050"
+    },
+    "adversarial_checks": {
+      "status": "PASS_MECHANISM_WITH_PRODUCTION_HOLDS",
+      "bytes": 1189,
+      "sha256": "e7f15ac3ea80da6fca6c0c5fabc7bb72ba9152ae528aa31046cbd7ac07ea54cb"
+    }
+  },
+  "findings": [
+    {
+      "id": "LQ-AUD-001",
+      "severity": "production_hold",
+      "finding": "The documented hard-kill order is not called by encode_family_bank."
+    },
+    {
+      "id": "LQ-AUD-002",
+      "severity": "production_hold",
+      "finding": "RM1, GF2 and unrestricted exception searches are not Qwen-scale production implementations."
+    },
+    {
+      "id": "LQ-AUD-003",
+      "severity": "bounded_negative_only",
+      "finding": "Scale fitting is nearest-label-first rather than joint with the algebraic label objective."
+    },
+    {
+      "id": "LQ-AUD-004",
+      "severity": "production_hold",
+      "finding": "The absolute source gate is component-local and excludes the packed three-role expert ledger."
+    },
+    {
+      "id": "LQ-AUD-005",
+      "severity": "production_hold",
+      "finding": "SwiGLU shape closure and canonical GF2/ROMDD re-encoding are not enforced by the expert decoder."
+    }
+  ],
+  "universality": {
+    "packet_mechanics_shape_parametric": true,
+    "qwen_accounting_helpers_are_not_universal_evidence": true,
+    "current_panel_requires_identical_slots_and_shapes": true,
+    "disjoint_swiglu_moe_transfer_required": true,
+    "universal_claim_authorized": false
+  },
+  "leakage": {
+    "split_uses_public_identifier_hashes": true,
+    "whole_test_layers_excluded": true,
+    "whole_validation_slots_excluded_from_training": true,
+    "learned_state_or_permutation_present": false,
+    "executable_hyperparameter_selection_receipt_present": false,
+    "canonical_control_component_ordinal_binding_present": false
+  },
+  "authorization": {
+    "direct_qwen_payload_run": false,
+    "write_separate_capped_adapter_successor": true,
+    "requirements": [
+      "pre-search hard-kill orchestration",
+      "finite frozen compute and memory caps",
+      "full packed-expert rate and pooled-MSE gate",
+      "canonical SwiGLU shape normalization and validation",
+      "canonical packet or exact raw-byte replay closure",
+      "train-validation-only hyperparameter receipt",
+      "canonical panel and control ordinal binding",
+      "explicit bounded-negative claim language",
+      "CuPy implementation for promoted numerical search"
+    ]
+  },
+  "access_attestation": {
+    "model_or_qwen_payload_opened": false,
+    "current_codec_or_coarse_payload_opened": false,
+    "matched_control_artifact_opened": false,
+    "parent_freeze_modified": false
+  }
+}
