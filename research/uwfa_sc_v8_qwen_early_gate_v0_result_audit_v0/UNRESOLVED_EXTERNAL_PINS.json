@@ -1,0 +1,20 @@
+{
+  "artifact_bytes": null,
+  "artifact_path": null,
+  "artifact_sha256": null,
+  "baseline_score_sha256": null,
+  "complete_file_sha256": null,
+  "final_name": null,
+  "frozen_auditor_path": null,
+  "frozen_auditor_sha256": null,
+  "output_parent": null,
+  "result_file_sha256": null,
+  "runner_path": null,
+  "runner_sha256": null,
+  "source_preflight_sha256": null,
+  "strata_common_path": null,
+  "strata_common_sha256": null,
+  "v8_manifest_sha256": null,
+  "v8_package": null,
+  "v8_source_root_sha256": null
+}

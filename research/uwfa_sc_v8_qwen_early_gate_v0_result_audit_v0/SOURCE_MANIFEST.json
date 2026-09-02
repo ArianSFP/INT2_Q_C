@@ -1,0 +1,41 @@
+{
+  "schema": "uwfa-sc-v8-qwen-early-gate-result-audit-source-manifest-v0",
+  "status": "SOURCE_ONLY_UNEXECUTED_AGAINST_LIVE_RESULT_EXTERNAL_PINS_UNRESOLVED",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 5534,
+      "sha256": "301a6965b0ba0fd14146dd823e0222a9b8a1965b45f679199645c57bec38b0d9"
+    },
+    {
+      "name": "UNRESOLVED_EXTERNAL_PINS.json",
+      "bytes": 517,
+      "sha256": "040c6de2d94c82f2fbc309c3021769ad14fb8cdde8a943d440977625874c77d1"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 12393,
+      "sha256": "b0c1a009a483ad3f667704ae7454aa4c8e71507e80a35e03f92341165eca3f82"
+    },
+    {
+      "name": "verify_result.py",
+      "bytes": 92649,
+      "sha256": "56f988d33accf766e9ec43cc0dc3473c39013e39f43ec00e79f01b840219a964"
+    }
+  ],
+  "construction_attestation": {
+    "qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "control_payload_opened_statted_hashed_or_enumerated": false,
+    "producer_result_payload_opened_statted_hashed_or_enumerated": false,
+    "running_early_gate_package_mutated": false,
+    "tests_use_synthetic_bytes_only": true,
+    "external_pins_resolved": false
+  },
+  "runtime_requirements": [
+    "FRESH_POSIX_CPYTHON_PROCESS_WITH_ISOLATED_AND_NO_BYTECODE_FLAGS",
+    "EXPLICIT_EXACT_AUDIT_AUTHORIZATION_STRING",
+    "ALL_EXTERNAL_PATH_HASH_AND_LENGTH_PINS_SUPPLIED_OUT_OF_BAND",
+    "NUMPY_AVAILABLE_FOR_INDEPENDENT_CPU_RECONSTRUCTION",
+    "NO_POSITIVE_CLAIM_FROM_THIS_EXPLORATORY_RESULT_AUDIT"
+  ]
+}
