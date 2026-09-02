@@ -1,0 +1,29 @@
+{
+  "schema": "logic-q-v2-independent-generic-runpod-cupy-probe-v1",
+  "status": "PASS_GENERIC_REAL_DEVICE_PROBE__NOT_A_V2_LAUNCH_RECEIPT",
+  "date": "2026-09-02",
+  "runpod": {
+    "device_id": 0,
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "cupy_version": "14.2.0",
+    "cupy_module_file": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/cupy/__init__.py",
+    "cupy_module_file_sha256": "8c4724758587dea5f1c1d7c217c74a9fa0e4ed7f9d76a2b86fa001117cf3c718",
+    "cuda_runtime_version": 12090,
+    "cuda_driver_version": 13000,
+    "multiprocessors": 170,
+    "total_global_memory_bytes": 33668857856,
+    "probe_elements": 4096,
+    "probe_observed": 126727726,
+    "probe_expected": 126727726,
+    "stream_synchronized": true
+  },
+  "scope": {
+    "repository_source_uploaded": false,
+    "v2_source_package_present_on_runpod": false,
+    "frozen_v2_collect_receipt_called": false,
+    "model_or_qwen_payload_accessed": false,
+    "strata_or_coarse_payload_accessed": false,
+    "matched_control_payload_accessed": false
+  },
+  "note": "The escalation reviewer denied SCP of the frozen repository source packages to the external RunPod. This is a generic CuPy/device observation only and must not be reported as an authenticated LOGIC-Q v2 launch receipt."
+}

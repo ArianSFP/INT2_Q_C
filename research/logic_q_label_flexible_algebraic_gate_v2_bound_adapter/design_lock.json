@@ -1,0 +1,131 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v2-bound-adapter-design-lock",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_INDEPENDENT_V2_AUDIT",
+  "date": "2026-09-02",
+  "dependencies": {
+    "v1_manifest_sha256": "9bfd3d1225fb45a0518d2d4d6a4035262e87dc62563222e42e69665358b9aac5",
+    "v1_source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560",
+    "v0_manifest_sha256": "31edbc3325dfdae2b3f43cce4afb360062d5c70583b57dd1e6530835a178cced",
+    "v0_source_root_sha256": "2177f2aec39a65afddbbded9b6b3cd2c2a33118c060a41e070102f9fb6c95d4a",
+    "v1_independent_audit_manifest_sha256": "6a0e97d987a3288126632db29756681c2ee7c16e809d2a8466db16b22a78dfe1",
+    "v1_independent_audit_source_root_sha256": "d56f36015413694c45dd81b571b05974ef5541cf66e6099c4d2b518c75f1c63b",
+    "v1_independent_audit_disposition": "MECHANISM_VALID__HOLD_BOUND_SELECTOR_SCORER_AND_LIVE_BACKEND",
+    "v1_real_cupy_packet_sha256": "c0a0a22ed591de3aa6b4a4d903b4ec9a199234426915563824bc1e7702eae008"
+  },
+  "frozen_mechanics": {
+    "v1_modified": false,
+    "v0_modified": false,
+    "executable_hard_kill_before_family_search": true,
+    "rm_full_qwen_pair_matrix_forbidden": true,
+    "unrestricted_quadratic_exception_search_forbidden": true,
+    "scale_shortlist": 2,
+    "rm_word_shortlist_per_plane": 8,
+    "rm_exact_pairs_per_block": 64,
+    "rm_retained_pairs": 4,
+    "rm_exception_cap_per_256": 16,
+    "romdd_depths": [0, 2, 4, 6],
+    "romdd_component_exception_cap": 64,
+    "gf2_search_scheduled": false,
+    "gf2_canonical_decoder_preserved": true,
+    "romdd_depth_canonical_reencode_preserved": true
+  },
+  "panel": {
+    "minimum_layers": 10,
+    "minimum_whole_test_layers": 5,
+    "whole_validation_slots": true,
+    "split_uses_source_hash": false,
+    "source_hash_bound_before_test": true,
+    "canonical_component_ordinals": true,
+    "roles": ["gate", "up", "down_transposed"],
+    "exact_role_shape_equality": true,
+    "one_shape_and_dtype_cohort": true,
+    "external_panel_sha256_required": true
+  },
+  "selector": {
+    "literal_train_validation_rows_required_for_every_frozen_config": true,
+    "test_rows_or_metrics_accepted": false,
+    "row_partition_recomputed_from_panel": true,
+    "row_source_hash_and_dtype_bound_to_panel": true,
+    "row_packet_and_component_hash_bound_to_packet_receipt": true,
+    "packet_bits_counted_once_per_expert_triplet": true,
+    "source_weights_derived_from_component_headers": true,
+    "aggregate_sse_and_energy_recomputed_from_rows": true,
+    "selected_config_recomputed_from_validation_metrics": true,
+    "selection_order": ["rate_interval_miss", "F", "physical_rate_bpw", "config_id"],
+    "selected_validation_rate_min_bpw": 2.15,
+    "selected_validation_rate_max_bpw": 2.5,
+    "external_selection_receipt_sha256_required": true
+  },
+  "independent_scorer": {
+    "separate_module": true,
+    "encoder_entrypoint": false,
+    "encoder_weighted_sse_accepted": false,
+    "encoder_source_energy_accepted": false,
+    "encoder_label_count_accepted": false,
+    "injected_numpy_backend_accepted": false,
+    "source_dtypes": ["bf16-le", "float32-le", "float64-le"],
+    "source_blob_sha256_bound_to_panel": true,
+    "canonical_packet_decode_required": true,
+    "raw_unweighted_fp64_sse": true,
+    "raw_fp64_source_energy": true,
+    "count_from_packet_header": true,
+    "sealed_per_role_rows": true
+  },
+  "packet_receipt": {
+    "literal_expert_header": true,
+    "literal_component_headers": true,
+    "component_sha256_and_bytes": true,
+    "expert_sha256_and_bytes": true,
+    "header_derived_source_count": true,
+    "gate_up_downT_shape_closure": true,
+    "expert_page_multiple": true,
+    "one_contiguous_routed_read": true,
+    "cold_read_amplification": 1.0,
+    "encoder_metric_objects_used": false
+  },
+  "live_backend": {
+    "name_only_object_accepted": false,
+    "bare_module_shell_accepted": false,
+    "canonical_imported_cupy_identity_required": true,
+    "cupy_module_file_sha256_recorded": true,
+    "cupy_ndarray_module_bound": true,
+    "active_cuda_device_recorded": true,
+    "runtime_and_driver_versions_recorded": true,
+    "synchronized_gpu_probe_elements": 4096,
+    "launch_context_fields": [
+      "panel_sha256",
+      "selection_receipt_sha256",
+      "config_id",
+      "layer",
+      "slot",
+      "rows",
+      "cols",
+      "v1_source_root_sha256"
+    ],
+    "receipt_recollected_before_live_encode": true,
+    "independent_runpod_gpu_replay_required": true
+  },
+  "controls": {
+    "matched_gaussian_seeds": 8,
+    "generation_and_complete_capped_search_inherited_from_pinned_v1": true,
+    "future_payload_controls_require_independent_raw_source_scoring": true,
+    "controls_can_create_absolute_pass": false
+  },
+  "strata_semantic_boundary": {
+    "v2_codec_alphabet": 4,
+    "current_strata_reconstruction_indices": 64,
+    "current_strata_complete_level_major_passes": 6,
+    "v2_bound_to_current_strata_semantics": false,
+    "four_level_result_transfers_to_strata": false,
+    "required_successor": "STRATA-RM6",
+    "required_plan_file": "STRATA_RM6_ADAPTER_PLAN.md"
+  },
+  "payload_authority": {
+    "qwen": false,
+    "current_strata_container": false,
+    "matched_gaussian_artifact": false,
+    "network": false,
+    "condition_to_change": "independent v2 source/backend audit plus a separately authenticated current-codec semantic adapter"
+  },
+  "claim_boundary": "Source-only orchestration repair around an abstract four-level frozen mechanism; no Qwen result, no STRATA result, no F<=0.8 result, and no universal SwiGLU-MoE result."
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "strata-rm-bec-source-free-overlap-v0",
+  "backend": {
+    "cupy_version": "14.2.0",
+    "device_id": 0,
+    "device_name": "NVIDIA GeForce RTX 5090"
+  },
+  "claim_boundary": "row-set overlap only; no Qwen payload or RD claim",
+  "full_runpod_result_sha256": "4fa142036cfb726f5c52151acd509a6b08956f78df35b75307166c371a512630",
+  "aggregate": {
+    "all_levels_intersection": 113161152,
+    "all_levels_selected": 117156583,
+    "all_levels_weighted_replacement_fraction_of_selected": 0.0341033418497704,
+    "blocks": 14,
+    "levels": [
+      {
+        "intersection": 19876,
+        "level": 1,
+        "max_block_replacement_fraction_of_selected": 0.683937054631829,
+        "min_block_replacement_fraction_of_selected": 0.4444444444444444,
+        "selected": 57594,
+        "symmetric_difference": 75436,
+        "symmetric_difference_over_total_n": 0.0026644953974971066,
+        "weighted_replacement_fraction_of_selected": 0.6548946070771261
+      },
+      {
+        "intersection": 4292127,
+        "level": 2,
+        "max_block_replacement_fraction_of_selected": 0.5299350830841599,
+        "min_block_replacement_fraction_of_selected": 0.27150846581417504,
+        "selected": 6835517,
+        "symmetric_difference": 5086780,
+        "symmetric_difference_over_total_n": 0.17967153478551795,
+        "weighted_replacement_fraction_of_selected": 0.37208451094481954
+      },
+      {
+        "intersection": 23922215,
+        "level": 3,
+        "max_block_replacement_fraction_of_selected": 0.12901352937604987,
+        "min_block_replacement_fraction_of_selected": 0.012677134936366193,
+        "selected": 25333440,
+        "symmetric_difference": 2822450,
+        "symmetric_difference_over_total_n": 0.09969252127188223,
+        "weighted_replacement_fraction_of_selected": 0.05570601544835601
+      },
+      {
+        "intersection": 28303830,
+        "level": 4,
+        "max_block_replacement_fraction_of_selected": 0.0006491321437350396,
+        "min_block_replacement_fraction_of_selected": 0.0,
+        "selected": 28306928,
+        "symmetric_difference": 6196,
+        "symmetric_difference_over_total_n": 0.00021885059497974538,
+        "weighted_replacement_fraction_of_selected": 0.00010944317235695799
+      },
+      {
+        "intersection": 28311552,
+        "level": 5,
+        "max_block_replacement_fraction_of_selected": 0.0,
+        "min_block_replacement_fraction_of_selected": 0.0,
+        "selected": 28311552,
+        "symmetric_difference": 0,
+        "symmetric_difference_over_total_n": 0.0,
+        "weighted_replacement_fraction_of_selected": 0.0
+      },
+      {
+        "intersection": 28311552,
+        "level": 6,
+        "max_block_replacement_fraction_of_selected": 0.0,
+        "min_block_replacement_fraction_of_selected": 0.0,
+        "selected": 28311552,
+        "symmetric_difference": 0,
+        "symmetric_difference_over_total_n": 0.0,
+        "weighted_replacement_fraction_of_selected": 0.0
+      }
+    ]
+  },
+  "inputs": [
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_00.json", "n": 2097152, "metadata_sha256": "065094ee69a55cb9a5abfbe0f468a3555a6a7be490a0910ec5ed3d79f52faa66"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_01.json", "n": 2097152, "metadata_sha256": "89a22292cb6ab4c06838d0c86f4ce71f21680a7a722f860fffba426a962d3472"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_02.json", "n": 2097152, "metadata_sha256": "0ccc962c579db232d601a87f32fbc0b76e9f81bab122ce14b1df1874b75ef055"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_03.json", "n": 2097152, "metadata_sha256": "c78df45af7a1dbaf0ae3a8c98a2e83e2ae188b0c483efb685bd1bd16973c2e65"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_04.json", "n": 2097152, "metadata_sha256": "4fe9bde77374210ca61d51ce499d78cba3e29ee388a69652239a52ca7f684070"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_05.json", "n": 2097152, "metadata_sha256": "a77f4cb7028aa98aa693d92c18586107c0af55e37514cd5dc802ea870108299a"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_06.json", "n": 2097152, "metadata_sha256": "926ca27cb2173ef0e9880f4d357962c854fc33209485b4b390a81d6497b747b6"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_07.json", "n": 2097152, "metadata_sha256": "2b46989f4c9c65c4f60d3087a3255d62acd7f1f0fa27574e4475f8ff328ea91e"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_08.json", "n": 2097152, "metadata_sha256": "6f3a8fdf40bbb27d8c27064a81788c49e0ac691e33b24e8bda46ffeb21cd5015"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_09.json", "n": 2097152, "metadata_sha256": "bd802133ab084d89bd5858db9b7d03ed5214373a2f0ae1d4d85de8abe3d05cdd"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_10.json", "n": 2097152, "metadata_sha256": "89d3eab99919732a005fc8e72e691b647e10406458d7dd5d1d2fddc0ccd4d423"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_11.json", "n": 2097152, "metadata_sha256": "372eccb9557ec964af4eb242e3e89a4180804e7ab1c2d26ded6c5aa678b1586c"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_12.json", "n": 2097152, "metadata_sha256": "70a789fe6b219fce0751c3985d186c5340a43ad1c56598ad456d7ab55b76fbed"},
+    {"path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_13.json", "n": 1048576, "metadata_sha256": "e92e65c147eb5b87cf0f0706a66017fd85d1ce6eb20859e46c905ef6372539c3"}
+  ]
+}

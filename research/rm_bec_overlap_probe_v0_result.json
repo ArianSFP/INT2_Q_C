@@ -1,0 +1,161 @@
+{
+  "backend": {
+    "cupy_version": "14.2.0",
+    "device_id": 0,
+    "device_name": "NVIDIA GeForce RTX 5090"
+  },
+  "claim_boundary": "row-set overlap only; no Qwen payload or RD claim",
+  "results": [
+    {
+      "capacities": [
+        1.2626439862328809e-05,
+        0.0805165074169818,
+        0.7539517637350754,
+        0.9990237917524034,
+        0.9999999999992113,
+        1.0
+      ],
+      "levels": [
+        {
+          "capacity": 1.2626439862328809e-05,
+          "capacity_q31": 27115,
+          "intersection": 15,
+          "intersection_over_selected": 0.5555555555555556,
+          "replacement_fraction_of_selected": 0.4444444444444444,
+          "selected": 27,
+          "symmetric_difference": 24,
+          "symmetric_difference_over_n": 1.1444091796875e-05
+        },
+        {
+          "capacity": 0.0805165074169818,
+          "capacity_q31": 172907883,
+          "intersection": 79376,
+          "intersection_over_selected": 0.47008101577675654,
+          "replacement_fraction_of_selected": 0.5299189842232435,
+          "selected": 168856,
+          "symmetric_difference": 178960,
+          "symmetric_difference_over_n": 0.08533477783203125
+        },
+        {
+          "capacity": 0.7539517637350754,
+          "capacity_q31": 1619099084,
+          "intersection": 1377162,
+          "intersection_over_selected": 0.8709864706239502,
+          "replacement_fraction_of_selected": 0.12901352937604987,
+          "selected": 1581152,
+          "symmetric_difference": 407980,
+          "symmetric_difference_over_n": 0.19454002380371094
+        },
+        {
+          "capacity": 0.9990237917524034,
+          "capacity_q31": 2145387257,
+          "intersection": 2093745,
+          "intersection_over_selected": 0.9993508678562649,
+          "replacement_fraction_of_selected": 0.0006491321437350396,
+          "selected": 2095105,
+          "symmetric_difference": 2720,
+          "symmetric_difference_over_n": 0.0012969970703125
+        },
+        {
+          "capacity": 0.9999999999992113,
+          "capacity_q31": 2147483648,
+          "intersection": 2097152,
+          "intersection_over_selected": 1.0,
+          "replacement_fraction_of_selected": 0.0,
+          "selected": 2097152,
+          "symmetric_difference": 0,
+          "symmetric_difference_over_n": 0.0
+        },
+        {
+          "capacity": 1.0,
+          "capacity_q31": 2147483648,
+          "intersection": 2097152,
+          "intersection_over_selected": 1.0,
+          "replacement_fraction_of_selected": 0.0,
+          "selected": 2097152,
+          "symmetric_difference": 0,
+          "symmetric_difference_over_n": 0.0
+        }
+      ],
+      "metadata_sha256": "065094ee69a55cb9a5abfbe0f468a3555a6a7be490a0910ec5ed3d79f52faa66",
+      "n": 2097152,
+      "path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_00.json"
+    },
+    {
+      "capacities": [
+        0.009147193402255116,
+        0.4464319549491502,
+        0.9786880810025801,
+        0.9999998972677532,
+        1.0,
+        1.0
+      ],
+      "levels": [
+        {
+          "capacity": 0.009147193402255116,
+          "capacity_q31": 19643448,
+          "intersection": 3540,
+          "intersection_over_selected": 0.36905754795663054,
+          "replacement_fraction_of_selected": 0.6309424520433695,
+          "selected": 9592,
+          "symmetric_difference": 12104,
+          "symmetric_difference_over_n": 0.01154327392578125
+        },
+        {
+          "capacity": 0.4464319549491502,
+          "capacity_q31": 958705323,
+          "intersection": 341020,
+          "intersection_over_selected": 0.7284915341858249,
+          "replacement_fraction_of_selected": 0.27150846581417504,
+          "selected": 468118,
+          "symmetric_difference": 254196,
+          "symmetric_difference_over_n": 0.24242019653320312
+        },
+        {
+          "capacity": 0.9786880810025801,
+          "capacity_q31": 2101716650,
+          "intersection": 1012422,
+          "intersection_over_selected": 0.9865458879061106,
+          "replacement_fraction_of_selected": 0.013454112093889376,
+          "selected": 1026229,
+          "symmetric_difference": 27614,
+          "symmetric_difference_over_n": 0.026334762573242188
+        },
+        {
+          "capacity": 0.9999998972677532,
+          "capacity_q31": 2147483427,
+          "intersection": 1048576,
+          "intersection_over_selected": 1.0,
+          "replacement_fraction_of_selected": 0.0,
+          "selected": 1048576,
+          "symmetric_difference": 0,
+          "symmetric_difference_over_n": 0.0
+        },
+        {
+          "capacity": 1.0,
+          "capacity_q31": 2147483648,
+          "intersection": 1048576,
+          "intersection_over_selected": 1.0,
+          "replacement_fraction_of_selected": 0.0,
+          "selected": 1048576,
+          "symmetric_difference": 0,
+          "symmetric_difference_over_n": 0.0
+        },
+        {
+          "capacity": 1.0,
+          "capacity_q31": 2147483648,
+          "intersection": 1048576,
+          "intersection_over_selected": 1.0,
+          "replacement_fraction_of_selected": 0.0,
+          "selected": 1048576,
+          "symmetric_difference": 0,
+          "symmetric_difference_over_n": 0.0
+        }
+      ],
+      "metadata_sha256": "e92e65c147eb5b87cf0f0706a66017fd85d1ce6eb20859e46c905ef6372539c3",
+      "n": 1048576,
+      "path": "/workspace/INT2__compression/strata_v2_blind_one_shot_v2/encoded/block_13.json"
+    }
+  ],
+  "schema": "strata-rm-bec-source-free-overlap-v0"
+}

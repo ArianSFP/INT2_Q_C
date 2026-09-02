@@ -1,0 +1,59 @@
+{
+  "schema": "logic-q-v2-bound-adapter-preflight-history-v1",
+  "status": "EXACT_VERIFY_FAILURE_PRESERVED__FINAL_CLEAN_RETRY_PASSED",
+  "date": "2026-09-02",
+  "failure_count": 1,
+  "generated_cache_artifact_observed": false,
+  "attempts": [
+    {
+      "ordinal": 0,
+      "command": "python -I -B research/logic_q_label_flexible_algebraic_gate_v2_bound_adapter/test_source_only.py",
+      "result": "PASS",
+      "status": "PASS_SOURCE_ONLY_HOSTILE_TESTS",
+      "test_count": 27,
+      "packet_sha256": "03dfafdf914d1a5df9b95e73759034e5b2ed171374a4990f8a79818d3f80d311",
+      "panel_sha256": "7e8e43d352e77538919645590115a07999af9511c9714cb87bf552da30539467",
+      "selection_receipt_sha256": "9b5a3f7b5bcab60674fcd82d68ecf20742749622221cc81f2a1f95f9c6441d5e",
+      "model_or_qwen_payload_accessed": false,
+      "network_accessed": false,
+      "cupy_imported_or_initialized": false
+    },
+    {
+      "ordinal": 1,
+      "command": "python -I -B research/logic_q_label_flexible_algebraic_gate_v2_bound_adapter/run_source_free_fixture.py",
+      "result": "PASS",
+      "status": "PASS_SOURCE_FREE_BINDING_FIXTURE",
+      "packet_sha256": "03dfafdf914d1a5df9b95e73759034e5b2ed171374a4990f8a79818d3f80d311",
+      "source_score_bundle_sha256": "a74b55f253e0ff72b27e102986565dbdbe6d8bc385ac4b9e5592148b41d7cc4f",
+      "physical_rate_bpw": 2.1666666666666665,
+      "cold_read_amplification": 1.0,
+      "model_or_qwen_payload_accessed": false,
+      "network_accessed": false,
+      "cupy_imported_or_initialized": false
+    },
+    {
+      "ordinal": 2,
+      "command": "python -I -B verify_source.py --package PACKAGE --expected-manifest-sha256 25c464d1edebddbe8e0f74ca9530800e901e5f9d7d3d03b853f571d1b59c53a0",
+      "result": "FAIL_CLOSED",
+      "error": "VerifyError: design lock bindings",
+      "cause": "design_lock status omitted the verifier's SEALED prefix",
+      "failure_ignored": false,
+      "payload_accessed": false,
+      "network_accessed": false,
+      "cupy_imported_or_initialized": false
+    },
+    {
+      "ordinal": 3,
+      "command": "python -I -B verify_source.py --package PACKAGE --expected-manifest-sha256 EXTERNAL_FINAL_PIN",
+      "result": "PASS",
+      "status": "PASS_EXACT_SOURCE_ONLY_VERIFICATION",
+      "clean_retry_after_status_alignment": true,
+      "payload_accessed": false,
+      "network_accessed": false,
+      "cupy_imported_or_initialized": false
+    }
+  ],
+  "failure_preservation_policy": "Any later fail-closed replay must be appended here before a successor can be resealed; it may not be silently replaced by a clean run.",
+  "v1_preflight_cache_failure_preserved_in_v1": true,
+  "claim_boundary": "Source-only preflight; no independent v2 audit, real CuPy v2 receipt, Qwen payload, current STRATA semantic bridge, or model result."
+}

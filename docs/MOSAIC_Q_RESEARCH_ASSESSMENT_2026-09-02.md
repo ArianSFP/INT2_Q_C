@@ -167,6 +167,22 @@ Three adversarial probes retain a production HOLD:
 These are orchestration defects, not negative evidence for RM, GF(2), QTT,
 BDD, or algebraic label-flexible quantization.
 
+The subsequent v2 repair closed literal-source FP64 scoring, header-derived
+counts, finite BF16 scale checks, canonical packet replay, and an actual CuPy
+device probe. Its independent audit nevertheless retains
+`MECHANISM_VALID__HOLD_PRODUCTION_PROVENANCE_BACKEND_AND_STRATA`. Selection
+rows and compact packet receipts remain caller-created self-seals rather than
+auditor-owned measurements: packet receipts omit the scale and payload bytes,
+the same packet can be relabelled as multiple configurations, launch does not
+prove that the pinned selection chose its configuration, duplicate source
+content can cross owner partitions, and an in-process `sys.modules` CuPy
+facade can spoof the backend check. The abstract four-level mechanism remains
+valid, but it has no current-STRATA or Qwen authority. The frozen source and
+audit roots are respectively
+`080de7a63e596ae34f9da90941d7fd9d07b70dfb2afad97103aa5ab5943d3776`
+and
+`f0e558027e42b893664c189ad8e48ce71281f3dd5807887022326ffb440ff0e8`.
+
 ## Assessment of the proposed branches
 
 ### 1. ε-TCQ and causal states — high scientific value, hard integration
@@ -280,6 +296,26 @@ packet rather than the selected-row count. It must compare zero/low-complexity
 frozen cosets with the current procedural random coset; a random frozen coset
 can erase the coordinate-function interpretation even when the row set is RM.
 
+A source-free CuPy census then compared the exact Q31 BEC construction with
+RM row-weight ordering for all fourteen published STRATA staging-block
+metadata records. It opened no weight or arithmetic payload. Across all
+levels, only `3.41033418497704%` of selected rows change because levels five
+and six are full-rate. The useful lower levels change materially:
+
+```text
+level 1 weighted selected-row replacement  65.48946070771261%
+level 2 weighted selected-row replacement  37.208451094481954%
+level 3 weighted selected-row replacement   5.570601544835601%
+level 4 weighted selected-row replacement   0.010944317235695799%
+levels 5--6                                  0%
+```
+
+Thus the global row-order swap is neither identical to the baseline nor a
+measured improvement. It has enough geometric difference to justify one
+exact distortion/physical-packet experiment, while the overlap receipt itself
+remains explicitly non-RD evidence. The full RunPod result SHA-256 is
+`4fa142036cfb726f5c52151acd509a6b08956f78df35b75307166c371a512630`.
+
 ### 3. Coarse-programmed graph, BM3D, Hankel, and Ramanujan — bounded oracles
 
 Using paid coarse bytes to define a graph or match map is legitimate and
@@ -354,8 +390,9 @@ and external storage traffic are reported separately.
    engineering on a `0.00015723251757482348 bpw` source-specific excess.
 3. Finish ε-TCQ's ragged/COW six-level semantics and compute gate; memory alone
    has passed, while payload authority remains held.
-4. Repair LOGIC-Q's selector, source scorer, and actual-CuPy launch bindings;
-   do not open Qwen under the audited v1 HOLD.
+4. Preserve the audited LOGIC-Q v2 production HOLD and repair its
+   auditor-owned byte provenance, selected-config capability, and trusted-runner
+   CuPy boundary in a narrow v3; do not open Qwen under v2.
 5. Run posterior-centroid v1 only after a passing WFA audit receipt and a
    separately bound launch review.
 6. Run exact GF(2) recurrence, non-dyadic Ramanujan, and capped Hankel/AR as

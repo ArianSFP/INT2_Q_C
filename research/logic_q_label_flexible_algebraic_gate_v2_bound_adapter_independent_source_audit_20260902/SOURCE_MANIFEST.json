@@ -1,0 +1,46 @@
+{
+  "schema": "logic-q-v2-independent-source-audit-manifest-v1",
+  "status": "MECHANISM_VALID__HOLD_PRODUCTION_PROVENANCE_BACKEND_AND_STRATA",
+  "source_root_sha256": "f0e558027e42b893664c189ad8e48ce71281f3dd5807887022326ffb440ff0e8",
+  "frozen_source": {
+    "manifest_sha256": "e97041b2debdd1a85ce32305f43aae1f76cf4ca937b52e275bdd246ae1b1b980",
+    "source_root_sha256": "080de7a63e596ae34f9da90941d7fd9d07b70dfb2afad97103aa5ab5943d3776",
+    "modified": false
+  },
+  "members": [
+    {
+      "name": "AUDIT_DISPOSITION.json",
+      "bytes": 3239,
+      "sha256": "06e385a2292f1f0ca172d34b68f15c6b801827ac4b69b1047e81bda4b4538035"
+    },
+    {
+      "name": "README.md",
+      "bytes": 11428,
+      "sha256": "3a3d9f3d434cf2476ba0bda1719e2eaa0fed720c11d51ce9156c313237ea93b9"
+    },
+    {
+      "name": "RUNPOD_CUPY_PROBE.json",
+      "bytes": 1274,
+      "sha256": "dee9b56e33704308df54f4215ba8da5e9506fbe78e0d527b39b63a89cac934ec"
+    },
+    {
+      "name": "hostile_audit.py",
+      "bytes": 20431,
+      "sha256": "9916a536167f393c0274217a6299689b53d23cc6db6ac7bbcf9b3f9c039985b3"
+    },
+    {
+      "name": "verify_audit.py",
+      "bytes": 8501,
+      "sha256": "ee2a85184c0c75e461df529f4bed33dde03458c67a7e9f2df0ac8e844fc09f30"
+    }
+  ],
+  "execution": {
+    "static_independent_inspection_completed": true,
+    "executable_hostile_attacks_authored": true,
+    "hostile_attacks_executed": false,
+    "generic_real_runpod_cupy_probe_passed": true,
+    "frozen_v2_runpod_replay_passed": false,
+    "reason": "No local Python interpreter; managed escalation reviewer denied source-package export to the external RunPod."
+  },
+  "claim_boundary": "No Qwen, current STRATA, matched-control, F<=0.8, runtime-bandwidth, or universal SwiGLU-MoE authority."
+}

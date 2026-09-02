@@ -1,0 +1,56 @@
+{
+  "schema": "logic-q-v2-independent-source-audit-disposition-v1",
+  "status": "MECHANISM_VALID__HOLD_PRODUCTION_PROVENANCE_BACKEND_AND_STRATA",
+  "date": "2026-09-02",
+  "audited_source": {
+    "manifest_sha256": "e97041b2debdd1a85ce32305f43aae1f76cf4ca937b52e275bdd246ae1b1b980",
+    "source_root_sha256": "080de7a63e596ae34f9da90941d7fd9d07b70dfb2afad97103aa5ab5943d3776",
+    "frozen_source_modified": false
+  },
+  "valid_mechanics": [
+    "exact source closure and v1/v0 dependency pins",
+    "literal packet canonical decode and re-encode",
+    "header-derived counts and physical bytes when actual packet bytes are present",
+    "positive finite BF16 scale and zero padding enforcement on actual packets",
+    "independent literal-source BF16/FP32/FP64 parsing",
+    "raw unweighted FP64 SSE and source-energy recomputation from literal bytes",
+    "whole-layer test and whole-slot validation identifier partitions",
+    "one page-contiguous expert layout"
+  ],
+  "production_holds": [
+    "selection rows are publicly self-sealed assertions and are not bound to an auditor-owned scorer invocation",
+    "packet geometry receipts omit packet, scale, and payload bytes and accept invented packet/component hashes",
+    "the same packet can be scored and selected under distinct config IDs",
+    "launch context does not prove the referenced selection receipt chose the launched config",
+    "in-process CuPy identity and device probe can be spoofed through sys.modules and a CPU facade",
+    "duplicate source hashes across disjoint owners and partitions are accepted",
+    "no bound matched-control or final whole-test result gate exists",
+    "read amplification is declared from layout and not measured at runtime",
+    "the abstract four-level alphabet is not current STRATA six-plane 0..63 semantics"
+  ],
+  "hostile_test_program": {
+    "path": "hostile_audit.py",
+    "authored": true,
+    "locally_executed": false,
+    "runpod_executed": false,
+    "reason_not_executed": "No Python interpreter is installed in the local workspace, and the managed escalation reviewer denied SCP of the frozen repository source packages to the external RunPod. Circumvention was not attempted."
+  },
+  "generic_runpod_probe": {
+    "receipt": "RUNPOD_CUPY_PROBE.json",
+    "passed": true,
+    "is_v2_launch_receipt": false
+  },
+  "required_v3": [
+    "auditor-owned raw source and packet byte ingestion",
+    "internal packet parse, canonical decode/re-encode, reconstruction, hash, count, rate, SSE, and energy derivation",
+    "externally pinned panel/grid/scorer protocol before rows and complete selection artifact before test",
+    "scale and payload byte authentication plus physical corruption check",
+    "config identity bound to packet or auditor-owned encode invocation",
+    "fresh restricted CuPy process and trusted-runner device evidence",
+    "launched config derived by reparsing the pinned selection artifact",
+    "duplicate-owner source-hash rejection or audited alias map",
+    "literal matched-control and whole-test result gates",
+    "separately audited STRATA-RM6 semantic adapter"
+  ],
+  "claim_boundary": "No Qwen, current STRATA, matched-control, F<=0.8, runtime-bandwidth, or universal SwiGLU-MoE authority."
+}
