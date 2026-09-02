@@ -1,0 +1,84 @@
+{
+  "schema": "epsilon-tcq-wfa-early-gate-v0-design-lock",
+  "status": "SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "date": "2026-09-02",
+  "interfaces": {
+    "primary": "strata_sc_6bit_legal_replay",
+    "primary_labels": 64,
+    "primary_events_per_label": 6,
+    "primary_requires_external_authenticated_legal_adapter": true,
+    "primary_adapter_present_in_v0": false,
+    "secondary": "direct_int2_4level_new_codec",
+    "secondary_labels": 4,
+    "secondary_events_per_label": 2,
+    "interfaces_are_rate_or_reconstruction_aliases": false
+  },
+  "frozen_bank": [
+    {"topology": "suffix", "states": 4, "reset": 32},
+    {"topology": "suffix", "states": 8, "reset": 128},
+    {"topology": "xor_sketch", "states": 8, "reset": 64},
+    {"topology": "modular_ones", "states": 8, "reset": 64},
+    {"topology": "rolling_affine", "states": 8, "reset": 128},
+    {"topology": "signed_saturating", "states": 8, "reset": 64}
+  ],
+  "search": {
+    "epsilon": [1, 2],
+    "lambda_exponents": [-16, -12, -8, -4],
+    "beam_widths": [32, 128, 512],
+    "exact_max_labels": 12,
+    "exact_max_choices_per_label": 3,
+    "objective_rate_term": "literal finalized padded packet bits",
+    "beam_state_includes_exact_arithmetic_interval_and_emitted_prefix": true
+  },
+  "initializer": {
+    "method": "bounded spectral Hankel/CSSR-style ranking/initialization",
+    "maximum_prefix_length": 3,
+    "maximum_suffix_length": 3,
+    "maximum_numerical_rank": 16,
+    "may_create_new_topology": false
+  },
+  "posterior": {
+    "formats": ["nominal", "local_label_binary16", "state_label_binary16", "state_permuted_binary16"],
+    "cross_fit_unit": "connected stream-owner component",
+    "state_permutation_is_source_independent": true
+  },
+  "physical": {
+    "packet_magic": "ETCQWF01",
+    "packet_header_bytes": 256,
+    "stream_header_bytes": 128,
+    "model_and_centroid_bytes_fully_charged": true,
+    "literal_decode_reencode_required": true,
+    "compressed_expert_refetch_allowed": false,
+    "cold_read_limit_strict": 2.0,
+    "host_hbm_storage_ledgers_disjoint": true
+  },
+  "implementation_boundary": {
+    "executable_source_free": [
+      "literal direct-four and synthetic-six-event adapter mechanics",
+      "exact and beam joint label/WFA/arithmetic-state search",
+      "CuPy FP64 batched branch scoring and bounded Hankel spectrum",
+      "model/centroid/frame packet parse decode canonical re-encode",
+      "owner-component folds control gates and one-pass page ledger"
+    ],
+    "planned_not_executable_in_v0": [
+      "authenticated current POLARIS/STRATA legal-transition adapter",
+      "Qwen source and real current-codec packet ingestion",
+      "outer-fold topology hyperparameter and centroid fitting driver",
+      "eight matched-Gaussian full PTQ pipelines",
+      "sealed final multi-owner container and measured inference kernel"
+    ]
+  },
+  "controls": {
+    "count": 8,
+    "kind": "full matched-Gaussian PTQ pipelines with independently regenerated legal traces",
+    "open_only_after_source_survival": true,
+    "minimum_qwen_minus_strongest_control_gain_bpw": 0.03
+  },
+  "target": {
+    "rate_interval_bpw": [2.15, 2.5],
+    "maximum_F": 0.8,
+    "pending_coarse_D0": 0.036975150060595235,
+    "required_coarse_sse_capture_fraction_for_D_0p025": 0.323870222053737
+  },
+  "claim_boundary": "V0 implements and tests source-free mechanics only. No Qwen run is legal until an authenticated current-codec legal-transition adapter, source panel, complete matched-control panel and independent source audit exist."
+}

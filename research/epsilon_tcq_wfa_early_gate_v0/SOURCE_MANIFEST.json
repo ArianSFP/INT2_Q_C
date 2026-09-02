@@ -1,0 +1,68 @@
+{
+  "access_attestation": {
+    "cuda_accessed_by_isolated_source_tests": false,
+    "current_codec_payload_accessed": false,
+    "legal_candidate_trace_accessed": false,
+    "matched_control_accessed": false,
+    "network_accessed_by_tests": false,
+    "qwen_payload_accessed": false,
+    "tests_used_isolated_cpython": true
+  },
+  "claim_boundary": "source mechanics only; no Qwen/POLARIS payload authority",
+  "date": "2026-09-02",
+  "members": [
+    {
+      "bytes": 8033,
+      "name": "README.md",
+      "sha256": "4e3963752688b95f08e707b8528c99499da7c56697fd947e9b3cdf5470d0c7b6"
+    },
+    {
+      "bytes": 6457,
+      "name": "cupy_backend.py",
+      "sha256": "a5b62bdc586c69e4fc5e35cf34c21b96477608f09d2dd0a1bc347438deb3ca10"
+    },
+    {
+      "bytes": 3533,
+      "name": "design_lock.json",
+      "sha256": "296c9841b41e61b47666d1fa8d975920f759ec736d5bab1c4e12ef10b67d244c"
+    },
+    {
+      "bytes": 7042,
+      "name": "gate_contract.py",
+      "sha256": "671787864f7ab35b11c756b07ed2494ed48992f3fbc4c277b707d5b89a452239"
+    },
+    {
+      "bytes": 9317,
+      "name": "legal_interface.py",
+      "sha256": "2257d7b288bde3c76b5bdf986217ca9fe4d2467ff969954748371d13ac71eb99"
+    },
+    {
+      "bytes": 14728,
+      "name": "packet_codec.py",
+      "sha256": "98ee682aaace01f54883a49652bfcaaa7b61cd8d34c1c72dc11889de581bd44d"
+    },
+    {
+      "bytes": 5797,
+      "name": "run_gate.py",
+      "sha256": "f213479e3dc5e8b19d8985f745afaf5d89bca874d1a927106d49698e4b33c473"
+    },
+    {
+      "bytes": 24984,
+      "name": "tcq_core.py",
+      "sha256": "978358eb54a1accda846262210da385acd443d2ea117115f3f86a01d4704e6cf"
+    },
+    {
+      "bytes": 12191,
+      "name": "test_source_only.py",
+      "sha256": "e0bc6011f1d1e7123eb435c2687224ec0c1505ec886d26806be64247af21a129"
+    },
+    {
+      "bytes": 7635,
+      "name": "verify_source.py",
+      "sha256": "6a8e0af9630428f806c463655b8a429c400ef24cdb11ab9bf4649bfdd197d92d"
+    }
+  ],
+  "schema": "epsilon-tcq-wfa-early-gate-v0-source-manifest",
+  "source_root_sha256": "17581794ba7c6c35faf76f5c3926b59a71fa0b57b3df41c73082ceee202a13e0",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY"
+}
