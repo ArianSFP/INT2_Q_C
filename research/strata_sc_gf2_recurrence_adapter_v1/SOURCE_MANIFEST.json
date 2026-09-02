@@ -1,0 +1,70 @@
+{
+  "schema": "strata-sc-gf2-source-manifest-v1",
+  "status": "FROZEN_SOURCE_ONLY_PENDING_FINAL_10_TEST_RERUN",
+  "members": [
+    {
+      "path": "README.md",
+      "bytes": 7263,
+      "sha256": "9f4640563af06ea74308e35b928fd2820f052cdeacc02905f036a0bcf78d9c2f"
+    },
+    {
+      "path": "design_lock.json",
+      "bytes": 4553,
+      "sha256": "d8657ca2be996ce15ee3a6857c1d5f6c9fbd601755b5b09ec798ff577ce65602"
+    },
+    {
+      "path": "independent_scorer.py",
+      "bytes": 11371,
+      "sha256": "818594976df53a4fab5712d4960bc24ac5dc53016ba3d2e0c9ff8651b1afce28"
+    },
+    {
+      "path": "prepayload_rate_gate.py",
+      "bytes": 3828,
+      "sha256": "45ce84bf825e4ab75442b8229c4ab19740e06ebfce199e46374b53f8475487fe"
+    },
+    {
+      "path": "publication_gate.py",
+      "bytes": 9640,
+      "sha256": "90fe4e0c6d870134970adce3e16af5ccc0febdf3d3b6ce0c1a5f9e05c45b707a"
+    },
+    {
+      "path": "replay_gate.py",
+      "bytes": 4276,
+      "sha256": "aaa98e23c60d821b6c79f91cbe2d79c2ac9219bf4d019fb3d268037e13d92618"
+    },
+    {
+      "path": "strata_recurrence_codec.py",
+      "bytes": 37119,
+      "sha256": "97d1d86089df6b33e9753267f8246cab9b8db7910548d8325503b4ff718e8bb4"
+    },
+    {
+      "path": "test_source_only.py",
+      "bytes": 24338,
+      "sha256": "c2fa5ba950b2434eced1675b0ddbc37be67dc06e5d82f0fce8dc9501b0324260"
+    },
+    {
+      "path": "verify_source.py",
+      "bytes": 7029,
+      "sha256": "adb3ad2ffe09b34c8d8a33d6ff40c914e6600644fa6471955304d12246c25be5"
+    }
+  ],
+  "aggregate_sha256": "e7498c9e16be85d6b6e1d363a5d353cdee33cfdc886fdabbe542ff130bfbf296",
+  "payload_accessed": false,
+  "publication_launch_disposition": "HOLD_INDEPENDENT_Q016_REPLAY_IMPLEMENTATION_MISSING",
+  "verification_history": {
+    "last_verified_9of9": {
+      "status": "PASS_SOURCE_ONLY_MECHANICS_NONPROMOTING_LAUNCH_HOLD",
+      "manifest_sha256": "7588d1006a6c83e5be704b5fb4f1e53a338603bfbc72f774e948bbe8b67617e3",
+      "aggregate_sha256": "0bfea47d3f0dc5d471079107330792582fb9e0c656aee433cd85275f8f2a1820",
+      "tests": 9,
+      "runpod_executed": true
+    },
+    "current_freeze": {
+      "status": "PENDING_FINAL_10_TEST_RERUN",
+      "additive_module": "prepayload_rate_gate.py",
+      "additive_test_executed": false,
+      "runpod_failure": "SSH connection refused",
+      "core_codec_scorer_and_authority_gate_hashes_unchanged_from_last_verified_state": true
+    }
+  }
+}

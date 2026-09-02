@@ -1,0 +1,108 @@
+{
+  "schema": "strata-sc-gf2-recurrence-adapter-design-lock-v1",
+  "date": "2026-09-02",
+  "status": "SOURCE_ONLY_9OF9_VERIFIED_ADDITIVE_BOUND_PENDING_FINAL_10_TEST_RERUN",
+  "payload_access": {
+    "qwen_or_strata_payload_accessed": false,
+    "uwfcv8_or_identity_payload_accessed": false,
+    "control_payload_accessed": false,
+    "publication_enumerated": false
+  },
+  "source_target": "authenticated UWFA-SC v9 selected SC decisions in six level-major segments",
+  "packet": {
+    "levels": 6,
+    "chunk_decisions": 4096,
+    "chunk_header_bytes": 80,
+    "expert_header_bytes": 256,
+    "expert_alignment_bytes": 4096,
+    "catalog_bytes": 4096,
+    "lfsr_payload_bits": "2*exact_BM_linear_complexity",
+    "raw_payload_bits": "selected_decisions",
+    "tie_break": "raw",
+    "exception_or_discrepancy_stream": false,
+    "shared_model_bytes": 0,
+    "canonical_reencode_required": true
+  },
+  "semantic_contract": {
+    "six_level_order_and_boundaries_physical": true,
+    "selected_decisions_physical": true,
+    "fp16_scale_bits_physical": true,
+    "profile_sc_seed_rht_seed_and_state_physical": true,
+    "gate_up_down_scalar_coverage_exact": true,
+    "base_frequencies_must_be_q016_regenerated_by_independent_replay": true,
+    "candidate_arithmetic_payload_must_be_canonically_reencoded": true,
+    "full_fp64_reconstruction_digest_must_be_recomputed": true
+  },
+  "audited_comparators": {
+    "source_weights": 28311552,
+    "current_strata_bytes": 8847360,
+    "current_strata_bpw": 2.5,
+    "uwfa_sc_v9_candidate_bytes": 8892416,
+    "selected_decision_count_is_a_rate": false
+  },
+  "bounded_negative_scope": {
+    "independent_per_level_chunks_only": true,
+    "recurrences_longer_than_4096_can_be_missed": true,
+    "cross_chunk_streaming_recurrence_closed": false,
+    "exception_coded_recurrence_closed": false
+  },
+  "universality": {
+    "packet_is_universal_swiglu_moe_format": false,
+    "owner_descriptor_bits": 128,
+    "owner_descriptor_is_qwen_shaped_pilot_plumbing": true,
+    "successor_requires_variable_expert_cardinality": true,
+    "successor_must_charge_variable_owner_descriptor": true
+  },
+  "rate_gate": {
+    "unconditional_floor_includes_catalog_metadata_chunk_headers_alignment": true,
+    "raw_fallback_includes_all_selected_decision_bits": true,
+    "actual_rate_derived_from_decoded_packet_bytes": true,
+    "caller_rate_or_weight_count_accepted": false,
+    "hard_kill_if_floor_exceeds_2p5": true,
+    "hard_kill_if_actual_packet_exceeds_2p5": true
+  },
+  "prepayload_rate_bound": {
+    "pinned_unique_selected_decisions": 126627266,
+    "selected_decisions_per_weight_not_rate": 4.47263597559046,
+    "minimum_unique_chunks": 30915,
+    "optimistic_zero_complexity_bare_floor_bytes": 2478832,
+    "optimistic_zero_complexity_bare_floor_bpw": 0.700443974247685,
+    "zero_complexity_grammar_survives": true,
+    "optimistic_raw_fallback_floor_bytes": 18307241,
+    "optimistic_raw_fallback_floor_bpw": 5.17308016176577,
+    "raw_fallback_excess_bytes_over_2p5": 9459881,
+    "raw_fallback_hard_kill_before_payload": true,
+    "optimistic_maximum_sum_BM_complexity_at_2p5_necessary_not_sufficient": 25474112,
+    "omitted_costs_make_actual_threshold_stricter": [
+      "metadata",
+      "page padding",
+      "shared-stream expert-local duplication",
+      "per-chunk byte rounding"
+    ]
+  },
+  "cold_read": {
+    "expert_packet_contiguous": true,
+    "expert_packet_page_aligned": true,
+    "shared_stream_duplication_charged": true,
+    "one_pass_layout_ledger": true,
+    "runtime_io_measured": false
+  },
+  "launch_requirements": [
+    "completed passing v9 independent result-audit receipt",
+    "independently frozen external SHA-256 pin for that exact receipt",
+    "separately frozen independent publication extraction and Q0.16 replay decoder",
+    "externally pinned replay receipt accepted by replay_gate.py",
+    "literal preflight floor and actual packet rate under cap",
+    "launch seal naming all source and receipt hashes"
+  ],
+  "launchable_when_v9_audit_alone_passes": false,
+  "missing_component": "independent authenticated publication extraction/Q0.16 reconstruction replay implementation",
+  "verification_state": {
+    "last_executed_tests": 9,
+    "last_executed_status": "PASS",
+    "last_verified_manifest_sha256": "7588d1006a6c83e5be704b5fb4f1e53a338603bfbc72f774e948bbe8b67617e3",
+    "current_additive_prepayload_bound_test_executed": false,
+    "current_status": "PENDING_FINAL_10_TEST_RERUN",
+    "reason": "RunPod SSH connection refused after the 9/9 verification"
+  }
+}
