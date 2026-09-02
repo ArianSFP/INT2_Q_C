@@ -1,0 +1,325 @@
+{
+  "bindings": {
+    "input_manifest_sha256": "6f6a0f174cd5b9c2b52ef29efd612e4520ef77afa6cc950ebec8c7e055fedcaa",
+    "input_roles": [
+      {
+        "bytes": 3145728,
+        "role": "gate",
+        "sha256": "fe4fd2b8438d868a4b118df31f2886d36c2178c93132e5738e64008d1717a51c"
+      },
+      {
+        "bytes": 3145728,
+        "role": "up",
+        "sha256": "857b57d1d37140bf10dbc582884c73c632f5a58cd1367f342c6903900e2b376b"
+      },
+      {
+        "bytes": 3145728,
+        "role": "down_transposed",
+        "sha256": "a6820fb9d6efd4d58bf5b6a3d861e0deb64d9daaa2e5e73235a0d6db15d08c03"
+      }
+    ],
+    "launch_review_claim_sha256": "3d406677036c1d769cdd6bffde6373d5f613dc2189e2a3da47da2be96429717e",
+    "launch_review_file_sha256": "704f935a6f9949f600dff473cdf0e7b54f4700fc95a29c2f5a7273f48e5d505f",
+    "runtime_closure": {
+      "executed_v4_sources": {
+        "independent_decoder.py": "1b8ddcf5d8199769252c2db5a5cc36127c3577e6d9b0ee256741f7b2791a3d20",
+        "numeric_encoder.py": "2508c69fa63fd7fbe8f9dfe66844542a6c916688d8c635bb04e941041344db8b",
+        "packet_format.py": "acf308843068399a436e88f32f76632ccea3cbc9ceeb9bcbe5faeb604f4c42d4"
+      },
+      "inverse_override_installed_before_any_reservoir_decode": true,
+      "inverse_transient_abs_bound": 8388608,
+      "inverse_transient_dtype": "<i4",
+      "predecessor_lock_sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+      "predecessor_source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+      "runtime": {
+        "compute_capability": "120",
+        "cuda_driver": 13000,
+        "cuda_runtime": 12090,
+        "cupy": "14.2.0",
+        "device_count": 1,
+        "device_name": "NVIDIA GeForce RTX 5090",
+        "implementation": "CPython",
+        "machine": "x86_64",
+        "numpy": "2.5.2",
+        "python": "3.12.3",
+        "system": "Linux"
+      },
+      "runtime_lock_sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+      "schema": "tactic-actual-coarse-n18-v6-runtime-closure-v1",
+      "v4_source_modified": false
+    },
+    "source_closure": {
+      "executing_entry_inode_bound": true,
+      "executing_entry_name": "dispatcher.py",
+      "member_hashes": {
+        "README.md": "eabe8bc3e5b4b15a45f2f6b5f8d6dc359d2b21754ad988f6ac71d4977cba3335",
+        "SUPERSESSION.md": "7aa9ef2c48e335e0250de6e9c5447991537a10e4c74b989b3a5950d8eddf7b82",
+        "V6_LOCK.json": "c31bf60809c0feb13a563dd9e865802ecf8bf058a9daf8cb473301be8c878e08",
+        "atomic_publish.py": "537ab5322f8fe62366008326f1aa4520224e4cc8c97df62a7f41d0487d7a417a",
+        "design_lock.json": "f19c10da0cd9c37f1049c3ee143709c14f47c26c6e69e08a43ab7be930c48951",
+        "dispatcher.py": "bc4ad4a6a8c29a736078a47bb28e941a542a33d38d68642ebbeeda8177711121",
+        "external_contract.py": "de56c2da15cab6c274eb38c8684a8476c8e46f32a2e4c6cc477ed986cf4a2ad4",
+        "finite_encoder.py": "93db64e4e8abee1a58b2896e2432410157f29df26ac5b63c88942e29d3a9b58a",
+        "format_spec.py": "c702e0dc743e7647e827585053770c706ed232a8e5ad1f73a493a1eedaebbff5",
+        "independent_decoder.py": "c4b804095477b8831826a4b412bd2b743647de317ac4dd07f82f202f210e9781",
+        "runtime_bridge.py": "487644aab7bb1405489da025733630228081dc735e7112cc79570414f3c1456f",
+        "source_auth.py": "b43487b1d2d7faad62bff9fca9064e9b24e75831473e4d39008406064ad1511b",
+        "test_source_only.py": "ae14fce7b400325be3ab3e51994e05ca1f5d06564ff8f274feabbda12edfd814",
+        "verify_source.py": "2311674e5a09af47e774e0ed4ed7ab65aa7549b600df35fd4476c19d75736ddb"
+      },
+      "retained_no_follow_descriptors": true,
+      "source_manifest_sha256": "bf0659d1fd6742768d14790ea980aa17321818d15e19ddd7d0dfaa8a223009b8",
+      "source_root_sha256": "725991e0c1e10c67db4ba36097f80e78ffed158ea36b1b746bbbd6cef50ffa98"
+    },
+    "v6_result_binding": {
+      "retained_completed_result_descriptors": true,
+      "v6_coarse_bytes": 1414656,
+      "v6_coarse_sha256": "6c13780bf1494567f91bc73bf6afd8846c6e3326cac329e4d8e3faf48a9051d7",
+      "v6_complete_sha256": "6b5e96c42518a29493e68237d649daad2e25f44a509ce7535425f83fd79fbb37",
+      "v6_input_manifest_sha256": "6f6a0f174cd5b9c2b52ef29efd612e4520ef77afa6cc950ebec8c7e055fedcaa",
+      "v6_result_status": "PASS_V6_BOUND_TARGET_ELIGIBLE_FRAME_NONPROMOTING_INDEPENDENT_RESULT_AUDIT_REQUIRED"
+    },
+    "v6_source_closure": {
+      "exact_v6_runtime_closure_sha256": "4e2e51d28a2b60b78e64f082dcda4e28a24568fb5acc7fbe90b6be977fb087ed",
+      "exact_v6_successor_codec_sha256": "d48630348fdc84c8a8d356b0787ed2af09227894030915f84f06ff40eab1fdd9",
+      "retained_no_follow_source_descriptors": true,
+      "v6_predecessor_lock_sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+      "v6_runtime_lock_sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+      "v6_source_manifest_sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d",
+      "v6_source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2"
+    }
+  },
+  "claim_boundary": {
+    "accelerator_inference_hbm_below_2x_claim": false,
+    "non_qwen_portability_result": false,
+    "one_qwen_geometry_expert_pilot_only": true,
+    "qwen_or_model_identity_available_to_codec": false,
+    "seventy_three_over_seventy_two_read_claim": false,
+    "six_expert_amortized_global_packet_emitted_or_parsed": false,
+    "universal_tail_result": false
+  },
+  "continuous_gate": {
+    "audited_parent_rank384": {
+      "gaussian_one_bit_per_dimension_expected_total_capture": 0.05968310365946075,
+      "gaussian_one_bit_per_dimension_expected_total_capture_percent": 5.968310365946075,
+      "isotropic_dimension_fraction_ceiling": 0.09375,
+      "isotropic_dimension_fraction_percent": 9.375,
+      "measured_capture": 0.09361861769116196,
+      "projected_energy_fp64": 8.392531479313217,
+      "survives_exact_nested_threshold": false
+    },
+    "coarse_relative_mse": 0.03697515006059532,
+    "coarse_sse_fp64": 89.64596664948954,
+    "decision": "HARD_REJECT_PARENT_RANK384_CONTINUOUS_SPAN_BELOW_NESTED_THRESHOLD",
+    "dominance_rule": "Every finite v3 correction lies in B[:,0:376], a subset of the audited B[:,0:384] span. Failure of either applicable continuous capture threshold hard-stops finite engineering for this branch.",
+    "exact_nested_required_error_capture": 0.3238702220537387,
+    "gaussian_successive_refinement_diagnostic": {
+      "all_remaining_rate_bpw": 0.1015625,
+      "all_remaining_rate_ideal_D": 0.03211908963229744,
+      "all_remaining_rate_ideal_F_at_2p5": 1.027810868233518,
+      "interpretation": "Gaussian successive-refinement hierarchy preserves the normalized coarse F and cannot produce a below-Gaussian gain.",
+      "literal_fine_payload_ideal_D": 0.03246884358702373,
+      "literal_fine_payload_ideal_F_at_2p5": 1.0390029947847594,
+      "literal_fine_payload_rate_bpw": 0.09375
+    },
+    "implemented_active_rank376": {
+      "charged_scale_bits_per_record": 8,
+      "charged_sign_bits_per_record": 376,
+      "gaussian_sign_capture_expected_total": 0.05843970566655532,
+      "isotropic_dimension_fraction_ceiling": 0.091796875,
+      "measured_capture": 0.0916533630916034,
+      "projected_energy_fp64": 8.216354331023433,
+      "survives_exact_nested_threshold": false
+    },
+    "old_19p1_percent_threshold_reused": false,
+    "rows": [
+      {
+        "active_rank376_projected_energy_fp64": 0.47331024045663483,
+        "audited_parent_rank384_projected_energy_fp64": 0.4833118243489032,
+        "error_energy_fp64": 5.115443510401935,
+        "role": "gate",
+        "role_ordinal": 0,
+        "source_energy_fp64": 138.54979937022577,
+        "tile_ordinal": 0,
+        "transformed_energy_fp64": 5.115443510401935
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.47428453962027706,
+        "audited_parent_rank384_projected_energy_fp64": 0.48384673282861135,
+        "error_energy_fp64": 5.17112226130638,
+        "role": "gate",
+        "role_ordinal": 0,
+        "source_energy_fp64": 139.78668877625,
+        "tile_ordinal": 1,
+        "transformed_energy_fp64": 5.17112226130638
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.48444930957151194,
+        "audited_parent_rank384_projected_energy_fp64": 0.49556022500159325,
+        "error_energy_fp64": 5.2563279305538995,
+        "role": "gate",
+        "role_ordinal": 0,
+        "source_energy_fp64": 142.09372449532853,
+        "tile_ordinal": 2,
+        "transformed_energy_fp64": 5.2563279305538995
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.47644449625813684,
+        "audited_parent_rank384_projected_energy_fp64": 0.48719239728872604,
+        "error_energy_fp64": 5.171619785467971,
+        "role": "gate",
+        "role_ordinal": 0,
+        "source_energy_fp64": 139.95012541174486,
+        "tile_ordinal": 3,
+        "transformed_energy_fp64": 5.171619785467972
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.47106473487312017,
+        "audited_parent_rank384_projected_energy_fp64": 0.4810076342315493,
+        "error_energy_fp64": 5.220970320476509,
+        "role": "gate",
+        "role_ordinal": 0,
+        "source_energy_fp64": 140.9935306565408,
+        "tile_ordinal": 4,
+        "transformed_energy_fp64": 5.220970320476509
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.4817279104933948,
+        "audited_parent_rank384_projected_energy_fp64": 0.4913941657686294,
+        "error_energy_fp64": 5.191420714532183,
+        "role": "gate",
+        "role_ordinal": 0,
+        "source_energy_fp64": 140.2961622522039,
+        "tile_ordinal": 5,
+        "transformed_energy_fp64": 5.191420714532183
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.42469055705390835,
+        "audited_parent_rank384_projected_energy_fp64": 0.43411367897387165,
+        "error_energy_fp64": 4.7015928345333675,
+        "role": "up",
+        "role_ordinal": 1,
+        "source_energy_fp64": 127.11410241706974,
+        "tile_ordinal": 0,
+        "transformed_energy_fp64": 4.7015928345333675
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.43928750024757857,
+        "audited_parent_rank384_projected_energy_fp64": 0.44845131847563513,
+        "error_energy_fp64": 4.715075249183457,
+        "role": "up",
+        "role_ordinal": 1,
+        "source_energy_fp64": 127.74196024363142,
+        "tile_ordinal": 1,
+        "transformed_energy_fp64": 4.715075249183457
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.43015789247396163,
+        "audited_parent_rank384_projected_energy_fp64": 0.439224934658227,
+        "error_energy_fp64": 4.7452187089351066,
+        "role": "up",
+        "role_ordinal": 1,
+        "source_energy_fp64": 128.36760716685546,
+        "tile_ordinal": 2,
+        "transformed_energy_fp64": 4.7452187089351066
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.426722517016495,
+        "audited_parent_rank384_projected_energy_fp64": 0.4358412300400015,
+        "error_energy_fp64": 4.681873810368738,
+        "role": "up",
+        "role_ordinal": 1,
+        "source_energy_fp64": 126.53206969871948,
+        "tile_ordinal": 3,
+        "transformed_energy_fp64": 4.681873810368738
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.43723914800118246,
+        "audited_parent_rank384_projected_energy_fp64": 0.446182628486115,
+        "error_energy_fp64": 4.749211442872371,
+        "role": "up",
+        "role_ordinal": 1,
+        "source_energy_fp64": 128.52830845911126,
+        "tile_ordinal": 4,
+        "transformed_energy_fp64": 4.749211442872371
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.4349143543077028,
+        "audited_parent_rank384_projected_energy_fp64": 0.44426740023951206,
+        "error_energy_fp64": 4.701113631176009,
+        "role": "up",
+        "role_ordinal": 1,
+        "source_energy_fp64": 127.11947936973162,
+        "tile_ordinal": 5,
+        "transformed_energy_fp64": 4.701113631176008
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.4574528100389441,
+        "audited_parent_rank384_projected_energy_fp64": 0.4672600327711396,
+        "error_energy_fp64": 5.009892942920012,
+        "role": "down_transposed",
+        "role_ordinal": 2,
+        "source_energy_fp64": 135.42007145882562,
+        "tile_ordinal": 0,
+        "transformed_energy_fp64": 5.009892942920012
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.46368895906744534,
+        "audited_parent_rank384_projected_energy_fp64": 0.4729013678757358,
+        "error_energy_fp64": 5.0002657568911175,
+        "role": "down_transposed",
+        "role_ordinal": 2,
+        "source_energy_fp64": 135.1235496975197,
+        "tile_ordinal": 1,
+        "transformed_energy_fp64": 5.0002657568911175
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.4615324524104093,
+        "audited_parent_rank384_projected_energy_fp64": 0.47131459521361,
+        "error_energy_fp64": 5.051590599949972,
+        "role": "down_transposed",
+        "role_ordinal": 2,
+        "source_energy_fp64": 136.6409015663903,
+        "tile_ordinal": 2,
+        "transformed_energy_fp64": 5.051590599949972
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.45827840665355113,
+        "audited_parent_rank384_projected_energy_fp64": 0.46849309784327225,
+        "error_energy_fp64": 5.020847581953106,
+        "role": "down_transposed",
+        "role_ordinal": 2,
+        "source_energy_fp64": 135.77243101753263,
+        "tile_ordinal": 3,
+        "transformed_energy_fp64": 5.020847581953106
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.46054292222381876,
+        "audited_parent_rank384_projected_energy_fp64": 0.47142451474557306,
+        "error_energy_fp64": 5.064882715137413,
+        "role": "down_transposed",
+        "role_ordinal": 2,
+        "source_energy_fp64": 136.98274504934125,
+        "tile_ordinal": 4,
+        "transformed_energy_fp64": 5.064882715137413
+      },
+      {
+        "active_rank376_projected_energy_fp64": 0.4605655802553586,
+        "audited_parent_rank384_projected_energy_fp64": 0.4707437005225118,
+        "error_energy_fp64": 5.077496852829993,
+        "role": "down_transposed",
+        "role_ordinal": 2,
+        "source_energy_fp64": 137.47904387287008,
+        "tile_ordinal": 5,
+        "transformed_energy_fp64": 5.077496852829993
+      }
+    ],
+    "schema": "tactic-dh384-finite-v3-continuous-gate-v1",
+    "source_energy_fp64": 2424.492300979892,
+    "target_D_at_literal_2p5_bpw": 0.025
+  },
+  "finite_composite_emitted": false,
+  "positive_claim_authority": false,
+  "schema": "tactic-dh384-finite-v3-result-v1",
+  "status": "HARD_REJECT_PARENT_RANK384_CONTINUOUS_SPAN_BELOW_NESTED_THRESHOLD"
+}

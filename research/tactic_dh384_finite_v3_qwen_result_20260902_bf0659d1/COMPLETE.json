@@ -1,0 +1,22 @@
+{
+  "completion_claim_sha256": "a6a2ff9800aaf65d40a47763874f42aef2cbc0f6e1765f06be90fd9ab90ece64",
+  "finite_composite_emitted": false,
+  "members": [
+    {
+      "bytes": 8722,
+      "name": "CONTINUOUS_GATE.json",
+      "sha256": "8492c3211bb0a8eceb8b84dd05f4c36958241e4a89d8c99f56ad2ca74b32fb87"
+    },
+    {
+      "bytes": 14861,
+      "name": "RESULT.json",
+      "sha256": "f08dc7140e6f7d4889e0b8ae04bc2e40198394e3fcc52ba05f905e09e6df9263"
+    }
+  ],
+  "members_root_sha256": "a4b90ae1ca73a45ad24cb0019522c84d716d8a9c9a908a962b2cbb10b6625e4e",
+  "positive_claim_authority": false,
+  "schema": "tactic-dh384-finite-v3-completion-v1",
+  "source_root_sha256": "725991e0c1e10c67db4ba36097f80e78ffed158ea36b1b746bbbd6cef50ffa98",
+  "status": "HARD_REJECT_PARENT_RANK384_CONTINUOUS_SPAN_BELOW_NESTED_THRESHOLD",
+  "v6_complete_sha256": "6b5e96c42518a29493e68237d649daad2e25f44a509ce7535425f83fd79fbb37"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "tactic-dh384-finite-v3-launch-review-v1",
+  "status": "AUTHORIZE_ONE_BOUND_QWEN_GEOMETRY_EXPERT_FINITE_PILOT",
+  "package_manifest_sha256": "bf0659d1fd6742768d14790ea980aa17321818d15e19ddd7d0dfaa8a223009b8",
+  "package_source_root_sha256": "725991e0c1e10c67db4ba36097f80e78ffed158ea36b1b746bbbd6cef50ffa98",
+  "v6_source_manifest_sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d",
+  "v6_source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2",
+  "v6_complete_sha256": "6b5e96c42518a29493e68237d649daad2e25f44a509ce7535425f83fd79fbb37",
+  "input_manifest_sha256": "6f6a0f174cd5b9c2b52ef29efd612e4520ef77afa6cc950ebec8c7e055fedcaa",
+  "allowed_scope": {
+    "experts": 1,
+    "geometry": [768, 2048],
+    "qwen_or_model_identity_available_to_codec": false,
+    "universal_tail_claim": false
+  },
+  "independent_audit": {
+    "finite_source_reviewed": true,
+    "v6_completed_result_reviewed": true,
+    "payload_launch_explicitly_authorized": true
+  },
+  "review_claim_sha256": "3d406677036c1d769cdd6bffde6373d5f613dc2189e2a3da47da2be96429717e"
+}

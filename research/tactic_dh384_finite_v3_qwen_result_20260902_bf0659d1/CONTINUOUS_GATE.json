@@ -1,0 +1,220 @@
+{
+  "audited_parent_rank384": {
+    "gaussian_one_bit_per_dimension_expected_total_capture": 0.05968310365946075,
+    "gaussian_one_bit_per_dimension_expected_total_capture_percent": 5.968310365946075,
+    "isotropic_dimension_fraction_ceiling": 0.09375,
+    "isotropic_dimension_fraction_percent": 9.375,
+    "measured_capture": 0.09361861769116196,
+    "projected_energy_fp64": 8.392531479313217,
+    "survives_exact_nested_threshold": false
+  },
+  "coarse_relative_mse": 0.03697515006059532,
+  "coarse_sse_fp64": 89.64596664948954,
+  "decision": "HARD_REJECT_PARENT_RANK384_CONTINUOUS_SPAN_BELOW_NESTED_THRESHOLD",
+  "dominance_rule": "Every finite v3 correction lies in B[:,0:376], a subset of the audited B[:,0:384] span. Failure of either applicable continuous capture threshold hard-stops finite engineering for this branch.",
+  "exact_nested_required_error_capture": 0.3238702220537387,
+  "gaussian_successive_refinement_diagnostic": {
+    "all_remaining_rate_bpw": 0.1015625,
+    "all_remaining_rate_ideal_D": 0.03211908963229744,
+    "all_remaining_rate_ideal_F_at_2p5": 1.027810868233518,
+    "interpretation": "Gaussian successive-refinement hierarchy preserves the normalized coarse F and cannot produce a below-Gaussian gain.",
+    "literal_fine_payload_ideal_D": 0.03246884358702373,
+    "literal_fine_payload_ideal_F_at_2p5": 1.0390029947847594,
+    "literal_fine_payload_rate_bpw": 0.09375
+  },
+  "implemented_active_rank376": {
+    "charged_scale_bits_per_record": 8,
+    "charged_sign_bits_per_record": 376,
+    "gaussian_sign_capture_expected_total": 0.05843970566655532,
+    "isotropic_dimension_fraction_ceiling": 0.091796875,
+    "measured_capture": 0.0916533630916034,
+    "projected_energy_fp64": 8.216354331023433,
+    "survives_exact_nested_threshold": false
+  },
+  "old_19p1_percent_threshold_reused": false,
+  "rows": [
+    {
+      "active_rank376_projected_energy_fp64": 0.47331024045663483,
+      "audited_parent_rank384_projected_energy_fp64": 0.4833118243489032,
+      "error_energy_fp64": 5.115443510401935,
+      "role": "gate",
+      "role_ordinal": 0,
+      "source_energy_fp64": 138.54979937022577,
+      "tile_ordinal": 0,
+      "transformed_energy_fp64": 5.115443510401935
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.47428453962027706,
+      "audited_parent_rank384_projected_energy_fp64": 0.48384673282861135,
+      "error_energy_fp64": 5.17112226130638,
+      "role": "gate",
+      "role_ordinal": 0,
+      "source_energy_fp64": 139.78668877625,
+      "tile_ordinal": 1,
+      "transformed_energy_fp64": 5.17112226130638
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.48444930957151194,
+      "audited_parent_rank384_projected_energy_fp64": 0.49556022500159325,
+      "error_energy_fp64": 5.2563279305538995,
+      "role": "gate",
+      "role_ordinal": 0,
+      "source_energy_fp64": 142.09372449532853,
+      "tile_ordinal": 2,
+      "transformed_energy_fp64": 5.2563279305538995
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.47644449625813684,
+      "audited_parent_rank384_projected_energy_fp64": 0.48719239728872604,
+      "error_energy_fp64": 5.171619785467971,
+      "role": "gate",
+      "role_ordinal": 0,
+      "source_energy_fp64": 139.95012541174486,
+      "tile_ordinal": 3,
+      "transformed_energy_fp64": 5.171619785467972
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.47106473487312017,
+      "audited_parent_rank384_projected_energy_fp64": 0.4810076342315493,
+      "error_energy_fp64": 5.220970320476509,
+      "role": "gate",
+      "role_ordinal": 0,
+      "source_energy_fp64": 140.9935306565408,
+      "tile_ordinal": 4,
+      "transformed_energy_fp64": 5.220970320476509
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.4817279104933948,
+      "audited_parent_rank384_projected_energy_fp64": 0.4913941657686294,
+      "error_energy_fp64": 5.191420714532183,
+      "role": "gate",
+      "role_ordinal": 0,
+      "source_energy_fp64": 140.2961622522039,
+      "tile_ordinal": 5,
+      "transformed_energy_fp64": 5.191420714532183
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.42469055705390835,
+      "audited_parent_rank384_projected_energy_fp64": 0.43411367897387165,
+      "error_energy_fp64": 4.7015928345333675,
+      "role": "up",
+      "role_ordinal": 1,
+      "source_energy_fp64": 127.11410241706974,
+      "tile_ordinal": 0,
+      "transformed_energy_fp64": 4.7015928345333675
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.43928750024757857,
+      "audited_parent_rank384_projected_energy_fp64": 0.44845131847563513,
+      "error_energy_fp64": 4.715075249183457,
+      "role": "up",
+      "role_ordinal": 1,
+      "source_energy_fp64": 127.74196024363142,
+      "tile_ordinal": 1,
+      "transformed_energy_fp64": 4.715075249183457
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.43015789247396163,
+      "audited_parent_rank384_projected_energy_fp64": 0.439224934658227,
+      "error_energy_fp64": 4.7452187089351066,
+      "role": "up",
+      "role_ordinal": 1,
+      "source_energy_fp64": 128.36760716685546,
+      "tile_ordinal": 2,
+      "transformed_energy_fp64": 4.7452187089351066
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.426722517016495,
+      "audited_parent_rank384_projected_energy_fp64": 0.4358412300400015,
+      "error_energy_fp64": 4.681873810368738,
+      "role": "up",
+      "role_ordinal": 1,
+      "source_energy_fp64": 126.53206969871948,
+      "tile_ordinal": 3,
+      "transformed_energy_fp64": 4.681873810368738
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.43723914800118246,
+      "audited_parent_rank384_projected_energy_fp64": 0.446182628486115,
+      "error_energy_fp64": 4.749211442872371,
+      "role": "up",
+      "role_ordinal": 1,
+      "source_energy_fp64": 128.52830845911126,
+      "tile_ordinal": 4,
+      "transformed_energy_fp64": 4.749211442872371
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.4349143543077028,
+      "audited_parent_rank384_projected_energy_fp64": 0.44426740023951206,
+      "error_energy_fp64": 4.701113631176009,
+      "role": "up",
+      "role_ordinal": 1,
+      "source_energy_fp64": 127.11947936973162,
+      "tile_ordinal": 5,
+      "transformed_energy_fp64": 4.701113631176008
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.4574528100389441,
+      "audited_parent_rank384_projected_energy_fp64": 0.4672600327711396,
+      "error_energy_fp64": 5.009892942920012,
+      "role": "down_transposed",
+      "role_ordinal": 2,
+      "source_energy_fp64": 135.42007145882562,
+      "tile_ordinal": 0,
+      "transformed_energy_fp64": 5.009892942920012
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.46368895906744534,
+      "audited_parent_rank384_projected_energy_fp64": 0.4729013678757358,
+      "error_energy_fp64": 5.0002657568911175,
+      "role": "down_transposed",
+      "role_ordinal": 2,
+      "source_energy_fp64": 135.1235496975197,
+      "tile_ordinal": 1,
+      "transformed_energy_fp64": 5.0002657568911175
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.4615324524104093,
+      "audited_parent_rank384_projected_energy_fp64": 0.47131459521361,
+      "error_energy_fp64": 5.051590599949972,
+      "role": "down_transposed",
+      "role_ordinal": 2,
+      "source_energy_fp64": 136.6409015663903,
+      "tile_ordinal": 2,
+      "transformed_energy_fp64": 5.051590599949972
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.45827840665355113,
+      "audited_parent_rank384_projected_energy_fp64": 0.46849309784327225,
+      "error_energy_fp64": 5.020847581953106,
+      "role": "down_transposed",
+      "role_ordinal": 2,
+      "source_energy_fp64": 135.77243101753263,
+      "tile_ordinal": 3,
+      "transformed_energy_fp64": 5.020847581953106
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.46054292222381876,
+      "audited_parent_rank384_projected_energy_fp64": 0.47142451474557306,
+      "error_energy_fp64": 5.064882715137413,
+      "role": "down_transposed",
+      "role_ordinal": 2,
+      "source_energy_fp64": 136.98274504934125,
+      "tile_ordinal": 4,
+      "transformed_energy_fp64": 5.064882715137413
+    },
+    {
+      "active_rank376_projected_energy_fp64": 0.4605655802553586,
+      "audited_parent_rank384_projected_energy_fp64": 0.4707437005225118,
+      "error_energy_fp64": 5.077496852829993,
+      "role": "down_transposed",
+      "role_ordinal": 2,
+      "source_energy_fp64": 137.47904387287008,
+      "tile_ordinal": 5,
+      "transformed_energy_fp64": 5.077496852829993
+    }
+  ],
+  "schema": "tactic-dh384-finite-v3-continuous-gate-v1",
+  "source_energy_fp64": 2424.492300979892,
+  "target_D_at_literal_2p5_bpw": 0.025
+}
