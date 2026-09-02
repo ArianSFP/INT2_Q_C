@@ -1,0 +1,23 @@
+{
+  "completion_claim_sha256": "afdd9083854657c84419c5b033f037651be130cbdc1644f007c112eeffc98091",
+  "finite_codec_executed": false,
+  "input_manifest_sha256": "6f6a0f174cd5b9c2b52ef29efd612e4520ef77afa6cc950ebec8c7e055fedcaa",
+  "members": [
+    {
+      "bytes": 4843,
+      "name": "PROVENANCE.json",
+      "sha256": "2ece04ce5a3132f71bcf13760f840f5757beaccda8cb70ec68768de08b5eaeee"
+    },
+    {
+      "bytes": 1094322,
+      "name": "RESULT.json",
+      "sha256": "cd0f6f390feecb5d19c2910130a34b18f9aa16013bfa37549ffc15acb1471372"
+    }
+  ],
+  "members_root_sha256": "a6855d360d6c554b09410cb9655c03fe864c3ac56a7f12abffe758992e64711c",
+  "oracle_source_root_sha256": "7259606fb3cf7f2506be031b4b86bfcc5d2a710d6697b94f9201b532d0478a4b",
+  "positive_claim_authority": false,
+  "schema": "tactic-cage-graph-krylov-oracle-v0-completion",
+  "status": "HARD_KILL_COARSE_GRAPH_NOT_SOURCE_SPECIFIC_0P03_BPW",
+  "v6_frame_sha256": "6c13780bf1494567f91bc73bf6afd8846c6e3326cac329e4d8e3faf48a9051d7"
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/tmp/tactic_cage_graph_krylov_oracle_v0_4d5220fe/run_oracle.py", line 861, in <module>
+    print(json.dumps(run(parser().parse_args()), sort_keys=True,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tactic_cage_graph_krylov_oracle_v0_4d5220fe/run_oracle.py", line 637, in run
+    own = authenticate_source_package(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tactic_cage_graph_krylov_oracle_v0_4d5220fe/run_oracle.py", line 184, in authenticate_source_package
+    require({entry.name for entry in actual} == set(names) | {"SOURCE_MANIFEST.json"}
+  File "/tmp/tactic_cage_graph_krylov_oracle_v0_4d5220fe/run_oracle.py", line 39, in require
+    raise RunError(message)
+RunError: exact source package closure
