@@ -1,0 +1,62 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v1-capped-adapter-source-manifest",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_INDEPENDENT_AUDIT",
+  "source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560",
+  "members": [
+    {
+      "name": "PREFLIGHT_HISTORY.json",
+      "bytes": 1455,
+      "sha256": "67a1c6d86a832955c15a4756fef0e8f1c3af1e7029ff9b985b0285c43dcc5905"
+    },
+    {
+      "name": "README.md",
+      "bytes": 6138,
+      "sha256": "47760f2b52abd00555f2230f634d1d7985e4ac8d5e49b09f04feedbd9c665d01"
+    },
+    {
+      "name": "capped_adapter.py",
+      "bytes": 59151,
+      "sha256": "5d08666d4951a53b759cba3c95857f61dc7b88810c333c9f73426abec81a8c61"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 5165,
+      "sha256": "23c316383b0b07d99e119c4f9ce9e3b448506a048aafb3c41ed3fe0ef25d63aa"
+    },
+    {
+      "name": "run_source_free_fixture.py",
+      "bytes": 3821,
+      "sha256": "1c6a4f7773ff113ca485c936672397fa7ffa92769e60f5f2992c30b108ab9358"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 15207,
+      "sha256": "c6040d6ed6637bdd19e55bf749c415aa437f69df3c332071108cee51b0ea55fa"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 8698,
+      "sha256": "40400407b0295f0d349be2ed33ae74bccaad36657f533a103e0a8fdd316fe91a"
+    }
+  ],
+  "parent_dependency": {
+    "source_manifest_sha256": "31edbc3325dfdae2b3f43cce4afb360062d5c70583b57dd1e6530835a178cced",
+    "source_root_sha256": "2177f2aec39a65afddbbded9b6b3cd2c2a33118c060a41e070102f9fb6c95d4a",
+    "parent_modified": false
+  },
+  "access_attestation": {
+    "model_checkpoint_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_codec_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_artifact_opened_statted_hashed_or_enumerated": false,
+    "network_used_by_source_fixture_or_tests": false,
+    "cupy_imported_or_initialized_by_source_fixture_or_tests": false,
+    "live_qwen_authority": false
+  },
+  "test_attestation": {
+    "local_source_only_tests_passed": true,
+    "local_source_only_test_count": 33,
+    "local_source_free_fixture_passed": true,
+    "independent_source_audit_passed": false
+  },
+  "claim_boundary": "Source-only capped successor; no Qwen result, no model result, no F<=0.8 result, no universal SwiGLU-MoE result, and no global negative result for any algebraic family."
+}

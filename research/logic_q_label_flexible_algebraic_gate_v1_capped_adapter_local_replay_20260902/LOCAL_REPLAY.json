@@ -1,0 +1,51 @@
+{
+  "schema": "logic-q-v1-capped-adapter-local-exact-stage-replay",
+  "status": "PASS_LOCAL_EXACT_STAGE__AWAITING_INDEPENDENT_SOURCE_AUDIT",
+  "date": "2026-09-02",
+  "source": {
+    "package": "research/logic_q_label_flexible_algebraic_gate_v1_capped_adapter",
+    "source_manifest_bytes": 2409,
+    "source_manifest_sha256": "9bfd3d1225fb45a0518d2d4d6a4035262e87dc62563222e42e69665358b9aac5",
+    "source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560",
+    "parent_manifest_sha256": "31edbc3325dfdae2b3f43cce4afb360062d5c70583b57dd1e6530835a178cced",
+    "parent_source_root_sha256": "2177f2aec39a65afddbbded9b6b3cd2c2a33118c060a41e070102f9fb6c95d4a"
+  },
+  "staging": {
+    "kind": "fresh local exact-member copy",
+    "adapter_members_copied_from_manifest_only": true,
+    "parent_members_copied_from_manifest_only": true,
+    "cache_or_pyc_present_before_or_after_replay": false,
+    "interpreter_flags": ["-I", "-B"]
+  },
+  "preflight_failures": [
+    {
+      "attempt": 1,
+      "result": "FAIL_CLOSED",
+      "error": "VerifyError: external source manifest SHA-256",
+      "cause": "The first staged verifier command was mistakenly supplied the invalid external pin 0.",
+      "failure_ignored": false,
+      "corrective_action": "Computed the staged manifest SHA-256 from its literal bytes and reran with the exact 64-hex pin."
+    }
+  ],
+  "successful_replay": {
+    "source_verifier_status": "PASS_INDEPENDENT_SOURCE_VERIFICATION",
+    "source_tests_status": "PASS_SOURCE_ONLY_TESTS",
+    "source_test_count": 33,
+    "source_free_fixture_status": "PASS_SOURCE_FREE_MECHANISM_FIXTURE",
+    "source_free_fixture_packet_bytes": 4096,
+    "source_free_fixture_packet_sha256": "9b8d9a6fc1b6e51fc491626ace039fb3bc6e51a7ade52e633d645ded59e03854",
+    "source_free_fixture_is_model_result": false
+  },
+  "access_attestation": {
+    "model_or_qwen_payload_accessed": false,
+    "current_codec_or_coarse_payload_accessed": false,
+    "matched_control_artifact_accessed": false,
+    "network_accessed": false,
+    "cupy_initialized": false
+  },
+  "authorization": {
+    "independent_source_audit_complete": false,
+    "qwen_payload_run_authorized": false,
+    "claim_boundary": "Local source replay only; no Qwen or model result."
+  }
+}

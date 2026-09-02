@@ -1,0 +1,17 @@
+{
+  "schema": "logic-q-v1-capped-adapter-independent-audit-preflight-history",
+  "status": "PRESERVED_NONPAYLOAD_AUDIT_FAILURE",
+  "date": "2026-09-02",
+  "attempts": [
+    {
+      "ordinal": 0,
+      "exit_code": 1,
+      "payload_accessed": false,
+      "cupy_rm_search_reached": false,
+      "failure": "selection frozen grid",
+      "cause": "The independent adversarial audit copied an in-memory receipt through JSON, changing frozen-grid tuples to lists before the intended re-sealing probe. The target package rejected that changed representation."
+    }
+  ],
+  "remediation": "Use copy.deepcopy so the independent attack changes only selected_config_id and the public receipt seal. Preserve this failed attempt and rerun from the unchanged frozen v1 source package.",
+  "claim_boundary": "Audit-script preflight only; no model, Qwen, current-codec, coarse, or matched-control payload was opened."
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "logic-q-v1-capped-adapter-preflight-history",
+  "status": "INITIAL_FAILURE_PRESERVED__FINAL_EXACT_STAGE_REQUIRED",
+  "date": "2026-09-02",
+  "attempts": [
+    {
+      "attempt": 1,
+      "scope": "provisional direct-package source verifier",
+      "provisional_source_root_sha256": "895c339f2829c877eb36a32343123e2d82667eaa9d211197bdb6accf9fd2a614",
+      "result": "FAIL_CLOSED",
+      "error": "VerifyError: exact regular package closure",
+      "cause": "A local py_compile invocation created an untracked __pycache__ directory inside the candidate package after source tests.",
+      "payload_or_model_accessed": false,
+      "network_accessed": false,
+      "failure_ignored": false
+    },
+    {
+      "attempt": 2,
+      "scope": "provisional direct-package source verifier after generated-cache removal",
+      "provisional_source_root_sha256": "895c339f2829c877eb36a32343123e2d82667eaa9d211197bdb6accf9fd2a614",
+      "result": "PASS_PROVISIONAL_SOURCE_VERIFICATION",
+      "action": "Resolved and validated the exact generated cache path under the candidate package, removed only that cache, and reran the verifier with -I -B.",
+      "source_changed_after_this_attempt": true,
+      "authorizes_final_source": false
+    }
+  ],
+  "final_rule": "The final manifest is authorized only by a new verifier, hostile-test, and fixture run from a freshly copied exact-member staging root containing the independently pinned v0 sibling."
+}

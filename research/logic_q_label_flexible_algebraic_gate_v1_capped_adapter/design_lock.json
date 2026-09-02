@@ -1,0 +1,109 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v1-capped-adapter-design-lock",
+  "status": "SEALED_SOURCE_ONLY_NO_QWEN_AUTHORITY",
+  "date": "2026-09-02",
+  "parent_dependency": {
+    "package": "logic_q_label_flexible_algebraic_gate_v0",
+    "source_manifest_sha256": "31edbc3325dfdae2b3f43cce4afb360062d5c70583b57dd1e6530835a178cced",
+    "source_root_sha256": "2177f2aec39a65afddbbded9b6b3cd2c2a33118c060a41e070102f9fb6c95d4a",
+    "independent_audit_disposition": "MECHANISM_VALID__HOLD_FOR_CAPPED_ADAPTER_SUCCESSOR",
+    "parent_modified": false
+  },
+  "objective": {
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "target_F": 0.8,
+    "expert_roles": ["gate", "up", "down_transposed"],
+    "pooled_three_role_score_only": true,
+    "one_pass_storage_read_required": true,
+    "cold_read_amplification_strictly_below": 2.0
+  },
+  "live_family_bank": {
+    "literal4": "finite comparator",
+    "rm1_plus_exceptions": {
+      "block_size": 256,
+      "profiles": [0, 1],
+      "scale_shortlist_per_block": 2,
+      "scale_and_labels_jointly_scored": true,
+      "word_shortlist_per_gray_plane": 8,
+      "exact_four_level_pairs_retained": 4,
+      "exceptions_per_block_maximum": 16,
+      "full_affine_pair_matrix_forbidden": true,
+      "global_negative_authority": false,
+      "production_numerical_backend": "caller-injected CuPy"
+    },
+    "romdd_plus_exceptions": {
+      "depths": [0, 2, 4, 6],
+      "maximum_depth": 6,
+      "whole_component_exceptions_maximum": 64,
+      "profiles": [0, 1],
+      "scale_search": "nearest-scale-conditioned",
+      "bounded_negative_only": true,
+      "global_negative_authority": false
+    },
+    "gf2_rank_plus_exceptions": {
+      "live_search_scheduled": false,
+      "reason": "v0 raw-factor alternating search is not capped Qwen-scale work",
+      "canonical_packet_decode_and_gauge_reencode_enforced": true,
+      "miss_claim_authorized": false
+    }
+  },
+  "hard_kill": {
+    "executed_before_family_search": true,
+    "uses_pooled_nearest_distortion_lower_bound": true,
+    "charges_expert_header_component_headers_alignment_final_pages_and_canonical_2p15_padding": true,
+    "mixed_family_safety": "target family is placed in one role and both other roles receive impossible-best minimum components; all placements are minimized",
+    "search_callable_invoked_after_survival_only": true
+  },
+  "compute_caps": {
+    "maximum_component_weights": 2097152,
+    "maximum_block_size": 256,
+    "maximum_scale_shortlist": 2,
+    "maximum_rm_word_shortlist": 8,
+    "maximum_rm_pairs_retained": 4,
+    "maximum_rm_exceptions_per_block": 16,
+    "maximum_romdd_depth": 6,
+    "maximum_romdd_exceptions_per_component": 64,
+    "unrestricted_exception_prefix_enumeration_forbidden": true,
+    "full_qwen_rm_pair_matrix_forbidden": true
+  },
+  "packet_closure": {
+    "exact_roles_and_order": ["gate", "up", "down_transposed"],
+    "gate_up_down_transposed_shapes_must_be_identical": true,
+    "down_is_canonical_transposed_orientation": true,
+    "gf2_gauge": "unique pivot-column factorization with deterministic zero padding to declared rank",
+    "romdd_header_depth": "zero for no nodes otherwise one plus maximum serialized node level",
+    "strict_decoder_requires_canonical_component_bytes": true,
+    "strict_expert_decoder_requires_exact_canonical_reencode": true,
+    "final_expert_alignment_bytes": 4096,
+    "rate_below_2p15_is_canonically_zero_padded_to_the_first_4KiB_page_at_or_above_2p15": true
+  },
+  "selection": {
+    "minimum_layers": 10,
+    "minimum_whole_test_layers": 5,
+    "outer_test_split": "hash-ranked whole public layer identifiers",
+    "inner_validation_split": "hash-ranked whole public expert slots among non-test layers",
+    "split_uses_source_hashes": false,
+    "source_hashes_bound_before_test": true,
+    "test_metrics_accepted_by_selector": false,
+    "frozen_config_ids": ["b256-l005", "b256-l010", "b256-l020"],
+    "canonical_control_ordinal": "index in canonical layer-slot-role panel order",
+    "receipt_has_canonical_sha256_seal": true
+  },
+  "matched_gaussian": {
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "per_public_block_binary64_mean_and_centered_energy_matched": true,
+    "complete_pipeline_rerun_including_presearch_and_every_authorized_family_search": true,
+    "prebuilt_labels_or_controls_accepted": false,
+    "control_subtraction_can_create_absolute_source_pass": false
+  },
+  "source_access": {
+    "model_checkpoint_or_qwen_payload_opened_statted_hashed_enumerated": false,
+    "current_codec_or_coarse_payload_opened_statted_hashed_enumerated": false,
+    "matched_control_artifact_opened_statted_hashed_enumerated": false,
+    "network_used_by_source_fixture_or_tests": false,
+    "cupy_imported_or_initialized_by_source_fixture_or_tests": false,
+    "live_qwen_authority": false,
+    "independent_source_audit_required_before_qwen": true
+  },
+  "claim_boundary": "Source-only capped successor. No Qwen result, no model result, no F<=0.8 result, no universal SwiGLU-MoE result, and no global negative result for RM, GF2, ROMDD, BDD, QTT, or algebraic label-flexible quantization."
+}

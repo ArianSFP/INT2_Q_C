@@ -1,0 +1,37 @@
+{
+  "schema": "logic-q-v1-capped-adapter-independent-audit-manifest",
+  "status": "SEALED_MECHANISM_VALID_WITH_PRODUCTION_HOLD",
+  "audit_root_sha256": "d56f36015413694c45dd81b571b05974ef5541cf66e6099c4d2b518c75f1c63b",
+  "members": [
+    {
+      "name": "PREFLIGHT_HISTORY.json",
+      "bytes": 907,
+      "sha256": "510d55866a582aa2b91a5ca660354796f759b036a7ab0d2e4ea6c5ad324f3f79"
+    },
+    {
+      "name": "README.md",
+      "bytes": 3393,
+      "sha256": "005d98657aec3e7448a4b617b76c3bbe1b59c52109c3faaecb422f3c83acae19"
+    },
+    {
+      "name": "RUNPOD_AUDIT_RECEIPT.json",
+      "bytes": 1828,
+      "sha256": "4a255e570f0607d5c0872fff1967862146b269b6a397eb1866d40d9a52cdbcaa"
+    },
+    {
+      "name": "adversarial_checks.py",
+      "bytes": 13612,
+      "sha256": "6753cf0b0d28666c45caa7713c4f6fdccb9a441fcb62c995f83a3a4333e95d16"
+    },
+    {
+      "name": "verify_audit.py",
+      "bytes": 4128,
+      "sha256": "df8780e85fa89e0502051fd15a891bf6c59e7212228a1fa5604a7b17bb04d575"
+    }
+  ],
+  "audited_v1_manifest_sha256": "9bfd3d1225fb45a0518d2d4d6a4035262e87dc62563222e42e69665358b9aac5",
+  "audited_v1_source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560",
+  "receipt_sha256": "4a255e570f0607d5c0872fff1967862146b269b6a397eb1866d40d9a52cdbcaa",
+  "disposition": "MECHANISM_VALID__HOLD_BOUND_SELECTOR_SCORER_AND_LIVE_BACKEND",
+  "qwen_authority": false
+}
