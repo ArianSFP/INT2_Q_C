@@ -1,0 +1,52 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-source-manifest-v1",
+  "status": "SEALED_SOURCE_ONLY_NONPROMOTING_NO_PAYLOAD_AUTHORITY",
+  "source_snapshot_root_sha256": "69b2a32a8558824f6ab60d35f1138900e04c5f6301639165562d3425fbf8d442",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 12026,
+      "sha256": "36ce96247c5619d77b176df7bf463e6e482b2b25b71ed9b1b163d07092fd8065"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 6649,
+      "sha256": "d1b140545e3d3c5abea8785f5f7c26476f4f68278b2290057c98eeef04f6d85e"
+    },
+    {
+      "name": "diagnostic.py",
+      "bytes": 63007,
+      "sha256": "6a04ddd7dd2cfb387a36b858e438d6ddf75426978560e559abde6e084953ea68"
+    },
+    {
+      "name": "posterior_core.py",
+      "bytes": 39383,
+      "sha256": "58cbba09a34cd9031c5956512e88f847e47d9f940b92352bc5f8ffc8d00c4b6e"
+    },
+    {
+      "name": "result_bridge.py",
+      "bytes": 39926,
+      "sha256": "ca76e38c97e4ad05f97d45a4d93fdb502383ee4dfb1c256ee99669531e162a64"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 41979,
+      "sha256": "4742373f3dbc0d5c83c8ea506b5d547e93aec474484ff86746d271dbc0ee5e2c"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 9232,
+      "sha256": "8be6d2d5d22c0951aaeadf3b7c22759be24af0658bd0745ed243554fa3778f95"
+    }
+  ],
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "completed_v9_result_opened_statted_hashed_or_enumerated": false,
+    "failed_v0_result_opened_statted_hashed_or_enumerated": false,
+    "qwen_bf16_source_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "cuda_initialized_during_source_build_or_tests": false,
+    "isolated_source_only_tests_run": true
+  },
+  "claim_boundary": "source mechanics and synthetic regression only; no Qwen posterior result or universal SwiGLU-MoE claim"
+}
