@@ -1,0 +1,265 @@
+{
+  "instructions": {
+    "authorization_sha256": "After replacing every placeholder, set this to SHA-256(canonical JSON of the record without authorization_sha256).",
+    "external_anchor": "The dispatcher must receive SHA-256 of the exact canonical-pretty authorization file out of band. A self-seal alone is never authority.",
+    "source_set_sha256": "After replacing every matrix digest, set this to SHA-256(domain || canonical JSON of the ordered matrices array), using the domain frozen in moment_contract.py."
+  },
+  "matrices": [
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 0,
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 0,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_00_slot_00_gate.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 1,
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 0,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_01_slot_00_up.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 2,
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "slot": 0,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_02_slot_00_down.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 3,
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 1,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_03_slot_01_gate.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 4,
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 1,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_04_slot_01_up.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 5,
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "slot": 1,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_05_slot_01_down.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 6,
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 2,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_06_slot_02_gate.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 7,
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 2,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_07_slot_02_up.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 8,
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "slot": 2,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_08_slot_02_down.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 9,
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 3,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_09_slot_03_gate.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 10,
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 3,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_10_slot_03_up.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 11,
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "slot": 3,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_11_slot_03_down.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 12,
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 4,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_12_slot_04_gate.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 13,
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 4,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_13_slot_04_up.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 14,
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "slot": 4,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_14_slot_04_down.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 15,
+      "role": "gate",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 5,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_15_slot_05_gate.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 16,
+      "role": "up",
+      "shape": [
+        768,
+        2048
+      ],
+      "slot": 5,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_16_slot_05_up.bf16",
+      "values": 1572864
+    },
+    {
+      "bytes": 3145728,
+      "matrix_ordinal": 17,
+      "role": "down",
+      "shape": [
+        2048,
+        768
+      ],
+      "slot": 5,
+      "source_matrix_bf16_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+      "source_relpath": "matrix_17_slot_05_down.bf16",
+      "values": 1572864
+    }
+  ],
+  "panel": {
+    "experts": 6,
+    "hidden": 2048,
+    "identity_semantics": "CANONICAL_SLOT_AND_SWIGLU_ROLE_ONLY",
+    "intermediate": 768,
+    "roles": [
+      "gate",
+      "up",
+      "down"
+    ],
+    "weights": 28311552
+  },
+  "schema": "uwfa-sc-v9-bf16-source-authorization-template-v0",
+  "source_closure": {
+    "source_artifact_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+    "source_full_geometry_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+    "source_moment_auditor_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+    "source_pipeline_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+    "source_score_receipt_sha256": "__EXTERNAL_LOWERCASE_SHA256__",
+    "source_structural_geometry_sha256": "__EXTERNAL_LOWERCASE_SHA256__"
+  },
+  "status": "TEMPLATE_ONLY_NOT_AUTHORIZATION"
+}

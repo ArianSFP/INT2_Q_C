@@ -1,0 +1,25 @@
+{
+  "claim_boundary": "Source-only universal contract and hostile-test package. No source moment, BF16 payload, Gaussian control, encoded artifact, score, or specificity evidence exists here.",
+  "direct_execution_authority": false,
+  "payload_access_authority": false,
+  "positive_claim_authority": false,
+  "remaining_external_inputs": [
+    "a completed externally audited 18-row canonical authorization containing every exact BF16 byte digest and all six source-closure digests",
+    "the out-of-band SHA-256 of the exact canonical-pretty authorization file",
+    "the out-of-band SHA-256 of this package SOURCE_MANIFEST.json",
+    "independent revalidation of the pinned CPython and NumPy runtime before the first source open",
+    "a fresh independent source audit of this package",
+    "a separately audited v9 controls consumer"
+  ],
+  "schema": "uwfa-sc-v9-bf16-source-moment-block-v0",
+  "source_only_attestation": {
+    "accelerator_imported_or_launched": false,
+    "bf16_payload_opened_statted_or_hashed": false,
+    "control_payload_generated": false,
+    "existing_package_modified": false,
+    "network_accessed": false,
+    "production_executed": false,
+    "remote_compute_accessed": false
+  },
+  "status": "BLOCKED_PENDING_EXTERNAL_SOURCE_AUTHORIZATION_AND_INDEPENDENT_AUDIT"
+}

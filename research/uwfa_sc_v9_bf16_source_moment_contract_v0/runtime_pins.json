@@ -1,0 +1,73 @@
+{
+  "claim_boundary": "These pins authorize only CPU BF16 moment publication through the reviewed API after an out-of-band authorization-file digest matches. They do not authorize control generation, encoding, scoring, accelerator use, or promotion.",
+  "consumer_source_pins": {
+    "cpu_receipt": {
+      "bytes": 1646,
+      "relpath": "research/uwfa_sc_v9_matched_gaussian_ptq_producer_v0_cpu_receipt_20260902/receipt.json",
+      "sha256": "9996fd94d6aa9ae14a083ae19b6565a9eca90c4ac2ab77e10c624c272615bb8e",
+      "source_manifest_sha256": "20cd2cd8b2a0e41f68e5fcf58a1b2ebe8d0e09c984bdbbd786a1057e869c9eb1"
+    },
+    "moment_contract_abi": {
+      "matrix_count": 18,
+      "schema": "uwfa-sc-v9-bf16-matrix-moment-contract-v1",
+      "status": "AUTHENTICATED_EXTERNAL_SOURCE_MOMENTS"
+    },
+    "package_relpath": "research/uwfa_sc_v9_matched_gaussian_ptq_producer_v0",
+    "source_manifest": {
+      "bytes": 1599,
+      "sha256": "20cd2cd8b2a0e41f68e5fcf58a1b2ebe8d0e09c984bdbbd786a1057e869c9eb1"
+    },
+    "sources": [
+      {
+        "bytes": 25231,
+        "relpath": "producer_contract.py",
+        "sha256": "e9f27f1dcc7614e41c7f7086b41ffbee19bc189014f97410145a6fa0af4c0962"
+      },
+      {
+        "bytes": 26209,
+        "relpath": "full_ptq_producer.py",
+        "sha256": "979a53f25c11a5a9f628802ad49f983d445cd05878559211e9cf709dd086c56d"
+      }
+    ]
+  },
+  "moment_runtime": {
+    "byteorder": "little",
+    "numerical_contract": {
+      "bf16_decode": "little-endian uint16 shifted left 16 bits, viewed as IEEE binary32, then exactly widened to IEEE binary64",
+      "energy": "np.sum(values * values, dtype=np.float64) over C-order flattened values",
+      "generator": "fresh numpy.random.Generator(numpy.random.PCG64(derived_u128)); one standard_normal(values,dtype=np.float64) call; six fixed affine plus BF16-RNE iterations",
+      "mean": "np.mean(values, dtype=np.float64) over C-order flattened values",
+      "rne": "binary32 bits + 0x7fff + ((bits >> 16) & 1), then shift right 16",
+      "sse": "mean pass, centered=values-mean in binary64, np.sum(centered * centered, dtype=np.float64)"
+    },
+    "numpy": {
+      "origin_bytes": 25220,
+      "origin_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+      "origin_sha256": "09295a80660f17925ae23765ce8cbd7ff7ceae968d5f2f89349f1cb74c0b9e11",
+      "record_bytes": 111517,
+      "record_path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy-2.5.2.dist-info/RECORD",
+      "record_sha256": "662e57f69a042c5b9efa7a46e8c2901f5d733e21b255a34d7f061e466bceab0d",
+      "version": "2.5.2"
+    },
+    "platform_machine": "x86_64",
+    "platform_system": "Linux",
+    "python_executable_bytes": 8021824,
+    "python_executable_resolved": "/usr/bin/python3.12",
+    "python_executable_sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5",
+    "python_implementation": "cpython",
+    "python_version": "3.12.3"
+  },
+  "publication_gate": {
+    "authorization_file_sha256_required_out_of_band": true,
+    "direct_entrypoint_authorized": false,
+    "isolated_python_flags": [
+      "-I",
+      "-B"
+    ],
+    "package_source_manifest_sha256_required_out_of_band": true,
+    "publication_target_must_be_absent": true,
+    "source_open_before_package_authorization_runtime_checks": false
+  },
+  "schema": "uwfa-sc-v9-bf16-source-moment-runtime-pins-v0",
+  "status": "FROZEN_BEFORE_ANY_SOURCE_ACCESS"
+}

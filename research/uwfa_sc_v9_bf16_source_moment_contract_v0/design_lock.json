@@ -1,0 +1,75 @@
+{
+  "authorization_contract": {
+    "authorization_file_bytes_max": 131072,
+    "canonical_relpaths_only": true,
+    "external_authorization_file_sha256_required": true,
+    "matrix_bytes_each": 3145728,
+    "matrix_count": 18,
+    "order": "slot ascending, then gate/up/down",
+    "self_seal_is_not_authority": true,
+    "source_set_root": "SHA256(UWFA-SC-V9-EXTERNAL-BF16-SOURCE-SET-v1\\0 || canonical_json(ordered matrix rows))",
+    "total_source_bytes": 56623104,
+    "total_values": 28311552
+  },
+  "consumer_abi": {
+    "moment_contract_schema": "uwfa-sc-v9-bf16-matrix-moment-contract-v1",
+    "producer_package": "research/uwfa_sc_v9_matched_gaussian_ptq_producer_v0",
+    "producer_source_manifest_sha256": "20cd2cd8b2a0e41f68e5fcf58a1b2ebe8d0e09c984bdbbd786a1057e869c9eb1",
+    "producer_validator_source_sha256": "e9f27f1dcc7614e41c7f7086b41ffbee19bc189014f97410145a6fa0af4c0962"
+  },
+  "design_date": "2026-09-02",
+  "fp64_moment_contract": {
+    "bf16_decode": "little-endian uint16 bit expansion to binary32, exact widening to binary64",
+    "centered_sse": "two-pass, np.sum((x - mean) * (x - mean), dtype=np.float64)",
+    "energy": "separate np.sum(x * x, dtype=np.float64)",
+    "mean": "np.mean(x, dtype=np.float64)",
+    "nonfinite_or_degenerate_rejected": true,
+    "serialization": "lowercase hex of exact little-endian binary64 bytes",
+    "storage_order": "declared matrix storage orientation, C-order flatten"
+  },
+  "gaussian_regeneration_contract": {
+    "affine_iterations": 6,
+    "centered_rms_relative_tolerance": 3.0517578125e-05,
+    "generator": "NumPy PCG64, one binary64 standard-normal call from a fresh generator per matrix",
+    "mean_error_over_source_rms_tolerance": 7.62939453125e-06,
+    "seed_searches": 0,
+    "seed_width_bits": 128,
+    "selection": "minimum fixed normalized objective; earliest iteration breaks ties"
+  },
+  "identity_contract": {
+    "forbidden_runtime_identity": [
+      "checkpoint",
+      "layer",
+      "original expert identifier",
+      "tensor name"
+    ],
+    "runtime_identity": "canonical slot and SwiGLU role only",
+    "universal": true
+  },
+  "publication_contract": {
+    "atomic_same_parent_rename": true,
+    "complete_written_before_final_path_exists": true,
+    "direct_entrypoint_inert_exit": 3,
+    "failed_stage_never_becomes_final": true,
+    "final_target_must_be_absent": true,
+    "payloads_copied": false,
+    "source_bytes_all_authenticated_before_first_moment": true
+  },
+  "runtime_contract": {
+    "accelerator_dependencies": [],
+    "exact_pins_file": "runtime_pins.json",
+    "numpy": "2.5.2",
+    "platform": "Linux x86_64 little-endian",
+    "python": "CPython 3.12.3 -I -B"
+  },
+  "schema": "uwfa-sc-v9-bf16-source-moment-design-v0",
+  "source_only_attestation": {
+    "accelerator_used": false,
+    "bf16_payload_accessed": false,
+    "existing_packages_modified": false,
+    "network_used": false,
+    "production_run": false,
+    "remote_compute_used": false
+  },
+  "status": "SOURCE_ONLY_CONTRACT_BUILT_EXTERNAL_AUTHORIZATION_BLOCKED"
+}

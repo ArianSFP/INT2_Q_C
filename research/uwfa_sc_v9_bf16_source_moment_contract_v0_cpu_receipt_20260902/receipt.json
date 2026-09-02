@@ -1,0 +1,56 @@
+{
+  "schema": "uwfa_sc_v9_bf16_source_moment_contract_v0_cpu_receipt_v1",
+  "date_utc": "2026-09-02",
+  "package": "research/uwfa_sc_v9_bf16_source_moment_contract_v0",
+  "source_manifest_sha256": "1fdffcab4735b510de0a792bb931945ff4619ab9dc15dd30dd2ca30e75734855",
+  "source_manifest_bytes": 2269,
+  "members_root_sha256": "c6f6224d27a59778383c3d4dfabcc805e92a7cfaf2470b33b4982ad654601f84",
+  "isolated_copy": "/tmp/uwfa_sc_v9_bf16_source_moment_contract_v0_1fdffc",
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "2.5.2",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "isolated_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  "tests": [
+    {
+      "suite": "test_source_only.py",
+      "exit_code": 0,
+      "tests_run": 10,
+      "status": "OK"
+    },
+    {
+      "suite": "test_hostile.py",
+      "exit_code": 0,
+      "tests_run": 17,
+      "status": "OK"
+    },
+    {
+      "suite": "verify_source.py",
+      "exit_code": 0,
+      "status": "PASS_SOURCE_ONLY_UNIVERSAL_MOMENT_CONTRACT",
+      "members": 11,
+      "payload_authority": false,
+      "positive_claim_authority": false,
+      "bf16_payloads_opened": 0,
+      "numeric_modules_imported": 0,
+      "accelerator_modules_imported": 0
+    }
+  ],
+  "superseded_failed_freeze": {
+    "source_manifest_sha256": "d2c2118f51775ab0c60b2c8e70f9f6d733aada0513f522de73230721171dbb9c",
+    "failure": "Python canonical-pretty verification rejected two noncanonical decimal float spellings in design_lock.json.",
+    "checkpointed": false
+  },
+  "scope": {
+    "bf16_payload_read": false,
+    "cuda_used": false,
+    "control_generated": false,
+    "production_execution": false
+  },
+  "interpretation": "The repaired universal BF16 moment/regeneration contract passed all 27 hostile tests and independent source verification. It does not authorize or evidence generation of a real matched-Gaussian control."
+}

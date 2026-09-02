@@ -1,0 +1,67 @@
+{
+  "claim_boundary": "Frozen source-only universal 18-matrix authorization, moment, regeneration, and fail-closed publication contract. This manifest is not payload authority or scientific evidence.",
+  "members": [
+    {
+      "bytes": 6737,
+      "name": "AUTHORIZATION_TEMPLATE.json",
+      "sha256": "39632798e20a1e12427e7743cbd28e3e5f90cc4ef7bae052401cb44ae68792cd"
+    },
+    {
+      "bytes": 1297,
+      "name": "BLOCK.json",
+      "sha256": "7ad2346138c911c482d7ab3d1814c26b15b30c06e28bd46ee085e36ad47ed4c1"
+    },
+    {
+      "bytes": 6258,
+      "name": "README.md",
+      "sha256": "5df84192b20a4aa27c2ffcad63e3f8ec79e0af9f99c93b4d82d4a420bc04362e"
+    },
+    {
+      "bytes": 3042,
+      "name": "design_lock.json",
+      "sha256": "d8a0fbbd2fce2f2061a1728f71470dbf9f5acbfd6f0cb4057d00fefbbd713a82"
+    },
+    {
+      "bytes": 34117,
+      "name": "moment_contract.py",
+      "sha256": "140eaa2905a1b275503ae30375ef7652b30f4c742d41bfdea28a0799e5dbb14c"
+    },
+    {
+      "bytes": 3445,
+      "name": "runtime_pins.json",
+      "sha256": "48ea88331571d2fc5d3851901eca897c8acf3ce54b922f863498a70fe3acf053"
+    },
+    {
+      "bytes": 1406,
+      "name": "source_moment_publisher.py",
+      "sha256": "58d9d29ede1ae9a96d0330bff568c099aba69b954a9b14028486198a722bac17"
+    },
+    {
+      "bytes": 11038,
+      "name": "test_hostile.py",
+      "sha256": "06a13d6934b6ab3bed560428c918d7401096cbbd7be82ba5e0ce2434645a3916"
+    },
+    {
+      "bytes": 9220,
+      "name": "test_source_only.py",
+      "sha256": "3df6b022cdbc5a284fa531c7ea7345cffced1236165b24c04696f9c0516f15c9"
+    },
+    {
+      "bytes": 12336,
+      "name": "verify_source.py",
+      "sha256": "06a9c2e49c615f528e18c417b8d15856e03728fd506641c3f8e6be8298ae2c6d"
+    }
+  ],
+  "members_root_sha256": "c6f6224d27a59778383c3d4dfabcc805e92a7cfaf2470b33b4982ad654601f84",
+  "schema": "uwfa-sc-v9-bf16-source-moment-source-manifest-v0",
+  "source_only_attestation": {
+    "accelerator_imported_or_launched": false,
+    "bf16_payload_opened_statted_or_hashed": false,
+    "control_payload_generated": false,
+    "existing_package_modified": false,
+    "network_accessed": false,
+    "production_executed": false,
+    "remote_compute_accessed": false
+  },
+  "status": "SOURCE_ONLY_FROZEN_NONPROMOTING"
+}
