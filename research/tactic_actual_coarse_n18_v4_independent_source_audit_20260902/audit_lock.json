@@ -1,0 +1,89 @@
+{
+  "schema": "tactic-actual-coarse-n18-v4-independent-source-audit-v1",
+  "date": "2026-09-02",
+  "verdict": "PASS_FIXED_SOURCE_GRAMMAR_BLOCK_PAYLOAD_PROMOTION_PENDING_REPAIRS",
+  "producer": {
+    "relative_path": "../tactic_actual_coarse_n18_v4",
+    "files": 10,
+    "bytes": 90966,
+    "source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf"
+  },
+  "dependencies": [
+    {
+      "relative_path_from_repository_root": "src/polaris_sc_v2_rht_encoder.py",
+      "bytes": 29633,
+      "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+      "role": "numerical CuPy encoder core"
+    },
+    {
+      "relative_path_from_repository_root": "strata_v2_klt_mixed_independent_auditor_v1.py",
+      "bytes": 116835,
+      "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+      "role": "procedural construction shared by the producer and independent causal decoder"
+    }
+  ],
+  "passed": {
+    "record_identity": "8*78592*128 == 262144*307",
+    "record_bpw": "307/128",
+    "payload_bits": 627712,
+    "nominal_test_channel_bits": 626688,
+    "logical_reserve_bits": 1024,
+    "qwen_geometry": [768, 2048],
+    "qwen_records_per_expert": 18,
+    "qwen_coarse_bytes_per_expert": 1414656,
+    "qwen_tail_records": 0,
+    "terminal_payload_overflow_rejected": true,
+    "encoder_run_trial_calls_per_tile": 1,
+    "tail_compatibility_is_target_ineligible": true,
+    "decoder_imports_encoder": false,
+    "per_record_canonical_reencode_enforced": true,
+    "upstream_source_tests": 17,
+    "source_free_cupy_smoke_exactly_reproduced": true,
+    "one_pass_amplification": "73/72",
+    "second_private_pass_amplification": "181/90"
+  },
+  "repair_before_payload": [
+    {
+      "id": "R1_AGGREGATE_REENCODE_RECEIPT",
+      "severity": "medium",
+      "finding": "canonical_reencode_all_match uses truthiness of nonempty canonical packet bytes rather than explicit equality; per-record equality is nevertheless already required inside decode_reservoir"
+    },
+    {
+      "id": "R2_ENCODER_SELF_CHECKS_NOT_REQUIRED",
+      "severity": "high",
+      "finding": "three encoder consistency booleans are reported but not hard-required before a PASS_FINITE_TILE_WITHIN_RESERVOIR receipt"
+    },
+    {
+      "id": "R3_UNDECLARED_I16_TERMINAL_GATE",
+      "severity": "high",
+      "finding": "decoder rejects inverse symbol magnitudes above 32767, but the design declares only arithmetic-reservoir overflow as terminal; widen to I32 or freeze/test this no-retry failure mode"
+    },
+    {
+      "id": "R4_REPEATED_BYTE_FIELD_SEMANTICS",
+      "severity": "low",
+      "finding": "frame_ledger.repeated_compressed_bytes is total pass traffic while compressed_frame_reread_bytes elsewhere is extra traffic; make both definitions explicit"
+    },
+    {
+      "id": "R5_INPUT_RUNTIME_OUTPUT_BINDING",
+      "severity": "high",
+      "finding": "payload inputs, runtime, and output namespace still require an independently owned immutable dispatcher; v4 itself carries no source manifest authority"
+    }
+  ],
+  "universality_limits": [
+    "exact 307/128 eligibility requires intermediate*hidden divisible by 262144",
+    "non-divisible shapes use a valid but >307/128 compatibility frame and cannot enter the <=2.5-bpw target cell",
+    "dimension, matrix-value, stream-count, and frame-byte caps bound the grammar",
+    "canonical BF16 source normalization and Down transposition are upstream obligations",
+    "both producer construction and independent decoder use the same pinned procedural construction source",
+    "the 73/72 ledger excludes decoded-state transient memory traffic and is not an inference-kernel measurement"
+  ],
+  "authority": {
+    "producer_modified": false,
+    "qwen_payload_opened": false,
+    "payload_run_authorized": false,
+    "runtime_frozen": false,
+    "final_tactic_fine_packet_implemented": false,
+    "qwen_mse_or_f_claimed": false,
+    "universal_target_codec_claimed": false
+  }
+}

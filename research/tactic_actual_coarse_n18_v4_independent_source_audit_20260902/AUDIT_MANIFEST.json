@@ -1,0 +1,28 @@
+{
+  "schema": "tactic-actual-coarse-n18-v4-independent-source-audit-manifest-v1",
+  "self_unlisted": "AUDIT_MANIFEST.json",
+  "producer_source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5121,
+      "sha256": "c4ea50d38f06fff00bb1d398b7bfb91df91d913c35739648e6f3de21ba90f486"
+    },
+    {
+      "path": "audit_lock.json",
+      "bytes": 3990,
+      "sha256": "6cd489bddce21702bcd63464b2ba603eb457336f681d5f4bc626d2a42bce34c2"
+    },
+    {
+      "path": "audit_receipt.json",
+      "bytes": 2148,
+      "sha256": "550ead1acd12b685747646367088eb6660930e2d51eeca9a70099e41db36ab1f"
+    },
+    {
+      "path": "verify_audit.py",
+      "bytes": 13053,
+      "sha256": "4c912f5d22faab1f514dfda595b3e3c16b4fa8f90c07de7b089a67bd91465e76"
+    }
+  ],
+  "claim": "Exact independent source-audit closure only; no payload, CUDA, SSH, publication, or target-result authority."
+}

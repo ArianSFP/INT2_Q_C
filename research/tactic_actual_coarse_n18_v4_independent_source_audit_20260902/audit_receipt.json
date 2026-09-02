@@ -1,0 +1,45 @@
+{
+  "schema": "tactic-actual-coarse-n18-v4-independent-source-audit-receipt-v1",
+  "status": "PASS_SOURCE_AUDIT_WITH_REPAIR_BLOCKERS_NO_PAYLOAD_AUTHORITY",
+  "producer_source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+  "producer_source_files": 10,
+  "producer_source_bytes": 90966,
+  "upstream_tests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "independent_checks": {
+    "exact_rate_and_reserve": true,
+    "qwen_geometry_and_panel_ledger": true,
+    "tail_target_eligibility": true,
+    "terminal_fake_encoder_overflow_rejected_after_one_run_trial": true,
+    "encoder_decoder_import_separation": true,
+    "dependency_hashes": true,
+    "one_and_two_pass_page_ledgers": true,
+    "repair_findings_detected": 5
+  },
+  "source_free_cupy_replay": {
+    "device": "RTX 5090 class; package receipt reports compute-capability string split as characters",
+    "packet_sha256": "7a15e96389cab06f9de16ca36ff3c9a74580d8d13d5c0a351af02ab1733cfce1",
+    "source_bf16_sha256": "1de4a07f1186c045e08965abd1b14863d65a3c8f36e5a729a3c2fe72ccb1e941",
+    "logical_bits": 626926,
+    "capacity_margin_bits": 786,
+    "canonical_reencode_matches": true,
+    "relative_mse_original_coordinates": 0.03693951352239193,
+    "matches_checked_in_receipt": true,
+    "qwen_payload_opened": false
+  },
+  "arithmetic": {
+    "record_bytes": 78592,
+    "physical_bpw": 2.3984375,
+    "identity": "8*78592*128 == 262144*307",
+    "payload_bits": 627712,
+    "nominal_bits": 626688,
+    "reserve_bits": 1024,
+    "qwen_coarse_bytes_per_expert": 1414656,
+    "one_pass_final_page_amplification": 1.0138888888888888,
+    "forbidden_second_private_pass_amplification": 2.011111111111111
+  },
+  "verdict": "Packet grammar is source-valid for target-eligible shapes, including pinned Qwen geometry. Repair R1-R5 and complete a separate runtime/input/output freeze before any payload pilot. A universal <=2.5-bpw SwiGLU codec still needs a bounded tail design and an inference-level traffic measurement.",
+  "authority": "This receipt is source-only and does not authorize Qwen, CUDA, SSH, payload, publication, or target-result execution."
+}
