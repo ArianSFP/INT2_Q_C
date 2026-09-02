@@ -1,0 +1,54 @@
+{
+  "schema": "epsilon-tcq-strata-bound-gate-v1-design-lock",
+  "status": "SOURCE_ONLY_TYPED_HOLD",
+  "date": "2026-09-02",
+  "current_codec": {
+    "independent_decoder_bytes": 116835,
+    "independent_decoder_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "indices": 64,
+    "sc_levels": 6,
+    "selected_arithmetic_decisions_per_coordinate": null,
+    "processing_order": "six level-major polar SC passes",
+    "legal_search_unit": "whole six-level polar block",
+    "coordinate_local_six-event_abi_valid": false,
+    "replacement_four_level_fallback": false
+  },
+  "replay": {
+    "read_only": true,
+    "selected_internal_sc_bits_bound": true,
+    "selected_masks_bound": true,
+    "causal_frequencies_u16le_bound": true,
+    "polar_output_planes_recomputed": true,
+    "indices_reassembled_from_six_planes": true,
+    "canonical_arithmetic_payload_recomputed": true,
+    "literal_current_packet_independent_reencode_required": true,
+    "fp64_reconstruction_cross_decoder_equality_required": true
+  },
+  "bound_driver": {
+    "fixed_bytes_source": "literal packet construction only",
+    "row_bytes_equal_byte_ledger_total": true,
+    "gain_metrics_derived_from_bound_fp64_artifacts": true,
+    "read_amplification_derived_from_literal_ranges": true,
+    "outer_fold_fit_and_selection_closure": true,
+    "matched_controls": 8,
+    "control_receipt_full_json_sha256_externally_pinned": true,
+    "assertion_boolean_control_closure": false,
+    "independent_decode_and_canonical_reencode": true
+  },
+  "production_search": {
+    "block_values": [1048576, 2097152],
+    "beam_width_screen": [32, 128, 512],
+    "memory_cap_bytes": 4294967296,
+    "host_prefix_copy_fallback": false,
+    "cupy_topk_required": true,
+    "device_resident_polar_state_required": true,
+    "bounded_prefix_storage_required": true,
+    "current_status": "HOLD_PRODUCTION_POLAR_LIST_SCALABILITY"
+  },
+  "payload_authority": {
+    "qwen": false,
+    "current_codec": false,
+    "matched_gaussian": false,
+    "condition_to_change": "separate independent source audit and separate scalable block-list engine freeze"
+  }
+}

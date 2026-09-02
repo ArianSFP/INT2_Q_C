@@ -1,0 +1,15 @@
+{
+  "schema": "epsilon-tcq-strata-bound-v1-independent-source-audit-manifest",
+  "status": "PASS_SOURCE_AUDIT_TYPED_HOLD_NO_PAYLOAD_AUTHORITY",
+  "date": "2026-09-02",
+  "audited_source_manifest_sha256": "e926575ac1a78a85d08e94e63d1cc85d70b1544e5b352b6abc45cb8653d83706",
+  "audited_source_root_sha256": "5c3b3a6cb1e2740202710526429a34cca54fcc9105c18820cf6206d276166380",
+  "authenticated_strata_decoder_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+  "source_root_sha256": "fe99cd74e51f6e9138b50aa8a0c091eb6425ea37f7255997b158c17f24c3210e",
+  "members": [
+    {"name": "README.md", "bytes": 2603, "sha256": "59c2c848128bf15fc908d83e7d8a1d3cbdf54a55da3bbf353ff42c4efe9e84c0"},
+    {"name": "RUNPOD_AUDIT_RECEIPT.json", "bytes": 2162, "sha256": "18efa4b5dd213e89eaf1df740bf9ba2602c24b159155cc25bb1ab8dcb5de27c4"},
+    {"name": "independent_audit.py", "bytes": 16124, "sha256": "ef597235938a6b388972a0a714ce428f53e4012fd0deecb1276d35e2cd8ac2b6"},
+    {"name": "verify_audit.py", "bytes": 2434, "sha256": "09bebaf342483ed98d90e61e899dfa67a6b007d03970c89cf8558c25c59b5d38"}
+  ]
+}

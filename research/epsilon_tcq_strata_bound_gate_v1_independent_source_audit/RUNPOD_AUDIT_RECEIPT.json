@@ -1,0 +1,55 @@
+{
+  "audited_source_manifest_sha256": "e926575ac1a78a85d08e94e63d1cc85d70b1544e5b352b6abc45cb8653d83706",
+  "audited_source_root_sha256": "5c3b3a6cb1e2740202710526429a34cca54fcc9105c18820cf6206d276166380",
+  "authenticated_strata_decoder": {
+    "bytes": 116835,
+    "indices": 64,
+    "leading_log2": 21,
+    "levels": 6,
+    "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "tail_log2": 20
+  },
+  "checks": {
+    "coordinate_local_choice_typed_hold": true,
+    "eight_control_receipts_require_external_full_json_pins": true,
+    "exact_source_closure": true,
+    "gains_derived_not_caller_supplied": true,
+    "hostile_source_tests": 14,
+    "literal_packet_independent_decode_reencode": true,
+    "no_replacement_four_level_fallback": true,
+    "outer_fold_fit_selection_closure": true,
+    "production_prefix_memory_capped": true,
+    "read_amplification_derived_from_literal_ranges": true,
+    "row_bytes_bound_to_ledger_total": true,
+    "six_level_not_six_events_per_coordinate": true
+  },
+  "cupy": {
+    "compute_capability": "120",
+    "cupy_version": "14.2.0",
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "payload_accessed": false,
+    "selected_indices": [1, 3],
+    "status": "PASS_SOURCE_FREE_CUPY_TOPK"
+  },
+  "current_codec_payload_accessed": false,
+  "matched_control_payload_accessed": false,
+  "next_gate": "separately freeze a device-resident resumable whole-block polar list engine below the 4 GiB cap before any Qwen payload run",
+  "qwen_payload_accessed": false,
+  "resource_bound": {
+    "backpointer_bytes": 268435456,
+    "beam_width": 32,
+    "bytes_per_path": 214958336,
+    "depth": 21,
+    "frontier_bytes": 6878666752,
+    "index_i16_bytes_per_path": 4194304,
+    "lr_f64_bytes_per_path": 176160768,
+    "memory_cap_bytes": 4294967296,
+    "mu_u8_bytes_per_path": 22020096,
+    "scalar_bytes_per_path": 256,
+    "six_plane_u8_bytes_per_path": 12582912,
+    "status": "HOLD_PRODUCTION_POLAR_LIST_SCALABILITY",
+    "total_peak_bytes": 7147102208
+  },
+  "schema": "epsilon-tcq-strata-bound-v1-independent-source-audit-receipt",
+  "status": "PASS_SOURCE_AUDIT_TYPED_HOLD_NO_PAYLOAD_AUTHORITY"
+}

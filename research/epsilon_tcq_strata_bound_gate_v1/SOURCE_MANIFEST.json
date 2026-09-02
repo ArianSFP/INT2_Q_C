@@ -1,0 +1,18 @@
+{
+  "schema": "epsilon-tcq-strata-bound-gate-v1-source-manifest",
+  "status": "FROZEN_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "source_root_sha256": "5c3b3a6cb1e2740202710526429a34cca54fcc9105c18820cf6206d276166380",
+  "members": [
+    {"name": "README.md", "bytes": 3938, "sha256": "e3cc16465b21965fc37105bd057cc619c2bf561b1024f2994f9f82054b039b71"},
+    {"name": "bound_driver.py", "bytes": 20205, "sha256": "8aa5136edf63560a06e56fe2fcf925de8b9f9ad7559e386fce423d8caa4d39e3"},
+    {"name": "candidate_packet.py", "bytes": 14632, "sha256": "27f94d3ac596fbcbc6a28a5fcb6d814d4fe54620289a9d6c07ad31d5ff8dfd9f"},
+    {"name": "common.py", "bytes": 4154, "sha256": "8d2bac57c1d949f421e310e7e9e39baae194a5581ab45f8179b06b5a44a9ef0e"},
+    {"name": "design_lock.json", "bytes": 2135, "sha256": "d02d83cd746c61a786a60f2204e501fe0214ddc4dc6e67e4620c395b06c84678"},
+    {"name": "independent_decoder.py", "bytes": 7472, "sha256": "a0ef72782b9fc0cc0ecaabcb493d86ccb705c7df92c554b445e2133acf651e5e"},
+    {"name": "polar_list_oracle.py", "bytes": 6372, "sha256": "1bf333d43033ca26b58875fab644507136824c7299286d5c5d6536796570eaae"},
+    {"name": "run_gate.py", "bytes": 5388, "sha256": "ce5e70a9b6e882850d736d22c00e4e5c9dec951eb9b67eb29ba8119789167dc8"},
+    {"name": "strata_replay_adapter.py", "bytes": 14568, "sha256": "8e7b1803bd588787e4f21c717a9e7dbba2250489a02b6e246639d13195f6b569"},
+    {"name": "test_source_only.py", "bytes": 18435, "sha256": "dbbd2bb4b8223c3754c6c9021383d365db15dfc47accc034637bd45bd0715a99"},
+    {"name": "verify_source.py", "bytes": 3039, "sha256": "9d21411f0b8af4feedae58733ac43dd49b16b01de13af48e784750fb29357ca1"}
+  ]
+}
