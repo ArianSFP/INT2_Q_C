@@ -23,6 +23,7 @@ FROZEN_ROOT_SHA256 = (
 HEX64 = re.compile(r"[0-9a-f]{64}\Z")
 MEMBERS = {
     "AUDIT_DISPOSITION.json",
+    "HOSTILE_AUDIT_RESULT.json",
     "README.md",
     "RUNPOD_CUPY_PROBE.json",
     "hostile_audit.py",
@@ -156,8 +157,20 @@ def verify(package: Path, expected_manifest_sha256: str | None) -> dict[str, Any
     require(disposition["status"] == STATUS and
             disposition["audited_source"]["manifest_sha256"] ==
             FROZEN_MANIFEST_SHA256 and
-            disposition["hostile_test_program"]["runpod_executed"] is False,
+            disposition["hostile_test_program"]["locally_executed"] is True and
+            disposition["hostile_test_program"]["runpod_executed"] is False and
+            disposition["hostile_test_program"]["passed_check_count"] == 27,
             "honest audit disposition")
+    hostile_result = strict_json(
+        regular_bytes(root / "HOSTILE_AUDIT_RESULT.json", "hostile result"),
+        "hostile result")
+    require(hostile_result["status"] == STATUS and
+            hostile_result["passed_check_count"] == 27 and
+            hostile_result["forgery_receipt"]["accepted_validation_F"] == 0.0 and
+            hostile_result["fake_cupy_receipt"]["module_version"] ==
+            "forged-cpu-facade" and
+            hostile_result["model_qwen_strata_control_payload_accessed"] is False,
+            "executed hostile audit result")
     probe = strict_json(regular_bytes(root / "RUNPOD_CUPY_PROBE.json", "probe"),
                         "probe")
     require(probe["status"] ==

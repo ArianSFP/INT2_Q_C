@@ -31,9 +31,10 @@
   "hostile_test_program": {
     "path": "hostile_audit.py",
     "authored": true,
-    "locally_executed": false,
+    "locally_executed": true,
     "runpod_executed": false,
-    "reason_not_executed": "No Python interpreter is installed in the local workspace, and the managed escalation reviewer denied SCP of the frozen repository source packages to the external RunPod. Circumvention was not attempted."
+    "execution_receipt": "HOSTILE_AUDIT_RESULT.json",
+    "passed_check_count": 27
   },
   "generic_runpod_probe": {
     "receipt": "RUNPOD_CUPY_PROBE.json",

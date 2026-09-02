@@ -218,11 +218,12 @@ probe expected               126727726
 stream synchronized          true
 ```
 
-The managed escalation reviewer denied export of the frozen repository source
-packages to the external RunPod, so the complete frozen-v2 hostile script was
-not run there.  This audit must not represent the generic device observation as
-a v2 launch receipt.  `hostile_audit.py` is executable once the already sealed
-packages and a Python+NumPy environment are co-located.
+The complete frozen-v2 hostile script subsequently ran locally under Python
+3.12/NumPy and passed all 27 mechanism/attack checks; its literal output is
+`HOSTILE_AUDIT_RESULT.json`.  The managed escalation reviewer denied export of
+the frozen repository source packages to the external RunPod, so it was not run
+there.  This audit must not represent the generic device observation as a v2
+launch receipt.
 
 ## Claim boundary
 

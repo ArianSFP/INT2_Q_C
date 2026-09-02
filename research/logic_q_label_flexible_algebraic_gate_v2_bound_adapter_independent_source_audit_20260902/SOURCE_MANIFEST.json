@@ -1,7 +1,7 @@
 {
   "schema": "logic-q-v2-independent-source-audit-manifest-v1",
   "status": "MECHANISM_VALID__HOLD_PRODUCTION_PROVENANCE_BACKEND_AND_STRATA",
-  "source_root_sha256": "f0e558027e42b893664c189ad8e48ce71281f3dd5807887022326ffb440ff0e8",
+  "source_root_sha256": "e07454f92546c35c14acef6dcd26572203cf17bd305adffac200e3a517b5dcb1",
   "frozen_source": {
     "manifest_sha256": "e97041b2debdd1a85ce32305f43aae1f76cf4ca937b52e275bdd246ae1b1b980",
     "source_root_sha256": "080de7a63e596ae34f9da90941d7fd9d07b70dfb2afad97103aa5ab5943d3776",
@@ -10,13 +10,18 @@
   "members": [
     {
       "name": "AUDIT_DISPOSITION.json",
-      "bytes": 3239,
-      "sha256": "06e385a2292f1f0ca172d34b68f15c6b801827ac4b69b1047e81bda4b4538035"
+      "bytes": 3088,
+      "sha256": "821d9d134eeef45eab6bb92337ca6299646fcd4839fd7bd7270f8dad4ab45594"
+    },
+    {
+      "name": "HOSTILE_AUDIT_RESULT.json",
+      "bytes": 6622,
+      "sha256": "7801768af71921886f741cca2a25ed91919a30cbca95d38179538ae36831aad3"
     },
     {
       "name": "README.md",
-      "bytes": 11428,
-      "sha256": "3a3d9f3d434cf2476ba0bda1719e2eaa0fed720c11d51ce9156c313237ea93b9"
+      "bytes": 11461,
+      "sha256": "dfce9ce4adea73fb74307045d2cd2036a9621b35a077678202de26ed5859fa9b"
     },
     {
       "name": "RUNPOD_CUPY_PROBE.json",
@@ -25,22 +30,24 @@
     },
     {
       "name": "hostile_audit.py",
-      "bytes": 20431,
-      "sha256": "9916a536167f393c0274217a6299689b53d23cc6db6ac7bbcf9b3f9c039985b3"
+      "bytes": 20439,
+      "sha256": "c255f260d6da181db522cf6811caaf6c1efbf05d205345f225bdd92fcb1463c9"
     },
     {
       "name": "verify_audit.py",
-      "bytes": 8501,
-      "sha256": "ee2a85184c0c75e461df529f4bed33dde03458c67a7e9f2df0ac8e844fc09f30"
+      "bytes": 9256,
+      "sha256": "1e25bdb51e20ead494107288250b793b15cd528f0dbce623931f8f0f5619acda"
     }
   ],
   "execution": {
     "static_independent_inspection_completed": true,
     "executable_hostile_attacks_authored": true,
-    "hostile_attacks_executed": false,
+    "hostile_attacks_executed": true,
+    "hostile_attack_passed_check_count": 27,
     "generic_real_runpod_cupy_probe_passed": true,
     "frozen_v2_runpod_replay_passed": false,
-    "reason": "No local Python interpreter; managed escalation reviewer denied source-package export to the external RunPod."
+    "execution_receipt": "HOSTILE_AUDIT_RESULT.json",
+    "runpod_scope_note": "Generic real CuPy probe only; no frozen-v2 RunPod replay."
   },
   "claim_boundary": "No Qwen, current STRATA, matched-control, F<=0.8, runtime-bandwidth, or universal SwiGLU-MoE authority."
 }

@@ -1,0 +1,68 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v3-authority-source-manifest",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_INDEPENDENT_V3_AUDIT",
+  "source_root_sha256": "dcff51109c6b869f5a9ec7f1b50bebf7ca6c3e5f18f8f627cf354b409b38e126",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 8079,
+      "sha256": "1de45fc5f7ab137576a4642db791e8675e4900fa466c347f9fb7841b78e1654c"
+    },
+    {
+      "name": "SOURCE_ONLY_TEST_RESULT.json",
+      "bytes": 1536,
+      "sha256": "78289ebd476970cf947977fdd25c83632259879beb812e6f072d7c6f27c7b623"
+    },
+    {
+      "name": "authority.py",
+      "bytes": 52354,
+      "sha256": "12a6b7dc7dbfe3b04096f8944ddeca01141c515574b052bf6a56cb5a4dff542c"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 3409,
+      "sha256": "da580ba021e2c730a016819d2ec6719c498ecd5f4cc51dd8c87e19ef64549cc8"
+    },
+    {
+      "name": "gpu_worker.py",
+      "bytes": 6774,
+      "sha256": "b3b0888989659d8aae114bf43884fb319b1b50b7ae25faeb1909912a1a1bddf8"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 14770,
+      "sha256": "42830136478f090f88752e1aa45247f320ba9230e82553f149ade2f11e1371c0"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 11399,
+      "sha256": "87061b0b73d612856f89491f167d17cf76deb499be89977c1d6e635c92fb88ad"
+    }
+  ],
+  "dependencies": {
+    "v2_manifest_sha256": "e97041b2debdd1a85ce32305f43aae1f76cf4ca937b52e275bdd246ae1b1b980",
+    "v2_source_root_sha256": "080de7a63e596ae34f9da90941d7fd9d07b70dfb2afad97103aa5ab5943d3776",
+    "v1_source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560",
+    "v2_v1_v0_modified": false
+  },
+  "access_attestation": {
+    "model_qwen_strata_coarse_or_control_payload_opened_statted_hashed_or_enumerated": false,
+    "network_used_by_source_build_or_tests": false,
+    "cupy_imported_or_initialized_by_source_build_or_tests": false,
+    "live_payload_authority": false
+  },
+  "test_attestation": {
+    "source_only_hostile_tests_authored": true,
+    "source_only_hostile_tests_executed": true,
+    "source_only_hostile_test_count": 15,
+    "independent_v3_source_audit_passed": false,
+    "independent_real_fresh_cupy_worker_passed": false
+  },
+  "semantic_attestation": {
+    "abstract_four_level_mechanism": true,
+    "current_strata_six_level_64_index_semantics_bound": false,
+    "four_level_result_transfers_to_strata": false,
+    "strata_rm6_implemented": false
+  },
+  "claim_boundary": "Abstract four-level source-only authority mechanics; no Qwen, current STRATA, F<=0.8, runtime-bandwidth, or universal SwiGLU-MoE result."
+}

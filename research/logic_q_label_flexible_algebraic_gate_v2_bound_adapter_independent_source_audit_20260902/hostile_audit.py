@@ -349,7 +349,7 @@ def main() -> None:
 
     # Whole-layer/whole-slot partition mechanics are correctly reconstructed,
     # but duplicate source hashes across owners are accepted.
-    for layer in {row["layer"] for row in forged_panel["rows"]}:
+    for layer in sorted({row["layer"] for row in forged_panel["rows"]}):
         partitions = {row["partition"] for row in forged_panel["rows"]
                       if row["layer"] == layer}
         check(partitions == ({"test"} if layer in forged_panel["test_layers"]

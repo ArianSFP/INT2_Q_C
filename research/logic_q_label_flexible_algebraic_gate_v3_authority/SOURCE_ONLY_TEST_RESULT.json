@@ -1,0 +1,32 @@
+{
+  "authority_packet_sha256": "a8fd938ab3f69e41586ee45f54d4da9b1a4a20a391a4842adb88b26578e53cdf",
+  "cupy_imported_or_initialized": false,
+  "fixture_physical_bytes": 57344,
+  "fixture_physical_rate_bpw": 2.3333333333333335,
+  "fixture_weights": 196608,
+  "inner_packet_sha256": "e9c4623608b105df2f6a8e7eb6ac7c26014fc86ec02cc96b878c17403deaa7ba",
+  "model_qwen_strata_control_payload_accessed": false,
+  "network_accessed": false,
+  "precommit_sha256": "45fd00b8b2a6bde4ca39070f4b14324a3a3ad3579348c6c1189057084d884b51",
+  "schema": "logic-q-v3-authority-source-only-hostile-tests-v1",
+  "status": "PASS_SOURCE_ONLY_AUTHORITY_MECHANICS__NO_PAYLOAD_AUTHORITY",
+  "strata_semantics_bound": false,
+  "test_count": 15,
+  "tests": [
+    "external_precommit_binds_panel_grid_aliases_backend_before_rows",
+    "full_outer_bytes_crc_hash_inner_geometry_and_rate",
+    "auditor_owned_raw_bytes_reconstruction_and_fp64_score",
+    "outer_payload_mutation_rejected_by_crc",
+    "crc_reseal_cannot_override_inner_hash",
+    "nonzero_outer_page_padding_rejected",
+    "nan_inner_scale_rejected_from_literal_payload",
+    "raw_source_tamper_rejected",
+    "public_precommit_reseal_rejected",
+    "duplicate_source_alias_rejected_by_default",
+    "explicit_complete_audited_alias_map_accepted",
+    "production_api_has_no_metrics_packet_backend_or_config_injection",
+    "authorization_requires_exact_fresh_worker_replay",
+    "fresh_worker_isolated_command_and_sanitized_environment",
+    "worker_imports_cupy_fresh_before_repository_modules"
+  ]
+}

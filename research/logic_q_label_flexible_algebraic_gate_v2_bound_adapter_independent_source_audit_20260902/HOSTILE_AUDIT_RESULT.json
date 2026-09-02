@@ -1,0 +1,133 @@
+{
+  "claim_boundary": "The literal four-level codec/scorer mechanics are valid on source-free bytes. This audit grants no Qwen, current STRATA, F<=0.8, control, runtime-bandwidth, or universal SwiGLU-MoE authority.",
+  "fake_cupy_receipt": {
+    "compute_capability": "99",
+    "device_count": 1,
+    "device_id": 0,
+    "device_multiprocessors": 999,
+    "device_name": "forged CPU facade",
+    "device_pci_bus_id": 0,
+    "device_pci_device_id": 0,
+    "driver_version": 999999,
+    "launch_context": {
+      "cols": 256,
+      "config_id": "b256-l005",
+      "launch_nonce": "b06a5eabf7653d76765705395bcd1e8647f45c1ab9ab92545814a364f4c61e7a",
+      "layer": "audit-layer-01",
+      "panel_sha256": "5b125eb6038e733df16799ad594fdc4731360efa19e1ee15427e1e3ed494816d",
+      "rows": 256,
+      "schema": "logic-q-v2-cupy-launch-context-v1",
+      "selection_receipt_sha256": "45b4fcbd10d0524f14cf9172aa11e265fc69de11669988d6fd9decbf56478296",
+      "slot": "audit-expert-00",
+      "v1_source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560"
+    },
+    "launch_nonce": "b06a5eabf7653d76765705395bcd1e8647f45c1ab9ab92545814a364f4c61e7a",
+    "module_file": "C:\\INT2__compression\\INT2_Q_C\\research\\logic_q_label_flexible_algebraic_gate_v2_bound_adapter_independent_source_audit_20260902\\hostile_audit.py",
+    "module_file_sha256": "c255f260d6da181db522cf6811caaf6c1efbf05d205345f225bdd92fcb1463c9",
+    "module_name": "cupy",
+    "module_version": "forged-cpu-facade",
+    "probe_elements": 4096,
+    "probe_expected": 126727726,
+    "probe_observed": 126727726,
+    "receipt_sha256": "e2ec70a3226f891caa9b157a1cb52bdcc04f34388ea32362e41c36f5f57f64dc",
+    "runtime_version": 999999,
+    "schema": "logic-q-v2-cupy-launch-receipt-v1",
+    "stream_synchronized": true,
+    "v1_source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560"
+  },
+  "findings": [
+    {
+      "evidence": "A literal label-bit mutation is still canonical and decodes; only the external SHA-256 changes.",
+      "id": "NO_EMBEDDED_PACKET_CRC",
+      "severity": "HOLD_PRODUCTION_INTEGRITY"
+    },
+    {
+      "evidence": "Header-only receipt accepted arbitrary expert/component hashes and contains neither payload nor scales.",
+      "id": "PACKET_RECEIPT_OMITS_LITERAL_BYTES",
+      "severity": "BLOCKS_SELECTION_PROVENANCE"
+    },
+    {
+      "evidence": "authorize_test accepted arbitrary self-sealed FP64 metrics, duplicate nonexistent source hashes, an invented packet receipt, and one packet aliased to all configs when the attacker supplied the matching external pin.",
+      "id": "SELF_SEALED_METRICS_ARE_FORGEABLE",
+      "severity": "BLOCKS_QWEN_AND_CONTROL_AUTHORITY"
+    },
+    {
+      "evidence": "The same literal packet is accepted and scored under distinct frozen config IDs; config_id is not serialized or derivable from the packet.",
+      "id": "CONFIG_NOT_BOUND_TO_PACKET",
+      "severity": "BLOCKS_MODEL_SELECTION_AUTHORITY"
+    },
+    {
+      "evidence": "Identifier partitions are whole-layer/slot, but identical source hashes may appear in train, validation, and test without rejection.",
+      "id": "OWNER_CONTENT_ALIAS_NOT_CLOSED",
+      "severity": "HOLD_PORTABILITY_SPLIT"
+    },
+    {
+      "evidence": "A ModuleType injected into sys.modules with NumPy arithmetic passed collect_cupy_launch_receipt and validate_cupy_launch_receipt as a forged CUDA device.",
+      "id": "CUPY_GATE_SPOOFABLE_IN_PROCESS",
+      "severity": "BLOCKS_ADVERSARIAL_BACKEND_ATTESTATION"
+    },
+    {
+      "evidence": "make_launch_context accepted a config different from the config selected by the referenced receipt; encode_expert_bound receives neither the receipt nor authorize_test output provenance.",
+      "id": "LAUNCH_NOT_SEMANTICALLY_BOUND_TO_SELECTION",
+      "severity": "BLOCKS_SELECTED_CODEC_EXECUTION_AUTHORITY"
+    },
+    {
+      "evidence": "V2 binds train/validation selection only; it has no authenticated matched-control/test aggregation path or final absolute F gate.",
+      "id": "NO_BOUND_CONTROL_OR_TEST_RESULT_GATE",
+      "severity": "BLOCKS_FINAL_CLAIM"
+    }
+  ],
+  "forgery_receipt": {
+    "accepted_validation_F": 0.0,
+    "control_bytes_supplied": false,
+    "packet_bytes_supplied_to_authorizer": false,
+    "panel_sha256": "1c39ea871aceb9fc37cee40fa25b8e5bf024f457487248d43693043d618141e1",
+    "raw_source_bytes_supplied": false,
+    "selected_config_id": "b256-l020",
+    "selection_receipt_sha256": "45b4fcbd10d0524f14cf9172aa11e265fc69de11669988d6fd9decbf56478296"
+  },
+  "literal_fixture": {
+    "bpw": 2.1666666666666665,
+    "bytes": 53248,
+    "layout_addressable_read_amplification": 1.0,
+    "runtime_read_amplification_measured": false,
+    "weights": 196608
+  },
+  "model_qwen_strata_control_payload_accessed": false,
+  "network_accessed_by_script": false,
+  "passed_check_count": 27,
+  "passed_checks": [
+    "v2_exact_manifest_and_source_root",
+    "v2_explicitly_not_strata_bound",
+    "literal_packet_counts_and_rate_from_actual_bytes",
+    "literal_packet_is_one_page_contiguous_object",
+    "independent_scorer_matches_manual_raw_fp64",
+    "bf16_little_endian_parser",
+    "nonfinite_source_rejected",
+    "nan_scale_rejected_from_actual_packet",
+    "nonzero_page_padding_rejected",
+    "valid_label_mutation_has_only_changed_external_hash",
+    "header_only_geometry_accepts_invented_packet_hashes",
+    "fully_forged_rows_packet_and_source_hashes_authorize_target_config",
+    "same_packet_scores_under_distinct_config_id",
+    "whole_layer_test_partition_audit-layer-00",
+    "whole_layer_test_partition_audit-layer-01",
+    "whole_layer_test_partition_audit-layer-02",
+    "whole_layer_test_partition_audit-layer-03",
+    "whole_layer_test_partition_audit-layer-04",
+    "whole_layer_test_partition_audit-layer-05",
+    "whole_layer_test_partition_audit-layer-06",
+    "whole_layer_test_partition_audit-layer-07",
+    "whole_layer_test_partition_audit-layer-08",
+    "whole_layer_test_partition_audit-layer-09",
+    "duplicate_cross_owner_source_hashes_are_accepted",
+    "cpu_facade_spoofs_canonical_cupy_device_and_probe",
+    "launch_context_accepts_nonselected_config_for_selection_hash",
+    "v2_has_no_executable_control_result_gate"
+  ],
+  "real_cupy_imported_by_script": false,
+  "schema": "logic-q-v2-independent-source-hostile-audit-v1",
+  "source_manifest_sha256": "e97041b2debdd1a85ce32305f43aae1f76cf4ca937b52e275bdd246ae1b1b980",
+  "source_root_sha256": "080de7a63e596ae34f9da90941d7fd9d07b70dfb2afad97103aa5ab5943d3776",
+  "status": "MECHANISM_VALID__HOLD_PRODUCTION_PROVENANCE_BACKEND_AND_STRATA"
+}

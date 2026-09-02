@@ -1,0 +1,88 @@
+{
+  "schema": "logic-q-label-flexible-algebraic-gate-v3-authority-design-lock",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_INDEPENDENT_V3_AUDIT",
+  "date": "2026-09-02",
+  "dependencies": {
+    "v2_manifest_sha256": "e97041b2debdd1a85ce32305f43aae1f76cf4ca937b52e275bdd246ae1b1b980",
+    "v2_source_root_sha256": "080de7a63e596ae34f9da90941d7fd9d07b70dfb2afad97103aa5ab5943d3776",
+    "v1_source_root_sha256": "5d145d89a20d2ae256ea60f569fab97cd6372cde66f7df75f3e86b08b3a88560",
+    "v2_v1_v0_modified": false
+  },
+  "authority_inputs": {
+    "literal_raw_source_bytes": true,
+    "literal_inner_and_outer_packet_bytes": true,
+    "encoder_scored_rows": false,
+    "encoder_sse_or_energy": false,
+    "encoder_counts_or_rate": false,
+    "packet_geometry_receipts": false,
+    "caller_backend_object": false,
+    "caller_selected_config": false
+  },
+  "precommit": {
+    "externally_pinned_before_rows": true,
+    "complete_panel_and_source_hashes": true,
+    "frozen_grid": true,
+    "worker_source_sha256": true,
+    "cupy_module_device_policy": true,
+    "duplicate_alias_map": true,
+    "test_closed": true
+  },
+  "source_aliases": {
+    "duplicates_rejected_by_default": true,
+    "explicit_complete_ordinal_group_required": true,
+    "nonempty_reason_required": true,
+    "partial_or_overlapping_groups_rejected": true
+  },
+  "packet": {
+    "one_page_contiguous_outer_object": true,
+    "complete_inner_packet_embedded": true,
+    "all_outer_bytes_and_padding_charged": true,
+    "precommit_panel_config_owner_shape_and_source_hashes_bound": true,
+    "inner_sha256_and_crc32_bound": true,
+    "whole_envelope_crc32": true,
+    "inner_scales_and_payload_parsed": true,
+    "canonical_inner_and_outer_reencode": true,
+    "alphabet_size": 4,
+    "strata_compatible": false
+  },
+  "scorer": {
+    "auditor_owned_raw_bytes": true,
+    "bf16_fp32_fp64_little_endian": true,
+    "unweighted_fp64_sse_and_energy": true,
+    "counts_and_rate_from_literal_headers_and_outer_bytes": true,
+    "finite_source_and_reconstruction": true
+  },
+  "fresh_backend": {
+    "python_flags": ["-I", "-B"],
+    "cupy_imported_before_repository_modules": true,
+    "preimported_cupy_rejected": true,
+    "pythonpath_and_pythonhome_not_forwarded": true,
+    "module_file_sha256_bound": true,
+    "version_device_compute_runtime_driver_bound": true,
+    "synchronized_gpu_probe": true,
+    "fresh_exact_replay_before_authorization": true,
+    "remote_hardware_attestation_claimed": false
+  },
+  "selection": {
+    "all_frozen_configs_and_whole_train_validation_experts": true,
+    "content_bearing_packets_embedded": true,
+    "artifact_external_pin_required_before_test": true,
+    "raw_source_rescore_before_authorization": true,
+    "fresh_worker_byte_replay_before_authorization": true,
+    "winner_recomputed": true,
+    "launched_config_derived_only_from_authorized_artifact": true
+  },
+  "read_claim": {
+    "layout_addressable_amplification": 1.0,
+    "runtime_amplification_measured": false
+  },
+  "payload_authority": {
+    "qwen": false,
+    "model": false,
+    "current_strata": false,
+    "matched_control": false,
+    "universal_swiglu_moe": false,
+    "condition_to_change": "independent v3 source/backend audit and separate semantic authorization"
+  },
+  "claim_boundary": "Abstract four-level source-only authority mechanics; no Qwen, current STRATA, F<=0.8, runtime-bandwidth, or universal SwiGLU-MoE result."
+}
