@@ -1,0 +1,57 @@
+{
+  "authenticated_root": "a1fc85ffdfaa5e7fde25deea98b33d186c915868a8a546333a7fefb64fa9b035",
+  "inventory_members": 16,
+  "probes": {
+    "completion_output_symlink_ancestor": {
+      "accepted_and_completed_through_symlink_ancestor": true
+    },
+    "control_geometry_payload_length_coupling": {
+      "altered_only_baseline_payload_bytes_geometry": "0e4bef2a61ad1efbb6f75507044a189f72161c41ffad819747ea0792a44c5f7a",
+      "digests_differ": true,
+      "source_geometry": "85287f432bb3c336b5188cc0227eb0113cd712b0af923945dc4452dd9976bb36",
+      "validated_source_geometry_snapshot": true
+    },
+    "gpu_device_mapping_receipt": {
+      "environment_source_mentions_pci": false,
+      "environment_source_mentions_uuid": false
+    },
+    "gpu_memory_bound": {
+      "declared_max_exceeds_stage_vram_budget": true,
+      "max_packed_symbols": 17179869184,
+      "payload_device_bytes_at_declared_max": 68719476736,
+      "stage_vram_budget_bytes": 30064771072
+    },
+    "posterior_handoff_decision_digest_label": {
+      "bit_only_sha256": "d5e2d2ac07b741be58f6b9e50ede5fdcf16f3e8053ecef9350e7744b0d8bd90c",
+      "handoff_field_name": "decoded_symbol_bits_sha256",
+      "source_digest_is_not_bit_only_digest": true,
+      "strata_source_digest": "84789b89c71eb01b22f69d7198367a887ace316a7b999e63f4ec693d08cff024"
+    },
+    "source_binding_and_preflight": {
+      "actual_geometry": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bound_geometry": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "forged_gpu_preflight_preserved_without_gate": "FORGED_PRETEND_PASS",
+      "returned_status": "NO_PROMOTION_NESTED_HELDOUT",
+      "source_phase_returned": true
+    },
+    "unequal_shape_e250_descriptor_portability": {
+      "all_routed_payloads_canonically_reencoded": true,
+      "canonical_rebuild": true,
+      "container_sha256": "4b29ecd60f637be958d6abd3db181341cac5ae001bb951829780e06929cc7b59",
+      "experts": 250,
+      "regions": 251,
+      "routed_full_reconstruction_matches": true,
+      "shape_pairs": 12,
+      "shared_unequal_tail_counts": [1, 2],
+      "shared_unequal_tail_owners": [0, 249],
+      "streams": 751,
+      "weights": 5223
+    },
+    "universal_same_layer_semantic_identities": {
+      "expected_exact_pair_exclusion_development_streams_per_fold": 15,
+      "observed_exception": "ValueError: nested fold geometry",
+      "unique_identity_pairs": true
+    }
+  },
+  "schema": "uwfa-sc-v3-independent-hostile-probes"
+}

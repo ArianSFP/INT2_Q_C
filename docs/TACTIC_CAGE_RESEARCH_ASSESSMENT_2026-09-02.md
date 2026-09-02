@@ -470,9 +470,11 @@ a compression gain.
 
 ## Current status
 
-- UWFA-SC v3 is being hardened before any Qwen claim; its authenticated ABI is
-  intended to preserve exact causal decisions for the later posterior
-  diagnostic.
+- UWFA-SC v3 is independently blocked before freeze.  Its CPU/CuPy mechanics
+  and a 250-expert unequal-shape fixture passed, but its scientific folds are
+  undefined on legal single-layer panels; source/preflight/score bindings,
+  symlink-safe publication, resource caps, UUID/PCI identity, control geometry,
+  and one posterior-handoff digest require repair.  It has no Qwen result.
 - SILT v1 is independently blocked on routed-read authentication, durable
   publication, and universal-capacity issues.  It has no Qwen payload or
   source-gain result.

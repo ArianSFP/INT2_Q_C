@@ -45,6 +45,7 @@ than the final research claim: at its own physical rate it has
 - [HANKEL-CSR and POLY-SYNDROME-R source-free successor architecture](research/spectral_psr_algebraic_renewal_breakthrough_20260902/RESEARCH_REPORT.md)
 - [ORBIT/MPS source-model checkpoint: synthetic pass and audited production blocks](docs/RATE_RELATIVE_RESEARCH_CHECKPOINT_2026-09-01_ORBIT_MPS.md)
 - [Source-free nonlocal WFA mechanism proof](research/nonlocal_wfa_global_state_synthetic_v0/README.md)
+- [Blocked UWFA-SC v3 independent audit: scientific folds, receipt binding, publication, and resource caps](research/unifilar_wfa_entropy_census_stage0_v3_independent_audit_20260902/AUDIT_REPORT.md)
 - [Blocked dense-HMM census audit](research/tied_mps_entropy_census_stage0_v0_independent_source_audit_20260901/AUDIT_REPORT_4E85.md)
 - [Blocked exact-unifilar SC census audit](research/unifilar_wfa_entropy_census_stage0_v1_independent_audit/AUDIT_REPORT.md)
 - [Blocked raw-label copula census audit](research/label_copula_census_stage0_v0_independent_audit/AUDIT_REPORT.md)
