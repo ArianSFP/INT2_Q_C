@@ -1,0 +1,47 @@
+{
+  "schema": "tactic_dh384_v2_producer_source_replay_evidence_v1",
+  "producer_root": "cd03644f0e1c36f1c568208d863c10bfd52959fb3dd5e47b6d5c41132dafb61d",
+  "platform": {
+    "python_executable": "/usr/bin/python3.12",
+    "python_version": "3.12.3",
+    "os_name": "posix",
+    "location": "supplied RunPod"
+  },
+  "preimport_inventory": {
+    "top_level_regular_files": 8,
+    "other_members": 0,
+    "all_bytes_and_sha256_matched_producer_inventory": true,
+    "pycache_members": 0
+  },
+  "documented_verifier": {
+    "bytecode_writes_disabled": true,
+    "exit_code": 0,
+    "status": "PASS_SOURCE_ONLY_NO_EXECUTION_AUTHORITY",
+    "manifest_sha256": "f8de593784638cf7719d08ddda7061f4912166021214fb7a2894862a53050662",
+    "physical_bpw": 2.5,
+    "cold_read_amplification": 1.0138888888888888,
+    "planning_c_required": 0.2972443434920543
+  },
+  "documented_source_tests": {
+    "bytecode_writes_disabled": true,
+    "exit_code": 0,
+    "tests_run": 11,
+    "passed": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds_reported": 0.038
+  },
+  "isolated_mode_probe": {
+    "exit_code": 1,
+    "failure": "ModuleNotFoundError: No module named tactic_v2_common",
+    "interpretation": "The producer verifier depends on live script-directory import. The independent hostile harness instead compiles authenticated in-memory bytes and passes under -I -B."
+  },
+  "access": {
+    "model_or_qwen_files_opened": 0,
+    "coarse_payload_files_opened": 0,
+    "cuda_imports_or_contexts": 0,
+    "network_calls_by_python_replay": 0
+  },
+  "claim_boundary": "Producer-authored standard-library source replay only; not an independent PASS and not execution authority."
+}

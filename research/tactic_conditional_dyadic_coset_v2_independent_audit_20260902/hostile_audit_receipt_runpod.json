@@ -1,0 +1,77 @@
+{
+  "claim_boundary": "Source-only hostile audit; no model, coarse payload, CUDA, network, or numerical compression result.",
+  "errors": 0,
+  "failures": 0,
+  "inventory": [
+    {
+      "bytes": 4764,
+      "name": "cupy_preflight.py",
+      "sha256": "db358f080a8d77d27204f7d098fe1caac65e172edaf17ab6ca205900b5883553"
+    },
+    {
+      "bytes": 8045,
+      "name": "design_lock.json",
+      "sha256": "6549003de0a33797baab9131eb02c720389541272aa44902d65b950ae29f1c9a"
+    },
+    {
+      "bytes": 12502,
+      "name": "README.md",
+      "sha256": "638d3688e638fb1dd82d68b387acc7c97eb25235073c1abc5f85f5af929a8c08"
+    },
+    {
+      "bytes": 1291,
+      "name": "SOURCE_MANIFEST.json",
+      "sha256": "f8de593784638cf7719d08ddda7061f4912166021214fb7a2894862a53050662"
+    },
+    {
+      "bytes": 21006,
+      "name": "stage0_gate.py",
+      "sha256": "3bae2633ac38cef3db12c3327f967ae1d3bc2b7caab0639df92bec5a009288a3"
+    },
+    {
+      "bytes": 14619,
+      "name": "tactic_v2_common.py",
+      "sha256": "1d007e47f075d7b4c746d53e5bffb999ebde4cc1a2b85835cf44e951c18c87ba"
+    },
+    {
+      "bytes": 5647,
+      "name": "test_source_only.py",
+      "sha256": "367e47b62b6c5c3474626b026f6c995de50183a9fc37711fc3de853c48675177"
+    },
+    {
+      "bytes": 17144,
+      "name": "verify_source.py",
+      "sha256": "34c43105fec9acfa4bf834b4c8c7f7ccb668111d50c5f8f76070caaccbfe9087"
+    }
+  ],
+  "platform": {
+    "os_name": "posix",
+    "platform": "linux",
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]"
+  },
+  "producer_root": "cd03644f0e1c36f1c568208d863c10bfd52959fb3dd5e47b6d5c41132dafb61d",
+  "receipt_sha256": "b27a576efabe31a8caedf42ece81656a1536b15ce623fe14b9ff7ca6dc972fcc",
+  "schema": "tactic_dh384_v2_independent_hostile_source_audit_v1",
+  "skipped": 0,
+  "status": "PASS_AUDIT_HARNESS_BLOCK_PRODUCER",
+  "test_log": [
+    "test_01_manifest_matches_members_but_is_not_an_external_execution_pin (__main__.AuditTests.test_01_manifest_matches_members_but_is_not_an_external_execution_pin) ... ok",
+    "test_02_exact_qwen_sized_rate_and_page_ledger (__main__.AuditTests.test_02_exact_qwen_sized_rate_and_page_ledger) ... ok",
+    "test_03_literal_384_bits_per_full_block_has_zero_rate_slack (__main__.AuditTests.test_03_literal_384_bits_per_full_block_has_zero_rate_slack) ... ok",
+    "test_04_selector_is_independently_canonical (__main__.AuditTests.test_04_selector_is_independently_canonical) ... ok",
+    "test_05_continuous_span_projection_identity_is_sound (__main__.AuditTests.test_05_continuous_span_projection_identity_is_sound) ... ok",
+    "test_06_finite_qc_trellis_and_output_scale_are_not_defined (__main__.AuditTests.test_06_finite_qc_trellis_and_output_scale_are_not_defined) ... ok",
+    "test_07_unequal_shapes_and_tails_are_rejected_not_supported (__main__.AuditTests.test_07_unequal_shapes_and_tails_are_rejected_not_supported) ... ok",
+    "test_08_lock_accepts_duplicate_files_and_self_asserted_roundtrip (__main__.AuditTests.test_08_lock_accepts_duplicate_files_and_self_asserted_roundtrip) ... ok",
+    "test_09_output_fault_leaves_public_partial_tree (__main__.AuditTests.test_09_output_fault_leaves_public_partial_tree) ... ok",
+    "test_10_source_panel_precedes_control_payload_opens (__main__.AuditTests.test_10_source_panel_precedes_control_payload_opens) ... ok",
+    "test_11_runtime_and_review_authority_are_not_authenticated (__main__.AuditTests.test_11_runtime_and_review_authority_are_not_authenticated) ... ok",
+    "test_12_read_claim_is_declarative_not_an_inference_trace (__main__.AuditTests.test_12_read_claim_is_declarative_not_an_inference_trace) ... ok",
+    "",
+    "----------------------------------------------------------------------",
+    "Ran 12 tests in 0.043s",
+    "",
+    "OK"
+  ],
+  "tests_run": 12
+}

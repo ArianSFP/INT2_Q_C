@@ -392,10 +392,14 @@ The subsequent v2 scaffold is also independently blocked: it authenticates
 source bytes but later imports mutable live paths, accepts a fabricated runtime
 lock, can expose a corrupt public `COMPLETE` tree after a post-rename failure,
 and its fixed full-tail reservoirs violate rate/read caps on legal unequal
-shapes.  Repair those findings in a new source boundary and independently
-audit it together with the frozen DH384 cell before any payload work.  Then run
-the source-free CuPy smoke and encode only block zero of Gate, Up, and
-transposed Down in the first triplet.
+shapes.  The frozen DH384 v2 cell is now independently blocked as well: its
+continuous rank-384 projection is sound, but its finite QC/trellis, rational
+scale, and literal fine packet are undefined; its live-path source imports,
+coarse reconstruction/symbol binding, publication, runtime/review authority,
+tail support, and measured read trace also fail closure.  Repair both findings
+in new source boundaries before any payload work.  Then run the source-free
+CuPy smoke and encode only block zero of Gate, Up, and transposed Down in the
+first triplet.
 
 Freeze separate pilot upper bounds before opening those streams:
 
@@ -555,9 +559,13 @@ a compression gain.
   Only the production container's literal bytes divided by its shape-derived
   weight count can establish the required physical-bpw saving.
 - TACTIC-DH384 remains unexecuted because no authenticated physical
-  `307/128`-bpw coarse artifact exists.
-- TACTIC-DH384's internal hostile tests and synthetic CuPy receipt have not
-  yet been followed by an independent source audit.
+  `307/128`-bpw coarse artifact exists.  Its independent v2 source audit is now
+  a **BLOCK**: the continuous orthogonal rank-384 upper bound is sound, but the
+  claimed finite 384-bit QC/trellis map and output scale are not implemented or
+  frozen, coarse decoded records are not bound to reservoirs, faulted output
+  can remain public, the runtime/review boundary is unauthenticated, and the
+  executable accepts only the fixed Qwen geometry.  The audit opened no Qwen or
+  CUDA payload.
 - The present N18-307 producer directory is also incomplete as a claimed
   source freeze: its manifest, verifier, and hostile source tests are absent,
   so neither its synthetic smoke nor its payload entry points are authorized.
