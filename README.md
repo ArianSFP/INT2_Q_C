@@ -51,6 +51,8 @@ than the final research claim: at its own physical rate it has
 - [Blocked UWFA-SC v3 independent audit: scientific folds, receipt binding, publication, and resource caps](research/unifilar_wfa_entropy_census_stage0_v3_independent_audit_20260902/AUDIT_REPORT.md)
 - [Blocked UWFA-SC v4 independent audit: staging integrity, control closure, and typed preflight receipts](research/unifilar_wfa_entropy_census_stage0_v4_independent_audit_20260902/AUDIT_REPORT.md)
 - [Blocked UWFA-SC v6 independent audit: authenticated-byte handoff, literal inner rate, telemetry, and dependent folds](research/unifilar_wfa_entropy_census_stage0_v6_independent_audit_20260902/AUDIT_REPORT.md)
+- [Blocked UWFA-SC v7 independent audit: raw-model proxy replaced by literal aligned-container accounting](research/unifilar_wfa_entropy_census_stage0_v7_independent_audit_20260902/AUDIT_REPORT.md)
+- [UWFA-SC v8 independent source-free PASS: exact aligned model cost and production-census source boundary](research/unifilar_wfa_entropy_census_stage0_v8_independent_audit_20260902/AUDIT_REPORT.md)
 - [Blocked dense-HMM census audit](research/tied_mps_entropy_census_stage0_v0_independent_source_audit_20260901/AUDIT_REPORT_4E85.md)
 - [Blocked exact-unifilar SC census audit](research/unifilar_wfa_entropy_census_stage0_v1_independent_audit/AUDIT_REPORT.md)
 - [Blocked raw-label copula census audit](research/label_copula_census_stage0_v0_independent_audit/AUDIT_REPORT.md)

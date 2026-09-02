@@ -376,11 +376,24 @@ closed before consumption, marker content is not rehashed after linking,
 inner candidate/held-out selection omits literal 64-byte/4-KiB layout costs,
 telemetry is not semantically joined to the claimed workload/canonical device
 IDs, and Student-t uncertainty treats overlapping owner folds as iid.  V7 is a
-narrow repair of those issues, not a new source model.
+narrow repair of those issues, not a new source model.  Its independent audit
+passes those five gates but finds one remaining physical-score defect: the
+outer comparison gives the baseline the selected candidate model and then
+subtracts the raw model bytes, rather than comparing the literal current
+format with no UWFA model against the literal candidate with one aligned model.
+
+UWFA-SC v8 repairs that final defect.  The independent v8 audit is
+**PASS_SOURCE_FREEZE** after 68 source tests (67 pass plus one intentional
+pre-manifest skip), a source-free RTX 5090 replay, and exact literal-container
+regressions.  A real 1,602-byte model that the retired proxy made appear 398
+bits favorable is correctly measured as a 4,096-byte loss after alignment.
+This is source eligibility only: no manifest/freeze authority was created and
+no Qwen, model, current-artifact, or production payload was opened.
 
 ### Gate 1: joint entropy and posterior census on the current artifact
 
-After UWFA-SC v3 is frozen, replay its authenticated causal decisions and add
+After the independently passed UWFA-SC v8 source is separately manifested and
+frozen, replay authenticated causal decisions from the current artifact and add
 a separately frozen continuous diagnostic.  For each candidate state model,
 report:
 
@@ -589,8 +602,17 @@ a compression gain.
   RTX 5090 replay, but its independent audit is **BLOCK_SOURCE_FREEZE** on
   verified-byte lifetime, post-link marker content, literal inner aligned-rate
   selection, workload-bound telemetry/canonical IDs, and dependency-invalid
-  owner-fold confidence.  V7 is repairing those five gates.  No Qwen or
-  current-codec object has been opened by v4-v7.
+  owner-fold confidence.  V7 repairs those five gates but is independently
+  **BLOCK_SOURCE_FREEZE** on its outer physical comparator: it cancels the
+  selected model and subtracts raw model bytes instead of charging the aligned
+  candidate container against the zero-UWFA current format.
+- UWFA-SC v8 repairs v7's sole remaining blocker and independently passes the
+  source-free freeze gate.  Its exact comparator charges the serialized model
+  once at its literal aligned placement; a 1,602-byte boundary fixture reverses
+  the retired proxy's apparent 398-bit win into the correct 4,096-byte loss.
+  All six source gates and one source-free RTX 5090 replay pass.  This is not a
+  Qwen result: no manifest/freeze authorization or production payload was
+  created or opened.
 - SILT v1 is independently blocked on routed-read authentication, durable
   publication, and universal-capacity issues.  It has no Qwen payload or
   source-gain result.

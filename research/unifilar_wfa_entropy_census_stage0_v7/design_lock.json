@@ -1,0 +1,123 @@
+{
+  "schema": "unifilar-wfa-entropy-census-design-v7",
+  "status": "PRE_REVIEW_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "design_date": "2026-09-02",
+  "objective": {
+    "standalone_exact_physical_saving_required_bpw": 0.15288996696291447,
+    "target_F_maximum": 0.8,
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "cold_read_amplification_exclusive_maximum": 2.0,
+    "authoritative_rate": "8*literal_container_bytes/shape_derived_weights",
+    "authoritative_F": "independently audited identical-reconstruction relative MSE*2^(2*authoritative_rate)"
+  },
+  "universal_semantics": {
+    "expert_count_range_inclusive": [1, 256],
+    "owner_set_abi": "fixed 32-byte little-endian canonical bitset; bits >= expert_count must be zero; nonempty",
+    "shape": "one charged positive (hidden,intermediate) pair per expert, arbitrary within checked bounds",
+    "roles": ["gate", "up", "down"],
+    "coverage": "every scalar interval of every role of every expert exactly once; no hole, overlap, empty expert, duplicate stream, or missing stream",
+    "generic_adapter": "charged semantic packet plus causal public-context and reconstruction callbacks",
+    "evaluation_plugin": "fixed STRATA15 adapter is explicitly non-universal and cannot widen the core claim",
+    "production_grouping": "adapter emits owner sets and exact per-owner per-role source intervals; common streams are stored once and fractional charging is ledger-only"
+  },
+  "candidate_bank": {
+    "topologies": ["suffix", "xor_sketch", "modular_ones", "rolling_affine", "signed_saturating"],
+    "state_sizes": [2, 4, 8, 16, 32, 64],
+    "reset_lengths": [32, 128, 512, 2048, 4096],
+    "cells": 150,
+    "selector_bytes": 2,
+    "fit": "exact uint64 counts; Jeffreys half-count; integer nearest Q0.16 rounding; clamp 1..65535",
+    "reset_law": "reset before t=0 lookup; encode/decode symbol; transition afterward",
+    "forbidden_probability_keys": ["model identity", "checkpoint identity", "layer identity", "expert identity", "stream identity", "absolute source site", "future symbol", "source weight"]
+  },
+  "container": {
+    "magic": "UWFCV7\\u0000\\u0000",
+    "version": 4,
+    "endianness": "little",
+    "global_header_bytes": 4096,
+    "page_bytes": 4096,
+    "directory_record_bytes": 256,
+    "region_header_bytes": 256,
+    "frame_header_bytes": 256,
+    "owner_set_bytes": 32,
+    "rate_floor_rational": [43, 20],
+    "sections": ["header", "charged universal semantic packet", "immutable extension", "serialized Q0.16 model", "directory", "canonical owner regions", "explicit alignment and rate padding"],
+    "parser": "bounds every integer/product/sum before loop, shift, allocation, or GPU conversion; rejects unknown/reserved/trailing/tampered/noncanonical data",
+    "standalone": "deserialize transmitted model and reconstruct/re-encode from literal container plus universal decoder only",
+    "canonical_rebuild": "integer-described and byte-identical; never infers a rate floor from floating bpw"
+  },
+  "cold_read": {
+    "proof": "fresh per-expert decoder using instrumented seek/read API after a separately reported installation authentication scan; causally decode/re-encode every owned payload and reconstruct all three matrices with no full-body/unowned-frame prepass",
+    "owner_denominator": "sum of exact bytes of private regions plus exact fair share of every shared/global region owned by that expert",
+    "nonpadding_denominator": "same owner-local allocation excluding literal padding",
+    "numerator": "exact union of 4096-byte pages touched by routed reads",
+    "modeled_symbol_density_receipt": "explicit unique directory modeled symbols, shape-derived source weights, exact symbols/weight density, routed symbol/weight totals, and shared-stream symbol reuse",
+    "repeated_io_receipt": "explicit per-expert plus aggregate read-request counts, requested bytes with repetition, unique requested bytes, repeated-overlap bytes, and unique touched-page bytes; installation authentication is reported separately",
+    "gate": "maximum over experts and over total/nonpadding owner-local denominators is strictly below 2",
+    "gate_metric_immutability": "the frozen gate uses unique touched 4096-byte page bytes only; repeated requested bytes and symbol density are diagnostics and do not alter promotion",
+    "forbidden_shortcut": "total container bytes divided by expert count"
+  },
+  "scientific_holdout": {
+    "outer": "connected components of the exact stream-owner bipartite graph are the disjoint primary estimand units; at least two are required; unestimable legal panels return typed HOLD before fit; coordinate-disjoint folds are a nonpromoting diagnostic only",
+    "selection": "all 150 cells on every outer fold measured by the serializer-shared exact literal grammar including model, directory, framing, 64-byte/4KiB alignment and frozen padding, with deterministic ordinal tie",
+    "outer_score": "refit winner on complete development and score untouched outer streams",
+    "weights": "exact per-owner semantic contribution counts, never weight_count/popcount",
+    "confidence": "no iid interval; leave-one-disjoint-component-out values are diagnostic only",
+    "heldout_gate": "pooled literal saving meets 0.15288996696291447 bpw and every disjoint dependence component is strictly positive"
+  },
+  "gaussian_controls": {
+    "count": 8,
+    "opening_gate": "all source physical, F, cold, reconstruction, provenance, and heldout gates pass first",
+    "symmetry": "each control repeats extraction, all-150 nested selection, refit, literal packing, parse, standalone decode, and scoring",
+    "bindings": "the source artifact digest is derived from authenticated source state and must equal the caller digest; source and control full geometry bind independently to their own artifact/score/reconstruction; only structural geometry is equal across sources; every control exactly reproduces the source baseline-plan, decoder, producer-manifest, external-bootstrap, extraction-program, universal-adapter, source-snapshot, source-free-preflight and pipeline closure; all seeds, generators, moment replays and closures bind before any numeric fit",
+    "controls_can_rescue_source_failure": false
+  },
+  "telemetry": {
+    "h2d": ["payload", "root descriptors", "subset descriptors", "fresh launch offset/length descriptors", "model frequency table on every copy", "kernel scalar arguments"],
+    "d2h": "reported separately for every explicit output transfer",
+    "peaks": ["process-tree RSS", "process HWM", "incremental free-VRAM delta", "CuPy default pool used/total", "pinned-pool free blocks"],
+    "execution": ["exact fixture-derived kernel/pack/subset/to-host counts", "exact count and length symbol-updates", "exact H2D/D2H transfer categories", "JIT time", "synchronized kernel wall time", "fatal telemetry sampling", "canonical nonempty device UUID and PCI bus id matched exactly to independent identity"],
+    "resource_admission": "static declared-cap proof plus measured current RSS/free-VRAM gate before host concatenation or CuPy allocation",
+    "source_preflight_validation": "all-150 is exact ordered unique selector 0..149 with full canonical candidate, per-cell count/result/logical-length metadata and hashes, deterministic fixture and aggregate seals; representative binds exact fixture/split, all candidates, winner, fit/model/container/rebuild/decision hashes and lengths, resource plan, runtime projection, GPU identity and measured telemetry; duplicate or sparse honestly resealed receipts reject",
+    "representative_benchmark": "source-free 15-stream/6-owner complete outer fold with all-150 selection/refit and transparent 13-pipeline full-scale projection",
+    "final_evidence": "must be rerun from the exact public Git commit on RTX 5090 after freeze; development direct copies are non-authoritative"
+  },
+  "diagnostic_handoff": {
+    "schema": "uwfa-sc-v7-posterior-diagnostic-handoff",
+    "binding": "literal container, source artifact/score/full+structural geometry, extraction/decoder/adapter sources, semantic and immutable context state, serialized model, full FP64 reconstruction, and per-stream decoded selected-bit/level/base-u16le triplet commitments",
+    "consumption": "a separately frozen diagnostic must causally re-decode the authenticated literal container and reproduce the decision commitment",
+    "posterior_or_mmse_implemented": false,
+    "payload_authority_granted": false
+  },
+  "trust_and_lifecycle": {
+    "direct_producer_launch": "always inert before argument or dynamic input access",
+    "authority": "independently pinned external bootstrap authenticates manifest, review, entrypoint, and every exact source byte and executes held snapshots under python -I -B",
+    "path_safety": "reject symlink leaf and every ancestor; retain authenticated input, output-parent, staging-directory, commit-marker and member file descriptors through bounded consumer lifetime; re-enumerate/no-follow reopen/fstat/rehash exact staging members before COMPLETE, before rename, after rename and after marker link; require the final name to retain the staging inode; COMPLETE alone is never publication authority",
+    "parent_commit_marker": "canonical parent marker commits expected source root, parent/final/marker inodes, exact UTF-8-sorted members including COMPLETE, and domain-separated directory root; atomically link the exact held marker fd through AT_EMPTY_PATH or /proc/self/fd, never a mutable anchor path; after anchor cleanup require nlink one and reread/rehash held bytes; independent consumption uses only verified-bundle held/buffered bytes",
+    "continuous_parent_writer_boundary": "substitution is detected, not made immutable against an adversary retaining the same parent-directory write privilege; stronger protection requires verifier-owned parent, privilege separation, signature, or fs-verity",
+    "producer_can_self_promote": false,
+    "manifest_state": "must remain absent until independent postimplementation review authorizes freeze"
+  },
+  "post_freeze_requirements": [
+    "EXTERNAL_PINNED_V7_SOURCE_AUDIT",
+    "EXTERNAL_PINNED_DISPATCHER_AUDIT",
+    "PUBLIC_GITHUB_COMMIT_FRESH_RTX5090_ALL150_AND_REPRESENTATIVE_REPLAY",
+    "FRESH_PROCESS_INDEPENDENT_RESULT_AUDIT",
+    "NO_PAYLOAD_BEFORE_EXTERNAL_AUTHORITY"
+  ],
+  "claim_boundary": {
+    "source_only": "producer tests establish format/arithmetic/coverage/telemetry contracts on synthetic bytes only",
+    "payload_performance": "not measured or authorized by this tree",
+    "universality": "portable codec grammar and adapter protocol for SwiGLU-MoE; no universal performance claim from one family",
+    "negative_result": "closes only this exact sparse-unifilar recoder, not arbitrary WFA/MPS/MERA/flow/RCC/Gray-Wyner or another quantizer"
+  },
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_or_selected_stream_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "numpy_directly_imported_by_builder": false,
+    "source_free_cupy_development_run_launched_by_builder": true,
+    "source_free_cuda_development_run_launched_by_builder": true,
+    "development_run_is_claim_evidence": false
+  }
+}

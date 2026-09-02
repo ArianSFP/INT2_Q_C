@@ -1,0 +1,34 @@
+{
+  "commit_marker_device": 66307,
+  "commit_marker_inode": 10773449683,
+  "completion_sha256": "6fa3fca867787836940a07aa4a9e677a439ed84135d08433206c61befbf63e1b",
+  "directory_root_sha256": "504d1b429346d20c6f22808e8fa5f2dd67590de5686fdc2123fc13286f35fdf9",
+  "final_directory_device": 66307,
+  "final_directory_inode": 12902063750,
+  "final_name": "gpu-receipt",
+  "members": [
+    {
+      "bytes": 586,
+      "name": "COMPLETE.json",
+      "sha256": "6adcd9056a42d55511dcb4906758e7f43702c2afcdd35c4e70ac6df7fa6a41a5"
+    },
+    {
+      "bytes": 1669504,
+      "name": "GPU_DEV_RECEIPT.json",
+      "sha256": "e3302b8eed9b49d9f2e0d2e82cfc65b620d5c471856c72e4acbd888711f410a2"
+    },
+    {
+      "bytes": 225,
+      "name": "RUN_STATE.json",
+      "sha256": "95044d70ae6fb5db83486d67a4187d6a3e271c31b505ee1acc54674047ed4996"
+    }
+  ],
+  "output_parent_authority_sha256": "334ed49d9cfa3d2772235af3e9da5575b805e494cc41df303c12ca6648982df4",
+  "parent_commit_sha256": "81618051250a9bd1e6b9a3d3c5bda3af3f312beecb72375487009e490d47cd1b",
+  "parent_device": 66307,
+  "parent_inode": 10773449682,
+  "schema": "unifilar-wfa-parent-commit-v7",
+  "source_manifest_sha256": "334ed49d9cfa3d2772235af3e9da5575b805e494cc41df303c12ca6648982df4",
+  "status": "PARENT_MARKER_COMMITTED",
+  "transaction_id": "42424242424242424242424242424242"
+}
