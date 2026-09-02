@@ -1,0 +1,69 @@
+{
+  "schema": "uwfa-sc-v8-external-dispatcher-source-manifest-v2",
+  "status": "SOURCE_ONLY_REVIEW_CANDIDATE_NO_PAYLOAD_AUTHORITY",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 13343,
+      "sha256": "546dda01f8ba54d246cd7b3030592e544fbdf4f98a481a8595cd67c1e0a48bd3"
+    },
+    {
+      "name": "bootstrap.py",
+      "bytes": 149680,
+      "sha256": "c2f849eadb2e4edc9d50f9fd456fb8cbe741e6e24fdbee7b5165d1fa5a742e2f"
+    },
+    {
+      "name": "decoder_bundle.json",
+      "bytes": 2129,
+      "sha256": "fc0116b46b4d670e03231e1c5eb89456b5db955c00353d256c6ae57b513b33db"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 4891,
+      "sha256": "b0ec9aa932940b0e7e71562bb51d9fab9fba64a8ef451aefc89c50a9dc24ffea"
+    },
+    {
+      "name": "runtime_lock.json",
+      "bytes": 1828,
+      "sha256": "6e533061aa4a531530760d39fd92a6e464db21b6030bade2aeb62f0a0e38738d"
+    },
+    {
+      "name": "strata_ordinal_bridge.py",
+      "bytes": 4791,
+      "sha256": "a01b443cbae74c7a7cb0768fe186046de5d65351b5a6fae279fb32abeb7da99d"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 44595,
+      "sha256": "92bc70ffe4916b88b8ab770fe583ef36023bcb2770ebcead9c91ecffafa4c0d1"
+    },
+    {
+      "name": "verify_output.py",
+      "bytes": 17973,
+      "sha256": "78f967694099803c30fe95af66975e87e615cd3f5fdb403d7278f3a54534520f"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 13546,
+      "sha256": "0a8f5108f8ad6466e79921d61374bd4023bdc9b8831a4cab85c2ad5524195027"
+    }
+  ],
+  "access_attestation": {
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "runpod_payload_execution_by_builder": false,
+    "source_free_tests_are_payload_claim_evidence": false
+  },
+  "remaining_authority_gates": [
+    "EXTERNAL_PINNED_DISPATCHER_AUDIT",
+    "EXTERNAL_EXACT_REQUEST_AND_REVIEW_INPUT_PINS",
+    "SEALED_EXHAUSTIVE_RUNTIME_TREE",
+    "PROCESS_START_IMPORT_NATIVE_EVENT_LEDGER_CLOSURE",
+    "SEALED_AUTHENTICATED_DECODER_CLOSURE",
+    "PUBLIC_COMMIT_FRESH_RTX5090_TYPED_PREFLIGHT",
+    "FRESH_PROCESS_INDEPENDENT_RESULT_AUDIT",
+    "NO_PAYLOAD_BEFORE_ALL_EXTERNAL_AUTHORITY",
+    "PRIMARY_POSIX_SOURCE_TESTS_BEFORE_FINAL_SEAL"
+  ]
+}

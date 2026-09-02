@@ -1,0 +1,56 @@
+{
+  "schema": "uwfa-sc-v8-external-decoder-bundle-v2",
+  "status": "BLOCKED_UNTIL_RUNPOD_PATHS_BYTES_AND_BUNDLE_PIN_ARE_REVIEWED",
+  "members": [
+    {
+      "bytes": 14320,
+      "kind": "external_python_snapshot",
+      "logical_name": "strata_format_common",
+      "module_name": "uwfa_v8_external_strata_common",
+      "path": "/workspace/INT2__compression/strata_expert_local_codec/common.py",
+      "sha256": "3f085c9531b714d0d7877388f54ae50495dc3ea631491563abceb4db55608fd1"
+    },
+    {
+      "bytes": 116835,
+      "kind": "external_python_snapshot",
+      "logical_name": "independent_strata_decoder",
+      "module_name": "uwfa_v8_external_strata_auditor",
+      "path": "/workspace/INT2__compression/strata_v2_klt_mixed_independent_auditor_v1.py",
+      "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+    },
+    {
+      "kind": "producer_python_snapshot",
+      "logical_name": "fixed_strata_sc_adapter",
+      "member_name": "strata_sc_adapter.py",
+      "sha256": "08fc8808ac168f6930ee9482e160f25f2bd087829fca4630553aea3510d722c6"
+    },
+    {
+      "kind": "producer_python_snapshot",
+      "logical_name": "universal_semantic_adapter",
+      "member_name": "universal_adapter.py",
+      "sha256": "a5ab2e1919af98c2aa9b3032faa0ba5552efe05cca250bd6844fd48c76aabbc8"
+    },
+    {
+      "kind": "dispatcher_python_snapshot",
+      "logical_name": "numpy_strata_ordinal_bridge",
+      "module_name": "uwfa_v8_numpy_strata_ordinal_bridge",
+      "member_name": "strata_ordinal_bridge.py",
+      "sha256": "a01b443cbae74c7a7cb0768fe186046de5d65351b5a6fae279fb32abeb7da99d",
+      "bridge_abi_sha256": "63684f7c5330929c01dd4942db269bf44ebc9bb11e5ad9b61d74ea70c4ec2e99"
+    }
+  ],
+  "logical_to_producer_member": {
+    "fixed_strata_sc_adapter": "strata_sc_adapter.py",
+    "universal_semantic_adapter": "universal_adapter.py"
+  },
+  "forbidden_side_channels": [
+    "selected_bits",
+    "levels",
+    "base_frequencies",
+    "owners",
+    "shapes",
+    "reconstruction_arrays",
+    "score_arrays"
+  ],
+  "universal_decoder_sha256": "__UNRESOLVED_CANONICAL_DECODER_BUNDLE_V2_ROOT_SHA256__"
+}

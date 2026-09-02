@@ -1,0 +1,56 @@
+{
+  "schema": "uwfa-sc-v8-external-runtime-lock-v2",
+  "status": "BLOCKED_UNTIL_EXHAUSTIVE_RUNTIME_TREE_MANIFEST_IS_PINNED",
+  "python": {
+    "implementation": "CPython",
+    "executable": "/usr/bin/python3.12",
+    "executable_bytes": 0,
+    "executable_sha256": "__UNRESOLVED_INTERPRETER_SHA256__",
+    "version": "3.12.3"
+  },
+  "site_packages": "/workspace/int2-cupy-venv/lib/python3.12/site-packages",
+  "python_import_roots": [
+    "/workspace/int2-cupy-venv/lib/python3.12/site-packages",
+    "/usr/lib/python3.12"
+  ],
+  "runtime_tree_manifest": {
+    "bytes": 0,
+    "path": "/absolute/unresolved/uwfa-v8-runtime-tree-manifest.json",
+    "sha256": "__UNRESOLVED_RUNTIME_TREE_MANIFEST_SHA256__"
+  },
+  "required_distributions": {
+    "cuda-pathfinder": "1.8.0",
+    "cupy-cuda12x": "14.2.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1"
+  },
+  "cuda": {
+    "cupy_runtime": 12090,
+    "driver_api": 13000,
+    "nvidia_driver": "580.126.09"
+  },
+  "gpu": {
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "device_uuid": "GPU-c06e0fe0-9836-2f98-8f10-0514d085f722",
+    "pci_bus_id": "00000000:16:00.0"
+  },
+  "required_runtime_roles": [
+    "python_interpreter",
+    "numpy_distribution",
+    "cupy_distribution",
+    "scipy_distribution",
+    "cuda_pathfinder_distribution",
+    "native_loader_auditor",
+    "nvidia_smi",
+    "native_dependency"
+  ],
+  "image_closure_policy": "HELD_BYTES_META_PATH_PLUS_PROCESS_START_RTLD_AUDIT_LOAD_UNLOAD_LEDGER_AND_FINAL_DESCRIPTOR_NAME_EVENT_CLOSURE",
+  "native_load_enforcement": {
+    "mechanism": "LINUX_RTLD_AUDIT_APPEND_ONLY_NONBLOCKING_PIPE_V1",
+    "event_schema": "uwfa-native-loader-event-v1",
+    "auditor_role": "native_loader_auditor",
+    "active_from_process_start": true,
+    "records_load_and_unload": true,
+    "ready_binds_held_auditor_identity_hash": true
+  }
+}

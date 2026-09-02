@@ -1,0 +1,104 @@
+{
+  "schema": "uwfa-sc-v8-external-dispatcher-design-v2",
+  "status": "SOURCE_ONLY_REVIEW_CANDIDATE_NO_PAYLOAD_AUTHORITY",
+  "claim_boundary": "No Qwen/control path may be accessed until every embedded authority pin and the fresh typed GPU preflight pass; no final performance PASS is emitted without an external result audit.",
+  "embedded_authority_pins": {
+    "producer_source_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+    "producer_final_review_sha256": "57e19b93f9f771381945a42060e9b15b71962f8af4b7800fd71be0c1949c2cce",
+    "producer_public_git_commit": "d563c4ac1e78a6b6e7f0722291211d1209f775af",
+    "runtime_lock_sha256": "__UNRESOLVED_RUNTIME_LOCK_SHA256__",
+    "decoder_bundle_sha256": "__UNRESOLVED_DECODER_BUNDLE_SHA256__"
+  },
+  "external_launcher_authority": {
+    "status": "UNRESOLVED_OUT_OF_TREE_BY_DESIGN",
+    "reason": "A dispatcher cannot embed the digest of the audit that reviews its own bytes without a circular mutation. A separately reviewed launcher must pin dispatcher manifest, audit, and commit; the human command or held FD is the ultimate trust anchor.",
+    "typed_abi": "ExternalLaunchAuthority",
+    "exact_external_pins": [
+      "request_sha256",
+      "baseline_plan_sha256",
+      "legacy_independent_audit_sha256",
+      "original_source_binding_sha256"
+    ],
+    "typed_native_audit_capability": [
+      "native_audit_event_fd",
+      "native_audit_session_nonce"
+    ]
+  },
+  "frozen_protocol": {
+    "python_launch": "CPython -I -B",
+    "producer_schema": "unifilar-wfa-source-manifest-v8",
+    "producer_review_schema": "unifilar-wfa-entropy-census-independent-source-review-v8",
+    "dispatcher_review_schema": "uwfa-sc-v8-external-dispatcher-independent-review-v1",
+    "source_request_schema": "uwfa-sc-v8-external-source-phase-request-v1",
+    "source_result_schema": "uwfa-sc-v8-external-source-phase-publication-v1",
+    "fresh_preflight_before_request_path_access": true,
+    "compile_authenticated_snapshots_only": true,
+    "preloaded_snapshot_modules_rejected": true,
+    "preloaded_numeric_modules_rejected_before_enforcement": true,
+    "ambient_meta_path_and_path_hooks_rejected": true,
+    "python_source_and_code_execute_only_from_held_manifest_bytes": true,
+    "module_object_provenance_bound_to_held_identity_and_hash": true,
+    "process_start_native_load_unload_auditor_required": true,
+    "append_only_complete_import_native_event_ledger": true,
+    "final_descriptor_name_module_and_event_closure": true,
+    "controls_accessible_in_source_phase": false,
+    "cold_unique_page_amplification_strictly_below": 2,
+    "repeated_request_amplification_strictly_below": 2,
+    "coalesced_request_amplification_strictly_below": 2,
+    "completion_last_parent_marker_required": true
+  },
+  "v1_repairs": {
+    "production_pins_constructed_only_inside_dispatch": true,
+    "numpy_scalar_strata_ordinal_bridge_manifest_bound": true,
+    "logical_to_producer_member_map_exact_and_injective": true,
+    "runtime_site_tree_and_loaded_python_native_images_exhaustive": true,
+    "baseline_plan_parsed_sealed_and_cross_bound": true,
+    "literal_container_framing_derives_bandwidth_denominators": true,
+    "final_descriptor_name_inode_byte_rebinding": true,
+    "authority_request_output_inode_aliasing_rejected": true
+  },
+  "v2_repairs": {
+    "authenticated_import_enforcement_active_before_numeric_import_and_preflight": true,
+    "ambient_import_hooks_and_preloaded_numeric_modules_fail_closed": true,
+    "path_substitution_cannot_change_executed_held_bytes": true,
+    "transient_native_load_unload_events_cannot_evade_final_snapshots": true,
+    "sys_modules_removal_or_replacement_is_ledgered_and_rejected": true,
+    "strata_ordinal_rows_are_list_of_lists_for_one_axis_numpy_advanced_indexing": true
+  },
+  "producer_members": [
+    "INDEPENDENT_BOOTSTRAP_ABI.md",
+    "README.md",
+    "container_codec.py",
+    "cupy_backend.py",
+    "design_lock.json",
+    "dispatcher_contract.py",
+    "fixture_long_memory.py",
+    "fixture_portability.py",
+    "protocol.py",
+    "result_envelope.py",
+    "run_source_free_gpu_dev.py",
+    "stage0_census.py",
+    "strata_sc_adapter.py",
+    "test_source_only.py",
+    "universal_adapter.py",
+    "uwfa_common.py",
+    "verify_source.py"
+  ],
+  "snapshot_dependency_order": [
+    "uwfa_common.py",
+    "protocol.py",
+    "universal_adapter.py",
+    "container_codec.py",
+    "stage0_census.py",
+    "cupy_backend.py",
+    "result_envelope.py",
+    "strata_sc_adapter.py"
+  ],
+  "source_only_access_attestation": {
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "current_finite_artifact_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "runpod_payload_execution_by_builder": false,
+    "source_free_tests_are_payload_claim_evidence": false
+  }
+}
