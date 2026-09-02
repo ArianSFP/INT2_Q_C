@@ -1,0 +1,53 @@
+{
+  "schema": "uwfa-sc-v8-qwen-early-gate-design-v0",
+  "status": "SOURCE_ONLY_EARLY_KILL_NO_PAYLOAD_ACCESSED_DURING_BUILD",
+  "sealed_v8_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+  "fixed_inputs": {
+    "artifact_bytes": 8847360,
+    "artifact_sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b",
+    "weights": 28311552,
+    "relative_mse": 0.030902167403153148,
+    "sse_fp64": 500.39553685426534,
+    "source_energy_fp64": 16192.89450885593,
+    "baseline_plan_sha256": "8017582201468300dd07550a1a2f8d90dc704ffae7ae6d8801a560178e4a1868",
+    "strata_common_sha256": "3f085c9531b714d0d7877388f54ae50495dc3ea631491563abceb4db55608fd1",
+    "frozen_auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+  },
+  "execution_order": [
+    "authenticate exact sealed v8 source manifest and all members",
+    "import NumPy and CuPy and authenticate external STRATA decoder sources",
+    "run exact all-150 CPU/CuPy source-free gate",
+    "run exact representative nested source-free outer fold and bind independent GPU identity",
+    "only then open the exact pinned Qwen artifact through a retained no-follow descriptor",
+    "recompute panel geometry and full reconstruction identity",
+    "construct and validate the exact v8 baseline-score receipt",
+    "run unchanged v8 source_phase, nested_holdout, final_container and physical_metrics",
+    "publish diagnostic outputs with COMPLETE last"
+  ],
+  "required_outputs": [
+    "physical bytes, rate and F",
+    "per-dependence-component literal saving and selected winner",
+    "descriptor-backed unique-page bandwidth ratio",
+    "requested-with-repetition and ideal-coalesced byte ratios",
+    "standalone and routed causal decode/re-encode identities",
+    "CuPy/CUDA telemetry",
+    "source, module, decoder-bundle and pipeline hashes"
+  ],
+  "controls": "never opened or run",
+  "exploratory_semantic_bridge": {
+    "operation": "value-and-order-preserving built-in int conversion of NumPy integer group ordinals returned by pinned STRATA expected_block_group_ordinals",
+    "reason": "sealed v8 adapter requires exact Python int and otherwise fails before the scientific source phase",
+    "bound_into_decoder_bundle": true,
+    "production_authority": false,
+    "required_production_followup": "freshly reviewed sealed producer revision"
+  },
+  "promotion": false,
+  "binding_authority": "The sealed v8 manifest and member hashes are exact. The exploratory runner locally constructs the score-receipt, decoder-bundle, audit-bootstrap and pipeline bindings; they are disclosed diagnostics and are not an externally pinned production-dispatcher receipt.",
+  "claim_boundary": "A negative result may early-kill this exact v8 recoder. A survivor is not a compression claim and still requires controls, external dispatcher authority and a fresh independent result audit.",
+  "build_access_attestation": {
+    "qwen_artifact_opened_statted_hashed_or_enumerated": false,
+    "qwen_bf16_source_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "cuda_launched_during_builder_edit": false
+  }
+}
