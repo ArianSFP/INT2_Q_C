@@ -1,0 +1,25 @@
+{
+  "schema": "tactic-actual-coarse-n18-v6-result-auditor-source-manifest-v1",
+  "status": "SEALED_POST_FAILURE_SCHEMA_REPAIR_AWAITING_RERUN",
+  "source_snapshot_root_sha256": "59387c67a18bb776cca820e658be998d75f9c3c1a9b7ef5c809e692f78a50742",
+  "members": [
+    {"name": "PRIOR_FAILURE_RECORD.json", "bytes": 3527, "sha256": "7afbb019f93c405bef723a895179679acec40852d13e8ba5aa7b49861544740f"},
+    {"name": "README.md", "bytes": 4594, "sha256": "e078151316eb44afd8702bd41b670e39801975a5bcd94e88cc814211abb47f47"},
+    {"name": "UNRESOLVED_EXTERNAL_PINS.json", "bytes": 2140, "sha256": "04f87e872ecc76822a5bd7da834d36fe8c52470df7529179225e13cdfc58e415"},
+    {"name": "audit_core.py", "bytes": 38222, "sha256": "17b5493fad6267b7b35a141581c037f70478beae31e0d9950e7f12cda4a04506"},
+    {"name": "design_lock.json", "bytes": 2589, "sha256": "26a444b7bb24c4df61cab94220789ecabaa5e9aa6dbdf583c40db08e04995089"},
+    {"name": "result_auditor.py", "bytes": 39551, "sha256": "315281208f08f0f516336410194c1e7fb430df90e5aafb4301c7c096298acdd5"},
+    {"name": "test_source_only.py", "bytes": 14430, "sha256": "39d0e9c997a4fdcfc7a4fa04a015cfe65110f5c0550ae8b07834ad6911e63fdc"},
+    {"name": "verify_source.py", "bytes": 6150, "sha256": "f33acdfba2b24bd0a1831609c540acc18f2c9fd42e7bbbade9e075a6ff06b597"}
+  ],
+  "access_attestation": {
+    "completed_v6_result_accessed": true,
+    "cuda_or_cupy_initialized": false,
+    "network_accessed": true,
+    "numerical_result_metadata_accessed": true,
+    "qwen_or_model_payload_accessed": false,
+    "runpod_access_scope": "post-failure diagnosis opened the failed log plus RESULT/DECODER_RECEIPT score metadata; no COARSE.bin or BF16 payload was opened while repairing and freezing v1",
+    "runpod_accessed": true
+  },
+  "claim_boundary": "post-failure source-only schema repair and hostile tests; no independent Qwen result pass, final TACTIC, universal-tail, universal-SwiGLU-MoE, or below-2x inference-HBM claim"
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "tactic-actual-coarse-n18-v6-result-auditor-prior-failure-record-v1",
+  "status": "PRESERVED_FAIL_CLOSED_EVIDENCE",
+  "runpod": "root@74.2.96.53:12079",
+  "attempts": [
+    {
+      "attempt": "v0-d5ab1b",
+      "terminal_error": "FAIL_TACTIC_ACTUAL_COARSE_N18_V6_RESULT_AUDIT: AuditError: decoder canonical repo binding",
+      "exit_code": 1,
+      "failure_class": "external_pin_canonical_path_error",
+      "files": [
+        {
+          "path": "/tmp/tactic_v6_result_audit_d5ab1b.log",
+          "bytes": 90,
+          "sha256": "4717d7b04a2c06427e9115c5fd54fefafe49aae62cb0f7463b4885f859706630"
+        },
+        {
+          "path": "/tmp/tactic_v6_result_audit_d5ab1b.exit",
+          "bytes": 2,
+          "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "path": "/tmp/tactic_v6_result_audit_launcher_d5ab1b.sh",
+          "bytes": 666,
+          "sha256": "35f3035885e6b6eb93aa242cdade179324f8bf29e4fa90de40d970f537dd9cfd"
+        },
+        {
+          "path": "/tmp/tactic_coarse_v6_external_pins_fe4fd2b8_d5ab1b.json",
+          "bytes": 3701,
+          "sha256": "d5ab1be800db28ef1b93658948f1571bf01268d848bef2e1e86e266d36d06556"
+        }
+      ]
+    },
+    {
+      "attempt": "v0-c19e0b",
+      "terminal_error": "FAIL_TACTIC_ACTUAL_COARSE_N18_V6_RESULT_AUDIT: AuditError: decoder original score: mapping fields",
+      "exit_code": 1,
+      "failure_class": "auditor_expected_score_schema_omission",
+      "files": [
+        {
+          "path": "/tmp/tactic_v6_result_audit_c19e0b.log",
+          "bytes": 98,
+          "sha256": "f4392af2075a3a4429988678f9a0abd96b52a7efb359cd8173854856297599f1"
+        },
+        {
+          "path": "/tmp/tactic_v6_result_audit_c19e0b.exit",
+          "bytes": 2,
+          "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "path": "/tmp/tactic_v6_result_audit_launcher_c19e0b.sh",
+          "bytes": 666,
+          "sha256": "060c5a36eb33d5b6b053482583277aa50c3cad82d9ebeced7178fe19713e79e4"
+        },
+        {
+          "path": "/tmp/tactic_coarse_v6_external_pins_fe4fd2b8_c19e0b.json",
+          "bytes": 3720,
+          "sha256": "c19e0b00c83e4c2ad49cc23244475a0e23a6c7701475d4ce1d462d1b557b3bfe"
+        }
+      ]
+    }
+  ],
+  "external_pin_correction": {
+    "only_changed_field": "paths.frozen_decoder_core",
+    "before": "/workspace/INT2__compression/strata_v2_klt_mixed_independent_auditor_v1.py",
+    "after": "/tmp/tactic_actual_coarse_n18_v6_runtime_316625/strata_v2_klt_mixed_independent_auditor_v1.py",
+    "before_bundle_sha256": "d5ab1be800db28ef1b93658948f1571bf01268d848bef2e1e86e266d36d06556",
+    "after_bundle_sha256": "c19e0b00c83e4c2ad49cc23244475a0e23a6c7701475d4ce1d462d1b557b3bfe",
+    "reason": "the auditor requires the separately pinned decoder to reside in the authenticated runtime-local repository root used by the v6 package"
+  },
+  "v1_repair": {
+    "producer_artifacts_mutated": false,
+    "external_pins_mutated_after_c19e0b": false,
+    "numerical_algorithm_changed": false,
+    "expected_score_mapping_change": "require scorer_uses_exact_encoder_input_bytes to be present and exactly true",
+    "blindness": "post-failure schema repair; RESULT and DECODER_RECEIPT score metadata were observed",
+    "payload_access_during_repair": "no COARSE.bin or BF16 source bytes opened"
+  },
+  "claim_boundary": "failure-evidence hashes and schema diagnosis only; no audit pass or numerical-result authority"
+}
