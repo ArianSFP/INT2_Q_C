@@ -125,6 +125,15 @@ The current 2.5-bpw packet has no metadata slack.  Every graph table, model,
 latent, offset, termination state and alignment page must replace payload
 bytes.  A small model can cost a complete 4 KiB page.
 
+One exception is decoder-fixed redundancy: the proposed selector table, empty
+QC region and seed fixtures are deterministic from the algorithm version.  A
+lean deployment format can omit their 20,480 bytes, reaching
+`R=2.49421296296296`.  The unconditional same-MSE `F` multiplier is
+`0.99200955785219`; applying it to the audited STRATA baseline gives a
+favourable planning transfer `F=0.980967853512842`, not an executed CAGE
+result.  This modest byte budget may instead fund a charged posterior model,
+but it is not close to the target.
+
 The frozen TACTIC planning layout reads six global pages and 359 expert pages
 against a 360-page owner share, giving `73/72` for one pass.  Reading the
 expert frame twice gives
@@ -175,10 +184,12 @@ and `F <= 0.8`.
 
 ## Universality boundary
 
-The codec may use only the literal packet, public shape, Gate/Up/Down role and
-fixed algorithmic constants.  Model/checkpoint/layer/expert identity, a public
-base checkpoint, Qwen-fitted parameters, router activations or uncharged graph
-edges are forbidden.  Qwen is an evaluation panel, not part of the decoder
+The decoder may use the literal packet--including source-fitted parameters
+that are serialized and fully charged--plus public shape, Gate/Up/Down role
+and fixed algorithmic constants.  Universality does not require a source-free
+encoder.  It forbids uncharged Qwen-fitted constants, identity-indexed lookup
+tables, a public base checkpoint, router activations, source references or
+uncharged graph edges.  Qwen is an evaluation panel, not part of the decoder
 definition.  Portability still requires a disjoint SwiGLU-MoE family after a
 Qwen survivor.
 
@@ -192,3 +203,5 @@ Qwen survivor.
 - `research/tactic_actual_coarse_n18_v3_independent_audit_20260902/`
 - `research/universal_causal_noise_shaping_syndrome_mdl_nogo_v0/`
 - `research/tactic_cage_review_20260902/COMPOSITE_GRAMMAR_REVIEW.md`
+- `research/tactic_cage_review_20260902/INFORMATION_ACCOUNTING_CORRECTIONS.md`
+- `research/tactic_cage_review_20260902/INFORMATION_THEORY_REDTEAM.md`

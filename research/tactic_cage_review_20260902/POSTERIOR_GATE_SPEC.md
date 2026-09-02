@@ -9,8 +9,12 @@ reconstruction.  It is not TACTIC-DH384 and is not yet a universal codec
 claim.  Six deterministic Qwen experts do not identify an unrestricted
 `E[X|M]`; the experiment estimates a frozen restricted head under a declared
 panel distribution.  Cross-fitting can establish a real held-out opportunity,
-but deployment still requires one head trained on a disjoint checkpoint or
-family, serialized in one literal packet and tested on another family.
+and disjoint checkpoints/families must select the head family and
+hyperparameters.  The final universal encoder may refit that frozen procedure
+to the packet source, provided every resulting parameter is serialized and
+charged.  Portability still requires a sealed evaluation on another
+SwiGLU-MoE family; it does not require deployment to reuse one externally
+trained head unchanged.
 
 ## Literal decoder information
 
@@ -185,27 +189,55 @@ follow the declared logical end.  `B_k` is the complete outer object, including
 wrapper/header/alignment delta--not merely the inner object plus an assumed
 4-KiB model page.
 
-For literal outer-fold packet `k`, score only the six held-out matrices in
-`Ck`.  Never include the 12 matrices used to fit its head in the primary
-distortion:
+For outer fold `k`, score only the six held-out matrices in `Ck`.  Never
+include the 12 matrices used to fit its head in the primary distortion or let
+their private payload rate subsidize that distortion.
+
+The preferred exact test emits a literal held-out evaluation packet containing
+the six held-out matrices plus the complete serialized global UWFA/posterior
+model.  Let `B_eval,k` be its complete byte length and `N_k` the held-out
+weight count:
 
 ```text
-B_k = len(canonical candidate container k)
-R_k = 8*B_k / 28,311,552
+B_eval,k = len(canonical heldout-only candidate packet k)
+R_k = 8*B_eval,k / N_k
 D_k = heldout_SSE_k / heldout_energy_k
 D0_k = heldout_baseline_SSE_k / heldout_energy_k
-F_k = D_k * 2^(2R_k)
-Delta_s_k = (2.5 - R_k) - 0.5*log2(D_k / D0_k)
+F_k = D_k * 2^(2*R_k)
+Delta_s_k = (R0_k - R_k) - 0.5*log2(D_k / D0_k)
 ```
 
-Training-source and full-18 scores are diagnostics only.  A pooled cross-fit
-distortion may sum the three held-out SSE/energy pairs, but the three heads and
-containers differ; it is not one literal packet and has no final physical
-`R` or `F`.
+Here `R0_k` is the exact heldout-only baseline packet rate under the same
+framing and global-byte charging rule; it must not be assumed to equal 2.5 if
+the subset format changes alignment.
+
+If the container grammar cannot emit a heldout-only packet, an owner ledger is
+acceptable for model selection only.  Define before source access:
+
+```text
+B_private,k = exact bytes/pages owned by heldout component k
+B_shared = exact global model/header/directory bytes
+alpha_k = N_k / sum_j N_j
+R_k = 8*(B_private,k + alpha_k*B_shared) / N_k
+```
+
+Use the identical rule for `R0_k`, and report both allocated and indivisible
+page costs.  This cross-fit ledger is not itself a literal packet and cannot
+establish final physical `R` or `F`; it only decides whether to build a final
+all-component candidate.
+
+Training-source and full-18 fold scores are diagnostics only.  A pooled
+cross-fit distortion may sum the three held-out SSE/energy pairs, but the
+three heads and packets differ; it is not one literal final packet.  Final
+promotion requires refitting the selected frozen family, emitting one literal
+all-component packet, and scoring its full-panel rate and distortion without
+adding fold gains.
 
 Charge header, UWFA model, posterior model, directory, frames, checksums,
-arithmetic termination, padding and alignment through `len(container)`.  Never
-add an entropy estimate to a separately reconstructed MSE.
+arithmetic termination, padding and alignment through the applicable exact
+packet or owner ledger.  Never divide full-panel bytes by full-panel weights
+while pairing the result with heldout-only distortion, and never add an
+entropy estimate to a separately reconstructed MSE.
 
 One new 4-KiB page costs `0.00115740740740741` bpw on this panel and adds
 `0.00277777777777778x` to the old equal-share routed-read denominator before

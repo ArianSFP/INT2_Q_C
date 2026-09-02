@@ -60,6 +60,13 @@ frame total                     = 1,470,464 bytes
 
 The layout identity is not evidence that either numerical codec works.
 
+This is the self-describing archival envelope.  A lean fixed-decoder profile
+may omit the deterministic selector, empty QC and seed-fixture regions and
+bind their algorithms through the schema ID.  That removes 20,480 redundant
+per-model bytes; exact accounting is recorded in
+`INFORMATION_ACCOUNTING_CORRECTIONS.md`.  It does not remove any
+source-dependent model or header bytes.
+
 ## Selector: evidenced exact packet
 
 Use the literal v2 packet, not the incompatible v3 placement:
@@ -201,6 +208,11 @@ An independent decoder must reject at least:
 - a second frame read or access to another expert;
 - any model/checkpoint/layer/provenance/router/activation/source reference used
   as a decoder input.
+
+Serialized source-fitted parameters inside the authenticated packet are legal
+when every byte/page is charged.  The rejection above concerns an external
+source reference or uncharged identity-dependent lookup, not ordinary PTQ
+encoder adaptation represented in the literal message.
 
 Canonical C4 escape packets remain part of the universal packet language, but
 an evaluation artifact containing one is ineligible for the 2.5-bpw target.
