@@ -1,0 +1,45 @@
+{
+  "schema": "strata-bmp-qtt6-v2-independent-static-review-v1",
+  "date": "2026-09-02",
+  "producer_manifest_sha256": "84df0d32a55682f6565ac9d144f7de850acf77cde27bffdefa77a151211906f8",
+  "producer_source_root_sha256": "b518b203c43fd401c94e1bfcf67e029a85a95f1f7ce244fcd864a96d0780da47",
+  "v1_findings": {
+    "manifest_utf8_order_repaired": true,
+    "verifier_cli_repaired": true,
+    "manifest_self_replay_test_present": true,
+    "logical_capacity_separated_from_runtime_ownership": true,
+    "argsort_charged_as_actual_numpy_intp": true,
+    "skew_candidate_capacities_geometry_derived": true,
+    "cupy_pool_separated_from_host_capacity": true,
+    "artifact_bytes_authenticated": true
+  },
+  "findings": [
+    {
+      "id": "B1",
+      "severity": "prose_only",
+      "finding": "README says twelve-member inventory although thirteen non-manifest members are consistently pinned and verified",
+      "holds_source_runtime": false
+    },
+    {
+      "id": "B2",
+      "severity": "hold_production_trust",
+      "finding": "authorize authenticates bytes against caller-supplied digests but accepts self-authored audit/control/read receipts and arbitrary caller source pins; it is not independently anchored production authority",
+      "holds_source_runtime": false
+    },
+    {
+      "id": "B3",
+      "severity": "runtime_pending",
+      "finding": "CPU self-replay, fixture and fresh-CuPy receipts remain unexecuted in the source freeze",
+      "holds_source_runtime": false
+    }
+  ],
+  "disposition": "PASS_V1_REPLAY_AND_WORKSPACE_REPAIRS__PASS_SOURCE_ONLY_MECHANISM_FOR_RUNTIME_REPLAY__HOLD_TRUSTED_PRODUCTION_CAPABILITY__HOLD_RUNTIME_RECEIPTS__HOLD_PAYLOAD",
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "strata_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_payload_opened_statted_hashed_or_enumerated": false,
+    "network_used": false,
+    "producer_modified": false,
+    "payload_authority": false
+  }
+}

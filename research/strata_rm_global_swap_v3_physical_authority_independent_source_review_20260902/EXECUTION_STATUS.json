@@ -1,0 +1,20 @@
+{
+  "schema": "strata-rm-global-swap-v3-physical-authority-independent-source-review-execution-status",
+  "date": "2026-09-02",
+  "producer_manifest_sha256": "9105dd69a2a82d1eaf14e176e4334189a4c31be840dafee467d243c231788e83",
+  "producer_source_root_sha256": "83d79990515fca16387723cdea544d41fac76413fe80f919c30517d14551d6ad",
+  "static_review": {
+    "executed": true,
+    "receipt": "STATIC_REVIEW_RECEIPT.json",
+    "receipt_sha256": "5380f3c2d7f3522f5e48d1264ef59acfb55ac00ceb428ec8862a641a177ae9af",
+    "mechanism_checks_passed": 14,
+    "residual_limits_recorded": 5
+  },
+  "python_tests_executed": false,
+  "wasmtime_executed": false,
+  "model_data_accessed": false,
+  "payloads_opened": 0,
+  "qwen_result": null,
+  "physical_result": null,
+  "status": "PASS_V3_STATIC_AUTHORITY_REPAIRS__CONDITIONAL_ON_PINNED_WASMTIME_AND_DECODER_AUDIT_OF_TRANSIENT_MUTATION_MEMORY_AND_CANONICALITY__HOLD_PAYLOAD_AND_RD"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "tactic-ramanujan384-authority-v1-independent-review-contract-v0",
+  "date": "2026-09-02",
+  "status": "SOURCE_REPAIRS_SUBSTANTIALLY_CLOSE_V0__HOLD_PAYLOAD_FOR_RUNTIME_SCALABILITY_AND_COARSE_DECODER_AUDIT",
+  "producer": {
+    "path": "research/tactic_ramanujan384_adapter_v1_authority",
+    "source_manifest_sha256": "f4ba72b9371d77ad4347d5a4fe377677473844dd696032e662acc6cd3bde22b4",
+    "source_root_sha256": "6840b6a0eb4f2856f84c610ba11888382ecca257d88ebda7f5b49c0de9f3b3c5",
+    "members": 16
+  },
+  "v0_findings_reproduced": {
+    "v0_root_insertion_order_sha256": "2a66a5d745fc0a31e311cf6ab5f44836726ae341db977bca8eac314df61124ad",
+    "v0_own_verifier_sorted_key_sha256": "64669f3eeb9dd4f34a9fa36c9c6db592dcf5e37bdeb5ce149b3dbd51e2e24733",
+    "v0_decoded_weight_replay_absent": true,
+    "v0_backend_rng_owned_controls": true,
+    "v0_candidate_selection_preceded_packet_replay": true
+  },
+  "v1_source_repairs_verified": {
+    "canonical_source_root": true,
+    "literal_coarse_and_fine_weight_replay_path": true,
+    "independent_fp64_mse_and_F_path": true,
+    "every_representable_candidate_packet_replayed": true,
+    "splitmix_host_control_bytes": true,
+    "actual_input_and_auditor_manifests_opened": true,
+    "valid_coordinate_tail_score": true,
+    "read_trace_claims_separated": true,
+    "qwen_rate_exact_359_over_144": true,
+    "dictionary_and_gram_shared": true
+  },
+  "remaining_holds": {
+    "source_runtime_receipt_present": false,
+    "cpu_cupy_reproducibility_receipt_present": false,
+    "production_coarse_decoder_audited_and_bound": false,
+    "candidate_scratch_buffers_shared": false,
+    "candidate_host_synchronizations_eliminated": false,
+    "controls_are_exact_Gaussian": false,
+    "all_declared_shapes_fit_uint32_header_block_counts": false,
+    "physical_storage_read_measured": false,
+    "accelerator_HBM_measured": false
+  },
+  "access_attestation": {
+    "qwen_payload_accessed": false,
+    "coarse_model_payload_accessed": false,
+    "matched_model_control_payload_accessed": false,
+    "network_accessed": false
+  },
+  "payload_execution_authorized": false
+}
+

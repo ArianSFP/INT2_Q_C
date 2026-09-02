@@ -1,0 +1,35 @@
+{
+  "schema": "strata-rm-global-swap-v3-physical-authority-independent-static-review-receipt",
+  "producer_manifest_sha256": "9105dd69a2a82d1eaf14e176e4334189a4c31be840dafee467d243c231788e83",
+  "producer_source_root_sha256": "83d79990515fca16387723cdea544d41fac76413fe80f919c30517d14551d6ad",
+  "producer_members": 9,
+  "exact_flat_closure": true,
+  "source_mechanism_checks": {
+    "scientific_manifest_root_receipt_capability_pins": true,
+    "scientific_exact_closure": true,
+    "cross_family_checkpoint_tensor_identity_schema_rejected": true,
+    "source_path_and_hash_aliases_rejected": true,
+    "one_gate_up_down_triplet": true,
+    "distinct_packet_per_route": true,
+    "exact_page_ledger": true,
+    "maximum_per_family_read_enforced": true,
+    "zero_wasm_imports": true,
+    "no_wasi_linker": true,
+    "disjoint_packet_reconstruction_canonical_regions": true,
+    "padded_packet_final_state_checked": true,
+    "memory_bound_checked": true,
+    "canonical_bytes_checked": true
+  },
+  "residual_limit_observations": {
+    "transient_packet_writes_not_observed": true,
+    "store_memory_limiter_absent": true,
+    "fuel_or_epoch_budget_absent": true,
+    "wasmtime_version_and_binary_hash_unreported": true,
+    "runtime_canonicality_is_byte_replay_only": true
+  },
+  "model_data_accessed": false,
+  "payloads_opened": 0,
+  "python_tests_executed": false,
+  "wasmtime_executed": false,
+  "disposition": "PASS_V3_STATIC_AUTHORITY_REPAIRS__CONDITIONAL_ON_PINNED_WASMTIME_AND_DECODER_AUDIT_OF_TRANSIENT_MUTATION_MEMORY_AND_CANONICALITY__HOLD_PAYLOAD_AND_RD"
+}

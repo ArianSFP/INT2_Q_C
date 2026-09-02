@@ -1,0 +1,20 @@
+{
+  "schema": "strata-rm-global-swap-v3-physical-authority-source-manifest",
+  "status": "FROZEN_V3_PHYSICAL_AUTHORITY_SOURCE_ONLY__HOLD_WASMTIME_RUNTIME_PAYLOAD_AND_RD",
+  "v2_source_root_sha256": "e9ce4c24017831fab50696c2c5d81739d1f24d8121075c3aa56612b9a77013c9",
+  "v2_manifest_sha256": "1f1caf2884a8b0b8713f213a16a0a32194238b64969e9d9cf3aaa339ddb776be",
+  "v2_review_source_root_sha256": "d642889efcf8c54173eb7659602181cb9e71e122ce11ff05da6b24e45c47a113",
+  "v2_review_manifest_sha256": "c89e89e35bdbc36f4095e9939bb381b77d049963e07c846dbffd543541298b7b",
+  "source_root_sha256": "83d79990515fca16387723cdea544d41fac76413fe80f919c30517d14551d6ad",
+  "members": [
+    {"name": "authority_v3.py", "bytes": 49598, "sha256": "21d98cc772ac9f58880cce9ea7542bc16ae60cef6bc063cc9f31d47287952e16"},
+    {"name": "DESIGN_LOCK.json", "bytes": 1395, "sha256": "fad9f4d8cf766d10518d513969a02d785077a31df5574ecfdcac9e6b79710057"},
+    {"name": "EXECUTION_STATUS.json", "bytes": 857, "sha256": "70cccea4474649718d8a31e6000c167c735b209febf8f77992bd81f252f95a3c"},
+    {"name": "README.md", "bytes": 3726, "sha256": "2c420f8602e3ba87486eb582c5cb678c4428ff4c35e5f4363371dad630213a2d"},
+    {"name": "REVIEW_REPAIR_MAP.md", "bytes": 1392, "sha256": "f12a52f1bc017383c4bd7ab38a9ba7238b03c9da0c2f19c3e859efcf44ff2317"},
+    {"name": "run_source_gate.py", "bytes": 2419, "sha256": "38dd476b9a4d29ff2acb81963a919377a93fa36877f825dfdf2af2a8459fddd3"},
+    {"name": "test_source_only.py", "bytes": 17722, "sha256": "b2f466db4962c9b5e40a9b57b601237d206ef511638fb3aa7ffa4ec668862dd3"},
+    {"name": "verify_source.py", "bytes": 4201, "sha256": "046cfa0deaac21ef00fdf57115fa24874be1793b0208c8cd476e1affcade947f"},
+    {"name": "wasm_decoder_sandbox.py", "bytes": 10115, "sha256": "01b6d7bb081cdac508cb9c49dad812c97ba84dee38ff3d895349f32d789faa1b"}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "tactic-ramanujan384-authority-v1-independent-review-manifest-v0",
+  "status": "SOURCE_REPAIRS_SUBSTANTIALLY_CLOSE_V0__HOLD_PAYLOAD_FOR_RUNTIME_SCALABILITY_AND_COARSE_DECODER_AUDIT",
+  "source_root_sha256": "80fdeaa463a64a1303a49f3a123e04d093f0c429b3bd33f6bcb5361274942c3b",
+  "producer": {
+    "source_manifest_sha256": "f4ba72b9371d77ad4347d5a4fe377677473844dd696032e662acc6cd3bde22b4",
+    "source_root_sha256": "6840b6a0eb4f2856f84c610ba11888382ecca257d88ebda7f5b49c0de9f3b3c5"
+  },
+  "members": [
+    {"name":"README.md","bytes":6228,"sha256":"28fe46a96d3cd6d0a093e337b8082d0edd8d6bce89ce879c8538262cfb2cfe19"},
+    {"name":"review_contract.json","bytes":2123,"sha256":"3235214c13a191b8e1b3a040645c2e38accf9bdd5ea224842ac89c0248ce1e79"},
+    {"name":"run_cupy_reproducibility.py","bytes":5544,"sha256":"03a96351493b52926f22fdc520c72fb49833af895e9606920dd9cdf2bd1170bb"},
+    {"name":"test_independent_source.py","bytes":13813,"sha256":"0c7b6c42befdc53600a712f521368a082cdc007a8441122d4b1f16b047d021c9"},
+    {"name":"verify_review.py","bytes":6306,"sha256":"26d60a2518fef433aec244fe39343676bf194ab102e1895d3b7b14c6c9f79b33"}
+  ],
+  "access_attestation": {
+    "qwen_payload_accessed": false,
+    "coarse_model_payload_accessed": false,
+    "matched_model_control_payload_accessed": false,
+    "network_accessed": false
+  },
+  "execution": {
+    "source_tests": "PENDING_PYTHON_NUMPY_ENVIRONMENT",
+    "source_free_cpu_cupy_review": "PENDING_CUPY_GPU_ENVIRONMENT",
+    "payload_execution_authorized": false
+  }
+}

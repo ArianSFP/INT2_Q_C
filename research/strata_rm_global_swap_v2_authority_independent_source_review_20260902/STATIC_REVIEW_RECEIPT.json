@@ -1,0 +1,27 @@
+{
+  "schema": "strata-rm-global-swap-v2-authority-independent-static-review-receipt",
+  "producer_manifest_sha256": "1f1caf2884a8b0b8713f213a16a0a32194238b64969e9d9cf3aaa339ddb776be",
+  "producer_source_root_sha256": "e9ce4c24017831fab50696c2c5d81739d1f24d8121075c3aa56612b9a77013c9",
+  "producer_members": 12,
+  "exact_flat_closure": true,
+  "independent_canonical_root": true,
+  "source_invariants": {
+    "root_lstat_before_resolve": true,
+    "external_snapshot_before_worker": true,
+    "decoder_and_launcher_snapshotted": true,
+    "separate_decoder_audit_capability": true,
+    "launcher_owned_interval_records": true,
+    "scientific_capability_separate_from_commitment": true,
+    "per_family_target_loop": true,
+    "strongest_control_subtracted": true,
+    "both_global_lengths_invoked": true,
+    "independent_cpu_gosper": true,
+    "independent_gpu_byte_lut": true,
+    "parity_compares_cpu_gpu_and_v1": true
+  },
+  "model_data_accessed": false,
+  "payloads_opened": 0,
+  "python_tests_executed": false,
+  "cupy_workers_executed": false,
+  "disposition": "PASS_STATIC_CLOSURE_AND_SUBSTANTIAL_V1_REPAIRS__BLOCK_PHYSICAL_AUTHORITY_ON_SCIENTIFIC_PROVENANCE_AND_ROUTED_EXPERT_IO__HOLD_PAYLOAD_AND_RD"
+}

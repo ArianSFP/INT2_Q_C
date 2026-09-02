@@ -1,0 +1,14 @@
+{
+  "schema": "strata-rm-global-swap-v3-physical-authority-independent-source-review-manifest",
+  "status": "PASS_V3_STATIC_AUTHORITY_REPAIRS__CONDITIONAL_ON_PINNED_WASMTIME_AND_DECODER_AUDIT_OF_TRANSIENT_MUTATION_MEMORY_AND_CANONICALITY__HOLD_PAYLOAD_AND_RD",
+  "producer_manifest_sha256": "9105dd69a2a82d1eaf14e176e4334189a4c31be840dafee467d243c231788e83",
+  "producer_source_root_sha256": "83d79990515fca16387723cdea544d41fac76413fe80f919c30517d14551d6ad",
+  "source_root_sha256": "3113631a5c64255d919f2bb5c545436452c8a721eb4130fcd32d7ffc4b2cdfe0",
+  "members": [
+    {"name": "EXECUTION_STATUS.json", "bytes": 915, "sha256": "7e764fd33b6078b0c91307c0066aedab5edb9a0ac1b2efbaf45d7d68f26ca19c"},
+    {"name": "README.md", "bytes": 1174, "sha256": "82a687934af4877dc90eda1b9ed401282c912a7c0b39441923f4b40c2cfeac8f"},
+    {"name": "REVIEW_ASSESSMENT.md", "bytes": 7016, "sha256": "8698a8ed54d73f27113076180ad3eb42eac05ce0debee4d0c1e8864bf420f9ae"},
+    {"name": "review_static.ps1", "bytes": 6904, "sha256": "5e12476902140f64a2aa124180b76407068c61dcec30e350f21a8f01d32893ca"},
+    {"name": "STATIC_REVIEW_RECEIPT.json", "bytes": 1604, "sha256": "5380f3c2d7f3522f5e48d1264ef59acfb55ac00ceb428ec8862a641a177ae9af"}
+  ]
+}

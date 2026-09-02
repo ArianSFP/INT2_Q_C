@@ -1,0 +1,18 @@
+{
+  "schema": "strata-rm-global-swap-v3-physical-authority-execution-status",
+  "date": "2026-09-02",
+  "v2_source_root_sha256": "e9ce4c24017831fab50696c2c5d81739d1f24d8121075c3aa56612b9a77013c9",
+  "v2_review_source_root_sha256": "d642889efcf8c54173eb7659602181cb9e71e122ce11ff05da6b24e45c47a113",
+  "static_closure_check": {"executed": false, "receipt": null},
+  "python_hostile_tests": {"executed": false, "receipt": null},
+  "wasmtime_runtime_test": {"executed": false, "receipt": null},
+  "independent_scientific_audit_package": null,
+  "independent_decoder_audit_package": null,
+  "model_data_accessed": false,
+  "payloads_opened": 0,
+  "qwen_result": null,
+  "matched_control_result": null,
+  "routed_expert_read_result": null,
+  "physical_result": null,
+  "status": "FROZEN_V3_PHYSICAL_AUTHORITY_SOURCE_ONLY__HOLD_WASMTIME_RUNTIME_PAYLOAD_AND_RD"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "strata-rm-global-swap-v2-authority-independent-source-review-manifest",
+  "status": "PASS_STATIC_CLOSURE_AND_SUBSTANTIAL_V1_REPAIRS__BLOCK_PHYSICAL_AUTHORITY_ON_SCIENTIFIC_PROVENANCE_AND_ROUTED_EXPERT_IO__HOLD_PAYLOAD_AND_RD",
+  "producer_manifest_sha256": "1f1caf2884a8b0b8713f213a16a0a32194238b64969e9d9cf3aaa339ddb776be",
+  "producer_source_root_sha256": "e9ce4c24017831fab50696c2c5d81739d1f24d8121075c3aa56612b9a77013c9",
+  "source_root_sha256": "d642889efcf8c54173eb7659602181cb9e71e122ce11ff05da6b24e45c47a113",
+  "members": [
+    {"name": "EXECUTION_STATUS.json", "bytes": 1060, "sha256": "7fd3a1da42ca3f571d419d7f05079a34249c93c5c71e4ec7c7c5f1dbd8600886"},
+    {"name": "README.md", "bytes": 1441, "sha256": "470eeb3732878495aa6632c1c9f457aceda3016f1be57b9b93b34ffd664dd722"},
+    {"name": "REVIEW_ASSESSMENT.md", "bytes": 7592, "sha256": "47c34521c3ed94df66559dcf003f2825ab8ebe87c93a7b062b07e6ff7d266a78"},
+    {"name": "review_static.ps1", "bytes": 6700, "sha256": "a6bcea97be6b5a056b76e81cf6968fb7784859cafacd4f8211074d34b1616b3d"},
+    {"name": "STATIC_REVIEW_RECEIPT.json", "bytes": 1238, "sha256": "b8b066f11190218d7f960a068390fdc95bea01158012bde5c5c6403f866e1aba"}
+  ]
+}

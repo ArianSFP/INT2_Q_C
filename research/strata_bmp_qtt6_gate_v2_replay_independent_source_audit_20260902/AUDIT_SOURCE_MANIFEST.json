@@ -1,0 +1,64 @@
+{
+  "schema": "strata-bmp-qtt6-v2-independent-audit-source-manifest-v1",
+  "status": "FROZEN_INDEPENDENT_V2_SOURCE_AUDIT__RUNTIME_PENDING__HOLD_PAYLOAD",
+  "producer_pins": {
+    "source_manifest_sha256": "84df0d32a55682f6565ac9d144f7de850acf77cde27bffdefa77a151211906f8",
+    "source_root_sha256": "b518b203c43fd401c94e1bfcf67e029a85a95f1f7ce244fcd864a96d0780da47"
+  },
+  "audit_source_root_sha256": "c817b1f1c3c270cb1f0e332262dc46df4fe9eb39c4b4fafe70a23536203572d3",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 5209,
+      "sha256": "45bd8e7ed278647a47f0e48a6788fee2d8f78fb1f430e6f549a3feebd3d7642e"
+    },
+    {
+      "name": "STATIC_REVIEW.json",
+      "bytes": 2021,
+      "sha256": "7d0f8f01bfee076c9161a780a7f48c13ca1d2ce2793429cc374b71eabc02abe5"
+    },
+    {
+      "name": "THREAT_MODEL.md",
+      "bytes": 1601,
+      "sha256": "87d44cb5de5c3c9caa58c7179a3f193fac9b9064dc1749c6a25a8ad5b8ae9f3c"
+    },
+    {
+      "name": "run_audit.py",
+      "bytes": 6753,
+      "sha256": "0edaf7ba73b5e33cc72399c80865593ecfbaea9ea8f2eb699a926910bd3cac7a"
+    },
+    {
+      "name": "run_real_cupy_audit.py",
+      "bytes": 10927,
+      "sha256": "c989382f4a079c9ff7862caefb78708db40eac04b8e6ef1a0348fea421c500a5"
+    },
+    {
+      "name": "test_benign_audit.py",
+      "bytes": 18003,
+      "sha256": "f16b14bdd4e29dbf895455639a1ba2598f85794404a2d049471fa01660f67f4f"
+    },
+    {
+      "name": "verify_audit_source.py",
+      "bytes": 8389,
+      "sha256": "785d212ec57c427a70eb6dfbd469c75b97831853443ece81d931cb0136950d43"
+    }
+  ],
+  "static_disposition": "PASS_V1_REPLAY_AND_WORKSPACE_REPAIRS__PASS_SOURCE_ONLY_MECHANISM_FOR_RUNTIME_REPLAY__HOLD_TRUSTED_PRODUCTION_CAPABILITY__HOLD_RUNTIME_RECEIPTS__HOLD_PAYLOAD",
+  "execution_attestation": {
+    "independent_cpu_tests_declared": 19,
+    "independent_cpu_tests_executed": false,
+    "producer_manifest_self_replay_declared": true,
+    "fresh_cupy_validator_present": true,
+    "fresh_cupy_validator_executed": false,
+    "runtime_pass_claimed": false
+  },
+  "access_attestation": {
+    "qwen_or_other_model_payload_opened_statted_hashed_or_enumerated": false,
+    "strata_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_payload_opened_statted_hashed_or_enumerated": false,
+    "network_used": false,
+    "producer_modified": false,
+    "payload_authority": false
+  },
+  "claim_boundary": "Independent source-only review of replay v2. It confirms the v1 manifest, CLI, logical-capacity, numpy.intp, skew-capacity and CuPy-ledger repairs; records that caller-authenticated self-attested receipts are not a trusted production capability; and freezes unexecuted CPU/CuPy validators. No Qwen, F-score, complete-codec, routed-read or payload authority is claimed."
+}

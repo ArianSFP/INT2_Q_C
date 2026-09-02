@@ -1,0 +1,57 @@
+{
+  "schema": "strata-bmp-obdd-qtt6-replay-static-review-v2",
+  "date": "2026-09-02",
+  "status": "PASS_STATIC_REPAIRS__RUNTIME_REPLAY_PENDING__HOLD_PAYLOAD",
+  "predecessor_pins": {
+    "v1_source_root_sha256": "369e01b30173977a5d8227e71104c8515f1b68ef440198dccd1488050e865203",
+    "v1_audited_producer_manifest_sha256": "916aaca15620e3bf033e849b74a73604015fab280dfe8953683d6cbe04e0d2e4",
+    "v1_independent_audit_source_root_sha256": "db0dea7fe3f52e88c8ab59af75eb7ceef71610c07f214fc5b2783f77dd98b56c",
+    "v1_independent_audit_manifest_sha256": "c0c23ea892ed8066c9af78c15491049400a7f93f7f8c7d39b61b67442d10b0ed"
+  },
+  "repairs": [
+    {
+      "audit_finding": "A1_workspace",
+      "repair": "logical capacities are separated from instrumented runtime ownership; stable argsort is charged by actual numpy.intp nbytes; retained packets are charged by literal length; skew-family maxima are derived from serialized dimensions",
+      "static_verified": true
+    },
+    {
+      "audit_finding": "A2_replay",
+      "repair": "manifest members and verifier use identical canonical UTF-8 ordering; parser and README share --package plus required --expected-manifest-sha256; source suite contains exact CLI self-replay",
+      "static_verified": true
+    },
+    {
+      "audit_finding": "A3_production_authority",
+      "repair": "production bindings open stable regular non-link objects and authenticate actual bytes; Gaussian, routed-read and independent-audit receipts receive semantic checks",
+      "static_verified": true
+    },
+    {
+      "audit_finding": "A4_runtime",
+      "repair": "runtime is explicitly pending and cannot be inferred from source presence",
+      "static_verified": true
+    }
+  ],
+  "pending_commands": [
+    "python -I -B research/strata_bmp_qtt6_gate_v2_replay/test_source_only.py",
+    "python -I -B research/strata_bmp_qtt6_gate_v2_replay/run_source_free_fixture.py",
+    "python -I -B research/strata_bmp_qtt6_gate_v2_replay/run_cupy_smoke.py --output cupy_search_receipt.json",
+    "python -I -B research/strata_bmp_qtt6_gate_v2_replay/verify_source.py --package research/strata_bmp_qtt6_gate_v2_replay --expected-manifest-sha256 MANIFEST_SHA256"
+  ],
+  "holds": [
+    "independent v2 source audit",
+    "CPU and manifest replay receipts",
+    "source-free N=4096 fixture receipt",
+    "fresh-process CuPy receipt",
+    "all Qwen or other model payload access",
+    "STRATA adapter and full original-BF16 replay",
+    "matched Gaussian complete-selection controls",
+    "complete 2.15--2.5 bpw and F<=0.8 evidence",
+    "routed expert read evidence"
+  ],
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "strata_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_payload_opened_statted_hashed_or_enumerated": false,
+    "network_payload_access": false,
+    "payload_authority": false
+  }
+}
