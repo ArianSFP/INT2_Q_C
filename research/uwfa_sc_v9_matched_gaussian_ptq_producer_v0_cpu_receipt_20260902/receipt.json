@@ -1,0 +1,41 @@
+{
+  "schema": "uwfa_sc_v9_matched_gaussian_ptq_producer_v0_cpu_receipt_v1",
+  "date_utc": "2026-09-02",
+  "package": "research/uwfa_sc_v9_matched_gaussian_ptq_producer_v0",
+  "source_manifest_sha256": "20cd2cd8b2a0e41f68e5fcf58a1b2ebe8d0e09c984bdbbd786a1057e869c9eb1",
+  "isolated_copy": "/tmp/uwfa_sc_v9_matched_gaussian_ptq_producer_v0_20cd2c",
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "2.5.2",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "isolated_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  "tests": [
+    {
+      "command": "/workspace/int2-cupy-venv/bin/python -I -B /tmp/uwfa_sc_v9_matched_gaussian_ptq_producer_v0_20cd2c/test_source_only.py",
+      "exit_code": 0,
+      "tests_run": 11,
+      "status": "OK"
+    },
+    {
+      "command": "/workspace/int2-cupy-venv/bin/python -I -B /tmp/uwfa_sc_v9_matched_gaussian_ptq_producer_v0_20cd2c/verify_source.py --package /tmp/uwfa_sc_v9_matched_gaussian_ptq_producer_v0_20cd2c",
+      "exit_code": 0,
+      "status": "PASS_SOURCE_ONLY_PRODUCER_PACKAGE",
+      "members": 9,
+      "payload_authority": false,
+      "cuda_imported": false
+    }
+  ],
+  "scope": {
+    "qwen_payload_read": false,
+    "cuda_used": false,
+    "control_payload_generated": false,
+    "existing_encoder_modified": false,
+    "live_primary_result_read": false
+  },
+  "interpretation": "Source-only producer construction and fail-closed package verification passed. This receipt is not evidence that a matched-Gaussian control was generated, encoded, decoded, or accepted by the independent v9 controls consumer."
+}

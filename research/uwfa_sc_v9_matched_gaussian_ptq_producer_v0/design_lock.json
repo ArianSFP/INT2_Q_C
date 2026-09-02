@@ -1,0 +1,99 @@
+{
+  "schema": "uwfa-sc-v9-matched-gaussian-ptq-design-v0",
+  "status": "SOURCE_ONLY_PRODUCER_BUILT_V9_CONSUMER_BLOCKED",
+  "design_date": "2026-09-02",
+  "outcome": {
+    "full_identical_strata_reencode_mechanically_feasible": true,
+    "new_quantizer_required": false,
+    "new_polar_encoder_required": false,
+    "new_orchestration_required": true,
+    "new_universal_source_score_wrapper_required": true,
+    "separately_audited_v9_controls_consumer_required": true
+  },
+  "current_aperture": {
+    "experts": 6,
+    "roles": ["gate", "up", "down"],
+    "hidden": 2048,
+    "intermediate": 768,
+    "weights": 28311552,
+    "blocks": 15,
+    "artifact_bytes": 8847360,
+    "physical_bpw": 2.5,
+    "identity_semantics": "canonical slot and SwiGLU role only; no checkpoint/layer/expert identity in generator key"
+  },
+  "frozen_controls": {
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "seed_searches": 0,
+    "generator": "NumPy PCG64 binary64 normal; SHA256-derived per-matrix u128 seed; fixed six affine/BF16-RNE iterations",
+    "moment_unit": "each original BF16 matrix in storage orientation",
+    "moments": ["binary64 mean", "binary64 centered SSE", "binary64 energy"],
+    "mean_error_over_source_rms_max": 0.00000762939453125,
+    "centered_rms_relative_error_max": 0.000030517578125,
+    "all_generated_bf16_source_bytes_retained": true
+  },
+  "source_independent_structural_contract": {
+    "frozen_before_controls": true,
+    "includes": [
+      "canonical slot count",
+      "SwiGLU roles and storage shapes",
+      "hidden/intermediate dimensions",
+      "total weights",
+      "block ordinals/logN/owner slots"
+    ],
+    "excludes_source_derived": [
+      "STRATA labels",
+      "profile_q",
+      "selected-symbol counts",
+      "label-dependent role contribution counts",
+      "arithmetic logical and byte lengths"
+    ],
+    "control_own_full_geometry_authenticated": true
+  },
+  "exact_runtime_source_candidates": {
+    "strata_v2_codec/emit_and_lock.py": {"bytes": 42544, "sha256": "8fe43becd70eaf3d2bbc009db424db8c152029aa3f0e4bf4ceed7108f342ed40"},
+    "strata_v2_codec/common.py": {"bytes": 15465, "sha256": "bb5ad9f91ed6c4ee51f337d70fbfb3b1f174001cf2585d48c84034622b6b4ab8"},
+    "strata_v2_codec/polar_encoder.py": {"bytes": 4216, "sha256": "ab4f7f6ed6f55f7eaa0bba24436b22a26cc0bf3452e1ce0d2ed56be805020309"},
+    "workspace/agent_polaris_qwen_rht_encoder.py": {"bytes": 29633, "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0", "repository_status": "external workspace source; must be copied into and authenticated by the runtime snapshot"},
+    "bg_codec_bec_encoder.py": {"bytes": 1303, "sha256": "456a3ae5fe00c578456dc9430bf7ae059ed9dbb8dcf04a6bafad3a88cc5cb267"},
+    "strata_expert_local_codec/common.py": {"bytes": 14320, "sha256": "3f085c9531b714d0d7877388f54ae50495dc3ea631491563abceb4db55608fd1"},
+    "strata_expert_local_codec/run_and_pack.py": {"bytes": 14511, "sha256": "8fbbe07ad9eb452ced44ab020c3f14cef37b5af9dc16bea30ca231b5f11157a5"},
+    "strata_expert_local_codec/independent_audit.py": {"bytes": 19643, "sha256": "0a29b1b2f9a7719666c48da6893ba0c8e6948ef138c76850d22dbee1c4a41d6b"},
+    "strata_v2_klt_mixed_independent_auditor_v1.py": {"bytes": 116835, "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"},
+    "research/unifilar_wfa_entropy_census_stage0_v8/strata_sc_adapter.py": {"bytes": 36184, "sha256": "08fc8808ac168f6930ee9482e160f25f2bd087829fca4630553aea3510d722c6"},
+    "research/unifilar_wfa_entropy_census_stage0_v8/protocol.py": {"bytes": 21051, "sha256": "9e18675a1e646eb10c0900aa3767bff96666943309dbd8db3953c745888d2cc1"},
+    "research/unifilar_wfa_entropy_census_stage0_v8/uwfa_common.py": {"bytes": 58875, "sha256": "db53567ab6d71d5150cc92ef4a78fa9ce5cca01f5474fa2ca32edc8711cc4325"}
+  },
+  "runtime_authentication": {
+    "candidate_digests_are_design_inputs_not_execution_authority": true,
+    "dispatcher_must_retain_authenticated_bytes_and_execute_that_snapshot": true,
+    "polar_repository_tree_and_runtime_distributions_must_be_separately_pinned": true,
+    "one_cuda_owner_process": true,
+    "all_eight_control_bundles_authenticate_before_first_wfa_fit": true
+  },
+  "scientific_contract": {
+    "identical_xklt_bf16_strata_transform": true,
+    "identical_profile_allocator": true,
+    "identical_rht_quantizer_sc_polar_encoder": true,
+    "identical_literal_current_artifact_format": true,
+    "all_150_independently_selected_per_control": true,
+    "qwen_winner_reuse_forbidden": true,
+    "all_eight_required_for_positive_specificity": true,
+    "control_cannot_rescue_source_failure": true,
+    "producer_has_no_positive_claim_authority": true
+  },
+  "explicit_consumer_block": {
+    "v8_structural_equality_not_silently_weakened": true,
+    "required_v9_change": "compare pre-frozen universal format geometry, authenticate each control's own full geometry and retained BF16 source bytes, then run unchanged all-150 selection",
+    "fresh_independent_source_and_result_audits_required": true
+  },
+  "source_only_build_attestation": {
+    "runpod_accessed": false,
+    "cuda_imported_or_launched": false,
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "live_v9_result_opened_statted_hashed_or_enumerated": false,
+    "current_strata_artifact_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_payload_generated": false,
+    "committed_source_modified": false
+  },
+  "claim_boundary": "source-only producer architecture and orchestration; no payload evidence, no Gaussian specificity result, and no promotion"
+}

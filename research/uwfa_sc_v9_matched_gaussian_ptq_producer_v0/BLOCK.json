@@ -1,0 +1,40 @@
+{
+  "schema": "uwfa-sc-v9-full-ptq-gaussian-producer-block-v0",
+  "status": "PRODUCER_MECHANICALLY_FEASIBLE_RUNTIME_AND_V9_CONSUMER_NOT_YET_AUDITED",
+  "positive_claim_authority": false,
+  "payload_access_authority": false,
+  "exact_encoder_finding": {
+    "new_quantizer_required": false,
+    "new_polar_encoder_required": false,
+    "exact_transform_primitive": "strata_v2_codec.emit_and_lock.build_staging",
+    "exact_current_packer": "strata_expert_local_codec.run_and_pack",
+    "literal_artifact_bytes": 8847360,
+    "literal_artifact_bpw": 2.5
+  },
+  "remaining_external_inputs": [
+    "independently audited source-moment contract over all eighteen original BF16 matrices",
+    "independently audited v9 primary survivor and its immutable symmetric codec closure",
+    "authenticated runtime snapshot containing the exact transform, quantizer, polar encoder, adapter and decoder sources",
+    "separately audited v9 controls bridge that accepts independently derived control geometry and retained BF16 sources"
+  ],
+  "v8_consumer_incompatibilities": [
+    "v8 requires source/control structural-geometry equality even though honest full re-encoding changes labels, profiles, symbol counts and contribution maps",
+    "v8 control bundle does not carry retained generated BF16 source bytes for independent moment replay",
+    "historical independent score wrapper hardcodes Qwen tensor-name identity"
+  ],
+  "scientific_invariants_not_waived": [
+    "source-independent slot/role/shape/block-owner contract freezes before controls",
+    "each control authenticates its own BF16 source, full geometry, score and reconstruction",
+    "identical quantizer and polar encoder sources",
+    "all 150 cells independently selected for every control",
+    "source winner reuse forbidden",
+    "all eight controls required for a positive specificity result"
+  ],
+  "shortcuts_rejected": [
+    "selected-label resampling",
+    "post-RHT Gaussian substitution",
+    "copying source profiles or label-derived geometry into a control",
+    "digest-only source receipts without retained BF16 bytes",
+    "silent weakening of v8 structural equality"
+  ]
+}

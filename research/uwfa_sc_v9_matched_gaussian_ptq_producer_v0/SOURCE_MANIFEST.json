@@ -1,0 +1,28 @@
+{
+  "schema": "uwfa-sc-v9-matched-gaussian-ptq-source-manifest-v0",
+  "status": "SOURCE_ONLY_NONPROMOTING",
+  "members": [
+    {"name": "API_AUDIT.md", "bytes": 1798, "sha256": "058472aaca8b00280b93f56fd5d8398cc5ab1c97e92c07b3e0951ed5f7a41f72"},
+    {"name": "BLOCK.json", "bytes": 2148, "sha256": "f5d895ae0536df07ccc5c5d55d38c04db1eeb2b942918c603e76db94802c397b"},
+    {"name": "README.md", "bytes": 6040, "sha256": "a693ea413c03fecd67875ad2ee3a2c484523d2fa687424f46a6609e86522ed72"},
+    {"name": "design_lock.json", "bytes": 5646, "sha256": "10deedd0332078eb8f9d9186da06265e275f43f04d763bb7c649d4545e389590"},
+    {"name": "full_ptq_producer.py", "bytes": 26209, "sha256": "979a53f25c11a5a9f628802ad49f983d445cd05878559211e9cf709dd086c56d"},
+    {"name": "producer_contract.py", "bytes": 25231, "sha256": "e9f27f1dcc7614e41c7f7086b41ffbee19bc189014f97410145a6fa0af4c0962"},
+    {"name": "test_source_only.py", "bytes": 10622, "sha256": "42736c7b1a738d8a846a2339640908c711abf82413259867100b4229dcb1ded1"},
+    {"name": "verify_source.py", "bytes": 3286, "sha256": "da46781ec6f3340370c72defe7dec91d35cfe7eba31953f7e95028e86cf4f48b"}
+  ],
+  "runtime": {
+    "direct_execution": "inert exit 3",
+    "payload_authority": false,
+    "requires_authenticated_dispatcher": true,
+    "requires_independent_source_audit": true,
+    "requires_separate_v9_controls_bridge_audit": true
+  },
+  "source_only_attestation": {
+    "runpod_accessed": false,
+    "cuda_imported_or_launched": false,
+    "model_payload_accessed": false,
+    "live_result_accessed": false,
+    "control_payload_generated": false
+  }
+}
