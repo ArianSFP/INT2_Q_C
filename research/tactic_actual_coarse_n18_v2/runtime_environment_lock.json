@@ -1,0 +1,9 @@
+{
+  "schema": "tactic_actual_coarse_n18_runtime_environment_v2",
+  "status": "UNFROZEN_BLOCK_RUNTIME",
+  "reason": "No canonical RunPod interpreter/distribution file-root inventory has been independently frozen for this new package.",
+  "interpreter": null,
+  "distributions": [],
+  "lock_sha256": null,
+  "claim_boundary": "This placeholder intentionally makes every numeric, payload and CUDA entry fail before import. Replacing it changes the source manifest and requires a fresh independent source review."
+}

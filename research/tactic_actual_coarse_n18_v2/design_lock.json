@@ -1,0 +1,72 @@
+{
+  "schema": "tactic_actual_coarse_n18_source_design_v2",
+  "status": "POSTIMPLEMENTATION_REVIEW_SOURCE_ONLY_NO_PAYLOAD_NO_CUDA_AUTHORITY",
+  "name": "UNIPOLAR-N18-307-v2",
+  "objective_boundary": {
+    "purpose": "Produce a real 307/128-bpw coarse stream only after source closure, independent review and runtime authentication, enabling a later TACTIC-DH384 or broader CAGE experiment.",
+    "not_claimed": ["working lower-rate artifact", "Qwen result", "TACTIC result", "CAGE result", "MSE improvement", "CUDA execution authority"],
+    "universal_contract": "Arbitrary positive SwiGLU-MoE Gate [intermediate,hidden], Up [intermediate,hidden], and Down [hidden,intermediate] shapes; Qwen is evaluation only."
+  },
+  "packet": {
+    "magic": "TACN18C2",
+    "version": 2,
+    "tile_values": 262144,
+    "header_bytes": 128,
+    "reservoir_bytes": 78592,
+    "payload_capacity_bytes": 78464,
+    "payload_capacity_bits": 627712,
+    "nominal_test_channel_bits": 626688,
+    "logical_reserve_bits": 1024,
+    "physical_bpw_for_full_tiles": 2.3984375,
+    "profile_q": 164,
+    "test_channel_bpw": 2.390625,
+    "tail_rule": "The final tile is implicitly zero-padded from its header-bound valid length, but its entire fixed reservoir is physical and charged.",
+    "canonicality": "MSB-first hard logical EOF, zero terminal pad, zero fixed-reservoir fill, payload SHA-256, header CRC32, independent arithmetic decode and byte-identical canonical re-encode required."
+  },
+  "universal_seeds": {
+    "inputs": ["canonical role ordinal", "integer rows", "integer columns", "tile ordinal"],
+    "excluded": ["model", "vendor", "checkpoint", "layer", "expert identity", "provenance", "source hash", "overflow", "retry count"],
+    "overflow_policy": "Terminal failure; no seed, profile, topology or role retry."
+  },
+  "bounds_before_allocation": {
+    "experts": [1, 256],
+    "dimension": [1, 16777216],
+    "matrix_values_max": 17179869184,
+    "streams_per_matrix_max": 65536,
+    "source_plan_bytes_max": 16777216,
+    "review_receipt_bytes_max": 1048576,
+    "environment_lock_bytes_max": 1048576
+  },
+  "evaluation_order": {
+    "step_1": "Authenticate source closure, independent review, environment, dependencies, plan and held source FDs.",
+    "step_2": "Run only the three-role absolute source DH384 best-of-64 pilot on one coordinate-selected triplet.",
+    "step_3": "If no role survives, stop frozen DH384 full panels.",
+    "step_4": "Only after source survival generate decoded-Gaussian and structure-destroyed controls; never subtract a control from the absolute hard gate.",
+    "step_5": "A survivor may authorize a complete source/control artifact and one nested physical evaluation after separate review.",
+    "cage_nonconverse": "Failure of the rank-384 best-of-64 DH384 span oracle does not kill graph lifting, posterior centroid, adaptive refinement tree, syndrome/coset, or any broader TACTIC-CAGE mechanism it does not dominate."
+  },
+  "publication": {
+    "inputs": "Canonical absolute component-wise no-follow paths held by descriptor and rehashed before completion.",
+    "output": "Absent canonical absolute leaf, private staging directory, O_EXCL/O_NOFOLLOW files, file and directory fsync, COMPLETE.json created last, atomic renameat2(RENAME_NOREPLACE), parent fsync.",
+    "partial_final_output_allowed": false
+  },
+  "runtime": {
+    "dependency_graph": "dependency_graph.json",
+    "environment_lock": "runtime_environment_lock.json",
+    "environment_state": "UNFROZEN_BLOCK_RUNTIME",
+    "cuda_visible_devices": "exactly 0",
+    "mandatory_device_for_future_run": "NVIDIA GeForce RTX 5090",
+    "telemetry": "Exact logical enumerated H2D/D2H/model H2D bytes, CUDA event phases, wall time, host RSS, baseline-subtracted NVML process/device VRAM, CuPy pool, versions, UUID and PCI mapping. Logical bytes are not claimed physical PCIe traffic."
+  },
+  "authorization": {
+    "synthetic_token": "SYNTHETIC_ONLY_UNIPOLAR_N18_307_V2",
+    "pilot_token": "OPEN_AUTHENTICATED_UNIPOLAR_N18_307_PILOT_V2",
+    "full_token": "OPEN_AUTHENTICATED_UNIPOLAR_N18_307_FULL_V2",
+    "token_alone_sufficient": false,
+    "independent_review_receipt_required": true,
+    "frozen_runtime_environment_required": true,
+    "source_package_authorizes_payload": false,
+    "source_package_authorizes_cuda": false
+  },
+  "claim_boundary": "Source-only postimplementation candidate. No manifest or external review can turn a failed DH384 pilot into a converse for CAGE."
+}

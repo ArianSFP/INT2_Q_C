@@ -1,0 +1,32 @@
+{
+  "schema": "tactic_actual_coarse_n18_dependency_graph_v2",
+  "status": "SOURCE_PINNED_RUNTIME_ENVIRONMENT_SEPARATELY_LOCKED",
+  "load_order": [
+    "standard_library_source_manifest_verifier",
+    "absolute_no_follow_independent_review_receipt",
+    "absolute_no_follow_runtime_environment_lock",
+    "absolute_no_follow_source_plan_and_all_matrix_inputs",
+    "held_fd_external_python_source_authentication",
+    "private_dependency_snapshot",
+    "numeric_and_cuda_distribution_imports",
+    "instrumented_universal_encoder_and_independent_decoder"
+  ],
+  "external_python_sources": [
+    {
+      "id": "polaris_sc_v2_rht_encoder_prototype",
+      "relative_path": "src/polaris_sc_v2_rht_encoder.py",
+      "bytes": 29633,
+      "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+      "allowed_import_roots": ["argparse", "cupy", "dataclasses", "hashlib", "json", "math", "numpy", "pathlib", "scipy", "struct", "time", "typing"]
+    },
+    {
+      "id": "independent_polar_decoder_prototype",
+      "relative_path": "strata_v2_klt_mixed_independent_auditor_v1.py",
+      "bytes": 116835,
+      "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+      "allowed_import_roots": ["argparse", "base64", "collections", "concurrent", "cupy", "dataclasses", "hashlib", "importlib", "json", "math", "multiprocessing", "numpy", "os", "pathlib", "re", "struct", "sys", "time", "typing", "zlib"]
+    }
+  ],
+  "numeric_runtime_distributions": ["cupy-cuda12x", "numpy", "nvidia-ml-py", "scipy"],
+  "boundary": "The two pinned files are prototype algorithm dependencies, not an authenticated native runtime. A separately sealed environment lock and independent review are mandatory before import."
+}
