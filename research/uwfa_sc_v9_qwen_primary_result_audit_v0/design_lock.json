@@ -1,0 +1,49 @@
+{
+  "schema": "uwfa-sc-v9-primary-independent-result-audit-design-v0",
+  "status": "SOURCE_ONLY_FROZEN_AWAITING_EXTERNAL_RESULT_PINS",
+  "purpose": "independently audit exactly one nonpromoting UWFA-SC v9 primary Qwen publication",
+  "positive_claim_authority": false,
+  "controls_or_shuffles_authorized": false,
+  "publication_member_set": [
+    "BOUND_BASELINE_SCORE.json",
+    "COMPLETE.json",
+    "DECODER_BUNDLE.json",
+    "IDENTITY_FRAMING.bin",
+    "RESULT.json",
+    "SOURCE_PREFLIGHT.json",
+    "UWFCV8.bin"
+  ],
+  "frozen_source_pins": {
+    "v9_manifest_sha256": "d1e3eaff6762df2e273f6e3f4216ff9110abe74a7534a0098544a4ceef632c5e",
+    "v9_source_root_sha256": "4f99644a8d36eb15d6ff966db25f01e3e10f6d0f481af5fe0fd507c647eadca5",
+    "primary_gate_sha256": "d1ff04ce3c2cc36208e464eaed943d6c94eb91a47e9d3c460b2d562b7162cc4d",
+    "support_sha256": "399cb25260d34ec299cc91a17f129da9be5ba5b799c961e43f0c1b0637ee0174",
+    "v8_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+    "v8_source_root_sha256": "be06cf4d6c474a01517c4062f448b0c41c7f59d31724d6d5af380b8c064de4fa",
+    "strata_common_sha256": "3f085c9531b714d0d7877388f54ae50495dc3ea631491563abceb4db55608fd1",
+    "frozen_auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "artifact_sha256": "4842d0754156d8ad1e174199dd211396346ffa9b5472f7278c41f2f30691405b",
+    "artifact_bytes": 8847360
+  },
+  "exact_primary_updates": 38621316130,
+  "selected_model_cpu_replay": "mandatory exact refit/causal length/independent layout replay for every PASS; never a substitute for all-150 selection optimality",
+  "independent_container_audit": "separate v4 raw-byte parser, seals, canonical placement, directory/frame/panel binding, owner allocation and exact routed range/page ledger; sealed-v8 decoder replay is accepted only after this independent binding",
+  "telemetry_audit": "immutable preflight prefix plus exact ordered 2723-sample primary suffix: one pack, 454 count and 453 length operations each with subset/kernel/D2H samples, then final environment receipt; enforce per-sample bounds and cumulative peak conservation",
+  "filesystem_identity_policy": {
+    "broad_ancestors": "device+inode+type+name binding; ignore mtime/ctime",
+    "actual_source_and_publication_directories": "full metadata stability",
+    "files": "retained descriptor+name/inode+full metadata+literal bytes"
+  },
+  "terminal_interpretation": {
+    "hard_kill": "evidence only against the declared sparse-unifilar WFA cell",
+    "primary_survivor": "nonpromoting; controls, shuffles and another audit required",
+    "mismatch": "no scientific result"
+  },
+  "build_access_attestation": {
+    "runpod_accessed": false,
+    "qwen_or_model_payload_accessed": false,
+    "live_v9_result_accessed": false,
+    "gaussian_control_accessed": false,
+    "cuda_or_cupy_initialized": false
+  }
+}

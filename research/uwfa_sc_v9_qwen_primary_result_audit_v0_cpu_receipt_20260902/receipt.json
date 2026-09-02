@@ -1,0 +1,39 @@
+{
+  "schema": "uwfa_sc_v9_qwen_primary_result_audit_v0_cpu_receipt_v1",
+  "date_utc": "2026-09-02",
+  "package": "research/uwfa_sc_v9_qwen_primary_result_audit_v0",
+  "source_manifest_sha256": "885f41e27c439c808e2118de52184feaec58efe9f14bbc0e02a377e3b189f5ee",
+  "source_manifest_bytes": 1278,
+  "source_root_sha256": "37ea422dc44996e08dc6aef148006cc6a3de30c3ac044311c5cdecc0fe5d188b",
+  "isolated_copy": "/tmp/uwfa_sc_v9_qwen_primary_result_audit_v0_885f41",
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "2.5.2",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "isolated_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  "test": {
+    "command": "/workspace/int2-cupy-venv/bin/python -I -B /tmp/uwfa_sc_v9_qwen_primary_result_audit_v0_885f41/test_source_only.py",
+    "exit_code": 0,
+    "tests_run": 26,
+    "status": "OK",
+    "warning": "One ResourceWarning reports an unclosed read handle in the source-inertness test itself; no verifier failure or payload access occurred."
+  },
+  "independent_remote_manifest_check": {
+    "sha256": "885f41e27c439c808e2118de52184feaec58efe9f14bbc0e02a377e3b189f5ee",
+    "bytes": 1278,
+    "members": 6
+  },
+  "scope": {
+    "qwen_payload_read": false,
+    "live_result_read": false,
+    "cuda_used": false,
+    "control_payload_read": false,
+    "production_result_audited": false
+  },
+  "interpretation": "The frozen independent auditor passed its isolated hostile mechanics. This receipt does not audit a Qwen publication; that requires a separately recorded seven-member external pin bundle after atomic publication."
+}

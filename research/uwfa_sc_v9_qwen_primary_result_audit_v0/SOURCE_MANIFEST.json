@@ -1,0 +1,39 @@
+{
+  "access_attestation": {
+    "cuda_or_cupy_initialized": false,
+    "gaussian_control_accessed": false,
+    "live_v9_result_accessed": false,
+    "qwen_or_model_payload_accessed": false,
+    "runpod_accessed": false
+  },
+  "claim_boundary": "nonpromoting integrity audit only; no controls, shuffles, compression claim, or universal SwiGLU-MoE authority",
+  "members": [
+    {
+      "bytes": 7717,
+      "name": "README.md",
+      "sha256": "f0eb8574b4b59e4e63324539b2261e66dbcf4646ae9b00f4cb5a52ae8e5c51f0"
+    },
+    {
+      "bytes": 4644,
+      "name": "UNRESOLVED_EXTERNAL_PINS.json",
+      "sha256": "8f11a17bb14dd91802fa6a55bc417f99b40ffb85f9642cdb4e4c52c00c248f7a"
+    },
+    {
+      "bytes": 2897,
+      "name": "design_lock.json",
+      "sha256": "2040852ced7a7d3c851c0fb23ae18205fdf8963c04c77cc42134c2b39b915a42"
+    },
+    {
+      "bytes": 18153,
+      "name": "test_source_only.py",
+      "sha256": "13bb875de4a523011667ad070815fe0c722f40662b264ab8210716dfce161d7c"
+    },
+    {
+      "bytes": 214578,
+      "name": "verify_result.py",
+      "sha256": "e91652dd69421358847b60bad7a0cffab60aef8f6e9ff5ee20b1f98437059252"
+    }
+  ],
+  "schema": "uwfa-sc-v9-primary-independent-result-audit-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY"
+}
