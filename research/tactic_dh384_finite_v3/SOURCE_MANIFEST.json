@@ -1,0 +1,29 @@
+{
+  "schema": "tactic-dh384-finite-v3-source-manifest-v1",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_INDEPENDENT_REVIEW",
+  "source_root_sha256": "725991e0c1e10c67db4ba36097f80e78ffed158ea36b1b746bbbd6cef50ffa98",
+  "members": [
+    {"name": "README.md", "bytes": 8448, "sha256": "eabe8bc3e5b4b15a45f2f6b5f8d6dc359d2b21754ad988f6ac71d4977cba3335"},
+    {"name": "SUPERSESSION.md", "bytes": 1008, "sha256": "7aa9ef2c48e335e0250de6e9c5447991537a10e4c74b989b3a5950d8eddf7b82"},
+    {"name": "V6_LOCK.json", "bytes": 2779, "sha256": "c31bf60809c0feb13a563dd9e865802ecf8bf058a9daf8cb473301be8c878e08"},
+    {"name": "atomic_publish.py", "bytes": 9635, "sha256": "537ab5322f8fe62366008326f1aa4520224e4cc8c97df62a7f41d0487d7a417a"},
+    {"name": "design_lock.json", "bytes": 6738, "sha256": "f19c10da0cd9c37f1049c3ee143709c14f47c26c6e69e08a43ab7be930c48951"},
+    {"name": "dispatcher.py", "bytes": 26850, "sha256": "bc4ad4a6a8c29a736078a47bb28e941a542a33d38d68642ebbeeda8177711121"},
+    {"name": "external_contract.py", "bytes": 17802, "sha256": "de56c2da15cab6c274eb38c8684a8476c8e46f32a2e4c6cc477ed986cf4a2ad4"},
+    {"name": "finite_encoder.py", "bytes": 10666, "sha256": "93db64e4e8abee1a58b2896e2432410157f29df26ac5b63c88942e29d3a9b58a"},
+    {"name": "format_spec.py", "bytes": 23071, "sha256": "c702e0dc743e7647e827585053770c706ed232a8e5ad1f73a493a1eedaebbff5"},
+    {"name": "independent_decoder.py", "bytes": 12648, "sha256": "c4b804095477b8831826a4b412bd2b743647de317ac4dd07f82f202f210e9781"},
+    {"name": "runtime_bridge.py", "bytes": 10025, "sha256": "487644aab7bb1405489da025733630228081dc735e7112cc79570414f3c1456f"},
+    {"name": "source_auth.py", "bytes": 11892, "sha256": "b43487b1d2d7faad62bff9fca9064e9b24e75831473e4d39008406064ad1511b"},
+    {"name": "test_source_only.py", "bytes": 14936, "sha256": "ae14fce7b400325be3ab3e51994e05ca1f5d06564ff8f274feabbda12edfd814"},
+    {"name": "verify_source.py", "bytes": 11159, "sha256": "2311674e5a09af47e774e0ed4ed7ab65aa7549b600df35fd4476c19d75736ddb"}
+  ],
+  "claim_boundary": "source-only finite-code implementation; launch requires an externally hashed review receipt binding this source and one audited v6 result",
+  "access_attestation": {
+    "runpod_accessed": false,
+    "qwen_or_model_payload_accessed": false,
+    "v6_live_result_accessed": false,
+    "cuda_or_cupy_initialized_during_source_build": false,
+    "network_accessed": false
+  }
+}

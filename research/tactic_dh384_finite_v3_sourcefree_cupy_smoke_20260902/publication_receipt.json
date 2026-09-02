@@ -1,0 +1,25 @@
+{
+  "existing_target_unchanged": true,
+  "prepublication_fault_left_no_public_or_staging_namespace": true,
+  "publication_receipt": {
+    "atomic_directory_rename_noreplace": true,
+    "complete": {
+      "bytes": 530,
+      "name": "COMPLETE.json",
+      "sha256": "68b942a60b54912f8afc0671a5e7d6a74f8dc48a7dc1f52f7204e0aa1ab3fdb7"
+    },
+    "members": [
+      {"bytes": 5, "name": "A.bin", "sha256": "8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"},
+      {"bytes": 3, "name": "B.json", "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"}
+    ],
+    "published_members_rehashed_before_completion": true,
+    "staging_rehashed_before_publication": true,
+    "terminal_completion_rename_noreplace": true
+  },
+  "qwen_or_model_payload_accessed": false,
+  "schema": "tactic-dh384-finite-v3-publication-smoke-v1",
+  "source_manifest_sha256": "bf0659d1fd6742768d14790ea980aa17321818d15e19ddd7d0dfaa8a223009b8",
+  "status": "PASS_ATOMIC_SUCCESS_NO_OVERWRITE_AND_FAULT_CLEANUP",
+  "success_completion_sha256": "68b942a60b54912f8afc0671a5e7d6a74f8dc48a7dc1f52f7204e0aa1ab3fdb7",
+  "v6_live_result_accessed": false
+}

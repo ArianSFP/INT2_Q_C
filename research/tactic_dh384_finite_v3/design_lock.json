@@ -1,0 +1,132 @@
+{
+  "schema": "tactic-dh384-finite-v3-design-lock-v1",
+  "status": "SOURCE_ONLY_FINITE_CODEC_FROZEN_AWAITING_INDEPENDENT_REVIEW",
+  "name": "TACTIC-DH384-finite-v3",
+  "date": "2026-09-02",
+  "predecessor_boundary": {
+    "tactic_conditional_dyadic_coset_v2_modified": false,
+    "tactic_actual_coarse_n18_v6_modified": false,
+    "v2_continuous_parent_selector_packet_sha256": "0946880088b766265a29d7d84ef4165a92a636eba0877dee9ce8b5b43dac56ad",
+    "v2_independent_source_audit_root_sha256": "cd03644f0e1c36f1c568208d863c10bfd52959fb3dd5e47b6d5c41132dafb61d",
+    "v6_source_manifest_sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d",
+    "v6_source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2"
+  },
+  "pilot_geometry": {
+    "roles": ["gate", "up", "down_transposed"],
+    "intermediate": 768,
+    "hidden": 2048,
+    "weights_per_expert": 4718592,
+    "coarse_tiles_per_role": 6,
+    "fine_blocks_per_role": 384,
+    "fine_blocks_per_expert": 1152,
+    "block_values": 4096
+  },
+  "finite_record": {
+    "bytes": 48,
+    "bits": 384,
+    "byte_0": "uint8 scale code m",
+    "bytes_1_through_47": "376 coefficient-sign bits in coefficient order, LSB-first within each byte",
+    "charged_scale_bits": 8,
+    "charged_sign_bits": 376,
+    "free_or_unallocated_bits": 0,
+    "zero_scale_rule": "m=0 is canonical only when all 376 sign bits are zero",
+    "scale_law": "alpha=maxabs_f32(decoded coarse 4096-block)*m^2/2^18",
+    "scale_is_source_fitted": false,
+    "scale_side_channel_outside_record": false,
+    "legal_codebook_size": "1 + 255*2^376 distinct canonical records",
+    "coefficient_law": "first 376 conditional-transform coefficients are +/-alpha; coefficients 376..4095 are exactly zero"
+  },
+  "dyadic_containment": {
+    "selector": "source-independent SplitMix64 ordinal 17 from audited v2",
+    "stages": 12,
+    "normalization": "1/64",
+    "audited_parent_span": "B[:,0:384]",
+    "finite_active_span": "B[:,0:376]",
+    "literal_subset": true,
+    "decoder_asserts_analysis_tail_zero": true,
+    "finite_correction_outside_parent_span_permitted": false
+  },
+  "containment_ceiling": {
+    "rank384_isotropic_dimension_fraction": "384/4096 = 0.09375 = 9.375%",
+    "rank384_one_bit_per_dimension_gaussian_expected_capture": "(2/pi)*(384/4096) = approximately 0.0596831 = 5.96831%",
+    "rank376_isotropic_dimension_fraction": "376/4096 = 0.091796875",
+    "rank376_sign_gaussian_expected_capture": "(2/pi)*(376/4096) = approximately 0.0584398",
+    "interpretation": "These are containment/source-model diagnostics, not Qwen measurements or general converses."
+  },
+  "encoder_objective": {
+    "coarse_codeword_reoptimized": false,
+    "fine_labels_source_selected": true,
+    "fine_search": "For every block, exhaust all 256 charged scale labels and select all 376 sign labels to minimize exact orthogonal-span SSE. Because every record is fixed at 384 bits, D+lambda*R reduces to exact D minimization inside this frozen conditional codebook.",
+    "same_codebook_forced_local_comparator": "sign(y) and the nearest frozen scale to mean(abs(y)); executable must report exact record mismatch count and require zero mismatches, proving local/exhaustive equivalence for this separable fixed-rate codebook.",
+    "not_claimed": "No LOGIC-Q architecture, entropy-variable label rate, joint coarse/fine codeword search, or change to v6 coarse labels."
+  },
+  "hard_kill": {
+    "target_D_at_2p5": 0.025,
+    "exact_nested_required_capture": "max(0,1-0.025/D0), where D0 is the independently decoded v6 coarse SSE divided by exact BF16 source energy",
+    "externally_reported_raw_v6_reference_not_trusted_until_audit": {
+      "D0": 0.036975150060595235,
+      "required_capture": 0.32387022205373717,
+      "required_capture_percent": 32.38702220537372,
+      "all_remaining_0p1015625_bpw_ideal_gaussian_D": 0.032119089632297364,
+      "all_remaining_0p1015625_bpw_ideal_gaussian_F": 1.0278108682335156
+    },
+    "old_19p1_percent_threshold_reused": false,
+    "rule_1": "If measured B[:,0:384] continuous capture is below the exact nested threshold, emit no finite composite and hard-reject this branch.",
+    "rule_2": "If parent rank384 survives but implemented B[:,0:376] continuous capture is below threshold, emit no finite composite and hard-reject this implementation.",
+    "nonconverse": "Failure kills only this fixed conditional dyadic finite codebook, not graph lifting, posterior reconstruction, syndrome coding, joint coarse/fine search, or broader TACTIC-CAGE."
+  },
+  "literal_single_expert_packet": {
+    "header_bytes": 4608,
+    "coarse_bytes": 1414656,
+    "fine_bytes": 55296,
+    "total_bytes": 1474560,
+    "physical_bpw": "320/128 = 2.5",
+    "aligned_4096_pages": 360,
+    "header_bpw": "1/128",
+    "coarse_bpw": "307/128",
+    "fine_bpw": "12/128",
+    "metadata_slack_bits": 0,
+    "global_packet_bytes_emitted": 0,
+    "one_external_file_pass_amplification_over_literal_packet": 1.0
+  },
+  "six_expert_amortized_layout": {
+    "emitted": false,
+    "parsed": false,
+    "global_packet_bytes": null,
+    "read_amplification": null,
+    "seventy_three_over_seventy_two_claim": false,
+    "reason": "The literal pilot is an expert-local 2.5-bpw container. It must not inherit the earlier planned six-expert global packet or 73/72 page calculation."
+  },
+  "execution_security": {
+    "isolated_cpython_required": true,
+    "bytecode_disabled_required": true,
+    "cuda_visible_devices_exactly_0": true,
+    "source_members_retained_no_follow": true,
+    "exact_v6_source_runtime_retained_no_follow": true,
+    "v6_completed_result_retained_no_follow": true,
+    "launch_review_opened_before_v6_result_or_bf16": true,
+    "launch_review_binds_finite_source_v6_complete_and_input_manifest": true,
+    "output_private_staging": true,
+    "publication_renameat2_noreplace": true,
+    "terminal_complete_written_after_rehash": true
+  },
+  "traffic": {
+    "literal_external_packet_read_is_exact": true,
+    "repeated_external_reads_separated": true,
+    "host_parse_and_encoder_work_not_laundered_as_external_io": true,
+    "accelerator_hbm_measured": false,
+    "below_2x_inference_hbm_claim_authority": false
+  },
+  "claim_boundary": {
+    "one_qwen_geometry_expert_pilot_only": true,
+    "qwen_or_model_identity_available_to_codec": false,
+    "universal_swiglu_moe_tail_result": false,
+    "non_qwen_portability_result": false,
+    "qwen_payload_accessed_during_source_build": false,
+    "v6_live_result_accessed_during_source_build": false,
+    "runpod_accessed_during_source_build": false,
+    "cupy_or_cuda_initialized_during_source_build": false,
+    "finite_result_claimed": false,
+    "positive_claim_authority": false
+  }
+}

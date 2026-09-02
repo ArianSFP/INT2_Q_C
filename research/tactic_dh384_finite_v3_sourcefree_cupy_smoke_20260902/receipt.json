@@ -1,0 +1,51 @@
+{
+  "continuous": {
+    "active_rank376_projected_energy_fp64": 2.046904887517999,
+    "audited_parent_rank384_projected_energy_fp64": 2.09627188176393,
+    "error_energy_fp64": 22.690393703204023,
+    "transformed_energy_fp64": 22.690393703204023
+  },
+  "cupy": "14.2.0",
+  "decode": {
+    "active_rank": 376,
+    "aggregate_fine_tile_reencode_matches": true,
+    "all_records_independently_reencode": true,
+    "audited_parent_rank": 384,
+    "blocks": 64,
+    "correction_in_active_rank376_subset_parent_rank384": true,
+    "fine_bytes": 3072,
+    "fine_sha256": "8cf40bd3073ec0f2f2ba6b015903d4b8bf993bc0e12a2be86885494f786a7013",
+    "maximum_active_coefficient_roundtrip_error_fp64": 0.0,
+    "maximum_transformed_tail_abs_fp64": 0.0
+  },
+  "decoded_sse_fp64": 21.384562617226948,
+  "device": "NVIDIA GeForce RTX 5090",
+  "encode": {
+    "blocks": 64,
+    "coarse_codeword_reoptimized_jointly": false,
+    "coarse_sse_fp64": 22.690393703204023,
+    "correction_in_active_rank376_subset_parent_rank384": true,
+    "fine_bytes": 3072,
+    "fine_encoder_search": "exhaustive 256-scale D+lambda*R search with all 376 legal sign labels source-selected; lambda*R is constant at 384 bits",
+    "finite_error_capture_fp64": 1.3058310859770756,
+    "finite_sse_fp64": 21.384562617226948,
+    "forced_local_decisions_equal_exact_joint_search": true,
+    "forced_local_vs_joint_record_mismatches": 0,
+    "forced_same_codebook_local_comparator": "sign(y) plus nearest frozen scale to mean(abs(y))",
+    "maximum_scale_code": 142,
+    "minimum_scale_code": 106,
+    "record_reencode_matches": true,
+    "zero_scale_records": 0
+  },
+  "fine_bytes": 3072,
+  "maximum_encoder_decoder_correction_abs_difference_fp64": 0.0,
+  "numpy": "2.5.2",
+  "positive_claim_authority": false,
+  "qwen_or_model_payload_accessed": false,
+  "records": 64,
+  "schema": "tactic-dh384-finite-v3-sourcefree-cupy-smoke-v1",
+  "source_manifest_sha256": "bf0659d1fd6742768d14790ea980aa17321818d15e19ddd7d0dfaa8a223009b8",
+  "source_root_sha256": "725991e0c1e10c67db4ba36097f80e78ffed158ea36b1b746bbbd6cef50ffa98",
+  "status": "PASS_SOURCEFREE_CUPY_ENCODER_INDEPENDENT_DECODER_PARITY",
+  "v6_live_result_accessed": false
+}

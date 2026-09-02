@@ -1,0 +1,35 @@
+{
+  "schema": "tactic-dh384-finite-v3-v6-lock-v1",
+  "status": "EXACT_IMMUTABLE_V6_DECODER_RUNTIME_DEPENDENCY",
+  "relative_directory": "research/tactic_actual_coarse_n18_v6",
+  "source_manifest": {
+    "bytes": 2264,
+    "sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d"
+  },
+  "source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2",
+  "predecessor_lock_sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+  "runtime_lock_sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+  "members": [
+    {"name": "IMPLEMENTATION_MAP.md", "bytes": 1961, "sha256": "6d12686a85654df9cb02ee8f0825d0307cb72c9063b3605dc36988c43864e4dc"},
+    {"name": "PREDECESSOR_LOCK.json", "bytes": 2129, "sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322"},
+    {"name": "README.md", "bytes": 5292, "sha256": "9c072debb454ef5dcd381df7a378ce82a0fff2bb207dfe00e3d69ba5e329e1d6"},
+    {"name": "RUNTIME_LOCK.json", "bytes": 587, "sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490"},
+    {"name": "design_lock.json", "bytes": 3233, "sha256": "69512898ffc625f13f2f0c4fd4231b76a8d51e173b356e8ea6609184c9ef69ba"},
+    {"name": "dispatcher.py", "bytes": 30603, "sha256": "b1475fedeb485d38fb4b6921db242b176de7857e7725ad2e55c9afcf0c26cfcb"},
+    {"name": "runtime_closure.py", "bytes": 11593, "sha256": "4e2e51d28a2b60b78e64f082dcda4e28a24568fb5acc7fbe90b6be977fb087ed"},
+    {"name": "smoke_contract.py", "bytes": 10607, "sha256": "60c14565c66c0f52e7ed5dc60749c24b2599be85dcaa02aa196299a61810725c"},
+    {"name": "source_auth.py", "bytes": 12442, "sha256": "201f50260044aeed9a0d6b7136c967bb6383b4fcc1d978f46e270102f8d8c927"},
+    {"name": "successor_codec.py", "bytes": 17637, "sha256": "d48630348fdc84c8a8d356b0787ed2af09227894030915f84f06ff40eab1fdd9"},
+    {"name": "synthetic_cupy_smoke.py", "bytes": 20572, "sha256": "f6f9ad75a5c90cb7a335f1973c55dbc5821346074a4ebdff61eef1f02801a411"},
+    {"name": "test_source_only.py", "bytes": 30961, "sha256": "48ba6b470fb55c1994e7ae38da7faff07078d55f95c9dcd3921612412c4f3162"},
+    {"name": "verify_source.py", "bytes": 10069, "sha256": "86f9c2893082c4d3147c6b1a69eaf6d01382e540cc6839e7b485613979b9a1ff"}
+  ],
+  "exact_decoder": {
+    "successor_codec_sha256": "d48630348fdc84c8a8d356b0787ed2af09227894030915f84f06ff40eab1fdd9",
+    "runtime_closure_sha256": "4e2e51d28a2b60b78e64f082dcda4e28a24568fb5acc7fbe90b6be977fb087ed",
+    "tile_decoder_entry": "decode_tile_v6",
+    "canonical_symbol_dtype": "<i4",
+    "literal_reencode_required": true
+  },
+  "claim_boundary": "This source lock identifies decoder/runtime bytes only. It is not a v6 result audit, finite-pilot launch authority, or payload identity."
+}
