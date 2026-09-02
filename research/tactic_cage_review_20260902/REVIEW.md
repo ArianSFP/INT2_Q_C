@@ -28,7 +28,13 @@ eligible lower-rate coarse codec.
 
 - A model-charged, whole-component-held-out WFA/CTW/TTN law on actual Qwen SC
   decisions.  The `0.16754150390625` bits/symbol result is a source-free
-  detector calibration, not Qwen evidence.
+  detector calibration, not Qwen evidence.  It must not be compared directly
+  with the `0.1528899669629145` bits/weight ideal target: the units differ.
+  This artifact has `4.472635975590459` selected SC symbols per weight, so the
+  stricter page-aligned same-reconstruction threshold is
+  `0.03441710571244585` saved bits per selected symbol after every model and
+  framing byte.  The fixture's magnitude is therefore ample as a detector
+  calibration, but says nothing about Qwen's actual saving.
 - A non-local posterior centroid conditioned on the complete decoded message.
   Existing local LUT, affine and small deterministic decoder corrections do
   not contain a persistent/non-unifilar latent posterior over exact SC cells.

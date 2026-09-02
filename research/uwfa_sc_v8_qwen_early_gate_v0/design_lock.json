@@ -41,6 +41,15 @@
     "production_authority": false,
     "required_production_followup": "freshly reviewed sealed producer revision"
   },
+  "exploratory_single_artifact_panel_cache": {
+    "operation": "reuse the exact same decoded panel object for pre-source binding and the sealed source_phase call",
+    "identity_gate": "identical artifact byte count and SHA-256",
+    "delegate_calls_required": 1,
+    "wrapper_extract_calls_required": 2,
+    "changes_symbols_or_panel_values": false,
+    "bound_into_result": true,
+    "production_authority": false
+  },
   "promotion": false,
   "binding_authority": "The sealed v8 manifest and member hashes are exact. The exploratory runner locally constructs the score-receipt, decoder-bundle, audit-bootstrap and pipeline bindings; they are disclosed diagnostics and are not an externally pinned production-dispatcher receipt.",
   "claim_boundary": "A negative result may early-kill this exact v8 recoder. A survivor is not a compression claim and still requires controls, external dispatcher authority and a fresh independent result audit.",

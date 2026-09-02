@@ -254,6 +254,60 @@ def normalize_strata_group_ordinal_abi(strata_common: Any) -> dict[str, Any]:
     return receipt
 
 
+class SingleArtifactPanelCache:
+    """Reuse one exact decoded panel across binding and sealed source phase.
+
+    The exploratory wrapper must decode the artifact once to construct the
+    score/geometry bindings before calling ``source_phase``.  The sealed source
+    phase independently calls the same adapter entrypoint again.  This proxy
+    permits exactly one artifact identity and returns the identical already
+    validated panel object on that second call; all other adapter methods are
+    delegated unchanged.
+    """
+
+    def __init__(self, delegate: Any) -> None:
+        require(callable(getattr(delegate, "extract_from_current", None)), "panel-cache delegate")
+        self._delegate = delegate
+        self._artifact_bytes: int | None = None
+        self._artifact_sha256: str | None = None
+        self._panel: Any = None
+        self.extract_calls = 0
+        self.delegate_extract_calls = 0
+
+    def extract_from_current(self, raw: bytes) -> Any:
+        require(isinstance(raw, bytes), "panel-cache artifact bytes")
+        self.extract_calls += 1
+        digest = sha256(raw)
+        if self._panel is None:
+            panel = self._delegate.extract_from_current(raw)
+            require(isinstance(panel, dict), "panel-cache decoded panel")
+            self._artifact_bytes = len(raw)
+            self._artifact_sha256 = digest
+            self._panel = panel
+            self.delegate_extract_calls += 1
+            return panel
+        require(len(raw) == self._artifact_bytes, "panel-cache artifact byte identity")
+        require(digest == self._artifact_sha256, "panel-cache artifact digest identity")
+        return self._panel
+
+    def receipt(self) -> dict[str, Any]:
+        row = {
+            "schema": "uwfa-sc-v8-qwen-early-gate-single-artifact-panel-cache-v0",
+            "status": "EXPLORATORY_EXACT_IDENTITY_REUSE",
+            "artifact_bytes": self._artifact_bytes,
+            "artifact_sha256": self._artifact_sha256,
+            "extract_calls": self.extract_calls,
+            "delegate_extract_calls": self.delegate_extract_calls,
+            "same_panel_object_reused": self.extract_calls == 2 and self.delegate_extract_calls == 1,
+            "positive_claim_authority": False,
+        }
+        row["receipt_sha256"] = sha256(canonical_json(row))
+        return row
+
+    def __getattr__(self, name: str) -> Any:
+        return getattr(self._delegate, name)
+
+
 def authenticate_v8_package(package: Path) -> dict[str, Any]:
     package = require_absolute_lexical(package, "v8 package")
     reject_symlink_chain(package, "v8 package")
@@ -636,7 +690,7 @@ def run(arguments: argparse.Namespace) -> dict[str, Any]:
             "sha256": held_artifact.sha256,
         }
 
-    adapter = modules["adapter_source"].StrataSCAdapter(
+    raw_adapter = modules["adapter_source"].StrataSCAdapter(
         common=modules["common"],
         semantic_codec=modules["semantic"],
         np=np,
@@ -644,6 +698,7 @@ def run(arguments: argparse.Namespace) -> dict[str, Any]:
         strata_common=external["strata_common"],
         device="cupy",
     )
+    adapter = SingleArtifactPanelCache(raw_adapter)
     panel = modules["stage"].prepare_panel(modules["protocol"], adapter, artifact_bytes)
     full_geometry = modules["protocol"].geometry_sha256(modules["common"], panel)
     structural_geometry = modules["protocol"].structural_geometry_sha256(modules["common"], panel)
@@ -716,6 +771,8 @@ def run(arguments: argparse.Namespace) -> dict[str, Any]:
         authenticated_descriptor_source_builder=descriptor_source_builder(modules["codec"]),
     )
     source_status = str(source_result["status"])
+    panel_cache_receipt = adapter.receipt()
+    require(panel_cache_receipt["same_panel_object_reused"] is True, "source phase did not reuse exact decoded panel")
     public_source = {key: value for key, value in source_result.items() if not key.startswith("_")}
     scientific = public_source.get("scientific_nested_holdout", {})
     physical = public_source.get("source_final")
@@ -788,6 +845,7 @@ def run(arguments: argparse.Namespace) -> dict[str, Any]:
         "bindings": bindings.container_hashes(),
         "decoder_bundle": decoder_bundle,
         "decoder_bundle_sha256": decoder_bundle_sha,
+        "exploratory_panel_cache": panel_cache_receipt,
         "pipeline_record": pipeline_record,
         "pipeline_sha256": pipeline_sha,
         "source_hashes": {

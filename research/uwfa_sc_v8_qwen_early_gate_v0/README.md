@@ -33,6 +33,14 @@ This makes the run useful as an exploratory Qwen early-kill diagnostic, but it
 is not execution of the sealed producer unchanged; a production result needs
 a freshly reviewed producer revision with the ABI repair in its sealed source.
 
+The wrapper also retains the exact decoded panel produced for its pre-source
+geometry binding and returns that same object when sealed `source_phase` calls
+the same adapter entrypoint.  The proxy accepts only the identical artifact
+byte count and SHA-256 and delegates every other adapter method unchanged.  Its
+receipt must show two extraction calls and exactly one underlying decode.  This
+removes an otherwise redundant complete causal replay without changing any
+panel value, stream, fit or source-phase logic.
+
 The sealed v8 source closure and external STRATA members are hash-pinned. The
 score receipt is locally constructed from the fixed audited D/SSE/energy and
 recomputed identities; the decoder-bundle, exploratory bootstrap and pipeline

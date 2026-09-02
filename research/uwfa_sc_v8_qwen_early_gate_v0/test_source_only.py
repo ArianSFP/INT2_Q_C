@@ -196,6 +196,31 @@ class EarlyGateSourceTests(unittest.TestCase):
         claimed = clean.pop("receipt_sha256")
         self.assertEqual(claimed, hashlib.sha256(runner.canonical_json(clean)).hexdigest())
 
+    def test_single_artifact_panel_cache_reuses_exact_object_and_rejects_substitution(self) -> None:
+        class Delegate:
+            def __init__(self):
+                self.calls = 0
+                self.marker = "delegated"
+
+            def extract_from_current(self, raw):
+                self.calls += 1
+                return {"raw": raw, "call": self.calls}
+
+        delegate = Delegate()
+        cache = runner.SingleArtifactPanelCache(delegate)
+        first = cache.extract_from_current(b"same-artifact")
+        second = cache.extract_from_current(b"same-artifact")
+        self.assertIs(first, second)
+        self.assertEqual(delegate.calls, 1)
+        self.assertEqual(cache.marker, "delegated")
+        receipt = cache.receipt()
+        self.assertEqual(receipt["extract_calls"], 2)
+        self.assertEqual(receipt["delegate_extract_calls"], 1)
+        self.assertTrue(receipt["same_panel_object_reused"])
+        with self.assertRaisesRegex(runner.EarlyGateError, "digest identity"):
+            cache.extract_from_current(b"evil-artifact")
+        self.assertFalse(cache.receipt()["same_panel_object_reused"])
+
     def test_publication_is_exclusive_and_complete_last(self) -> None:
         if os.name != "posix":
             self.skipTest("descriptor-relative publication test is POSIX")
