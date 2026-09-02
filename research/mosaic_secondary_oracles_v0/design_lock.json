@@ -1,0 +1,120 @@
+{
+  "schema": "mosaic-secondary-oracles-design-v0",
+  "status": "SEALED_SOURCE_ONLY_NO_QWEN_OR_COARSE_PAYLOAD_AUTHORITY",
+  "date": "2026-09-02",
+  "objective": {
+    "universal_target": "SwiGLU-MoE Gate/Up/Down-transposed weight codec",
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "target_F": 0.8,
+    "target_relative_mse_at_2p5": 0.025,
+    "strict_cold_read_amplification_below": 2.0,
+    "coarse_rate_bpw": 2.3984375,
+    "coarse_relative_mse": 0.036975150060595235,
+    "fine_bits_per_4096": 384,
+    "metadata_rate_bpw": 0.0078125,
+    "required_coarse_residual_capture": 0.32387022205373717
+  },
+  "repository_evidence": {
+    "cyclo_fri4_periods_already_tested": [1, 2, 4],
+    "cyclo_fri4_audited_best_F": 0.9379899307967997,
+    "cyclo_fri4_decision": "HARD_KILL_ABSOLUTE_DOMINANT_ORACLE_NO_CONTROLS",
+    "graph_krylov_source_specific_excess_bpw": 0.00015723251757482348,
+    "graph_krylov_decision": "HARD_KILL_COARSE_GRAPH_NOT_SOURCE_SPECIFIC_0P03_BPW",
+    "ordinary_arithmetic_coder_replacement_is_not_reopened": true,
+    "periods_1_2_4_are_not_retested": true
+  },
+  "execution_order": [
+    "exact_gf2_berlekamp_massey_four_level_label_packet",
+    "fixed_non_dyadic_ramanujan_residual_basis",
+    "binary16_AR_annihilating_filter_with_inverse_noise_pullback",
+    "BM3D_pretest_only_after_prior_survivor"
+  ],
+  "gf2_recurrence": {
+    "scope": "exact recurrence without exceptions on two Gray bitplanes of a legal four-level label block",
+    "algorithm": "exact Berlekamp-Massey over GF(2) with word-parallel Python-int discrepancy",
+    "block_packet": "LRB0 version 1 with per-plane raw-or-LFSR mode and CRC32",
+    "component_packet": "LRC0 version 1 with role identity, block offsets, BF16 scales, canonical 64-byte padding and CRC32",
+    "expert_packet": "LRE0 version 1 with fixed Gate/Up/Down-transposed order, exact weight coverage, 2.15-bpw floor, canonical 4KiB padding and CRC32",
+    "lfsr_payload": "L connection bits plus L initial bits",
+    "raw_payload": "one bit per label per plane",
+    "tie_break": "raw on equal logical payload",
+    "outer_component_charge": "64-byte component header, 4-byte block offsets including terminal, BF16 scale per block, 64-byte role alignment, 64-byte expert header, 4KiB expert final alignment",
+    "canonical_decode_and_reencode_required": true,
+    "equivalent_overpadding_and_nonminimal_block_modes_rejected": true,
+    "exceptions_implemented": false,
+    "negative_claim_boundary": "a miss closes exact LFSR recoding only, not robust recurrence plus exceptions, label-flexible recurrence, QTT, RM, or general finite-field structure"
+  },
+  "ramanujan": {
+    "periods": [3,5,6,7,9,10,11,12,13,15,17,19,21,23,25,27,29,31,33,35,37,41,43,47,53,59,61,63,65,67,71,73,79,83,89,97,101,107,113,127],
+    "periods_are_public": true,
+    "basis": "real primitive-frequency atoms followed by one source-independent canonical QR",
+    "maximum_columns": 768,
+    "block_values": 4096,
+    "metrics": [
+      "fixed public prefix with free exact amplitudes",
+      "fixed public prefix with literal FP16 amplitudes inside 384 bits",
+      "source-selected support with combinatorial rank plus FP16 amplitudes inside 384 bits",
+      "ideal Gaussian waterfill on the fixed public basis without a finite backend"
+    ],
+    "source_selected_support_is_free": false,
+    "all_reconstruction_scored_in_source_coordinates": true
+  },
+  "hankel_AR": {
+    "orders": [1, 2, 4, 8, 12],
+    "coefficient_encoding": "IEEE binary16",
+    "per_block_order_selector_bits": 4,
+    "coefficients_source_derived_and_charged": true,
+    "initial_values_transmitted_separately": false,
+    "initial_values_are_coded_as_innovations": true,
+    "innovation_backend": "ideal iid Gaussian diagnostic only",
+    "finite_innovation_codec_executed": false,
+    "inverse_filter_pullback": "finite-length trace(H H^T) noise amplification is charged",
+    "hard_fail_on_nonfinite_or_explosive_inverse": true,
+    "negative_claim_boundary": "a miss closes only this low-order binary16 AR family, not arbitrary Hankel rank or nonlinear dynamics"
+  },
+  "controls": {
+    "source_first": true,
+    "controls_forbidden_until_absolute_source_D_le_0p025": true,
+    "permutation": "frozen odd-affine phase-destroying permutation with identical public geometry",
+    "gaussian_seeds": [10619863,10619881,10619909,10619927,10619953,10619971,10619999,10620017],
+    "gaussian": "complete matched-coarse pipeline, each public block matched in binary64 mean and centered energy",
+    "complete_model_selection_rerun": true,
+    "minimum_source_minus_stronger_control_bpw": 0.03,
+    "control_subtraction_cannot_create_absolute_pass": true,
+    "whole_owner_uncertainty_required": true
+  },
+  "physical_and_traffic": {
+    "all_descriptors_displace_the_384_fine_bits": true,
+    "coarse_or_expert_packet_external_reads": 1,
+    "compressed_packet_refetches": 0,
+    "coarse_state_must_be_buffered_once": true,
+    "page_aligned_expert_start_and_end": true,
+    "host_scratch_and_hbm_reported_separately": true,
+    "no_below_2x_inference_HBM_claim_from_this_oracle": true
+  },
+  "BM3D": {
+    "status": "DEFERRED_NOT_WARRANTED_BY_CURRENT_GRAPH_EVIDENCE",
+    "opening_pretest": "coarse-signature nearest-neighbour residual correlation must beat contiguous grouping and both controls by a whole-owner lower confidence bound",
+    "minimum_opening_excess_bpw": 0.03,
+    "matching_from_residual_forbidden": true,
+    "second_expert_packet_read_forbidden": true
+  },
+  "selection_and_universality": {
+    "configuration_selected_on_disjoint_whole_layers": true,
+    "test_layers_never_select_period_order_rank_or_AR_order": true,
+    "minimum_whole_test_layers": 5,
+    "portability_to_disjoint_SwiGLU_MoE_family_required": true,
+    "model_checkpoint_layer_expert_identity_is_not_decoder_input": true,
+    "separately_measured_oracle_gains_may_be_added": false
+  },
+  "source_access": {
+    "production_payload_adapter_present": false,
+    "qwen_model_checkpoint_payload_opened_statted_hashed_enumerated": false,
+    "coarse_result_or_COARSE_bin_opened_statted_hashed_enumerated": false,
+    "graph_result_used_as_payload": false,
+    "matched_control_payload_opened_statted_hashed_enumerated": false,
+    "network_used_by_source_fixture_tests": false,
+    "independent_source_audit_required_before_production_adapter": true
+  },
+  "claim_boundary": "Source-frozen mechanics and dominant oracles only. No Qwen result, finite target pass, universal converse, below-2x inference-HBM result, or universal SwiGLU-MoE performance claim."
+}

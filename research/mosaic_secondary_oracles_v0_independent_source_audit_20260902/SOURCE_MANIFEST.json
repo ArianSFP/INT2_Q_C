@@ -1,0 +1,26 @@
+{
+  "schema": "mosaic-secondary-oracles-independent-source-audit-manifest-v1",
+  "status": "MECHANISMS_VALID__HOLD_PRODUCTION_ADAPTER_SCORER_BACKEND_AND_IO_BINDING",
+  "source_root_sha256": "e48d7732285200d54971a2474269bd9b63b53213edfb40c685af8e5a78d1ea90",
+  "upstream_manifest_sha256": "4259e8e8dc87b4c25301ca89ade7dbd63c1e0c9e3415fdaa4d7881d7d10ccc06",
+  "upstream_source_root_sha256": "60bf8cb7575c165c1e8e648360b9d81f39c092070a9489684904bcf06d0bd820",
+  "members": [
+    {"name":"AUDIT_RESULT.json","bytes":5093,"sha256":"42579480f7c3915cc3b1f56c814a2400f06909717518e17203b2b19c65d70660"},
+    {"name":"CUPY_AUDIT_RECEIPT.json","bytes":1512,"sha256":"e282a1e70fb5ca3ba2fa459b87db8ad5020dd9efd891f0ffb6fdd86d703a771d"},
+    {"name":"README.md","bytes":5269,"sha256":"02c168796d2fbe1d3efc7500aa5739c4f1af3d36b3429672c90bc1d46ca9424c"},
+    {"name":"audit_source.py","bytes":26376,"sha256":"66f6ac315996d2f54761e95a95a9a1f36e4ea62e2b64f2ea5354412056a2bfef"},
+    {"name":"run_cupy_backend_audit.py","bytes":6064,"sha256":"4d69fbeb0a719af42eb4f68f619f7fcac4eb497c12db3b03f1d2318d8aa0d5ca"},
+    {"name":"test_audit.py","bytes":2570,"sha256":"96e61d8324ca517c09d1c27539dcc703843424fc2ce1d43a951a1e17345ef067"},
+    {"name":"verify_audit.py","bytes":6852,"sha256":"9d3df98506f0270f9684a01b71840b6e20170ed96a32b9b578de9cf95b8e53dc"}
+  ],
+  "access_attestation": {
+    "qwen_model_checkpoint_payload_accessed": false,
+    "coarse_result_or_COARSE_bin_accessed": false,
+    "matched_control_payload_accessed": false,
+    "source_only_runpod_used": true,
+    "cupy_device_used": "NVIDIA GeForce RTX 5090",
+    "cupy_version": "14.2.0"
+  },
+  "production_launch_authorized": false,
+  "claim_boundary": "source mechanics only; no Qwen result, finite target result, runtime read result, or universal SwiGLU-MoE result"
+}

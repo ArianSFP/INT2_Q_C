@@ -64,18 +64,19 @@ selection on complete matched-Gaussian PTQ controls.
 
 Three proposed branches have been converted into source-frozen experiments:
 
-1. **ε-TCQ / causal-state joint label selection.** Mechanism-valid, but the
-   first production-binding audit found caller-trusted byte and gain fields.
-   More importantly, exact STRATA inspection shows that a coordinate's
-   0..63 reconstruction index is assembled from six full polar level outputs;
-   it is not six independent arithmetic events local to that coordinate.
-   Coordinate-local ε changes therefore do not replay the current codec. A
-   real integration needs a block-level resumable polar state search.
-2. **LOGIC-Q algebraic label selection.** Bounded RM(1), small-rank GF(2),
-   and ROMDD packets are executable and finite. The source audit found missing
-   hard-kill orchestration, non-scalable paths, scale-first fitting, a
-   component-only rate gate, and noncanonical equivalent encodings. A capped
-   successor is required before Qwen access.
+1. **ε-TCQ / causal-state joint label selection.** Exact STRATA inspection
+   proves that a coordinate's 0..63 reconstruction index is assembled from six
+   complete level-major polar passes, not six coordinate-local arithmetic
+   events. The audited v1 adapter retracts that invalid ABI. A dense beam-32
+   state costs 7,147,102,208 bytes; the audited ragged/COW design lowers the
+   complete beam-32 peak to 1,610,756,864 bytes, including explicit leaf
+   buffers, but compute and exact device-COW semantics remain on hold.
+2. **LOGIC-Q algebraic label selection.** A capped v1 now has executable
+   mixed-family pre-search, joint two-scale/RM(1) scoring, canonical expert
+   packets, and a real CuPy path. Independent audit found three remaining
+   production bindings: publicly resealable selection receipts, trusted
+   encoder-side score objects, and a name-only CuPy guard. No Qwen access is
+   authorized until a narrow successor closes them.
 3. **Coarse-programmed graph/Krylov refinement.** The decoder-legal optimistic
    gate has completed and hard-killed. Its best continuous Qwen waterfill gain
    was `0.30344543088152887 bpw`, but the strongest identical-geometry control
@@ -130,6 +131,42 @@ coverage. It rejects booleans, floats, duplicates, missing rows, and
 out-of-range values. The exact v8 unpack route now passes 25 hostile tests.
 The failed v0 namespace remains invalid and is not reused.
 
+### ε-TCQ exact integration and memory gate
+
+The source-frozen v1 adapter and independent audit pass 14 hostile tests and a
+source-free CuPy top-k smoke. They establish that legal search must carry a
+whole resumable polar state. The straightforward beam-32 representation at
+`N=2^21` is 7,147,102,208 bytes, so it is not a viable production state.
+
+A second ragged-state derivation uses the exact identity that active
+likelihood cells total `N-1` per path rather than `(N/2) log2(N)`. Its audited
+complete beam-32 peak is 1,610,756,864 bytes; the simultaneous RTX 5090 CuPy
+pool measured 1,610,762,240 bytes. This makes memory capacity a GO. It is not a
+throughput GO: the frozen worst-active upper ledger includes
+8,455,716,864 likelihood updates, 4,227,858,624 partial-sum writes,
+3,825,205,440 partial-sum XORs, 4,227,858,432 polar XORs, and a complete
+one-path six-pass winner replay with another 264,241,152 likelihood updates.
+Device COW/fork semantics, persistent six-pass execution, and exact Q0.16/FMA
+boundary equivalence remain unimplemented, so payload access stays blocked.
+
+### LOGIC-Q capped adapter audit
+
+V1's exact closure, 33 hostile tests, and finite fixture pass. The independent
+RunPod audit also exercised a real CuPy 14.2.0 RM path on an RTX 5090 and
+independently decoded its 512 labels.
+
+Three adversarial probes retain a production HOLD:
+
+- a different frozen configuration can be inserted into a receipt and the
+  public self-hash recomputed without `authorize_test` replaying selection;
+- the pooled scorer authenticates packet syntax but trusts encoder-provided
+  SSE, energy, and label-count objects; and
+- the live-backend guard accepts an object whose public name is merely
+  `cupy`.
+
+These are orchestration defects, not negative evidence for RM, GF(2), QTT,
+BDD, or algebraic label-flexible quantization.
+
 ## Assessment of the proposed branches
 
 ### 1. ε-TCQ and causal states — high scientific value, hard integration
@@ -148,6 +185,11 @@ coupled within a block. A valid successor must either:
   state, arithmetic state, WFA state, and reconstruction state; or
 - define a genuinely new direct-INT2 codec and charge its complete coarse
   packet, rather than aliasing four labels to current STRATA indices.
+
+The ragged-state result makes the first path memory-feasible but not yet
+compute-feasible. Any promotion must preserve all six level transitions,
+survivor ancestry, level-boundary state materialization, and the final complete
+SC replay; a one-level dense/ragged parity fixture is insufficient.
 
 Promotion requires literal packet rescoring, whole-owner cross-fitting,
 state-aware centroids beating both label-only and occupancy-preserving
@@ -189,6 +231,54 @@ The bounded source package therefore implements only what can be checked:
 exact small RM(1), bounded lists, exact tiny/bounded rank<=12 GF(2), finite
 exceptions, and bounded ROMDD. RM(2/3) RPA, QTT, canonical rank serialization,
 and global rank-680 search remain future work, not results.
+
+The capped v1 successor improves the live bank but remains intentionally
+narrow: literal labels, capped RM(1)+exceptions, and depth-0/2/4/6 ROMDD.
+GF(2) search is not scheduled. A production-bound v2 must recompute selection
+from literal row receipts, bind the real CuPy module/device at launch, and use
+an independent source scorer before any Qwen result can be authoritative.
+
+#### Required current-codec bridge: STRATA-RM6
+
+The capped four-level packet is not an adapter for the audited STRATA codec.
+STRATA exposes a 64-way reconstruction index assembled by six complete
+level-major polar passes. A valid algebraic successor must therefore optimize
+one exact 64-entry distortion table per coordinate and constrain the six
+completed index bitplanes, rather than replacing one four-level label after the
+fact.
+
+For a 4,096-coordinate block, an RM code has `m=12`. The particularly useful
+rate point is
+
+```text
+dim RM(5,12) = sum_{j=0}^5 C(12,j) = 1,586 bits/plane
+six planes = 9,516 bits = 2.3232421875 bpw
+```
+
+This leaves 724 bits in a literal 2.5-bpw block for scale, family/profile,
+framing, CRC, and alignment. It is therefore a real physical candidate, not
+only a coefficient-count argument. It is also a severe code constraint: a
+matched iid source may pay large distortion. The first gate must use a frozen
+bank of per-level orders whose total dimensions fit the literal packet, perform
+soft weighted RM/sub-RM decoding from exact source-domain distortion
+increments, reconstruct all six planes back into 0..63 indices, and repeat the
+complete selection on matched-Gaussian PTQ controls. Alternating per-plane
+updates may screen the idea, but only a jointly rescored index packet can
+promote. No four-level LOGIC-Q result may be transferred to this bridge.
+
+There are two different experiments and their rates must not be conflated.
+The 4,096-site calculation above is a new locally blocked direct packet. The
+existing expert codec instead uses `N=2^20` and `N=2^21` polar blocks; its six
+selected-position fractions can sum to more than 4 positions/weight because
+the selected SC decisions are subsequently arithmetic-coded. A cheap
+current-codec experiment can exploit the fact that RM and polar codes use the
+same Arikan transform: retain each current level's selected count and replace
+the BEC reliability ordering by row-Hamming-weight/RM ordering. Unless the
+count lands on a complete RM dimension this is an RM-ordered truncated polar
+code, not an exact RM code, and its physical rate is the emitted arithmetic
+packet rather than the selected-row count. It must compare zero/low-complexity
+frozen cosets with the current procedural random coset; a random frozen coset
+can erase the coordinate-function interpretation even when the row set is RM.
 
 ### 3. Coarse-programmed graph, BM3D, Hankel, and Ramanujan — bounded oracles
 
@@ -262,14 +352,15 @@ and external storage traffic are reported separately.
 1. Finish the independent fixed-label WFA replay.
 2. Preserve the completed graph/Krylov hard kill; do not spend finite-code
    engineering on a `0.00015723251757482348 bpw` source-specific excess.
-3. Finish the ε-TCQ block-polar adapter correction; do not use the invalid
-   coordinate-local six-event ABI.
-4. Finish the capped LOGIC-Q successor with expert-level rate closure,
-   canonical encodings, bounded work, and a joint scale shortlist.
+3. Finish ε-TCQ's ragged/COW six-level semantics and compute gate; memory alone
+   has passed, while payload authority remains held.
+4. Repair LOGIC-Q's selector, source scorer, and actual-CuPy launch bindings;
+   do not open Qwen under the audited v1 HOLD.
 5. Run posterior-centroid v1 only after a passing WFA audit receipt and a
    separately bound launch review.
-6. Open BM3D/Hankel/Ramanujan oracles only if the graph/coarse relationship
-   survives; open Volterra only after the higher-order phase gate.
+6. Run exact GF(2) recurrence, non-dyadic Ramanujan, and capped Hankel/AR as
+   independent source-first gates; defer BM3D grouping and Volterra until a
+   cheaper relational or higher-order diagnostic survives.
 7. Promote only one literal nested packet. Never add gains from separately
    fitted decompositions.
 

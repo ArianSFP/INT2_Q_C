@@ -1,0 +1,27 @@
+{
+  "schema": "mosaic-secondary-oracles-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_NO_QWEN_OR_COARSE_PAYLOAD_AUTHORITY",
+  "source_root_sha256": "60bf8cb7575c165c1e8e648360b9d81f39c092070a9489684904bcf06d0bd820",
+  "members": [
+    {"name":"README.md","bytes":5463,"sha256":"6e23e8e9790e6338ed84fe0e327550c31fe0fe582ca17638edc90c99bb7a5735"},
+    {"name":"cupy_backend.py","bytes":3303,"sha256":"744dfae0b75fbc819e4d4971ea8566002d0afba5afe16d2d1de860e073e2985d"},
+    {"name":"design_lock.json","bytes":6569,"sha256":"6940a8864a79449a2ccd8f2f20cb12dbfe0b2bea0fe76a1c688c1825127db60c"},
+    {"name":"gate_contract.py","bytes":8770,"sha256":"0556915344dfd996ccfdd5005cab437c0c5ad154a98efafe59a07f32f30bb0e2"},
+    {"name":"gf2_recurrence.py","bytes":18410,"sha256":"6de97334b0a0fe63da2f54419477ec2d8d3c43976e04f0e12bb1cedba85c622c"},
+    {"name":"residual_oracles.py","bytes":16403,"sha256":"f990aedf8eba0e9058bd9c77caaa05df98226b2855486bace0eaee15cfac806f"},
+    {"name":"run_source_free_cupy_smoke.py","bytes":2530,"sha256":"01a05ae822d1833d1d50e4f11e8eadcc683ce9932b8de37103b1c15a9e2f472a"},
+    {"name":"run_source_free_fixture.py","bytes":4937,"sha256":"bf6d9e4aa106c72b3fa6fd76665c761dbe39e86f26b6755726087a0b573102bc"},
+    {"name":"test_source_only.py","bytes":16976,"sha256":"04d0845371392e2189539f939903f9a5878e18202a18988723c0010c617fe4e1"},
+    {"name":"verify_source.py","bytes":9202,"sha256":"5a8ecc2893d9013437e60a0f115738d53d9004feafa2951ffc7ee5726690fd15"}
+  ],
+  "access_attestation": {
+    "qwen_model_checkpoint_payload_accessed": false,
+    "coarse_result_or_COARSE_bin_accessed": false,
+    "matched_control_payload_accessed": false,
+    "network_used_by_tests": false,
+    "production_payload_adapter_present": false,
+    "source_free_cpu_tests_run": true,
+    "source_free_cupy_smoke_run": true
+  },
+  "claim_boundary": "source-frozen mechanics only; no Qwen/coarse result, finite target pass, converse, or universal SwiGLU-MoE claim"
+}
