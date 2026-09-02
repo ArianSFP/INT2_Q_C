@@ -94,6 +94,20 @@ There are 1,152 such blocks in one evaluation expert, so its fine field is
 `442,368 bits = 55,296 bytes`.  Reallocating bits across blocks is a different
 format with new framing, random-access, and cold-read semantics.
 
+The ledger also has **zero metadata slack**.  The `24,576`-byte global packet
+plus six `512`-byte expert headers already consume the complete `1/128` metadata
+share (`27,648` bytes).  A WFA, graph kernel, posterior table, latent model, or
+new framing field cannot be appended at 2.5 bpw: it must replace existing
+selector/QC/schema capacity or displace coarse/fine payload under a newly
+measured rate-distortion split.
+
+Those equalities hold only for the divisible Qwen panel.  A fixed full coarse
+reservoir for a partial 262,144-value tile and a fixed 48-byte fine field for a
+partial 4,096-value block can make rate and owner-page amplification arbitrarily
+large on small or unequal legal shapes.  Every CAGE packet needs a
+shape-derived tail/fallback format and an owner-aware 4-KiB proof; padding the
+Qwen ledger is not a universal-format proof.
+
 Its actual lower-rate coarse distortion is unknown.  The favorable planning
 transfer uses `D_coarse=0.035574242296714034`, which would require the fine
 stage to capture
@@ -153,21 +167,23 @@ description.  See [Equitz and Cover](https://isl.stanford.edu/~cover/papers/tran
 
 ## Posterior reconstruction is the strongest addition
 
-For a complete decoded message `C`, the MSE-optimal reconstruction is
+Let `M` denote the entire decoded physical message: coarse and fine bytes,
+headers, and any serialized source-fitted model or emission table.  The
+MSE-optimal reconstruction is
 
 ```text
-mu(C) = E[X | C].
+mu(M) = E[X | M].
 ```
 
-For any current reconstruction `Y(C)`, the orthogonality identity gives
+For any current reconstruction `Y(M)`, the orthogonality identity gives
 
 ```text
-E ||X-Y(C)||^2
-  = E ||X-mu(C)||^2 + E ||mu(C)-Y(C)||^2.
+E ||X-Y(M)||^2
+  = E ||X-mu(M)||^2 + E ||mu(M)-Y(M)||^2.
 ```
 
 Thus the exact opportunity is the energy of the conditional bias
-`mu(C)-Y(C)`.  This is different from predicting the discrete label itself.
+`mu(M)-Y(M)`.  This is different from predicting the discrete label itself.
 A process can offer a modest entropy gain but a useful within-cell centroid
 shift, or vice versa.
 
@@ -185,6 +201,11 @@ There are also strict limitations:
 - a quantizer already trained with its correct conditional centroids leaves no
   separate posterior gain.  The posterior stage is then simply part of the
   codebook design.
+
+Cross-fitting establishes discovery/generalization evidence; it never waives
+the bytes or routed pages of a model fitted for the emitted artifact.  Any
+update derived from source residuals rather than decoded message state is an
+adapted value and must likewise be serialized and charged.
 
 The production diagnostic should report one joint improvement in rate-relative
 score:
@@ -225,6 +246,30 @@ be: after the complete expert message has decoded, a forward-backward smoother
 may condition centroids on all expert-local labels.  Such smoothing must
 charge buffering, scratch, latency, and any repeated memory traffic.
 
+For the present **unifilar** WFA, the state after a known reset and decoded
+prefix is already deterministic.  Under a conditionally independent emission,
+future labels cannot refine that state or its conditional moment, so ordinary
+forward-backward smoothing is exactly redundant.  Future labels become useful
+only after adding an explicit suffix/backward feature or a non-unifilar or
+persistent continuous latent state; that is a separately frozen and charged
+model.  The first posterior rung should consequently be a one-pass,
+deterministic-state exact-cell or held-out-residual centroid.
+
+There is a further STRATA-specific binding problem: the modeled sequence is a
+concatenation of selected SC decisions across six polar levels, not one analog
+emission per source weight.  A rate model can exploit structure in that
+decision schedule without supplying a usable conditional moment for a
+particular transformed coefficient.  The posterior diagnostic must therefore
+replay all six levels, bind each coefficient to its exact collection of
+decision-state features, scales, profile, role, and transform metadata, define
+the exact conditional source cell (or use a cross-fitted empirical residual
+target), and score after the exact inverse source transform.  A generic scalar
+truncated-normal bin is not the block-coupled polar source cell.  The mapping
+and any tied feature/centroid table are part of the charged model.  If this
+binding cannot be specified compactly, the WFA may remain useful for rate while
+being unsuitable as the posterior law; the two gains must not be assumed to
+coincide.
+
 ## Component-by-component assessment
 
 | Proposed component | Assessment under this repository's evidence | Action |
@@ -235,7 +280,7 @@ charge buffering, scratch, latency, and any repeated memory traffic.
 | Frozen TACTIC-DH384 | Exact, local, and low-read, but needs 29.7% planning capture from a 9.375%-rank frame. | Execute unchanged only after its own pilot survival; a miss does not kill CAGE's nonlinear graph, posterior, or adaptive-tree branches. |
 | Coarse-derived graph/Krylov basis | Decoder-legal and descriptor-free. The auxiliary-Qwen free-predecessor result (`s=0.01446386` before side cost) is adverse evidence only for unary linear `3x3` prediction. It does not bound multineighbour, nonlinear, multiscale, or graph-spectral prediction. | Run a declared-family dominant actual-coarse oracle before building lifting. |
 | Exact graph lifting | Perfect reconstruction is useful for implementation, but a bijection preserves joint entropy and a nonorthogonal inverse can amplify raw MSE. | Conditional on graph-oracle survival; use dyadic fixed-point and inverse-domain scoring. |
-| Adaptive per-block 384-step refinement tree | A legitimate tree-structured conditional VQ, not free exponential capacity. It may beat the fixed linear TACTIC span if the residual codebook is curved. | Small-block/beam oracle after its branch-specific graph gate; do not infer failure from a DH384 miss. |
+| Adaptive per-block 384-step refinement tree | A legitimate fixed-length tree-structured conditional VQ, not free exponential capacity. Branch probabilities do not reduce its physical 48-byte field. An entropy-coded/variable-depth tree is a different format with new reservoirs and framing. | Small-block/beam oracle after its branch-specific graph gate; do not infer failure from a DH384 miss. Redesign the rate split before claiming entropy savings. |
 | `h(C)` transform selection | Legitimate joint codebook partition/index modulation. A random CRC has no expected source alignment, and forcing a class spends coarse freedom. | Test only inside a joint coarse-list/fine-path search with no transferred selector gain. |
 | Syndrome/coset fine stage | A backend for a measured conditional law. The repository already killed one aligned-role syndrome cell whose favorable information was only `0.00370826 bpw`; coarse-residual side information is distinct but unproven. | Defer until the conditional entropy oracle passes. |
 | Bits-back / Bit-Swap | Can approach the marginal latent-model codelength rather than paying every latent literally. It does not erase model bytes, posterior mismatch, seed reservoir, termination, or page cost. | Defer until explicit latent-state cost is the measured bottleneck. |
@@ -290,6 +335,12 @@ transform table, graph kernel, posterior table, padding, and termination state
 are all physical.  Large learned constants may not be relabeled as a free
 universal specification.
 
+At the frozen 2.5-bpw TACTIC split, `B` is exactly 48 bytes per block and its
+branch probabilities earn no rate reduction.  The objective above describes a
+new entropy-coded or variable-depth CAGE format only after its coarse/fine/model
+reservoirs, termination, and page alignment have been frozen.  The fixed-length
+tree can still improve codebook geometry, but not physical rate.
+
 This dual-use law avoids double-counting.  If it predicts labels but not
 within-cell residuals, it earns only rate.  If it shifts centroids but does not
 improve code probability, it earns only MSE.  The final packet measures both
@@ -316,6 +367,9 @@ a separately frozen continuous diagnostic.  For each candidate state model,
 report:
 
 - exact arithmetic-coded bytes and all model/framing pages;
+- exact modeled-symbol count and its ratio to shape-derived source weights;
+- a canonical six-level SC-decision-to-coefficient/state binding and exact
+  inverse-transform reconstruction receipt;
 - current reconstruction MSE;
 - cross-fitted posterior-centroid MSE;
 - `Delta s_joint` from the same state and split;
@@ -374,24 +428,35 @@ Only after a real coarse residual exists:
 1. for the frozen TACTIC packet, construct one block-local graph solely from
    the same 4,096-weight decoded `C`, shapes, roles, and fixed procedural
    constants;
-2. grant exact spectral/Krylov components for free as a dominant oracle only
+2. freeze canonical graph ties, eigenvalue ordering, eigenvector signs, and
+   degenerate-subspace handling before source access;
+3. grant exact spectral/Krylov components for free as a dominant oracle only
    for the declared linear graph/Krylov family;
-3. allocate the real per-block 384-bit fine budget under one joint
-   waterfill/search;
-4. score after exact inverse transformation in source coordinates;
-5. repeat the complete construction on matched controls; and
-6. report compute, scratch, full-expert scan requirements, and page union.
+4. allocate the real per-block 384-bit fine budget through a decoder-known
+   codeword.  If residual-derived component choices or reverse-waterfill
+   allocations are granted without spending those bits, label that result an
+   impossible/source-leaking upper bound;
+5. score after exact inverse transformation in source coordinates;
+6. repeat the complete construction on matched controls; and
+7. report compute, scratch, full-expert scan requirements, unique page union,
+   and repeated external/compressed/HBM traffic.
 
 The first gate keeps every correction inside its source block and preserves
-exactly 384 fine bits per block.  An expert-wide graph or transform that mixes
-blocks is a separate format: it receives the explicit expert total of 442,368
-fine bits and must freeze a new allocation, framing, random-access, and read
-ledger before payload access.  Such a format may reuse the bytes of a once-read
-expert frame, but it still incurs graph construction latency and scratch.  A
-second algorithmic pass is not categorically forbidden by the `<2x` contract:
-report both the owner-aware unique 4-KiB page union and repeated compressed/HBM
-bytes.  A buffered pass over already decoded state differs from refetching
-storage pages.  Another expert's frame remains outside this expert-local
+exactly 384 fine bits per block.  On Qwen geometry a 4,096-value role block is
+only two 2,048-wide neuron rows, so a negative closes only that block-local
+family; it does not dominate the proposal's 768-neuron or cross-role graph.
+An expert-wide graph or transform that mixes blocks is a separate format: it
+receives the explicit expert total of 442,368 fine bits and must freeze a new
+allocation, framing, random-access, and read ledger before payload access.
+
+An expert-wide implementation should place the coarse records before fine
+records and buffer the decoded coarse/state needed by graph construction.  A
+second fetch of the frozen 359-page expert frame would read
+`6 + 2*359 = 724` pages against a 360-page physical share, or about `2.011x`,
+and fails the strict bandwidth gate even though the unique page union is
+unchanged.  Report both unique 4-KiB pages and actual repeated external bytes;
+a buffered pass may avoid external refetch but still incurs scratch, latency,
+and HBM traffic.  Another expert's frame remains outside this expert-local
 design.
 
 ### Gate 5: bounded adaptive tree
@@ -484,7 +549,11 @@ a compression gain.
   publication, and universal-capacity issues.  It has no Qwen payload or
   source-gain result.
 - The `0.1675415 bits/symbol` WFA result remains a synthetic parity fixture,
-  not a Qwen measurement.
+  not a Qwen measurement.  `bits/symbol` is not automatically `bits/weight`;
+  the production STRATA adapter concatenates selected SC decisions across six
+  levels, so its modeled-symbol/weight ratio depends on the block and profile.
+  Only the production container's literal bytes divided by its shape-derived
+  weight count can establish the required physical-bpw saving.
 - TACTIC-DH384 remains unexecuted because no authenticated physical
   `307/128`-bpw coarse artifact exists.
 - TACTIC-DH384's internal hostile tests and synthetic CuPy receipt have not
