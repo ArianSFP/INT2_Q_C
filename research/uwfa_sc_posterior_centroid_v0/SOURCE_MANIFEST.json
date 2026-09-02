@@ -1,0 +1,48 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_NONPROMOTING_NO_PAYLOAD_AUTHORITY",
+  "source_snapshot_root_sha256": "ea3ad9cf9b723cdf7501eeff004bd7f2821af4d37ff186b72f2972482a05e11c",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 9229,
+      "sha256": "ff6660a559440371f9b76be480e2bc7cd1058ee8e2c3a159ca7265f695588a17"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 4962,
+      "sha256": "0619599575a96bf4796d7784b64fe94e6308014769b24f958040389fa7a791c3"
+    },
+    {
+      "name": "diagnostic.py",
+      "bytes": 56231,
+      "sha256": "338c3b6459e1edc8d017c3dcaa89bfadfebf67f715696911f7e8791e71b0c38d"
+    },
+    {
+      "name": "posterior_core.py",
+      "bytes": 39383,
+      "sha256": "8ffa001d7dc9ad8a9d64c9a54efcf59d662abd844afb2ba6f378abe5a852fd9f"
+    },
+    {
+      "name": "result_bridge.py",
+      "bytes": 35218,
+      "sha256": "112efcad5fd3fe9bccfea11af03bd9124a3789b6107c4486dd961656398e4d79"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 33706,
+      "sha256": "a0baf7b6df487d27b2ae8ff87891982eeae10c65497c93b5f132719ac9ad6ce9"
+    }
+  ],
+  "access_attestation": {
+    "model_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "completed_v9_result_opened_statted_hashed_or_enumerated": false,
+    "qwen_bf16_source_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "cuda_initialized_during_source_build": false,
+    "isolated_source_only_tests_run": true,
+    "isolated_source_only_tests_accessed_payload": false,
+    "isolated_source_only_tests_initialized_cuda": false
+  },
+  "claim_boundary": "A source-only implementation and synthetic test pass do not establish a Qwen posterior gain, a finite target pass, or universal SwiGLU-MoE performance."
+}

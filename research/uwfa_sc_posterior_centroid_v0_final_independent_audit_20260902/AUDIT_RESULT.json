@@ -1,0 +1,64 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-v0-final-independent-audit-result-v0",
+  "verdict": "PASS",
+  "scope": "SOURCE_ONLY_NONPROMOTING_NO_QWEN_NO_PAYLOAD_NO_CUDA",
+  "producer": {
+    "manifest_sha256": "0ef30253d4d31504fbd8f88b8203cf35bce6c14952e570aace44b7bc089cb713",
+    "source_snapshot_root_sha256": "ea3ad9cf9b723cdf7501eeff004bd7f2821af4d37ff186b72f2972482a05e11c",
+    "member_count": 6,
+    "exact_closure_authenticated": true
+  },
+  "checks": {
+    "manifest_member_bytes_and_hashes_match": true,
+    "post_freeze_member_mutation_rejected": true,
+    "owned_modules_execute_from_retained_authenticated_bytes": true,
+    "v8_dataclass_modules_registered_before_exec": true,
+    "live_sibling_module_import_after_authentication": false,
+    "heldout_outer_component_absent_from_every_fit_call": true,
+    "inner_ridge_selection_directions": [[1, 2], [2, 1]],
+    "ridge_candidate_count": 8,
+    "all_three_binary16_heads_serialized_before_heldout_BF16_aperture": true,
+    "maximum_head_bytes": 1636,
+    "wrapper_extension_physical_bytes": 4096,
+    "head_and_wrapper_canonical_roundtrip": true,
+    "head_wrapper_and_manifest_tamper_rejected": true,
+    "compressed_second_pass_rejected": true,
+    "repeated_request_over_2x_rejected": true,
+    "completion_opened_last_between_two_directory_fsync_barriers": true,
+    "existing_output_directory_rejected": true,
+    "completed_v9_hard_kill_container_accepted_for_joint_scoring": true,
+    "standalone_v9_survival_required_by_executable": false,
+    "actual_posterior_wrapper_routed_decode_executed": false,
+    "posterior_head_applied_inside_routed_session": false,
+    "inference_read_result_is_nonpromoting_projection": true,
+    "controls_run_or_claimed": false,
+    "portability_run_or_claimed": false
+  },
+  "producer_test_receipt_on_windows_audit_host": {
+    "tests_run": 22,
+    "failures": 0,
+    "errors": 1,
+    "skips": 1,
+    "passing_tests": 20,
+    "unmodified_suite_exit_code": 1,
+    "sole_error": "Windows refuses the POSIX O_RDONLY directory descriptor used by _write_exclusive",
+    "classification": "HOST_PLATFORM_LIMITATION_NOT_LINUX_RUNPOD_SOURCE_BLOCKER",
+    "publication_control_flow_replayed_with_audit_only_directory_fd_compatibility_proxy": true
+  },
+  "nonblocking_limitations": [
+    "No inference-ready routed posterior decoder exists in v0; cold-read numbers are explicitly nonpromoting.",
+    "No Qwen payload, matched-Gaussian control, structure-destruction control, or portability family was run by this audit.",
+    "This implementation is a Qwen/v9 discovery diagnostic and does not establish a universal SwiGLU-MoE performance result.",
+    "The diagnostic tests one UWFCV8 block-occupancy affine posterior family; it does not close the broader coarse-programmed graph/lifting TACTIC-CAGE hypothesis.",
+    "design_lock.json says hard_fail_without_literal_survivor_container, but the executable intentionally accepts any authenticated completed nonpromoting v9 literal container, including a hard-kill, so the wording should be clarified.",
+    "The README launch example shows several relative paths even though the authenticated path readers require absolute paths; an actual launch must pass absolute paths."
+  ],
+  "access_attestation": {
+    "Qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "completed_v9_result_opened_statted_hashed_or_enumerated": false,
+    "BF16_score_source_opened_statted_hashed_or_enumerated": false,
+    "Gaussian_control_opened_statted_hashed_or_enumerated": false,
+    "RunPod_or_CUDA_accessed": false
+  },
+  "claim_boundary": "PASS authenticates the frozen source mechanics for a nonpromoting discovery run only. It is not model evidence, an inference-read promotion, a control result, or universal codec evidence."
+}

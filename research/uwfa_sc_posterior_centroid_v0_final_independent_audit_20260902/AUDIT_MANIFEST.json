@@ -1,0 +1,35 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-v0-final-independent-audit-manifest-v0",
+  "status": "PASS_SOURCE_ONLY_NONPROMOTING",
+  "producer_manifest_sha256": "0ef30253d4d31504fbd8f88b8203cf35bce6c14952e570aace44b7bc089cb713",
+  "producer_source_snapshot_root_sha256": "ea3ad9cf9b723cdf7501eeff004bd7f2821af4d37ff186b72f2972482a05e11c",
+  "members": [
+    {
+      "name": "AUDIT_REPORT.md",
+      "bytes": 7361,
+      "sha256": "09e89b14d2bf336fcc23c8c14db998967e35cadfed351968a1529d9542620834"
+    },
+    {
+      "name": "AUDIT_RESULT.json",
+      "bytes": 3780,
+      "sha256": "41114955ece1e2cf97bee416bd9d048d9942b2a439086b402dcbb4ac9add0343"
+    },
+    {
+      "name": "README.md",
+      "bytes": 639,
+      "sha256": "66383823fc8aa8c65b7a598da128c36a1acb3e10ca7b0d1d62a0b962d2dfa417"
+    },
+    {
+      "name": "independent_audit.py",
+      "bytes": 27050,
+      "sha256": "16fb9b99bde7cffabffd9266bdc902d9bb68be44eb3b10287c4811f5d333e32a"
+    }
+  ],
+  "access_attestation": {
+    "Qwen_or_model_payload_accessed": false,
+    "completed_v9_result_accessed": false,
+    "BF16_score_source_accessed": false,
+    "Gaussian_control_accessed": false,
+    "RunPod_or_CUDA_accessed": false
+  }
+}
