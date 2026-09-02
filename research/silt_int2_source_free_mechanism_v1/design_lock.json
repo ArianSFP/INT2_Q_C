@@ -1,0 +1,90 @@
+{
+  "schema": "silt-int2-source-free-mechanism-v1-design-lock",
+  "status": "POSTIMPLEMENTATION_REVIEW_ONLY_NO_MANIFEST_NO_FREEZE_NO_RESULT_NO_PAYLOAD",
+  "source_boundary": {
+    "payload_authority": false,
+    "qwen_or_model_access": false,
+    "external_weight_input": false,
+    "synthetic_only": true
+  },
+  "format": {
+    "version": 1,
+    "page_bytes": 4096,
+    "global_header_bytes": 4096,
+    "directory_header_bytes": 256,
+    "directory_entry_bytes": 32,
+    "frame_header_bytes": 256,
+    "directory_location": "separate page-aligned region after the global header",
+    "expert_range_inclusive": [1, 256],
+    "unequal_expert_geometry": true,
+    "frame_integrity": "SHA-256 body plus canonical zero tails",
+    "ordinary_decode_language": "bit-limited arithmetic decode followed by mandatory byte-identical canonical re-encode"
+  },
+  "hard_caps": {
+    "max_experts": 256,
+    "max_lanes": 2048,
+    "max_vectors_per_expert": 1048576,
+    "max_symbols_per_expert": 16777216,
+    "max_total_symbols": 268435456,
+    "max_model_packet_bytes": 1048576,
+    "max_directory_packet_bytes": 65536,
+    "max_frame_logical_bytes": 67108864,
+    "max_frame_padded_bytes": 67112960,
+    "max_container_bytes": 268435456,
+    "validation_order": "all scalars and checked products before factorial, directory loop, slice, conversion, or allocation"
+  },
+  "lifting": {
+    "alphabets": [2, 4],
+    "equations": "d=(y-p*x) mod A; c=(x+u*d) mod A",
+    "odd_lane_policy": "literal carry",
+    "gf2_selector_ids": [0, 1, 2, 3, 4, 5],
+    "gf2_alias_policy": "IDs 6 and 7 are noncanonical and rejected; 3 bits is the minimum fixed-width syntax for six maps",
+    "z4_selector_ids": [0, 1, 2, 3, 4, 5, 6, 7]
+  },
+  "entropy": {
+    "q16_total": 65536,
+    "state_count": 64,
+    "detail_reset": 32,
+    "arithmetic_precision_bits": 32,
+    "explicit_zero_guard_bits_within_meaningful_bits": 30,
+    "packet_uniqueness": "ordinary decode rejects unless exact finite re-encode reproduces meaningful_bits and payload bytes"
+  },
+  "cold_ledger": {
+    "owner_share": "G/E + F_e",
+    "cold_numerator": "instrumented union of global/directory/model pages and expert-local frame pages",
+    "byte_conservation": "sum_e(G/E+F_e)=literal container bytes",
+    "gate": "max_e cold_amp(e) < 2"
+  },
+  "compute": {
+    "optimization_search": "mandatory CuPy; no CPU fallback",
+    "canonical_device": "provided RTX 5090",
+    "required_equality": "CPU/CuPy coefficients and inverse leaves byte-exact",
+    "required_telemetry": [
+      "h2d_ms",
+      "h2d_bytes",
+      "kernel_ms",
+      "d2h_ms",
+      "d2h_bytes",
+      "wall_ms",
+      "host_rss_baseline_bytes",
+      "host_rss_peak_bytes",
+      "host_rss_delta_bytes",
+      "vram_baseline_used_bytes",
+      "vram_peak_used_bytes",
+      "vram_delta_bytes",
+      "gpu_uuid",
+      "cuda_logical_index",
+      "nvml_physical_index",
+      "cuda_pci_bus_id",
+      "cuda_visible_devices"
+    ]
+  },
+  "publication": {
+    "source_root": "length-delimited SHA-256 tree root supplied externally; no producer manifest",
+    "auth_before_import": true,
+    "bootstrap_snapshot": "authenticated bytes copied to a private temporary snapshot before execution",
+    "output": "exclusive no-follow directory creation, exclusive file creation, fsync, atomic no-replace completion link"
+  },
+  "required_runtime_fixtures": [1, 128, 249, 250, 256],
+  "result_policy": "do not create a manifest, freeze, canonical result, or payload claim in producer work"
+}
