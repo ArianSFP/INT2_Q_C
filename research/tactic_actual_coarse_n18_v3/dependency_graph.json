@@ -1,0 +1,22 @@
+{
+  "schema": "tactic_actual_coarse_n18_dependency_graph_v3",
+  "status": "PINNED_PROTOTYPE_SOURCES_NO_IMPORT_NO_RUNTIME_AUTHORITY",
+  "external_python_sources": [
+    {
+      "id": "independent_polar_decoder",
+      "relative_path": "strata_v2_klt_mixed_independent_auditor_v1.py",
+      "bytes": 116835,
+      "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+      "allowed_import_roots": ["argparse", "base64", "collections", "concurrent", "cupy", "dataclasses", "hashlib", "importlib", "json", "math", "multiprocessing", "numpy", "os", "pathlib", "re", "struct", "sys", "time", "typing", "zlib"]
+    },
+    {
+      "id": "polaris_sc_encoder",
+      "relative_path": "src/polaris_sc_v2_rht_encoder.py",
+      "bytes": 29633,
+      "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+      "allowed_import_roots": ["argparse", "cupy", "dataclasses", "hashlib", "json", "math", "numpy", "pathlib", "scipy", "struct", "time", "typing"]
+    }
+  ],
+  "execution_rule": "Authenticate into immutable byte objects and install the dedicated dependency byte-loader only after external runtime authority; live repository imports and pycache are forbidden.",
+  "claim_boundary": "Pinned prototype source graph only; no numeric producer, import, payload or CUDA authority."
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "tactic_actual_coarse_n18_external_inventory_v3",
+  "status": "EXTERNAL_INVENTORY_NO_EXECUTION_AUTHORITY",
+  "files": [
+    {
+      "name": "POSTIMPLEMENTATION_REVIEW.md",
+      "bytes": 3668,
+      "sha256": "ff09c53900d0ecdd067e9d8ca8f67abc439e0c71bea66e7571162773aba3e236"
+    },
+    {
+      "name": "README.md",
+      "bytes": 6144,
+      "sha256": "8246bf42efb4dca0a251534e464090e608482f7e2f2c7ed7905a411175688300"
+    },
+    {
+      "name": "dependency_auth.py",
+      "bytes": 7230,
+      "sha256": "7a3a00ce5fd8ba466f0caee10d7a915f589ca8646c6ea08cf2141be618f78657"
+    },
+    {
+      "name": "dependency_graph.json",
+      "bytes": 1321,
+      "sha256": "8a5eacd9e9b5633db1ffd095f684f5ee660b0542a24431c047dc35b5aef11e14"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 5116,
+      "sha256": "9d08d16f7dd211b7c9a5192f4201a0ff3ac7fd0630d3f12a923d236e092da206"
+    },
+    {
+      "name": "dispatcher_contract.py",
+      "bytes": 4015,
+      "sha256": "9473479d036347ea1aad08ed4115f39f9de5b86d08de880d4248d7b89268cc74"
+    },
+    {
+      "name": "immutable_bootstrap.py",
+      "bytes": 16053,
+      "sha256": "8296e2a683013a09044511732f8560c1eff064e57378f37091c4047d8fc60917"
+    },
+    {
+      "name": "runtime_auth.py",
+      "bytes": 9768,
+      "sha256": "718e1413a243d6c4913a0d84dc7860177c050f30d977ba67eb3a503079c8f0a7"
+    },
+    {
+      "name": "safe_telemetry.py",
+      "bytes": 6544,
+      "sha256": "767ff6f2fa2637d54cf29954b4cb785ae5983b9b2fdb097aad2cb597bc35ba31"
+    },
+    {
+      "name": "secure_io.py",
+      "bytes": 16495,
+      "sha256": "9aec6513d44a939f39b8703a0ab24aa196cef0656c5b206bec546054ac0ee180"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 25341,
+      "sha256": "9d5bbba86aaa0ca7268b77488ea603dfb4106abf4e91174a15f957d337c96102"
+    },
+    {
+      "name": "universal_layout.py",
+      "bytes": 7079,
+      "sha256": "1cbc2ba594e59d7afe703d440b6014b99d222176b2addd688813a34e45514c67"
+    },
+    {
+      "name": "v3_common.py",
+      "bytes": 4762,
+      "sha256": "e847e04797a14d9ebabebecf9bad930b7fd617e7ed139b5cbd92e21cc71f30ee"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 7034,
+      "sha256": "6802b59045684f2876f2b023bdbb77d8cab1bd59bc69b80a219cfd2880d46377"
+    }
+  ],
+  "authority_boundary": "Independent audit inventory for exact stopped producer root 1db2a1fd9da07743e556a02ce58d97424672129683a09c5b805714b7ce6709f5; this inventory is not payload, runtime, CUDA, review-PASS, or numerical authority."
+}

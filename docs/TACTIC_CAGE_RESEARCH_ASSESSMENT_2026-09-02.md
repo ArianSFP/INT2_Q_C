@@ -401,6 +401,16 @@ in new source boundaries before any payload work.  Then run the source-free
 CuPy smoke and encode only block zero of Gate, Up, and transposed Down in the
 first triplet.
 
+The attempted N18 v3 repair is also independently blocked before payload.  It
+correctly repairs immutable source execution and verify-before-rename
+publication, but `1,228 bytes per 4,096 weights` is only a byte-allocation
+identity: it supplies no versioned header/reservoir, arithmetic capacity, hard
+EOF, scale, tail language, canonical decode/re-encode, or binding to the frozen
+N18 packet.  Its four metadata bytes per block merely reproduce the Qwen total
+of the old global-plus-expert bytes without defining where the global selector
+and QC packet live.  The zero-byte tiny fallback is outside the target cell,
+and runtime-import and repeated-read closure remain blocked.
+
 Freeze separate pilot upper bounds before opening those streams:
 
 - for DH384, retain its already declared impossible best-of-64 selector-table
@@ -572,5 +582,12 @@ a compression gain.
 - N18-307 v2 closes many packet/shape/owner-ledger mechanics but is
   independently blocked on executed-source identity, runtime authentication,
   post-rename publication, universal tail rate/read caps, and review authority.
+- N18-307 v3 repairs source-byte execution and the publication state machine,
+  but is independently **BLOCKED** because its microblock partition is not an
+  implemented coarse code, its zero-slack metadata topology is undefined, its
+  tiny fallback has `R=0` and `F=1` for nonzero `1x1` weights, runtime hashes do
+  not bind later imports, repeated reads are not bounded, and its mandatory
+  POSIX suite exits nonzero on exception normalization.  No Qwen, numeric
+  dependency, or CUDA payload was opened.
 - TACTIC-CAGE is therefore a promoted research path with strict gates, not a
   result or checkpoint-achieving codec.

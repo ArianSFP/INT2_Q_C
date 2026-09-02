@@ -1,0 +1,93 @@
+{
+  "schema": "tactic_actual_coarse_n18_v3_independent_hostile_audit_v1",
+  "scope": "source-only; no model/payload, numerical producer, numeric dependency import, CUDA, runtime freeze, or result",
+  "producer_root": "1db2a1fd9da07743e556a02ce58d97424672129683a09c5b805714b7ce6709f5",
+  "producer_files": 14,
+  "producer_bytes": 120570,
+  "layout": {
+    "qwen": {
+      "weights": 4718592,
+      "full_microblocks": 1152,
+      "residual_microblocks_per_role": 0,
+      "tail_values": 0,
+      "coarse_bytes": 1414656,
+      "fine_bytes": 55296,
+      "metadata_bytes": 4608,
+      "physical_bytes": 1474560,
+      "physical_bpw": 2.5,
+      "unique_page_bytes": 1474560,
+      "unique_page_amplification": 1.0
+    },
+    "odd_769x2051": {
+      "weights": 4731657,
+      "full_microblocks": 1155,
+      "residual_microblocks_per_role": 1,
+      "tail_values": 777,
+      "coarse_bytes": 1418572,
+      "fine_bytes": 55440,
+      "metadata_bytes": 4620,
+      "tail_extra_bytes": 10,
+      "physical_bytes": 1478642,
+      "physical_bpw": 2.4999986262740514,
+      "unique_page_bytes": 1478656,
+      "unique_page_amplification": 1.000009468147124
+    },
+    "tiny_1x1": {
+      "weights": 3,
+      "coded_budget_bytes": 0,
+      "physical_bytes": 0,
+      "physical_bpw": 0.0,
+      "zero_reconstruction_relative_mse_for_any_nonzero_source": 1.0,
+      "F_at_actual_R": 1.0
+    },
+    "small_complete_micro_1x4096": {
+      "weights": 12288,
+      "nominal_coarse_bytes": 3684,
+      "nominal_fine_bytes": 144,
+      "nominal_metadata_bytes": 12,
+      "coded_budget_bytes": 3840,
+      "physical_bytes_after_fallback": 0,
+      "physical_bpw": 0.0
+    },
+    "minimum_explicit_1x8738": {
+      "weights": 26214,
+      "physical_bytes": 8191,
+      "physical_bpw": 2.499732967116808,
+      "worst_offset_unique_page_amplification": 1.5001831278232207,
+      "worst_offset_two_pass_page_amplification": 3.0003662556464414
+    }
+  },
+  "format_semantics": {
+    "packet_magic_TACN18C2_present": false,
+    "128_byte_header_language_present": false,
+    "hard_logical_eof_present": false,
+    "pack_reservoir_present": false,
+    "parse_reservoir_present": false,
+    "canonical_bit_reencode_present": false,
+    "decoder_scale_field_present": false,
+    "payload_digest_field_present": false,
+    "residual_N18_group_and_aggregate_tail_packet_language_present": false,
+    "conclusion": "The 1228-byte microblock rule is a byte partition, not an implemented or bound frozen N18-307 codec."
+  },
+  "runtime_semantics": {
+    "fabricated_zero_or_negative_lock_fields_rejected": true,
+    "interpreter_descriptor_held": true,
+    "distribution_files_closed_immediately_after_hash": true,
+    "distribution_files_held_through_execution": false,
+    "authenticated_distribution_byte_loader_present": false,
+    "preloaded_numeric_module_rejection_present": false,
+    "runpod_venv_sys_executable": "/workspace/int2-cupy-venv/bin/python",
+    "runpod_venv_sys_executable_is_symlink": true,
+    "runpod_venv_real_executable": "/usr/bin/python3.12",
+    "conclusion": "The schema repair is real, but authenticated runtime execution remains blocked by a symlink-path contradiction and hash-to-later-normal-import TOCTOU."
+  },
+  "authority_semantics": {
+    "producer_issuer_helper_present": false,
+    "assertion_binds_expected_action_source_and_runtime": true,
+    "assertion_signature_or_externally_pinned_assertion_digest_present": false,
+    "inherited_fd_provenance_mechanically_distinguished_from_self_created_fd": false,
+    "conclusion": "A trusted external launch convention is described, but the consumer ABI alone is not proof of independent authority."
+  },
+  "repeated_read_ledger_declared": false,
+  "verdict": "BLOCK_SOURCE_CLOSURE"
+}

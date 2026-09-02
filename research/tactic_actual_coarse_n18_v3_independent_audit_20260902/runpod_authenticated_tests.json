@@ -1,0 +1,31 @@
+{
+  "schema": "tactic_actual_coarse_n18_v3_independent_runpod_test_replay_v1",
+  "producer_reported_schema": "tactic_actual_coarse_n18_source_tests_v3",
+  "producer_root": "1db2a1fd9da07743e556a02ce58d97424672129683a09c5b805714b7ce6709f5",
+  "interpreter": "/usr/bin/python3.12 -I -B",
+  "python_version": "3.12.3",
+  "kernel": "Linux 6.8.0-107-generic x86_64 GNU/Linux",
+  "bootstrap_launch": "/proc/self/fd/9 from an inherited held descriptor",
+  "bootstrap_sha256": "8296e2a683013a09044511732f8560c1eff064e57378f37091c4047d8fc60917",
+  "inventory_sha256": "abedc85c236b468f2550361c6c6e539932529595b78ad5978b2880099a891f40",
+  "tests_run": 29,
+  "passed": 28,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "exit_status": "NONZERO",
+  "error": {
+    "test": "test_held_input_rejects_symlink_and_detects_mutation",
+    "expected": "v3_common.ContractError",
+    "observed": "OSError: [Errno 40] Too many levels of symbolic links: 'link'",
+    "interpretation": "The symlink leaf was rejected, but the public HeldRegularFile API leaked raw ELOOP instead of the contract exception expected by its own hostile suite."
+  },
+  "passed_posix_publication_checks": [
+    "constructor faults leave neither public nor staging tree",
+    "all injected prepublication phase faults leave no public COMPLETE tree",
+    "staging corruption is rejected before publication",
+    "post-rename injected faults leave only the already verified COMPLETE tree",
+    "ordinary completion publishes the exact three-member complete tree"
+  ],
+  "scope": "Source-only replay. No model/Qwen payload, numeric producer, numeric dependency import, runtime freeze, CUDA context, or result was opened or created."
+}

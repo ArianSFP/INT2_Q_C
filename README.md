@@ -40,6 +40,7 @@ than the final research claim: at its own physical rate it has
 - [ORBIT–MERA–RCC proposal research assessment and corrected entropy-census gate](docs/ORBIT_MERA_RCC_RESEARCH_ASSESSMENT_2026-09-01.md)
 - [TACTIC-CAGE proposal assessment, no-free-information corrections, and posterior-centroid gate](docs/TACTIC_CAGE_RESEARCH_ASSESSMENT_2026-09-02.md)
 - [Blocked N18-307 v2 source-closure audit: import identity, runtime, publication, and universal-tail ledgers](research/tactic_actual_coarse_n18_v2_independent_audit_20260902/AUDIT_REPORT.md)
+- [Blocked N18-307 v3 independent audit: byte-ledger/non-codec distinction, metadata topology, runtime, and repeated reads](research/tactic_actual_coarse_n18_v3_independent_audit_20260902/AUDIT_REPORT.md)
 - [Blocked TACTIC-DH384 v2 independent audit: undefined finite code, coarse binding, publication, and portability](research/tactic_conditional_dyadic_coset_v2_independent_audit_20260902/AUDIT_REPORT.md)
 - [Independent ORBIT–MERA–RCC mathematical and physical red-team](research/orbit_mera_rcc_independent_redteam_20260902/REPORT.md)
 - [SILT-INT2 source-free discrete multiscale architecture and charged planning ledger](research/silt_int2_multiscale_architecture_20260902/README.md)

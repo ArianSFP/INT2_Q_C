@@ -1,0 +1,67 @@
+{
+  "schema": "tactic_actual_coarse_n18_source_design_v3",
+  "status": "POSTIMPLEMENTATION_REVIEW_CANDIDATE_SOURCE_ONLY_NOT_EXTERNALLY_SEALED",
+  "scope": {
+    "codec_family": "universal positive-shape SwiGLU-MoE expert codec",
+    "payload_status": "NO_MODEL_OR_QWEN_PAYLOAD_READ_NO_NUMERIC_PRODUCER_RUN",
+    "runtime_status": "NO_RUNTIME_LOCK_FREEZE_NO_CUDA_CLAIM",
+    "publication_status": "NO_RESULTS_NO_SOURCE_MANIFEST_NO_COMMIT_NO_RUNPOD_TRANSFER"
+  },
+  "coarse_contract": {
+    "n18_values": 262144,
+    "microblock_values": 4096,
+    "microblocks_per_n18": 64,
+    "coarse_bytes_per_full_microblock": 1228,
+    "coarse_bytes_per_full_n18": 78592,
+    "coarse_logical_bpw_on_full_microblocks": "307/128",
+    "canonical_tail_rule": "aggregate the three role tails; floor(307*tail_values/1024) coarse bytes; never allocate a full N18 reservoir to a tail"
+  },
+  "handoff_contract": {
+    "fine_bits_per_full_microblock": 384,
+    "metadata_bytes_per_full_microblock": 4,
+    "total_bytes_per_full_microblock": 1280,
+    "full_microblock_final_bpw": "5/2",
+    "branch_rule": "A DH384 best-of-64 pilot may kill only that frozen DH384 branch; it cannot kill coarse-programmed graphs, adaptive lifting, posterior reconstruction, syndrome refinement, joint coarse/fine search, or broader TACTIC-CAGE mechanisms."
+  },
+  "shape_contract": {
+    "roles": ["gate", "up", "down_transposed"],
+    "dimensions": "arbitrary positive intermediate and hidden dimensions within declared integer/product caps",
+    "explicit_frame_rule": "use one contiguous owner frame iff floor(5*expert_weights/16) >= 8191 bytes",
+    "small_owner_fallback": "otherwise decode the entire expert as an implicit all-zero expert with zero stored bytes and zero routed reads",
+    "tail_total_rule": "the aggregate tail receives floor(5*tail_values/16) total bytes, split into the canonical coarse prefix and a tail refinement remainder",
+    "quality_boundary": "the implicit fallback is a legal universal rate/read closure only; no distortion or usefulness claim is made for small experts"
+  },
+  "physical_contract": {
+    "rate": "for every positive declared shape, physical bytes <= floor(5*expert_weights/16), hence physical bpw <= 2.5",
+    "owner_layout": "explicit expert frames are contiguous and unpadded; implicit owners have no interval",
+    "read_metric": "the union of distinct 4096-byte pages intersecting one routed owner's frame divided by that owner's stored frame bytes",
+    "read_cap": "every explicit owner has unique-page read amplification strictly below 2; every implicit owner has zero reads and amplification zero"
+  },
+  "source_execution_contract": {
+    "bootstrap": "an independent dispatcher must open, pin and hold immutable_bootstrap.py, then execute /proc/self/fd/N with the inherited FD and pinned bootstrap digest",
+    "inventory": "an independently supplied flat exact-closure inventory is held by absolute no-follow FD and pinned by digest; row, name, member and aggregate caps apply before materialization",
+    "imports": "all sibling Python modules execute from authenticated immutable byte packets through a dedicated loader; live-tree and pycache fallback are forbidden",
+    "dependencies": "external prototype sources are absolute/no-follow held, byte-authenticated, AST-import-closed and exposed only as immutable packets; importing them additionally requires external runtime authority"
+  },
+  "runtime_contract": {
+    "lock": "a future external runtime lock must authenticate the held executable bytes and exact Python version plus every required distribution's version, RECORD bytes/digest and complete importlib.metadata tree digest",
+    "required_distributions": ["cupy-cuda12x", "numpy", "nvidia-ml-py", "scipy"],
+    "fabrication_rule": "negative, zero, empty, all-zero-digest and incomplete runtime fields are rejected"
+  },
+  "publication_contract": {
+    "ordering": "write and fsync ordinary files, write ARTIFACTS, write COMPLETE last in staging, fsync, enumerate and rehash the entire staging tree, chmod/final-fsync, then perform one renameat2 NOREPLACE publication",
+    "fault_rule": "before rename no public tree may exist; after rename the only public tree was already complete and verified; constructor and abort paths remove private staging",
+    "phase_rule": "publication phase is explicit and monotonically records the last attempted durability boundary"
+  },
+  "authority_contract": {
+    "producer_authority": "NONE",
+    "review_authority": "ONLY_AN_INDEPENDENT_DISPATCHER_OR_AUDITOR_OUTSIDE_THIS_PACKAGE_MAY_SEAL_OR_AUTHORIZE",
+    "dispatcher_input": "opaque held-FD assertion bound to source root, runtime root, action and independent audit evidence",
+    "self_review_tokens": "FORBIDDEN"
+  },
+  "telemetry_contract": {
+    "status": "VALIDATOR_ONLY_NOT_A_CUDA_RUN",
+    "future_device": "NVIDIA GeForce RTX 5090",
+    "requirements": "strict CUDA/NVML UUID and PCI agreement, nonempty version identity, per-buffer transfer provenance and digests, synchronized event phases, wall time, memory baseline/peak/delta and explicit sampled-peak limitation"
+  }
+}

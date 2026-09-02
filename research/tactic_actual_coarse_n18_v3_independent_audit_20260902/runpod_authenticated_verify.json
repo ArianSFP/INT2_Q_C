@@ -1,0 +1,34 @@
+{
+  "authority": "ONLY_AN_INDEPENDENT_DISPATCHER_OR_AUDITOR_OUTSIDE_THIS_PACKAGE_MAY_SEAL_OR_AUTHORIZE",
+  "claims": [
+    "source structure and arithmetic invariants only",
+    "no payload/model read",
+    "no numerical producer or CUDA run",
+    "no runtime freeze or external review seal"
+  ],
+  "dependency_sources": 2,
+  "odd_769x2051": {
+    "physical_bpw": 2.4999986262740514,
+    "tail_values": 777,
+    "unique_page_read_amplification": 1.000009468147124
+  },
+  "qwen_reference_ledger": {
+    "coarse_bpw": 2.3984375,
+    "coarse_bytes_per_expert": 1414656,
+    "final_bpw": 2.5,
+    "final_bytes_per_expert": 1474560,
+    "maximum_unique_page_read_amplification": 1.0,
+    "n18_streams_per_expert": 18,
+    "panel_bytes": 8847360
+  },
+  "schema": "tactic_actual_coarse_n18_source_verification_v3",
+  "source_bytes": 120570,
+  "source_files": 14,
+  "source_root": "1db2a1fd9da07743e556a02ce58d97424672129683a09c5b805714b7ce6709f5",
+  "status": "SOURCE_ONLY_VERIFIED_NOT_EXTERNALLY_SEALED",
+  "tiny_1x1": {
+    "fallback": "IMPLICIT_ZERO_EXPERT_NO_BYTES_NO_READ_V1",
+    "physical_bytes": 0,
+    "unique_page_read_amplification": 0.0
+  }
+}
