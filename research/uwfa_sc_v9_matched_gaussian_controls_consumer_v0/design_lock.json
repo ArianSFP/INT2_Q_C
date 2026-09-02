@@ -1,0 +1,66 @@
+{
+  "schema": "uwfa-sc-v9-matched-controls-consumer-design-v0",
+  "status": "SOURCE_ONLY_CONSUMER_AND_INPUT_AUDITOR_FROZEN_EXTERNAL_PINS_BLOCKED",
+  "design_date": "2026-09-02",
+  "producer_dependency": {
+    "source_manifest_sha256": "20cd2cd8b2a0e41f68e5fcf58a1b2ebe8d0e09c984bdbbd786a1057e869c9eb1",
+    "bundle_schema": "uwfa-sc-v9-full-ptq-eight-control-root-v1",
+    "literal_bundle_root_sha256": null,
+    "independent_auditor_manifest_sha256": null,
+    "independent_audit_receipt_sha256": null
+  },
+  "primary_dependency": {
+    "source_manifest_sha256": "d1e3eaff6762df2e273f6e3f4216ff9110abe74a7534a0098544a4ceef632c5e",
+    "runner_sha256": "d1ff04ce3c2cc36208e464eaed943d6c94eb91a47e9d3c460b2d562b7162cc4d",
+    "required_status": "PRIMARY_SOURCE_SURVIVOR_NONPROMOTING_DEFERRED_STAGES_REQUIRED",
+    "independent_auditor_manifest_sha256": null,
+    "independent_audit_receipt_sha256": null,
+    "live_result_accessed_during_build": false
+  },
+  "v8_runtime_source_candidates": {
+    "SOURCE_MANIFEST.json": {"bytes": 3518, "sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6"},
+    "uwfa_common.py": {"bytes": 58875, "sha256": "db53567ab6d71d5150cc92ef4a78fa9ce5cca01f5474fa2ca32edc8711cc4325"},
+    "stage0_census.py": {"bytes": 123776, "sha256": "7b7c2e0fcb6593805e6b2c8234ae59cb42d90fbb7dcf945a35aa5dfe331ae618"},
+    "protocol.py": {"bytes": 21051, "sha256": "9e18675a1e646eb10c0900aa3767bff96666943309dbd8db3953c745888d2cc1"},
+    "container_codec.py": {"bytes": 93379, "sha256": "645debb547a76818a880bfc346a2dd6230af97b07dc832afb3548a83d6920fed"},
+    "cupy_backend.py": {"bytes": 40964, "sha256": "7904a5e122686487d89fb684b70052507089bfe3bbfe4f1f02520df6ce3fb1ba"},
+    "strata_sc_adapter.py": {"bytes": 36184, "sha256": "08fc8808ac168f6930ee9482e160f25f2bd087829fca4630553aea3510d722c6"},
+    "universal_adapter.py": {"bytes": 11577, "sha256": "a5ab2e1919af98c2aa9b3032faa0ba5552efe05cca250bd6844fd48c76aabbc8"}
+  },
+  "scientific_contract": {
+    "control_seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017],
+    "canonical_candidates_per_fold": 150,
+    "selection": "minimum exact validation charged bits, then selector ordinal",
+    "all_candidate_scores_physically_recorded": true,
+    "all_eight_authenticate_before_first_backend_or_fit": true,
+    "control_full_and_structural_geometry_are_per_control": true,
+    "only_universal_format_geometry_is_shared": true,
+    "source_winner_reuse_forbidden": true,
+    "early_kill": "first control physical saving greater than or equal to source saving",
+    "positive_specificity": "all eight independently selected physical savings strictly below source"
+  },
+  "universal_geometry": {
+    "experts": 6,
+    "roles": ["gate", "up", "down"],
+    "hidden": 2048,
+    "intermediate": 768,
+    "weights": 28311552,
+    "blocks": 15,
+    "excluded_source_derived": ["labels", "profiles", "symbol counts", "role contribution maps", "payload lengths"]
+  },
+  "output_contract": {
+    "complete_written_last": true,
+    "incomplete_marker_survives_exception": true,
+    "all_terminal_results_nonpromoting": true,
+    "fresh_independent_result_audit_required": true
+  },
+  "source_only_build_attestation": {
+    "runpod_accessed": false,
+    "cuda_imported_or_launched": false,
+    "qwen_or_model_payload_opened_statted_hashed_or_enumerated": false,
+    "live_primary_result_opened_statted_hashed_or_enumerated": false,
+    "gaussian_control_payload_opened_statted_hashed_or_enumerated": false,
+    "existing_encoder_or_v8_source_modified": false
+  },
+  "claim_boundary": "source-only design and executable orchestration awaiting independent pins; no payload evidence"
+}

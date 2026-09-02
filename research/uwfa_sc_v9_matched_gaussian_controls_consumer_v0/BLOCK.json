@@ -1,0 +1,34 @@
+{
+  "schema": "uwfa-sc-v9-matched-controls-consumer-block-v0",
+  "status": "SOURCE_ONLY_CONSUMER_BUILT_EXTERNAL_AUDIT_AND_PAYLOAD_PINS_MISSING",
+  "payload_access_authority": false,
+  "positive_claim_authority": false,
+  "missing_external_pins": [
+    "independent v9 primary-result auditor manifest and PASS receipt",
+    "independent full-PTQ producer auditor manifest and PASS receipt",
+    "independent consumer-source auditor manifest and PASS receipt",
+    "literal eight-control root COMPLETE SHA-256",
+    "independent moment-replayer source and audit receipt",
+    "authenticated descriptor-source builder SHA-256",
+    "v8 all-150 preflight, source snapshot and independent GPU identity receipts",
+    "authenticated NumPy, CuPy, polar-repository and encoder runtime snapshot"
+  ],
+  "closed_interfaces": {
+    "all_eight_bundles_authenticate_before_any_fit": true,
+    "universal_geometry_shared_without_source_structural_equality": true,
+    "every_executed_fold_records_all_150_cells": true,
+    "source_winner_reuse_forbidden": true,
+    "early_null_greater_than_or_equal_is_decisive": true,
+    "positive_survivor_requires_all_eight_strictly_below_source": true
+  },
+  "forbidden_shortcuts": [
+    "open a control before primary and run authorization",
+    "begin fitting after authenticating fewer than eight bundles",
+    "require or copy Qwen/source labels, profiles or structural geometry",
+    "reuse the source-selected WFA cell",
+    "record only the winning control cell",
+    "continue fitting later nulls after a decisive null kill",
+    "treat a source-authored audit as independent"
+  ],
+  "claim_boundary": "source-only consumer/input auditor; no runtime payload evidence and no promotion"
+}

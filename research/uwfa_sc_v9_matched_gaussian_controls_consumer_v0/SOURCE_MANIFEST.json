@@ -1,0 +1,29 @@
+{
+  "schema": "uwfa-sc-v9-matched-controls-consumer-source-manifest-v0",
+  "status": "SOURCE_ONLY_NONPROMOTING",
+  "members": [
+    {"name": "API_AUDIT.md", "bytes": 1749, "sha256": "6d99b62a0e0bfab58cf0f25fd1f9d893d5319a53f95304f1e88fe7e6116a9413"},
+    {"name": "BLOCK.json", "bytes": 1720, "sha256": "47bd43f6185b6be1918757cfba273f27a9c20169d9518d6c21bb8490e03cf28a"},
+    {"name": "README.md", "bytes": 4239, "sha256": "f561126fcaec133a02595d7f874c267b205fd180157b23b9f2ca3d4869298f32"},
+    {"name": "consumer_contract.py", "bytes": 44262, "sha256": "6dcb322919bb805c62c37646f1a488c2ac145198b8c32f55b016b4e6314c3cad"},
+    {"name": "design_lock.json", "bytes": 3695, "sha256": "31f829a49bc03f4f153e0433e414c3e5e789c41c012d300ca3f062c16ced345b"},
+    {"name": "matched_controls_consumer.py", "bytes": 34878, "sha256": "4664ffa0787479f920d74c838368ae6b889f86ea9142434c75db4ad362bca422"},
+    {"name": "test_source_only.py", "bytes": 16991, "sha256": "d3a5c456899bb4aa38d781a11962e5df58360ddfd3ff3970a9daf7069dd2cbe7"},
+    {"name": "verify_source.py", "bytes": 3402, "sha256": "4ada8290c2e862b6c1aa5c96dc176f867f3414835b2607d310ead70c4c01ce55"}
+  ],
+  "runtime": {
+    "direct_execution": "inert exit 3",
+    "payload_authority": false,
+    "all_eight_before_fit": true,
+    "all_150_cells_recorded_per_executed_fold": true,
+    "requires_external_independent_audits": true
+  },
+  "source_only_attestation": {
+    "runpod_accessed": false,
+    "cuda_imported_or_launched": false,
+    "model_or_qwen_payload_accessed": false,
+    "live_primary_result_accessed": false,
+    "gaussian_control_payload_accessed": false,
+    "existing_source_modified": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "uwfa_sc_v9_matched_gaussian_controls_consumer_v0_cpu_receipt_v1",
+  "date_utc": "2026-09-02",
+  "package": "research/uwfa_sc_v9_matched_gaussian_controls_consumer_v0",
+  "source_manifest_sha256": "9ab5f06e4cd9bf6970c09f8630cd78bd0fb9e8bec94a4aaa4f14c84e46a556bd",
+  "isolated_copy": "/tmp/uwfa_sc_v9_matched_gaussian_controls_consumer_v0_9ab5f0",
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "2.5.2",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "isolated_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  "tests": [
+    {
+      "command": "/workspace/int2-cupy-venv/bin/python -I -B /tmp/uwfa_sc_v9_matched_gaussian_controls_consumer_v0_9ab5f0/test_source_only.py",
+      "exit_code": 0,
+      "tests_run": 15,
+      "status": "OK"
+    },
+    {
+      "command": "/workspace/int2-cupy-venv/bin/python -I -B /tmp/uwfa_sc_v9_matched_gaussian_controls_consumer_v0_9ab5f0/verify_source.py --package /tmp/uwfa_sc_v9_matched_gaussian_controls_consumer_v0_9ab5f0",
+      "exit_code": 0,
+      "status": "PASS_SOURCE_ONLY_MATCHED_CONTROLS_CONSUMER",
+      "members": 9,
+      "payload_access_authority": false,
+      "cuda_imported": false
+    }
+  ],
+  "scope": {
+    "qwen_payload_read": false,
+    "control_payload_read": false,
+    "cuda_used": false,
+    "live_result_read": false,
+    "all150_control_fit_executed": false
+  },
+  "interpretation": "The independent all-eight/all-150 controls consumer passed source-only mechanics. It has not consumed any matched-Gaussian PTQ bundle or produced scientific control evidence."
+}
