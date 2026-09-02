@@ -23,6 +23,7 @@ import struct
 import subprocess
 import sys
 import tempfile
+import traceback
 import types
 from fractions import Fraction
 from pathlib import Path
@@ -232,13 +233,16 @@ def normalize_strata_group_ordinal_abi(strata_common: Any) -> dict[str, Any]:
     original = getattr(strata_common, "expected_block_group_ordinals", None)
     require(callable(original), "STRATA expected-block-group entrypoint")
 
-    def normalized(labels: Any) -> list[tuple[int, ...]]:
+    def normalized(labels: Any) -> list[list[int]]:
         rows = original(labels)
         require(isinstance(rows, list), "STRATA group rows")
-        converted: list[tuple[int, ...]] = []
+        converted: list[list[int]] = []
         for row in rows:
             require(hasattr(row, "__iter__"), "STRATA group row iterable")
-            values = tuple(int(value) for value in row)
+            # A list preserves the original 1-D NumPy integer array's
+            # one-axis advanced-index semantics.  A tuple of integers is
+            # interpreted as one index per axis and fails on long rows.
+            values = [int(value) for value in row]
             require(all(type(value) is int for value in values), "STRATA group Python-int ABI")
             converted.append(values)
         return converted
@@ -911,5 +915,6 @@ if __name__ == "__main__":
     try:
         raise SystemExit(main())
     except Exception as exc:
+        traceback.print_exc()
         print(f"FAIL_UWFA_SC_V8_QWEN_EARLY_GATE: {type(exc).__name__}: {exc}", file=sys.stderr)
         raise SystemExit(1)

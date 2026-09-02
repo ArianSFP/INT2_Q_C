@@ -28,7 +28,11 @@ source gate survives, the only status is
 The pinned STRATA helper emits NumPy integer scalars for group ordinals while
 the sealed v8 adapter requires exact built-in Python integers.  This runner
 therefore applies one explicit value- and order-preserving `int()` conversion
-to those ordinals.  The bridge receipt is included in the decoder-bundle hash.
+to those ordinals and returns each row as a Python `list`.  The list container
+is part of the ABI: it preserves the original one-dimensional NumPy advanced-
+index operation used by the sealed adapter.  A tuple is not equivalent because
+NumPy treats it as one index per array axis.  The bridge receipt is included in
+the decoder-bundle hash.
 This makes the run useful as an exploratory Qwen early-kill diagnostic, but it
 is not execution of the sealed producer unchanged; a production result needs
 a freshly reviewed producer revision with the ABI repair in its sealed source.

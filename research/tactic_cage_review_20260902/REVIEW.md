@@ -191,3 +191,4 @@ Qwen survivor.
 - `research/tactic_conditional_dyadic_coset_v2/`
 - `research/tactic_actual_coarse_n18_v3_independent_audit_20260902/`
 - `research/universal_causal_noise_shaping_syndrome_mdl_nogo_v0/`
+- `research/tactic_cage_review_20260902/COMPOSITE_GRAMMAR_REVIEW.md`

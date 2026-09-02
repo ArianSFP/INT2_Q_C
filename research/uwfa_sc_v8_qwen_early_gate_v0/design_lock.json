@@ -35,7 +35,8 @@
   ],
   "controls": "never opened or run",
   "exploratory_semantic_bridge": {
-    "operation": "value-and-order-preserving built-in int conversion of NumPy integer group ordinals returned by pinned STRATA expected_block_group_ordinals",
+    "operation": "value-and-order-preserving built-in int conversion of NumPy integer group ordinals returned by pinned STRATA expected_block_group_ordinals; each row is a Python list preserving the producer's one-axis NumPy advanced-index semantics",
+    "container_abi": "list[list[int]]; tuple rows are forbidden because NumPy interprets a tuple as one index per array axis",
     "reason": "sealed v8 adapter requires exact Python int and otherwise fails before the scientific source phase",
     "bound_into_decoder_bundle": true,
     "production_authority": false,

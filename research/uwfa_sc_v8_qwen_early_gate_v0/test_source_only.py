@@ -186,8 +186,20 @@ class EarlyGateSourceTests(unittest.TestCase):
         ]
         receipt = runner.normalize_strata_group_ordinal_abi(module)
         rows = module.expected_block_group_ordinals(None)
-        self.assertEqual(rows, [(7, 2), (11,)])
+        self.assertEqual(rows, [[7, 2], [11]])
+        self.assertTrue(all(type(row) is list for row in rows))
         self.assertTrue(all(type(value) is int for row in rows for value in row))
+
+        # The bridge must preserve the original 1-D NumPy array's one-axis
+        # advanced-index semantics.  A tuple with the same integer values is
+        # instead interpreted as one index per array axis.
+        import numpy as np
+
+        post = np.arange(40, dtype=np.int64).reshape(20, 2)
+        original = np.asarray([7, 2], dtype=np.int64)
+        np.testing.assert_array_equal(post[rows[0]], post[original])
+        with self.assertRaises(IndexError):
+            _ = post[tuple(rows[0])]
         self.assertEqual(
             receipt["status"],
             "EXPLORATORY_VALUE_PRESERVING_NUMPY_INTEGER_TO_PYTHON_INT",
