@@ -1,0 +1,34 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-v0-result-audit-external-pins-v0",
+  "status": "UNRESOLVED_TEMPLATE_DO_NOT_RUN",
+  "paths": {
+    "posterior_producer_package": "<ABSOLUTE_POSTERIOR_PRODUCER_PACKAGE>",
+    "v9_publication": "<ABSOLUTE_COMPLETED_V9_PUBLICATION>",
+    "v9_result_audit_receipt": "<ABSOLUTE_SUCCESSFUL_V9_RESULT_AUDIT_RECEIPT>",
+    "v8_package": "<ABSOLUTE_V8_PACKAGE>",
+    "strata_common": "<ABSOLUTE_STRATA_COMMON_PY>",
+    "frozen_auditor": "<ABSOLUTE_FROZEN_AUDITOR_PY>",
+    "source_manifest": "<ABSOLUTE_BF16_SOURCE_MANIFEST>",
+    "posterior_publication": "<ABSOLUTE_COMPLETED_POSTERIOR_PUBLICATION>",
+    "audit_output_parent": "<ABSOLUTE_EXISTING_OUTPUT_PARENT>",
+    "audit_output_name": "<FRESH_OUTPUT_BASENAME>"
+  },
+  "hashes": {
+    "posterior_producer_manifest_sha256": "0ef30253d4d31504fbd8f88b8203cf35bce6c14952e570aace44b7bc089cb713",
+    "v9_result_audit_source_manifest_sha256": "885f41e27c439c808e2118de52184feaec58efe9f14bbc0e02a377e3b189f5ee",
+    "v9_result_audit_receipt_sha256": "<64_LOWER_HEX>",
+    "v8_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+    "strata_common_sha256": "3f085c9531b714d0d7877388f54ae50495dc3ea631491563abceb4db55608fd1",
+    "frozen_auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e",
+    "source_manifest_sha256": "<64_LOWER_HEX>"
+  },
+  "v9_publication_members": "<EXACT_MAP_OF_SEVEN_NAME_TO_BYTES_AND_SHA256_ROWS>",
+  "posterior_publication_members": "<EXACT_MAP_OF_ELEVEN_OR_TWELVE_NAME_TO_BYTES_AND_SHA256_ROWS>",
+  "access_authorization": {
+    "may_open_completed_v9_publication": true,
+    "may_open_completed_posterior_publication": true,
+    "may_open_bf16_score_panel": true,
+    "may_initialize_cupy_for_exact_rht_replay": true,
+    "positive_claim_authority": false
+  }
+}

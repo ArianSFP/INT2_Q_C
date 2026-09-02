@@ -1,0 +1,68 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-v0-result-audit-source-manifest-v0",
+  "status": "SEALED_SOURCE_ONLY_AWAITING_EXTERNAL_RESULT_PINS",
+  "source_snapshot_root_sha256": "85eb4ff30ab986e5e1e69f29e608851b1f5f5c3708a6135d872ac1b4a8cad883",
+  "source_root_algorithm": {
+    "domain_ascii_hex": "555746412d53432d504f53544552494f522d43454e54524f49442d56302d524553554c542d41554449544f522d534f555243452d524f4f542d563000",
+    "ordering": "ascending raw ASCII filename bytes",
+    "row_encoding": "canonical JSON with exact fields bytes,name,sha256",
+    "digest": "SHA-256(domain || canonical_rows)"
+  },
+  "members": [
+    {
+      "name": "API_AUDIT.md",
+      "bytes": 4740,
+      "sha256": "2196ea4b7770f3632096698ef53055ecc3d8939da3f0f003107a7e70f0f5ec11"
+    },
+    {
+      "name": "BLOCK.json",
+      "bytes": 1817,
+      "sha256": "5b149d2c1f456eea6eb9b60a1dd897f7a7753f3683cbe74236bf9e724d0560af"
+    },
+    {
+      "name": "README.md",
+      "bytes": 6102,
+      "sha256": "eb681326510ec74876d6eac517369b66898f835ce41a28f5af400695571632d5"
+    },
+    {
+      "name": "UNRESOLVED_EXTERNAL_PINS.json",
+      "bytes": 1835,
+      "sha256": "07b22182138a11f1ad5df26350eb66091013aef643113b2583d14bc42f2c04a6"
+    },
+    {
+      "name": "audit_core.py",
+      "bytes": 35434,
+      "sha256": "607c4d076b0c358084925bbcefb335b3b976567aebf689dbb4ac48a7853079b8"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 3415,
+      "sha256": "bda9979e1d69464e658bface4996e75fd542dac8bf0fe844e636ee24d7bc0cdc"
+    },
+    {
+      "name": "result_auditor.py",
+      "bytes": 68536,
+      "sha256": "6013cb25b94740f92b90a34f2dcc80083618fe82a49e3b1e510da803aec606b9"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 12173,
+      "sha256": "f8c9c09b2c855ff1786356b4564ebf5d8a76e633343b7d34296c7683d48bfc50"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 3541,
+      "sha256": "3c85fdcb750aa97e1ba7276a7292d80487bd9d0f2db463979af1c4d7cc5bf22f"
+    }
+  ],
+  "access_attestation": {
+    "runpod_accessed": false,
+    "qwen_or_model_payload_accessed": false,
+    "completed_v9_publication_accessed": false,
+    "completed_posterior_publication_accessed": false,
+    "bf16_score_panel_accessed": false,
+    "network_accessed": false,
+    "cuda_or_cupy_initialized": false
+  },
+  "claim_boundary": "Source-only result-auditor mechanics are not model evidence; runtime PASS remains nonpromoting and v0 lacks inference-ready routed posterior application."
+}

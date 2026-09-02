@@ -1,0 +1,75 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-v0-result-audit-design-v0",
+  "status": "SOURCE_ONLY_FROZEN_AWAITING_EXTERNAL_RESULT_PINS",
+  "purpose": "independently authenticate and numerically replay one completed posterior-centroid v0 diagnostic",
+  "positive_claim_authority": false,
+  "source_root_algorithm": {
+    "domain_ascii": "UWFA-SC-POSTERIOR-CENTROID-V0-RESULT-AUDITOR-SOURCE-ROOT-V0\\0",
+    "row_schema": ["name", "bytes", "sha256"],
+    "ordering": "ascending raw ASCII filename bytes",
+    "encoding": "SHA256(domain || canonical_json(exact_rows))",
+    "locale_dependent_sorting_forbidden": true
+  },
+  "frozen_source_pins": {
+    "posterior_producer_manifest_sha256": "0ef30253d4d31504fbd8f88b8203cf35bce6c14952e570aace44b7bc089cb713",
+    "posterior_producer_source_root_sha256": "ea3ad9cf9b723cdf7501eeff004bd7f2821af4d37ff186b72f2972482a05e11c",
+    "posterior_result_bridge_sha256": "112efcad5fd3fe9bccfea11af03bd9124a3789b6107c4486dd961656398e4d79",
+    "v9_result_audit_source_manifest_sha256": "885f41e27c439c808e2118de52184feaec58efe9f14bbc0e02a377e3b189f5ee",
+    "v8_manifest_sha256": "a54593c13a864a28d2797faf360321cf3cce5b834292aff013ca8eff175c68b6",
+    "strata_common_sha256": "3f085c9531b714d0d7877388f54ae50495dc3ea631491563abceb4db55608fd1",
+    "frozen_auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+  },
+  "posterior_publication_grammar": {
+    "always": [
+      "COMPLETE.json",
+      "FOLD0_LOCAL_ONLY.cagepst1",
+      "FOLD0_STATE_AWARE.cagepst1",
+      "FOLD0_STATE_PERMUTED.cagepst1",
+      "FOLD1_LOCAL_ONLY.cagepst1",
+      "FOLD1_STATE_AWARE.cagepst1",
+      "FOLD1_STATE_PERMUTED.cagepst1",
+      "FOLD2_LOCAL_ONLY.cagepst1",
+      "FOLD2_STATE_AWARE.cagepst1",
+      "FOLD2_STATE_PERMUTED.cagepst1",
+      "RESULT.json"
+    ],
+    "present_if_and_only_if_crossfit_passes": "FINAL_STATE_AWARE.cagepst1"
+  },
+  "independence": {
+    "producer_diagnostic_imported": false,
+    "producer_posterior_core_imported": false,
+    "producer_RESULT_json_used_as_numerical_input": false,
+    "retained_coordinate_bridge_use": "narrow literal-v8 redecode only; independently pinned and source audited",
+    "all_three_laws_reimplemented": true,
+    "all_eight_ridge_exponents_replayed": true,
+    "both_inner_directions_per_outer_fold_replayed": true,
+    "emitted_binary16_heads_must_match_exactly": true
+  },
+  "physical_scope": {
+    "literal_wrapper_bytes_rate_and_F_recomputed": true,
+    "actual_authenticated_v8_inner_routed_decode_reexecuted": true,
+    "suffix_page_request_independently_charged": true,
+    "actual_posterior_wrapper_routed_decode_executed": false,
+    "posterior_head_applied_inside_routed_session": false,
+    "read_result_is_nonpromoting_projection": true,
+    "strict_cold_read_upper_bound": 2.0,
+    "rate_interval_bpw": [2.15, 2.5],
+    "target_F": 0.8
+  },
+  "claim_boundary": {
+    "matched_gaussian_controls": false,
+    "structure_destroying_controls": false,
+    "portability_family": false,
+    "universal_swiglu_moe_performance": false,
+    "inference_ready_moe_decode": false
+  },
+  "build_access_attestation": {
+    "runpod_accessed": false,
+    "qwen_or_model_payload_accessed": false,
+    "completed_v9_publication_accessed": false,
+    "completed_posterior_publication_accessed": false,
+    "bf16_score_panel_accessed": false,
+    "network_accessed": false,
+    "cuda_or_cupy_initialized": false
+  }
+}

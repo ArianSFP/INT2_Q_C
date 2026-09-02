@@ -1,0 +1,34 @@
+{
+  "schema": "uwfa-sc-posterior-centroid-v0-result-audit-block-v0",
+  "status": "BLOCKED_UNTIL_EXTERNAL_RUNTIME_PINS_EXIST",
+  "blocking_inputs": [
+    "a completed immutable seven-member v9 publication",
+    "a successful independently hashed uwfa-sc-v9-primary-independent-result-audit-v0 receipt for those exact seven members",
+    "a completed immutable 11- or 12-member posterior-centroid v0 publication",
+    "an externally hashed complete swiglu-bf16-score-panel-v0 manifest and all matrix bytes",
+    "absolute immutable paths to the pinned v8 package, STRATA common source and frozen auditor source",
+    "an authenticated Linux CPython -I -B runtime with NumPy and the exact CuPy RHT path",
+    "a fresh absolute audit output directory name"
+  ],
+  "hard_fail_conditions": [
+    "v9 audit receipt absent, failed, wrong-source, or bound to different publication members",
+    "any external/member/completion/source hash mismatch",
+    "posterior final wrapper presence disagrees with independently recomputed cross-fit decision",
+    "any independently refitted binary16 head differs from literal wrapper bytes",
+    "any local/state/permuted score, rate, F, ledger, gate or terminal status disagrees with producer output",
+    "non-CuPy RHT replay",
+    "existing audit output directory"
+  ],
+  "non_resolvable_in_v0": {
+    "inference_ready_routed_posterior_application": false,
+    "reason": "v0 parses the suffix and routes the inner expert but does not accumulate state occupancies and apply the posterior head in that same routed session",
+    "effect": "cold-read figures remain nonpromoting projections even after a successful result audit"
+  },
+  "source_only_build_access": {
+    "runpod": false,
+    "model_payload": false,
+    "live_result": false,
+    "cuda": false,
+    "network": false
+  }
+}
