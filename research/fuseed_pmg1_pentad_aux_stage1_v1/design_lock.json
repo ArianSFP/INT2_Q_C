@@ -1,0 +1,109 @@
+{
+  "schema": "fuseed-pmg1-fixed-pentad-aux-stage1-design-v1",
+  "status": "FROZEN_SOURCE_ONLY_AWAITING_INDEPENDENT_AUDIT_NO_PAYLOAD_AUTHORITY",
+  "architecture": "One fixed five-seed decoder-generated PMG1 anchor span, fitted jointly per matrix and scored on frozen disjoint auxiliary coordinates.",
+  "research_question": "Can these five predeclared procedural anchors jointly remove at least the metadata-adjusted 19.10966610577134 percent of Qwen Up/Down source energy on untouched coordinates, after decoded-FP16 fitting, without paying dense-anchor read bandwidth?",
+  "fixed_hypothesis": {
+    "interpretation": "The five integers are public constants of one fixed hypothesis. They are not represented as authenticated winners of a complete u32 search.",
+    "seeds_u32_in_decoder_order": [3306464084, 235286348, 2174751347, 256779041, 118211936],
+    "tuple_substitution_after_score": false,
+    "tuple_retry_after_score": false,
+    "family_claim_from_one_tuple": false
+  },
+  "source_scope": {
+    "model_family": "Qwen auxiliary development panel only",
+    "layer": 15,
+    "experts": [0, 8, 16, 32, 40, 48, 64, 72, 80, 96, 104, 112],
+    "roles": ["up", "down"],
+    "absent_identity": "expert 0/up",
+    "matrix_identities": 23,
+    "gate_opened": false,
+    "validation_or_pinned_panel_opened": false,
+    "source_manifest_sha256": "4194ff0aa13e71e2c9631f6f2cfd145c5146edf9c6d287084197499872dff782"
+  },
+  "frozen_coordinate_plan": {
+    "construction": "Exact source-only reconstruction of historical FUSEED-U32-v1 stage 0 followed by the frozen stage1 fill.",
+    "fit_coordinates": 2048,
+    "score_coordinates": 2048,
+    "fit_score_intersection": 0,
+    "fit_key_sha256": "42a2cb8170a1de43f23ee399ef93687cf738fce42d9f314b9273839855961f9e",
+    "score_key_sha256": "c112da528fcedfbcf62a0f71ea3f63150cc2b68a0bc7b0d34d63290580f0d7bb",
+    "historical_plan_module_sha256": "adcf1d8153c2a8a5048153edfa90f8f12d959d1d09e1cf7524359a532da950d1"
+  },
+  "generator_and_fit": {
+    "generator": "Exact CURRENT_PMG_GATE_UP_DIRECT_BF16 Philox/cuRAND Box-Muller ABI with role-specific scale words, counter mapping, BF16 round/decode, and Down transpose.",
+    "cuda_source_sha256": "580ea565670dbc41319abc3277d733d9160e7043ffec25e07df914ae8bb64701",
+    "anchor_storage": "No dense anchor tensor is serialized or read by the prospective decoder.",
+    "fit_per_identity": "Center five anchor columns and target on only that identity's frozen fit keys; accumulate the 5x5 Gram and five RHS values by explicit canonical-order binary64 operations.",
+    "ridge": "lambda = 2^-20 * trace(Gram) / 5",
+    "solve": "Fixed ordinal-order binary64 Cholesky, forward substitution, reverse-ordinal back substitution; no contracted multiply-add is specified.",
+    "condition": "Fixed-order deterministic Jacobi replay; reject nonpositive numerical rank or condition number above 2^20.",
+    "serialization": "Round beta_0..beta_4 and intercept independently to IEEE binary16 RNE, reject negative zero/nonfinite, decode the literal words, and score only that decoded reconstruction.",
+    "metric": "c_joint = 1 - sum((W_score - decoded_joint_prediction)^2) / sum(W_score^2), pooled by literal SSE and source energy.",
+    "nonadditivity": "Exactly one five-anchor reconstruction and one residual are scored. The five historical marginal captures are never added, multiplied, or transferred."
+  },
+  "controls_and_uncertainty": {
+    "scramble_controls": 16,
+    "control_seeds": [26090100, 26090101, 26090102, 26090103, 26090104, 26090105, 26090106, 26090107, 26090108, 26090109, 26090110, 26090111, 26090112, 26090113, 26090114, 26090115],
+    "control_rng": "NumPy PCG64",
+    "control_action": "Independently permute anchor rows within each expert-role identity and split; source values and coordinate counts remain fixed; refit and rescore the complete pentad.",
+    "source_control_order": "A survivor must exceed every frozen scramble-control aggregate capture.",
+    "jackknife": "Delete one whole expert at a time, omitting both Up and Down when present; 12 clusters, never 23 matrix pseudo-replicates.",
+    "uncertainty_gate": "raw pooled source capture minus three delete-expert standard errors"
+  },
+  "decision": {
+    "base_factor": 0.9888693569009007,
+    "target_factor": 0.8,
+    "side_bytes_six_experts": 320,
+    "side_bpw_six_experts": 0.0000904224537037037,
+    "required_capture": 0.1910966610577134,
+    "survivor_requirements": [
+      "delete-expert lower_3se >= 0.1910966610577134",
+      "every one of 23 held-out identity captures is strictly positive",
+      "pooled Up capture and pooled Down capture are each strictly positive",
+      "primary aggregate capture exceeds all 16 frozen scramble controls",
+      "all coefficients, Gram eigenvalues, SSEs, energies, captures, controls, and decision distances are finite"
+    ],
+    "survivor_status": "SURVIVES_FIXED_PENTAD_AUXILIARY_STAGE1_ONLY",
+    "failure_status": "HARD_KILL_FIXED_PENTAD_AUXILIARY_STAGE1_NO_TUPLE_RETRY",
+    "survivor_consequence": "May request a separately audited and separately authorized stage-2 review only; supplies no Gate, validation, codec, or target evidence.",
+    "failure_consequence": "Kills only this exact fixed pentad at this auxiliary gate; does not establish a PMG-family or universal procedural-anchor negative."
+  },
+  "physical_planning_ledger": {
+    "rate_rule": "Debit every side bit from the residual payload so the prospective literal total remains 2.5 bpw.",
+    "side_bytes_six_experts": 320,
+    "common_bytes": 80,
+    "bytes_per_expert": 40,
+    "base_page_read_amplification": 1.1694444444444445,
+    "conservative_new_4096_byte_pages_per_route": 2,
+    "conservative_page_read_amplification": 1.175,
+    "strict_read_limit": 2.0,
+    "container_exists": false
+  },
+  "historical_context": {
+    "four_seed_auxiliary_result_sha256": "054997a32b4ed4727ea9dcf3b9d77258bad6550ff7739978bb75d7c5e26e0661",
+    "four_seed_result_audit_receipt_sha256": "5880b5e25ad0abbd06c0f751a2aeaa870439f8fefd8cd1fb42bbac8c579ff105",
+    "four_seed_raw_capture": -0.04577526835279766,
+    "four_seed_delete_one_matrix_upper_3se": 0.0015538337327504342,
+    "warning": "The adverse tetrad is strong prioritization evidence against the fixed pentad, but it neither measures the fifth seed jointly nor used the required delete-one-expert clusters. The pentad gate is retained only because it is cheap and source-closed."
+  },
+  "launch_blockers": [
+    "An independent source audit must verify this exact closed source package and publish a receipt.",
+    "A separate human/root authorization must explicitly permit only the 23-file auxiliary Up/Down payload scope; this package cannot authorize itself.",
+    "An independently owned dispatcher must bind the exact source manifest, source roots, CUDA device, Python/NumPy/CuPy/CUDA versions, and an absent fail-closed output namespace.",
+    "The dispatcher must independently rederive all 4096 coordinate keys and audit the CuPy kernel against the frozen PMG ABI before source access.",
+    "The dispatcher must bind this package manifest hash and refuse dirty, extra, missing, symlinked, or hash-mismatched members.",
+    "No Gate, stage 2, validation, pinned panel, residual codec, or model-family payload may be opened under auxiliary stage-1 authority."
+  ],
+  "claim_boundary": {
+    "payload_opened_by_this_package": false,
+    "network_or_ssh_operation_defined_by_this_package": false,
+    "payload_launcher_or_output_writer_present": false,
+    "stage1_run_authority": false,
+    "stage2_or_validation_authority": false,
+    "gate_evidence": false,
+    "compression_result": false,
+    "target_achievement": false,
+    "universal_or_family_negative": false
+  }
+}

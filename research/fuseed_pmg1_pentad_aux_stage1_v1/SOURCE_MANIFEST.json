@@ -1,0 +1,63 @@
+{
+  "schema": "fuseed-pmg1-fixed-pentad-aux-stage1-source-manifest-v1",
+  "status": "FROZEN_SOURCE_ONLY_AWAITING_INDEPENDENT_AUDIT_NO_PAYLOAD_AUTHORITY",
+  "self_unlisted": "SOURCE_MANIFEST.json",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4850,
+      "sha256": "b47973863b00f1014dd47996010f2d242117c1d134b5730482e2d7b3419e7a18"
+    },
+    {
+      "path": "__init__.py",
+      "bytes": 130,
+      "sha256": "1e1c0f5bf4e3403cd99b382229b2e7f530516ab77cd5f1f171bd6bef9c98fc19"
+    },
+    {
+      "path": "contract.py",
+      "bytes": 16944,
+      "sha256": "6217dfddbbbafb615a3339aa053769935447b3dbf030f981158041d7a63fcba1"
+    },
+    {
+      "path": "cupy_anchor.py",
+      "bytes": 6318,
+      "sha256": "8710167dd1cc02dcc1aed1b7e960f36066698e8025096dded361a991e0582012"
+    },
+    {
+      "path": "design_lock.json",
+      "bytes": 7728,
+      "sha256": "6eb4a3f1aaeee0c664dc19c0afe88374a860d3594f984d39e4d1331b10886c4f"
+    },
+    {
+      "path": "inert_entrypoint.py",
+      "bytes": 566,
+      "sha256": "b88530a61164bf7c9ef9d5fc44dbb1ade5c9c553757fa1730c5f79ef87d24e8f"
+    },
+    {
+      "path": "plan_snapshot.py",
+      "bytes": 8624,
+      "sha256": "cad97d205ebfee328dc366ca064c03ce4f9b81cbaccc30531e61842117dba9aa"
+    },
+    {
+      "path": "reference_bindings.json",
+      "bytes": 2070,
+      "sha256": "2c060bf517f69a6f5f9cb93c04c24358f0edfd3af247cbaf4d58633684b8b5ba"
+    },
+    {
+      "path": "stage1_core.py",
+      "bytes": 11843,
+      "sha256": "90675a18037f94f76088352c925153f49737bafee6ac4be1440850aa2dbf9e95"
+    },
+    {
+      "path": "test_source.py",
+      "bytes": 9148,
+      "sha256": "05bcc6738c5f853e55a5be6394d758c9da73d25cf241edd572d20b9246b31064"
+    },
+    {
+      "path": "verify_source.py",
+      "bytes": 7374,
+      "sha256": "be529cec08db63eb2bbbc359dd69247e7e2b8abd1abc0993e66140a756a78150"
+    }
+  ],
+  "claim": "Exact source closure only. This manifest grants no payload, RunPod, SSH, stage-1, stage-2, validation, or output authority."
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "fuseed-pmg1-fixed-pentad-aux-stage1-reference-bindings-v1",
+  "references": [
+    {
+      "path_from_repository_root": "research/fuseed_pmg1_direct_source_calibration_v0/plan.py",
+      "bytes": 13976,
+      "sha256": "adcf1d8153c2a8a5048153edfa90f8f12d959d1d09e1cf7524359a532da950d1",
+      "purpose": "historical coordinate-plan provenance only"
+    },
+    {
+      "path_from_workspace_root": "agent_rd_structure_diag_cross_expert_sources.json",
+      "bytes": 34046,
+      "sha256": "4194ff0aa13e71e2c9631f6f2cfd145c5146edf9c6d287084197499872dff782",
+      "purpose": "future auxiliary source identity binding; not access authority"
+    },
+    {
+      "path_from_repository_root": "research/fuseed_pmg1_pentad_rate_relative_v1/design_lock.json",
+      "bytes": 13777,
+      "sha256": "052f384a9635e503691050885869318abc7779563ac212ecccbba03705dbc4bc",
+      "purpose": "historical fixed-pentad design and physical-ledger provenance only"
+    },
+    {
+      "path_from_repository_root": "research/fuseed_pmg1_v4_opportunistic_selection/heuristic_stage0_result/global_topk.bin",
+      "bytes": 98421,
+      "sha256": "ff00282c2af8d33f69957c9ffdba4eb0c91d9d28875d8e2b6ebbe620aef826fd",
+      "purpose": "heuristic historical provenance only; deliberately not a runtime input or authority"
+    },
+    {
+      "path_from_repository_root": "research/fuseed_pmg1_tetrad_aux_stage1_v0/runpod_result.json",
+      "bytes": 25724,
+      "sha256": "054997a32b4ed4727ea9dcf3b9d77258bad6550ff7739978bb75d7c5e26e0661",
+      "purpose": "adverse four-seed auxiliary evidence"
+    },
+    {
+      "path_from_repository_root": "research/fuseed_pmg1_tetrad_aux_stage1_v0_independent_result_audit_20260901/audit_receipt.json",
+      "bytes": 2453,
+      "sha256": "5880b5e25ad0abbd06c0f751a2aeaa870439f8fefd8cd1fb42bbac8c579ff105",
+      "purpose": "independent audit receipt for the adverse four-seed evidence"
+    }
+  ],
+  "authority": "No referenced artifact and no file in this package grants payload, RunPod, SSH, stage-1, stage-2, validation, or output authority."
+}

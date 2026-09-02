@@ -1,0 +1,110 @@
+{
+  "schema": "tactic_actual_coarse_n18_source_design_v4",
+  "status": "SOURCE_ONLY_IMPLEMENTATION_CANDIDATE_NO_PAYLOAD_NO_CUDA_NO_RESULT",
+  "name": "UNIPOLAR-N18-307-v4",
+  "universality": {
+    "scope": "canonical positive-shape SwiGLU-MoE Gate, Up and transposed-Down expert frames",
+    "decoder_model_identity_inputs": [],
+    "decoder_expert_identity_inputs": [],
+    "decoder_layer_identity_inputs": [],
+    "decoder_provenance_inputs": [],
+    "decoder_activation_inputs": [],
+    "decoder_external_reference_reads": [],
+    "decoder_visible_coordinates": [
+      "canonical role ordinal",
+      "intermediate and hidden dimensions",
+      "tile ordinal"
+    ],
+    "source_fitted_values": [
+      "one transmitted FP32 scale per nonzero N18 record",
+      "one transmitted causal arithmetic payload per nonzero N18 record"
+    ]
+  },
+  "record": {
+    "magic_ascii": "TACN18C4",
+    "version": 4,
+    "values": 262144,
+    "header_bytes": 128,
+    "reservoir_bytes": 78592,
+    "payload_bytes": 78464,
+    "payload_bits": 627712,
+    "nominal_test_channel_bits": 626688,
+    "logical_reserve_bits": 1024,
+    "physical_bpw_full_record": "307/128",
+    "profile_q": 164,
+    "test_channel_bpw": "153/64",
+    "overflow": "terminal architecture failure; no seed/profile/transform/topology/retry change",
+    "logical_eof": "hard physical/logical EOF with deterministic virtual-zero arithmetic finalization only",
+    "integrity": "payload SHA-256, payload CRC32, header CRC32, zero terminal/fill bytes",
+    "zero_tile": "zero logical payload, stored scale 1.0, full physical record charged"
+  },
+  "frame": {
+    "order": [
+      "gate tiles ascending",
+      "up tiles ascending",
+      "down_transposed tiles ascending"
+    ],
+    "self_description": "every record binds shape, role, tile, valid values and universal seeds",
+    "target_eligibility": "intermediate*hidden divisible by 262144",
+    "tail": "last role tile is shape-prefix plus implicit BF16 +0 padding before RHT; full reservoir charged; compatibility decode only outside exact-rate target cell"
+  },
+  "numerical": {
+    "encoder_core": {
+      "relative_path": "src/polaris_sc_v2_rht_encoder.py",
+      "bytes": 29633,
+      "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0"
+    },
+    "independent_decoder_core": {
+      "relative_path": "strata_v2_klt_mixed_independent_auditor_v1.py",
+      "bytes": 116835,
+      "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+    },
+    "encoder": "authenticated exact-byte CuPy MAP-SC producer",
+    "decoder": "separately authenticated independent causal decoder; no encoder import",
+    "reconstruction": "exact integer inverse signed RHT times eta*FP32_scale/512, exposed as FP32 valid prefix",
+    "residual": "original canonical BF16 source minus decoded valid-prefix reconstruction in FP64"
+  },
+  "qwen_evaluation": {
+    "geometry": [768, 2048],
+    "records_per_role": 6,
+    "records_per_expert": 18,
+    "experts": 6,
+    "weights": 28311552,
+    "coarse_bytes_per_expert": 1414656,
+    "coarse_bytes_panel": 8487936,
+    "coarse_bpw": "307/128",
+    "coarse_model_bytes": 0
+  },
+  "frozen_final_planning_topology_not_implemented_by_v4": {
+    "coarse_bytes": 8487936,
+    "fine_bytes": 331776,
+    "expert_header_bytes": 3072,
+    "global_packet_bytes": 24576,
+    "total_bytes": 8847360,
+    "physical_bpw": "5/2",
+    "one_pass_selected_pages": 365,
+    "equal_share_pages": 360,
+    "one_pass_amplification": "73/72",
+    "forbidden_second_private_pass_pages": 724,
+    "forbidden_second_private_pass_amplification": "181/90"
+  },
+  "read_schedule": {
+    "compressed_frame_passes": 1,
+    "compressed_frame_reread_bytes": 0,
+    "decoder_action": "sequentially read each record once and buffer decoded symbols/reconstruction for refinement",
+    "metrics": [
+      "literal compressed bytes",
+      "unique 4096-byte page union",
+      "repeated compressed bytes"
+    ]
+  },
+  "promotion": {
+    "source_audit_required": true,
+    "runtime_freeze_required": true,
+    "source_free_cupy_smoke_required": true,
+    "first_payload": "three authenticated Qwen records: Gate, Up and DownT tile zero",
+    "overflow_gate": "any overflow kills the fixed v4 profile with no retry",
+    "full_panel_after_pilot": "all 108 records followed by independent decode/re-encode and original-domain score",
+    "claim_boundary": "source implementation only; no Qwen, MSE, TACTIC, CAGE, F or target achievement claim"
+  }
+}

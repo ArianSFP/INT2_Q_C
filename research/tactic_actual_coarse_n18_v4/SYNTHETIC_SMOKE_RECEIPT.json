@@ -1,0 +1,58 @@
+{
+  "canonical_reencode_matches": true,
+  "capacity_margin_bits": 786,
+  "claim_boundary": "source-free mechanics only; no Qwen/Tactic/F result or runtime freeze",
+  "cuda_compute_capability": [
+    "1",
+    "2",
+    "0"
+  ],
+  "cuda_device_id": 0,
+  "decoder": {
+    "arithmetic_physical_bits": 626926,
+    "arithmetic_virtual_zero_extension_rule": "virtual zeros after hard logical EOF are decoder state, not physical or logical bits",
+    "canonical_reencode_matches": true,
+    "canonical_symbol_abs_max": 9517,
+    "canonical_symbols_i16_sha256": "59fdd332042b5da25e74f04b1164e5e38bf4c462089da73e7b86a63e1f2d10fb",
+    "integer_float_inverse_max_abs": 0.0,
+    "levels": [
+      {"capacity": 0.005710619459148636, "level": 1, "selected": 1498},
+      {"capacity": 0.3951104984881255, "level": 2, "selected": 103576},
+      {"capacity": 0.9694303976291786, "level": 3, "selected": 254131},
+      {"capacity": 0.999999598520433, "level": 4, "selected": 262144},
+      {"capacity": 1.0, "level": 5, "selected": 262144},
+      {"capacity": 1.0, "level": 6, "selected": 262144}
+    ],
+    "logical_bits": 626926,
+    "padded_values": 0,
+    "reconstruction_f32_sha256": "deab419abf7e624f2edc1618b5359d22c1e03749352f827ff0896a03fb5d22f4",
+    "selected_polar_bits": 1145637,
+    "status": "PASS_CAUSAL_INDEPENDENT_DECODE_REENCODE",
+    "valid_values": 262144
+  },
+  "encoder": {
+    "arithmetic_roundtrip_bits_match": true,
+    "capacity_margin_bits": 786,
+    "causal_decoder_frequencies_match": true,
+    "decoder_scale_fp32": 1.0002192258834839,
+    "logical_bits": 626926,
+    "normalized_rht_domain_relative_mse": 0.03693951352628289,
+    "packet_sha256": "7a15e96389cab06f9de16ca36ff3c9a74580d8d13d5c0a351af02ab1733cfce1",
+    "padded_values": 0,
+    "reconstruction_indices_match": true,
+    "role": "gate",
+    "source_padded_tile_sha256": "1de4a07f1186c045e08965abd1b14863d65a3c8f36e5a729a3c2fe72ccb1e941",
+    "status": "PASS_FINITE_TILE_WITHIN_RESERVOIR",
+    "tile_ordinal": 0,
+    "valid_values": 262144
+  },
+  "logical_bits": 626926,
+  "packet_bytes": 78592,
+  "packet_sha256": "7a15e96389cab06f9de16ca36ff3c9a74580d8d13d5c0a351af02ab1733cfce1",
+  "physical_bpw": 2.3984375,
+  "relative_mse_original_coordinates": 0.03693951352239193,
+  "schema": "tactic_actual_coarse_n18_v4_synthetic_cupy_smoke",
+  "source_bf16_sha256": "1de4a07f1186c045e08965abd1b14863d65a3c8f36e5a729a3c2fe72ccb1e941",
+  "source_kind": "deterministic Python-gaussian BF16 fixture; no model payload",
+  "status": "PASS_SOURCE_FREE_NUMERICAL_ENCODE_INDEPENDENT_DECODE_REENCODE"
+}
