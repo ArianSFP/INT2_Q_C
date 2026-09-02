@@ -367,6 +367,17 @@ total-symbol cap cannot hold one Qwen-shaped 128-expert triplet container.
 SILT requires a new repaired source boundary before any payload work.  Neither
 mechanism result is Qwen evidence.
 
+UWFA-SC v5 closes those three v4 defects.  V6 additionally makes a separate
+parent marker, retained directory inode, and canonical directory root the
+publication authority; its full source suite, independent directory-fault
+tests, and source-free RTX 5090 replay pass.  The independent v6 audit still
+blocks freeze for five narrower downstream reasons: verified result bytes are
+closed before consumption, marker content is not rehashed after linking,
+inner candidate/held-out selection omits literal 64-byte/4-KiB layout costs,
+telemetry is not semantically joined to the claimed workload/canonical device
+IDs, and Student-t uncertainty treats overlapping owner folds as iid.  V7 is a
+narrow repair of those issues, not a new source model.
+
 ### Gate 1: joint entropy and posterior census on the current artifact
 
 After UWFA-SC v3 is frozen, replay its authenticated causal decisions and add
@@ -573,6 +584,13 @@ a compression gain.
   carry a foreign source/decoder closure, and preflight validation accepts
   duplicate selector rows and underspecified representative evidence.  No
   Qwen/current-codec payload was opened, so this is not a source-model result.
+- UWFA-SC v6 passes the repaired publication substitution cases, exact
+  source/control closure, canonical 150-cell preflight, and a fresh source-free
+  RTX 5090 replay, but its independent audit is **BLOCK_SOURCE_FREEZE** on
+  verified-byte lifetime, post-link marker content, literal inner aligned-rate
+  selection, workload-bound telemetry/canonical IDs, and dependency-invalid
+  owner-fold confidence.  V7 is repairing those five gates.  No Qwen or
+  current-codec object has been opened by v4-v7.
 - SILT v1 is independently blocked on routed-read authentication, durable
   publication, and universal-capacity issues.  It has no Qwen payload or
   source-gain result.
