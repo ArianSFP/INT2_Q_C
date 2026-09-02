@@ -1,0 +1,34 @@
+{
+  "blockers": {
+    "B1_COMPLETION_STAGING_NOT_REHASHED": "complete() published mutated and undeclared staging bytes; only the later envelope verifier rejected them",
+    "B2_CONTROL_CLOSURE_NOT_BOUND_TO_SOURCE": "controls_phase accepted a caller artifact digest not matching source panel and controls with foreign decoder/manifest/bootstrap/snapshot/preflight closures",
+    "B3_PREFLIGHT_RECEIPT_UNDERSPECIFIED": "validator accepted 150 duplicate selector-0 rows and a representative receipt without candidate/winner/hash coverage"
+  },
+  "cupy_imported_or_cuda_context_created": false,
+  "errors": [],
+  "failures": [],
+  "observations": {
+    "exact_inventory_root": "57d7c99e616da8d56dabb7fedab75fb8a9dbf940008762d1e43ae452ad4356c6",
+    "literal_rate_and_repeated_ranges": [
+      {
+        "expert": 0,
+        "requested_range_bytes": 8871,
+        "symbols_per_weight": 0.03466796875,
+        "unique_page_bytes": 20480
+      },
+      {
+        "expert": 1,
+        "requested_range_bytes": 8871,
+        "symbols_per_weight": 0.03466796875,
+        "unique_page_bytes": 20480
+      }
+    ]
+  },
+  "payload_or_qwen_access": false,
+  "producer_root_sha256": "57d7c99e616da8d56dabb7fedab75fb8a9dbf940008762d1e43ae452ad4356c6",
+  "receipt_sha256": "da60dabb634ff5709de341c94128bacdb0a2638d93946e0a2ad63e426edf767c",
+  "schema": "uwfa-v4-independent-hostile-source-audit-v1",
+  "skipped": [],
+  "status": "BLOCK_SOURCE_FREEZE",
+  "tests_run": 11
+}

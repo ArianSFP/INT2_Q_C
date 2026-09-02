@@ -1,0 +1,35 @@
+{
+  "audit_inventory_sha256": "29314dc13b955ba3d9fb0e33ba0899fb5a497a2bc3431a0972a83783a18735a5",
+  "audit_receipt_sha256": "feaf995d0f877e2017dcec1cd81329332ad965945f3b8e320f3845067861a8a2",
+  "cell_count_each": 150,
+  "completion_sha256": [
+    "ca111ff67b212870de33454c2619e1a67f5ec6209a5a8809d309b6d7a43d8189",
+    "b03f8945faed2c2f390d50435c53e7d663538e5a555c6d0f310af88294492ab0"
+  ],
+  "deterministic_replay_equal": {
+    "all150_cells": true,
+    "container_sha256": true,
+    "full_panel_lengths": true,
+    "measured_update_count": true,
+    "representative_fixture": true,
+    "winner": true
+  },
+  "development_source_root_sha256": "d11fa4af39dd5a3c26756cf6b87b201ce70d5745d6c0e0c45878236520dd943d",
+  "device_uuid": "GPU-c06e0fe0-9836-2f98-8f10-0514d085f722",
+  "payload_authority_granted": false,
+  "pci_bus_id": "00000000:16:00.0",
+  "receipt_sha256": [
+    "f373a0e969b88f044b6ee62c9bdcd184c6ea18cd5e75d212f7129e699b805886",
+    "015ee68234e3395c9c23bc04c9500a1647d3d38c08c0739962a877ef28b19a95"
+  ],
+  "representative_container_sha256": "89c6e81f5cf47e8502cc25c64fb1aa612caa4ec765e405336d1661a5c2951b87",
+  "schema": "uwfa-v4-independent-gpu-receipt-audit-v1",
+  "status": "PASS_TWO_SOURCE_FREE_RTX5090_REPLAYS_NO_CLAIM_AUTHORITY",
+  "winner": {
+    "reset_length": 4096,
+    "selector_ordinal": 4,
+    "states": 2,
+    "topology": "suffix",
+    "topology_id": 0
+  }
+}

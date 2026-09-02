@@ -352,8 +352,15 @@ latency, and memory traffic are not free.
 
 ### Gate 0: close current source-free work
 
-Finish the ongoing UWFA-SC v3 hostile source review.  The independent SILT-v1
-audit is now a source-free **BLOCK**: ordinary selected-expert decode touches
+Finish the ongoing UWFA-SC repair and hostile source review.  UWFA-SC v4
+repairs v3's fold, resource, GPU-identity, structural-control, posterior-triplet
+and symlink-parent defects, and two source-free RTX 5090 replays are exactly
+reproducible.  Its independent audit is nevertheless a source-free **BLOCK**:
+same-UID staging mutation/extra files can be published without a final rehash,
+controls are not bound to the source artifact and authenticated decoder chain,
+and the typed preflight accepts duplicate 150-cell and sparse representative
+receipts.  The independent SILT-v1 audit is also a source-free **BLOCK**:
+ordinary selected-expert decode touches
 all expert frames (`3x` in its counterexample despite a claimed `5/3x`), a
 post-rename crash can leave a visible empty final directory, and the declared
 total-symbol cap cannot hold one Qwen-shaped 128-expert triplet container.
@@ -559,6 +566,13 @@ a compression gain.
   undefined on legal single-layer panels; source/preflight/score bindings,
   symlink-safe publication, resource caps, UUID/PCI identity, control geometry,
   and one posterior-handoff digest require repair.  It has no Qwen result.
+- UWFA-SC v4 repairs those v3 defects and passes its source-free 150-cell and
+  representative CuPy workloads twice on the RTX 5090 with deterministic
+  equality, but its independent audit remains a **BLOCK**: publication does
+  not re-enumerate/rehash staging immediately before completion, controls can
+  carry a foreign source/decoder closure, and preflight validation accepts
+  duplicate selector rows and underspecified representative evidence.  No
+  Qwen/current-codec payload was opened, so this is not a source-model result.
 - SILT v1 is independently blocked on routed-read authentication, durable
   publication, and universal-capacity issues.  It has no Qwen payload or
   source-gain result.

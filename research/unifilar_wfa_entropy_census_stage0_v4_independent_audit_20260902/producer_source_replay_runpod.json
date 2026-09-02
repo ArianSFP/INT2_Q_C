@@ -1,0 +1,13 @@
+{
+  "schema": "uwfa-v4-producer-source-only-replay-observation-v1",
+  "producer_root_sha256": "57d7c99e616da8d56dabb7fedab75fb8a9dbf940008762d1e43ae452ad4356c6",
+  "command": "env -C /tmp/uwfa_v4_dev_20260902b PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3.12 -I -B test_source_only.py",
+  "tests_run": 48,
+  "passed": 47,
+  "expected_skips": 1,
+  "unexpected_failures": 0,
+  "elapsed_seconds": 73.436,
+  "status": "PASS_PRODUCER_SOURCE_ONLY_SUITE_WITH_EXPECTED_PRE_REVIEW_MANIFEST_SKIP",
+  "payload_or_qwen_access": false,
+  "cupy_or_cuda_access": false
+}

@@ -1,0 +1,18 @@
+{
+  "completion_sha256": "ca111ff67b212870de33454c2619e1a67f5ec6209a5a8809d309b6d7a43d8189",
+  "members": [
+    {
+      "bytes": 225,
+      "name": "RUN_STATE.json",
+      "sha256": "0f93e3a1f3010c765ebce2db70adf0b849838019e838a0832b12590c8e619d6a"
+    },
+    {
+      "bytes": 1508702,
+      "name": "GPU_DEV_RECEIPT.json",
+      "sha256": "f373a0e969b88f044b6ee62c9bdcd184c6ea18cd5e75d212f7129e699b805886"
+    }
+  ],
+  "schema": "unifilar-wfa-completion-v4",
+  "source_manifest_sha256": "d11fa4af39dd5a3c26756cf6b87b201ce70d5745d6c0e0c45878236520dd943d",
+  "status": "COMPLETE_LAST"
+}

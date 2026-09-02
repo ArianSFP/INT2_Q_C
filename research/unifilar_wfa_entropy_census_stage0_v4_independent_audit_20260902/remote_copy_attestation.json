@@ -1,0 +1,10 @@
+{
+  "schema": "uwfa-v4-local-runpod-copy-comparison-v1",
+  "local_path": "research/unifilar_wfa_entropy_census_stage0_v4",
+  "runpod_path": "/tmp/uwfa_v4_dev_20260902b",
+  "comparison": "exact top-level no-follow regular-file name, decimal size, and SHA-256 equality",
+  "members_each": 17,
+  "mismatched_or_extra_members": [],
+  "audit_root_sha256_each": "57d7c99e616da8d56dabb7fedab75fb8a9dbf940008762d1e43ae452ad4356c6",
+  "status": "PASS_BYTE_FOR_BYTE_COPY_EQUALITY_BEFORE_IMPORT"
+}

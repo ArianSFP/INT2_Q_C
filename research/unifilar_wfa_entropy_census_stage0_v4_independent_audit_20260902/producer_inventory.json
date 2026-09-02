@@ -1,0 +1,26 @@
+{
+  "canonical_root_algorithm": "SHA256(prefix || case-insensitive-name-sorted UTF-8 records name<TAB>decimal_bytes<TAB>lowercase_sha256<LF>)",
+  "canonical_root_prefix": "UWFA-SC-V4-INDEPENDENT-PRE-REVIEW-ROOT-v1\\n",
+  "producer": "research/unifilar_wfa_entropy_census_stage0_v4",
+  "producer_root_sha256": "57d7c99e616da8d56dabb7fedab75fb8a9dbf940008762d1e43ae452ad4356c6",
+  "members": [
+    {"name":"container_codec.py","bytes":81120,"sha256":"2a4a1bb61d9c62ce54942a132b4a1b0442fb72bcebca2bec59f2059c4355840c"},
+    {"name":"cupy_backend.py","bytes":40964,"sha256":"7904a5e122686487d89fb684b70052507089bfe3bbfe4f1f02520df6ce3fb1ba"},
+    {"name":"design_lock.json","bytes":8666,"sha256":"ac71007e2903ee29d66c7af6f7cb730a25193c26335b02591ef34439f8866481"},
+    {"name":"dispatcher_contract.py","bytes":9205,"sha256":"3092f2e4f6272cca3d3e627cdf1165f4f99a965d2e6bbbfe10755bacc72e1961"},
+    {"name":"fixture_long_memory.py","bytes":4307,"sha256":"3fa05fe68b4e05a9933d45a846949f1a9e48690d19e77c3a232f0d46a082084b"},
+    {"name":"fixture_portability.py","bytes":16350,"sha256":"d8eaa1453413f967a4a0ec9ed3cdc881296e1b2bf8eb709b96909ec59f0ccded"},
+    {"name":"INDEPENDENT_BOOTSTRAP_ABI.md","bytes":7553,"sha256":"5444db5b944f34023c47c2742db3c846b7ea135e1acfec009a59fa63548c05d8"},
+    {"name":"protocol.py","bytes":19389,"sha256":"58f30c52fccdc206e97fa5a34cc6e5c4921898b3a45e0043d434ddcdd6d2c7b2"},
+    {"name":"README.md","bytes":10939,"sha256":"dda417127ac605e8b7f045099d09d7da2359c7789fb498716cf502ca65112686"},
+    {"name":"result_envelope.py","bytes":2688,"sha256":"b12fa69fd22b3e6b06b20415b3e43b689d7fd4eaf0bcd88dc64328280362ceca"},
+    {"name":"run_source_free_gpu_dev.py","bytes":7125,"sha256":"d7ff362289553633d34c2a2dde025bc497e994220f86b25e9668bd1766379c18"},
+    {"name":"stage0_census.py","bytes":78161,"sha256":"8c4e4c5d1f0c0c13d606178e68a21c6ab904dad9fc09d87209281d4653d605a7"},
+    {"name":"strata_sc_adapter.py","bytes":36184,"sha256":"e021a33bd21cbb0256decdebf046ded4dbf5e28df82817221b44d0b8d324f4cc"},
+    {"name":"test_source_only.py","bytes":79809,"sha256":"a7adadcbc843d01b89139bb95e76f3ba56fbdb162faa1f6130c4cb76cbf1504f"},
+    {"name":"universal_adapter.py","bytes":11577,"sha256":"b55bdf1eab31ab3ef270560efa769f3ae8c951c09ec564c165296186ce327b33"},
+    {"name":"uwfa_common.py","bytes":38771,"sha256":"ab445e55c763654f46ad588289770b9b132081e7df30fc056927f21cec091295"},
+    {"name":"verify_source.py","bytes":11140,"sha256":"11fd66a22f4dfd0549690c5cdec625bcdbbe7dcb2afb488d420aea92cd95a686"}
+  ],
+  "source_manifest_present": false
+}
