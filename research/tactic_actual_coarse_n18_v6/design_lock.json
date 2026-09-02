@@ -1,0 +1,58 @@
+{
+  "schema": "tactic-actual-coarse-n18-source-design-v6",
+  "status": "SOURCE_ONLY_AWAITING_EXTERNAL_SOURCE_FREE_SMOKE_AND_RESULT_AUDIT",
+  "name": "UNIPOLAR-N18-307-v6",
+  "predecessor": {
+    "v4_source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+    "v4_modified": false,
+    "v5_modified": false,
+    "packet_grammar_changed": false,
+    "record_magic": "TACN18C4",
+    "record_version": 4
+  },
+  "repair_lock": {
+    "R1_role_abi": "gate, up, down_transposed are preserved literally from input manifest through packet order, scoring and result receipts",
+    "R2_isolated_source": "entry points require CPython -I -B, bootstrap source_auth.py from its externally pinned manifest row, then retain no-follow descriptors for the exact package closure through terminal verification",
+    "R3_smoke_binding": "the external smoke receipt is internally sealed, externally file-hash bound, exact-source-manifest/root/member bound, executing-entry inode bound and created outside the retained immutable package",
+    "R4_i32_lifetime": "the installed inherited-decoder inverse is exercised at the exact 8388608 worst-case magnitude before facade retention or floating reconstruction; little-endian I32 and no downcast are mandatory",
+    "R5_traffic": "decoder and result receipts separate external compressed reads, host-memory parse/integrity lower bounds, scratch lower bounds and unmeasured accelerator HBM; first, total and reread bytes are exact identities",
+    "R6_publication": "output uses a private staging directory, Linux renameat2 RENAME_NOREPLACE, retained staging descriptor, final name/inode/member rebind, then a no-replace pending-to-COMPLETE terminal rename and no overwrite"
+  },
+  "role_abi": {
+    "ordered_roles": ["gate", "up", "down_transposed"],
+    "down_transposition_is_upstream_authenticated_obligation": true,
+    "down_alias_accepted": false
+  },
+  "rate_grammar": {
+    "full_record_values": 262144,
+    "record_bytes": 78592,
+    "target_exact_bpw": "307/128",
+    "target_eligibility": "intermediate*hidden divisible by 262144",
+    "qwen_pilot_shape": [768, 2048],
+    "qwen_shape_records_per_expert": 18,
+    "qwen_shape_coarse_bytes_per_expert": 1414656,
+    "tail_packets_decodable": true,
+    "arbitrary_tail_at_or_below_2_5_bpw_claimed": false
+  },
+  "traffic_contract": {
+    "prebuffered_decode_external_passes": 0,
+    "modeled_external_file_passes": [1, 2],
+    "external_identity": "total_read_bytes = first_pass_bytes + reread_bytes",
+    "host_minimum_full_frame_scans": 3,
+    "host_scan_scope": "causal packet slicing, aggregate input equality and frame SHA-256 only; internal CPU/DRAM traffic is not measured",
+    "scratch_is_lower_bound_only": true,
+    "accelerator_hbm_measured": false,
+    "below_2x_inference_hbm_claim_authority": false
+  },
+  "claim_boundary": {
+    "source_free_smoke_executed_in_this_source_freeze": false,
+    "payload_accessed_during_build": false,
+    "runpod_accessed_during_build": false,
+    "cuda_initialized_during_build": false,
+    "qwen_pilot_claimed": false,
+    "universal_tail_claimed": false,
+    "mse_or_f_claimed": false,
+    "fine_codec_implemented": false,
+    "positive_claim_authority": false
+  }
+}

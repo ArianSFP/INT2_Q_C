@@ -1,0 +1,48 @@
+{
+  "schema": "tactic-actual-coarse-n18-v6-source-free-checkpoint-v1",
+  "date_utc": "2026-09-02",
+  "package": "research/tactic_actual_coarse_n18_v6",
+  "source_manifest_sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d",
+  "source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2",
+  "predecessor_lock_sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+  "runtime_lock_sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+  "source_verification": {
+    "status": "PASS_RETAINED_SOURCE_CLOSURE_AWAITING_EXTERNAL_CUPY_SMOKE",
+    "source_members": 13,
+    "source_bytes": 157686,
+    "retained_no_follow_descriptors": true,
+    "payload_accessed": false,
+    "cuda_initialized": false
+  },
+  "hostile_cpu_tests": {
+    "tests_run": 26,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "status": "OK"
+  },
+  "source_free_cupy_smoke": {
+    "receipt_file": "receipt.json",
+    "receipt_file_bytes": 10169,
+    "receipt_file_sha256": "480e6d0667380ac7b3bc6ab6be9f54db0348cd2b78e1ca6948962d7915b8b1cd",
+    "receipt_internal_sha256": "672729f3956988210a53408258df3c8db5a091ad1e8f687f3ba05c755b249c60",
+    "independent_validator": "verify_receipt.py",
+    "independent_status": "PASS_SOURCE_FREE_CUPY_SMOKE_RECEIPT",
+    "i32_stress_above_i16": true,
+    "qwen_payload_accessed": false,
+    "positive_claim_authority": false
+  },
+  "staging_notes": [
+    "A package-only /tmp copy correctly failed two dependency-closure checks because it lacked the pinned repository-relative v4 predecessor.",
+    "The first exact-layout tree then correctly failed the same two checks because it lacked the two hash-pinned numerical source files.",
+    "After staging only the exact pinned predecessor and two exact numerical sources, the verifier and all 26 tests passed; no package byte was changed."
+  ],
+  "claim_boundary": {
+    "qwen_coarse_pilot_authorized_by_source_free_mechanics": true,
+    "qwen_result_obtained": false,
+    "physical_307_over_128_artifact_obtained": false,
+    "below_2x_inference_read_proved": false,
+    "universal_tail_at_or_below_2_5_bpw_proved": false,
+    "mse_result_obtained": false
+  }
+}

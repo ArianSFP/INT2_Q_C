@@ -1,0 +1,227 @@
+{
+  "aggregate_zero_frame": {
+    "encoder_all_checks_pass": true,
+    "exact_inherited_role_abi": true,
+    "frame_bytes": 235776,
+    "frame_sha256": "2286f742df3c4a492287f4dd8867e1c4c2b5dad7e548c78e42c1b01c7d99cb57",
+    "literal_aggregate_reencode_matches": true,
+    "roles": [
+      "gate",
+      "up",
+      "down_transposed"
+    ]
+  },
+  "claim_boundary": "source-free mechanics/runtime only; authorizes a separately bound Qwen pilot but is not a Qwen, MSE, universal-tail, fine-code, or inference-HBM result",
+  "i32_stress_lifetime": {
+    "downstream_reconstruction_expected_abs_max": 4096.0,
+    "downstream_reconstruction_float64_abs_max": 4096.0,
+    "expected_abs_max": 8388608,
+    "facade_retained_dtype": "<i4",
+    "input_index": 63,
+    "installed_in_inherited_decoder_before_call": true,
+    "inverse_output_dtype_before_facade": "<i4",
+    "no_copy_or_downcast": true,
+    "observed_abs_max": 8388608
+  },
+  "model_or_qwen_path_discovered_or_enumerated": false,
+  "numeric_tile": {
+    "all_encoder_self_checks_required_and_passed": true,
+    "canonical_reencode_matches": true,
+    "canonical_symbol_abs_max": 9331,
+    "canonical_symbols_i32_sha256": "0bbe58d8fd2d04dba467b8362144c9f0dfd0e5050273d22eaf003d3a3cc38824",
+    "capacity_margin_bits": 861,
+    "integer_float_inverse_max_abs": 0.0,
+    "inverse_i32_dtype_verified_before_facade_cast": true,
+    "inverse_transient_dtype": "<i4",
+    "logical_bits": 626851,
+    "packet_bytes": 78592,
+    "packet_sha256": "303629490ea016458d852ce1e5346a1c2f7ffdf40694c32bac27c73ae21bc0d7",
+    "relative_mse_original_coordinates": 0.03694173684044389,
+    "source_bf16_sha256": "901aca84e11753808ee96c88f479125875729e64b0635c857e6bd5425192002b"
+  },
+  "payload_accessed": false,
+  "receipt_sha256": "672729f3956988210a53408258df3c8db5a091ad1e8f687f3ba05c755b249c60",
+  "runtime_closure": {
+    "executed_v4_sources": {
+      "independent_decoder.py": "1b8ddcf5d8199769252c2db5a5cc36127c3577e6d9b0ee256741f7b2791a3d20",
+      "numeric_encoder.py": "2508c69fa63fd7fbe8f9dfe66844542a6c916688d8c635bb04e941041344db8b",
+      "packet_format.py": "acf308843068399a436e88f32f76632ccea3cbc9ceeb9bcbe5faeb604f4c42d4"
+    },
+    "inverse_override_installed_before_any_reservoir_decode": true,
+    "inverse_transient_abs_bound": 8388608,
+    "inverse_transient_dtype": "<i4",
+    "predecessor_lock_sha256": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+    "predecessor_source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+    "runtime": {
+      "compute_capability": "120",
+      "cuda_driver": 13000,
+      "cuda_runtime": 12090,
+      "cupy": "14.2.0",
+      "device_count": 1,
+      "device_name": "NVIDIA GeForce RTX 5090",
+      "implementation": "CPython",
+      "machine": "x86_64",
+      "numpy": "2.5.2",
+      "python": "3.12.3",
+      "system": "Linux"
+    },
+    "runtime_lock_sha256": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+    "schema": "tactic-actual-coarse-n18-v6-runtime-closure-v1",
+    "v4_source_modified": false
+  },
+  "schema": "tactic-actual-coarse-n18-v6-source-free-cupy-smoke-v1",
+  "source_closure": {
+    "executing_entry_inode_bound": true,
+    "executing_entry_name": "synthetic_cupy_smoke.py",
+    "member_hashes": {
+      "IMPLEMENTATION_MAP.md": "6d12686a85654df9cb02ee8f0825d0307cb72c9063b3605dc36988c43864e4dc",
+      "PREDECESSOR_LOCK.json": "645310404673e944c0f61e08747b4d7d50e6681cd450eb829acd8614c41f4322",
+      "README.md": "9c072debb454ef5dcd381df7a378ce82a0fff2bb207dfe00e3d69ba5e329e1d6",
+      "RUNTIME_LOCK.json": "de1464d23de161d90f0784183743252631385ad69ba2620697dea7df763c3490",
+      "design_lock.json": "69512898ffc625f13f2f0c4fd4231b76a8d51e173b356e8ea6609184c9ef69ba",
+      "dispatcher.py": "b1475fedeb485d38fb4b6921db242b176de7857e7725ad2e55c9afcf0c26cfcb",
+      "runtime_closure.py": "4e2e51d28a2b60b78e64f082dcda4e28a24568fb5acc7fbe90b6be977fb087ed",
+      "smoke_contract.py": "60c14565c66c0f52e7ed5dc60749c24b2599be85dcaa02aa196299a61810725c",
+      "source_auth.py": "201f50260044aeed9a0d6b7136c967bb6383b4fcc1d978f46e270102f8d8c927",
+      "successor_codec.py": "d48630348fdc84c8a8d356b0787ed2af09227894030915f84f06ff40eab1fdd9",
+      "synthetic_cupy_smoke.py": "f6f9ad75a5c90cb7a335f1973c55dbc5821346074a4ebdff61eef1f02801a411",
+      "test_source_only.py": "48ba6b470fb55c1994e7ae38da7faff07078d55f95c9dcd3921612412c4f3162",
+      "verify_source.py": "86f9c2893082c4d3147c6b1a69eaf6d01382e540cc6839e7b485613979b9a1ff"
+    },
+    "retained_no_follow_descriptors": true,
+    "source_manifest_sha256": "31662539a4c55926f47b378d15a0d8e23c90aa0903328c44be2e237eca48b15d",
+    "source_root_sha256": "161ab23169af3427648ec1bbcb9402568a0fb8aefc4a794daf3ebd1c56cc83f2"
+  },
+  "status": "PASS_SOURCE_FREE_V6_REPAIRS_CUPY_SOURCE_BOUND",
+  "traffic_ledgers": {
+    "modeled_one_external_pass": {
+      "accelerator_hbm": {
+        "below_2x_claim_authority": false,
+        "measured": false,
+        "read_amplification": null,
+        "read_bytes": null
+      },
+      "external_compressed_read": {
+        "first_pass_bytes": 235776,
+        "mode": "one_pass_external_file",
+        "one_external_pass": true,
+        "passes": 1,
+        "reread_amplification": 0.0,
+        "reread_bytes": 0,
+        "start_offset_mod_page": 0,
+        "total_read_amplification": 1.0,
+        "total_read_bytes": 235776,
+        "unique_page_bytes_if_externally_read": 237568
+      },
+      "frame_bytes": 235776,
+      "host_memory_parse_and_integrity": {
+        "aggregate_equality_input_frame_bytes": 235776,
+        "aggregate_equality_input_frame_passes": 1,
+        "arithmetic_and_array_internal_traffic_measured": false,
+        "causal_packet_decode_input_frame_bytes": 235776,
+        "causal_packet_decode_input_frame_passes": 1,
+        "claim_boundary": "host lower bound only; not CPU cache, DRAM, accelerator, or HBM traffic",
+        "frame_sha256_input_frame_bytes": 235776,
+        "frame_sha256_input_frame_passes": 1,
+        "minimum_input_frame_bytes_touched": 707328,
+        "minimum_input_frame_full_scan_equivalents": 3
+      },
+      "schema": "tactic-actual-coarse-n18-v6-frame-ledger-v1",
+      "scratch_lower_bound": {
+        "aggregate_reencode_buffer_bytes": 235776,
+        "canonical_packet_buffers_bytes": 235776,
+        "canonical_symbols_i32_bytes": 3145728,
+        "minimum_numeric_and_packet_scratch_bytes": 6763008,
+        "python_object_and_decoder_internal_scratch_measured": false,
+        "reconstruction_f32_bytes": 3145728
+      },
+      "target_eligible_exact_307_over_128": true
+    },
+    "modeled_two_external_passes": {
+      "accelerator_hbm": {
+        "below_2x_claim_authority": false,
+        "measured": false,
+        "read_amplification": null,
+        "read_bytes": null
+      },
+      "external_compressed_read": {
+        "first_pass_bytes": 235776,
+        "mode": "modeled_external_file_reread",
+        "one_external_pass": false,
+        "passes": 2,
+        "reread_amplification": 1.0,
+        "reread_bytes": 235776,
+        "start_offset_mod_page": 0,
+        "total_read_amplification": 2.0,
+        "total_read_bytes": 471552,
+        "unique_page_bytes_if_externally_read": 237568
+      },
+      "frame_bytes": 235776,
+      "host_memory_parse_and_integrity": {
+        "aggregate_equality_input_frame_bytes": 235776,
+        "aggregate_equality_input_frame_passes": 1,
+        "arithmetic_and_array_internal_traffic_measured": false,
+        "causal_packet_decode_input_frame_bytes": 235776,
+        "causal_packet_decode_input_frame_passes": 1,
+        "claim_boundary": "host lower bound only; not CPU cache, DRAM, accelerator, or HBM traffic",
+        "frame_sha256_input_frame_bytes": 235776,
+        "frame_sha256_input_frame_passes": 1,
+        "minimum_input_frame_bytes_touched": 707328,
+        "minimum_input_frame_full_scan_equivalents": 3
+      },
+      "schema": "tactic-actual-coarse-n18-v6-frame-ledger-v1",
+      "scratch_lower_bound": {
+        "aggregate_reencode_buffer_bytes": 235776,
+        "canonical_packet_buffers_bytes": 235776,
+        "canonical_symbols_i32_bytes": 3145728,
+        "minimum_numeric_and_packet_scratch_bytes": 6763008,
+        "python_object_and_decoder_internal_scratch_measured": false,
+        "reconstruction_f32_bytes": 3145728
+      },
+      "target_eligible_exact_307_over_128": true
+    },
+    "prebuffered_decode": {
+      "accelerator_hbm": {
+        "below_2x_claim_authority": false,
+        "measured": false,
+        "read_amplification": null,
+        "read_bytes": null
+      },
+      "external_compressed_read": {
+        "first_pass_bytes": 0,
+        "mode": "prebuffered_encoder_output",
+        "one_external_pass": false,
+        "passes": 0,
+        "reread_amplification": 0.0,
+        "reread_bytes": 0,
+        "start_offset_mod_page": 0,
+        "total_read_amplification": 0.0,
+        "total_read_bytes": 0,
+        "unique_page_bytes_if_externally_read": 0
+      },
+      "frame_bytes": 235776,
+      "host_memory_parse_and_integrity": {
+        "aggregate_equality_input_frame_bytes": 235776,
+        "aggregate_equality_input_frame_passes": 1,
+        "arithmetic_and_array_internal_traffic_measured": false,
+        "causal_packet_decode_input_frame_bytes": 235776,
+        "causal_packet_decode_input_frame_passes": 1,
+        "claim_boundary": "host lower bound only; not CPU cache, DRAM, accelerator, or HBM traffic",
+        "frame_sha256_input_frame_bytes": 235776,
+        "frame_sha256_input_frame_passes": 1,
+        "minimum_input_frame_bytes_touched": 707328,
+        "minimum_input_frame_full_scan_equivalents": 3
+      },
+      "schema": "tactic-actual-coarse-n18-v6-frame-ledger-v1",
+      "scratch_lower_bound": {
+        "aggregate_reencode_buffer_bytes": 235776,
+        "canonical_packet_buffers_bytes": 235776,
+        "canonical_symbols_i32_bytes": 3145728,
+        "minimum_numeric_and_packet_scratch_bytes": 6763008,
+        "python_object_and_decoder_internal_scratch_measured": false,
+        "reconstruction_f32_bytes": 3145728
+      },
+      "target_eligible_exact_307_over_128": true
+    }
+  }
+}

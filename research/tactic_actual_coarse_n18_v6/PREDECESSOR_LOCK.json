@@ -1,0 +1,24 @@
+{
+  "schema": "tactic-actual-coarse-n18-v6-predecessor-lock-v1",
+  "status": "IMMUTABLE_V4_SOURCE_DEPENDENCY",
+  "relative_directory": "research/tactic_actual_coarse_n18_v4",
+  "source_root_algorithm": "TACTIC-N18-V4-SOURCE-ROOT-v1\\0 framed sorted name/bytes/SHA256",
+  "source_root_sha256": "1f9f2c92df3796f5f23b7e3a6b0826d6d8a2ea53bc70014fb75e61e7bc8a9fbf",
+  "members": [
+    {"name": "IMPLEMENTATION_MAP.md", "bytes": 3901, "sha256": "262ce7936ae2e7632dbc8bb3d7ec7900f36ceb1cbc59dcde8832a2ec6afc6758"},
+    {"name": "README.md", "bytes": 6557, "sha256": "090535bae370d0e4d636dbe804c1063795aff5b27085de00bf74e13ae2a23897"},
+    {"name": "SYNTHETIC_SMOKE_RECEIPT.json", "bytes": 2563, "sha256": "f2106d279295b0ec28b4ca32c59d733077f09d89cb5e50dbf4b6b920028639b2"},
+    {"name": "design_lock.json", "bytes": 4497, "sha256": "28f635337a797f4081f02588e590d780c1b55b9dc2d8284065edf431a67b45d8"},
+    {"name": "independent_decoder.py", "bytes": 18768, "sha256": "1b8ddcf5d8199769252c2db5a5cc36127c3577e6d9b0ee256741f7b2791a3d20"},
+    {"name": "numeric_encoder.py", "bytes": 13953, "sha256": "2508c69fa63fd7fbe8f9dfe66844542a6c916688d8c635bb04e941041344db8b"},
+    {"name": "packet_format.py", "bytes": 18925, "sha256": "acf308843068399a436e88f32f76632ccea3cbc9ceeb9bcbe5faeb604f4c42d4"},
+    {"name": "synthetic_cupy_smoke.py", "bytes": 3506, "sha256": "7d89f4be10bb06b3c1b9a8b2f008cdd43f70d7b76fec03cd8ebf677eff97cc8a"},
+    {"name": "test_source_only.py", "bytes": 11094, "sha256": "4820f9523f58302fc2f84229caa1aac03024a20e674e276638c675d7b10f3147"},
+    {"name": "verify_source.py", "bytes": 7202, "sha256": "09cfd7617afaa209c1c8e8dd9c0d9d85481f43225604aed79f2e278238258a12"}
+  ],
+  "executed_members": ["packet_format.py", "numeric_encoder.py", "independent_decoder.py"],
+  "numerical_dependencies": [
+    {"relative_path": "src/polaris_sc_v2_rht_encoder.py", "bytes": 29633, "sha256": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0"},
+    {"relative_path": "strata_v2_klt_mixed_independent_auditor_v1.py", "bytes": 116835, "sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"}
+  ]
+}
