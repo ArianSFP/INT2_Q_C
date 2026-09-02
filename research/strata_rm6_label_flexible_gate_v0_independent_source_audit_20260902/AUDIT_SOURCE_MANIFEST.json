@@ -1,0 +1,35 @@
+{
+  "schema": "strata-rm6-label-flexible-gate-v0-independent-audit-source-manifest-20260902",
+  "status": "FROZEN_AUDIT_SOURCE_PENDING_EXECUTION_ARTIFACT",
+  "audit_source_root_sha256": "ec18382fc7031eab2095d683cb6731b1692aaa4c1175421af8ffcf59a91ef448",
+  "members": [
+    {
+      "name": "ASSESSMENT.md",
+      "bytes": 3858,
+      "sha256": "d141aa052f4c5b2dfc82407afe2c5a15312b1e6a1841ab89b228ab098e0519ea"
+    },
+    {
+      "name": "AUDIT_DESIGN_LOCK.json",
+      "bytes": 1895,
+      "sha256": "62a5e6924527088e9dfb6fd8487069d2c3c42ff1abb96dbad7dc11f465e959f6"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1708,
+      "sha256": "86f5d35b7d10ab971e745d77c406b83a2c4195382bc6232b0ba0ee42f00fa59a"
+    },
+    {
+      "name": "audit_strata_rm6_v0.py",
+      "bytes": 38457,
+      "sha256": "7df86ff47c82ba2a09f067af8314d6e198b96cfd5a4b34534babb2a60dcbfc6f"
+    },
+    {
+      "name": "verify_audit_source.py",
+      "bytes": 2657,
+      "sha256": "bdf81c054de72419845745ca3688518967e29f244d635ad9dc76cb09af6e6729"
+    }
+  ],
+  "qwen_payload_accessed": false,
+  "coarse_payload_accessed": false,
+  "control_payload_accessed": false
+}

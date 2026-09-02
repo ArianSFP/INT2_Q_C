@@ -1,0 +1,22 @@
+{
+  "schema": "strata-rm-global-swap-v0-source-manifest",
+  "status": "SOURCE_BUILT_UNEXECUTED__HOLD_RUNPOD_AND_INDEPENDENT_AUDIT",
+  "source_root_sha256": "4f856e268d37ee1d6f32b4a2d1b8cd6879c235639ad75809ffd75fc7c4372d6c",
+  "members": [
+    {"name": "coset_contract.py", "bytes": 1269, "sha256": "3a6e9df5b604bedd5a656cc3f312cbf0cf9620794ce7951fd146aef8665696d8"},
+    {"name": "cupy_order_smoke.py", "bytes": 2980, "sha256": "3d48c7c9ee64a7ab64b5cf1cbcfd49af293d9fa995d7742eff9b93c22e262a06"},
+    {"name": "DESIGN_LOCK.json", "bytes": 2531, "sha256": "c08b4cec442d7dbfe5ce17f535e2bce0fbb4d455fbe37503d0111404c5ccbeb9"},
+    {"name": "EXECUTION_STATUS.json", "bytes": 897, "sha256": "5a90d0f9247a7dd5b54f93f36f26d106687cbc0c1084b2b21f2266e857ab2aa2"},
+    {"name": "hostile_tests.py", "bytes": 2519, "sha256": "c2485273f54fbe01131fedc6f6fc45d69e2a1b723beca24b659c98eccd6932f3"},
+    {"name": "LAUNCH_CONTRACT.md", "bytes": 1666, "sha256": "86484293ea134a36f692f6bff6bc9f4fd735503b7e36f21bb1fdcf035fe9e874"},
+    {"name": "pin_semantics.py", "bytes": 5177, "sha256": "9067b0a25d066a007be35def6a863cfa4b15b6b8cdd891b2e64fa7b38474d9b2"},
+    {"name": "README.md", "bytes": 4305, "sha256": "a24a34a276173a0913a17f59041e0bdcf69c4730c8751c070695e078d703a986"},
+    {"name": "RED_TEAM.md", "bytes": 2948, "sha256": "416b7117a9e11b6b02ceb5df5f58a9da3b2a98db1f8fc76dec7f4ca8abf9b0f6"},
+    {"name": "result_contract.py", "bytes": 4663, "sha256": "24a23cb70604ffe995c84a01bcec6468c3773dc3c0da665635f853ff3e284c96"},
+    {"name": "rm_order.py", "bytes": 5947, "sha256": "00b74403d877d7fa1e4d4facff71b59a35cc734ef4a52e092dc095c5abd6ff97"},
+    {"name": "run_source_gate.py", "bytes": 3119, "sha256": "e0bf2db4c23f73ca38a2ae5f9a7a8f887d703783102bc6d7d96379e1ba62fd61"},
+    {"name": "swap_adapter.py", "bytes": 2555, "sha256": "9155c2ff917a0f6d388218987dc670973df508da8c44b0cdfe5de0a841a2fc19"},
+    {"name": "test_source_only.py", "bytes": 7033, "sha256": "115fd796f2bd040ab4e252fed1ebf6cfbc3e76c4e434641bc535b43274208df7"},
+    {"name": "verify_source.py", "bytes": 2441, "sha256": "aac0a74376439649d522f4902bb009c61c0c8c0b5b4ba077f10eed5a5bcc785a"}
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "strata-bmp-obdd-qtt6-source-only-design-lock-v0",
+  "status": "FROZEN_SOURCE_ONLY_UNEXECUTED__HOLD_PAYLOAD_PENDING_INDEPENDENT_AUDIT",
+  "date": "2026-09-02",
+  "semantic_contract": {
+    "completed_planes": 6,
+    "index_formula": "sum(level_bit << level for level=0..5)",
+    "distortion_columns": 64,
+    "four_level_abi_accepted": false,
+    "internal_sc_decisions_accepted": false
+  },
+  "coordinate_contract": {
+    "intermediate_shape": "3*2^k",
+    "hidden_shape": "2^h",
+    "roles": 3,
+    "fixture_shape": [768, 2048, 3],
+    "fixture_tile": [16, 256],
+    "fixture_weights": 4096,
+    "variable_order_bank_size": 4,
+    "selector_physically_charged": true
+  },
+  "family_bank": {
+    "gf2_matrix_factor_ranks": [0, 1, 2, 4],
+    "robdd": true,
+    "bmp_qtt_gf2_ranks": [1, 2],
+    "joint_exception_cap": 64,
+    "families_are_label_functions_not_value_tensor_decompositions": true,
+    "families_are_not_probability_mps_models": true
+  },
+  "optimization": {
+    "objective": "sum_i D[i,k[i]] + lambda_bit*physical_packet_bits",
+    "whole_index_rescore": true,
+    "exact_small_n_max": 3,
+    "bounded_search_not_global_negative": true
+  },
+  "caps": {
+    "weights": 4096,
+    "active_features": 12,
+    "bmp_rank": 4,
+    "qtt_rank": 2,
+    "obdd_total_nodes": 240,
+    "exceptions": 64,
+    "family_candidates": 32,
+    "search_evaluations": 1000000,
+    "cpu_workspace_bytes": 67108864,
+    "gpu_workspace_bytes": 134217728
+  },
+  "packet": {
+    "header_bytes": 30,
+    "crc_bytes": 4,
+    "exception_bytes_each": 3,
+    "canonical_reencode_required": true,
+    "zero_bit_tail_required": true,
+    "complete_production_strata_framing_present": false
+  },
+  "control_contract": {
+    "source_free_matched_gaussian_fixture": true,
+    "future_control_count_minimum": 8,
+    "identical_complete_model_selection": true,
+    "whole_layer_and_expert_uncertainty": true
+  },
+  "payload_authority": {
+    "qwen": false,
+    "other_model": false,
+    "current_strata_artifact": false,
+    "coarse_artifact": false,
+    "matched_control_artifact": false,
+    "requires_independent_source_audit": true,
+    "requires_separate_production_launch_review": true
+  },
+  "execution_attestation": {
+    "hostile_tests_executed": false,
+    "n4096_fixture_executed": false,
+    "cupy_smoke_executed": false,
+    "reason": "provided RunPod SSH endpoint refused connections",
+    "runtime_pass_claimed": false
+  },
+  "claim_boundary": "Source-free mechanism only; no Qwen, F<=0.8, full physical bpw, read-amplification, or universal codec claim."
+}

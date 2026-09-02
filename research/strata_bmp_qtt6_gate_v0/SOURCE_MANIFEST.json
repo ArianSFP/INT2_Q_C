@@ -1,0 +1,97 @@
+{
+  "schema": "strata-bmp-obdd-qtt6-source-manifest-v0",
+  "status": "FROZEN_SOURCE_ONLY_UNEXECUTED__HOLD_PAYLOAD_PENDING_INDEPENDENT_AUDIT",
+  "source_root_sha256": "6b7baf9706349d10108121d4dcb03661b2378dc436303bbfe1bbccd38a0c8914",
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 8640,
+      "sha256": "97eef3376c24ab1b7609d2e8a24f3b240bd40470db4b38f9e3395980dc0e551b"
+    },
+    {
+      "name": "THREAT_MODEL.md",
+      "bytes": 5328,
+      "sha256": "78f84ebfd29d2677669792a47c3ac6ab139e4974a3155dc65eebc00d1be99ecf"
+    },
+    {
+      "name": "codec.py",
+      "bytes": 23144,
+      "sha256": "feef4ae809ad9c6d132730f9271c089590620b2f9eda2659fc2a4ac7535637ca"
+    },
+    {
+      "name": "cupy_backend.py",
+      "bytes": 2167,
+      "sha256": "3fd8fc40771226acb34f1accb0bf77be077484bfa77bdb679b74392822ea36ea"
+    },
+    {
+      "name": "design_lock.json",
+      "bytes": 2561,
+      "sha256": "41bbbfc2fe13233c9a42b0a9cb223c22056fd8191820a14807f3bb1bfba25976"
+    },
+    {
+      "name": "run_cupy_smoke.py",
+      "bytes": 2746,
+      "sha256": "8259b7f304b62482fec695969879ecf0e6f20ec363eb134c4b6ef53bc232fc70"
+    },
+    {
+      "name": "run_source_free_fixture.py",
+      "bytes": 5400,
+      "sha256": "eccce4e832435d50f5cd1f54f23b4e9f99188d1e5eadff4c35d0d50f70e6fa49"
+    },
+    {
+      "name": "search.py",
+      "bytes": 15450,
+      "sha256": "3b977b1d5a03828860257a3d2615bf014ddb631e32b75eb376633faa67952df5"
+    },
+    {
+      "name": "test_source_only.py",
+      "bytes": 7890,
+      "sha256": "867e781bb95421eec8bd4b5e2bb402d13ff0a092987a1a491dff405c2d3b6b41"
+    },
+    {
+      "name": "verify_source.py",
+      "bytes": 9639,
+      "sha256": "b0ea0742de7d1a133677a4cce5780661e128e17149fcc99a1bfa852b66721510"
+    }
+  ],
+  "access_attestation": {
+    "model_checkpoint_or_qwen_payload_opened_statted_hashed_or_enumerated": false,
+    "current_strata_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+    "matched_control_artifact_opened_statted_hashed_or_enumerated": false,
+    "network_used_by_tests_or_fixtures": false,
+    "ordinary_tests_imported_or_initialized_cupy": false,
+    "live_payload_authority": false
+  },
+  "test_attestation": {
+    "source_only_hostile_tests_executed": false,
+    "source_only_test_count_declared": 17,
+    "n4096_fixture_executed": false,
+    "runpod_cupy_smoke_executed": false,
+    "static_source_review_completed": true,
+    "independent_source_audit_passed": false,
+    "qwen_payload_run": false
+  },
+  "semantic_attestation": {
+    "exact_distortion_columns": 64,
+    "completed_planes": 6,
+    "decoded_index_range": [0, 63],
+    "four_level_adapter": false,
+    "mixed_radix_rows": "3*2^k",
+    "hidden_width": "2^h",
+    "roles": 3,
+    "packet_is_complete_production_strata_packet": false
+  },
+  "caps": {
+    "weights": 4096,
+    "active_features": 12,
+    "bmp_rank": 4,
+    "qtt_rank": 2,
+    "obdd_nodes": 240,
+    "exceptions": 64,
+    "family_candidates": 32,
+    "search_evaluations": 1000000,
+    "cpu_workspace_bytes": 67108864,
+    "gpu_workspace_bytes": 134217728
+  },
+  "claim_boundary": "Exact source inventory for an unexecuted source-only mechanism. No runtime pass, Qwen result, F<=0.8 result, complete physical-rate result, routed-read result, or payload authority."
+}

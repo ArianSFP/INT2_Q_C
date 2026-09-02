@@ -1,0 +1,26 @@
+{
+  "schema": "strata-rm-global-swap-v0-execution-status",
+  "recorded_at": "2026-09-02T21:02:44.4965234+01:00",
+  "local_environment": {
+    "python_available": false,
+    "cupy_available": false,
+    "tests_executed": false,
+    "reason": "no Python interpreter is installed in the local Windows workspace environment"
+  },
+  "runpod_attempt": {
+    "endpoint": "root@74.2.96.53:12079",
+    "command_scope": "no-payload echo connectivity probe only",
+    "connected": false,
+    "outcome": "ssh: connect to host 74.2.96.53 port 12079: Connection timed out",
+    "remote_command_started": false,
+    "remote_log_artifact": null,
+    "remote_exit_artifact": null
+  },
+  "cupy_global_smoke": {
+    "executed": false,
+    "projected_as_evidence": false,
+    "required_before_payload": true
+  },
+  "payload_paths_opened": 0,
+  "status": "SOURCE_BUILT_UNEXECUTED__HOLD_RUNPOD_AND_INDEPENDENT_AUDIT"
+}

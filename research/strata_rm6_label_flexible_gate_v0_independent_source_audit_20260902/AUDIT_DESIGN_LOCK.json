@@ -1,0 +1,43 @@
+{
+  "schema": "strata-rm6-label-flexible-gate-v0-independent-audit-design-lock-20260902",
+  "status": "FROZEN_SOURCE_ONLY_NO_PAYLOAD",
+  "inputs": {
+    "source_manifest_sha256": "c8d56e045159e3af613f02c4d5d97c70e8f8b4383b3fbf282d384b08f74b7300",
+    "source_root_sha256": "d17718615dedebca08ead66c0555e9d649768a353f3a55d169a9bf400f11bd32",
+    "frozen_strata_auditor_bytes": 116835,
+    "frozen_strata_auditor_sha256": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+  },
+  "forbidden_inputs": [
+    "Qwen weights",
+    "coarse payload",
+    "matched control payload",
+    "same-agent red-team result"
+  ],
+  "required_tests": [
+    "source manifest external pin and directory closure",
+    "six LSB-first completed planes exhaustively map to indices 0..63",
+    "RM dimensions/orientation against independent code and frozen STRATA auditor",
+    "SC and canonical arithmetic equivalence with frozen STRATA auditor",
+    "literal packet replay for zero and current_random cosets",
+    "attacker-repaired CRC header/terminal/alignment mutations",
+    "9888-bit exact cap and 9889-bit overcap rejection",
+    "sub-2.15 target ineligibility",
+    "bank dimensions kept distinct from emitted arithmetic bits",
+    "independent exhaustive small-N oracle for both cosets",
+    "fractional RM order hostile input",
+    "exact RM versus global RM-ordered truncated polar terminology",
+    "CuPy receipt binding inventory",
+    "outer header/inverse transform/read omissions"
+  ],
+  "known_expected_findings": [
+    "SRM6-AUDIT-001",
+    "SRM6-AUDIT-002",
+    "SRM6-AUDIT-003",
+    "SRM6-AUDIT-004",
+    "SRM6-AUDIT-005"
+  ],
+  "claim_boundary": "A source-only local mechanism may pass while production, global, payload, physical-rate and routed-read authority remain held.",
+  "qwen_payload_accessed": false,
+  "coarse_payload_accessed": false,
+  "control_payload_accessed": false
+}

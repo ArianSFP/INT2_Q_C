@@ -1,0 +1,50 @@
+{
+  "schema": "strata-rm-global-swap-v0-design-lock",
+  "status": "HOLD_PAYLOAD_PENDING_INDEPENDENT_SOURCE_AUDIT_AND_GLOBAL_PACKET_INTEGRATION",
+  "claim_boundary": "source-only mechanism; no Qwen, coarse, control, rate-distortion, or target claim",
+  "external_pins": {
+    "agent_polaris_qwen_rht_encoder.py": "062f74ca3e44ae2df1abea7762967f9f7c14188d1e963a06c4a07bed56f478a0",
+    "bg_codec_bec_encoder.py": "456a3ae5fe00c578456dc9430bf7ae059ed9dbb8dcf04a6bafad3a88cc5cb267",
+    "strata_v2_klt_mixed_independent_auditor_v1.py": "85e989827a8f1feee111aca4e5e387825f89d5ea4ffdbfe842c72b5fe9f1ec6e"
+  },
+  "non_rd_evidence": {
+    "path": "research/rm_bec_overlap_probe_v0_all14_aggregate.json",
+    "sha256": "dc4eb2f4896a466226974ac98f0cab2d4f5e9640b49d7c1d7c63ae957f6b7db2",
+    "allowed_use": "row-set overlap only",
+    "forbidden_use": ["MSE", "bpw", "F", "promotion", "payload success"]
+  },
+  "candidate": {
+    "changed_component": "freeze-set row ordering only",
+    "current_reference": "integer-Q31 BEC synthesized reliability flags",
+    "replacement_order": "descending popcount(internal_phase), ascending internal_phase tie break",
+    "selected_count": "exactly count_zero(reference_flag) independently for every block and level",
+    "block_lengths": [1048576, 2097152],
+    "level_major_planes": 6,
+    "completed_reconstruction_indices": 64,
+    "generic_name": "RM-ordered truncated polar",
+    "exact_rm_name_condition": "K equals sum(comb(m,j),j=0..r) for some r in [0,m]"
+  },
+  "orientation": {
+    "input": "internal SC phase i",
+    "external": "internal[bit_reverse]",
+    "reconstruction_bitplane": "polar_transform(external)",
+    "row_weight": "2**popcount(i)"
+  },
+  "cosets": {
+    "current_random": "implemented; exact current frozen RNG semantics",
+    "zero": "HOLD_SEPARATE_FORMAT_FORK_NOT_IMPLEMENTED",
+    "pooling": "forbidden"
+  },
+  "rate_truth": {
+    "only_production_rate": "literal full packet bytes plus charged shared bytes divided by original source weights",
+    "not_rates": ["K", "sum K", "selected fraction", "ideal NLL", "overlap receipt"],
+    "target_interval_bpw": [2.15, 2.5],
+    "requires_independent_decode": true,
+    "requires_causal_probability_regeneration": true,
+    "requires_exact_consumption": true,
+    "requires_canonical_byte_reencode": true
+  },
+  "known_blocker": "pinned historical base CLI admits only 2**10 through 2**18; production requires audited current-global encoder integration",
+  "payload_access": "FORBIDDEN_BEFORE_INDEPENDENT_SOURCE_AUDIT"
+}
+
