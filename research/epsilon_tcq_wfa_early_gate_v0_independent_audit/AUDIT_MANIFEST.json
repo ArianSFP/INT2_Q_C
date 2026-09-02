@@ -1,0 +1,25 @@
+{
+  "audited_source_manifest_sha256": "0d146f3510d0d42e90d5fd58fe283a8b2dcbf2bd278fa4201fd1601dd301383b",
+  "audited_source_root_sha256": "17581794ba7c6c35faf76f5c3926b59a71fa0b57b3df41c73082ceee202a13e0",
+  "date": "2026-09-02",
+  "members": [
+    {
+      "bytes": 4114,
+      "name": "README.md",
+      "sha256": "036b3a297edbeac72158ec7e824640ee9a38382d8097c6a148d35fdf70c44758"
+    },
+    {
+      "bytes": 2224,
+      "name": "RUNPOD_AUDIT_RECEIPT.json",
+      "sha256": "1cc1d2769a51076c17460132920c39e28ceae0bec8a2086dc88a7f5b036d754d"
+    },
+    {
+      "bytes": 13532,
+      "name": "independent_audit.py",
+      "sha256": "3dd61eeae027f1cd90b29dd981b578a5cc6853b4f9030c28cf155ef6f11669a0"
+    }
+  ],
+  "schema": "epsilon-tcq-wfa-early-gate-v0-independent-audit-manifest",
+  "source_root_sha256": "511f4a9b8f97a47073ea91ea045ccf9e715c672c8c1f39324fec3cd5ef92ad46",
+  "status": "HOLD_BINDINGS_REQUIRED_BEFORE_PAYLOAD"
+}

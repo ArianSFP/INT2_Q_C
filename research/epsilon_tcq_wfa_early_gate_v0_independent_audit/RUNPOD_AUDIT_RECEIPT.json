@@ -1,0 +1,43 @@
+{
+  "blocking_findings": [
+    "search fixed_packet_bytes is caller supplied and not bound to the built packet",
+    "source_gate does not bind row bytes to byte-ledger total bytes",
+    "source_gate trusts un-derived gain and read-amplification fields",
+    "final_control_gate accepts caller booleans and unvalidated 64-character receipt strings",
+    "outer-fold fitting, matched-control execution, multi-owner container, and measured inference read path are planned, not executable",
+    "production-length beam scalability is unvalidated; paths copy complete label, state, and arithmetic-prefix tuples and CuPy top-k is not wired into search"
+  ],
+  "checks": {
+    "beam_objective_independently_rescored": true,
+    "direct4_and_synthetic6_interfaces_non_aliasing": true,
+    "exact_search_matches_independent_exhaustive_oracle": true,
+    "literal_packet_decode_reencode": true,
+    "model_and_centroid_bytes_present_when_helper_used": true,
+    "owner_component_partition_mechanics": true,
+    "production_polaris_strata_adapter_absent": true,
+    "state_permutation_bijective_and_source_independent_formula": true
+  },
+  "cupy": {
+    "compute_capability": "120",
+    "cupy_version": "14.2.0",
+    "d2h_bytes": 120,
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "h2d_bytes": 728,
+    "hbm_bytes_counted_as_storage": false,
+    "kernel_calls": 5,
+    "network_accessed": false,
+    "payload_accessed": false,
+    "schema": "epsilon-tcq-cupy-beam-backend-receipt-v0",
+    "status": "PASS_SOURCE_FREE_CUPY_BEAM_SMOKE",
+    "storage_bytes_counted_as_hbm": false,
+    "synchronized": true
+  },
+  "current_codec_payload_accessed": false,
+  "matched_control_payload_accessed": false,
+  "qwen_payload_accessed": false,
+  "safe_next_step": "separately freeze and audit a read-only legal-transition adapter, but do not open Qwen through this gate until a bound driver/auditor closes every blocking finding",
+  "schema": "epsilon-tcq-wfa-early-gate-v0-independent-audit-receipt",
+  "source_manifest_sha256": "0d146f3510d0d42e90d5fd58fe283a8b2dcbf2bd278fa4201fd1601dd301383b",
+  "source_root_sha256": "17581794ba7c6c35faf76f5c3926b59a71fa0b57b3df41c73082ceee202a13e0",
+  "status": "HOLD_BINDINGS_REQUIRED_BEFORE_PAYLOAD"
+}
