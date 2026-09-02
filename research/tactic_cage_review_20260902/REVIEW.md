@@ -10,8 +10,9 @@ experiment order is:
 
 1. run the authenticated long-range UWFA source census on the current Qwen
    artifact;
-2. if a conditional law survives, measure a cross-fitted posterior centroid
-   for the complete literal message;
+2. retain the fitted non-local trace and run a bounded cross-fitted posterior
+   centroid for the complete literal message; a failure of the standalone rate
+   gate lowers its prior but does not mathematically rule out within-cell MMSE;
 3. build and independently decode a real `307/128`-bpw coarse packet before
    testing DH384 or a coarse-programmed graph;
 4. promote a graph only after a decoder-legal continuous oracle survives;
@@ -60,6 +61,26 @@ eligible lower-rate coarse codec.
   A coarse-residual conditional syndrome is a different experiment.
 - Arithmetic-coder overhead is about `0.0000433405` bpw and cannot supply the
   missing gain.
+
+## Prior-art boundary
+
+The abstract ingredients are not individually novel.  Conditional entropy
+models and coarse-to-fine quantized hierarchies are established in learned
+compression (Mentzer et al., arXiv:1801.04260; Duan et al.,
+arXiv:2208.13056).  Recent LLM work also contains adaptive linear transforms
+(WUSH, arXiv:2512.00956), Haar-wavelet weight quantization (HBLLM,
+arXiv:2512.00862), and sigma-delta weight representations (SDQ-LLM,
+arXiv:2510.03275).  Posterior-mean reconstruction under MSE and syndrome/coset
+coding are classical principles.
+
+The defensible research-novelty hypothesis is narrower: an independently
+decodable physical coarse MoE weight packet programs an expert-local graph and
+refinement codebook, the encoder jointly searches the ordinary coarse and fine
+messages, and the same packet is posterior-decoded under a literal one-pass
+`<2x` routed-read ledger.  The literature search did not identify this exact
+combination in weight PTQ, but absence from a bounded search is not a legal or
+patentability conclusion.  More importantly, novelty does not imply gain; the
+Qwen conditional oracle still decides whether CAGE is worth implementing.
 
 ## Mathematical accounting
 
@@ -137,9 +158,11 @@ and `F <= 0.8`.
    model-charged, disjoint-component saving reaches the actual page-aligned
    byte threshold and every component is positive.  Generate matched controls
    only for a source survivor.
-2. **Posterior gate:** cross-fit the smallest exact-cell centroid first.  Keep
-   only a joint `G_joint` improvement; never add separately fitted rate and
-   MSE gains.
+2. **Posterior gate:** cross-fit the smallest exact-cell/non-local-state head
+   first.  Keep only a joint `G_joint` improvement; never add separately fitted
+   rate and MSE gains.  A negative label-rate result alone is not a converse
+   for a continuous within-cell centroid, so permit one bounded oracle before
+   killing the posterior branch.
 3. **Coarse graph oracle:** derive every graph operation from the independently
    decoded coarse word.  Charge any allocation or selected component not
    derivable from it.  Score exact inverse reconstruction in source FP64.
