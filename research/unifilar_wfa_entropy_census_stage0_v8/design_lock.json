@@ -1,6 +1,6 @@
 {
   "schema": "unifilar-wfa-entropy-census-design-v8",
-  "status": "PRE_REVIEW_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "status": "SEALED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
   "design_date": "2026-09-02",
   "objective": {
     "standalone_exact_physical_saving_required_bpw": 0.15288996696291447,

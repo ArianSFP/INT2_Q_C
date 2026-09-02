@@ -1,13 +1,14 @@
-# Universal UWFA-SC v8 — pre-review source-only producer
+# Universal UWFA-SC v8 — sealed source-only producer
 
-This directory is a new, source-only successor to the stopped v5
+This directory is the sealed, source-only successor to the stopped v5
 postimplementation-review candidate. The v5 tree and its review/development
-receipts remain unchanged. This v8 tree is
-intentionally **not sealed**, has no payload authority, and must not contain
-a `SOURCE_MANIFEST.json` until an independent postimplementation red-team has
-accepted the exact tree. No Qwen, current-artifact, extracted-stream, or
-matched-Gaussian payload was opened, statted, hashed, or enumerated while this
-tree was built.
+receipts remain unchanged. The exact v8 implementation passed independent
+postimplementation review before the deterministic freeze transition: the
+design status changed from pre-review to sealed and `SOURCE_MANIFEST.json` was
+then generated over the complete post-transition 17-member tree. This package
+still has no payload authority. No Qwen, current-artifact, extracted-stream,
+or matched-Gaussian payload was opened, statted, hashed, or enumerated while
+the implementation or this source freeze was built.
 
 The experiment asks whether a universal sparse unifilar probability law can
 recoup more than `0.15288996696291447` physical bits per source weight from a
