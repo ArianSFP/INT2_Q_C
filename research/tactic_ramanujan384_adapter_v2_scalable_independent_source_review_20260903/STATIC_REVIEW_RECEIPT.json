@@ -1,0 +1,47 @@
+{
+  "schema": "tactic-ramanujan384-v2-scalable-independent-static-review-receipt",
+  "producer_manifest_sha256": "1f579f33216edeebbebb6c1714a4e56739da30ae0f12ae9bd44baf15a6163209",
+  "producer_source_root_sha256": "bff5a0c541cb2117a8cc1db3e539493bacc590b4e007ab7f193ca615e03a7495",
+  "external_bootstrap_verifier_sha256": "74f5a56f1371f67ffa4e83ea34b761c2de61ea0900e3374cc25092f2d333e92c",
+  "producer_members": 14,
+  "exact_flat_closure_at_review_time": true,
+  "source_mechanism_checks": {
+    "splitmix_53bit_midpoint_box_muller": true,
+    "canonical_f32_then_f64": true,
+    "no_backend_rng_or_transcendentals": true,
+    "cpu_cupy_byte_comparisons": true,
+    "one_batched_solve": true,
+    "all_candidate_einsum": true,
+    "no_item_sync": true,
+    "two_bulk_transfers_reported": true,
+    "target_fixture_shape": true,
+    "all_controls_mandated": true,
+    "uint32_dimension_and_block_caps": true,
+    "uint64_length_and_rounding_caps": true,
+    "external_exact_closure": true,
+    "coarse_source_receipt_and_output_hash_binding": true,
+    "mechanism_only_claim_boundary": true
+  },
+  "independent_target_fixture_ledger": {
+    "weights": 786432,
+    "coarse_bytes": 235776,
+    "fine_bytes": 9216,
+    "physical_bytes": 245760,
+    "physical_rate_bpw": 2.5
+  },
+  "residual_limit_observations": {
+    "external_verify_to_runner_import_is_not_atomic": true,
+    "external_verifier_uses_path_reads_not_open_snapshot": true,
+    "live_decoder_instance_is_caller_supplied": true,
+    "live_decoder_instance_method_not_pinned": true,
+    "decoder_has_no_runtime_io_sandbox": true,
+    "decoder_and_auditor_manifests_not_exact_closure_checked": true,
+    "cupy_receipt_pending": true
+  },
+  "synthetic_10_bpw_is_mechanism_only": true,
+  "python_numpy_cupy_executed": false,
+  "qwen_payload_accessed": false,
+  "coarse_model_payload_accessed": false,
+  "network_accessed": false,
+  "disposition": "PASS_V2_STATIC_SCALABILITY_AND_SOURCE_FREE_CONTROL_MECHANISM__HOLD_CUPY_QWEN_AND_PRODUCTION_COARSE_DECODER_UNTIL_ATOMIC_CLOSURE_AND_HARDENED_EXECUTION"
+}

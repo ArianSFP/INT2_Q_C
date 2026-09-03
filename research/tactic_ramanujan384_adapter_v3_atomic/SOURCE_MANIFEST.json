@@ -1,0 +1,94 @@
+{
+  "access": {
+    "coarse_model_payload": false,
+    "network": false,
+    "qwen_payload": false
+  },
+  "dependency_pins": {
+    "external_bootstrap": {
+      "path": "research/tactic_ramanujan384_adapter_v3_atomic_bootstrap.py",
+      "sha256": "f7e8cd469b0ff9dd9ef09b400c63ec9f91e067f849d6b009588ea94ad6494375"
+    },
+    "schema": "tactic-ramanujan384-atomic-dependency-lock-v3",
+    "status": "PINNED_SOURCE_ONLY_NO_RUNTIME_OR_PAYLOAD_AUTHORITY",
+    "v2": {
+      "path": "research/tactic_ramanujan384_adapter_v2_scalable",
+      "source_manifest_sha256": "1f579f33216edeebbebb6c1714a4e56739da30ae0f12ae9bd44baf15a6163209",
+      "source_root_sha256": "bff5a0c541cb2117a8cc1db3e539493bacc590b4e007ab7f193ca615e03a7495"
+    },
+    "v2_review": {
+      "disposition": "PASS_V2_STATIC_SCALABILITY_AND_SOURCE_FREE_CONTROL_MECHANISM__HOLD_CUPY_QWEN_AND_PRODUCTION_COARSE_DECODER_UNTIL_ATOMIC_CLOSURE_AND_HARDENED_EXECUTION",
+      "path": "research/tactic_ramanujan384_adapter_v2_scalable_independent_source_review_20260903",
+      "source_manifest_sha256": "4ed8c0fe24db072e22aef84791a01ccf637cb337376a389d47119248fd257281",
+      "source_root_sha256": "16ea8dfde5cf7a48552dc7b5a74b209488934b8764e890bf51bb5cd02985cd39"
+    }
+  },
+  "execution": {
+    "atomic_bootstrap_verify_only": "NOT_EXECUTED_NO_LOCAL_PYTHON",
+    "payload_authorized": false,
+    "powershell_static_source_checks": "PASS",
+    "python_source_tests": "NOT_EXECUTED_NO_LOCAL_PYTHON",
+    "source_free_cpu": "HELD",
+    "source_free_cupy": "HELD"
+  },
+  "members": [
+    {
+      "bytes": 612,
+      "name": "EXECUTION_STATUS.json",
+      "sha256": "b2dc9063eab39a4911a4714b36030db1011ba3d69439baab8f1251f7557ee412"
+    },
+    {
+      "bytes": 1915,
+      "name": "README.md",
+      "sha256": "277454adbd4fca08c13d706466ed72b5580538cec5aa40061d462d3616dd91a7"
+    },
+    {
+      "bytes": 1184,
+      "name": "STATIC_SOURCE_RECEIPT.json",
+      "sha256": "14aa9e59df0097d45c99f2868e0d6b2cb1b61f3f8f8914140d848dd60289022f"
+    },
+    {
+      "bytes": 13089,
+      "name": "adapter_atomic.py",
+      "sha256": "52afc58b8114a4d7d41c27460b16424a195904bf6ccc0c4c3d15c530d1a74b48"
+    },
+    {
+      "bytes": 12423,
+      "name": "coarse_byte_worker.py",
+      "sha256": "41b3da30c5165c5b045ac723a7ab128d848967880ad0d8911135a3b44fc6f296"
+    },
+    {
+      "bytes": 1072,
+      "name": "dependency_lock.json",
+      "sha256": "d5976aa7451d334a965f2494aa238cc06b297f2125442b97c1955bb303d8a271"
+    },
+    {
+      "bytes": 1713,
+      "name": "design_lock.json",
+      "sha256": "940335a08ccca9f29f4bdcbe775e226c1426a36ca68b354e4de03e2f31f68cdd"
+    },
+    {
+      "bytes": 2482,
+      "name": "freeze_source.py",
+      "sha256": "7818be4fafb565b7e824d966a1758faf338295a094bb347745824b7c13114232"
+    },
+    {
+      "bytes": 4926,
+      "name": "snapshot_runner.py",
+      "sha256": "b1ee029193ce122acfbbe26392fb94ba285d553e6c649ff9d6a4990865e98364"
+    },
+    {
+      "bytes": 10844,
+      "name": "source_free_fixture_atomic.py",
+      "sha256": "752e798178b64a6e38e32f695958d6fb7d97760fb7220f3f010f75f82c9b9ef8"
+    },
+    {
+      "bytes": 7475,
+      "name": "test_source_only.py",
+      "sha256": "5a3f72397ecf9be799d715d515aff30255c44e8efed93f9ca099627a0618b9c8"
+    }
+  ],
+  "schema": "tactic-ramanujan384-atomic-source-manifest-v3",
+  "source_root_sha256": "5f86d9a1b48f7769867c828322132be303617d0444d50b5439f7b9d0074ab674",
+  "status": "FROZEN_SOURCE_ONLY_RUNTIME_AND_PAYLOAD_HELD"
+}

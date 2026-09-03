@@ -1,0 +1,15 @@
+{
+  "schema": "tactic-ramanujan384-v3-atomic-execution-status",
+  "date": "2026-09-03",
+  "status": "SOURCE_FROZEN_RUNTIME_HELD",
+  "powershell_static_source_checks": "PASS",
+  "python_source_tests": "NOT_EXECUTED_NO_LOCAL_PYTHON",
+  "atomic_bootstrap_verify_only": "NOT_EXECUTED_NO_LOCAL_PYTHON",
+  "source_free_cpu_fixture": "HELD",
+  "source_free_cupy_fixture": "HELD",
+  "qwen_payload_accessed": false,
+  "coarse_model_payload_accessed": false,
+  "network_accessed": false,
+  "v2_files_modified": false,
+  "claim_boundary": "source architecture only; no runtime, compression, model, or portability result"
+}

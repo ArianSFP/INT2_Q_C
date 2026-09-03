@@ -1,0 +1,57 @@
+{
+  "schema": "tactic-ramanujan384-v1-review-repair-map-v2",
+  "date": "2026-09-02",
+  "pinned_review_disposition": "SOURCE_REPAIRS_SUBSTANTIALLY_CLOSE_V0__HOLD_PAYLOAD_FOR_RUNTIME_SCALABILITY_AND_COARSE_DECODER_AUDIT",
+  "repairs": [
+    {
+      "finding": "candidate implementation has per-candidate imports, allocations, solves, matmuls and scalar synchronizations",
+      "repair": "static core batches all 14 nonzero ranks into one solve and all direct candidate reconstructions into one einsum; two bulk host transfers per role; immutable dictionary shared globally",
+      "source": ["scalable_core.py", "adapter.py"],
+      "tests": ["BatchTests.test_all_ranks_use_one_solve_and_one_candidate_einsum", "BatchTests.test_hot_core_has_no_dynamic_import_or_item_sync"]
+    },
+    {
+      "finding": "v1 controls are Irwin-Hall Gaussian-like rather than Gaussian",
+      "repair": "counter-derived 53-bit midpoint uniforms enter Box-Muller, are canonicalized to binary32 and widened; identical serialized FP64 arrays feed CPU/CuPy with no backend RNG/transcendentals",
+      "source": ["scalable_core.py"],
+      "tests": ["GaussianTests.test_canonical_box_muller_is_repeatable_and_gaussian_not_irwin_hall", "run_source_free_cupy_target_fixture.py"]
+    },
+    {
+      "finding": "v1 CuPy fixture stops at an ineligible rate and never exercises controls",
+      "repair": "128x2048x3 fixture is exactly 245760 bytes and 2.5 bpw; source atoms pass the absolute gate and mandate one phase plus eight Gaussian control searches",
+      "source": ["source_free_fixture.py", "run_source_free_cupy_target_fixture.py"],
+      "tests": ["ShapeTests.test_qwen_and_target_fixture_ledgers", "run_source_free_cupy_target_fixture.py"]
+    },
+    {
+      "finding": "real coarse decoder implementation is unauthenticated",
+      "repair": "capability authenticates actual runtime class source plus decoder/auditor manifests and independent PASS receipt before decode; decoded outputs remain bound to independent role hashes",
+      "source": ["coarse_capability.py", "adapter.py"],
+      "tests": ["CapabilityTests.test_independently_audited_coarse_capability_is_mandatory"]
+    },
+    {
+      "finding": "extreme accepted shapes can overflow uint32 block header fields",
+      "repair": "shape definition caps every block count at uint32 and every length at uint64; page rounding is integer-only",
+      "source": ["scalable_core.py"],
+      "tests": ["ShapeTests.test_uint32_block_overflow_is_rejected"]
+    },
+    {
+      "finding": "producer verifier loads untrusted package code and permits extra entries",
+      "repair": "external separately hash-pinned bootstrap verifier reimplements strict manifest validation, imports no package code, and requires exact directory entry equality",
+      "source": ["../tactic_ramanujan384_adapter_v2_scalable_bootstrap_verify.py", "freeze_source.py"],
+      "tests": ["ClosureTests.test_external_bootstrap_is_outside_package_and_rejects_extras"]
+    },
+    {
+      "finding": "tail padding influences candidate normalization and Gram solve",
+      "repair": "per-block validity masks define norms, selected Gram matrices, candidate errors and final score; padded coordinates affect none",
+      "source": ["scalable_core.py"],
+      "tests": ["BatchTests.test_all_ranks_use_one_solve_and_one_candidate_einsum"]
+    }
+  ],
+  "remaining_holds": [
+    "target-rate CuPy controls require an accessible RunPod; CPU source tests and the CPU target-rate control fixture pass",
+    "independent hostile review of v2 remains mandatory",
+    "production Qwen launch requires a real independently audited coarse decoder capability",
+    "no model or coarse-model payload is authorized",
+    "instrumented file reads are not storage-device or HBM telemetry"
+  ],
+  "payload_authorized": false
+}

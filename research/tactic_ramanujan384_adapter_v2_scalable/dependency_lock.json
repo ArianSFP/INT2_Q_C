@@ -1,0 +1,19 @@
+{
+  "schema": "tactic-ramanujan384-scalable-dependency-lock-v2",
+  "status": "PINNED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+  "v1": {
+    "path": "research/tactic_ramanujan384_adapter_v1_authority",
+    "source_manifest_sha256": "f4ba72b9371d77ad4347d5a4fe377677473844dd696032e662acc6cd3bde22b4",
+    "source_root_sha256": "6840b6a0eb4f2856f84c610ba11888382ecca257d88ebda7f5b49c0de9f3b3c5"
+  },
+  "v1_review": {
+    "path": "research/tactic_ramanujan384_adapter_v1_authority_independent_review_20260902",
+    "source_manifest_sha256": "005f186ff377a80be2cd89f3fd3c4eea75c2f39642ee94ef6650666a5b9f51d0",
+    "source_root_sha256": "80fdeaa463a64a1303a49f3a123e04d093f0c429b3bd33f6bcb5361274942c3b",
+    "disposition": "SOURCE_REPAIRS_SUBSTANTIALLY_CLOSE_V0__HOLD_PAYLOAD_FOR_RUNTIME_SCALABILITY_AND_COARSE_DECODER_AUDIT"
+  },
+  "external_bootstrap_verifier": {
+    "path": "research/tactic_ramanujan384_adapter_v2_scalable_bootstrap_verify.py",
+    "sha256": "74f5a56f1371f67ffa4e83ea34b761c2de61ea0900e3374cc25092f2d333e92c"
+  }
+}

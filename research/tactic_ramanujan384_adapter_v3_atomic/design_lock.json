@@ -1,0 +1,38 @@
+{
+  "schema": "tactic-ramanujan384-atomic-design-v3",
+  "date": "2026-09-03",
+  "status": "FROZEN_SOURCE_ONLY_RUNTIME_HELD",
+  "mathematics": {
+    "source": "exact pinned scalable v2 modules loaded from the authenticated snapshot",
+    "coarse_rate": "307/128 bpw",
+    "fine_bits_per_4096_role_values": 384,
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "target_D_at_2p5": 0.025,
+    "target_F": 0.8,
+    "controls": "one phase plus eight host-canonical Box--Muller Gaussian full searches"
+  },
+  "atomic_snapshot": {
+    "pre_import": "v3, v2 and v2-review manifests and every member are descriptor-read and authenticated before package compilation",
+    "closure": "exact directory entries are checked before and after member reads",
+    "snapshot": "verified immutable bytes are copied to a private read-only tree and independently rehashed",
+    "execution": "runner and all package modules compile only from an immutable MappingProxyType of the verified snapshot bytes",
+    "mutable_producer_imports": 0
+  },
+  "coarse_worker": {
+    "representation": "strict canonical JSON byte-buffer program",
+    "imports": 0,
+    "path_or_callback_operands": 0,
+    "decoder_object": false,
+    "authentication": "distinct capability, worker-manifest/root, auditor-manifest/root and PASS-receipt external pins",
+    "output": "deterministic little-endian FP32 role bytes independently hash-bound"
+  },
+  "authorization": {
+    "source_static_tests": true,
+    "python_tests": false,
+    "cupy_runtime": false,
+    "qwen_payload": false,
+    "coarse_model_payload": false,
+    "network": false
+  },
+  "claim_boundary": "source architecture only; synthetic periodic/zero-worker fixtures are mechanism evidence"
+}

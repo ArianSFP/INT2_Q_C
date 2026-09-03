@@ -1,0 +1,39 @@
+{
+  "schema": "tactic-ramanujan384-adapter-v3-atomic-independent-static-review",
+  "date": "2026-09-03",
+  "producer_manifest_sha256": "97fb4cba64ff884615810fc8fc835c12ce98bf3e9db37b8a77be93d0d5372be1",
+  "producer_source_root_sha256": "5f86d9a1b48f7769867c828322132be303617d0444d50b5439f7b9d0074ab674",
+  "external_bootstrap_sha256": "f7e8cd469b0ff9dd9ef09b400c63ec9f91e067f849d6b009588ea94ad6494375",
+  "producer_members": 11,
+  "exact_flat_closure": true,
+  "powershell_static_review_executed": true,
+  "python_tests_executed": false,
+  "runtime_executed": false,
+  "repair_findings": {
+    "descriptor_member_reads_and_double_closure": true,
+    "private_snapshot_rehashed_before_project_compile": true,
+    "mapping_proxy_contains_immutable_bytes": true,
+    "runner_compiles_project_modules_from_snapshot_only": true,
+    "live_decoder_argument_absent": true,
+    "coarse_program_exact_zero_import_no_path_schema": true,
+    "worker_auditor_capability_and_receipt_objects_hash_bound": true,
+    "v2_batched_search_controls_and_rate_semantics_preserved": true
+  },
+  "conditional_limits": {
+    "bootstrap_self_hash_occurs_after_python_execution_starts": true,
+    "bootstrap_does_not_require_isolated_python_or_reject_pythonpath": true,
+    "six_pins_not_required_to_be_distinct": true,
+    "worker_and_auditor_roots_or_directories_may_alias": true,
+    "external_pin_trust_not_source_enforced": true,
+    "only_zero_f32_fixture_opcode_exists": true,
+    "python_cupy_payload_and_rd_pending": true
+  },
+  "access_attestation": {
+    "network_used": false,
+    "qwen_or_model_payload_accessed": false,
+    "coarse_payload_accessed": false,
+    "producer_or_dependencies_modified": false,
+    "commit_created": false
+  },
+  "disposition": "PASS_V2_ATOMIC_SNAPSHOT_BYTE_WORKER_AND_SCIENTIFIC_SEMANTICS_REPAIRS__CONDITIONAL_ON_PREVERIFIED_ISOLATED_BOOTSTRAP_AND_EXTERNALLY_INDEPENDENT_NONALIASED_WORKER_AUDIT__HOLD_REAL_COARSE_DECODER_PYTHON_CUPY_PAYLOAD_AND_RD"
+}

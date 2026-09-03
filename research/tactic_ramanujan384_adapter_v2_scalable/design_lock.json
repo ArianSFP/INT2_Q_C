@@ -1,0 +1,58 @@
+{
+  "schema": "tactic-ramanujan384-scalable-design-v2",
+  "date": "2026-09-02",
+  "status": "FROZEN_SOURCE_ONLY_CPU_PASS_CUPY_PENDING_NO_PAYLOAD_AUTHORITY",
+  "objective": {
+    "codec": "universal expert-local SwiGLU Gate/Up/Down-transposed PTQ refinement",
+    "physical_rate_interval_bpw": [2.15, 2.5],
+    "coarse_rate_exact": "307/128",
+    "fine_bits_per_4096_role_values": 384,
+    "target_D_at_2p5": 0.025,
+    "target_F": 0.8,
+    "strict_read_amplification_below": 2.0
+  },
+  "scalable_search": {
+    "ranks": "0..14",
+    "support": "one device lexsort over block-specific valid-coordinate correlations and norms",
+    "linear_systems": "all 14 rank prefixes packed into one (blocks*14)x14x14 solve",
+    "candidate_reconstruction": "all packet-canonical coefficient states reconstructed by one Bx14x4096 einsum",
+    "winner_metric": "direct valid-coordinate FP64 SSE of canonical packet state",
+    "device_host_boundary": "one bulk winner-metadata transfer and one bulk summary transfer per role",
+    "per_candidate_host_scalar_syncs": 0,
+    "per_candidate_solves": 0,
+    "per_candidate_matmuls": 0,
+    "dynamic_imports_in_hot_path": 0,
+    "dictionary_reuse": "one immutable dictionary shared by source roles, literal replay, phase control and all Gaussian controls"
+  },
+  "canonical_gaussian": {
+    "law": "mathematical Box-Muller transform of independent 53-bit midpoint uniforms",
+    "integer_counter": "SplitMix64 absolute-coordinate hash",
+    "canonicalization": "host FP64 transform, one IEEE binary32 rounding, exact binary64 widening",
+    "backend_contract": "serialized binary64 bytes are generated once on host and copied unchanged to NumPy or CuPy",
+    "backend_rng_calls": 0,
+    "backend_transcendental_calls": 0,
+    "finite_prng_boundary": "a finite Monte-Carlo realization, not a claim of continuous finite support"
+  },
+  "target_rate_fixture": {
+    "shape": [128, 2048],
+    "weights": 786432,
+    "physical_bytes": 245760,
+    "physical_rate_bpw": 2.5,
+    "controls_required": "one phase plus eight canonical Gaussian full searches",
+    "source": "source-free exact Ramanujan atoms with zero synthetic coarse reconstruction"
+  },
+  "authority": {
+    "coarse_decoder": "runtime class source, decoder manifest, auditor manifest, capability and independent PASS receipt all opened and hash bound",
+    "literal_decode": "coarse decoder receives only decoded coarse bytes, public dimensions and role order; output must equal independent per-role FP32 hashes",
+    "shape_cap": "positive uint32 dimensions, uint32 block counts, uint64 payload lengths, integer-only page rounding",
+    "closure": "external hash-pinned bootstrap verifier loads no package code and rejects every extra/missing/nested entry"
+  },
+  "authorization": {
+    "source_tests": true,
+    "source_free_target_rate_cupy_fixture": true,
+    "qwen_payload": false,
+    "coarse_model_payload": false,
+    "network": false
+  },
+  "claim_boundary": "no Qwen result, target performance result, physical storage telemetry, HBM measurement or portability claim"
+}

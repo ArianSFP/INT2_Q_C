@@ -1,0 +1,57 @@
+{
+  "schema": "strata-bmp-obdd-qtt6-v3-authority-design-lock-v1",
+  "status": "FROZEN_SOURCE_ONLY_AUTHORITY__COMPILED_LAUNCH_PIN_ABSENT__HOLD_RUNTIME_PAYLOAD_AND_RESULTS",
+  "date": "2026-09-03",
+  "lineage": {
+    "v2_manifest_sha256": "84df0d32a55682f6565ac9d144f7de850acf77cde27bffdefa77a151211906f8",
+    "v2_source_root_sha256": "b518b203c43fd401c94e1bfcf67e029a85a95f1f7ce244fcd864a96d0780da47",
+    "v2_audit_manifest_sha256": "324e9a6d7d16be7b57b4ae33599cce2e4b324848e279b59268826b5dcaaebd12",
+    "v2_audit_source_root_sha256": "c817b1f1c3c270cb1f0e332262dc46df4fe9eb39c4b4fafe70a23536203572d3",
+    "v2_or_audit_modified": false
+  },
+  "production_authority": {
+    "compiled_launch_manifest_sha256": null,
+    "caller_supplied_digest_authorizes": false,
+    "capability_count": 6,
+    "exact_capability_closure": true,
+    "execution_and_audit_receipts_separately_pinned": true,
+    "producer_executor_auditor_distinct": true,
+    "self_authored_dummy_or_fixture_production_receipts_accepted": false
+  },
+  "strata_adapter": {
+    "literal_current_six_plane_index64": true,
+    "scale_payload_inside_packet_required": true,
+    "forward_and_inverse_transform_hashes_required": true,
+    "header_payload_trailer_padding_sum_recomputed": true,
+    "canonical_reencode_equality_required": true
+  },
+  "scorer": {
+    "original_source_dtype": "BF16_LE",
+    "accumulation": "FP64",
+    "independent_authority_from_adapter": true,
+    "relative_mse_rate_and_f_recomputed": true,
+    "physical_rate_interval": [2.15, 2.5],
+    "target_f_maximum": 0.8
+  },
+  "routed_reads": {
+    "page_bytes": 4096,
+    "event_level_trace_required": true,
+    "layout_only_accepted": false,
+    "one_packet_per_layer_expert": true,
+    "maximum_amplification_exclusive": 2.0
+  },
+  "source_alias_policy": {
+    "canonical_path_alias_rejected": true,
+    "device_inode_alias_rejected": true,
+    "content_sha256_alias_rejected": true,
+    "model_control_alias_rejected": true
+  },
+  "payload_authority": {
+    "qwen": false,
+    "other_model": false,
+    "current_strata": false,
+    "matched_controls": false,
+    "runtime_result": false
+  }
+}
+

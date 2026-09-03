@@ -1,0 +1,20 @@
+{
+  "schema": "strata-rm-global-swap-v4-wasm-authority-execution-status",
+  "date": "2026-09-03",
+  "v3_source_root_sha256": "83d79990515fca16387723cdea544d41fac76413fe80f919c30517d14551d6ad",
+  "v3_review_source_root_sha256": "3113631a5c64255d919f2bb5c545436452c8a721eb4130fcd32d7ffc4b2cdfe0",
+  "static_closure_check": {"executed": false, "receipt": null},
+  "python_hostile_tests": {"executed": false, "receipt": null},
+  "wasmtime_runtime_imported": false,
+  "wasm_guest_executed": false,
+  "independent_runtime_audit_package": null,
+  "independent_semantic_decoder_audit_package": null,
+  "independent_scientific_audit_package": null,
+  "model_data_accessed": false,
+  "payloads_opened": 0,
+  "qwen_result": null,
+  "matched_control_result": null,
+  "routed_expert_read_result": null,
+  "physical_result": null,
+  "status": "FROZEN_V4_WASM_AUTHORITY_SOURCE_ONLY__HOLD_RUNTIME_PAYLOAD_AND_RD"
+}

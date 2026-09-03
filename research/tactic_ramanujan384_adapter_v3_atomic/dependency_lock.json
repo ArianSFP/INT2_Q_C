@@ -1,0 +1,19 @@
+{
+  "schema": "tactic-ramanujan384-atomic-dependency-lock-v3",
+  "status": "PINNED_SOURCE_ONLY_NO_RUNTIME_OR_PAYLOAD_AUTHORITY",
+  "v2": {
+    "path": "research/tactic_ramanujan384_adapter_v2_scalable",
+    "source_manifest_sha256": "1f579f33216edeebbebb6c1714a4e56739da30ae0f12ae9bd44baf15a6163209",
+    "source_root_sha256": "bff5a0c541cb2117a8cc1db3e539493bacc590b4e007ab7f193ca615e03a7495"
+  },
+  "v2_review": {
+    "path": "research/tactic_ramanujan384_adapter_v2_scalable_independent_source_review_20260903",
+    "source_manifest_sha256": "4ed8c0fe24db072e22aef84791a01ccf637cb337376a389d47119248fd257281",
+    "source_root_sha256": "16ea8dfde5cf7a48552dc7b5a74b209488934b8764e890bf51bb5cd02985cd39",
+    "disposition": "PASS_V2_STATIC_SCALABILITY_AND_SOURCE_FREE_CONTROL_MECHANISM__HOLD_CUPY_QWEN_AND_PRODUCTION_COARSE_DECODER_UNTIL_ATOMIC_CLOSURE_AND_HARDENED_EXECUTION"
+  },
+  "external_bootstrap": {
+    "path": "research/tactic_ramanujan384_adapter_v3_atomic_bootstrap.py",
+    "sha256": "f7e8cd469b0ff9dd9ef09b400c63ec9f91e067f849d6b009588ea94ad6494375"
+  }
+}

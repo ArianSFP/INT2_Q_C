@@ -1,0 +1,18 @@
+{
+  "schema": "tactic-ramanujan384-v2-scalable-independent-review-execution-status",
+  "date": "2026-09-03",
+  "status": "STATIC_REVIEW_COMPLETE_RUNTIME_NOT_EXECUTED",
+  "producer_manifest_sha256": "1f579f33216edeebbebb6c1714a4e56739da30ae0f12ae9bd44baf15a6163209",
+  "producer_source_root_sha256": "bff5a0c541cb2117a8cc1db3e539493bacc590b4e007ab7f193ca615e03a7495",
+  "external_bootstrap_verifier_sha256": "74f5a56f1371f67ffa4e83ea34b761c2de61ea0900e3374cc25092f2d333e92c",
+  "static_review": "PASS",
+  "producer_python_tests_reexecuted": false,
+  "producer_cpu_fixture_reexecuted": false,
+  "cupy_fixture_executed": false,
+  "qwen_payload_accessed": false,
+  "coarse_model_payload_accessed": false,
+  "network_accessed": false,
+  "producer_files_modified": false,
+  "claim_boundary": "source-only static mechanism review; checked-in CPU receipt is producer evidence and the synthetic 10-bpw result is mechanism-only",
+  "disposition": "PASS_V2_STATIC_SCALABILITY_AND_SOURCE_FREE_CONTROL_MECHANISM__HOLD_CUPY_QWEN_AND_PRODUCTION_COARSE_DECODER_UNTIL_ATOMIC_CLOSURE_AND_HARDENED_EXECUTION"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "strata-bmp-qtt6-gate-v3-authority-independent-source-review-manifest-v1",
+  "status": "PASS_EXACT_SOURCE_AND_EFFECTIVE_COMPILED_HOLD__BLOCK_LITERAL_REPLAY_SCORING_COUNT_PACKET_ALIAS_AND_TRACE_CLAIMS__HOLD_PAYLOAD_AND_RD",
+  "producer_manifest_sha256": "7901e78eaf7c6b854d7bfaa2afbb4eb7be337449a72ef66e66d00adb87f64ab4",
+  "producer_source_root_sha256": "14ec1fdc19435f4f3655b4f3458ef774a6503d9c88c2d62c510815499c14aecd",
+  "source_root_sha256": "d5507d45c369c9597a68778b7c839d4e040c40163f0473b09fe76fa418b20305",
+  "members": [
+    {"name": "EXECUTION_STATUS.json", "bytes": 890, "sha256": "1b72eeef047605ea8e0cb024125512f94db784afbbc10c8204b34380dcbce8fd"},
+    {"name": "README.md", "bytes": 1975, "sha256": "472de248553bdd9663c35be623355c40cc04f72c822abce6065cf670a2933b36"},
+    {"name": "REVIEW_ASSESSMENT.md", "bytes": 7265, "sha256": "ba17fe9952a1d0464ffa87c86baa7dd165116d5998eb3a6f6aabc237a783b938"},
+    {"name": "review_static.ps1", "bytes": 11174, "sha256": "3eb2cfd5a0c1d2dab6cb36c5771a790595965509c5f6dee431b4e068aab19917"},
+    {"name": "STATIC_REVIEW_RECEIPT.json", "bytes": 2954, "sha256": "b99191a413a6aea4fe84c53aa83b37084d9e2ba274c317fa21b3897d32b46bbf"}
+  ]
+}

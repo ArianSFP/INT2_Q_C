@@ -1,0 +1,18 @@
+{
+  "schema": "strata-bmp-qtt6-v3-authority-source-only-test-result-v1",
+  "status": "PASS_14_SOURCE_ONLY_HOSTILE_TESTS__NO_PAYLOAD_AUTHORITY",
+  "executed_utc": "2026-09-03",
+  "python": "3.12.13",
+  "test_count": 14,
+  "tests_run": 14,
+  "failures": 0,
+  "errors": 0,
+  "fixtures": "SOURCE_TEST_FIXTURE_DUMMY_AND_SELF_AUTHORED_ONLY",
+  "production_fixture_authorized": false,
+  "actual_v2_manifest_and_members_opened": true,
+  "actual_v2_audit_manifest_and_members_opened": true,
+  "model_qwen_strata_or_control_payload_opened": false,
+  "network_used": false,
+  "cupy_imported_or_initialized": false,
+  "runtime_authorized": false
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "tactic-ramanujan384-v2-source-free-cpu-target-receipt",
+  "date": "2026-09-03",
+  "status": "PASS_SOURCE_FREE_CPU_TARGET_RATE_LITERAL_REPLAY_AND_ALL_CONTROLS",
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "backend": "CPU NumPy"
+  },
+  "fixture": {
+    "intermediate": 128,
+    "hidden": 2048,
+    "roles": 3,
+    "weights": 786432,
+    "physical_bytes": 245760,
+    "physical_rate_bpw": 2.5,
+    "source": "source-free block-reset exact public Ramanujan atoms",
+    "coarse": "source-free zero decoder under synthetic independent capability"
+  },
+  "result": {
+    "relative_mse": 9.5367431640625e-7,
+    "F": 3.0517578125e-5,
+    "source_gain_bpw": 10.0,
+    "source_minus_strongest_control_bpw": 9.984753495595216,
+    "controls_rerun": true,
+    "phase_controls": 1,
+    "canonical_gaussian_controls": 8,
+    "per_candidate_host_scalar_syncs": 0,
+    "status": "ELIGIBLE_FOR_INDEPENDENT_PAYLOAD_PILOT_AUDIT"
+  },
+  "bounded_test_suite": {
+    "tests_run": 9,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "ast_files_parsed": 10
+  },
+  "access_attestation": {
+    "qwen_payload_accessed": false,
+    "coarse_model_payload_accessed": false,
+    "network_accessed": false
+  },
+  "claim_boundary": "constructed source-free CPU mechanics only; CuPy target-rate receipt and all model claims remain pending"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "strata-bmp-qtt6-v3-v2-review-repair-map-v1",
+  "status": "PASS_STATIC_AND_SOURCE_TEST_REPAIRS__HOLD_RUNTIME_PAYLOAD_AND_RESULTS",
+  "reviewed_predecessor": {
+    "manifest_sha256": "84df0d32a55682f6565ac9d144f7de850acf77cde27bffdefa77a151211906f8",
+    "source_root_sha256": "b518b203c43fd401c94e1bfcf67e029a85a95f1f7ce244fcd864a96d0780da47",
+    "audit_manifest_sha256": "324e9a6d7d16be7b57b4ae33599cce2e4b324848e279b59268826b5dcaaebd12",
+    "audit_source_root_sha256": "c817b1f1c3c270cb1f0e332262dc46df4fe9eb39c4b4fafe70a23536203572d3"
+  },
+  "repairs": [
+    {
+      "finding": "B1 README member count typo",
+      "repair": "README explicitly records thirteen v2 non-manifest members and eight v3 non-manifest members; verifier checks both exact closures",
+      "source_tested": true
+    },
+    {
+      "finding": "B2 arbitrary caller source pins",
+      "repair": "v2 and audit manifest/root pins are constants; their literal manifests and every member are opened and independently rehashed",
+      "source_tested": true
+    },
+    {
+      "finding": "B2 self-authored audit/control/read receipts",
+      "repair": "six exact independently pinned executed capability closures require distinct producer/executor/auditor identities and reject production fixture, dummy, or self-authored flags",
+      "source_tested": true
+    },
+    {
+      "finding": "fixed objects lacked compatible semantic formats",
+      "repair": "literal six-plane current-STRATA scale/transform/framing rows bind packet and reconstruction hashes; a distinct BF16 FP64 scorer binds and recomputes every metric",
+      "source_tested": true
+    },
+    {
+      "finding": "routed read receipt was a self-asserted ratio",
+      "repair": "one event-level 4096-byte page trace per routed expert is exact-closed and amplification is independently recomputed; layout-only evidence fails",
+      "source_tested": true
+    },
+    {
+      "finding": "model and control provenance could alias",
+      "repair": "literal BF16 files are opened and rejected on canonical-path, device/inode, or SHA-256 alias across every route and role",
+      "source_tested": true
+    },
+    {
+      "finding": "B3 runtime receipts pending",
+      "repair": "not papered over: the sole production entry has a compiled launch trust root set to null and fails before payload resolution",
+      "source_tested": true
+    }
+  ],
+  "payload_accessed": false,
+  "runtime_authorized": false
+}
+

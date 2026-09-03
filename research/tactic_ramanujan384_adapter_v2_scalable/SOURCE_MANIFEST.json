@@ -1,0 +1,107 @@
+{
+  "access": {
+    "coarse_model_payload": false,
+    "network": false,
+    "qwen_payload": false
+  },
+  "dependency_pins": {
+    "external_bootstrap_verifier": {
+      "path": "research/tactic_ramanujan384_adapter_v2_scalable_bootstrap_verify.py",
+      "sha256": "74f5a56f1371f67ffa4e83ea34b761c2de61ea0900e3374cc25092f2d333e92c"
+    },
+    "schema": "tactic-ramanujan384-scalable-dependency-lock-v2",
+    "status": "PINNED_SOURCE_ONLY_NO_PAYLOAD_AUTHORITY",
+    "v1": {
+      "path": "research/tactic_ramanujan384_adapter_v1_authority",
+      "source_manifest_sha256": "f4ba72b9371d77ad4347d5a4fe377677473844dd696032e662acc6cd3bde22b4",
+      "source_root_sha256": "6840b6a0eb4f2856f84c610ba11888382ecca257d88ebda7f5b49c0de9f3b3c5"
+    },
+    "v1_review": {
+      "disposition": "SOURCE_REPAIRS_SUBSTANTIALLY_CLOSE_V0__HOLD_PAYLOAD_FOR_RUNTIME_SCALABILITY_AND_COARSE_DECODER_AUDIT",
+      "path": "research/tactic_ramanujan384_adapter_v1_authority_independent_review_20260902",
+      "source_manifest_sha256": "005f186ff377a80be2cd89f3fd3c4eea75c2f39642ee94ef6650666a5b9f51d0",
+      "source_root_sha256": "80fdeaa463a64a1303a49f3a123e04d093f0c429b3bd33f6bcb5361274942c3b"
+    }
+  },
+  "execution": {
+    "payload_authorized": false,
+    "source_free_cpu_target_rate_and_all_controls": "PASS_D_9_5367431640625E_7_F_3_0517578125E_5",
+    "source_tests": "PASS_9_OF_9_PYTHON_3_12_13_NUMPY_2_3_5",
+    "target_rate_cupy_fixture_and_controls": "PENDING_RUNPOD_ENDPOINT"
+  },
+  "members": [
+    {
+      "bytes": 3815,
+      "name": "AUDIT_REPAIR_MAP.json",
+      "sha256": "8ffe8f3dea228463d2c3d317cc42aeb41de6f7a0a6863ec59009345686008e3c"
+    },
+    {
+      "bytes": 4336,
+      "name": "README.md",
+      "sha256": "bd43490ddf72dc832379362ab9227d911ef37a9c444051a125280d6e4035c16f"
+    },
+    {
+      "bytes": 1360,
+      "name": "SOURCE_FREE_CPU_TARGET_RECEIPT.json",
+      "sha256": "18c348330c827dba281bd7a0e4b95e63f7db61ec93e6f26a0b3038ef795dd6ee"
+    },
+    {
+      "bytes": 12683,
+      "name": "adapter.py",
+      "sha256": "8dda6aeaca3fb5b29b73b7a3f45ca2ea3434f534a62e89bb52a184d45f5a945e"
+    },
+    {
+      "bytes": 7786,
+      "name": "authenticated_io.py",
+      "sha256": "60cc2b7c1b90879c13e19e7330585885fd94e1308cab19a3aee93a13a56cf6c2"
+    },
+    {
+      "bytes": 4822,
+      "name": "coarse_capability.py",
+      "sha256": "a1d60e5b58790ab103c879843409675628bb96a9ae85092e6590730584c69bee"
+    },
+    {
+      "bytes": 1026,
+      "name": "dependency_lock.json",
+      "sha256": "91be8da8a2fc4d0e8bc50ee9a722a9b47552619bbca87899a7708402863b9a90"
+    },
+    {
+      "bytes": 3070,
+      "name": "design_lock.json",
+      "sha256": "9316e72aeb507a5030cf96bb927687ca0e3adf911a50785841ec697782634d1f"
+    },
+    {
+      "bytes": 828,
+      "name": "fixture_coarse_decoder.py",
+      "sha256": "07e05d9b4f9602e08bd31e312457a357115e18cf23c5054368678c86f080ab08"
+    },
+    {
+      "bytes": 2703,
+      "name": "freeze_source.py",
+      "sha256": "03303a80d36b23a3fcdc69226950dffba4a698c99d1e7407cefd475334e079b5"
+    },
+    {
+      "bytes": 4136,
+      "name": "run_source_free_cupy_target_fixture.py",
+      "sha256": "15c93498592b78ce605b25a87abbd11af8c7e5582735679bebe88d9e90ba3eee"
+    },
+    {
+      "bytes": 32212,
+      "name": "scalable_core.py",
+      "sha256": "5429af5dc08748fcac965e1891a522e7373f8c7c693ebc09ef0e851e562fe775"
+    },
+    {
+      "bytes": 8995,
+      "name": "source_free_fixture.py",
+      "sha256": "bff3b987599dc2284337d88fbd62600b47f3433eff6a7943b237553b6bead0f5"
+    },
+    {
+      "bytes": 6617,
+      "name": "test_source_only.py",
+      "sha256": "c65653899cda17db920c2f14ee21bb113a087c26f6362e30e9eca53465e800c6"
+    }
+  ],
+  "schema": "tactic-ramanujan384-scalable-source-manifest-v2",
+  "source_root_sha256": "bff5a0c541cb2117a8cc1db3e539493bacc590b4e007ab7f193ca615e03a7495",
+  "status": "FROZEN_SOURCE_ONLY_CPU_PASS_CUPY_PENDING_NO_PAYLOAD_AUTHORITY"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "tactic-ramanujan384-v2-scalable-independent-source-review-manifest",
+  "status": "PASS_V2_STATIC_SCALABILITY_AND_SOURCE_FREE_CONTROL_MECHANISM__HOLD_CUPY_QWEN_AND_PRODUCTION_COARSE_DECODER_UNTIL_ATOMIC_CLOSURE_AND_HARDENED_EXECUTION",
+  "producer_manifest_sha256": "1f579f33216edeebbebb6c1714a4e56739da30ae0f12ae9bd44baf15a6163209",
+  "producer_source_root_sha256": "bff5a0c541cb2117a8cc1db3e539493bacc590b4e007ab7f193ca615e03a7495",
+  "external_bootstrap_verifier_sha256": "74f5a56f1371f67ffa4e83ea34b761c2de61ea0900e3374cc25092f2d333e92c",
+  "source_root_sha256": "16ea8dfde5cf7a48552dc7b5a74b209488934b8764e890bf51bb5cd02985cd39",
+  "members": [
+    {"name": "EXECUTION_STATUS.json", "bytes": 1092, "sha256": "6423faecb3ea77c6d7e4b07321be4d75c18a0b9f4980c0ab440d65d3494bbda6"},
+    {"name": "README.md", "bytes": 1506, "sha256": "4651b7b2f6c6bebad85d4e6b6ffb1f361ec1d17f29c5e93ac0734e9a2ccac689"},
+    {"name": "REVIEW_ASSESSMENT.md", "bytes": 7578, "sha256": "1cf8e0101e4e3e6ba18c6ef5e269d2c84a0442bb3f9cef4ce2efd1db39b8bb2a"},
+    {"name": "review_static.ps1", "bytes": 8887, "sha256": "ca11a9cad2586e557d3ae05eef0eb8b5d78aae04b9bef24cc15c06c4a3ecf131"},
+    {"name": "STATIC_REVIEW_RECEIPT.json", "bytes": 2104, "sha256": "11f9e0fa90cf59bcf1dfd6bfbfc755da1a356d718998f8a57191fb5154ec285e"}
+  ],
+  "access": {
+    "qwen_payload": false,
+    "coarse_model_payload": false,
+    "network": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "strata-bmp-qtt6-gate-v3-authority-independent-review-execution-status-v1",
+  "date": "2026-09-03",
+  "producer_manifest_sha256": "7901e78eaf7c6b854d7bfaa2afbb4eb7be337449a72ef66e66d00adb87f64ab4",
+  "producer_source_root_sha256": "14ec1fdc19435f4f3655b4f3458ef774a6503d9c88c2d62c510815499c14aecd",
+  "powershell_static_review": {
+    "executed": true,
+    "checks": 33,
+    "failures": 0,
+    "receipt": "STATIC_REVIEW_RECEIPT.json"
+  },
+  "python_tests_executed": false,
+  "runtime_executed": false,
+  "network_used": false,
+  "producer_modified": false,
+  "model_qwen_strata_control_or_packet_payload_accessed": false,
+  "payloads_opened": 0,
+  "qwen_result": null,
+  "control_result": null,
+  "physical_result": null,
+  "disposition": "PASS_EXACT_SOURCE_AND_EFFECTIVE_COMPILED_HOLD__BLOCK_LITERAL_REPLAY_SCORING_COUNT_PACKET_ALIAS_AND_TRACE_CLAIMS__HOLD_PAYLOAD_AND_RD"
+}

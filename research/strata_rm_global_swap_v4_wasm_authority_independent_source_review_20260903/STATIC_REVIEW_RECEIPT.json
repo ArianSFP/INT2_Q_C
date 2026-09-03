@@ -1,0 +1,38 @@
+{
+  "schema": "strata-rm-global-swap-v4-independent-source-static-review",
+  "date": "2026-09-03",
+  "producer_manifest_sha256": "62bf04cd413317e2e8b98635713419c84394db7b7d2bd4567afddf56957a5e2f",
+  "producer_source_root_sha256": "f535699c4828a02e5769b916b1207309768f7381db5f92a0fb58e10915ae8a25",
+  "producer_members": 9,
+  "exact_flat_closure": true,
+  "static_powershell_review_executed": true,
+  "python_tests_executed": false,
+  "wasmtime_executed": false,
+  "repair_findings": {
+    "complete_copied_wasmtime_distribution_tree_authenticated": true,
+    "bundled_native_inventory_and_mapped_hashes_authenticated": true,
+    "decoder_store_limits_and_fuel_precede_instantiation": true,
+    "encoder_store_limits_and_fuel_precede_instantiation": true,
+    "packet_is_immutable_host_bytes": true,
+    "decoder_has_only_bounded_nonoverlapping_packet_callback": true,
+    "canonical_encoder_has_zero_imports_and_no_direct_packet_capability": true,
+    "separate_semantic_audit_package_required": true,
+    "pinned_v3_per_family_scientific_control_and_read_gates_reused": true
+  },
+  "conditional_limits": {
+    "external_expected_pins_require_independent_trust_anchor": true,
+    "semantic_state_is_opaque_and_raw_packet_exclusion_not_runtime_parsed": true,
+    "current_host_python_abi_platform_target_not_reobserved": true,
+    "native_dependencies_outside_runtime_snapshot_not_closed": true,
+    "cold_read_is_packet_supply_not_total_memory_bandwidth": true,
+    "runtime_and_payload_receipts_pending": true
+  },
+  "access_attestation": {
+    "network_used": false,
+    "model_or_checkpoint_payload_accessed": false,
+    "packet_or_control_payload_accessed": false,
+    "producer_modified": false,
+    "commit_created": false
+  },
+  "disposition": "PASS_V3_IMMUTABILITY_LIMITS_SEMANTIC_AND_DELEGATED_GATE_REPAIRS__CONDITIONAL_ON_EXTERNALLY_TRUSTED_EXECUTED_RUNTIME_AND_SEMANTIC_AUDITS__HOLD_EXECUTING_HOST_AND_TRANSITIVE_NATIVE_PROVENANCE__HOLD_TOTAL_READ_BANDWIDTH_RUNTIME_PAYLOAD_AND_RD"
+}

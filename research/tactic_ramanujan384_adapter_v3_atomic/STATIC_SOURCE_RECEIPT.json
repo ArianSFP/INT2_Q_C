@@ -1,0 +1,27 @@
+{
+  "schema": "tactic-ramanujan384-v3-atomic-static-source-receipt",
+  "date": "2026-09-03",
+  "status": "PASS_STATIC_SOURCE_ARCHITECTURE",
+  "external_bootstrap_sha256": "f7e8cd469b0ff9dd9ef09b400c63ec9f91e067f849d6b009588ea94ad6494375",
+  "checks": {
+    "bootstrap_hash_matches_dependency_lock": true,
+    "v2_manifest_and_root_pinned": true,
+    "v2_review_manifest_and_root_pinned": true,
+    "bootstrap_has_no_importlib": true,
+    "descriptor_reads_and_double_exact_closure": true,
+    "verified_mapping_proxy_precedes_runner_compile": true,
+    "runner_loads_package_modules_only_from_snapshot_bytes": true,
+    "coarse_worker_accepts_no_decoder_object": true,
+    "coarse_worker_program_has_zero_imports_and_no_path_or_callback_operands": true,
+    "worker_and_auditor_exact_closures_and_receipt_schema_bound": true,
+    "target_fixture_weights": 786432,
+    "target_fixture_physical_bytes": 245760,
+    "target_fixture_physical_rate_bpw": 2.5
+  },
+  "python_tests_executed": false,
+  "python_tests_status": "NOT_EXECUTED_NO_LOCAL_PYTHON",
+  "runtime_executed": false,
+  "qwen_payload_accessed": false,
+  "coarse_model_payload_accessed": false,
+  "network_accessed": false
+}
