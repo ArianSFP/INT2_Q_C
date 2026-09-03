@@ -56,3 +56,6 @@ research/strata_rm_global_swap_v4_wasm_authority_independent_source_review_20260
 research/tactic_ramanujan384_adapter_v2_scalable_independent_source_review_20260903/STATIC_REVIEW_RECEIPT.json -text -eol whitespace=cr-at-eol
 research/tactic_ramanujan384_adapter_v2_scalable_independent_source_review_20260903/review_static.ps1 -text -eol whitespace=cr-at-eol
 research/tactic_ramanujan384_adapter_v3_atomic_independent_source_review_20260903/review_static.ps1 -text -eol whitespace=cr-at-eol
+research/tactic_ramanujan384_qwen_pilot_v0_independent_source_review_20260903/STATIC_REVIEW_RECEIPT.json -text -eol whitespace=cr-at-eol
+research/tactic_ramanujan384_qwen_pilot_v0_independent_source_review_20260903/review_static.ps1 -text -eol whitespace=cr-at-eol
+research/tactic_ramanujan384_qwen_pilot_v0/aperture.py whitespace=-blank-at-eof

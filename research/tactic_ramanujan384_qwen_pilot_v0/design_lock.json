@@ -1,0 +1,50 @@
+{
+  "schema": "tactic-ramanujan384-qwen-pilot-v0-design-lock",
+  "status": "FROZEN_SOURCE_ONLY__COMPILE_TIME_CAPABILITY_PIN_NONE__NO_PAYLOAD_OPENED",
+  "date": "2026-09-03",
+  "authority": {
+    "compile_time_capability_sha256": null,
+    "command_line_digest_accepted": false,
+    "capability_sealed_before_payload_access": true,
+    "independent_runtime_audits_required": 2,
+    "dummy_or_self_authored_production_audit_accepted": false,
+    "audit_packages_and_authorities_must_be_nonaliased": true,
+    "audit_receipts_bind_kind_authority_and_subject_manifest": true,
+    "closure_root_domains_enforced": true
+  },
+  "aperture": {
+    "roles": ["gate", "up", "down_transposed"],
+    "blocks_per_role": 16,
+    "block_values": 4096,
+    "sample_fixed_in_source": true,
+    "candidate_ranks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "literal_packet_encode_decode_before_score": true,
+    "bootstrap_replicates": 4096,
+    "bootstrap_alpha": 0.05,
+    "required_coarse_residual_capture": 0.32387022205373717,
+    "coarse_relative_mse": 0.036975150060595235,
+    "target_d": 0.025,
+    "pooled_and_minimum_owner_lcb_required": true,
+    "controls_before_survival": 0,
+    "full_expert_before_survival": false
+  },
+  "survivor": {
+    "weights": 4718592,
+    "physical_bytes": 1470464,
+    "physical_rate_exact": "359/144",
+    "physical_rate_float": 2.4930555555555554,
+    "decoded_byte_fp64_rescore": true,
+    "phase_controls": 1,
+    "gaussian_controls": 8,
+    "one_pass_4096_byte_page_trace": true,
+    "host_file_trace_is_inference_hbm": false,
+    "projected_transfer_permitted": false
+  },
+  "payload_execution": {
+    "qwen_opened": false,
+    "coarse_artifact_opened": false,
+    "cupy_initialized": false,
+    "network_used": false,
+    "runpod_executed": false
+  }
+}

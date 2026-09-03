@@ -1,0 +1,22 @@
+{
+  "schema": "tactic-ramanujan384-qwen-pilot-v0-source-only-test-result",
+  "status": "HOLD_FINAL_FROZEN_SOURCE_NOT_EXECUTED__PRE_HARDENING_17_PASS",
+  "date": "2026-09-03",
+  "pre_hardening_execution": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "tests_run": 17,
+    "failures": 0,
+    "errors": 0
+  },
+  "final_frozen_source_tests_executed": false,
+  "final_test_command": "python -I -B research/tactic_ramanujan384_qwen_pilot_v0/test_source_only.py",
+  "hold_reason": "No local Python; the provided RunPod endpoint refused and then timed out before any remote command executed.",
+  "literal_rank_synthetic_blocks_pre_hardening": 2,
+  "mechanism_only": true,
+  "cupy_imported_or_initialized": false,
+  "qwen_or_coarse_payload_opened_statted_hashed_or_enumerated": false,
+  "network_payload_access_used": false,
+  "runpod_command_executed": false,
+  "production_authorized": false
+}

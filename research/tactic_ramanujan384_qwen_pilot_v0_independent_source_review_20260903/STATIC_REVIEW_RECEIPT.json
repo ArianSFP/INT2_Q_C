@@ -1,0 +1,66 @@
+{
+  "schema": "tactic-ramanujan384-qwen-pilot-v0-independent-static-review-v1",
+  "date": "2026-09-03",
+  "producer_manifest_sha256": "340ef7f532ab02e03bf04257f3ff07dbc4736bd9e5e96203169603df918e3a8a",
+  "producer_source_root_sha256": "611bf1b9c822cb90f32a2956e52d8332ef75374186e4acedc958ec3a6c5468ec",
+  "producer_members": 8,
+  "exact_flat_closure": true,
+  "powershell_static_review_executed": true,
+  "final_frozen_python_tests_executed": false,
+  "pre_hardening_source_tests": {
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "promoted_to_final_source": false
+  },
+  "runtime_executed": false,
+  "static_findings": {
+    "compile_time_capability_none_and_precedes_path_access": true,
+    "six_dependency_manifest_and_root_pairs_pinned": true,
+    "heterogeneous_dependency_manifest_names_and_root_row_algorithms_explicit": true,
+    "domain_separated_coarse_auditor_root_verified": true,
+    "two_nonaliased_semantically_bound_runtime_audits_required": true,
+    "source_and_decoded_coarse_images_bound_to_independent_audit": true,
+    "sample_fixed_before_access_sixteen_whole_blocks_per_role": true,
+    "literal_rank_zero_through_fourteen_scored": true,
+    "one_batched_solve_and_literal_reconstruction_einsum": true,
+    "pooled_and_minimum_owner_bootstrap_lcb_gate": true,
+    "required_capture_exact": 0.32387022205373717,
+    "target_d": 0.025,
+    "physical_bytes": 1470464,
+    "physical_rate_exact": "359/144",
+    "decoded_coarse_byte_equality_checked": true,
+    "decoded_fine_and_original_bf16_fp64_rescore": true,
+    "controls_after_full_d_gate": {
+      "phase": 1,
+      "gaussian": 8
+    },
+    "one_pass_host_page_trace_pages": 359,
+    "projected_transfer_rejected": true
+  },
+  "runtime_hold": {
+    "compile_time_capability_sha256": null,
+    "endpoint_status_source": "reported by parent authority; not network-tested by this reviewer",
+    "endpoint_status": "TCP became reachable, then SSH banner refused or timed out",
+    "remote_command_executed": false,
+    "python_available_locally": false,
+    "cupy_initialized": false,
+    "qwen_or_coarse_payload_accessed": false
+  },
+  "conditional_limits": {
+    "future_deployment_bootstrap_and_capability_not_certified": true,
+    "coarse_fp32_image_is_independently_predecoded_not_decoded_again_in_pilot": true,
+    "bootstrap_lcb_is_not_a_probability_sample_design_bound": true,
+    "host_page_trace_is_not_accelerator_hbm": true,
+    "final_source_python_cupy_payload_and_rd_pending": true
+  },
+  "access_attestation": {
+    "reviewer_network_used": false,
+    "qwen_or_model_payload_accessed": false,
+    "coarse_payload_accessed": false,
+    "python_numpy_cupy_or_cuda_initialized": false,
+    "producer_or_dependencies_modified": false,
+    "commit_created": false
+  },
+  "disposition": "PASS_STATIC_FAIL_CLOSED_QWEN_PILOT_ARCHITECTURE__HOLD_FINAL_SOURCE_PYTHON_CUPY_CAPABILITY_PAYLOAD_RD_AND_HBM"
+}
