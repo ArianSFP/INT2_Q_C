@@ -1,0 +1,48 @@
+{
+  "schema": "same_layer_common_latent_entropy_design_lock_v0",
+  "claim_boundary": "ideal fixed-label MDL aperture; not a finite codec or target result",
+  "source_release_payload_default": "HOLD",
+  "panel": {
+    "model": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "layer": 15,
+    "experts": [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120],
+    "roles": ["Up", "Down.T"],
+    "coordinates_per_role": 1572864
+  },
+  "quantizer": {
+    "alphabet": 4,
+    "block_values": 2048,
+    "scale": "FP64 RMS rounded to IEEE binary16 LE; decoded binary16 value drives thresholds and reconstruction",
+    "scale_bits_per_block": 16,
+    "threshold_over_decoded_rms": 0.981598821873,
+    "reconstruction_over_decoded_rms": [-1.510417608, -0.452780039, 0.452780039, 1.510417608]
+  },
+  "common_latents": {
+    "binary": "per-role modal Gray-code bitplane across experts; lower-symbol tie; charged one-bit plane selector per role",
+    "quaternary": "per-role modal four-level label across experts; lower-symbol tie",
+    "family_selection": "binary versus quaternary is source-selected; one family-selector bit is charged in either two-part branch",
+    "coordinate_alignment": "identity only"
+  },
+  "decision": {
+    "promotion_target_gain_bpw_on_up_down": 0.22933495044437175,
+    "triage_gain_bpw_nonpromoting": 0.045,
+    "first_gate": "favorable marginal ideal bits minus private conditional ideal bits, with U/model temporarily free",
+    "first_gate_failure": "hard kill before controls or finite-coder work",
+    "control_count_if_survives": 8
+  },
+  "controls": {
+    "kind": "independent deterministic affine coordinate permutations per expert and role",
+    "property": "exactly marginal preserving",
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017]
+  },
+  "physical_envelope": {
+    "rate_interval_bpw": [2.15, 2.5],
+    "page_bytes": 4096,
+    "layout": "[global header + raw U + common model][private expert i]",
+    "strict_read_amplification": "max(page-amortized physical, nonpadding decodable) < 2 for every expert",
+    "feasible_rate_rule": "a family is read-eligible only when at least one frozen endpoint in {2.15,2.5} has status IDEAL_CAPACITY_ONLY_NOT_AN_EMITTED_CODEC, capacity_ok=true, and strictly_below_2x=true; scientific controls and promotion use only read-eligible families",
+    "warning": "capacity/read envelope only; no finite entropy coder is implemented"
+  },
+  "universality": "core accepts E in [2,256] and any positive legal SwiGLU d_ff,d_model; panel plugin is evaluation-only"
+}

@@ -1,0 +1,90 @@
+{
+  "auditor_id": "common_latent_source_audit",
+  "authorization": "DENY_PAYLOAD_DEPLOYMENT_FROM_THIS_SOURCE_SNAPSHOT",
+  "claim_boundary": "PAYLOAD_BLIND_SOURCE_REVIEW_ONLY_NO_QWEN_EXECUTION_AUTHORITY",
+  "controls": {
+    "bijection_for_all_checked_streams": true,
+    "independent_expert_role_affine_parameters_match": true,
+    "marginal_histograms_exactly_preserved": true,
+    "seed_count": 8,
+    "seeds": [10619863, 10619881, 10619909, 10619927, 10619953, 10619971, 10619999, 10620017]
+  },
+  "entropy_mdl_accounting": {
+    "binary_plane_selector_bits": 2,
+    "conditional_plugin_entropy_given_raw_U": "PASS",
+    "family_selector_bits": 1,
+    "finite_coder_claimed": false,
+    "fixed_width_count_descriptors_final_count_derived": "PASS_CONSERVATIVE",
+    "latent_entropy": "PASS",
+    "marginal_plugin_entropy": "PASS",
+    "scale_bits_cancel_identically": "PASS"
+  },
+  "hold": {
+    "dynamic_status": "HOLD_NO_PAYLOAD_ACCESS",
+    "path_access_before_hold": false,
+    "payload_execution_enabled": false,
+    "worker_import_before_hold": false
+  },
+  "independence": "separate agent; no producer-source edits",
+  "material_defect": {
+    "all_four_read_envelopes_failed": true,
+    "defect": "run_authorized_panel computes physical and nonpadding envelopes but does not use their status, capacity_ok, or strictly_below_2x values when setting status and eligibility",
+    "eligible_for_finite_coder_research_returned": true,
+    "envelope_statuses": {
+      "binary_charged_mdl": {"2.15": "FAIL_CAPACITY_OR_STRICT_READ_AMPLIFICATION", "2.5": "FAIL_CAPACITY_OR_STRICT_READ_AMPLIFICATION"},
+      "quaternary": {"2.15": "FAIL_CAPACITY_OR_STRICT_READ_AMPLIFICATION", "2.5": "FAIL_CAPACITY_OR_STRICT_READ_AMPLIFICATION"}
+    },
+    "payload_files_opened": 0,
+    "required_fix": "After constructing both family/rate envelopes, make promotion/eligibility conditional on an explicitly frozen feasible-rate rule whose selected envelope has capacity_ok=true and strictly_below_2x=true; add this regression as a mandatory source test",
+    "status_returned": "SURVIVE_IDEAL_APERTURE_REQUIRES_FINITE_CODER"
+  },
+  "math_and_quantizer": {
+    "count_entropy_descriptor_checks": {
+      "k2": {"counts_exact": true, "descriptor_identity_exact": true, "entropy_identity_exact": true, "selector_bits": 3},
+      "k4": {"counts_exact": true, "descriptor_identity_exact": true, "entropy_identity_exact": true, "selector_bits": 1}
+    },
+    "derived_up_down_threshold_bpw": 0.2293349504443716,
+    "frozen_threshold_bpw": 0.22933495044437174,
+    "global_rate_equivalent_gap_bpw": 0.1528899669629144,
+    "quantizer": {
+      "decoded_binary16_reconstruction_match": true,
+      "decoded_binary16_threshold_labels_match": true,
+      "down_transpose_contract_inspected": true,
+      "fp64_rms_to_binary16_bits_match": true
+    },
+    "threshold_exact_within_2e_15": true,
+    "up_down_fraction_of_full_swiglu": "2/3"
+  },
+  "panel": {
+    "bytes_per_file": 3145728,
+    "exact_prior_binding_sequence_match": true,
+    "experts": [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120],
+    "file_count": 32,
+    "layer": 15,
+    "model": "Qwen/Qwen3-30B-A3B",
+    "panel_lock_sha256": "1da2d993aee033b6dc9d165dc8d5482eecfb276d30e5e398edc388a83b8f5af5",
+    "payload_files_opened": 0,
+    "prior_binding_evidence_sha256": "a1ef6fb136027525b6312635cdcca320f05f51c1340c3875b32192454aac1bb3",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "roles": ["Up", "Down.T"]
+  },
+  "payload_accessed": false,
+  "read_ledgers": {
+    "exact_2x_rejected": true,
+    "formula": "max((Cpage+Ppage)/(Cpage/E+Ppage),(Cpage+Ppage)/(Cunpadded/E+Prequired))",
+    "ledger_math": "PASS",
+    "padding_attack_rejected_by_nonpadding_ledger": true,
+    "qwen_anchor_cases": {
+      "binary_2_15": {"actual_rate_fraction": "1101/512", "common_pages": 98, "max_nonpadding": 1.5216882894403942, "max_physical": 1.4457246816252274, "strictly_below_2x": true, "total_pages": 3303},
+      "binary_2_5": {"actual_rate_fraction": "5/2", "common_pages": 98, "max_nonpadding": 1.68963381971308, "max_physical": 1.3842132775744904, "strictly_below_2x": true, "total_pages": 3840},
+      "quaternary_2_15": {"actual_rate_fraction": "1101/512", "common_pages": 194, "max_nonpadding": 1.9210594531769007, "max_physical": 1.8823529411764706, "strictly_below_2x": true, "total_pages": 3303},
+      "quaternary_2_5": {"actual_rate_fraction": "5/2", "common_pages": 194, "max_nonpadding": 2.084028507045378, "max_physical": 1.760585467851542, "strictly_below_2x": false, "total_pages": 3840}
+    }
+  },
+  "schema": "same_layer_common_latent_independent_source_audit_receipt_v0",
+  "source_files_modified": false,
+  "source_manifest_sha256": "238ce67f3670566c277d7baac019a69227ccff05ae944f1561ff8a0d32b1bce9",
+  "source_member_count_excluding_manifest": 10,
+  "source_root_sha256": "16cceafcfe06e1c2683c0e89048700edd47fda395a2a6d06a70cef19d8eb858b",
+  "status": "BLOCKED_MATERIAL_READ_GATE_DEFECT"
+}
