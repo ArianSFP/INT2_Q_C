@@ -1,0 +1,74 @@
+{
+  "schema": "same-layer-clustered-ib-qwen-deployment-design-lock-v0-r3",
+  "status": "HOLD_PENDING_NEW_INDEPENDENT_DEPLOYMENT_REVIEW",
+  "supersedes_for_future_review_only": "same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r2",
+  "blocked_snapshot_modified": false,
+  "claim_boundary": "IDEAL_LABEL_ENTROPY_CENSUS_ONLY_NOT_A_FINITE_CODEC_OR_MSE_RESULT",
+  "lineage": {
+    "parent_source_manifest_sha256": "1d07f1c0a057db3ba74f91062c06d39c23e39f5dd3da74a373c790345a9e7a9a",
+    "parent_source_root_sha256": "18a4043e99b17cfa535f4a6c2930f2c1ac42eff092f4e5d61b9408b1986f457e",
+    "parent_independent_audit_manifest_sha256": "5c07e720928f2642867524b201d0abef5a17ea57b4cae68f5c0df59010e3f051",
+    "parent_independent_audit_root_sha256": "2d0b25666b2dc20feef8dfa56fd62c377b7ba7e1c66e34c3844fb5d1b02b45ca",
+    "embedded_clustered_ib_core_sha256": "25e84b9d5e598a72984e48cb5593c41725d096e36082b20b3d47a78f2100e340",
+    "embedded_cupy_worker_sha256": "a34ca17dd8f76afa0331bb56d5b5dec26dcde693d05755ea2ca342a76a6badfc",
+    "panel_lock_sha256": "1da2d993aee033b6dc9d165dc8d5482eecfb276d30e5e398edc388a83b8f5af5",
+    "blocked_deployment_manifest_sha256": "09bde24da0c986b60752501672d227b9bcdda0a8c32400d5366141fa6d76894f",
+    "blocked_review_manifest_sha256": "6f658a8d01fc6e0dfc54d82e5b6cf062c56433143d4a64359e83afdcf206b27a",
+    "blocked_review_root_sha256": "2abfc31271f92e6ae6a66a4b9a8b3d057d04c9a89d8097da668576bafb07d028",
+    "r1_deployment_manifest_sha256": "8d56bcb1125e7674282793188f866cb1a668b394a0703c094b826fd62e18f3fd",
+    "r1_deployment_root_sha256": "ab278876d08f38ea22a12df170f6e746f700fcaab04066455818e6834e1b49e9",
+    "r1_blocking_review_manifest_sha256": "ffee55c7a5a83e83b186251d4ca8937984901b5700adf57573ad57cf24c000c2",
+    "r1_blocking_review_root_sha256": "2bc46308ff29f471ed31efe5c1b289b7a5f98313d122538710ce50341b17f8ed",
+    "r2_deployment_manifest_sha256": "d3e0fb929fe422bf55351470d445d683bbae7dd5d1bfcd50fbe3fe4a22530f0c",
+    "r2_deployment_root_sha256": "e2476a8ce54183ab5b5eb2a6f44bbffb21d39331d38de47d3f448d711a82699b",
+    "r2_blocking_review_manifest_sha256": "3522a9700e9344f3be7282291d8b994087fc235163dbb9ecc71f0d5e7e83e837",
+    "r2_blocking_review_root_sha256": "272b988f2e1390e5b3129b45db919feb268fe34d0ec7464cb91aa436da29df60"
+  },
+  "runtime": {
+    "hostname": "5d4226946659",
+    "cuda_visible_devices": "0",
+    "python_invocation": "/workspace/int2-cupy-venv/bin/python",
+    "python_realpath": "/usr/bin/python3.12",
+    "python_sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5",
+    "python_version": [3, 12, 3],
+    "numpy_lock": "RUNTIME_NUMPY_LOCK.json",
+    "cupy_version": "14.2.0",
+    "cupy_file_sha256": "8c4724758587dea5f1c1d7c217c74a9fa0e4ed7f9d76a2b86fa001117cf3c718",
+    "cuda_runtime": 12090,
+    "cuda_driver": 13000,
+    "device": "NVIDIA GeForce RTX 5090"
+  },
+  "paths": {
+    "payload_root": "/workspace/INT2__compression",
+    "output_parent": "/tmp/codex_cbib1_qwen_l15_oneuse_20260903_r3",
+    "output_name": "result.json",
+    "claim_name": "ONE_USE_CLAIM.json",
+    "caller_selectable_payload_or_output": false
+  },
+  "one_use": {
+    "authorization_phrase": "EXECUTE_AUTHENTICATED_QWEN_L15_CBIB1_V0_R3_ONCE",
+    "persistent": true,
+    "mechanism": "atomic os.O_CREAT|os.O_EXCL claim",
+    "timing": "after complete source, Python, NumPy wheel, CuPy, CUDA, panel and fixed-path validation; before worker import or payload access",
+    "authorized_use_count_before_new_review": 0
+  },
+  "source_free_parity": {
+    "contract": "EXPECTED_PREFLIGHT.json",
+    "experts": 16,
+    "roles": 2,
+    "coordinates_per_role": 131072,
+    "fold_count": 8,
+    "superblock_values": 2048,
+    "group_sizes": [2, 4, 8, 16],
+    "controls": 8,
+    "requires_actual_source_and_read_survivor": true,
+    "comparison": "exact canonical-model training and held-out assignments, independently vectorized counts, partitions, every discrete/integer ledger and status; bounded every float"
+  },
+  "scientific": {
+    "universal_core_changed": false,
+    "panel": "Qwen3-30B-A3B layer 15, experts 0:8:120, Up and Down.T",
+    "source_threshold_up_down_bpw": 0.22933495044437175,
+    "rate_endpoints": ["43/20", "5/2"],
+    "strict_read": "both physical and non-padding amplification below 2"
+  }
+}

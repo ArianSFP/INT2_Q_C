@@ -1,0 +1,17 @@
+{
+  "schema": "same-layer-clustered-ib-numpy-runtime-lock-v0-r3",
+  "status": "PINNED_BEFORE_ONE_USE_CLAIM",
+  "version": "2.5.2",
+  "site_root": "/workspace/int2-cupy-venv/lib/python3.12/site-packages",
+  "entry_file": {
+    "path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+    "sha256": "09295a80660f17925ae23765ce8cbd7ff7ceae968d5f2f89349f1cb74c0b9e11"
+  },
+  "wheel_record": {
+    "path": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy-2.5.2.dist-info/RECORD",
+    "bytes": 111517,
+    "sha256": "662e57f69a042c5b9efa7a46e8c2901f5d733e21b255a34d7f061e466bceab0d"
+  },
+  "closure_rule": "before the claim, authenticate every RECORD-hashed member under numpy/, numpy.libs/, and numpy-2.5.2.dist-info/; accept no unhashed member except RECORD itself; require at least 500 hashed members and 10 native .so/.a members",
+  "decision_scope": "NumPy dot, log2, float16 conversion, dtype/view and integer/FP64 host arithmetic used by the worker and frozen universal core"
+}

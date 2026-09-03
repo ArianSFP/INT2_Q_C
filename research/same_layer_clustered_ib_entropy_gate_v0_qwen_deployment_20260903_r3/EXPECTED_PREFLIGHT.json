@@ -1,0 +1,29 @@
+{
+  "schema": "same-layer-clustered-ib-qwen-deployment-expected-preflight-v0-r3",
+  "status": "FROZEN_ACCEPTANCE_CONTRACT_NOT_AN_EXECUTION_RECEIPT",
+  "payload_or_qwen_access_permitted": false,
+  "fixture": {
+    "experts": 16,
+    "roles": 2,
+    "coordinates_per_role": 131072,
+    "fold_count": 8,
+    "superblock_values": 2048,
+    "group_sizes": [2, 4, 8, 16],
+    "scale_bytes_per_expert": 256,
+    "scale_byte_formula": "2 roles * (131072 / 2048) blocks * 2 bytes",
+    "labels_sha256": "33f7ba9d4ae0589d06abcfab06bac46d06ef75188d714350ba993df0ca9bbab5"
+  },
+  "acceptance": {
+    "quantizer_scales_and_labels": "exact",
+    "pairwise_mi_max_absolute_delta": 1e-12,
+    "hard_em_assignments": "exact training and held-out assignments for every role/group/fold",
+    "hard_em_latent_and_conditional_counts": "independently reconstructed with vectorized NumPy bincount and exact for training and held-out evidence",
+    "partitions": "exact for all group sizes and all folds",
+    "integer_rate_and_read_ledgers": "exact",
+    "status_and_control_disposition": "exact",
+    "all_float_fields_max_absolute_delta": 1e-8,
+    "source_read_survivors_minimum": 1,
+    "controls_executed": 8
+  },
+  "promotion_boundary": "a PASS is source-free runtime evidence only and cannot authorize or constitute a Qwen payload result"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "same-layer-clustered-ib-r3-fixture-survivor-regression-v0",
+  "status": "PASS_TARGETED_GROUP2_SOURCE_AND_STRICT_READ_SURVIVOR",
+  "payload_or_qwen_accessed": false,
+  "experts": 16,
+  "roles": 2,
+  "coordinates_per_role": 131072,
+  "fold_count": 8,
+  "superblock_values": 2048,
+  "scale_bytes_per_expert": 256,
+  "scale_byte_formula": "2 roles * (131072 / 2048) blocks * 2 bytes",
+  "fixture_labels_sha256": "33f7ba9d4ae0589d06abcfab06bac46d06ef75188d714350ba993df0ca9bbab5",
+  "group_size": 2,
+  "target_gain_bpw": 0.22933495044437175,
+  "favorable_gross_gain_bpw": 0.6513992144263967,
+  "charged_gain_bpw": 0.10902764891263406,
+  "feasible_rate_endpoints": ["5/2"],
+  "five_half": {
+    "status": "IDEAL_CAPACITY_ONLY_NOT_AN_EMITTED_CODEC",
+    "capacity_ok": true,
+    "strictly_below_2x": true,
+    "total_pages": 320,
+    "minimum_required_pages": 306,
+    "max_amplification": 1.9651249492746525
+  }
+}

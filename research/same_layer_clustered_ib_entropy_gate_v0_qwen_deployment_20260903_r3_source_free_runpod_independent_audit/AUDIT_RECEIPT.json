@@ -1,0 +1,70 @@
+{
+  "schema": "same-layer-clustered-ib-r3-source-free-runpod-independent-audit-receipt-v0",
+  "status": "PASS_AUTHORIZED_SINGLE_PREFLIGHT_RECEIPT_INDEPENDENTLY_AUDITED",
+  "auditor_id": "cbib1-r3-source-free-runpod-evidence-independent-audit-20260903",
+  "subject": {
+    "deployment_manifest_sha256": "5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f",
+    "deployment_source_root_sha256": "ae1ae10c0a39b8167739498db13b69aaaf738a17b247ca7861c5d76a57d6c1ee",
+    "review_manifest_sha256": "9465a1d6c9ffdb7553721e1a470b2ab485dcb66d8d32e7b21b605e9ff99421e2",
+    "review_source_root_sha256": "00bb72454630baf53d1b8f0d89a4438aedae3618b6c2bc465fef5839213cc3d9",
+    "receipt_sha256": "38a4eb497983aa8b5a559fa96fcbcbb11dc77cdd78dabfff9d2d4d06c5bf1913"
+  },
+  "closure": {
+    "deployment_member_count_excluding_manifest": 15,
+    "review_member_count_excluding_manifest": 8,
+    "evidence_member_count": 4,
+    "evidence_members_exact": true,
+    "all_members_regular_nonsymlink": true,
+    "all_sizes_and_sha256_exact": true,
+    "child_stderr_bytes": 0,
+    "child_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "one_use_chain": {
+    "authorization_id": "CBIB1_R3_SOURCE_FREE_RTX5090_PREFLIGHT_ONCE_20260903",
+    "claim_status": "ATTEMPT_CONSUMED_BEFORE_VALIDATION_AND_CHILD_SPAWN",
+    "claim_created_with_os_o_excl": true,
+    "claim_precedes_validation_and_child_spawn": true,
+    "receipt_and_stderr_created_with_os_o_excl": true,
+    "wrapper_status": "PASS_SINGLE_ATTEMPT_CAPTURED_AND_VALIDATED",
+    "preflight_attempts_remaining": 0
+  },
+  "runtime": {
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "cupy_version": "14.2.0",
+    "numpy_version": "2.5.2",
+    "numpy_file": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+    "cuda_runtime": 12090,
+    "cuda_driver": 13000
+  },
+  "parity": {
+    "status": "PASS_PRODUCTION_GEOMETRY_FULL_CPU_CUPY_PARITY",
+    "fixture_labels_sha256": "33f7ba9d4ae0589d06abcfab06bac46d06ef75188d714350ba993df0ca9bbab5",
+    "experts": 16,
+    "roles": 2,
+    "coordinates_per_role": 131072,
+    "fold_count": 8,
+    "group_sizes": [2, 4, 8, 16],
+    "scale_bytes_per_expert": 256,
+    "models_checked": 240,
+    "groups_checked": 120,
+    "training_assignments_checked": 27525120,
+    "heldout_assignments_checked": 3932160,
+    "latent_count_arrays_checked": 480,
+    "conditional_count_arrays_checked": 480,
+    "exact_field_count": 5061,
+    "float_field_count": 1127,
+    "maximum_float_absolute_delta": 1.862645149230957e-09,
+    "all_eight_controls_executed": true,
+    "full_gate_status": "HARD_KILL_CHARGED_OR_CONTROLS_BELOW_TARGET",
+    "source_read_survivor_group_sizes": [2],
+    "source_read_survivor_endpoints": {"2": ["5/2"]}
+  },
+  "access": {
+    "network_accessed": false,
+    "gpu_accessed_by_this_audit": false,
+    "payload_or_qwen_accessed": false,
+    "run_gate_invoked": false,
+    "source_free_preflight_replayed": false
+  },
+  "claim_boundary": "PASS authenticates one consumed source-free RTX5090 CPU/CuPy parity preflight. It is not a Qwen, finite-codec, MSE, F-score, HBM, or routed-read scientific result."
+}

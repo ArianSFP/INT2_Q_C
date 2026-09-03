@@ -1,0 +1,58 @@
+{
+  "charges": {
+    "conditional_model": "per fold/group/role/expert/state: three counts, fourth derived from latent-state total",
+    "global_header_bytes": 4096,
+    "group_header_bytes_per_fold_group": 256,
+    "latent_model": "per fold/group/role: one count, second derived",
+    "marginal_model": "per fold/expert/role: three counts, fourth derived",
+    "partition": "per-fold ceil(log2(E!/((k!)^(E/k)*(E/k)!)))",
+    "private_header_bytes_per_expert": 256,
+    "scale_bytes": "identical MDL cancellation; included exactly in private capacity and both read ledgers",
+    "selector": "ceil(log2(number of compatible members of {2,4,8,16}))"
+  },
+  "controls": {
+    "count": 8,
+    "execution_order": "unreachable until favorable source threshold and at least one strict capacity/read endpoint survive",
+    "family": "independent per-expert/per-role bijective affine coordinate permutations",
+    "seeds": [3407544321, 3407544323, 3407544327, 3407544331, 3407544337, 3407544339, 3407544343, 3407544349]
+  },
+  "cross_fit": {
+    "fold_count": 8,
+    "fold_rule": "floor(coordinate/2048) mod 8",
+    "model_selection": "partition, initializer, probabilities, and assignments fitted without held-out fold",
+    "superblock_values": 2048
+  },
+  "decision": {
+    "favorable_gate": "(marginal held-out data bits - private conditional held-out data bits)/UpDown weights; all common costs free",
+    "promotion": "fully charged source gain minus max(0, maximum matched-control charged gain) >= exact threshold, positive strict read endpoint, finite codec still required",
+    "promotion_target_gain_bpw_on_up_down": 0.22933495044437175,
+    "triage_threshold": null
+  },
+  "grouping": {
+    "candidate_group_sizes": [2, 4, 8, 16],
+    "family": "one flat equal-size partition per fold; no hierarchy",
+    "partition_search": "deterministic greedy equal partition from training-only pairwise four-symbol mutual information"
+  },
+  "latent": {
+    "alphabet": 2,
+    "assignment_tie": "lower state",
+    "conditional_alphabet": 4,
+    "initializers": ["each expert Gray plane", "modal Gray planes", "parity Gray planes", "public hash split"],
+    "maximum_hard_em_iterations": 32,
+    "probability_rule": "Krichevsky-Trofimov alpha=1/2",
+    "semantics": "arbitrary per-coordinate binary state within frozen finite hard-EM search; not tied to modal symbols"
+  },
+  "payload_execution_enabled": false,
+  "physical": {
+    "page_bytes": 4096,
+    "rate_endpoints": ["43/20", "5/2"],
+    "strict_gate": "for every routed expert, both page-amortized physical and nonpadding decodable amplification are strictly below 2",
+    "warning": "capacity/read projection only; no finite entropy coder or payload runner exists"
+  },
+  "schema": "same_layer_clustered_ib_design_lock_v0",
+  "source_pins": {
+    "clustered_ib_core_sha256": "25e84b9d5e598a72984e48cb5593c41725d096e36082b20b3d47a78f2100e340",
+    "cupy_backend_sha256": "ddd8329c1f6d769daf5c0f1c22cd66e478203025f946871ee1af5d72d3b203ee"
+  },
+  "universality": "uses only legal SwiGLU expert geometry, role, public coordinates, quantized labels, and transmitted fields; no provenance, model identity, reference checkpoint, or external expert"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "same-layer-clustered-ib-r3-source-free-runpod-evidence-lock-v0",
+  "status": "FROZEN_COPIED_REMOTE_EVIDENCE",
+  "deployment_manifest_sha256": "5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f",
+  "deployment_source_root_sha256": "ae1ae10c0a39b8167739498db13b69aaaf738a17b247ca7861c5d76a57d6c1ee",
+  "review_manifest_sha256": "9465a1d6c9ffdb7553721e1a470b2ab485dcb66d8d32e7b21b605e9ff99421e2",
+  "review_source_root_sha256": "00bb72454630baf53d1b8f0d89a4438aedae3618b6c2bc465fef5839213cc3d9",
+  "members": [
+    {"name": "ONE_USE_PREFLIGHT_CLAIM.json", "bytes": 355, "sha256": "b79b7a39013230c64f9b9504781bc07b0cc879b2ffe5798191118d0a1b5a44b0"},
+    {"name": "child_stderr.txt", "bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"name": "receipt.json", "bytes": 1574, "sha256": "38a4eb497983aa8b5a559fa96fcbcbb11dc77cdd78dabfff9d2d4d06c5bf1913"},
+    {"name": "wrapper_status.json", "bytes": 375, "sha256": "1c5a7c859f6b3b3e061974dfd9dbb0e431b8066c74b511620631a805a0ce242a"}
+  ],
+  "remote_execution_claim": {
+    "authorization_id": "CBIB1_R3_SOURCE_FREE_RTX5090_PREFLIGHT_ONCE_20260903",
+    "claimed_at_utc": "2026-09-03T11:34:02.932689+00:00",
+    "attempts_remaining": 0,
+    "payload_or_qwen_accessed": false
+  }
+}

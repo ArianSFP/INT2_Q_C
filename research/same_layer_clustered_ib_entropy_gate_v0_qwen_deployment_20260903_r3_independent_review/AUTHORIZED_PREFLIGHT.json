@@ -1,0 +1,87 @@
+{
+  "acceptance": {
+    "acceptance_verifier": "verify_preflight_receipt.py",
+    "all_eight_controls_executed": true,
+    "complete_cpu_cupy_parity_status": "PASS_PRODUCTION_GEOMETRY_FULL_CPU_CUPY_PARITY",
+    "fixture_labels_sha256": "33f7ba9d4ae0589d06abcfab06bac46d06ef75188d714350ba993df0ca9bbab5",
+    "minimum_source_read_survivors": 1,
+    "payload_or_qwen_accessed": false,
+    "scale_bytes_per_expert": 256
+  },
+  "audited_deployment": {
+    "manifest_sha256": "5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f",
+    "source_root_sha256": "ae1ae10c0a39b8167739498db13b69aaaf738a17b247ca7861c5d76a57d6c1ee"
+  },
+  "authorization_id": "CBIB1_R3_SOURCE_FREE_RTX5090_PREFLIGHT_ONCE_20260903",
+  "command": {
+    "argv": [
+      "/workspace/int2-cupy-venv/bin/python",
+      "-I",
+      "-B",
+      "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/review/run_authorized_preflight_once.py"
+    ],
+    "cwd": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594",
+    "environment_exact": {
+      "CUDA_VISIBLE_DEVICES": "0"
+    },
+    "shell": false,
+    "underlying_argv_frozen_inside_wrapper": [
+      "/workspace/int2-cupy-venv/bin/python",
+      "-I",
+      "-B",
+      "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/package/run_source_free_cupy.py",
+      "--authorization",
+      "RUN_SOURCE_FREE_CBIB1_QWEN_DEPLOYMENT_PARITY_V0_R3",
+      "--deployment-manifest-sha256",
+      "5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f"
+    ]
+  },
+  "consumption_rule": "The first process invocation attempt consumes this authority whether it passes, fails, or is interrupted. No retry is authorized.",
+  "forbidden": {
+    "authorized_capability_or_production_launcher_invocations": 0,
+    "authorized_network_operations": 0,
+    "authorized_payload_file_reads": 0,
+    "authorized_qwen_invocations": 0,
+    "run_gate_py": true
+  },
+  "fresh_path": {
+    "child_stderr_path": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/child_stderr.txt",
+    "claim_path": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/ONE_USE_PREFLIGHT_CLAIM.json",
+    "exclusive_capture": "The sealed wrapper creates claim, receipt, child stderr, and wrapper status using os.O_CREAT|os.O_EXCL and never removes or overwrites them.",
+    "initial_condition": "fresh_parent must not exist before staging",
+    "package_condition": "copy only the exact 15-member r3 source package plus SOURCE_MANIFEST.json, then reproduce verify_source.py before the one permitted invocation",
+    "package_root": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/package",
+    "receipt_condition": "The sealed shell-free wrapper exclusively creates receipt_path and connects it directly to the sole child process stdout; no shell redirection or overwrite operation is permitted.",
+    "receipt_path": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/receipt.json",
+    "fresh_parent": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594",
+    "review_condition": "copy the exact sealed r3 independent review package into review_root and reproduce verify_review.py with its externally pinned manifest before the one permitted invocation",
+    "review_root": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/review",
+    "wrapper_status_path": "/tmp/codex_cbib1_r3_source_free_rtx5090_preflight_20260903_5bac3594/wrapper_status.json"
+  },
+  "permitted_attempts": 1,
+  "runtime_exact": {
+    "cuda_driver": 13000,
+    "cuda_runtime": 12090,
+    "cupy_version": "14.2.0",
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "numpy_file": "/workspace/int2-cupy-venv/lib/python3.12/site-packages/numpy/__init__.py",
+    "numpy_version": "2.5.2",
+    "python_executable": "/workspace/int2-cupy-venv/bin/python",
+    "python_realpath": "/usr/bin/python3.12",
+    "python_sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5",
+    "python_version": [3, 12, 3]
+  },
+  "schema": "same-layer-clustered-ib-qwen-deployment-r3-source-free-preflight-authority-v0",
+  "scope": "EXACTLY_ONE_SOURCE_FREE_RTX5090_PARITY_PREFLIGHT_ATTEMPT_ONLY",
+  "staging_and_launch_order": [
+    "Confirm fresh_parent is absent, then create it exactly once with package and review child directories.",
+    "Copy and independently authenticate the exact r3 deployment closure into package_root.",
+    "Copy and independently authenticate this exact sealed review closure into review_root.",
+    "Use a network-disabled executor with no Qwen payload mounted or accessed.",
+    "Set cwd and CUDA_VISIBLE_DEVICES exactly as frozen, then exec command.argv once without a shell.",
+    "The wrapper atomically and persistently claims the attempt before validating or spawning, then exclusively captures the sole child stdout/stderr and validates the JSON receipt.",
+    "Do not retry. Validate receipt_path with verify_preflight_receipt.py without invoking the preflight again."
+  ],
+  "status": "AUTHORIZED_NOT_STAGED_NOT_EXECUTED",
+  "wrapper": "run_authorized_preflight_once.py"
+}

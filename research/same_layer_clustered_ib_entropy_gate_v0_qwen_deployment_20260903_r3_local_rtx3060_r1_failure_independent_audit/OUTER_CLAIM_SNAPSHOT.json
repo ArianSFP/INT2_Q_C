@@ -1,0 +1,2 @@
+{"authorization_id":"CBIB1_R3_LOCAL3060_QWEN_ONCE_20260903_458A424A","capability_manifest_sha256":"1589197b2ad053efacd7287b667294e6e8b4d736bff78196a1c29d991613fb5d","claimed_at_utc":"2026-09-03T13:04:21.870926+00:00","deployment_manifest_sha256":"5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f","schema":"cbib1-r3-local3060-authority-attempt-claim-v0-r1","status":"ATTEMPT_CONSUMED_BEFORE_VALIDATION_OR_PAYLOAD_ACCESS"}
+

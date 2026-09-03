@@ -1,0 +1,20 @@
+C:\INT2__compression\.venv-cupy\Lib\site-packages\cupy\_environment.py:286: UserWarning: CUDA path could not be detected. Set CUDA_PATH environment variable if CuPy fails to load.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\INT2__compression\INT2_Q_C\research\same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r3_local_rtx3060_capability_20260903_r2\local_runtime_bridge.py", line 330, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\INT2__compression\INT2_Q_C\research\same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r3_local_rtx3060_capability_20260903_r2\local_runtime_bridge.py", line 323, in main
+    return int(frozen.main([
+               ^^^^^^^^^^^^^
+  File "C:\INT2__compression\INT2_Q_C\research\same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r3\run_gate.py", line 272, in main
+    _cp, numpy_receipt = _validate_runtime()
+                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\INT2__compression\INT2_Q_C\research\same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r3_local_rtx3060_capability_20260903_r2\local_runtime_bridge.py", line 256, in validate_local_runtime
+    need(str(name) == EXPECTED_DEVICE_NAME and canonical_uuid(raw_uuid) == EXPECTED_DEVICE_UUID and
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\INT2__compression\INT2_Q_C\research\same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r3_local_rtx3060_capability_20260903_r2\local_runtime_bridge.py", line 207, in canonical_uuid
+    need(len(packed) == 16, "CUDA UUID bytes")
+  File "C:\INT2__compression\INT2_Q_C\research\same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r3_local_rtx3060_capability_20260903_r2\local_runtime_bridge.py", line 60, in need
+    raise RuntimeError(message)
+RuntimeError: CUDA UUID bytes

@@ -1,0 +1,22 @@
+{
+  "schema": "same-layer-clustered-ib-qwen-deployment-preseal-receipt-v0-r3",
+  "status": "SOURCE_REPAIRED_NOT_RUNTIME_EXECUTED_NOT_INDEPENDENTLY_REVIEWED",
+  "qwen_or_model_payload_accessed": false,
+  "network_accessed": false,
+  "runpod_staged": false,
+  "production_executed": false,
+  "blocked_v0_snapshot_modified": false,
+  "repairs": {
+    "decision_affecting_numpy": "version, resolved entry path/hash, pinned RECORD and every wheel-recorded source/native member verified before claim",
+    "production_geometry_parity": "16 experts, four group sizes, eight populated folds, actual source/read survivor, eight controls, exact training and held-out assignments, independently reconstructed exact counts, exact discrete and bounded complete float comparison",
+    "r1_schema_regression": "small executable regression proves the CPU evaluator count fields are reconstructed rather than indexed",
+    "r2_fixture_regression": "balanced role-reflected fixture has a literal source-favorable strict-read survivor at 5/2 with exact 256-byte scale geometry"
+  },
+  "local_preseal_checks": {
+    "fixture_generated_without_payload": true,
+    "fixture_labels_sha256": "33f7ba9d4ae0589d06abcfab06bac46d06ef75188d714350ba993df0ca9bbab5",
+    "targeted_group2_survivor_regression": "PASS; max exact amplification 1.9651249492746525 at 5/2",
+    "full_production_geometry_cpu_cupy_preflight": "PENDING_SEALED_RUNTIME_EXECUTION"
+  },
+  "authorization": "NONE; R3 REQUIRES NEW INDEPENDENT REVIEW"
+}

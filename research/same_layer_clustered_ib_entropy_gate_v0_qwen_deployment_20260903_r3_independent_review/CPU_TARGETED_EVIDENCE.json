@@ -1,0 +1,54 @@
+{
+  "audited_deployment_manifest_sha256": "5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f",
+  "audited_deployment_source_root_sha256": "ae1ae10c0a39b8167739498db13b69aaaf738a17b247ca7861c5d76a57d6c1ee",
+  "core_sha256": "25e84b9d5e598a72984e48cb5593c41725d096e36082b20b3d47a78f2100e340",
+  "fixture_probe": {
+    "dtype": "uint8",
+    "fixture_labels_sha256": "33f7ba9d4ae0589d06abcfab06bac46d06ef75188d714350ba993df0ca9bbab5",
+    "fold_coordinate_counts": [16384, 16384, 16384, 16384, 16384, 16384, 16384, 16384],
+    "label_counts": [1047704, 1047926, 1050398, 1048276],
+    "label_max": 3,
+    "label_min": 0,
+    "role_reflection_exact": true,
+    "scale_byte_formula": "2 roles * (131072 / 2048) blocks * 2 bytes",
+    "scale_bytes_per_expert": 256,
+    "shape": [16, 2, 131072]
+  },
+  "payload_files_opened": 0,
+  "qwen_accessed": false,
+  "schema": "same-layer-clustered-ib-qwen-deployment-r3-independent-cpu-evidence-v0",
+  "sealed_targeted_regression_reproduction": {
+    "charged_gain_bpw": 0.10902764891263406,
+    "favorable_gross_gain_bpw": 0.6513992144263967,
+    "feasible_rate_endpoints": ["5/2"],
+    "group_size": 2,
+    "read_envelopes": {
+      "43/20": {
+        "capacity_ok": false,
+        "minimum_required_pages": 306,
+        "status": "FAIL_PACKET_EXCEEDS_RATE_CAP",
+        "strictly_below_2x": false,
+        "total_pages": 276
+      },
+      "5/2": {
+        "capacity_ok": true,
+        "global_pages": 2,
+        "global_required_bytes": 4118,
+        "max_amplification": 1.9651249492746525,
+        "minimum_required_pages": 306,
+        "private_pages": [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11, 11],
+        "status": "IDEAL_CAPACITY_ONLY_NOT_AN_EMITTED_CODEC",
+        "strictly_below_2x": true,
+        "total_pages": 320
+      }
+    },
+    "status": "PASS_TARGETED_GROUP2_SOURCE_AND_STRICT_READ_SURVIVOR",
+    "target_gain_bpw": 0.22933495044437174
+  },
+  "vectorized_count_probe": {
+    "cases": 20,
+    "coordinates": [1, 2, 7, 64, 257],
+    "group_sizes": [2, 4, 8, 16],
+    "status": "PASS_INDEPENDENT_VECTORIZED_COUNTS"
+  }
+}

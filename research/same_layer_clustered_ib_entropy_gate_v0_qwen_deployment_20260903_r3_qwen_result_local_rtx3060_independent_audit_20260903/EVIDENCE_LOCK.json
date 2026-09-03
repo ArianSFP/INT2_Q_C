@@ -1,0 +1,20 @@
+{
+  "capability": {
+    "manifest_sha256": "1f99bde6bf48f29554639e746dcad5f7f808f9af628af0ff4a850a0e54ecd63b",
+    "source_root_sha256": "8f36ce5e3476e7058375622c2175b0624b27fb04904f4f1d70ac3baec3565fbf"
+  },
+  "deployment": {
+    "manifest_sha256": "5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f",
+    "panel_lock_sha256": "1da2d993aee033b6dc9d165dc8d5482eecfb276d30e5e398edc388a83b8f5af5",
+    "source_root_sha256": "ae1ae10c0a39b8167739498db13b69aaaf738a17b247ca7861c5d76a57d6c1ee"
+  },
+  "preserved_execution_files": [
+    {"bytes": 441, "name": "CBIB1_R3_LOCAL3060_AUTHORITY_ATTEMPT_20260903_R3_6B20D57E.json", "sha256": "80074ccd1d92ead41fb9823e6a07fd313722b0b10e3279799ae1974f7c9a4ca2"},
+    {"bytes": 329, "name": "CBIB1_R3_LOCAL3060_AUTHORITY_STATUS_20260903_R3_6B20D57E.json", "sha256": "bfaba514694476399b10cb668f034030feb3e654c52d6871d82dc8e2be1a4405"},
+    {"bytes": 444, "name": "ONE_USE_CLAIM.json", "sha256": "d7382c6f42104606078fb36f086d97811e98833a372279393d70cfb1f787f15e"},
+    {"bytes": 199, "name": "child_stderr.txt", "sha256": "70323dc64f419beb59b8ec0fc3af4ca002e09180df6ee51eb92967a033dbcd6e"},
+    {"bytes": 414, "name": "child_stdout.jsonl", "sha256": "90915e254ed2c83eb92eac85744ddaa0505ced17241229f23b92a22bd59583eb"},
+    {"bytes": 217033, "name": "result.json", "sha256": "e24d8795c655704732a42b2fb6e39ca323c2cc09d0d0e5cf34a070de9ef5b916"}
+  ],
+  "schema": "cbib-r3-qwen-result-local-rtx3060-independent-evidence-lock-v0"
+}

@@ -1,0 +1,1 @@
+{"deployment_manifest_sha256":"5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f","receipt_sha256":"38a4eb497983aa8b5a559fa96fcbcbb11dc77cdd78dabfff9d2d4d06c5bf1913","schema":"same-layer-clustered-ib-r3-source-free-preflight-wrapper-v0","status":"PASS_SINGLE_ATTEMPT_CAPTURED_AND_VALIDATED","underlying_status":"PASS_PRODUCTION_GEOMETRY_FULL_CPU_CUPY_PARITY"}

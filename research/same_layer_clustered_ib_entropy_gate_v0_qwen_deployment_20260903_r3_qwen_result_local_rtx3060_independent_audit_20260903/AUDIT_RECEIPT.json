@@ -1,0 +1,40 @@
+{
+  "access": {
+    "cupy_or_cuda_imported": false,
+    "gpu_accessed": false,
+    "network_accessed": false,
+    "payload_or_qwen_accessed": false,
+    "payload_reexecuted": false
+  },
+  "claim_interpretation": {
+    "child_completion_evidence": "result serialized and SHA-256-bound by sole terminal stdout receipt",
+    "outer_authority_status_preserved": "FAIL_ATTEMPT_CONSUMED_NO_RETRY_AUTHORIZED",
+    "outer_failure_cause": "wrapper required empty child stderr; exact child stderr is one harmless CuPy environment UserWarning",
+    "outer_wrapper_relabelled_as_success": false
+  },
+  "result": {
+    "capability_manifest_sha256": "1f99bde6bf48f29554639e746dcad5f7f808f9af628af0ff4a850a0e54ecd63b",
+    "capability_source_root_sha256": "8f36ce5e3476e7058375622c2175b0624b27fb04904f4f1d70ac3baec3565fbf",
+    "deployment_manifest_sha256": "5bac35949d374961f280d12680e3755c8c0d45f58d1937d6fb19120547b3649f",
+    "deployment_source_root_sha256": "ae1ae10c0a39b8167739498db13b69aaaf738a17b247ca7861c5d76a57d6c1ee",
+    "result_sha256": "e24d8795c655704732a42b2fb6e39ca323c2cc09d0d0e5cf34a070de9ef5b916",
+    "result_status": "HARD_KILL_CHARGED_OR_CONTROLS_BELOW_TARGET"
+  },
+  "schema": "cbib-r3-qwen-result-local-rtx3060-independent-audit-receipt-v0",
+  "scientific_conclusion": {
+    "claim_boundary": "IDEAL_LABEL_ENTROPY_CENSUS_ONLY_NOT_A_FINITE_CODEC_OR_MSE_RESULT",
+    "eligible_for_finite_codec": false,
+    "group2": {
+      "charged_gain_bpw": -0.00357806490188306,
+      "control_corrected_charged_gain_bpw": -0.00357806490188306,
+      "favorable_gross_private_gain_bpw": 0.45979510004777663,
+      "maximum_control_charged_gain_bpw": -0.0035952639552799446,
+      "net_ideal_gain_bpw": 0.000010730760043135371,
+      "read_amplification_2_15": 1.4193741857450828,
+      "read_amplification_2_5": 1.622032524456343
+    },
+    "scope": "hard-kill fixed-label CBIB common/private source model only; flexible-label same-layer quantization remains open",
+    "target_gain_bpw_on_up_down": 0.22933495044437174
+  },
+  "status": "PASS_COMPLETED_CHILD_RESULT_WITH_HARMLESS_STDERR_WARNING__HARD_KILL_CBIB_FIXED_LABEL"
+}
