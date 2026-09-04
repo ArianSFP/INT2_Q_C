@@ -1,0 +1,17 @@
+{
+  "schema": "operator-innovation-qwen-local3060-v0-manifest",
+  "status": "HARD_KILL_COMPACT_AND_BLOCKWISE_OPERATOR_SPANS",
+  "source_root_sha256": "8c46779be896a35222328bf81b652d29bfcc16c34aac3c2cc5137d948e0b7660",
+  "members": [
+    {"name":"README.md","bytes":4868,"sha256":"4d0bdcedd0a54d2bc954151d8553478f017d83941aed6dd42a2bffbf7c189cbf"},
+    {"name":"RESULT.json","bytes":73237,"sha256":"ae63d7a0dd931515eb64cefee3f30873c63100b179cb33084c78a374f4167a7b"},
+    {"name":"RESULT_BLOCKWISE.json","bytes":63276,"sha256":"165b9e213867b36ee16d34f37b84a689c172d29a79d55985162420c40f49d3fd"},
+    {"name":"run_blockwise_probe.py","bytes":8479,"sha256":"830659f3c4a9b79cd8386bfa74dac248262db697632b7edf10eae873e83d72f7"},
+    {"name":"run_probe.py","bytes":19569,"sha256":"785bd12823df9ac4154498541b49f97ec55bfc5e5a6aa25df2159c937e9e8622"},
+    {"name":"verify_result.py","bytes":7159,"sha256":"209fb874ba47bcb78ba343de9e5e57aae5fcada71e7b60cb564b41875aeee7f3"}
+  ],
+  "qwen_payload_accessed": true,
+  "matched_control_executed": false,
+  "network_accessed": false,
+  "runpod_accessed": false
+}
