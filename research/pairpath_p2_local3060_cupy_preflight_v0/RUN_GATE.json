@@ -1,0 +1,9 @@
+{
+  "gpu_execution_enabled": true,
+  "payload_authority_present": false,
+  "payload_execution_enabled": false,
+  "qwen_or_model_payload_allowed": false,
+  "remote_or_runpod_allowed": false,
+  "scope": "SOURCE_FREE_SYNTHETIC_PREFLIGHT_ONLY",
+  "status": "HOLD_PRODUCTION_AND_PAYLOAD"
+}

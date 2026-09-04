@@ -1,42 +1,26 @@
-# PAIRPATH-P2 r2 interrupted checkpoint
+# PAIRPATH-P2 r2 sealed source checkpoint
 
-Status: **UNSEALED SOURCE-ONLY WORK IN PROGRESS — DO NOT AUTHORIZE PAYLOAD OR GPU EXECUTION.**
+Status: **SEALED SOURCE-ONLY HOLD — INDEPENDENT HOSTILE AUDIT REQUIRED.**
 
-Work stopped on user request while the final documentation/verifier patch was
-being applied. The following prepared source files are present:
+The interrupted package was repaired and its complete ten-test source-only
+suite passes.  The three material pre-seal corrections are:
 
-- `pairpath_r2_core.py`
-- `source_free_fixtures.py`
-- `test_source_only.py`
-- `run_gate.py` (all execution flags disabled)
-- `design_lock.json`
-- `README.md`
+- deterministic symmetric multistarts for independent and joint label search;
+- a role-conditioned fixed-label mutual-information ceiling;
+- one global Up/Down rate-distortion multiplier across both optimized roles.
 
-The package is not sealed. `SOURCE_MANIFEST.json` and `verify_source.py` are
-missing. An independent hostile audit has not run. No Qwen payload capability
-or local-GPU authority was created. The generated `__pycache__` directory is
-not part of the intended source closure and must not be staged.
+The executable package remains payload-blind.  `run_gate.py` has all execution
+flags disabled.  No Qwen payload, local GPU, network, RunPod, production runner,
+or deployment authority was accessed or created.
 
-Last completed checks before the stop:
+The source manifest and verifier bind the exact closure.  This self-seal is not
+an independent audit and cannot authorize execution.  The next action is a
+hostile audit by a different agent; only a passing audit may lead to a separate
+one-use capability restricted to the pinned local RTX 3060.
 
-- `pairpath_r2_core.py` compiled successfully before the final oracle additions.
-- Nine synthetic tests subsequently ran; eight passed and one failed only
-  because the E=6 expected valid descriptor count was written as 60 instead of
-  the correct 45. That test constant was amended to 45, but the suite was not
-  rerun after the requested stop.
-- A source-only IID literal packet had independently decoded at `7/3 bpw` with
-  conservative maximum cold-read amplification approximately `1.27711x`.
-- The source-only optimistic oracle killed IID structure and survived the
-  deliberately identical-expert positive control in direct probes.
+Known scientific anchors remain:
 
-Known scientific anchors frozen in `design_lock.json`:
-
-- real fixed-label CBIB net ideal gain: `0.000010730760043135371 bpw`;
+- fixed-label CBIB net ideal gain: `0.000010730760043135371 bpw`;
 - required Up/Down gain with Gate unchanged: `0.22933495044437174 bpw`;
 - optimistic early-kill threshold: `0.045 bpw`;
 - physical-engineering margin: `0.27 bpw`.
-
-Before any continuation, rerun syntax/tests, inspect the interrupted files,
-add a fail-closed verifier, build a canonical exact-file manifest, and obtain a
-fresh independent hostile audit. Any eventual payload capability must be a
-separate, pinned, local-RTX3060-only package.

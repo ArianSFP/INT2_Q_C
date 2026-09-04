@@ -1,0 +1,31 @@
+{
+  "schema": "tetrapath4.source_design.v0",
+  "date": "2026-09-04",
+  "variables": ["up_expert_e", "down_expert_e", "up_expert_f", "down_expert_f"],
+  "alphabet_per_variable": 4,
+  "joint_states": 256,
+  "families": [
+    "independent",
+    "pair_01_23",
+    "pair_02_13",
+    "pair_03_12",
+    "chow_liu_tree",
+    "pairwise_maximum_entropy_surrogate",
+    "unary_plus_two_gray_parities",
+    "equal_fiber_gray_low",
+    "equal_fiber_gray_high",
+    "equal_fiber_gf4_xor",
+    "full_empirical_256"
+  ],
+  "alignment": "[Up_e, Down_e_transposed, Up_f, Down_f_transposed] in one common row-major coordinate system",
+  "hard_kill_bpw": 0.045,
+  "standalone_updown_bpw": 0.22933495044437174,
+  "engineering_margin_bpw": 0.27,
+  "oracle_concessions": [
+    "all empirical probability tables are free",
+    "model-family selection is free",
+    "convexified time-sharing schedules are free"
+  ],
+  "payload_execution_authorized": false,
+  "sealed": false
+}

@@ -1,0 +1,1 @@
+{"command":"C:\\INT2__compression\\.venv-cupy\\Scripts\\python.exe -I -B research\\pairpath_fl_same_layer_microcodec_v0_20260904_r3\\test_source_only.py","gpu_accessed":false,"network_accessed":false,"payload_opened":false,"result":"OK","runpod_accessed":false,"schema":"pairpath_p2_r3_source_test_receipt_v1","seconds":12.45,"status":"PASS_9_TESTS","tests_run":9}

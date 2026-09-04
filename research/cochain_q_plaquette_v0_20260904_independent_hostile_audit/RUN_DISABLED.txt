@@ -1,0 +1,4 @@
+INDEPENDENT SOURCE-ONLY AUDIT. NO QWEN, MODEL, GPU, NETWORK, PAYLOAD, OR DEPLOYMENT AUTHORITY.
+
+Only hostile_audit.py may run. It reads the pinned source package and uses
+temporary copied files to test verifier closure; it never modifies the target.

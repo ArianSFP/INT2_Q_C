@@ -43,6 +43,35 @@ class OracleTests(unittest.TestCase):
             b = np.sort(permuted[e, role, lo:lo + core.BLOCK_VALUES])
             np.testing.assert_array_equal(a, b)
 
+    def test_multistarts_and_role_conditioned_mi_are_explicit(self):
+        source = iid_fixture(16384)
+        scales = core.estimate_scale_bits(source)
+        levels = np.stack([
+            core.levels_per_coordinate(scales[e, core.OPTIMIZED_ROLES[0]],
+                                       source.shape[2])
+            for e in range(2)
+        ])
+        starts = core._ideal_initializations(
+            source[:, core.OPTIMIZED_ROLES[0]], levels)
+        self.assertGreaterEqual(len(starts), 18)
+        constant_pairs = {
+            (int(start[0, 0]), int(start[1, 0]))
+            for start in starts
+            if np.all(start[0] == start[0, 0]) and np.all(start[1] == start[1, 0])
+        }
+        self.assertEqual(constant_pairs,
+                         set(itertools.product(range(core.ALPHABET), repeat=2)))
+        mi = core.fixed_assignment_mi_ceiling(source)
+        self.assertEqual(mi["conditioning"], "decoder-visible role")
+        self.assertEqual([row["role"] for row in mi["role_rows"]], ["up", "down"])
+        weighted = sum(row["coordinates"] *
+                       row["mutual_information_bits_per_coordinate_pair"]
+                       for row in mi["role_rows"]) / sum(
+                           row["coordinates"] for row in mi["role_rows"])
+        self.assertAlmostEqual(weighted,
+                               mi["mutual_information_bits_per_coordinate_pair"],
+                               places=15)
+
 
 class LiteralCodecTests(unittest.TestCase):
     @classmethod

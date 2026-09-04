@@ -1,0 +1,5 @@
+NO PAYLOAD RUN IS AUTHORIZED.
+
+This unsealed package accepts caller-supplied source arrays only.  It contains
+no model locator, accelerator path, network path, capability, one-use claim,
+or result destination.  A survival result cannot promote itself.

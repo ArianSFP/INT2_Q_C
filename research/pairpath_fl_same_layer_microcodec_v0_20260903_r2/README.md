@@ -102,22 +102,21 @@ The payload sequence is fail-fast:
 5. promotion still requires two whole held-out layers, all bytes, one decode,
    `F<=0.8`, and maximum cold read below 2.
 
-## Paused checkpoint status
+## Sealed source-only status
 
-Work was stopped at the user's requested checkpoint before source sealing.
-The executable core, fixtures, design lock, runner, tests, and this design note
-are present.  `SOURCE_MANIFEST.json`, `verify_source.py`, and a final test
-receipt are not present.  Consequently this directory is an explicitly
-**unsealed work-in-progress**: it grants no Qwen, GPU, payload, deployment, or
-result authority and none should be inferred from the earlier implementation
-claims in this document.
+The interrupted checkpoint was reviewed before sealing.  The equal-flexibility
+oracle now uses the same deterministic multistart bank for its independent and
+joint models, computes the frozen-label ceiling conditional on decoder-visible
+role, and uses one global Up/Down rate-distortion multiplier.  Ten source-only
+tests pass.  The exact source closure is bound by `SOURCE_MANIFEST.json` and a
+fail-closed verifier.
 
-The next continuation must first review the interrupted files, run the complete
-source-only suite, fix any failures, and have a different agent perform a
-hostile source audit.  Only then may a separately named, local-RTX-3060-only
-one-use payload capability be considered.
+This remains a **source-only hold**.  It grants no Qwen, GPU, payload,
+deployment, or result authority.  A different agent must still perform a
+hostile source audit before a separately named, local-RTX-3060-only one-use
+payload capability may be considered.
 
-## Planned verification after continuation
+## Verification
 
 From the repository root, compute rather than trust the manifest digest:
 
@@ -126,6 +125,3 @@ $p = "research\pairpath_fl_same_layer_microcodec_v0_20260903_r2"
 $m = (Get-FileHash -Algorithm SHA256 -LiteralPath "$p\SOURCE_MANIFEST.json").Hash.ToLowerInvariant()
 python -B "$p\verify_source.py" --package "$p" --manifest-sha256 $m --self-test
 ```
-
-This command is intentionally not runnable at the paused checkpoint because the
-manifest and verifier have not yet been created.

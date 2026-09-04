@@ -1,0 +1,45 @@
+{
+  "conclusion": "mechanism validation only; no Qwen result and no payload authority",
+  "fixtures": {
+    "balanced_iid_cube": {
+      "fixed_reparameterization_saved_bits": 0,
+      "patterns": 256,
+      "physical_gain_bpw": -2.8693423433860827,
+      "status": "HARD_KILL_PUBLIC_COCHAIN_BELOW_0P045_BPW",
+      "syndrome_counts": [
+        128,
+        128
+      ]
+    },
+    "low_degree_d2": {
+      "baseline_relative_mse": 1.0,
+      "fixed_reparameterization_saved_bits": 0,
+      "ideal_gain_bpw": 0.25,
+      "max_pairwise_mutual_information_bits": 0.0,
+      "packet_sha256": "7616403ff6d849268f7adce6e96d9f370df2b4e0a8fa1df08fae8b9f1d7f0923",
+      "patterns": 8,
+      "physical_gain_bpw": 0.25,
+      "status": "SURVIVES_SOURCE_ONLY_REQUIRES_QWEN_CONTROLS_AND_SIX_PLANE_PACKET"
+    },
+    "low_degree_d3": {
+      "baseline_relative_mse": 1.0,
+      "fixed_reparameterization_saved_bits": 0,
+      "ideal_gain_bpw": 0.125,
+      "max_pairwise_mutual_information_bits": 0.0,
+      "packet_sha256": "26974604a7f1c2d03fb548bdeac4ab89aaae1165995080e50c9f1822ddd348ce",
+      "patterns": 128,
+      "physical_gain_bpw": 0.125,
+      "status": "SURVIVES_SOURCE_ONLY_REQUIRES_QWEN_CONTROLS_AND_SIX_PLANE_PACKET"
+    }
+  },
+  "gpu_accessed": false,
+  "qwen_or_model_data_accessed": false,
+  "schema": "cochain_q.source_free_receipt.v0",
+  "source_only": true,
+  "thresholds_bpw": {
+    "engineering_margin": 0.18,
+    "hard_kill": 0.045,
+    "scientifically_real": 0.1,
+    "standalone_target": 0.15288996696
+  }
+}

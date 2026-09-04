@@ -1,0 +1,25 @@
+{
+  "schema": "tetrapath4.independent_hostile_audit_verdict.v0",
+  "date": "2026-09-04",
+  "target_package": "research/tetrapath4_source_oracle_v0_20260904",
+  "target_core_sha256": "b303d9d87659d0ae36687fed9ab82b00e1eea8a6bd94ea4769453e42b5fb611a",
+  "verdict": "FAIL_AS_HARD_KILL_OR_PROMOTION_ORACLE__PASS_SOURCE_ONLY_MECHANISM_FIXTURE",
+  "qwen_result_present": false,
+  "payload_authority": false,
+  "blocking_findings": [
+    "alternating multistart optimizer is not globally optimal; exact N=2 counterexample retained",
+    "family-specific smoothing breaks full-model containment of lower-order models",
+    "fixed sparse multiplier grid has no missed-frontier error bound",
+    "G4 status baseline excludes pairwise maximum entropy and does not isolate pure fourth order",
+    "unrestricted full-family survival does not establish a sub-2x routed-read representation"
+  ],
+  "passing_findings": [
+    "12 target tests pass",
+    "source-only verifier passes",
+    "probability normalizations pass",
+    "pairwise IPF audited margins converge",
+    "XOR and IID fixtures pass",
+    "XOR fiber ledger gives 0.75 bpw and 4/3 ideal logical amplification",
+    "no Qwen GPU network or deployment authority"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "iid_fixture_gain_bpw": 0.0,
+  "local_search_globality_counterexample": {
+    "costs": [
+      [
+        [
+          0.4224446879722103,
+          0.3181235818200181,
+          0.744133306710906,
+          0.4128752164041639
+        ],
+        [
+          0.20408140706938155,
+          0.5475806952325156,
+          1.54403643580454,
+          1.0426745132082966
+        ],
+        [
+          0.16963456736396426,
+          0.0914499347042299,
+          0.18533284490809987,
+          0.3849886511281555
+        ],
+        [
+          0.02850904561392707,
+          0.28919015532866876,
+          0.09343380680805545,
+          0.16439321143718505
+        ]
+      ],
+      [
+        [
+          0.20216221058299733,
+          0.25977739909486236,
+          0.57856382500583,
+          1.1580814418032073
+        ],
+        [
+          0.3193753796686683,
+          1.65385647376684,
+          0.1769807798300474,
+          0.5415396877962428
+        ],
+        [
+          0.9938362739951845,
+          0.4079598678767829,
+          0.16237461512334828,
+          0.13346741492626343
+        ],
+        [
+          0.22235092359742675,
+          0.46870328553783347,
+          0.12116766857181127,
+          0.292265357051196
+        ]
+      ]
+    ],
+    "exact_objective": 0.821040736644721,
+    "exact_tuple_ids": [
+      74,
+      74
+    ],
+    "gap": 0.0023643742362363662,
+    "multiplier": [
+      1,
+      2
+    ],
+    "reported_assignment_sha256": "b859788a9dbba644077e97e2f3ed4bbe38964b502c70cc0cf3d48c5aa9ec7377",
+    "reported_objective": 0.8234051108809574,
+    "seed": 0,
+    "source_energy": 15.33534466574286
+  },
+  "normalization": {
+    "fiber_gf4_xor": {
+      "finite": true,
+      "min": 0.0,
+      "sum": 1.0
+    },
+    "fiber_gray_high": {
+      "finite": true,
+      "min": 0.0,
+      "sum": 1.0
+    },
+    "fiber_gray_low": {
+      "finite": true,
+      "min": 0.0,
+      "sum": 1.0
+    },
+    "full": {
+      "finite": true,
+      "min": 0.0021033653846153845,
+      "sum": 0.9999999999999999
+    },
+    "independent": {
+      "finite": true,
+      "min": 0.0035168225013935818,
+      "sum": 1.0
+    },
+    "pair_01_23": {
+      "finite": true,
+      "min": 0.003334120315288519,
+      "sum": 1.0
+    },
+    "pair_02_13": {
+      "finite": true,
+      "min": 0.0033483231707317077,
+      "sum": 1.0
+    },
+    "pair_03_12": {
+      "finite": true,
+      "min": 0.003454309190957763,
+      "sum": 1.0
+    },
+    "pairwise_maxent": {
+      "finite": true,
+      "min": 0.0031848395134858936,
+      "sum": 1.0
+    },
+    "parity": {
+      "finite": true,
+      "min": 0.0035170269179389735,
+      "sum": 1.0
+    },
+    "tree": {
+      "finite": true,
+      "min": 0.003261779882840688,
+      "sum": 1.0
+    }
+  },
+  "pairwise_maxent_max_abs_margin_error": 1.0269562977782698e-15,
+  "schema": "tetrapath4.independent_hostile_audit.v0",
+  "smoothing_noncontainment_counterexample": {
+    "full_fitted_rate_bpw": 1.6065661886755245,
+    "full_minus_independent_bpw": 0.6065661886755245,
+    "independent_fitted_rate_bpw": 1.0
+  },
+  "source_only_imports": [
+    "__future__",
+    "argparse",
+    "dataclasses",
+    "fractions",
+    "hashlib",
+    "importlib",
+    "itertools",
+    "math",
+    "numpy",
+    "pathlib",
+    "subprocess",
+    "sys",
+    "typing",
+    "unittest"
+  ],
+  "target": "research/tetrapath4_source_oracle_v0_20260904",
+  "target_files_sha256": {
+    "CHECKPOINT_STATUS.md": "7bd4f8ba7554530c6723da04582360c5c9563074b09edc7dc7194a973dada1d7",
+    "DESIGN_LOCK.json": "4786b834900c4d3b761fd245176bf51841a6256e715b490b92fbc4e257956a67",
+    "README.md": "cce4389f309421511b8963d9fdca7f7123fd01db39d42d6a5f660ac076acbbe3",
+    "RUN_DISABLED.txt": "b46802c9d225cf597f5f8848a5327709834f439ee59f7463d19cf4f8f2ad9d2c",
+    "test_source.py": "946a68506edae2edd7a2a534c925f4e6a9552e598fb82579ad3874ddf72f65cc",
+    "tetrapath4_oracle.py": "b303d9d87659d0ae36687fed9ab82b00e1eea8a6bd94ea4769453e42b5fb611a",
+    "verify_source.py": "8a3416dceaa7dded12c838f1cef7dad5d0a0218050f33ae282b7ee0f8f5057fe"
+  },
+  "target_tests": {
+    "ran_12_tests": true,
+    "returncode": 0,
+    "status_ok": true
+  },
+  "target_verifier": {
+    "pass_marker_present": true,
+    "returncode": 0
+  },
+  "xor_fixture": {
+    "fiber_max_logical_read_amplification": 1.3333333333333333,
+    "fiber_total_bpw": 0.75,
+    "gain_bpw": 0.25,
+    "pairwise_maxent_residual_bpw": 0.25
+  }
+}

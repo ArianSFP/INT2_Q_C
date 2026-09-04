@@ -1,0 +1,4 @@
+SOURCE ONLY. NO MODEL, QWEN, GPU, NETWORK, PAYLOAD, DEPLOYMENT, OR EXECUTION AUTHORITY.
+Any real-weight pilot requires a separately named, independently audited, one-use
+local RTX 3060 capability binding exact sources, runtime, GPU UUID, and this
+package's future sealed manifest hash.

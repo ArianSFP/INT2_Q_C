@@ -1,0 +1,18 @@
+{
+  "schema": "cochain_q.source_manifest.v0",
+  "status": "SOURCE_ONLY_READY_FOR_INDEPENDENT_AUDIT",
+  "authority": "NONE_SOURCE_ONLY",
+  "files_sha256": {
+    "CHECKPOINT_STATUS.md": "2874bd57e416da20a666b3288f50ea9d29fa156f101d121f3fdc6284e3f8e698",
+    "README.md": "e442849a61703245d0a388a04a9312e9d199cff2fe8cb2a3f1cc8cf072ce45ed",
+    "RUN_DISABLED.txt": "86b0a659eb88b30d60441de266c6e5e0ae96aa7d29403d18fdbbc3dad98a82ef",
+    "SOURCE_FREE_RECEIPT.json": "e0075c316dcec61e5917008d686b2c56033b854f1b384dcf1525c74e3c47b280",
+    "cochain_q_oracle.py": "c1a747ea5e9e7193922b51a6a0a52207591936a7cc4d190b29b94b8499294adf",
+    "source_receipt.py": "9f3a7d1de98abf1b097148c5fb4f64c835bd9489aec192520ad2ce66368d8be0",
+    "test_source.py": "89e3d13832bde404c3193f4ddafc73084c41330a3b8acbbffea304f815ac8961",
+    "verify_source.py": "48e9ef582e9c259197ffa24abf0eaaf1556f7c32f444e5165844ceb019fda209"
+  },
+  "source_root_sha256": "3e515bc146fde2dde734fb94eb11f5dc32397d227fd4dd3930037b2ce498190a",
+  "scientific_claim": "exact source-free mechanism validation only; no Qwen result",
+  "execution_boundary": "no model, GPU, network, payload, deployment, or capability authority"
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "tetrapath4.independent_hostile_audit_manifest.v0",
+  "date": "2026-09-04",
+  "target_core_sha256": "b303d9d87659d0ae36687fed9ab82b00e1eea8a6bd94ea4769453e42b5fb611a",
+  "files_sha256": {
+    "AUDIT_EVIDENCE.json": "b8603223a4973b803a193d4b33d3418a524f1309339589785c79f1ee4b450a0c",
+    "AUDIT_REPORT.md": "d499290b991a57db13c44e91729b1a05faf9730cda0cca90eb624354fa4c97ed",
+    "AUDIT_VERDICT.json": "eab89d5349ca51540dd90717d09363ba072bdb1ac99642a9363a57da7a81b805",
+    "hostile_audit.py": "c3f267e36a79917596c4250fd63fe3ff8154a8c8a5ac39ae89bc48eaa0e2fb39",
+    "README.md": "58f6299a90a4c403f249b4027b12be6a09b087fca62ba640b8eff4a3640bdd4f",
+    "verify_audit.py": "f579f43922ba2433daebf2da2301d84b5d15b26c86f9a000500d7b8468d3a82e"
+  }
+}

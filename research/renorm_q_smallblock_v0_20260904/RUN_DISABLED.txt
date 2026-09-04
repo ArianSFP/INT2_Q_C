@@ -1,0 +1,5 @@
+SOURCE-ONLY PACKAGE. NO PAYLOAD EXECUTION AUTHORITY.
+
+Do not read Qwen weights, use CuPy/GPU, access a network, emit a codec packet,
+or claim a finite result from this directory. Only test_source.py is runnable.
+A future local RTX 3060 capability must be separate and independently reviewed.

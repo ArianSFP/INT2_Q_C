@@ -1,0 +1,20 @@
+{
+  "schema": "renorm_q_smallblock_source_design_lock_v0",
+  "status": "SEALED_SOURCE_ONLY_HOLD_PENDING_INDEPENDENT_REVIEW",
+  "date_utc": "2026-09-04",
+  "sites_max": 6,
+  "alphabet_max": 4,
+  "objective": "distortion_plus_lambda_times_hierarchical_modeled_bits",
+  "rsmi_objective": "I_z_environment_minus_beta_H_z_minus_descriptor_bpw",
+  "hard_kill_control_corrected_bpw": 0.03,
+  "finite_projection_eligibility_bpw": 0.045,
+  "target_mse_reduction_fraction": 0.1909952569401769,
+  "qwen_authority": false,
+  "gpu_authority": false,
+  "network_authority": false,
+  "payload_authority": false,
+  "deployment_authority": false,
+  "finite_codec_claim": false,
+  "read_rule": "expert-local preferred at logical 1x; cross-expert common/private must be physically below 2x",
+  "future_accelerator": "local RTX 3060 only in a separate independently reviewed one-use capability"
+}

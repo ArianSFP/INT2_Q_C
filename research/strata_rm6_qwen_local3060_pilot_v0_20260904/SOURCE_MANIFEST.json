@@ -1,0 +1,16 @@
+{
+  "schema": "strata-rm6-qwen-local3060-pilot-v0-manifest",
+  "status": "FROZEN_HARD_KILL_BANK0_QWEN_PHYSICAL_OVERFLOW_AT_ALL_CHECKPOINTS",
+  "source_root_sha256": "9e19c757ce544e3424c808aba3b854126d7b1b39f52ca8c41c4bcff8433218fc",
+  "members": [
+    {"name":"DESIGN_LOCK.json","bytes":3392,"sha256":"88d3b7499b1b18a121eeb63b57d347ac993d4cdcd5e086e9a6be61e2bf415a8c"},
+    {"name":"README.md","bytes":4128,"sha256":"4564c8be97e870912bb60e11e612ad52b2fe2267ad68544635996633b8633785"},
+    {"name":"RESULT.json","bytes":23580,"sha256":"fa99e07439e6381443f6681001caed96d61838649a9b974d7bc07468600f7e00"},
+    {"name":"run_pilot.py","bytes":23249,"sha256":"9178520f251754157af78b337b37dcedcff7d0114531f78ce8b8130cf5f8de67"},
+    {"name":"verify_result.py","bytes":6597,"sha256":"1e83426026ee7101485c9da2c10584eeb39285d0a234ff1e85beb6634c5e71cf"}
+  ],
+  "qwen_payload_accessed": true,
+  "matched_control_executed": true,
+  "network_accessed": false,
+  "runpod_accessed": false
+}

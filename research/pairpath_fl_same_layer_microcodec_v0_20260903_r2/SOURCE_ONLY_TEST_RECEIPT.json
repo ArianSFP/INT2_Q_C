@@ -1,0 +1,1 @@
+{"claim":"source-only synthetic mechanisms; no Qwen/model/GPU/network/RunPod access","command":"python -I -B test_source_only.py","schema":"pairpath_p2_source_only_test_receipt_v2","status":"PASS_10_TESTS","tests_run":10}

@@ -1,0 +1,122 @@
+{
+  "blockers": {
+    "binary_map_bank_totality": {
+      "defects": [
+        {
+          "declared_cardinality": 2,
+          "leaf_model_error": "OracleError: gray_high_parity: nonempty fibre 1",
+          "map": "gray_high_parity",
+          "observed_states": [0]
+        },
+        {
+          "declared_cardinality": 4,
+          "leaf_model_error": "OracleError: gray_two_parity: nonempty fibre 2",
+          "map": "gray_two_parity",
+          "observed_states": [0, 1]
+        },
+        {
+          "declared_cardinality": 4,
+          "leaf_model_error": "OracleError: role_expert_cube: nonempty fibre 2",
+          "map": "role_expert_cube",
+          "observed_states": [0, 1]
+        }
+      ],
+      "required_fix": "derive cardinality/remap outputs per alphabet or exclude empty-state maps",
+      "severity": "CORRECTNESS_BLOCKER_FOR_BINARY_TREE_BACKEND"
+    },
+    "caller_supplied_map_bypass": {
+      "accepted_by_target": true,
+      "best_frozen_bank_rsmi_score_bpw": 0.023590234442608438,
+      "custom_map_descriptor_bpw": 0.0,
+      "custom_map_mi_bits_per_cell": 1.0,
+      "custom_map_rsmi_score_bpw": 0.25,
+      "required_fix": "promotion API must authenticate the frozen bank or charge the complete map truth table plus selection/search; self-declared descriptor_bits is not authoritative",
+      "severity": "BLOCKER_FOR_CALLER_SUPPLIED_BANKS"
+    },
+    "frozen_decision_rule_mismatch": {
+      "cases": [
+        {"actual": "SCIENTIFIC_SIGNAL_ONLY", "control": 0.0, "lcb": 0.01, "qwen": 0.04, "required": "HARD_KILL"},
+        {"actual": "PROMOTE_TO_SEPARATE_FINITE_PROJECTION", "control": 0.0, "lcb": 0.01, "qwen": 0.06, "required": "HARD_KILL"}
+      ],
+      "reason": "README freezes hard kill when the control-corrected lower-confidence gain is below 0.03 bpw, but code compares the LCB only with zero",
+      "severity": "PROMOTION_GATE_BLOCKER"
+    },
+    "invalid_probability_nll": {
+      "accepted_by_target": true,
+      "full_sequence_kraft_sum": 16.0,
+      "reported_modeled_bits_for_selected_four_symbol_path": 0.0,
+      "required_fix": "validate normalized/subnormalized root, every transition row, and every leaf conditional, then test operational integer codelength",
+      "root_kraft_sum": 2.0,
+      "severity": "BLOCKER",
+      "transition_row_kraft_sums": [[2.0, 2.0], [2.0, 2.0]]
+    }
+  },
+  "exact_min_sum": {
+    "max_distortion_abs_error": 0.0,
+    "max_modeled_bits_abs_error": 0.0,
+    "max_objective_abs_error": 0.0,
+    "status": "PASS_EXACT_FOR_VALID_NORMALIZED_TEST_MODELS",
+    "trials": 12
+  },
+  "gpu_accessed": false,
+  "iid_xor_fixture_assessment": {
+    "balanced_iid_test_present": true,
+    "limitation": "fixtures do not validate held-out Qwen structure or operational rate",
+    "status": "PASS_MECHANISM_ONLY",
+    "xor_mi_bits_per_cell": 1.0
+  },
+  "network_accessed": false,
+  "qwen_payload_opened": false,
+  "read_and_authority": {
+    "assessment": "not a source-package blocker because limitations are disclosed; no finite/read claim may be promoted until model tables, headers, pages, and packet bytes exist",
+    "authority_flags": {
+      "deployment_authority": false,
+      "finite_codec_claim": false,
+      "gpu_authority": false,
+      "network_authority": false,
+      "payload_authority": false,
+      "qwen_authority": false
+    },
+    "authority_status": "PASS_FAIL_CLOSED_SOURCE_ONLY",
+    "common_private_formula_16_experts_C1_P3": 1.3061224489795917,
+    "expert_local_packet_present": false,
+    "formula_independently_expected": 1.3061224489795917,
+    "formula_status": "PASS_IDEAL_LOGICAL_ONLY",
+    "physical_page_ledger_present": false
+  },
+  "required_repairs": [
+    "Kraft-normalize/authenticate every NLL table and add invalid-table rejection KATs.",
+    "Disallow unauthenticated custom maps or charge their complete serialized description.",
+    "Remove/remap empty-state binary maps before using the tree backend.",
+    "Apply the 0.03-bpw threshold to the control-corrected lower confidence bound.",
+    "After repair, reseal under new hashes and obtain another independent audit."
+  ],
+  "rsmi_normalization_assessment": {
+    "default_bank_selector_bits": 4,
+    "descriptor_divisor": "number_of_sampled_cell_sites",
+    "limitations": "overlapping cells, tiling/traversal/beta search, table parameters, and repeated model selection are not charged; RSMI is in-sample and diagnostic only",
+    "mi_and_entropy_divisor": "cell_sites",
+    "status": "ARITHMETIC_NORMALIZATION_CORRECT_FOR_DISJOINT_CELLS"
+  },
+  "schema": "renorm_q_smallblock_independent_hostile_audit.v0",
+  "target": "renorm_q_smallblock_v0_20260904",
+  "target_closure": {
+    "manifest_sha256": "340ba1f1c435be9cbfc58c75607cc5c5e07e6bb10692265b5938ebf530d926b9",
+    "members": 8,
+    "source_root_sha256": "8c1682ea514e067c4ba10b1e010abf1766cb842ea525233f7eb854896da6cac4"
+  },
+  "target_modified": false,
+  "target_tests": {"status": "PASS", "tests_run": 8},
+  "target_verifier": {
+    "gpu_accessed": false,
+    "manifest_sha256": "340ba1f1c435be9cbfc58c75607cc5c5e07e6bb10692265b5938ebf530d926b9",
+    "member_count": 8,
+    "network_accessed": false,
+    "qwen_payload_opened": false,
+    "schema": "renorm_q_smallblock_source_verification_v0",
+    "source_root_sha256": "8c1682ea514e067c4ba10b1e010abf1766cb842ea525233f7eb854896da6cac4",
+    "status": "PASS_SOURCE_ONLY_HOLD_PENDING_INDEPENDENT_REVIEW",
+    "xor_collective_mi_bits_per_cell": 1.0
+  },
+  "verdict": "BLOCKED_FROM_PAYLOAD_CAPABILITY_PENDING_SOURCE_FIXES"
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "strata-rm6-qwen-local3060-pilot-v0-design-lock",
+  "status": "FROZEN_BOUNDED_PILOT_PARAMETERS_BEFORE_QWEN_VALUE_ACCESS",
+  "date": "2026-09-04",
+  "claim_boundary": "One 4096-value Qwen Up block and one deterministic moment-matched Gaussian control; not a whole-expert, global-optimum, deployable-container, or target-F result.",
+  "immutable_source": {
+    "package": "research/strata_rm6_label_flexible_gate_v0",
+    "source_manifest_sha256": "c8d56e045159e3af613f02c4d5d97c70e8f8b4383b3fbf282d384b08f74b7300",
+    "source_root_sha256": "d17718615dedebca08ead66c0555e9d649768a353f3a55d169a9bf400f11bd32",
+    "static_independent_audit_package": "research/strata_rm6_label_flexible_gate_v0_independent_source_audit_20260902",
+    "static_independent_audit_manifest_sha256": "3955d339322ef175f16fefd2f74d327faa800cb0bdd34bb6b1f0952e7905984d",
+    "static_audit_disposition": "PASS_LOCAL_SOURCE_MECHANISM__HOLD_PRODUCTION_GLOBAL_PAYLOAD_AND_READS"
+  },
+  "qwen": {
+    "panel_lock": "research/same_layer_clustered_ib_entropy_gate_v0_qwen_deployment_20260903_r3/panel_lock.json",
+    "panel_lock_sha256": "1da2d993aee033b6dc9d165dc8d5482eecfb276d30e5e398edc388a83b8f5af5",
+    "model": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "layer": 15,
+    "expert": 0,
+    "role": "up",
+    "payload_relative_path": "qwen_weight_cache/rd_structure_diag_cross_expert/l15e0_up.bf16.bin",
+    "payload_bytes": 3145728,
+    "payload_sha256": "15e0782da2120ab5369ec88bd3d4ae3a677ed0e63b38b48f2f622a72d1f574b6",
+    "block_values": 4096,
+    "block_ordinal": 191
+  },
+  "codec": {
+    "bank_id": 0,
+    "orders_lsb_to_msb": [5, 5, 5, 5, 5, 5],
+    "information_bits": 9516,
+    "profile_q": 192,
+    "profile_nominal_rate_bpw": 2.5,
+    "test_channel_distortion_normalized": 0.03125,
+    "coset_modes": ["current_random", "zero"],
+    "sc_seed_u32": 1397569025,
+    "rht_seed_u64": 6003946148926539086,
+    "rht": "authenticated SplitMix64 signed orthonormal Walsh-Hadamard",
+    "scale": "literal FP16 rounding of post-RHT FP64 RMS",
+    "objective": "exact original-source SSE plus literal aligned packet rate; no unconstrained label is admitted as a codec"
+  },
+  "search": {
+    "backend": "CuPy FP64 batched exact-cost legal RM generator-row flips",
+    "maximum_flips": 128,
+    "checkpoint_flips": [0, 8, 16, 32, 64, 128],
+    "termination": "first nonnegative best legal single-generator delta or 128 flips",
+    "selection": "lowest F among literal independently decoded checkpoint packets",
+    "global_optimum_claimed": false,
+    "initialization": "source-conditioned single-path RM-SC MAP under the same six-plane bank and coset"
+  },
+  "control": {
+    "kind": "deterministic BF16 moment-matched iid Gaussian raw block through the identical RHT, scale, SC, search, checkpoint and packet path",
+    "seed": 59324517298123401
+  },
+  "decision": {
+    "hard_kill_pilot_below_qwen_mse_reduction_fraction": 0.05,
+    "promote_panel_at_qwen_mse_reduction_fraction": 0.10,
+    "promote_panel_minimum_qwen_minus_control_percentage_points": 0.03,
+    "strong_promotion_mse_reduction_fraction": 0.15,
+    "literal_packet_rate_range_bpw": [2.15, 2.5]
+  },
+  "runtime": {
+    "only_device": "NVIDIA GeForce RTX 3060",
+    "only_device_uuid": "GPU-458a424a-76e3-65e5-0470-803e0ed131ca",
+    "runpod_allowed": false,
+    "network_allowed": false
+  }
+}

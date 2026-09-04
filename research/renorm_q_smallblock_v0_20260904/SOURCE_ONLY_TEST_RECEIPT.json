@@ -1,0 +1,1 @@
+{"claim":"source-only RENORM-Q mechanisms; no Qwen/model/GPU/network/payload access","command":"python -I -B test_source.py","schema":"renorm_q_smallblock_source_test_receipt_v0","status":"PASS_8_TESTS","tests_run":8}

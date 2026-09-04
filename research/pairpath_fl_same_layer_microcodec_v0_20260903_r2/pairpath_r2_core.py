@@ -987,24 +987,37 @@ def _entropy_bits(counts: np.ndarray) -> float:
 
 
 def fixed_assignment_mi_ceiling(values: np.ndarray) -> dict:
-    """Nearest-label mutual-information screen, normalized per Up/Down weight."""
+    """Role-conditioned nearest-label MI ceiling per Up/Down weight.
+
+    Role is decoder-visible.  Pooling Up and Down before computing mutual
+    information can manufacture mixture dependence, so the authoritative
+    ceiling is the coordinate-weighted mean of the per-role mutual
+    informations.
+    """
     x = _validate_values(values, (2,))
     scales = estimate_scale_bits(x)
-    joint_counts = np.zeros((ALPHABET, ALPHABET), dtype=np.int64)
-    marginal0 = np.zeros(ALPHABET, dtype=np.int64)
-    marginal1 = np.zeros(ALPHABET, dtype=np.int64)
+    role_rows = []
     for role in OPTIMIZED_ROLES:
         q0 = nearest_labels(x[0, role], scales[0, role])
         q1 = nearest_labels(x[1, role], scales[1, role])
+        joint_counts = np.zeros((ALPHABET, ALPHABET), dtype=np.int64)
         np.add.at(joint_counts, (q0, q1), 1)
-        marginal0 += np.bincount(q0, minlength=ALPHABET)
-        marginal1 += np.bincount(q1, minlength=ALPHABET)
-    pair_entropy = _entropy_bits(joint_counts.ravel())
-    mutual_information = (_entropy_bits(marginal0) + _entropy_bits(marginal1) -
-                          pair_entropy)
+        marginal0 = np.bincount(q0, minlength=ALPHABET)
+        marginal1 = np.bincount(q1, minlength=ALPHABET)
+        pair_entropy = _entropy_bits(joint_counts.ravel())
+        role_mi = (_entropy_bits(marginal0) + _entropy_bits(marginal1) -
+                   pair_entropy)
+        role_rows.append({"role": ROLES[role], "coordinates": int(q0.size),
+                          "mutual_information_bits_per_coordinate_pair": role_mi})
+    total_coordinates = sum(row["coordinates"] for row in role_rows)
+    mutual_information = sum(
+        row["coordinates"] * row["mutual_information_bits_per_coordinate_pair"]
+        for row in role_rows) / total_coordinates
     ceiling_bpw = mutual_information / 2.0
     return {"mutual_information_bits_per_coordinate_pair": mutual_information,
             "fixed_assignment_ceiling_bpw": ceiling_bpw,
+            "conditioning": "decoder-visible role",
+            "role_rows": role_rows,
             "required_mutual_information_bits_per_pair":
                 FIXED_ASSIGNMENT_MI_REQUIRED_BITS_PER_PAIR,
             "passes_fixed_assignment_standalone_necessary_screen":
@@ -1012,47 +1025,90 @@ def fixed_assignment_mi_ceiling(values: np.ndarray) -> dict:
             "claim": "necessary ceiling for the frozen nearest assignment only; flexible labels remain open"}
 
 
-def _ideal_flexible_role(values: np.ndarray, levels: np.ndarray, lagrange: Fraction,
+def _ideal_initializations(values: np.ndarray, levels: np.ndarray) -> list[np.ndarray]:
+    """Deterministic symmetric starts for the independent and joint solvers."""
+    distortion = (values[:, :, None] - levels) ** 2
+    nearest = np.argmin(distortion, axis=2).astype(np.uint8)
+    equal = np.argmin(distortion[0] + distortion[1], axis=1).astype(np.uint8)
+    starts = [nearest, np.stack((equal, equal)).astype(np.uint8)]
+    for a0 in range(ALPHABET):
+        for a1 in range(ALPHABET):
+            starts.append(np.stack((
+                np.full(values.shape[1], a0, dtype=np.uint8),
+                np.full(values.shape[1], a1, dtype=np.uint8),
+            )))
+    unique, seen = [], set()
+    for start in starts:
+        key = start.tobytes()
+        if key not in seen:
+            seen.add(key)
+            unique.append(start)
+    return unique
+
+
+def _ideal_flexible_role(values: np.ndarray, levels: np.ndarray, bit_weight: float,
                          joint: bool) -> tuple[np.ndarray, float, float]:
-    """Model-free single-letter alternating oracle for one role and pair."""
+    """Multistart model-free single-letter alternating oracle for one role."""
     require(values.shape[0] == 2 and levels.shape == values.shape + (ALPHABET,),
             "ideal role geometry")
-    q = np.argmin((values[:, :, None] - levels) ** 2, axis=2).astype(np.uint8)
-    bit_weight = float(lagrange) * max(float(np.sum(values * values)),
-                                      np.finfo(np.float64).tiny) / values.size
-    for _ in range(MAX_ALTERNATIONS):
+    require(math.isfinite(bit_weight) and bit_weight >= 0, "ideal bit weight")
+
+    def score(labels: np.ndarray) -> tuple[float, float, float]:
+        reconstruction = np.take_along_axis(levels, labels[:, :, None], axis=2)[:, :, 0]
+        sse = float(np.sum((values - reconstruction) ** 2, dtype=np.float64))
         if joint:
-            index = q[0].astype(np.int16) * ALPHABET + q[1]
-            counts = np.bincount(index, minlength=ALPHABET * ALPHABET).astype(np.float64)
-            length = -np.log2((counts + 0.5) / (index.size + 0.5 * counts.size))
-            costs = np.empty((values.shape[1], ALPHABET * ALPHABET), np.float64)
-            for a0 in range(ALPHABET):
-                for a1 in range(ALPHABET):
-                    k = a0 * ALPHABET + a1
-                    costs[:, k] = ((values[0] - levels[0, :, a0]) ** 2 +
-                                   (values[1] - levels[1, :, a1]) ** 2 +
-                                   bit_weight * length[k])
-            selected = np.argmin(costs, axis=1)
-            new_q = np.stack((selected // ALPHABET, selected % ALPHABET)).astype(np.uint8)
+            index = labels[0].astype(np.int16) * ALPHABET + labels[1]
+            rate = _entropy_bits(np.bincount(
+                index, minlength=ALPHABET * ALPHABET)) / 2.0
         else:
-            new_q = np.empty_like(q)
-            for e in range(2):
-                counts = np.bincount(q[e], minlength=ALPHABET).astype(np.float64)
-                length = -np.log2((counts + 0.5) / (q.shape[1] + 0.5 * ALPHABET))
-                costs = (values[e, :, None] - levels[e]) ** 2 + bit_weight * length[None, :]
-                new_q[e] = np.argmin(costs, axis=1).astype(np.uint8)
-        if np.array_equal(q, new_q):
-            break
-        q = new_q
-    sse = float(np.sum((values - np.take_along_axis(levels, q[:, :, None], axis=2)[:, :, 0]) ** 2,
-                       dtype=np.float64))
-    if joint:
-        rate = _entropy_bits(np.bincount(q[0].astype(np.int16) * ALPHABET + q[1],
-                                        minlength=ALPHABET * ALPHABET)) / 2.0
-    else:
-        rate = sum(_entropy_bits(np.bincount(q[e], minlength=ALPHABET))
-                   for e in range(2)) / 2.0
-    return q, sse, rate
+            rate = sum(_entropy_bits(np.bincount(labels[e], minlength=ALPHABET))
+                       for e in range(2)) / 2.0
+        total_bits = rate * values.size
+        return sse + bit_weight * total_bits, sse, rate
+
+    best = None
+    for start_index, start in enumerate(_ideal_initializations(values, levels)):
+        q = start.copy()
+        visited = set()
+        for iteration in range(MAX_ALTERNATIONS + 1):
+            objective, sse, rate = score(q)
+            key = (objective, sse, rate, start_index, iteration)
+            if best is None or key < best[0]:
+                best = (key, q.copy(), sse, rate)
+            packed = q.tobytes()
+            if iteration == MAX_ALTERNATIONS or packed in visited:
+                break
+            visited.add(packed)
+            if joint:
+                index = q[0].astype(np.int16) * ALPHABET + q[1]
+                counts = np.bincount(
+                    index, minlength=ALPHABET * ALPHABET).astype(np.float64)
+                length = -np.log2((counts + 0.5) /
+                                  (index.size + 0.5 * counts.size))
+                costs = np.empty((values.shape[1], ALPHABET * ALPHABET), np.float64)
+                for a0 in range(ALPHABET):
+                    for a1 in range(ALPHABET):
+                        k = a0 * ALPHABET + a1
+                        costs[:, k] = ((values[0] - levels[0, :, a0]) ** 2 +
+                                       (values[1] - levels[1, :, a1]) ** 2 +
+                                       bit_weight * length[k])
+                selected = np.argmin(costs, axis=1)
+                new_q = np.stack((selected // ALPHABET,
+                                  selected % ALPHABET)).astype(np.uint8)
+            else:
+                new_q = np.empty_like(q)
+                for e in range(2):
+                    counts = np.bincount(q[e], minlength=ALPHABET).astype(np.float64)
+                    length = -np.log2((counts + 0.5) /
+                                      (q.shape[1] + 0.5 * ALPHABET))
+                    costs = ((values[e, :, None] - levels[e]) ** 2 +
+                             bit_weight * length[None, :])
+                    new_q[e] = np.argmin(costs, axis=1).astype(np.uint8)
+            if np.array_equal(q, new_q):
+                break
+            q = new_q
+    require(best is not None, "ideal multistart result")
+    return best[1], best[2], best[3]
 
 
 def _pareto_rd(points: Sequence[tuple[float, float]]) -> list[tuple[float, float]]:
@@ -1114,13 +1170,17 @@ def optimistic_single_letter_joint_gate(values: np.ndarray,
     independent_points, pair_points = [], []
     energy = float(np.sum(x[:, OPTIMIZED_ROLES] ** 2, dtype=np.float64))
     for lagrange in grid:
+        bit_weight = (float(lagrange) * max(energy, np.finfo(np.float64).tiny) /
+                      x[:, OPTIMIZED_ROLES].size)
         independent_sse = pair_sse = 0.0
         independent_rate_sum = pair_rate_sum = 0.0
         for role in OPTIMIZED_ROLES:
             levels = np.stack([levels_per_coordinate(scales[e, role], x.shape[2])
                                for e in range(2)])
-            _, sse_i, rate_i = _ideal_flexible_role(x[:, role], levels, lagrange, False)
-            _, sse_p, rate_p = _ideal_flexible_role(x[:, role], levels, lagrange, True)
+            _, sse_i, rate_i = _ideal_flexible_role(
+                x[:, role], levels, bit_weight, False)
+            _, sse_p, rate_p = _ideal_flexible_role(
+                x[:, role], levels, bit_weight, True)
             independent_sse += sse_i
             pair_sse += sse_p
             independent_rate_sum += rate_i

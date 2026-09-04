@@ -1,0 +1,15 @@
+{
+  "schema": "renorm_q_smallblock_independent_hostile_audit_manifest.v0",
+  "verdict": "BLOCKED_FROM_PAYLOAD_CAPABILITY_PENDING_SOURCE_FIXES",
+  "target_manifest_sha256": "340ba1f1c435be9cbfc58c75607cc5c5e07e6bb10692265b5938ebf530d926b9",
+  "target_source_root_sha256": "8c1682ea514e067c4ba10b1e010abf1766cb842ea525233f7eb854896da6cac4",
+  "files_sha256": {
+    "HOSTILE_AUDIT_RESULT.json": "21c1b8c7df28d10bb0c9002fb1f299a5e0ef42cdb6570b8ff49bb4109d26b4e3",
+    "README.md": "412751d25ee961738951b186f368446f20797cebf78200284aadff2ddbce0194",
+    "RUN_DISABLED.txt": "8551cd29bbb469142af9858e2c799b58cf8e326ca66fbe0c21db3aabf25d3c2b",
+    "hostile_audit.py": "cf0e42e8884752ff7184e2774f5a110e368fdedb92bd3ac5537dd68f080f26d8",
+    "verify_audit.py": "b74452e55623aac220139ba9368291547e85273936d7c4a181d63090714e664f"
+  },
+  "audit_root_sha256": "a05bc90851b1fc1b0515dd649a3b98c702aec3cdd723a33e5ee31758abbdfc53",
+  "authority": "NONE_SOURCE_ONLY_AUDIT"
+}
